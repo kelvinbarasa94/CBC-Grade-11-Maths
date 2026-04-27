@@ -2,95 +2,114 @@
 
 <section xml:id="sec-partial-variation" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Partial Variation</title>
+    
     <objectives component="outcomes">
         <introduction>
             <p>
             <dl>
                 <li>
                     <title>Strand</title>
-                    <p>
-                        1.0 Numbers and Algebra
-                    </p>
+                    <p>1.0 Numbers and Algebra</p>
                 </li>
                 <li>
                     <title>Sub-Strand</title>
-                    <p>
-                        1.5 Formulae and Variations
-                    </p>
+                    <p>1.5 Formulae and Variations</p>
                 </li>
                 <li>
                     <title>Specific Learning Outcomes</title> 
-                    <p>
-                        Solve combined, joint and partial variations in different situations
-                    </p>
+                    <p>Solve combined, joint and partial variations in different situations</p>
                 </li>
                 <li component="lesson-plan">
                     <title>Grade Level</title>
-                    <p>
-                        11
-                    </p>
+                    <p>11</p>
                 </li>
                 <li component="lesson-plan">
                     <title>Estimated Duration</title>
-                    <p>
-                        40 minutes
-                    </p>
+                    <p>40 minutes</p>
                 </li>
             </dl>
             </p>
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery: The Standing Charge</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>15 minutes</p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>To discover the relationship between a fixed starting value and a variable rate.</p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>Distribute counters/stones. Circulate to ensure students understand that the "Base Pile" of 5 counters represents a cost incurred before any distance is covered ($x=0$).</p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p><strong>What You Need:</strong></p>
+            <ul>
+                <li>A collection of small items (counters, stones, or buttons).</li>
+                <li>A ruler and pencil.</li>
+                <li>A table to record your observations.</li>
+            </ul>
+
+            <p><strong>(a) The "Motorbike Fare" Simulation</strong></p>
+            <p>
+                Imagine you are hiring a motorbike. The motorbike charges a fixed standing charge of 
+                <em>5 units</em> (even if you move 0 distance) and then <em>2 units</em> 
+                for every kilometer traveled.
+            </p>
+            <ol>
+                <li>Use your counters to represent the cost.</li>
+                <li>Start with a “Base Pile” of 5 counters (this represents the standing charge).</li>
+                <li>For every “kilometer” (step), add a group of 2 counters.</li>
+            </ol>
+
+            <p><strong>(b) Data Collection</strong></p>
+            <table>
+                <tabular halign="center">
+                    <row header="yes" bottom="minor">
+                        <cell>Journey</cell>
+                        <cell>Distance (<inline-math>x</inline-math>)</cell>
+                        <cell>Base Cost (Fixed)</cell>
+                        <cell>Variable Cost (2×<inline-math>x</inline-math>)</cell>
+                        <cell>Total Cost (<inline-math>y</inline-math>)</cell>
+                    </row>
+                    <row><cell>A</cell><cell>0</cell><cell>5</cell><cell>0</cell><cell>5</cell></row>
+                    <row><cell>B</cell><cell>1</cell><cell>5</cell><cell>2</cell><cell>7</cell></row>
+                    <row><cell>C</cell><cell>2</cell><cell>5</cell><cell>4</cell><cell>9</cell></row>
+                    <row><cell>D</cell><cell>3</cell><cell>5</cell><cell>6</cell><cell>11</cell></row>
+                    <row><cell>E</cell><cell>5</cell><cell>5</cell><cell>10</cell><cell>15</cell></row>
+                    <row><cell>F</cell><cell>10</cell><cell>5</cell><cell>20</cell><cell>25</cell></row>
+                </tabular>
+            </table>
+
+            <p><strong>(c) Analyzing the Pattern</strong></p>
+            <ol>
+                <li>The Starting Point: When the distance (<inline-math>x</inline-math>) is 0, why is the total cost (<inline-math>y</inline-math>) not 0?</li>
+                <li>The Growth: Every time the distance increases by 1 unit, by how much does the total cost increase?</li>
+                <li>The Formula: Can you write a rule to find the Total Cost (<inline-math>y</inline-math>)? (<em>Hint:</em> Total = Fixed + [Rate × Distance])</li>
+            </ol>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
+                <p>10 minutes</p>
             </li>
             <li>
                 <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
+                <p>To formalize the equation $y = kx + b$ and connect it to previous knowledge of linear graphs.</p>
             </li>
             </dl>
         </p>
@@ -99,105 +118,276 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Highlight that in Direct Variation, the graph passes through $(0,0)$. In Partial Variation, the "Fixed" part shifts the graph up to $(0, b)$.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <insight>
+        <title>Key Takeaway: Understanding Partial Variation</title>
+        <p>
+            In <strong>Partial Variation</strong>, the dependent variable (<inline-math>y</inline-math>) has two parts: 
+            a <em>fixed amount</em> and a <em>variable amount</em>.
+        </p>
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        <alert>The Formula:</alert> <me>y = kx + b</me>
+                        <ul>
+                            <li><inline-math>b</inline-math> is the fixed part (the value when <inline-math>x = 0</inline-math>).</li>
+                            <li><inline-math>kx</inline-math> is the part that changes based on the rate <inline-math>k</inline-math>.</li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Real-World Examples:</alert>
+                        <ul>
+                            <li><strong>Utilities:</strong> 100 Ksh monthly fee + 500 Ksh per 5GB data.</li>
+                            <li><strong>M-Pesa:</strong> A fixed transaction fee + a rate based on the amount.</li>
+                            <li><strong>Boreholes:</strong> A fixed mobilization fee + cost per meter drilled.</li>
+                        </ul>
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <figure xml:id="fig-partial-variation-graph">
+            <caption>Graph of partial variation showing the non-zero Y-intercept (<inline-math>b</inline-math>).</caption>
+            <image source="partial_variation_graph.png">
+                <description>Linear graph starting above the origin.</description>
+            </image>
+        </figure>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+<example>
         <statement>
+            <p>
+                A water drilling company charges a fixed mobilization fee of 50,000 Ksh and an additional 2,500 Ksh for every meter drilled. 
+                Write an equation for the total cost (<inline-math>C</inline-math>) in terms of the depth (<inline-math>d</inline-math>) in meters. 
+                Find the cost of drilling a 100-meter borehole.
+            </p>
         </statement>
         <solution>
+            <p>
+                The fixed cost (<inline-math>b</inline-math>) is 50,000 Ksh. The rate (<inline-math>k</inline-math>) is 2,500 Ksh/m.
+                The equation is: 
+                <me>C = 2500d + 50000</me>
+                For <inline-math>d = 100</inline-math>:
+                <me>C = 2500(100) + 50000 = 250,000 + 50,000 = 300,000 \text{ Ksh}</me>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The quantity <inline-math>y</inline-math> is partly constant and partly varies as <inline-math>x</inline-math>. 
+                When <inline-math>x = 2</inline-math>, <inline-math>y = 10</inline-math>, and when <inline-math>x = 5</inline-math>, <inline-math>y = 19</inline-math>. 
+                Determine the constants <inline-math>k</inline-math> and <inline-math>b</inline-math> in the equation <inline-math>y = kx + b</inline-math>.
+            </p>
         </statement>
         <solution>
+            <p>
+                We set up a system of linear equations:
+                <ol>
+                    <li><inline-math>10 = 2k + b</inline-math></li>
+                    <li><inline-math>19 = 5k + b</inline-math></li>
+                </ol>
+                Subtract equation (1) from (2):
+                <me>(5k - 2k) = 19 - 10 \implies 3k = 9 \implies k = 3</me>
+                Substitute <inline-math>k = 3</inline-math> into equation (1):
+                <me>10 = 2(3) + b \implies 10 = 6 + b \implies b = 4</me>
+                The equation is <inline-math>y = 3x + 4</inline-math>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A monthly electricity bill consists of a fixed standing charge of 150 Ksh and a cost of 15 Ksh per unit of electricity consumed. 
+                If a consumer used 80 units in a month, calculate their total bill.
+            </p>
         </statement>
         <solution>
+            <p>
+                Let <inline-math>y</inline-math> be the total cost and <inline-math>u</inline-math> be the units consumed.
+                <me>y = 15u + 150</me>
+                For <inline-math>u = 80</inline-math>:
+                <me>y = 15(80) + 150 = 1200 + 150 = 1,350 \text{ Ksh}</me>
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A salesperson earns a basic salary of 20,000 Ksh per month plus a commission of 500 Ksh for every item sold. 
+                In March, they sold 15 items. Calculate their total earnings for that month.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Total Earnings (<inline-math>E</inline-math>) = Basic Salary + (Commission per item × Number of items)
+                <me>E = 20000 + 500n</me>
+                For <inline-math>n = 15</inline-math>:
+                <me>E = 20000 + 500(15) = 20000 + 7500 = 27,500 \text{ Ksh}</me>
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A car rental agency charges a flat fee of 3,000 Ksh plus 50 Ksh for every kilometer driven. 
+                If a customer paid 5,500 Ksh, how many kilometers did they drive?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The equation is <inline-math>5500 = 50x + 3000</inline-math>, where <inline-math>x</inline-math> is the distance.
+                <me>5500 - 3000 = 50x</me>
+                <me>2500 = 50x</me>
+                <me>x = \frac{2500}{50} = 50 \text{ km}</me>
+                The customer drove 50 kilometers.
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>
+                    A private tutor charges a base fee of 1,200 Ksh for a home visit, plus 800 Ksh for every hour of teaching. 
+                    If the tutor spends <inline-math>h</inline-math> hours at a student's house, write the equation for the total cost (<inline-math>C</inline-math>). 
+                    How much will a 3-hour session cost?
+                </p>
+            </statement>
             <solution>
+                <p>
+                    The fixed cost is <inline-math>b = 1200</inline-math> and the rate is <inline-math>k = 800</inline-math>.
+                    The equation is: <me>C = 800h + 1200</me>
+                    For <inline-math>h = 3</inline-math>:
+                    <me>C = 800(3) + 1200 = 2400 + 1200 = 3,600 \text{ Ksh}</me>
+                </p>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    In a partial variation, <inline-math>y</inline-math> is the sum of a constant and a value that varies as <inline-math>x</inline-math>. 
+                    If <inline-math>y = 17</inline-math> when <inline-math>x = 3</inline-math> and <inline-math>y = 27</inline-math> when <inline-math>x = 8</inline-math>, 
+                    find the value of <inline-math>y</inline-math> when <inline-math>x = 12</inline-math>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Using <inline-math>y = kx + b</inline-math>:
+                    <ol>
+                        <li><inline-math>17 = 3k + b</inline-math></li>
+                        <li><inline-math>27 = 8k + b</inline-math></li>
+                    </ol>
+                    Subtract (1) from (2) to get <inline-math>5k = 10</inline-math>, which means <inline-math>k = 2</inline-math>.
+                    Substitute <inline-math>k = 2</inline-math> into (1): 
+                    <me>17 = 3(2) + b \text{ so } 17 = 6 + b \text{ giving } b = 11</me>
+                    The law is <inline-math>y = 2x + 11</inline-math>. For <inline-math>x = 12</inline-math>:
+                    <me>y = 2(12) + 11 = 24 + 11 = 35</me>
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    A certain parking lot in Nairobi charges 200 Ksh for entry and an additional 50 Ksh for every hour parked. 
+                    If a driver paid a total of 550 Ksh, for how many hours did they park?
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Let <inline-math>h</inline-math> be the hours.
+                    <me>550 = 50h + 200</me>
+                    Subtract 200 from both sides:
+                    <me>350 = 50h</me>
+                    Which means:
+                    <me>h = \frac{350}{50} = 7 \text{ hours}</me>
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
+        <exercise>
+            <statement>
+                <p>
+                    The cost of producing school jerseys involves a fixed setup cost for the printing machine and a variable cost per jersey. 
+                    Producing 10 jerseys costs 15,000 Ksh, while producing 25 jerseys costs 30,000 Ksh. 
+                    Find the fixed setup cost.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Let <inline-math>C = kn + b</inline-math>:
+                    <ol>
+                        <li><inline-math>15000 = 10k + b</inline-math></li>
+                        <li><inline-math>30000 = 25k + b</inline-math></li>
+                    </ol>
+                    Subtract (1) from (2) to get <inline-math>15k = 15000</inline-math>, so <inline-math>k = 1000</inline-math>.
+                    Substitute <inline-math>k = 1000</inline-math> into (1): 
+                    <me>15000 = 10(1000) + b \text{ which gives } 15000 = 10000 + b</me>
+                    Therefore, <inline-math>b = 5,000</inline-math>. The fixed setup cost is 5,000 Ksh.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A freight company charges a flat insurance fee of 2,500 Ksh per shipment and a transport fee of 150 Ksh per kilogram. 
+                    Calculate the total cost of shipping a crate weighing 45 kilograms.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Total Cost (<inline-math>T</inline-math>) = <inline-math>150w + 2500</inline-math>, where <inline-math>w</inline-math> is weight.
+                    <me>T = 150(45) + 2500</me>
+                    <me>T = 6750 + 2500 = 9,250 \text{ Ksh}</me>
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
+
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
-
         <table>
-            <title>Differentiation</title>
+            <title>Differentiation Strategies</title>
             <tabular halign="left">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
+                    <cell>Use the physical counters throughout. Focus on identifying the "Starting Pile" ($b$) vs the "Adding Amount" ($k$).</cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
+                    <cell>The core lesson activities including the graph and algebra.</cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
+                    <cell>Ask them to find the equation when given two points where neither point has $x=0$.</cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
-
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
 </section>
