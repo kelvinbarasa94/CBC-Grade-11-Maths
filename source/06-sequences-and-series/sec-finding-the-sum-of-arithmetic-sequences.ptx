@@ -69,10 +69,150 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+
+            <p>
+                Consider a large equilateral triangle divided into smaller congruent equilateral triangles.
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Row <m>1</m> has <m>1</m> small triangle</p>
+                    </li>
+                    <li>
+                        <p>Row <m>2</m> has <m>2</m> small triangles</p>
+                    </li>
+                    <li>
+                        <p>Row <m>3</m> has <m>3</m> small triangles</p>
+                    </li>
+                    <li>
+                        <p>Row <m>4</m> has <m>4</m> small triangles</p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <term>Work in groups:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Draw a triangle with <m>4</m> rows of small triangles.</p>
+                    </li>
+                    <li>
+                        <p>Count the number of small triangles in each row.</p>
+                    </li>
+                    <li>
+                        <p>Find the total number of small triangles.</p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <term>Record your results:</term>
+            </p>
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+                <row header="yes">
+                    <cell>Row</cell>
+                    <cell>Number of Triangles</cell>
+                </row>
+                <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>1</m></cell>
+                </row>
+                <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>?</m></cell>
+                </row>
+                <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>?</m></cell>
+                </row>
+                <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>?</m></cell>
+                </row>
+
+            </tabular>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Extend the pattern to <m>5</m> rows and <m>6</m> rows.</p>
+                    </li>
+                    <li>
+                        <p>What sequence is formed by the number of triangles in each row?</p>
+                    </li>
+                    <li>
+                        <p>What is the common difference?</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Discussion:</term>
+            </p>
+
+            <p>
+                The number of triangles in each row forms an arithmetic sequence:
+            </p>
+
+            <p>
+                <md>
+                    <mrow> 1, 2, 3, 4, \dots\amp </mrow>
+                </md>
+            </p>
+
+            <p>
+                <term>Challenge:</term>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Find the total number of small triangles in a triangle with <m>10</m> rows.</p>
+                    </li>
+                    <li>
+                        <p>Is it efficient to keep adding for very large numbers of rows?</p>
+                    </li>
+                    <li>
+                        <p>Suggest a faster method.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Generalising:</term>
+            </p>
+
+            <p>
+                Let the number of rows be <m>n</m>.
+            </p>
+
+            <p>
+                The total number of small triangles is:
+            </p>
+
+            <p>
+                <md>
+                    <mrow> S_n = \amp\; 1 + 2 + 3 + \dots + n</mrow>
+                </md>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Write the sequence forwards and backwards.</p>
+                    </li>
+                    <li>
+                        <p>Add the two expressions term by term.</p>
+                    </li>
+                    <li>
+                        <p>What pattern do you observe?</p>
+                    </li>
+                    <li>
+                        <p>Hence derive a formula for <m>S_n</m>.</p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +248,50 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            When objects are arranged in rows that increase by a constant number, the pattern forms an arithmetic sequence.
+        </p>
+        <p>
+            In a triangular arrangement, the number of elements in each row increases by <m>1</m>:
+        </p>
+        <p>
+            <md>
+                <mrow> 1, 2, 3, 4, \dots\amp </mrow>
+            </md>
+        </p>
+        <p>
+            The total number of elements is the sum of this arithmetic sequence:
+        </p>
+        <p>
+            <md>
+                <mrow>S_n = \amp \; 1 + 2 + 3 + \dots + n</mrow>
+            </md>
+        </p>
+        <p>
+            This can be calculated efficiently using:
+        </p>
+        <p>
+            <md>
+                <mrow> S_n = \amp \frac{n}{2}(1+n)</mrow>
+            </md>
+        </p>
+        <p>
+            Where <m>1</m> is the first term (<m>a</m>), <m>n</m> is the last term (<m>a +(n-1)d </m>), and <m>d</m> is the common difference of the sequence.
+        </p>
+        <p>
+            The general formula for the sum of the first <m>n</m> terms of an arithmetic sequence is:
+        </p>
+        <p>
+            <md>
+                <mrow> S_n = \amp \frac{n}{2}(2a +(n-1)d)</mrow>
+            </md>
+            
+        </p>
+        <p>
+            This pattern is known as a triangular number and appears in many real-life arrangements.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

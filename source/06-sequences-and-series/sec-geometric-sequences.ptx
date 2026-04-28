@@ -72,10 +72,129 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+
+            <p>
+                A square is divided into <m>4</m> equal smaller squares by splitting it into a <m>2 \times 2</m> grid.
+            </p>
+
+            <p>
+                At each new stage, <em>every square</em> is divided again into <m>4</m> equal smaller squares.
+            </p>
+
+            <p>
+                <term>Work in groups:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Draw Stage <m>1</m>, Stage <m>2</m> and Stage <m>3</m> of this process.</p>
+                    </li>
+                    <li>
+                        <p>Count the total number of small squares at each stage.</p>
+                    </li>
+                    <li>
+                        <p>Record your results in a table.</p>
+                    </li>
+                </ol>
+            </p>
+                <tabular left="medium" right="medium" top="medium" bottom="medium">
+                    <row header="yes">
+                        <cell>Stage (n)</cell>
+                        <cell>Number of squares</cell>
+                    </row>
+                    <row>
+                        <cell>1</cell>
+                        <cell>1</cell>
+                    </row>
+                    <row>
+                        <cell>2</cell>
+                        <cell>4</cell>
+                    </row>
+                    <row>
+                        <cell>3</cell>
+                        <cell>16</cell>
+                    </row>
+                    <row>
+                        <cell>4</cell>
+                        <cell>64</cell>
+                    </row>
+                </tabular>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Describe how the number of squares changes from one stage to the next.</p>
+                    </li>
+                    <li>
+                        <p>What is the common ratio?</p>
+                    </li>
+                    <li>
+                        <p>Write the sequence formed.</p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <term>Discussion:</term>
+            </p>
+
+            <p>
+                The numbers form the sequence:
+                <m>1, 4, 16, 64, \dots</m>
+            </p>
+
+            <p>
+                Each term is obtained by multiplying the previous term by 4.
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>What will be the number of squares at Stage 5? Stage 6?</p>
+                    </li>
+                    <li>
+                        <p>Is it practical to keep counting for very large stages?</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Generalising:</term>
+            </p>
+
+            <p>
+                Let:
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>First term <m>= a</m></p>
+                    </li>
+                    <li>
+                        <p>Common ratio <m>= r</m></p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Task:</term>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Write Stage 2 in terms of <m>a</m> and <m>r</m>.</p>
+                    </li>
+                    <li>
+                        <p>Write Stage 3 in terms of <m>a</m> and <m>r</m>.</p>
+                    </li>
+                    <li>
+                        <p>Write Stage 4 in terms of <m>a</m> and <m>r</m>.</p>
+                    </li>
+                    <li>
+                        <p>Identify the pattern and write an expression for Stage <m>n</m>.</p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -111,8 +230,26 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            A geometric sequence is a sequence in which each term is obtained by multiplying the previous term by a constant value called the common ratio.
+        </p>
+        <p>
+            In repeated splitting patterns, the number of parts grows multiplicatively. This leads to sequences such as:
+        </p>
+        <p>
+            <m>1, 4, 16, 64, \dots</m>
+        </p>
+        <p>
+            If the first term is <m>a</m> and the common ratio is <m>r</m>, then the <m>n^{th}</m> term is given by:
+        </p>
+        <p>
+            <m>n^{th} = ar^{n-1}</m>
+        </p>
+        <p>
+            This formula allows us to determine any term in the sequence without listing all previous terms.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
