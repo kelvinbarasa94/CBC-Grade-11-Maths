@@ -44,55 +44,188 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    20 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To discover how quadratic equations model physical paths and geometric constraints.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Guide learners to see the connection between the "math" (equations) and the "reality" (the ball hitting the ground or the string forming a square).
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <activity>
+        <title>Activity 1: Tracking the Path of a Ball</title>
+        <introduction>
+            <p>
+                <alert>Work in Groups</alert>
+            </p>
+            <p>
+                Imagine you throw a ball into the air. Its height changes every second. Scientists use quadratic equations to predict exactly where and when the ball will land.
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+            <p>
+                Paper, pen, and a calculator.
+            </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The height (<m>h</m>) of a ball thrown from <m>1</m> meter high is given by: 
+                            <me>h = 1 + 14t - 5t^2</me>
+                            where <m>t</m> is the time in seconds.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            When the ball hits the ground, its height is <m>0</m> (<m>h = 0</m>).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Set the equation to zero: <m>-5t^2 + 14t + 1 = 0</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </introduction>
+        <task>
+            <statement>
+                <p>
+                    Solve the equation using the quadratic formula: <m>t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</m>. 
+                </p>
+                <p>
+                    <em>Hint: <m>a = -5</m>, <m>b = 14</m>, <m>c = 1</m>.</em>
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    You will get two values for <m>t</m>. One will be positive (like <m>2.87</m>) and one will be negative (like <m>-0.07</m>).
+                </p>
+                <p>
+                    Discuss: Why is only the positive answer useful in real life? What does "negative time" mean?
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Challenge: If the ball hits the ground at about <m>2.9</m> seconds, what was its height at <m>1</m> second? (Plug <m>t = 1</m> into the formula).
+                </p>
+            </statement>
+        </task>
+    </activity>
 
-    <!-- Add Activity -->
+    <activity>
+        <title>Activity 2: The String and Area Challenge</title>
+        <introduction>
+            <p>
+                <alert>Work in Groups</alert>
+            </p>
+            <p>
+                If you have a fence that is <m>30</m> meters long, what is the biggest garden you can build? Let's find out using a string!
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+            <p>
+                A piece of string exactly <m>30</m> cm long and a ruler.
+            </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Form a rectangle with your string. Since the total length is <m>30</m> cm, the sum of one length and one width must be <m>15</m> cm.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If we call the length <m>x</m>, the width is <m>15 - x</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Try different lengths and calculate the Area (<m>A = \text{length} \times \text{width}</m>):
+                        </p>
+                        <table>
+                            <title>Area Investigation Table</title>
+                            <tabular border="minor">
+                                <row header="yes">
+                                    <cell>Length (<m>x</m>)</cell>
+                                    <cell>Width (<m>15 - x</m>)</cell>
+                                    <cell>Area (<m>x \times (15-x)</m>)</cell>
+                                </row>
+                                <row><cell>2 cm</cell><cell>13 cm</cell><cell>26 cm<m>^2</m></cell></row>
+                                <row><cell>5 cm</cell><cell>10 cm</cell><cell>50 cm<m>^2</m></cell></row>
+                                <row><cell>7.5 cm</cell><cell>7.5 cm</cell><cell>?</cell></row>
+                                <row><cell>10 cm</cell><cell>5 cm</cell><cell>50 cm<m>^2</m></cell></row>
+                            </tabular>
+                        </table>
+                    </li>
+                </ol>
+            </p>
+        </introduction>
+        <task>
+            <statement>
+                <p>
+                    Write the Area as a quadratic equation: <m>A = x(15 - x) = 15x - x^2</m>.
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Looking at your table, which length <m>x</m> gave the <alert>largest</alert> area? Is this shape a square?
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Use your equation to find the dimensions if the Area must be <m>54</m> cm<m>^2</m>. Solve <m>15x - x^2 = 54</m>.
+                </p>
+            </statement>
+        </task>
+    </activity>
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the steps for modeling real-world problems with quadratic equations.
                 </p>
             </li>
             </dl>
@@ -102,103 +235,320 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Most physical problems resulting in quadratic equations will provide two mathematical solutions. Learners must be taught to evaluate these solutions against the constraints of reality (e.g., time and length cannot be negative).
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <insight>
+        <p>
+            Quadratic equations are essential for modeling various real-world phenomena where a variable depends on the square of another, or where two linear relationships are multiplied.
+        </p>
+        <p>
+            <alert>Common Applications:</alert>
+            <ul>
+                <li>
+                    <p><alert>Projectile Motion:</alert> Calculating heights and distances for objects in flight.</p>
+                </li>
+                <li>
+                    <p><alert>Area Problems:</alert> Finding dimensions of land or objects given area constraints.</p>
+                </li>
+                <li>
+                    <p><alert>Business:</alert> Optimizing profit and revenue where price and demand are related.</p>
+                </li>
+                <li>
+                    <p><alert>Engineering:</alert> Calculating resistance in circuits or the shape of reflectors.</p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            <alert>Key Steps for Modeling:</alert>
+            <ol>
+                <li><p>Define the variable clearly.</p></li>
+                <li><p>Set up the equation based on the given relationships.</p></li>
+                <li><p>Solve using the most efficient method (Factoring, Quadratic Formula, etc.).</p></li>
+                <li><p>Verify solutions against real-world constraints.</p></li>
+            </ol>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
+        <title>Projectile Motion</title>
         <statement>
+            <p>
+                A ball is thrown from a height of <m>3</m> meters with an initial velocity of <m>14</m> m/s. Its height <m>h</m> at time <m>t</m> is given by <m>h = 3 + 14t - 5t^2</m>. When does the ball hit the ground?
+            </p>
         </statement>
         <solution>
+            <p>
+                The ball hits the ground when <m>h = 0</m>.
+            </p>
+            <p>
+                <m>0 = 3 + 14t - 5t^2</m>
+            </p>
+            <p>
+                Rearrange to standard form: <m>5t^2 - 14t - 3 = 0</m>.
+            </p>
+            <p>
+                Using the quadratic formula: <m>a=5, b=-14, c=-3</m>.
+            </p>
+            <p>
+                <m>t = \frac{-(-14) \pm \sqrt{(-14)^2 - 4(5)(-3)}}{2(5)}</m>
+            </p>
+            <p>
+                <m>t = \frac{14 \pm \sqrt{196 + 60}}{10}</m>
+            </p>
+            <p>
+                <m>t = \frac{14 \pm \sqrt{256}}{10} = \frac{14 \pm 16}{10}</m>
+            </p>
+            <p>
+                Solutions: <m>t = \frac{30}{10} = 3</m> or <m>t = \frac{-2}{10} = -0.2</m>.
+            </p>
+            <p>
+                Since time cannot be negative, the ball hits the ground after <m>3</m> seconds.
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Area of a Frame</title>
         <statement>
+            <p>
+                A rectangular steel frame has an external length of <m>10</m> cm and width of <m>8</m> cm. The metal has a uniform width of <m>x</m> cm. If the area of the metal is <m>28</m> cm<m>^2</m>, find the width <m>x</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                The area of the metal is the external area minus the internal area.
+            </p>
+            <p>
+                External Area = <m>10 \times 8 = 80</m> cm<m>^2</m>.
+            </p>
+            <p>
+                Internal dimensions: Length = <m>10 - 2x</m>, Width = <m>8 - 2x</m>.
+            </p>
+            <p>
+                Internal Area = <m>(10 - 2x)(8 - 2x) = 80 - 20x - 16x + 4x^2 = 80 - 36x + 4x^2</m>.
+            </p>
+            <p>
+                Area of metal = <m>80 - (80 - 36x + 4x^2) = 36x - 4x^2</m>.
+            </p>
+            <p>
+                Given Area = <m>28</m>, so: <m>36x - 4x^2 = 28</m>.
+            </p>
+            <p>
+                Divide by 4: <m>9x - x^2 = 7 \implies x^2 - 9x + 7 = 0</m>.
+            </p>
+            <p>
+                Using quadratic formula: <m>x = \frac{9 \pm \sqrt{81 - 28}}{2} = \frac{9 \pm \sqrt{53}}{2}</m>.
+            </p>
+            <p>
+                <m>x \approx \frac{9 \pm 7.28}{2}</m>.
+            </p>
+            <p>
+                <m>x \approx 8.14</m> or <m>x \approx 0.86</m>.
+            </p>
+            <p>
+                Since <m>x</m> cannot be greater than half the width (<m>4</m>), the width of the metal is approximately <m>0.86</m> cm.
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Speed and Time</title>
         <statement>
+            <p>
+                A boat travels <m>15</m> km upstream and <m>15</m> km back downstream. The total time taken is <m>4</m> hours. If the speed of the current is <m>2</m> km/h, find the speed of the boat in still water.
+            </p>
         </statement>
         <solution>
+            <p>
+                Let the speed of the boat in still water be <m>v</m> km/h.
+            </p>
+            <p>
+                Upstream speed = <m>v - 2</m>, Downstream speed = <m>v + 2</m>.
+            </p>
+            <p>
+                Time = <m>\frac{\text{Distance}}{\text{Speed}}</m>.
+            </p>
+            <p>
+                Total Time: <m>\frac{15}{v-2} + \frac{15}{v+2} = 4</m>.
+            </p>
+            <p>
+                Multiply by <m>(v-2)(v+2)</m>:
+            </p>
+            <p>
+                <m>15(v+2) + 15(v-2) = 4(v^2 - 4)</m>
+            </p>
+            <p>
+                <m>15v + 30 + 15v - 30 = 4v^2 - 16</m>
+            </p>
+            <p>
+                <m>30v = 4v^2 - 16 \implies 4v^2 - 30v - 16 = 0</m>.
+            </p>
+            <p>
+                Divide by 2: <m>2v^2 - 15v - 8 = 0</m>.
+            </p>
+            <p>
+                Factor: <m>(2v + 1)(v - 8) = 0</m>.
+            </p>
+            <p>
+                <m>v = 8</m> or <m>v = -0.5</m>.
+            </p>
+            <p>
+                The speed of the boat is <m>8</m> km/h.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    The length of a rectangular room is <m>3</m> meters more than its width. If the area of the room is <m>40</m> square meters, find the dimensions of the room.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Let width be <m>w</m>. Length is <m>w+3</m>.
+                </p>
+                <p>
+                    <m>w(w+3) = 40 \implies w^2 + 3w - 40 = 0</m>.
+                </p>
+                <p>
+                    <m>(w+8)(w-5) = 0</m>.
+                </p>
+                <p>
+                    <m>w = 5</m> (width cannot be negative).
+                </p>
+                <p>
+                    Width = <m>5</m> m, Length = <m>8</m> m.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A company's profit <m>P</m> is given by <m>P = -x^2 + 40x - 300</m>, where <m>x</m> is the number of units sold. Find the number of units the company needs to sell to break even (i.e., when profit is zero).
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>-x^2 + 40x - 300 = 0 \implies x^2 - 40x + 300 = 0</m>.
+                </p>
+                <p>
+                    <m>(x-10)(x-30) = 0</m>.
+                </p>
+                <p>
+                    The company breaks even at <m>10</m> units and <m>30</m> units.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The sum of the squares of two consecutive positive integers is <m>61</m>. Find the integers.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Let the integers be <m>n</m> and <m>n+1</m>.
+                </p>
+                <p>
+                    <m>n^2 + (n+1)^2 = 61</m>
+                </p>
+                <p>
+                    <m>n^2 + n^2 + 2n + 1 = 61 \implies 2n^2 + 2n - 60 = 0</m>.
+                </p>
+                <p>
+                    <m>n^2 + n - 30 = 0 \implies (n+6)(n-5) = 0</m>.
+                </p>
+                <p>
+                    Since <m>n</m> is positive, <m>n=5</m>. The integers are <m>5</m> and <m>6</m>.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A rectangular garden has a perimeter of <m>20</m> meters and an area of <m>24</m> square meters. Find the dimensions of the garden.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Let length be <m>L</m> and width be <m>W</m>. <m>2(L+W) = 20 \implies L+W = 10 \implies W = 10-L</m>.
+                </p>
+                <p>
+                    Area: <m>L(10-L) = 24 \implies 10L - L^2 = 24 \implies L^2 - 10L + 24 = 0</m>.
+                </p>
+                <p>
+                    Factoring: <m>(L-6)(L-4) = 0</m>.
+                </p>
+                <p>
+                    Dimensions are <m>6</m> m by <m>4</m> m.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    An object is launched from the ground with an initial velocity of <m>20</m> m/s. Its height <m>h</m> after <m>t</m> seconds is given by <m>h = 20t - 5t^2</m>. At what times is the object <m>15</m> meters high?
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Set <m>h = 15</m>: <m>15 = 20t - 5t^2 \implies 5t^2 - 20t + 15 = 0</m>.
+                </p>
+                <p>
+                    Divide by 5: <m>t^2 - 4t + 3 = 0</m>.
+                </p>
+                <p>
+                    Factoring: <m>(t-1)(t-3) = 0</m>.
+                </p>
+                <p>
+                    The object is <m>15</m> meters high at <m>1</m> second (going up) and <m>3</m> seconds (coming down).
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
-
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
-            <title>Differentiation</title>
+            <title>Differentiation Strategies</title>
             <tabular halign="left">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide pre-drawn graphs of parabolas to help visualize roots and vertices. Focus on area problems with integer solutions.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>Complete the lesson activities and examples as described.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Provide more complex problems involving speed-time or revenue optimization with non-integer roots. Ask them to derive the maximum height formula.
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
