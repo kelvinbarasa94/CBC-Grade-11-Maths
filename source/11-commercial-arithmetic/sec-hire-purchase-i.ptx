@@ -67,12 +67,85 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+
+            <p>
+                <term>Work in Groups to:</term>
+            </p>
+
+            <p>
+                Identify and record items in your environment that are commonly bought through hire purchase. Discuss why people prefer hire purchase instead of paying cash.
+            </p>
+
+            <tabular top="medium" bottom="medium" right="medium" left="medium">
+                <row header="yes">
+                    <cell>Item</cell>
+                    <cell>Reason for Hire Purchase</cell>
+                </row>
+                <row>
+                    <cell>Television</cell>
+                    <cell>High cost makes full payment difficult</cell>
+                </row>
+                <row>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+            </tabular>
+
+            <p>
+                <alert>In your groups explore the situation below:</alert>
+            </p>
+
+            <p>
+                A shop sells a television on hire purchase under the following terms:
+            </p>
+
+            <p>
+                Cash price = Ksh <m>40,000</m>, Deposit = Ksh <m>10,000</m>, Monthly instalment = Ksh <m>2,500</m> for <m>14</m> months.
+            </p>
+
+            <p>
+                <alert>In your groups you are required to:</alert>
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Calculate the total amount paid through hire purchase.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Determine the extra cost paid compared to the cash price.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Express the extra cost as a fraction of the cash price.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Convert the fraction into a percentage.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <alert>Further Exploration:</alert> Compare the total cost of buying an item using cash and hire purchase. Discuss the advantages and disadvantages of each method.
+            </p>
+
+            <p>
+                Explore what happens if the repayment period increases or decreases.
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +181,45 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            Hire purchase is a method of buying goods where a buyer pays a deposit and the remaining amount in instalments while using the item.
+        </p>
+
+        <p>
+            Although it makes expensive goods more affordable in the short term, the total amount paid is usually higher than the cash price due to added costs spread over time.
+        </p>
+
+        <p>
+            Let:
+        </p>
+
+        <p>
+            <md>
+                <mrow> P = \amp \;\text{Cash price} </mrow>
+                <mrow> D = \amp \; \text{Deposit} </mrow>
+                <mrow> x =  \amp \;\text{Instalment amount} </mrow>
+                <mrow> n = \amp \; \text{Number of instalments} </mrow>
+                <mrow> H = \amp \;\text{Hire purchase price} </mrow>
+            </md>
+        </p>
+
+        <p>
+            Then:
+        </p>
+
+        <p>
+            <md>
+                <mrow> H = \amp \;D + xn </mrow>
+                <mrow> I = \amp \;H - P </mrow>
+                <mrow> R = \amp \;\frac{H - P}{P} \times 100\% </mrow>
+            </md>
+        </p>
+
+        <p>
+            The key idea is that hire purchase increases accessibility to goods, but it also increases the total cost of ownership. Therefore, careful financial decision-making is necessary before choosing this method of payment.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

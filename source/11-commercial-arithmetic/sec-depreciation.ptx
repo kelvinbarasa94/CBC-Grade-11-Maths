@@ -67,12 +67,94 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <term>Work in Groups to:</term>
+            </p>
+            <p>
+                Identify and record in the table the items in your surrounding environment that decrease in value over time. Discuss the factors that contribute to the decrease in value of these items.
+            </p>
+
+            <tabular top="medium" bottom="medium" right="medium" left="medium">
+                <row header="yes">
+                    <cell>Item</cell>
+                    <cell>Factor Contributing to decrease in value</cell>
+                </row>
+                <row>
+                    <cell>Motorbike</cell>
+                    <cell>Wear and tear</cell>
+                </row>
+                <row>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+            </tabular>
+
+            <p>
+                <alert>In your groups explore the situation below:</alert>
+            </p>
+
+            <p>
+                <term>Mr. Ondiala J</term> bought a motorbike at Ksh <m>200,000</m>. After <m>1</m> year, its value reduced to Ksh <m>140,000</m>.
+            </p>
+
+            <p>
+                <alert>In your groups you are required to:</alert>
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Find the decrease in value for the motorbike.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Express the decrease as a fraction of the original value for the motorbike.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Convert the fractions into percentages.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                The decrease in value of an asset over time is referred to as <term>Depreciation</term>.
+            </p>
+
+            <p>
+                Let the original value be <m>P</m>, the new value be <m>A</m>, the decrease in value be <m>I</m>, and the percentage decrease be <m>R</m>.
+            </p>
+
+            <p>
+                <alert>Discuss and express the following relationships:</alert>
+            </p>
+
+            <p>
+                <md>
+                    <mrow> I = \amp \; P - A </mrow>
+                    <mrow> R = \amp \; \frac{I}{P} \times 100\% </mrow>
+                    <mrow> = \amp \; \frac{P - A}{P} \times 100\% </mrow>
+                    <mrow> A = \amp \; P - I </mrow>
+                </md>
+            </p>
+
+            <p>
+                <alert>Further Exploration:</alert> If the motorbike continues to lose value at the same rate every year, find the value after the second year and the third year.
+            </p>
         </statement>
-    </activity> -->
+    </activity>
+
+
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +190,41 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            From the learner experience, we observe that depreciation reduces the value of an asset by a fixed percentage each year.
+        </p>
+
+        <p>
+            <md>
+                <mrow> A = \amp \; P - I </mrow>
+                <mrow> I = \amp \; \frac{R}{100} \times P </mrow>
+                <mrow> A = \amp \; P - \frac{R}{100} \times P </mrow>
+                <mrow> = \amp \; P \left(1 - \frac{R}{100}\right) </mrow>
+            </md>
+        </p>
+
+        <p>
+            Since the value decreases every year, each new value becomes the starting value for the next year.
+        </p>
+
+        <p>
+            <md>
+                <mrow> \text{After Year 1: } A = \amp \; P \left(1 - \frac{R}{100}\right) </mrow>
+                <mrow> \text{After Year 2: } A = \amp \; P \left(1 - \frac{R}{100}\right)^2 </mrow>
+                <mrow> \text{After Year 3: } A = \amp \; P \left(1 - \frac{R}{100}\right)^3 </mrow>
+            </md>
+        </p>
+
+        <p>
+            In general, after <m>T</m> years, the value of the asset is given by:
+            <m> A = P \left(1 - \frac{R}{100}\right)^T </m>.
+        </p>
+
+        <p>
+            This shows that depreciation is not a constant decrease but a repeated percentage reduction, where the value reduces on a decreasing base over time.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
