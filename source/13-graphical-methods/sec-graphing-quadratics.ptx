@@ -46,53 +46,110 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        15 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To visualize the shape and behavior of quadratic functions compared to linear functions using physical movement.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Facilitate the "People Graphs" activity. Encourage learners to think about the direction of their arms and how it relates to the sign of the leading coefficient.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in groups</alert>
+            </p>
+            <p>
+                During a lesson, Grade 11 students explored how to visualize quadratic functions by using their bodies to represent different types of mathematical functions.
+            </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Stand up and make sure you have enough space to move your arms.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Linear Graphs:</alert>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Represent <m>y = x</m>: Hold your right arm up and your left arm down in a straight diagonal line.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Represent <m>y = -x</m>: Hold your left arm up and your right arm down in a straight diagonal line.
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Quadratic Graphs (Parabolas):</alert>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Represent <m>y = x^2</m>: Hold both arms up in a "U" shape. This is called <term>concave up</term>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Represent <m>y = -x^2</m>: Hold both arms down in an upside-down "U" shape. This is called <term>concave down</term>.
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Discuss: What happens to the "arms" of the graph when the number in front of <m>x^2</m> is positive versus when it is negative?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the properties of quadratic graphs, including concavity, the axis of symmetry, and roots.
                 </p>
             </li>
             </dl>
@@ -102,17 +159,54 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Use the "People Graphs" activity to lead into the definition of a parabola. Explain that the sign of <m>a</m> determines whether it opens up or down.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Mathematical Properties:</alert> Define the axis of symmetry and the vertex. Show how the roots are located symmetrically on either side of the axis of symmetry.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            A quadratic equation in the form <m>y = ax^2 + bx + c</m> produces a curve called a <term>parabola</term>.
+        </p>
+        <p>
+            <alert>Properties of a Parabola:</alert>
+            <ul>
+                <li>
+                    <p>
+                        <term>Concavity:</term> 
+                        <ul>
+                            <li><p>If <m>a \gt 0</m>, the parabola opens upwards (concave up).</p></li>
+                            <li><p>If <m>a \lt 0</m>, the parabola opens downwards (concave down).</p></li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Axis of Symmetry:</term> A vertical line that divides the parabola into two mirror images. Its equation is <me>x = -\frac{b}{2a}</me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Vertex:</term> The turning point of the parabola (either the minimum or maximum point). Its <m>x</m>-coordinate is on the axis of symmetry.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Roots (x-intercepts):</term> The points where the graph crosses the <m>x</m>-axis. These occur when <m>y = 0</m>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -120,26 +214,152 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Sketch the graph of <m>y = x^2 - 4x + 3</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Identify coefficients: <m>a = 1</m>, <m>b = -4</m>, <m>c = 3</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Concavity: Since <m>a = 1 \gt 0</m>, the parabola opens upwards.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Axis of Symmetry:
+                            <me>x = -\frac{-4}{2(1)} = 2</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Vertex: Substitute <m>x = 2</m> into the equation:
+                            <me>y = (2)^2 - 4(2) + 3 = 4 - 8 + 3 = -1</me>
+                            The vertex is <m>(2, -1)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Roots: Set <m>y = 0</m> and solve <m>x^2 - 4x + 3 = 0</m>:
+                            <me>(x - 1)(x - 3) = 0 \Rightarrow x = 1 \text{ or } x = 3</me>
+                            The roots are <m>(1, 0)</m> and <m>(3, 0)</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+                <image xml:id="img-quadratic-up" width="50%">
+                    <latex-image label="fig-quadratic-up">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-1,-2) grid (5,6);
+                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-2) -- (0,6) node[above] {$y$};
+                            \draw[blue, thick, domain=0.5:3.5, smooth] plot (\x, {\x*\x - 4*\x + 3});
+                            \filldraw (2,-1) circle (2pt) node[below] {Vertex $(2,-1)$};
+                            \filldraw (1,0) circle (1.5pt) node[above left] {$(1,0)$};
+                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
+                            \draw[dashed, red] (2,-2) -- (2,6) node[above] {$x=2$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Sketch the graph of <m>y = -x^2 + 2x + 8</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Identify coefficients: <m>a = -1</m>, <m>b = 2</m>, <m>c = 8</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Concavity: Since <m>a = -1 \lt 0</m>, the parabola opens downwards.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Axis of Symmetry:
+                            <me>x = -\frac{2}{2(-1)} = 1</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Vertex: Substitute <m>x = 1</m>:
+                            <me>y = -(1)^2 + 2(1) + 8 = -1 + 2 + 8 = 9</me>
+                            The vertex is <m>(1, 9)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Roots: Solve <m>-x^2 + 2x + 8 = 0</m>:
+                            <me>x^2 - 2x - 8 = 0 \Rightarrow (x - 4)(x + 2) = 0 \Rightarrow x = 4 \text{ or } x = -2</me>
+                            The roots are <m>(4, 0)</m> and <m>(-2, 0)</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+                <image xml:id="img-quadratic-down" width="50%">
+                    <latex-image label="fig-quadratic-down">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-3,-2) grid (5,10);
+                            \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-2) -- (0,10) node[above] {$y$};
+                            \draw[blue, thick, domain=-2.2:4.2, smooth] plot (\x, {-\x*\x + 2*\x + 8});
+                            \filldraw (1,9) circle (2pt) node[above] {Vertex $(1,9)$};
+                            \filldraw (4,0) circle (1.5pt) node[below right] {$(4,0)$};
+                            \filldraw (-2,0) circle (1.5pt) node[below left] {$(-2,0)$};
+                            \draw[dashed, red] (1,-2) -- (1,10) node[above] {$x=1$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Find the properties and sketch the graph of <m>y = 2x^2 + 4x</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ul>
+                    <li><p>Concavity: Opens up (<m>a = 2 \gt 0</m>).</p></li>
+                    <li><p>Axis of Symmetry: <m>x = -\frac{4}{2(2)} = -1</m>.</p></li>
+                    <li><p>Vertex: <m>y = 2(-1)^2 + 4(-1) = 2 - 4 = -2</m>. Vertex is <m>(-1, -2)</m>.</p></li>
+                    <li><p>Roots: <m>2x^2 + 4x = 0 \Rightarrow 2x(x + 2) = 0 \Rightarrow x = 0 \text{ or } x = -2</m>.</p></li>
+                </ul>
+            </p>
+            <image xml:id="img-quadratic-narrow" width="40%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,5);
+                        \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-3) -- (0,5) node[above] {$y$};
+                        \draw[blue, thick, domain=-2.8:0.8, smooth] plot (\x, {2*\x*\x + 4*\x});
+                        \filldraw (-1,-2) circle (2pt) node[below] {$(-1,-2)$};
+                        \filldraw (0,0) circle (1.5pt) node[above right] {$(0,0)$};
+                        \filldraw (-2,0) circle (1.5pt) node[above left] {$(-2,0)$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -151,20 +371,64 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    For each of the following quadratic equations, state whether the parabola opens upwards or downwards and find the equation of the axis of symmetry:
+                </p>
+                <ol>
+                    <li><p><m>y = x^2 + 6x + 5</m></p></li>
+                    <li><p><m>y = -2x^2 + 8x - 3</m></p></li>
+                    <li><p><m>y = \frac{1}{2}x^2 - 4</m></p></li>
+                </ol>
             </statement>   
-            <solution>
-
-            </solution>             
+            <answer>
+                <ol>
+                    <li><p>Upwards; <m>x = -3</m></p></li>
+                    <li><p>Downwards; <m>x = 2</m></p></li>
+                    <li><p>Upwards; <m>x = 0</m></p></li>
+                </ol>
+            </answer>             
         </exercise>        
-    </exercises> -->
+
+        <exercise>
+            <statement>
+                <p>
+                    Find the vertex and the roots of <m>y = x^2 - 2x - 3</m>, then sketch its graph.
+                </p>
+            </statement>
+            <answer>
+                <p>Vertex: <m>(1, -4)</m>; Roots: <m>x = -1, x = 3</m>.</p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-2,-5) grid (4,2);
+                            \draw[-&gt;] (-2,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,2) node[above] {$y$};
+                            \draw[blue, thick, domain=-1.2:3.2, smooth] plot (\x, {\x*\x - 2*\x - 3});
+                            \filldraw (1,-4) circle (1.5pt) node[below] {$(1,-4)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A quadratic graph has roots at <m>x = -2</m> and <m>x = 4</m>. What is the equation of its axis of symmetry?
+                </p>
+            </statement>
+            <answer>
+                <p><m>x = 1</m> (The axis of symmetry is halfway between the roots: <m>\frac{-2+4}{2} = 1</m>).</p>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -173,32 +437,28 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide tables of values to help plot points before identifying patterns. Use graphing software to see how changing <m>a, b, c</m> affects the graph.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, focusing on the relationship between the algebraic form and the geometric features.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Investigate how many roots a quadratic can have (0, 1, or 2) and how this relates to the vertex's position and concavity. Introduce the discriminant.
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
