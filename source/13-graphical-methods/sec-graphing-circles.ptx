@@ -406,7 +406,7 @@
                 Identify the correct equation for the graph below:
             </p>
             <image width="40%">
-                <latex-image>
+                <latex-image label="fig-example-multiple-choice">
                     \begin{tikzpicture}
                         \draw[help lines, color=gray!30, step=1] (-5,-10) grid (7,4);
                         \draw[-&gt;] (-5,0) -- (7,0) node[right] {$x$};
@@ -422,7 +422,7 @@
                 
             </image>
             <p>
-                <ol marker="(a)" cols="1">
+                <ol marker="(a)" cols="4">
                     <li>
                         <p>
                             <m> y^2 = x^2 + 6^2 </m>
