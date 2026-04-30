@@ -69,10 +69,98 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <term>In groups:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Measure the length of the desk using a <m>15</m> cm ruler.</p>
+                    </li>
+                    <li>
+                        <p>Measure the same desk using a <m>30</m> cm ruler.</p>
+                    </li>
+                    <li>
+                        <p>Measure it using a metre rule or tape measure.</p>
+                    </li>
+                    <li>
+                        <p>Record all your results clearly.</p>
+                    </li>
+                </ol>
+            </p>
+            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                <row header="yes">
+                    <cell>Measuring Tool</cell>
+                    <cell>Length (cm)</cell>
+                </row>
+                <row>
+                    <cell><m>15</m> cm</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell><m>30</m> cm</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>Metre Rule</cell>
+                    <cell>?</cell>
+                </row>
+            </tabular>
+            <p>
+                <term>Part B: Comparing Results</term>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Do all groups obtain the same measurement? Explain.</p>
+                    </li>
+                    <li>
+                        <p>Which measuring tool gave the most consistent result? Why?</p>
+                    </li>
+                    <li>
+                        <p>Which tool do you think is most accurate? Give reasons.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Part C: Investigating Differences</term>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Compare your results with another group's measurements.</p>
+                    </li>
+                    <li>
+                        <p>Suggest possible reasons why the results are different.</p>
+                    </li>
+                    <li>
+                        <p>Discuss how human error may have affected the results.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Guided Reflection:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>What happens if the ruler is not placed exactly at the edge of the desk?</p>
+                    </li>
+                    <li>
+                        <p>Does the thickness of the measuring tool affect accuracy?</p>
+                    </li>
+                    <li>
+                        <p>Can two correct measurements still be slightly different? Explain.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                What are the ways of improving accuracy when measuring long objects.
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +196,45 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+
+        <p>
+            Measurement is never perfectly exact. Every measurement has a small degree of uncertainty due to limitations of measuring instruments and human factors.
+        </p>
+        <p>
+            Differences in results may arise due to:
+        </p>
+        <p>
+            <ol marker="(a)">
+                <li>
+                    <p>Different measuring instruments (resolution and size)</p> 
+                </li>
+                <li>
+                    <p>Parallax error (incorrect viewing angle)</p>
+                </li>
+                <li>
+                    <p>Starting point misalignment</p>
+                </li>
+                <li>
+                    <p>Human estimation differences</p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            Because of these limitations, we often give measurements as approximations rather than exact values.
+        </p>
+
+        <p>
+            This leads to the idea of:
+        </p>
+
+        <p>
+            <term>Absolute Error:</term> the difference between the measured value and the true value (when known).
+        </p>
+        <p>
+            Therefore, repeated measurements and better instruments improve reliability but never completely remove error.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,28 +242,36 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Three students measure the same desk and obtain 120 cm, 121 cm, and 119 cm. Explain why the results are not identical.
+            </p>
         </statement>
+
         <solution>
+            <p>
+                Differences occur due to measurement errors such as parallax error, instrument precision, and human reading differences.
+            </p>
         </solution>
     </example>
 
     <example>
+
         <statement>
+            <p>
+                A tape measure gives a more consistent result than a 15 cm ruler when measuring a desk. Explain why.
+            </p>
         </statement>
+
         <solution>
+            <p>
+                A tape measure covers a longer distance at once, reducing repeated placements and therefore reducing cumulative error.
+            </p>
         </solution>
     </example>
 
-    <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example> -->
-
-    <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
+    <!-- <xi:include href="../lesson-plan-templates/assessment-intro.ptx" /> -->
 
     <!-- If STACK questions are included, uncomment this: -->
 
