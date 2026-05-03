@@ -122,13 +122,13 @@
 
     <insight>
         <p>
-            Any sequence of numbers which have a common difference is called an <term>Arithmatic sequence</term>. In an arithmatic sequence, the first term is <m>a</m> and the common difference is <m>d</m>.
+            Any sequence of numbers which have a common difference is called an <term>arithmetic sequence</term>. In an arithmetic sequence, the first term is <m>a</m> and the common difference is <m>d</m>.
         </p>
         <p>
             Can you explore how to find the second, third, forth, ... terms given the first term?
         </p>
         <p>
-            <term>Notice that:</term> The general form of an arithmatic sequence is <m>a, a+d, a+2d, a+3d ...</m>. 
+            <term>Notice that:</term> The general form of an arithmetic sequence is <m>a, a+d, a+2d, a+3d ...</m>. 
         </p>
         <p>
             In the general form, 
@@ -145,7 +145,7 @@
             What is the <m>10^{th}</m> term?
         </p>
         <p>
-            How do we find the <m>n^{th}</m> term of an arithmatic sequence?
+            How do we find the <m>n^{th}</m> term of an arithmetic sequence?
         </p>
     </insight>
 
@@ -157,7 +157,7 @@
      <example>
         <statement>
             <p>
-                Given the arithmatic sequence <m>4,11,18, ... find:</m>
+                Given the arithmetic sequence <m>4,11,18, ... find:</m>
             </p>
             <p>
                 <ol marker="(a)">
@@ -208,7 +208,7 @@
      <example>
         <statement>
             <p>
-                The <m>20^{th}</m> term of an arithmatic sequence is <m>60</m> and <m>16^{th}</m> term is <m>20</m>. Find the first term and the common difference.
+                The <m>20^{th}</m> term of an arithmetic sequence is <m>60</m> and <m>16^{th}</m> term is <m>20</m>. Find the first term and the common difference.
             </p>
         </statement>
         <solution>
@@ -282,7 +282,7 @@
         <exercise>
             <statement>
                 <p>
-                    The second term of an arithmatic sequence is <m>7</m> and the ninth term is <m>28</m>. Find the common difference and the first term of the sequence.
+                    The second term of an arithmetic sequence is <m>7</m> and the ninth term is <m>28</m>. Find the common difference and the first term of the sequence.
                 </p>
             </statement>
             <answer>
@@ -298,7 +298,7 @@
         <exercise>
             <statement>
                 <p>
-                    The <m>10^{th}</m> term of an arithmatic sequence is <m>42</m> more than the <m>7^{th}</m> term. If the first term is <m>-14</m>, find the second term of the sequance.
+                    The <m>10^{th}</m> term of an arithmetic sequence is <m>42</m> more than the <m>7^{th}</m> term. If the first term is <m>-14</m>, find the second term of the sequance.
                 </p>
             </statement>
             <answer>
@@ -310,7 +310,7 @@
         <exercise>
             <statement>
                 <p>
-                    In an arithmatic sequemce, the <m>15^{th}</m> term is <m>52</m>, and the common difference is <m>3</m>.Find:
+                    In an arithmetic sequemce, the <m>15^{th}</m> term is <m>52</m>, and the common difference is <m>3</m>.Find:
                 </p>
                 <p>
                     <ol marker="(a)">
@@ -347,7 +347,7 @@
         <exercise>
             <statement>
                 <p>
-                    The product of the third and fourth terms of an arithmatic sequence is <m>3,000</m>. Find the first term if the common difference is <m>10</m>.
+                    The product of the third and fourth terms of an arithmetic sequence is <m>3,000</m>. Find the first term if the common difference is <m>10</m>.
                 </p>
             </statement>
             <answer>
@@ -359,7 +359,7 @@
         <exercise>
             <statement>
                 <p>
-                    The first term of an arithmatic sequence is <m>4</m> and the last term is <m>64</m>. If the common difference is <m>5</m>, find the number of terms. 
+                    The first term of an arithmetic sequence is <m>4</m> and the last term is <m>64</m>. If the common difference is <m>5</m>, find the number of terms. 
                 </p>
             </statement>
             <answer>
