@@ -351,7 +351,7 @@
         <exercise>
             <statement>
                 <p>
-                    The <m>2^{nd}, 4^{th}, ;\text{and}\; 7^{th} </m> terms of an arithmatic progression are the first three consecutive terms of a geometric progression. Find:
+                    The <m>2^{nd}, 4^{th}, ;\text{and}\; 7^{th} </m> terms of an arithmetic progression are the first three consecutive terms of a geometric progression. Find:
                 </p>
                 <p>
                     <ol marker="(a)">
@@ -362,7 +362,7 @@
                         </li>
                         <li>
                             <p>
-                                The sum of the first eight terms of the geometric progression. If the common difference of the arithmatic progression is <m>2</m>.
+                                The sum of the first eight terms of the geometric progression. If the common difference of the arithmetic progression is <m>2</m>.
                             </p>
                         </li>
                     </ol>

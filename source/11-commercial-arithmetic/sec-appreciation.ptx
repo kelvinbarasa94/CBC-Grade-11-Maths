@@ -147,23 +147,6 @@
                     </ol>
                 </p>
                 <p>
-                    The increase in value of an asset over time is referred to as <term>Appreciation</term>.
-                </p>
-                <p>
-                    Let the original value of the land be <m>P</m>, the new value be <m>A</m>, the increase in value be <m>I</m>, and the percentage increase be <m>R</m>. 
-                </p>
-                <p>
-                    <alert>Discuss and express the following relationships:</alert>
-                </p>
-                <p>
-                    <md>
-                        <mrow> I = \amp \; A - P </mrow>
-                        <mrow> R = \amp \; \frac{I}{P} \times100 \% </mrow>
-                        <mrow> = \amp \;\frac{A - P}{P} \times100 \% </mrow>
-                        <mrow> A = \amp \; P + I </mrow>
-                    </md>
-                </p>
-                <p>
                     <alert>Further Exploration:</alert> If the land continues to appreciate at the same rate every year, find the value after the second year and the third year.
                 </p>
             </statement>
@@ -202,6 +185,12 @@
     </axiom> -->
     <insight>
         <p>
+            The increase in value of an asset over time is referred to as <term>Appreciation</term>.
+        </p>
+        <p>
+            Let the original value of the land be <m>P</m>, the new value be <m>A</m>, the increase in value be <m>I</m>, and the percentage increase be <m>R</m>. 
+        </p>
+        <p>
             From the learner experience, we can see that,
         </p>
         <p>
@@ -224,7 +213,7 @@
             
         </p>
             <p>
-                In general, after <m>T</m> years, the value of the asset can be calculated using the formula, <m>A = P \left(1 + \frac{R}{100}\right)^T</m>
+                In general, after <m>T</m> years, the value of the asset can be calculated using the formula, <me>A = P \left(1 + \frac{R}{100}\right)^T</me>
             </p> 
     </insight>
 
