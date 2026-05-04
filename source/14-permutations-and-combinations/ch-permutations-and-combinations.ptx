@@ -4,11 +4,70 @@
   <title>Permutations and Combinations</title>
 
   <introduction>
-    <!-- TODO: Add introduction -->
+    <p>
+      In our study of mathematics so far, we have used counting as a basic tool to quantify the world around us. For example, the fundamental counting principle tells us that if there are <m>m</m> ways to do one thing and <m>n</m> ways to do another, there are <m>m \times n</m> total possibilities. In the real world, choices are rarely simple; they often involve complex arrangements or selections that change depending on whether the order matters.
+    </p>
+
+    <p>
+      Combinatorics is the study of these structured possibilities. It allows us to move beyond simple counting and towards understanding the <term>logic of selection</term> within a system. By using permutations and combinations, we can answer questions such as:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>How many unique 4-digit PINs can be created if no numbers are allowed to repeat?</p>
+        </li>
+        <li>
+          <p>How many different starting lineups can a coach choose from a squad of 15 players?</p>
+        </li>
+        <li>
+          <p>In how many ways can a committee of three be selected from a group of ten people?</p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The two pillars of this chapter are:
+      <ol>
+        <li>
+          <p>
+            <alert>Permutations:</alert> We will learn how to calculate arrangements where the <strong>order is essential</strong>. This is the art of sequencing, used in everything from digital security to race results.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Combinations:</alert> We will explore the different ways to create groups where the <strong>order does not matter</strong>. This focuses on selection, such as choosing items from a menu or forming a project team.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            <strong>Factorials:</strong> The building blocks of counting, represented as <m>n!</m>, which help us manage large-scale possibilities.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Permutation Formula:</strong> Used when position matters: <m>P(n, r) = \frac{n!}{(n-r)!}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Combination Formula:</strong> Used when only the group membership matters: <m>C(n, r) = \frac{n!}{r!(n-r)!}</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Understanding permutations and combinations is the key to probability and strategic planning. Whether you are a software developer creating secure encryption or a logistics manager organizing a national event, these tools allow you to predict the number of outcomes based on the patterns of the present. By mastering these concepts, you will be equipped to tackle a wide range of problems in mathematics, computer science, and beyond.
+    </p>
   </introduction>
 
   <!-- include sections -->
-  <!-- <xi:include href="sec-section-name.ptx" /> -->
   <xi:include href="sec-factorials.ptx" />
   <xi:include href="sec-permutations-i.ptx" />
   <xi:include href="sec-permutations-ii.ptx" />
