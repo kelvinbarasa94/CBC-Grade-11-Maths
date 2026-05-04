@@ -8,194 +8,196 @@
             <dl>
                 <li>
                     <title>Strand</title>
-                    <p>
-                        3.0 Statistics and Probability
-                    </p>
+                    <p>3.0 Statistics and Probability</p>
                 </li>
                 <li>
                     <title>Sub-Strand</title>
-                    <p>
-                        3.1 Permutations and Combinations
-                    </p>
+                    <p>3.1 Permutations and Combinations</p>
                 </li>
                 <li>
                     <title>Specific Learning Outcomes</title> 
-                    <p>
-                        Perform permutations involving real life situations
-                    </p>
+                    <p>Perform permutations involving identical items and constrained arrangements.</p>
                 </li>
                 <li component="lesson-plan">
                     <title>Grade Level</title>
-                    <p>
-                        11
-                    </p>
+                    <p>11</p>
                 </li>
                 <li component="lesson-plan">
                     <title>Estimated Duration</title>
-                    <p>
-                        40 minutes
-                    </p>
+                    <p>40 minutes</p>
                 </li>
             </dl>
             </p>
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
             <li>
                 <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
+                <p>10 minutes</p>
             </li>
             <li>
                 <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
+                <p>To realize that swapping two identical items does not create a new arrangement.</p>
             </li>
-            </dl>
+            <li>
+                <title>Teacher's Role</title>
+                <p>Provide students with letter cards for the word "BOB". Ask them to list all unique arrangements. They will find fewer than <m>3!</m> because the two 'B's are identical.</p>
+            </li>
+        </dl>
+    </axiom>
+
+    <activity>
+        <title>The Identical Twins Problem</title>
+        <statement>
+            <p>
+                You have 3 flags to hang on a pole: 2 Red flags (identical) and 1 Blue flag.
+                <ol>
+                    <li>If the Red flags were different (e.g., Red1 and Red2), how many total arrangements would there be?</li>
+                    <li>List all the visually different ways you can actually hang these flags.</li>
+                    <li>Why is your list in step 2 shorter than the answer in step 1?</li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+
+    <insight>
+        <title>Permutations with Identical Items</title>
+        <p>
+            When some items in a set are identical, swapping them does not result in a new distinguishable permutation. To correct for this, we divide the total permutations by the factorial of the number of identical items.
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+        <p>
+            <strong>The Formula:</strong>
+            <line>For <m>n</m> objects where <m>p</m> are of one kind, <m>q</m> are of another, and <m>r</m> are of another, the number of unique permutations is:</line>
+            <me>P = \frac{n!}{p! q! r! \dots}</me>
+        </p>
+        <p>
+            <strong>Example Logic:</strong>
+            <line>To arrange the letters in "APPLE", we have 5 letters total, but 'P' repeats twice.</line>
+            <me>P = \frac{5!}{2!} = \frac{120}{2} = 60 \text{ ways.}</me>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>1. In how many ways can you arrange 5 Red balls and 3 Blue balls in a row?</p>
         </statement>
         <solution>
+            <p>
+                Total items (<m>n</m>) = 8.
+                Repeats: 5 Red (<m>5!</m>), 3 Blue (<m>3!</m>).
+                <me>P = \frac{8!}{5! 3!} = \frac{8 \times 7 \times 6 \times 5!}{5! \times (3 \times 2 \times 1)} = \frac{336}{6} = 56 \text{ ways.}</me>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>2. How many unique arrangements can be made using all the letters in the word <strong>STATISTICS</strong>?</p>
         </statement>
         <solution>
+            <p>
+                Total letters = 10.
+                Count the repeats: S (3), T (3), I (2).
+                <me>P = \frac{10!}{3! 3! 2!} = \frac{3,628,800}{6 \times 6 \times 2} = 50,400 \text{ ways.}</me>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>3. To move from point A to point B, a robot must move 4 steps Right (R) and 3 steps Up (U). How many different paths can the robot take?</p>
         </statement>
         <solution>
+            <p>
+                This is a permutation of the sequence RRRRUUU.
+                Total steps = 7. Repeats: R(4), U(3).
+                <me>P = \frac{7!}{4! 3!} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 \text{ paths.}</me>
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <example>
+        <statement>
+            <p>4. How many ways can the letters in "LEMON" be arranged if the letter 'L' must always be at the beginning?</p>
+        </statement>
+        <solution>
+            <p>
+                If 'L' is fixed in the first position, we only need to arrange the remaining 4 unique letters (E, M, O, N).
+                <me>P = 4! = 24 \text{ ways.}</me>
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>5. There are 3 Math books and 2 Science books. In how many ways can they be arranged on a shelf if the Math books must stay together?</p>
+        </statement>
+        <solution>
+            <p>
+                1. Treat the 3 Math books as one "block". We now have 1 block + 2 Science books = 3 items to arrange: <m>3!</m>.
+                2. Within the block, the 3 Math books can be arranged in <m>3!</m> ways.
+                <me>\text{Total} = 3! \times 3! = 6 \times 6 = 36 \text{ ways.}</me>
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>1. How many ways can the letters of the word "BANANA" be arranged?</p>
+            </statement>
             <solution>
+                <p>Total = 6. Repeats: A(3), N(2). <me>P = \frac{6!}{3! 2!} = \frac{720}{6 \times 2} = 60</me></p>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>2. A coin is flipped 10 times. How many sequences of outcomes have exactly 8 Heads and 2 Tails?</p>
+            </statement>
+            <solution>
+                <p><me>\frac{10!}{8! 2!} = \frac{10 \times 9}{2} = 45 \text{ sequences.}</me></p>
+            </solution>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>3. In how many ways can 4 identical Red pens and 4 identical Blue pens be distributed to 8 students if each gets one pen?</p>
+            </statement>
+            <solution>
+                <p><me>\frac{8!}{4! 4!} = \frac{8 \times 7 \times 6 \times 5}{24} = 70 \text{ ways.}</me></p>
+            </solution>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+        <exercise>
+            <statement>
+                <p>4. How many unique 7-digit phone numbers can be formed using the digits 5, 5, 5, 8, 8, 1, 1?</p>
+            </statement>
+            <solution>
+                <p><me>\frac{7!}{3! 2! 2!} = \frac{5040}{6 \times 2 \times 2} = 210 \text{ numbers.}</me></p>
+            </solution>
+        </exercise>
 
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+        <exercise>
+            <statement>
+                <p>5. Find the number of arrangements of the letters "BEEKEEPER" where all the 'E's are together.</p>
+            </statement>
+            <solution>
+                <p>
+                    Treat "EEEE" as one block. Remaining letters: B, K, P, R. 
+                    Total items to arrange = 5.
+                    <m>5! = 120</m> ways. (Note: Internal arrangement of 'E's is <m>4!/4! = 1</m>).
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
