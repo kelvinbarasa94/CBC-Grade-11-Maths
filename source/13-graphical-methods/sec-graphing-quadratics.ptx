@@ -92,7 +92,7 @@
                     </li>
                     <li>
                         <p>
-                            <alert>Linear Graphs:</alert>
+                            Linear Graphs:
                             <ul>
                                 <li>
                                     <p>
@@ -109,16 +109,16 @@
                     </li>
                     <li>
                         <p>
-                            <alert>Quadratic Graphs (Parabolas):</alert>
+                            Quadratic Graphs (Parabolas):
                             <ul>
                                 <li>
                                     <p>
-                                        Represent <m>y = x^2</m>: Hold both arms up in a "U" shape. This is called <term>concave up</term>.
+                                        Represent <m>y = x^2</m>: Hold both arms up in a "U" shape. This is called concave up.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Represent <m>y = -x^2</m>: Hold both arms down in an upside-down "U" shape. This is called <term>concave down</term>.
+                                        Represent <m>y = -x^2</m>: Hold both arms down in an upside-down "U" shape. This is called concave down.
                                     </p>
                                 </li>
                             </ul>
