@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<section xml:id="sec-multiplying-matrices-ii" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-multiplying-matrices-ii" xmlns:xi="http:\\www.w3.org/2001/XInclude">
     <title>Multiplying Matrices II</title>
     <objectives component="outcomes">
         <introduction>
@@ -148,16 +148,94 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
+            <statement> 
+                <p> Define the 2-by-2 matrix <m>F</m> as <me> \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}  </me> </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Is <m>F\times F</m> defined? Check if the matrices are compatible.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate <m> F \times F </m>, which we can also write as <m> F^2 </m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate <m>F^3</m> and <m>F^4</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If we let <m> \mathbf{x} = \begin{bmatrix}1 \\ 1\end{bmatrix}</m>, determine <m>F\mathbf{x}</m>, <m>F^2\mathbf{x}</m>, <m>F^3\mathbf{x}</m> and <m>F^4\mathbf{x}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What do you notice about the answers to the previous part? Why might this be the case?
+                        </p>
+                        <hint>
+                            <p>
+                                Why did we choose <m>F</m> as the letter representing the matrix?
+                            </p>
+                        </hint>
+                    </li>
+                </ol>
             </statement>   
             <solution>
-
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Yes, since <m>F</m> is a square matrix, the number of columns in the first <m>F</m> (2) is the same as the number of rows in the second <m>F</m> (2) 
+                        </p>
+                    </li>
+                    <li>
+                        <p> We have: </p>
+                        <p>
+                            <md>
+                                <mrow> F^2 &amp; = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} </mrow>
+                                <mrow> &amp; = \begin{bmatrix} 1(1) + 1(1) &amp; 1(1) + 1(0) \\ 1(1) + 0(1) &amp; 1(1) + 0(0) \end{bmatrix} </mrow>
+                                <mrow> &amp; = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>F^3 = \begin{bmatrix} 3 &amp; 2 \\ 2 &amp; 1 \end{bmatrix} </m>, <m>F^4 = \begin{bmatrix} 5 &amp; 3 \\ 3 &amp; 2 \end{bmatrix} </m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>F\mathbf{x} \amp = \begin{bmatrix}2 \\ 1\end{bmatrix}</mrow>
+                                <mrow>F^2\mathbf{x} \amp = \begin{bmatrix}3 \\ 2\end{bmatrix}</mrow>
+                                <mrow>F^3\mathbf{x} \amp = \begin{bmatrix}5 \\ 3\end{bmatrix}</mrow>
+                                <mrow>F^4\mathbf{x} \amp = \begin{bmatrix}8 \\ 5\end{bmatrix}</mrow>
+                            </md>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The entries in the vectors are fibonacci numbers (<m>1, 1, 2, 3, 5, 8, \ldots</m>). Specifically, if <m>f_1 = 1</m> is the first fibonacci number, then <me> F^n \mathbf{x} = \begin{bmatrix}f_{n+2} \\ f_{n+1} \end{bmatrix}</me>
+                        </p>
+                        <p>
+                            This occurs because the fibonacci numbers are defined by <m>f_{n+2} = f_{n+1} + f_{n}</m>, and <m> \mathbf{x} = \begin{bmatrix}1\\ 1 \end{bmatrix} = \begin{bmatrix}f_2 \\ f_1 \end{bmatrix} </m>, so:
+                            <md>
+                                <mrow> F \mathbf{x} \amp = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} \begin{bmatrix}f_2 \\ f_1 \end{bmatrix}</mrow>
+                                <mrow> \amp = \begin{bmatrix}f_2 + f_1 \\ f_2 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix}f_3 \\ f_2 \end{bmatrix} </mrow>
+                            </md>
+                            Repeatedly multipling by <m>F</m> will continue this pattern and produce more fibonacci numbers.
+                        </p>
+                    </li>
+                </ol>
             </solution>             
         </exercise>        
-    </exercises> -->
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
