@@ -117,13 +117,87 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
+    <example xml:id="PRECALC-9OMJggLJ7g" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+      <title>Soccer Spending</title>
+      <statement>
+        <p>We have <xref ref="PRECALC-sBwn0YwlSd"/>, representing the equipment needs of two soccer teams.</p>
+        <table xml:id="PRECALC-sBwn0YwlSd" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+          <tabular>
+            <row header="yes">
+                <cell></cell>
+                <cell>Wildcats</cell>
+                <cell>Mud Cats</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Goals</em>
+              </cell>
+              <cell>6</cell>
+              <cell>10</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Balls</em>
+              </cell>
+              <cell>30</cell>
+              <cell>24</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Jerseys</em>
+              </cell>
+              <cell>14</cell>
+              <cell>20</cell>
+            </row>
+          </tabular>
+        </table>
+        <p>We are also given the prices of the equipment, as shown in <xref ref="PRECALC-ol0utIPRhz"/>.</p>
+        <table xml:id="PRECALC-ol0utIPRhz" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+          <tabular>
+            <row>
+              <cell>
+                <em>Goal</em>
+              </cell>
+              <cell>30,000 Ksh</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Ball</em>
+              </cell>
+              <cell>1000 Ksh</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Jersey</em>
+              </cell>
+              <cell>3000 Ksh</cell>
+            </row>
+          </tabular>
+        </table>
+        <p> What is the total cost of the equipment for each team? </p>
+    </statement>
+    <solution>
+        <p>We will convert the data to matrices. Thus, the equipment need matrix is written as</p>
+        <p>
+          <me> E = \begin{bmatrix} 6 &amp; 10 \\ 30 &amp; 24 \\ 14 &amp; 20 \end{bmatrix} </me>
+        </p>
+        <p>The cost matrix is written as</p>
+        <p>
+          <me>C=\begin{bmatrix} 3000 &amp; 1000 &amp; 3000 \end{bmatrix}</me>
+        </p>
+        <p> We perform matrix multiplication to obtain costs for the equipment.</p>
+        <p>
+            <md>
+                <mrow> CE &amp;=\begin{bmatrix} 30,000 &amp; 1000 &amp; 3000 \end{bmatrix}\begin{bmatrix} 6 &amp; 10 \\ 30 &amp; 24 \\ 14 &amp; 20 \end{bmatrix} </mrow>
+                <mrow> &amp; =\begin{bmatrix} 30,000(6)+100(30)+300(14) &amp; 3000(10)+10(24)+300(20) \end{bmatrix} </mrow> 
+                <mrow> &amp; =\begin{bmatrix} 252,000 &amp; 384,000 \end{bmatrix} </mrow>
+            </md>
+        </p>
+        <p>The total cost for equipment for the Wildcats is 252,000 Ksh, and the total cost for equipment for the Mud Cats is 384,000 Ksh.</p>
+      </solution>
     </example>
 
+    <!--
     <example>
         <statement>
         </statement>
@@ -200,4 +274,8 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+    <convention>
+         <p>This section <xref ref="sec-multiplying-matrices-i" text="title"/> is adapted from "<url href="https://github.com/openstax/osbooks-college-algebra-bundle/tree/e10e6b91143fe884c7c60dc0ad82ef23e1be0aa5/modules/m49433/index.cnxml">Finding Scalar Multiples of a Matrix</url>" in Open STAX Precalculus 2e, used under <url href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY-4.0</url>.</p>
+    </convention>
 </section>
