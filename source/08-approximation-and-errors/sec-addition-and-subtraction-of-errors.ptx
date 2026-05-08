@@ -67,12 +67,343 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <term>Work in Groups to:</term>
+            </p>
+            <p>
+                Measure the length and width of an English textbook and record in the table below.
+            </p>
+            <tabular top="medium" bottom="medium" left="medium" right="medium">
+                <row header="yes">
+                    <cell>Side</cell>
+                    <cell>Measurent (cm)</cell>
+                </row>
+                <row>
+                    <cell>Length</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>Width</cell>
+                    <cell>?</cell>
+                </row>
+            </tabular>
+            <p>
+                <term>Find and calculate</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The smallest unit of measurement.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The maximum and minimum errors of;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Length
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Record the values obtained in the table below
+                        </p>
+                        <tabular top="medium" bottom="medium" left="medium" right="medium">
+                            <row header="yes">
+                                <cell>Side</cell>
+                                <cell>Actual Measurement</cell>
+                                <cell>maximum Measurement</cell>
+                                <cell>minimum Measurement</cell>
+                            </row>
+                            <row>
+                                <cell>Length</cell>
+                                <cell>?</cell>
+                                <cell>?</cell>
+                                <cell>?</cell>
+                            </row>
+                             <row>
+                                <cell>Width</cell>
+                                <cell>?</cell>
+                                <cell>?</cell>
+                                <cell>?</cell>
+                            </row>
+                        </tabular>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Additional Exploration: </term> In groups find;
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Sum of actual length and;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Actual width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Maximum width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Minimum width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Sum of maximum length and;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Actual width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Maximum width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Minimum width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Sum of minimum length and;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Actual width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Maximum width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Minimum width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                From the additional exploration above, what is?
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The maximum sum
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The minimum sum
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The actual sum (use the formula:)
+                        </p>
+                        <p>
+                            <md>
+                                <mrow> \text{actual sum} = \amp \; \text{actual length} + \text{actual width} </mrow>
+                            </md>
+                            
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Subtraction Exploration: </term> In groups find;
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The difference between actual length and;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Actual width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Maximum width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Minimum width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The difference between maximum length and;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Actual width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Maximum width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Minimum width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The difference between minimum length and;
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Actual width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Maximum width
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Minimum width
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                From the subtraction exploration above, what is?
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The maximum difference
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The minimum difference
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The actual difference (use the formula:)
+                        </p>
+                        <p>
+                            <md>
+                                <mrow> \text{actual difference} = \amp \; \text{actual length} - \text{actual width} </mrow>
+                            </md>
+                            
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Calculate stepwise the following:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Absolute error in the addition of the length and width?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The relative error in the addition of length and width?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The percentage error in the addition of length and width?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The absolute error in the difference between length and width?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The relative error in the difference between length and width?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The percentage error in the difference between length and width?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Discuss and share with other Groups</term>
+            </p>
+            <p>
+                The pattern you notice in the addition and subtraction of errors?
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +437,19 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <term>Obseve and note that;</term>
+        </p>
+        <p>
+            <md>
+                <mrow> \text{Absolute error}\; = \amp \; \text{Maximum} \; - \; \text{actual} </mrow>
+                <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute}}{\text{Actual}} </mrow>
+                <mrow> \text{Percentage error} \; = \amp \; \text{Relative error} \; \times 100 \% </mrow>
+            </md>
+            
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

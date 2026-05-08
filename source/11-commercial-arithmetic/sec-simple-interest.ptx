@@ -244,7 +244,7 @@
 
      <warning>
         <p>
-            In this formula, we need to divide <m>R</m> by 100 to convert it from a percentage to a decimal. If a Bank offers an interest rate of <m>5\%</m>, we multiply by <m>\frac{R}{100} = \frac{5}{100} = 0.05</m> in the formula. 
+            In this formula, we need to divide <m>R</m> by <m>100</m> to convert it from a percentage to a decimal. If a Bank offers an interest rate of <m>5\%</m>, we multiply by <m>\frac{R}{100} = \frac{5}{100} = 0.05</m> in the formula. 
         </p>
      </warning>
 
@@ -411,7 +411,7 @@
         <exercise>
             <statement>
                 <p>
-                    Sean's new car loan statement said he would pay <m>\text{Ksh} \; 486,625</m> in interest from an interest rate of <m>8.5 \;\text{%}</m>.  If sean borrowed <m>1,145,000</m> from the bank to but the car. After how long should the loan be payed back?
+                    Sean's new car loan statement saiOd he would pay <m>\text{Ksh} \; 486,625</m> in interest from an interest rate of <m>8.5 \;\text{%}</m>.  If sean borrowed <m>1,145,000</m> from the bank to but the car. After how long should the loan be payed back?
                 </p>
             </statement>
             <answer>
