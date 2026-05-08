@@ -117,6 +117,8 @@
 
     <!-- Add at least 3 examples -->
 
+    <!-- Show det(aM) = a det(A), det(AB) = det(A) det(B)-->
+
     <!-- <example>
         <statement>
         </statement>

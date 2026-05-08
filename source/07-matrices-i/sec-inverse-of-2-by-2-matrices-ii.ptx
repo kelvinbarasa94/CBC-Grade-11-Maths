@@ -153,14 +153,46 @@
 
     <exercises>
         <exercise>
-            <title>Geometric Sum of Matrices</title>
+            <title>Inverse of Diagonal Matrices</title>
             <statement>   
-                <p>
-                    Let <m>A</m> be a <m>2 \times 2</m> matrix, 
-                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Let <m>M = \begin{bmatrix}5 &amp; 0 \\ 0 &amp; -2\end{bmatrix}</m>. Find <m>M^{-1}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Let <m>N = \begin{bmatrix}a &amp; 0 \\ 0 &amp; b\end{bmatrix}</m> be a diagonal matrix with entries <m>a</m> and <m>b</m>. Prove that <me>N^{-1} = \begin{bmatrix}\frac{1}{a} &amp; 0 \\ 0 &amp; \frac{1}{b}\end{bmatrix}</me>.
+                        </p>
+                    </li>
+                </ol>
             </statement>   
             <solution>
-
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Using the formula for the inverse of a 2 by 2 matrix, we have
+                            <md>
+                                <mrow> M^{-1} \amp = \frac{1}{(5)(-2) - (0)(0)} \begin{bmatrix}-2 &amp; 0 \\ 0 &amp; 5\end{bmatrix}</mrow>
+                                <mrow> \amp = \frac{1}{-10} \begin{bmatrix}-2 &amp; 0 \\ 0 &amp; 5\end{bmatrix}</mrow>
+                                <mrow> \amp = \begin{bmatrix}\frac{-2}{-10} &amp; 0 \\ 0 &amp; \frac{5}{-10}\end{bmatrix}</mrow>
+                                <mrow> \amp = \begin{bmatrix}\frac{1}{5} &amp; 0 \\ 0 &amp; -\frac{1}{2}\end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Using the formula for the inverse of a 2 by 2 matrix, we have
+                            <md>
+                                <mrow> N^{-1} \amp = \frac{1}{(a)(b) - (0)(0)} \begin{bmatrix}b &amp; 0 \\ 0 &amp; a\end{bmatrix} </mrow>
+                                <mrow> \amp = \frac{1}{ab} \begin{bmatrix}b &amp; 0 \\ 0 &amp; a\end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix}\frac{1}{a} &amp; 0 \\ 0 &amp; \frac{1}{b}\end{bmatrix}  </mrow>
+                            </md>
+                            as required.
+                        </p>
+                    </li>
+                </ol>
             </solution>             
         </exercise>        
     </exercises>
