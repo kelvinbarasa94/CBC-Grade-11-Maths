@@ -61,16 +61,14 @@
         </dl>
         </axiom>
 
-    <activity>
+    <activity xml:id="mango-shopping-2">
         <statement>
-            <p> We continue with Kelvin and Esther from <xref ref="mango-shopping"/>. As a reminder, this matrix represents their purchases of mangoes, oranges, and banans from the shop in Soy:
+            <p> We continue with Kelvin and Esther from <xref ref="mango-shopping"/>. As a reminder, this matrix represents their purchases of mangoes, oranges, and bananas from the shop in Soy:
             <me>
                 \mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}
             </me>
             The first column tells us that Kelvin bought 5 mangoes and Esther bought 6 mangoes.
             </p>    
-            <ol marker="1.">
-                <li>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -124,53 +122,8 @@
                                 Kelvin spends <m>5 \times x + 2 \times y + 1 \times z</m>. 
                             </p>
                         </solution>
-                    </li>
-                </ol>
-                </li>
-                <li>
-                    <p>
-                        Suppose that, next week, prices have increased from 1(a), so that mangoes cost Ksh 12 each, oranges cost Ksh 20 each, and bananas cost Ksh 8 each. 
-                    </p>
-                    <ol marker="(a)">
-                        <li>
-                            <p>
-                                Can you find how much Kelvin and Esther would spend next week?
-                            </p>
-                            <solution component="lesson-plan">
-                                <p>
-                                    Kelvin spends <m>5 \times 12 + 2 \times 20 + 1 \times 8 = \text{Ksh } 108</m>, and Esther spends <m>6 \times 12 + 1 \times 20 + 3 \times 8 = \text{Ksh } 116</m>.
-                                </p>
-                            </solution>
-                        </li>
-                        <li>
-                            <p>
-                                Can you represent your answers from 1(a) and 2(a) in a <m>2\times2</m> matrix, with a row for Kelvin and Esther, and column 1 representing the total cost this week and column 2 representing total cost next week.
-                            </p>
-                            <solution component="lesson-plan">
-                                <p>
-                                     <me>\begin{bmatrix} 85 &amp; 108 \\ 90 &amp; 116 \end{bmatrix}</me>. The first column represents the total cost this week, and the second column represents the total cost next week. 
-                                </p>
-                            </solution>
-                            <note component="lesson-plan">
-                                <p> If students have the transpose of this matrix (with Kelvin and Esther as columns), encourage them to write it the other way (since this preserves the rows for Kelvin and Esther). </p>
-                            </note>
-                        </li>
-                        <li>
-                            <p>
-                                Could you generalise your result? What if this week mangoes cost Ksh <m>x</m>, oranges cost Ksh <m>y</m>, and bananas cost Ksh <m>z</m>, and next week mangoes cost Ksh <m>a</m>, oranges cost Ksh <m>b</m>, and bananas cost Ksh <m>c</m>? What would the matrix look like then?
-                            </p>
-                            <solution component="lesson-plan">
-                                <p>
-                                    <me>\begin{bmatrix} 5x + 2y + z &amp; 5a + 2b + c \\ 6x + y + 3z &amp; 6a + b + 3c \end{bmatrix}</me> The first column represents the total cost this week, and the second column represents the total cost next week.
-                                </p>
-                            </solution>
-                            <note component="lesson-plan">
-                                <p> If students struggle to get this abstraction, break it up step by step (e.g. Kelvin's total cost in the first week, then second week etc.) </p>
-                            </note>
-                        </li>
+                    </li>              
                     </ol>
-                </li>
-            </ol>
         </statement>
     </activity>
 

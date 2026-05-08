@@ -41,38 +41,117 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    12 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To familiarise students with matrix-matrix multiplication via a practical example (prices and quantities)
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    This Learner Experience continues from <xref ref="mango-shopping-2"/>. Quickly recap the takeaways from that before this lesson, and write the key matrices on the board. Remind students which columns correspond to mangoes, oranges, and bananas.
+                </p>
+            </li>
+        </dl>
+    </axiom> 
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                We pick up again with Kelvin and Esther buying mangoes, from <xref ref="mango-shopping-2"/>. As a reminder, this matrix represents their purchases of mangoes, oranges, and bananas from the shop in Soy:
+                <me>
+                    \mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}
+                </me>
+                The first column tells us that Kelvin bought 5 mangoes and Esther bought 6 mangoes.
+            </p>
+            <p> Previously, we wrote down the cost matrix as <me>\mathbf{C}_1 = \begin{bmatrix} 10 \\ 15 \\ 5 \end{bmatrix}</me> However, it's now a month later and prices have changed: mangoes cost Ksh 12 each, oranges cost Ksh 20 each, and bananas cost Ksh 8 each. 
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Write down the new cost matrix, <m>\mathbf{C}_2</m>
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>\mathbf{C}_2 = \begin{bmatrix} 12 \\ 20 \\ 8 \end{bmatrix}</me>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        Can you find how much Kelvin and Esther will spend this month?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            Kelvin spends <m>5 \times 12 + 2 \times 20 + 1 \times 8 = \text{Ksh } 108</m>, and Esther spends <m>6 \times 12 + 1 \times 20 + 3 \times 8 = \text{Ksh } 116</m>.
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        In <xref ref="mango-shopping"/>, we found that, last month (with costs given by <m>\mathbf{C}_1</m>) Kelvin spent <m>\text{Ksh } 85</m> and Esther spent <m>\text{Ksh } 90</m>. Could you represent the spending data for last month <em>and this month</em>  in a <m>2\times2</m> matrix, with a row for Kelvin and Esther, and column 1 representing the total cost last month and column 2 representing total cost this month. Call this matrix <m>\mathbf{T}</m> (for total).
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                                <me>\mathbf{T} = \begin{bmatrix} 85 &amp; 108 \\ 90 &amp; 116 \end{bmatrix}</me>. The first column represents the total cost last month, and the second column represents the total cost this month.
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p> If students have the transpose of this matrix (with Kelvin and Esther as columns), encourage them to write it the other way (since this preserves the rows for Kelvin and Esther). </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        We can combine costs from both months into a single matrix, which we'll call <m>\mathbf{K}</m>:
+                        <me> \mathbf{K} = \begin{bmatrix} 10 &amp; 12 \\ 15 &amp; 20 \\ 5 &amp; 8 \end{bmatrix}</me> The costs from last month are the first column, and the costs for this month are the second column
+                    </p>
+                    <p>
+                        If you were just given the matrices <m>S</m> (the amounts purchased by both Kelvin and Esther) and <m>K</m> (the prices both months), how could you create the matrix <m>\mathbf{T}</m> (the costs for Kelvin and Esther both months)?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            We would want to compute <me>\text{(mango quantity)} \times \text{(mango price)} + \text{(orange quantity)}\times \text{(orange price)} + \text{(banana quantity)}\times \text{(banana price)} </me> for each person (Kelvin and Esther) <em>and</em> each month (last month and this month). So we have:
+                            <md>
+                                <mrow> \mathbf{T} &amp; = \begin{bmatrix} 5(10) + 2(15) + 1(5) &amp; 5(12) + 2(20) + 1(8) \\ 6(10) + 1(15) + 3(5) &amp; 6(12) + 1(20) + 3(8)\end{bmatrix} </mrow>
+                                <mrow>  &amp; = \begin{bmatrix} 85 &amp; 108 \\ 90 &amp; 116 \end{bmatrix}</mrow>
+                            </md>
+                            
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        Could you generalise your result? What if this month mangoes cost Ksh <m>x</m>, oranges cost Ksh <m>y</m>, and bananas cost Ksh <m>z</m>, and next week mangoes cost Ksh <m>a</m>, oranges cost Ksh <m>b</m>, and bananas cost Ksh <m>c</m>? What would the total matrix <m>\mathbf{T}</m> look like then?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>\begin{bmatrix} 5x + 2y + z &amp; 5a + 2b + c \\ 6x + y + 3z &amp; 6a + b + 3c \end{bmatrix}</me> The first column represents the total cost last month, and the second column represents the total cost this month.
+                        </p>
+                        <p>
+                            We define <term>matrix multiplication</term> to represent these kinds of situations. We have:
+                            <me> \mathbf{T} = \mathbf{S} \times \mathbf{K} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix} \times \begin{bmatrix} x &amp; a\\ y &amp; b\\ z &amp; c\end{bmatrix} = \begin{bmatrix} 5x + 2y + z &amp; 5a + 2b + c \\ 6x + y + 3z &amp; 6a + b + 3c \end{bmatrix} </me>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p> If students struggle to get this abstraction, break it up step by step (e.g. Kelvin's total cost in the first month, then second week etc.) </p>
+                        <p>
+                            Use this opportunity to help define matrix multiplication for students.
+                        </p>
+                    </note>
+                </li>
+            </ol>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
