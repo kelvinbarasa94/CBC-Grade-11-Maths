@@ -66,13 +66,147 @@
                 </li>
             </dl>
         </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+        <activity>
+            <statement>
+                <p>
+                    <term>Work in Groups to:</term>
+                </p>
+                <p>
+                    Construct a triangle ABC with the length AB <m>= 6</m> cm, AC <m>= 8</m> cm, and BC <m>= 10</m> cm.
+                </p>
+                <p>
+                    <term>You are required to:</term>
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Find the limits within which the length of AB, AC and BC lie and record the results in the table below.
+                            </p>
+                            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                <row header="yes">
+                                    <cell>Side</cell>
+                                    <cell>Minimum</cell>
+                                    <cell>Actual</cell>
+                                    <cell>Maximum</cell>
+                                </row>
+                                <row>
+                                    <cell>AB</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                </row>
+                                <row>
+                                    <cell>BC</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                </row>
+                                <row>
+                                    <cell>CA</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                </row>
+                            </tabular>
+                        </li>
+                        <li>
+                            <p>
+                                <term>Use trigonometric ratios to:</term> find the tangent of <m>\angle ABC</m>.
+                            </p>
+                            <p>
+                                <ol marker="(i)">
+                                    <li>
+                                        <p>
+                                            Use the minimum value of AC and record the result in the table below.
+                                        </p>
+                                        <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                            <row header="yes">
+                                                <cell>Minimum AC</cell>
+                                                <cell>Tangent</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Minimum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Actual AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Maximum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                        </tabular>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Use the actual value of AC and record the result in the table below.
+                                        </p>
+                                        <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                            <row header="yes">
+                                                <cell>Actual AC</cell>
+                                                <cell>Tangent</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Minimum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Actual AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Maximum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                        </tabular>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Use the maximum value of AC and record the result in the table below.
+                                        </p>
+                                        <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                            <row header="yes">
+                                                <cell>Maximum AC</cell>
+                                                <cell>Tangent</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Minimum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Actual AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Maximum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                        </tabular>
+                                    </li>
+                                </ol>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                From the table find the minimum, actual, and maximum values of the tangent of <m>\angle ABC</m>. (<term>Hint</term> The actual tangent are found using the actual values of AB and AC).
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    <term>Class Discussion</term>
+                </p>
+                <p>
+                    Use cosine to find the value minimum, actual, and maximum values of <m>\angle ACB</m>, hence find the limits within which <m>\angle ACB</m> lies.
+                </p>
+                <p>
+                    Find the absolute error, relative error and percentage error in the tangent of <m>\angle ABC</m> and the cosine of angle <m>\angle ACB</m>.
+                </p>
+            </statement>
+        </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +240,19 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+   <insight>
+    <p>
+        We calculate the absolute error, relative error and percentage error using the following formulae;
+    </p>
+    <p>
+        <md>
+            <mrow> \text{Absolute error} \; = \amp \; \text{Maximum value}\; - \;\text{Actual value} </mrow>
+            <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute error}}{\text{Actual value}} </mrow>
+            <mrow> \text{Percentage error} \; = \amp \; \text{Relative error} \times 100\% </mrow>
+        </md>
+        
+    </p>
+   </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -134,9 +277,9 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{Max speed} = \amp \; \frac{\text{Max distance}}{\text{Min time}} </mrow>
-                    <mrow> = \amp \; \frac{100.5}{9.5} </mrow>
-                    <mrow> = \amp \; 10.6 \; \text{m/s to 3 significant figures} </mrow>
+                    <mrow> \text{Max speed} \amp = \; \frac{\text{Max distance}}{\text{Min time}} </mrow>
+                    <mrow> \amp = \; \frac{100.5}{9.5} </mrow>
+                    <mrow> \amp = \; 10.6 \; \text{m/s to 3 significant figures} </mrow>
                 </md>
             </p>
         </solution>
@@ -201,8 +344,8 @@
             </p>
             <p>
                 <md>
-                    <mrow>\frac{4.13 - 4.03}{2} = \amp \; \frac{1}{2} \times 0.10</mrow>
-                    <mrow> = \amp \; 0.050 \; \text{g / cm}^3 \text{ to 2 significant figures} </mrow>
+                    <mrow>\frac{4.13 - 4.03}{2} \amp = \; \frac{1}{2} \times 0.10</mrow>
+                    <mrow> \amp = \; 0.050 \; \text{g / cm}^3 \text{ to 2 significant figures} </mrow>
                 </md>
             </p>
 
@@ -258,8 +401,8 @@
                         </p>
                         <p>
                             <md>
-                                <mrow> \frac{2.58 - 2.48}{2} = \amp \; \frac{1}{2} \times 0.10 </mrow>
-                                <mrow> = \amp \; 0.050 \; \text{cm to 2 significant figures} </mrow>
+                                <mrow> \frac{2.58 - 2.48}{2} \amp = \; \frac{1}{2} \times 0.10 </mrow>
+                                <mrow> \amp = \; 0.050 \; \text{cm to 2 significant figures} </mrow>
                             </md>
                         </p>
                     </li>
@@ -269,8 +412,8 @@
                         </p>
                         <p>
                             <md>
-                                <mrow>\frac{0.05}{2.53} = \amp \; 0.0197 </mrow>
-                                <mrow> = \amp \; 0.020 \; \text{to 2 significant figures} </mrow>
+                                <mrow>\frac{0.05}{2.53} \amp = \; 0.0197 </mrow>
+                                <mrow> \amp = \; 0.020 \; \text{to 2 significant figures} </mrow>
                             </md>
                         </p>
                     </li>
@@ -280,9 +423,9 @@
                         </p>
                         <p>
                             <md>
-                                <mrow> \% \text{error} = \amp \; \text{Relative error} \times 100 \% </mrow>
-                                <mrow> = \amp \; 0.020 \times 100 \% </mrow>
-                                <mrow> = \amp \; 2.0 \% \; \text{to 2 significant figures} </mrow>
+                                <mrow> \% \text{error} \amp = \; \text{Relative error} \times 100 \% </mrow>
+                                <mrow> \amp = \; 0.020 \times 100 \% </mrow>
+                                <mrow> \amp = \; 2.0 \% \; \text{to 2 significant figures} </mrow>
                             </md>
                             
                         </p>

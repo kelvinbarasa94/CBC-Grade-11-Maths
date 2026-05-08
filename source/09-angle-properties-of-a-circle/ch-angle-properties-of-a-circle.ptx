@@ -3,9 +3,19 @@
 <chapter xml:id="ch-angle-properties-of-a-circle" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Angle Properties of a Circle</title>
 
-  <introduction>
-    <!-- TODO: Add introduction -->
-  </introduction>
+ <introduction>
+  <p>
+    The circle is one of the most fundamental and symmetric shapes in geometry. 
+    While we often focus on its area and circumference, the internal relationships 
+    between its linear components such as arcs, chords and diameters and the 
+    angles they form are essential for advanced spatial reasoning.
+  </p>
+  <p>
+    In this strand, we will investigate the consistent geometric rules that 
+    govern how angles behave within a circular boundary, covering center-angle 
+    relationships, cyclic quadrilaterals, and real-world applications.
+  </p>
+</introduction>
 
   <!-- include sections -->
   <!-- <xi:include href="sec-section-name.ptx" /> -->

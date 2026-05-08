@@ -126,28 +126,6 @@
                     </li>
                 </ol>
             </p>
-
-            <p>
-                The decrease in value of an asset over time is referred to as <term>Depreciation</term>.
-            </p>
-
-            <p>
-                Let the original value be <m>P</m>, the new value be <m>A</m>, the decrease in value be <m>I</m>, and the percentage decrease be <m>R</m>.
-            </p>
-
-            <p>
-                <alert>Discuss and express the following relationships:</alert>
-            </p>
-
-            <p>
-                <md>
-                    <mrow> I = \amp \; P - A </mrow>
-                    <mrow> R = \amp \; \frac{I}{P} \times 100\% </mrow>
-                    <mrow> = \amp \; \frac{P - A}{P} \times 100\% </mrow>
-                    <mrow> A = \amp \; P - I </mrow>
-                </md>
-            </p>
-
             <p>
                 <alert>Further Exploration:</alert> If the motorbike continues to lose value at the same rate every year, find the value after the second year and the third year.
             </p>
@@ -192,9 +170,14 @@
 
     <insight>
         <p>
+            The decrease in value of an asset over time is referred to as <term>Depreciation</term>.
+        </p>
+        <p>
+            Let the original value be <m>P</m>, the new value be <m>A</m>, the decrease in value be <m>I</m>, and the percentage decrease be <m>R</m>.
+        </p>
+        <p>
             From the learner experience, we observe that depreciation reduces the value of an asset by a fixed percentage each year.
         </p>
-
         <p>
             <md>
                 <mrow> A = \amp \; P - I </mrow>
@@ -241,14 +224,14 @@
         <solution>
             <p>
                 <md>
-                    <mrow>\text{Value after the first year}\; = \amp \; \text{sh.}\; (500 - \frac{10}{100}\times 500) </mrow>
-                    <mrow> = \amp \; \text{sh.}\; 450 </mrow>
-                    <mrow>\text{Value after the second year}\; = \amp \; \text{sh.}\; (450 - \frac{10}{100}\times 450) </mrow>
-                    <mrow> = \amp \; \text{sh.}\; 405 </mrow>
-                    <mrow>\text{Value after the third year}\; = \amp \; \text{sh.}\; (405 - \frac{10}{100}\times 405) </mrow>
-                    <mrow> = \amp \; \text{sh.}\; 364.50 </mrow>
-                    <mrow>\text{Value after the fourth year}\; = \amp \; \text{sh.}\; (364.50 - \frac{10}{100}\times 364.50) </mrow>
-                    <mrow> = \amp \; \text{sh.}\; 328.05 </mrow>
+                    <mrow>\text{Value after the first year}\; \amp = \; \text{sh.}\; (500 - \frac{10}{100}\times 500) </mrow>
+                    <mrow> \amp = \; \text{sh.}\; 450 </mrow>
+                    <mrow>\text{Value after the second year}\; \amp = \; \text{sh.}\; (450 - \frac{10}{100}\times 450) </mrow>
+                    <mrow> \amp = \; \text{sh.}\; 405 </mrow>
+                    <mrow>\text{Value after the third year}\; \amp = \; \text{sh.}\; (405 - \frac{10}{100}\times 405) </mrow>
+                    <mrow> \amp = \; \text{sh.}\; 364.50 </mrow>
+                    <mrow>\text{Value after the fourth year}\; \amp = \; \text{sh.}\; (364.50 - \frac{10}{100}\times 364.50) </mrow>
+                    <mrow> \amp = \; \text{sh.}\; 328.05 </mrow>
                 </md>
             </p>
             <p>
@@ -277,20 +260,13 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{A}\; = \amp \; \text{sh.}\; 400,000(1-0.02)^{12} </mrow>
-                    <mrow> = \amp \; \text{sh.}\; 400,000(0.98)^{12} </mrow>
-                    <mrow> = \amp \; \text{sh.}\; 313,700 </mrow>
+                    <mrow> \text{A}\; \amp = \; \text{sh.}\; 400,000(1-0.02)^{12} </mrow>
+                    <mrow> \amp = \; \text{sh.}\; 400,000(0.98)^{12} </mrow>
+                    <mrow> \amp = \; \text{sh.}\; 313,700 </mrow>
                 </md>
                 
             </p>
         </solution>
-    </example>
-    <example>
-        <statement>
-            <p>
-                
-            </p>
-        </statement>
     </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
