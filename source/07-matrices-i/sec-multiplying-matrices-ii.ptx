@@ -195,6 +195,110 @@
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
+    <example>
+        <title>Checking Matrices are Compatible</title>
+        <statement>
+            <p>
+                You are given the following matrices:
+            </p>
+            <me>\mathbf{A} = \begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 3 &amp; -1 &amp; 4 \end{bmatrix}, \quad
+                \mathbf{B} = \begin{bmatrix} 2 &amp; 0 &amp; 1 &amp; -1 \\ 1 &amp; 3 &amp; 0 &amp; 2 \\ 4 &amp; 1 &amp; -2 &amp; 0 \end{bmatrix},</me>
+            <me>\mathbf{C} = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}, \quad
+                \mathbf{D} = \begin{bmatrix} 0 &amp; 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; -1 &amp; 2 \\ 2 &amp; 2 &amp; 0 &amp; -1 \end{bmatrix}.
+            </me>
+            <p>
+                (So \(\mathbf{A}\) is \(2\times3\), \(\mathbf{B}\) and \(\mathbf{D}\) are \(3\times4\), and \(\mathbf{C}\) is \(4\times3\).)
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>Which of the following products are defined? Explain briefly: \(AB, BA, ABC, C(B+D)\).</p>
+                </li>
+                <li>
+                    <p>Compute \(AB\) where it is defined.</p>
+                </li>
+                <li>
+                    <p>Compute \(ABC\).</p>
+                </li>
+                <li>
+                    <p>Compute \(C(B+D)\).</p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Check inner dimensions: \(A\) is \(2\times3\) and \(B\) is \(3\times4\), so \(AB\) is defined (result \(2\times4\)).
+                        \(BA\) would require multiplying a \(3\times4\) matrix by a \(2\times3\) matrix — the inner dimensions \(4\) and \(2\) do not match, so \(BA\) is not defined.
+                        \(ABC\) is defined because \(AB\) is \(2\times4\) and \(C\) is \(4\times3\), so \((AB)C\) is \(2\times3\).
+                        Finally, \(B+D\) is defined (both are \(3\times4\)), and \(C(B+D)\) is defined because \(C\) is \(4\times3\) and \(B+D\) is \(3\times4\), so the product is \(4\times4\).
+                    </p>
+                </li>
+                <li>
+                    <p>Compute \(AB\):</p>
+                    <md>
+                        <mrow>AB &amp;= \begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 3 &amp; -1 &amp; 4 \end{bmatrix}\begin{bmatrix} 2 &amp; 0 &amp; 1 &amp; -1 \\ 1 &amp; 3 &amp; 0 &amp; 2 \\ 4 &amp; 1 &amp; -2 &amp; 0 \end{bmatrix}</mrow>
+                        <mrow> &amp;= \begin{bmatrix} 1(2)+2(1)+0(4) &amp; 1(0)+2(3)+0(1) &amp; 1(1)+2(0)+0(-2) &amp; 1(-1)+2(2)+0(0) \\ 3(2)+-1(1)+4(4) &amp; 3(0)+-1(3)+4(1) &amp; 3(1)+-1(0)+4(-2) &amp; 3(-1)+-1(2)+4(0) \end{bmatrix}</mrow>
+                        <mrow> &amp;= \begin{bmatrix} 4 &amp; 6 &amp; 1 &amp; 3 \\ 21 &amp; 1 &amp; -5 &amp; -5 \end{bmatrix}</mrow>
+                    </md>
+                </li>
+                <li>
+                    <p>Compute \(ABC\):</p>
+                    <p>First note \(AB = \begin{bmatrix}4 &amp; 6 &amp; 1 &amp; 3 \\ 21 &amp; 1 &amp; -5 &amp; -5\end{bmatrix}\) and \(C = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}\).</p>
+                    <md>
+                        <mrow>ABC &amp;= \begin{bmatrix}4 &amp; 6 &amp; 1 &amp; 3 \\ 21 &amp; 1 &amp; -5 &amp; -5\end{bmatrix}\begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}</mrow>
+                        <mrow> &amp;= \begin{bmatrix} 4 &amp; 17 &amp; 15 \\ 10 &amp; -2 &amp; 38 \end{bmatrix}</mrow>
+                    </md>
+                </li>
+                <li>
+                    <p>Compute \(C(B+D)\):</p>
+                    <p>First form \(B+D = \begin{bmatrix} 2 &amp; 1 &amp; 3 &amp; 0 \\ 2 &amp; 3 &amp; -1 &amp; 4 \\ 6 &amp; 3 &amp; -2 &amp; -1 \end{bmatrix}\).</p>
+                    <md>
+                        <mrow>C(B+D) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}\begin{bmatrix} 2 &amp; 1 &amp; 3 &amp; 0 \\ 2 &amp; 3 &amp; -1 &amp; 4 \\ 6 &amp; 3 &amp; -2 &amp; -1 \end{bmatrix}</mrow>
+                        <mrow> &amp;= \begin{bmatrix} 14 &amp; 7 &amp; -1 &amp; -2 \\ 10 &amp; 11 &amp; -8 &amp; 11 \\ 10 &amp; 9 &amp; -4 &amp; 7 \\ 2 &amp; -1 &amp; 7 &amp; -4 \end{bmatrix}</mrow>
+                    </md>
+                </li>
+            </ol>
+        </solution>
+    </example>
+        
+        
+
+    <example xml:id="PRECALC-xVdh9QwCLN" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+      <title>Multiplying Two Matrices</title>
+      <statement>
+        <p>Given <m>A = \begin{bmatrix}-1 &amp; 2 &amp; 3 \\ 4 &amp; 0 &amp; 5\end{bmatrix}</m> and <m>B = \begin{bmatrix}5 &amp; -1 \\-4 &amp; 0 \\ 2 &amp; 3\end{bmatrix}</m>
+        </p>
+        <ol marker="(a)">
+          <li>Find <m>AB</m>, if it exists.
+          </li>
+          <li>Find <m>BA</m>, if it exists.
+          </li>
+        </ol>
+      </statement>
+      <solution>
+        <ol marker="(a)">
+          <li> 
+            <p> As the dimensions of <m>A</m> are <m>2 \times 3</m> and the dimensions of <m>B</m> are <m>3 \times 2,</m> these matrices can be multiplied together because the number of columns in <m>A</m> matches the number of rows in <m>B.</m> The resulting product will be a <m>2 \times 2</m> matrix, the number of rows in <m>A</m> by the number of columns in <m>B.</m> 
+            <md>
+                <mrow>AB \amp = \begin{bmatrix}-1 &amp; 2 &amp; 3 \\ 4 &amp; 0 &amp; 5\end{bmatrix}\begin{bmatrix}5 &amp; -1 \\-4 &amp; 0 \\ 2 &amp; 3\end{bmatrix}</mrow>
+                <mrow> \amp = \begin{bmatrix}-1(5)+2(-4)+3(2) &amp; -1(-1)+2(0)+3(3) \\ 4(5)+0(-4)+5(2) &amp; 4(-1)+0(0)+5(3)\end{bmatrix}</mrow>
+                <mrow> \amp = \begin{bmatrix}-7 &amp; 10 \\ 30 &amp; 11\end{bmatrix}</mrow>
+            </md>
+            </p>
+            </li>
+          <li>
+            <p>The dimensions of <m>B</m> are <m>3 \times 2</m> and the dimensions of <m>A</m> are <m>2 \times 3.</m> The inner dimensions match so the product is defined and will be a <m>3 \times 3</m> matrix. 
+                <md>
+                    <mrow>BA \amp = \begin{bmatrix}5 &amp; -1 \\-4 &amp; 0 \\ 2 &amp; 3\end{bmatrix}\begin{bmatrix}-1 &amp; 2 &amp; 3 \\ 4 &amp; 0 &amp; 5\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix} 5(-1)+-1(4) &amp; 5(2)+-1(0) &amp; 5(3)+-1(5) \\ -4(-1)+0(4) &amp; -4(2)+0(0) &amp; -4(3)+0(5) \\ 2(-1)+3(4) &amp; 2(2)+3(0) &amp; 2(3)+3(5)\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}-9 &amp; 10 &amp; 10 \\ 4 &amp; -8 &amp; -12 \\ 10 &amp; 4 &amp; 21\end{bmatrix}</mrow>
+                </md>
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </example>
 
     <!-- <example>
         <statement>
@@ -357,4 +461,8 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+    <convention>
+        <p>This section includes material adapted from "<url href="https://github.com/openstax/osbooks-college-algebra-bundle/tree/e10e6b91143fe884c7c60dc0ad82ef23e1be0aa5/modules/m49433/index.cnxml">Finding the Product of Two Matrices</url>" in Open STAX Precalculus 2e, used under <url href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY-4.0</url>.</p>
+    </convention>
 </section>

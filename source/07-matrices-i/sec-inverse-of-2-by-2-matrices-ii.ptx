@@ -151,16 +151,19 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
+            <title>Geometric Sum of Matrices</title>
             <statement>   
-
+                <p>
+                    Let <m>A</m> be a <m>2 \times 2</m> matrix, 
+                </p>
             </statement>   
             <solution>
 
             </solution>             
         </exercise>        
-    </exercises> -->
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
