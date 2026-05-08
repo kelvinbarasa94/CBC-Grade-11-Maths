@@ -40,7 +40,313 @@
             </p>
         </introduction>
     </objectives>
+ <activity>
+        <statement>
+            <p>
+                <term>Work in Groups</term>
+            </p>
+            <p>
+                <term>What you need</term>
+            </p>
+            <p>
+                <li>
+                    <p>
+                        Number Cards <m>(50–100)</m>
+                    </p>
+                </li>
+            </p>
+            <p>
+                    <term>What to do</term>     
+            </p>
+            <task>
+                <statement>
+                    <p>
+                        Lists numbers between<m>50  and 100</m>
+                    </p>
+                
+                        <!-- Writes each number in square root form <m>(e.g., √50, √64).</m> -->
+                    
+                    <!-- <image>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.6]
 
+                                \foreach \n in {1,2,3,4,5} {
+                                    \begin{scope}[shift={(\n*5,0)}]
+                                        \draw[step=1cm] (0,0) grid (\n,\n);
+                                        \draw[thick] (0,0) rectangle (\n,\n);
+                                        \node at (\n/2,-0.7) {$\n$};
+                                    \end{scope}
+                                }
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image> -->
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                          Writes each number in square root form <m>(e.g., √50, √64).</m>
+                    </p>
+            
+                    <!-- <tabular left="medium" right="medium" top="medium" bottom="medium">
+                        <row>
+                            <cell right="medium">Side Length (<m>n</m>)</cell>
+                            <cell>Number of Unit Squares (<m>n^2</m>)</cell>
+                        </row>
+                        <row>
+                            
+                            <cell right="medium"><m>1</m></cell>
+                            <cell><m>1</m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>2</m></cell>
+                            <cell><m>4</m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>3</m></cell>
+                            <cell><m></m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>4</m></cell>
+                            <cell><m></m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>5</m></cell>
+                            <cell><m></m></cell>
+                        </row>
+                    </tabular> -->
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                      Find or estimate the value of each square root.
+                    </p>
+                    <p>
+                     Check whether the number inside the square root is a perfect square.
+                     Examples of perfect squares between <m>50</m>  and <m> 100:64, 81, 100</m>
+                     
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Use your findings to classify each square root:
+                        <li>
+                            <p>
+                                If the number is a perfect square, the square root is a Rational Number.
+                                Example: √64 = 8
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If the number is not a perfect square, the square root is an Irrational Number.
+                                Example: √80 ≈ 8.944...
+                            </p>
+                        </li>
+                    </p>
+                    <p>
+                        Discuss with Your Group:
+                        <li>
+                            <p>
+                                Why are square roots of perfect squares rational?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                               Why do non-perfect squares give irrational roots? 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What patterns do you notice?
+                            </p>
+                        </li>
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Share your work with other groups.
+                    </p>
+                </statement>
+            </task>        
+        </statement>
+    </activity> 
+    <insight>
+        <p>
+            In Grade 10, learners classified numbers into rational and irrational numbers:
+            <ol>
+                <li>
+                    <p>
+                        Rational numbers can be written as a fraction  <m>\frac{a}{b}</m>, where <m>b\neq 0</m> . They may be terminating or recurring decimals.Example: <m>\sqrt{9}=3</m> , so it is rational.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Irrational numbers</alert>  cannot be written as a simple fraction. Their decimals are non-terminating and non-recurring.Example: <m>\sqrt{7}</m> is irrational
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Square roots of perfect squares are  <alert>rational</alert>, while square roots of non-perfect squares are <alert>irrational</alert> .This lesson builds on that knowledge by exploring square roots of numbers between <m>50 and 100 </m> and classifying them as <alert>rational or irrational.</alert> 
+                    </p>
+                </li>
+            </ol>
+            <!-- <ol>
+                <li>
+                    <p>
+                        Irrational numbers cannot be written as a simple fraction. Their decimals are non-terminating and non-recurring.Example: <m>\sqrt{7}</m> is irrational.
+                    </p>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <p>
+                        Square roots of perfect squares are rational, while square roots of non-perfect squares are irrational.This lesson builds on that knowledge by exploring square roots of numbers between 50 and 100 and classifying them as rational or irrational.
+                    </p>
+                </li>
+            </ol> -->
+        </p>
+    </insight>
+    <example>
+        <statement>
+            <p>
+                Identify which of the following are irrational numbers:<m>\sqrt{50},\sqrt{64},\sqrt{72},\sqrt{81},\sqrt{90}</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+               <m>\sqrt{50}\sqrt{72}\sqrt{90}</m> <alert>They are not perfect squares.</alert>
+            </p>
+        </solution>
+    </example>
+    <example>
+        <statement>
+            <p>
+                Determine whether each number is Rational or Irrational. Give a reason.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\frac{\sqrt{49}}{7}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>0.272727</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>0.1010010001</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>2\sqrt{45}</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\frac{\sqrt{49}}{7}</m> = rational
+                            <li>
+                                <p>
+                                    simplyfy the <m>{\sqrt{49}}</m> = 7
+                                    = <m>\frac{7}{7}</m>
+                                    = 1(therefore making it rational)
+                                </p>
+                            </li>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>0.272727</m> = Rational, because it is recurring.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>0.1010010001</m> = Irrational, because it is non-terminating and non-recurring.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>2\sqrt{45}</m> = irrational since <m>\sqrt{45}</m> is not a perfect square.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </example>
+    <exercises xml:id="exercises-">
+        <exercise>
+        <statement>
+            
+            <p>
+                State whether each of the following numbers is rational or irrational:
+                <ol>
+                    <li>
+                        <p>
+                            <m>\sqrt{121}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sqrt{27}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\pi </m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                Simplify and hence state whether <m>7\sqrt{72}</m> is rational or irrational.
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                Write all irrational numbers between 0 and 50.
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                Determine whether each of the following is rational or irrational:
+                <ol>
+                    <li>
+                        <p>
+                            <m>3 + \sqrt{5}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sqrt{144} - 7</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </exercise>
+    </exercises>
+    
     <!-- [LP] Add guidance on activity -->
 
     <!-- <axiom component="lesson-plan">

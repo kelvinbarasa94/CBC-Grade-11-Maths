@@ -68,11 +68,115 @@
         </axiom> -->
 
     <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                A student participates in a training exercise where the running distance is reduced at each stage. 
+            </p>
+            <p>
+                The table below shows the distance the student runs at each stage of the training exercise. The first column shows the stage number, and the second column shows the distance run at that stage.
+            </p>
+            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                <row header="yes">
+                    <cell>Stage Number</cell>
+                    <cell>Distance Run (km)</cell>
+                </row>
+                <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>1</m></cell>
+                </row>
+                <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>\frac{1}{3}</m></cell>
+                </row>
+                <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>\frac{1}{9}</m></cell>
+                </row>
+                <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>\frac{1}{27}</m></cell>
+                </row>
+            </tabular>
+            <p>
+                <term>In Groups:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Write the next two terms in the sequence.</p>
+                    </li>
+                    <li>
+                        <p>Determine the common ratio (<m>r</m>).</p>
+                    </li>
+                    <li>
+                        <p>Describe how the distance changes from stage to stage.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Compute and compare with other groups:</term>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Compute the total distance after <m>2</m>, <m>3</m>, and <m>4</m> stages.</p>
+                    </li>
+                    <li>
+                        <p>What do you notice about how fast the total increases?</p>
+                    </li>
+                    <li>
+                        <p><term>Estimate:</term> Will the total distance exceed <m>2</m> km if the pattern continues forever?</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Discussion:</term>
+            </p>
+
+            <p>
+                Will the student stop running? 
+            </p>
+            <p>
+                Let the total distance be:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>S = \amp \; 1 + \frac{1}{3} + \frac{1}{9} + \frac{1}{27} + \dots</mrow>
+                </md>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Let <m>S</m> represent the total distance.</p>
+                    </li>
+                    <li>
+                        <p>Multiply the entire expression by <m>r</m>.</p>
+                    </li>
+                    <li>
+                        <p>Compare the two expressions carefully.</p>
+                    </li>
+                    <li>
+                        <p>Subtract and identify what remains.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Discuss and compare:</term>
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>Why do most terms disappear after subtraction?</p>
+                    </li>
+                    <li>
+                        <p>What happens to very small terms when the process continues?</p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +212,36 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+
+        <p>
+            A geometric sequence is a sequence where each term is obtained by multiplying the previous term by a constant called the common ratio <m>r</m>.
+        </p>
+
+        <p>
+            In some geometric sequences, the terms become smaller and approach zero when:
+        </p>
+
+        <p>
+            <m>-1 &lt; r &lt; 1</m>
+        </p>
+
+        <p>
+            In such cases, even though the sequence continues forever, the total sum approaches a fixed value.
+        </p>
+
+        <p>
+            This happens because the term <m>r^n</m> becomes extremely small as <m>n</m> increases.
+        </p>
+
+        <p>
+            Therefore, the sum to infinity is:
+        </p>
+
+        <p>
+            <m>S_{\infty} = \frac{a}{1 - r}</m>
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

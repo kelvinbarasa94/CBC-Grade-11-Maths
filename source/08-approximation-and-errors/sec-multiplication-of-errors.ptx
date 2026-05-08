@@ -66,13 +66,76 @@
                 </li>
             </dl>
         </axiom> -->
+        <activity>
+            <statement>
+                <p>
+                    <term>Work in Groups to:</term>
+                </p>
+                <p>
+                    Measure the length and the width of a mathematics textbook and record in the table below.
+                </p>
+                <tabular bottom="medium" top="medium" left="medium" right="medium">
+                    <row header="yes">
+                        <cell>Side</cell>
+                        <cell>Measurement</cell>
+                    </row>
+                    <row>
+                        <cell>Length</cell>
+                        <cell>?</cell>
+                    </row>
+                    <row>
+                        <cell>Width</cell>
+                        <cell>?</cell>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+                    </row>
+                </tabular>
+                <p>
+                    <term>In Groups you are required to:</term>
+                </p>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                               Find the limits within which the length and the width of the textbook lie. 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find the maximum, minimum, and actual area of the textbook.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find the limits within which the area of the textbook lie.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find the absolute error, relative error, and percentage error in the area of the textbook.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    <term>After the activity, discuss the following:</term>
+                </p>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                How did you find the limits within which the area of the textbook lie?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How did you find the absolute error, relative error, and percentage error in the area of the textbook?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                
+            </statement>
+        </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +169,20 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            The limits within which the area of the textbook lie is found by finding the maximum and minimum area of the textbook.
+        </p>
+        <p>
+            The maximum area is found by multiplying the maximum length and the maximum width, while the minimum area is found by multiplying the minimum length and the minimum width.
+        </p>
+        <p>
+            The absolute error is found by subtracting the actual area from the maximum area, while the relative error is found by dividing the absolute error by the actual area.
+        </p>
+        <p>
+            The percentage error is found by multiplying the relative error by <m>100 \%</m>.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

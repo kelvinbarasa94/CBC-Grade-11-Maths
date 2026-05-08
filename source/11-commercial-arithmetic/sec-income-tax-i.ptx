@@ -67,12 +67,111 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+
+            <p>
+                <term>Work in Groups to:</term>
+            </p>
+
+            <p>
+                In every economy, individuals earn income from employment. However, not all income earned is taken home because the government collects tax to fund public services such as roads, education, and healthcare.
+            </p>
+
+            <p>
+                In this activity, learners investigate how income tax is computed from salaries, allowances, deductions, and reliefs.
+            </p>
+
+            <p>
+                Identify different components that make up a worker's monthly income and discuss how these components affect the final amount received.
+            </p>
+
+            <tabular top="medium" bottom="medium" right="medium" left="medium">
+                <row header="yes">
+                    <cell>Income Component</cell>
+                    <cell>Role in Salary Structure</cell>
+                </row>
+                <row>
+                    <cell>Basic salary</cell>
+                    <cell>Primary earnings for work done</cell>
+                </row>
+                <row>
+                    <cell>Allowances</cell>
+                    <cell>Additional income for services or conditions</cell>
+                </row>
+                <row>
+                    <cell>Deductions</cell>
+                    <cell>Amounts removed before take-home pay</cell>
+                </row>
+            </tabular>
+
+            <p>
+                <alert>Case Study 1:</alert>
+            </p>
+
+            <p>
+                Mr. Barasa earns a monthly salary of Ksh <m>48,000</m>.
+            </p>
+
+            <p>
+                In groups, determine his annual income and convert it into Kenya Pounds (K£) given that 1 K£ = Ksh 20.
+            </p>
+
+            <p>
+                <alert>Case Study 2:</alert>
+            </p>
+
+            <p>
+                A teacher earns a basic salary of Ksh <m>35,000</m>, house allowance of Ksh <m>12,000</m>, and medical allowance of Ksh <m>3,000</m>. She contributes Ksh <m>200</m> to NSSF.
+            </p>
+
+            <p>
+                Learners are required to determine her monthly taxable income.
+            </p>
+
+            <p>
+                <alert>Case Study 3:</alert>
+            </p>
+
+            <p>
+                A clerk earns Ksh <m>10,000</m> taxable income. The tax rate for this bracket is <m>10\%</m>.
+            </p>
+
+            <p>
+                Determine the gross tax payable.
+            </p>
+
+            <p>
+                <alert>Case Study 4:</alert>
+            </p>
+
+            <p>
+                After calculating tax, a worker finds that the gross tax is Ksh <m>4,500</m>. If a personal relief of Ksh <m>2,400</m> is applied, determine the net tax (PAYE).
+            </p>
+
+            <p>
+                <alert>Guiding Questions:</alert>
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>What happens to income before a worker receives it?</p>
+                    </li>
+                    <li>
+                        <p>Why are allowances added to basic salary?</p>
+                    </li>
+                    <li>
+                        <p>Why is relief deducted from gross tax?</p>
+                    </li>
+                    <li>
+                        <p>How does tax affect the final income received by a worker?</p>
+                    </li>
+                </ol>
+            </p>
+
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -107,9 +206,29 @@
     </axiom> -->
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
+     <insight>
+        <p>
+            Income tax is a compulsory contribution deducted from an individual's earnings based on their income structure.
+        </p>
 
-    <!-- <insight>
-    </insight> -->
+        <p>
+            A worker's income is built from:
+        </p>
+
+        <p>
+            <md>
+                <mrow> \text{Gross Income} = \amp\; \text{Basic Salary} + \text{Allowances} </mrow>
+                <mrow> \text{Taxable Income} = \amp \; \text{Gross Income} - \text{Allowable Deductions} </mrow>
+                <mrow> \text{Gross Tax} = \amp \; \text{Taxable Income} \times \text{Tax Rate} </mrow>
+                <mrow> \text{Net Tax (PAYE)} = \amp \; \text{Gross Tax} - \text{Personal Relief} </mrow>
+            </md>
+        </p>
+
+        <p>
+            The key idea is that taxation reduces take-home pay, but the system is structured to ensure fairness through allowances and reliefs.
+        </p>
+     </insight>
+
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

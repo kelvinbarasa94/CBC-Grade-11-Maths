@@ -45,7 +45,43 @@
     </objectives>
 
     <!-- [LP] Add guidance on activity -->
+<axiom component="lesson-plan">
+    <title>Problem-Solving and Discovery</title>
+    <dl>
+        <li>
+            <title>Suggested Time</title>
+            <p>20 minutes</p>
+        </li>
+        <li>
+            <title>Objective</title>
+            <p>To identify and calculate irrational numbers within physical structures and functional design.</p>
+        </li>
+        <li>
+            <title>Teacher's Role</title>
+            <p>
+                Organize learners into groups of five. Provide each group with a measuring tape and a standard A4 sheet of paper. Guide them to explore the school compound to find rectangular features (like window frames or floor tiles) where they can apply the Pythagorean theorem.
+            </p>
+        </li>
+    </dl>
+</axiom>
 
+<activity>
+    <title>Engineering Discovery Task</title>
+    <statement>
+        <p> Work in groups and complete the following interactive tasks:</p>
+        <ol>
+            <li>
+                <p><strong>The Diagonal Truth:</strong> Measure the length and width of a rectangular window in your classroom. Use the Pythagorean theorem to calculate the <em>exact</em> diagonal length. Is the result a whole number? Express it as a surd.</p>
+            </li>
+            <li>
+                <p><strong>The A4 Secret:</strong> Measure the long side and the short side of an A4 paper in millimeters. Divide the long side by the short side. How close is your answer to <m>\sqrt{2}</m> (approximately 1.414)? Discuss why paper is designed this way.</p>
+            </li>
+            <li>
+                <p><strong>The Garden Plot:</strong> Imagine the school is building a square garden with an area of exactly 12 <m>\text{m}^2</m>. Determine the exact length of one side in its simplest surd form.</p>
+            </li>
+        </ol>
+    </statement>
+</activity>
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
@@ -72,10 +108,41 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+    <axiom component="lesson-plan">
+    <title>Structured Instruction</title>
+    <p>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>10 minutes</p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>To formalize the transition from physical measurement to exact mathematical representation using surds.</p>
+            </li>
+        </dl>
+    </p>
+    <paragraphs>
+        <title>Key Takeaways &amp; Teacher Connection</title>
+        <ol>
+            <li>
+                <p>
+                    <alert>Connecting to Learner Work:</alert> Emphasize that while measuring tapes give decimal approximations, the "true" mathematical length is often an irrational number. Explain that in high-precision fields, using the exact surd prevents compounding errors.
+                </p>
+            </li>
+        </ol>
+    </paragraphs>
+</axiom>
+
+<insight>
+    <title>Surds: The Invisible Scaffolding of Reality</title>
+    <p>
+        Irrational numbers are often called the "invisible scaffolding" of our physical world. While we rarely see a ruler marked with <m>\sqrt{2}</m> or <m>\sqrt{5}</m>, these numbers are essential for precision in engineering and nature. For instance, the A4 paper you measured is specifically designed so that the ratio of its sides is <m>\sqrt{2}:1</m>; this ensures that when you fold the paper in half to make an A5 sheet, the proportions remain identical, allowing for easy scaling of text and images.
+    </p>
+    <p>
+        In Kenyan infrastructure, such as the construction of the Standard Gauge Railway or modern bridges in Nairobi, engineers must calculate diagonal supports using the Pythagorean theorem. If they only used rounded decimals (like 1.4 instead of <m>\sqrt{2}</m>), those tiny errors would compound over long distances, potentially leading to structural misalignment or failure. Beyond construction, surds appear in the physics of falling objects and the frequencies of musical notes. Understanding irrational numbers transitions a learner from "estimating" the world to "precisely defining" it, a key skill for any aspiring STEM professional.
+    </p>
+</insight>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -120,27 +187,164 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example>
-
     <example>
+    <statement>
+        <p>A carpenter is reinforcing a square gate with an area of 18 <m>\text{m}^2</m>. Find the exact length of one side.</p>
+    </statement>
+    <solution>
+        <p><m>s = \sqrt{18} = \sqrt{9 \times 2} = 3\sqrt{2}</m> meters.</p>
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>Find the exact diagonal of a football pitch goalpost that is 2m high and 6m wide.</p>
+    </statement>
+    <solution>
+        <p><m>d = \sqrt{2^2 + 6^2} = \sqrt{4 + 36} = \sqrt{40} = 2\sqrt{10}</m> meters.</p>
+    </solution>
+</example>
+<!-- Additional Examples -->
+
+<example>
+    <statement>
+        <p>A square classroom floor has an area of 32 <m>\text{m}^2</m>. Find the exact length of one side.</p>
+    </statement>
+    <solution>
+        <p><m>s = \sqrt{32} = \sqrt{16 \times 2} = 4\sqrt{2}</m> meters.</p>
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>A ladder is placed against a wall. The base is 3 m from the wall and the height reached is 5 m. Find the exact length of the ladder.</p>
+    </statement>
+    <solution>
+        <p><m>d = \sqrt{3^2 + 5^2} = \sqrt{9 + 25} = \sqrt{34}</m> meters.</p>
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>A square school field has a side length of <m>\sqrt{50}</m> meters. Express this length in simplest surd form.</p>
+    </statement>
+    <solution>
+        <p><m>\sqrt{50} = \sqrt{25 \times 2} = 5\sqrt{2}</m> meters.</p>
+    </solution>
+</example>
+
+<!-- Expanded Exercises -->
+
+<exercises>
+    <exercise>
         <statement>
+            <p>A square notice board has an area of 72 <m>\text{cm}^2</m>. Find the exact side length.</p>
         </statement>
         <solution>
+            <p><m>\sqrt{72} = \sqrt{36 \times 2} = 6\sqrt{2}</m> cm.</p>
         </solution>
-    </example>
+    </exercise>
 
-    <example>
+    <exercise>
         <statement>
+            <p>The diagonal of a rectangular classroom is formed by sides of 6 m and 8 m. Find the exact diagonal length.</p>
         </statement>
         <solution>
+            <p><m>\sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10</m> m.</p>
         </solution>
-    </example> -->
+    </exercise>
 
+    <exercise>
+        <statement>
+            <p>A square garden has an area of 98 <m>\text{m}^2</m>. Find the exact side length in simplest form.</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{98} = \sqrt{49 \times 2} = 7\sqrt{2}</m> m.</p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Simplify the length of a rope measuring <m>\sqrt{180}</m> cm.</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{180} = \sqrt{36 \times 5} = 6\sqrt{5}</m> cm.</p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>A square tile has a side length of <m>\sqrt{27}</m> cm. If two tiles are placed side by side, find the total length.</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{27} = 3\sqrt{3}</m></p>
+            <p><m>2 \times 3\sqrt{3} = 6\sqrt{3}</m> cm.</p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>A rectangular field has length 7 m and width 9 m. Find the exact diagonal length.</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{7^2 + 9^2} = \sqrt{49 + 81} = \sqrt{130}</m> m.</p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>A square has a side length of <m>\sqrt{20}</m> cm. Express it in simplest surd form.</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{20} = \sqrt{4 \times 5} = 2\sqrt{5}</m> cm.</p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>If a wire of length <m>\sqrt{200}</m> cm is cut into 2 equal parts, find the length of each part in simplest form.</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{200} = 10\sqrt{2}</m></p>
+            <p><m>\frac{10\sqrt{2}}{2} = 5\sqrt{2}</m> cm.</p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A decorative triangular window has a base of 4m and a height of 4m. Calculate the exact length of the slanted side (hypotenuse).</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{4^2 + 4^2} = \sqrt{32} = 4\sqrt{2}</m> meters.</p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>If a wire of length <m>\sqrt{108}</m> cm is cut into 3 equal pieces, find the exact length of each piece in simplest form.</p>
+        </statement>
+        <solution>
+            <p><m>\frac{\sqrt{108}}{3} = \frac{6\sqrt{3}}{3} = 2\sqrt{3}</m> cm.</p>
+        </solution>
+    </exercise>
+</exercises>
+
+<!-- <exercises>
+    <exercise>
+        <statement>
+            <p>A decorative triangular window has a base of 4m and a height of 4m. Calculate the exact length of the slanted side (hypotenuse).</p>
+        </statement>
+        <solution>
+            <p><m>\sqrt{4^2 + 4^2} = \sqrt{32} = 4\sqrt{2}</m> meters.</p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>If a wire of length <m>\sqrt{108}</m> cm is cut into 3 equal pieces, find the exact length of each piece in simplest form.</p>
+        </statement>
+        <solution>
+            <p><m>\frac{\sqrt{108}}{3} = \frac{6\sqrt{3}}{3} = 2\sqrt{3}</m> cm.</p>
+        </solution>
+    </exercise>
+</exercises> -->
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->

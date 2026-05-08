@@ -66,13 +66,91 @@
                 </li>
             </dl>
         </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+        <activity>
+            <statement>
+                <p>
+                    <term>Work in Groups to:</term>
+                </p>
+                <p>
+                    Identify and record in the table the items in your surrounding environment that increase in value over time. Discuss the factors that contribute to the increase in value of these items.
+                </p>
+                <tabular top="medium" bottom="medium" right="medium" left="medium">
+                    <row header="yes">
+                        <cell>Item</cell>
+                        <cell>Factor Contributing to increase in value</cell>
+                    </row>
+                    <row>
+                        <cell>Land</cell>
+                        <cell>Infrastructure Development</cell>
+                    </row>
+                    <row>
+                        <cell>?</cell>
+                        <cell>?</cell>
+                    </row>
+                    <row>
+                        <cell>?</cell>
+                        <cell>?</cell>
+                    </row>
+                    <row>
+                        <cell>?</cell>
+                        <cell>?</cell>
+                    </row>
+                </tabular>
+                <p>
+                    <alert>In your Groups Explore the question below;</alert>
+                </p>
+                <p>
+                    Dr. Lucian Talu Mabayi bought a piece of land in Kisumu and Nairobi at Ksh <m>2,000,000</m> and Ksh <m>6,000,000</m> respectively. After <m>1</m> years, the land in Kisumu is now worth Ksh <m>2,600,000</m> while the land in Nairobi is worth Ksh <m>6,600,000</m>.
+                </p>
+                <p>
+                    <alert>In your groups</alert> you are required to;
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Find the increase in value for each piece of land. 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Compare the increase to identify which piece of land increased more in value.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find the percentage increase in value for each piece of land.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    Based on your results, discuss in your groups:
+                </p>
+                <p>
+                    <ol marker="(i)">
+                        <li>
+                            <p>
+                                How can you express the increase in value using the original value and the new value?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How can you express the increase as a fraction of the original value?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How can this fraction be written as a percentage?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    <alert>Further Exploration:</alert> If the land continues to appreciate at the same rate every year, find the value after the second year and the third year.
+                </p>
+            </statement>
+        </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -105,11 +183,39 @@
             </ol>
         </paragraphs>
     </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            The increase in value of an asset over time is referred to as <term>Appreciation</term>.
+        </p>
+        <p>
+            Let the original value of the land be <m>P</m>, the new value be <m>A</m>, the increase in value be <m>I</m>, and the percentage increase be <m>R</m>. 
+        </p>
+        <p>
+            From the learner experience, we can see that,
+        </p>
+        <p>
+            <md>
+                <mrow> A = \amp \; P + I </mrow>
+                <mrow> I = \amp \; \frac{R}{100} \times P </mrow>
+                <mrow> A = \amp \; P + \frac{R}{100} \times P </mrow>
+                <mrow> = \amp \; P \left(1 + \frac{R}{100}\right) </mrow>
+            </md>
+        </p>
+        <p>
+            For the second year the new value becomes the original value.
+        </p>
+        <p>
+            <md>
+                <mrow> A = \amp \; P \left(1 + \frac{R}{100}\right) + \frac{R}{100} \times P \left(1 + \frac{R}{100}\right) </mrow>
+                <mrow> = \amp \; P \left(1 + \frac{R}{100}\right) \left(1 + \frac{R}{100}\right) </mrow>
+                <mrow> = \amp \; P \left(1 + \frac{R}{100}\right)^2 </mrow>
+            </md>
+            
+        </p>
+            <p>
+                In general, after <m>T</m> years, the value of the asset can be calculated using the formula, <me>A = P \left(1 + \frac{R}{100}\right)^T</me>
+            </p> 
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

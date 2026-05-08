@@ -67,12 +67,116 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+
+            <p>
+                <term>Work in Groups</term>
+            </p>
+
+            <p>
+                In real life, individuals and institutions make financial decisions that involve borrowing or deferred payment. These decisions are influenced by interest, repayment time, and affordability.
+            </p>
+
+            <p>
+                In this activity, you will investigate how hire purchase arrangements affect the total cost of goods and how financial institutions structure repayment systems to generate interest.
+            </p>
+
+            <p>
+                Identify and discuss situations in your community where people purchase goods on credit and end up paying more than the cash price. Record your findings in the table below.
+            </p>
+
+            <tabular top="medium" bottom="medium" right="medium" left="medium">
+                <row header="yes">
+                    <cell>Item Bought on Hire Purchase</cell>
+                    <cell>Observed Financial Impact</cell>
+                    <cell>Reason for Extra Cost</cell>
+                </row>
+                <row>
+                    <cell>Motorbike</cell>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>Television</cell>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>Smartphone</cell>
+                    <cell>?</cell>
+                    <cell>?</cell>
+                </row>
+            </tabular>
+
+            <p>
+                <alert>Case Study Analysis:</alert>
+            </p>
+
+            <p>
+                A motorbike is sold at a cash price of Ksh <m>120,000</m>. A buyer pays a deposit of <m>25\%</m> and the balance is repaid under a hire purchase agreement where simple interest is charged at <m>12\%</m> per annum for <m>2</m> years.
+            </p>
+
+            <p>
+                In groups, you are required to:
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Determine the deposit and outstanding balance.</p>
+                    </li>
+                    <li>
+                        <p>Compute the total interest charged on the balance.</p>
+                    </li>
+                    <li>
+                        <p>Determine the total hire purchase price.</p>
+                    </li>
+                    <li>
+                        <p>Compare the hire purchase price with the cash price and compute the percentage increase.</p>
+                    </li>
+                    
+                </ol>
+            </p>
+
+            <p>
+                <alert>Higher Order Thinking Task:</alert>
+            </p>
+
+            <p>
+                Suppose the repayment period is extended from 2 years to 3 years while keeping all other conditions constant.
+            </p>
+
+            <p>
+                Discuss:
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>How does the total cost change?</li>
+                    <li>What happens to the interest charged?</li>
+                    <li>Is the buyer financially better or worse off? Justify mathematically and logically.</li>
+                </ol>
+            </p>
+
+            <p>
+                <alert>Decision-Making Task:</alert>
+            </p>
+
+            <p>
+                Compare the hire purchase option with a cash purchase scenario where the buyer must save for 2 years before purchasing the same motorbike. Discuss:
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>Opportunity cost of waiting versus buying immediately</li>
+                    <li>Financial burden of instalments versus saving discipline</li>
+                    <li>Which option is economically rational and why</li>
+                </ol>
+            </p>
+
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +212,42 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            Hire purchase is a credit-based purchasing system where a buyer acquires goods immediately by paying a deposit and settles the remaining balance over time with interest.
+        </p>
+
+        <p>
+            In advanced financial analysis, hire purchase is not only about instalments but about the <term>cost of credit</term>, which depends on time, interest rate, and outstanding balance.
+        </p>
+
+        <p>
+            The structure of hire purchase can be summarised as:
+        </p>
+
+        <p>
+            <md>
+                <mrow> \text{Deposit} = \amp \; \text{Initial percentage of cash price} </mrow>
+                <mrow> \text{Balance} = \amp \; \text{Cash price} - \text{Deposit} </mrow>
+                <mrow> \text{Interest} = \amp \; \frac{PRT}{100} \; \text{(or appropriate model)} </mrow>
+                <mrow> \text{Hire Purchase Price} = \amp \; \text{Deposit} + \text{Balance + Interest} </mrow>
+            </md>
+        </p>
+
+        <p>
+            A key financial principle is that:
+        </p>
+
+        <p>
+            <em>
+                As the repayment period increases, the total cost of ownership increases due to accumulation of interest.
+            </em>
+        </p>
+
+        <p>
+            Therefore, rational financial decision-making requires comparing cash price, hire purchase price, and time-based cost implications before committing to a purchase.
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

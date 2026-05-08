@@ -70,96 +70,109 @@
     <!-- Add Activity -->
      <activity>
         <statement>
+
             <p>
-                You are given the sequence <m>2, 6, 18, 54, ...</m>
+                A farmer places grains of rice on a board such that:
             </p>
             <p>
-                <term>Explore the sequence in your Groups to:</term>
-            </p>
-            <p>
-                <ol marker="(a)">
+                <ol marker="(i)">
                     <li>
-                        <p>
-                            Find the next two terms.
-                        </p>
+                        <p><m>1</m> grain is placed on the first square,</p>
                     </li>
                     <li>
-                        <p>
-                            Find the common ratio.
-                        </p>
+                        <p><m>2</m> grains on the second square,</p>
                     </li>
                     <li>
-                        <p>
-                            Find the sum of the first four terms.
-                        </p>
+                        <p><m>4</m> grains on the third square,</p>
+                    </li>
+                    <li>
+                        <p>and the number of grains keeps doubling on each square.</p>
                     </li>
                 </ol>
             </p>
             <p>
-                The sum of the first four terms is <m>80</m>
+                The board has 9 squares arranged in a <m>3 \times 3</m> grid.
+            </p>
+
+            <p>
+                <term>Work in groups:</term>
             </p>
             <p>
-                To find this sum, consider;
+            <ol marker="(a)">
+                <li>
+                    <p>Write the number of grains on each of the <m>9</m> squares.</p>
+                </li>
+                <li>
+                    <p>Find the total number of grains on the board.</p>
+                </li>
+                <li>
+                    <p>Describe the pattern you observe.</p>
+                </li>
+            </ol>
             </p>
             <p>
-                <md>
-                    <mrow> a \amp = \; 2 </mrow>
-                    <mrow> r \amp = \; 3 </mrow>
-                    <mrow>S_4 \amp =\; 2 + 6 + 18 + 54 ........(i) </mrow>
-                    <mrow> rS_4 \amp = \; r(2 + 6 + 18 + 54)  </mrow>
-                    <mrow> \amp = \; 3(2 + 6 + 18 + 54) </mrow>
-                    <mrow> \amp = \; 6 + 18 + 54 + 162 ........(ii) </mrow>
-                </md>
-                
+                <term>Extension:</term>
             </p>
             <p>
-                Subtract (i) from (ii);
+                <ol marker="(i)">
+                    <li>
+                        <p>If the board had <m>20</m> squares, would it be efficient to add all the grains one by one? Explain.</p>
+                    </li>
+                    <li>
+                        <p>Suggest a faster method for finding the total number of grains.</p>
+                    </li>
+                </ol>
             </p>
             <p>
-                <md>
-                    <mrow> 3S_4 - S_4 \amp = \; 162 - 2 </mrow>
-                    <mrow>\therefore S_4 \amp = \; \frac{160}{2} </mrow>
-                    <mrow> \amp = \; 80 </mrow>
-                </md>
-                
+                <term>Guided Exploration:</term>
+            </p>
+
+            <p>
+                Let the total number of grains on the <m>9</m> squares be:
+            </p>
+
+            <p>
+                <m>S_9 = 1 + 2 + 4 + 8 + \dots + 2^8</m>
+            </p>
+
+            <p>
+                Multiply both sides by <m>2</m>.
             </p>
             <p>
-                In groups find the sum of the first six terms of the sequence.
+                <ol marker="(i)">
+                    <li>
+                        <p>Write an expression for <m>2S_9</m>.</p>
+                    </li>
+                    <li>
+                        <p>Compare <m>S_9</m> and <m>2S_9</m>. What do you notice?</p>
+                    </li>
+                    <li>
+                        <p>Subtract the two expressions. Which terms remain?</p>
+                    </li>
+                    <li>
+                        <p>Hence determine the value of <m>S_9</m>.</p>
+                    </li>
+                </ol>
             </p>
+
             <p>
-                In general, for a geometric sequence;
+                <term>Generalising:</term>
             </p>
+
             <p>
-                First term <m> = a</m> and common ratio <m> = r</m>
+                If the first term is <m>a</m> and the common ratio is <m>r</m>, then:
             </p>
+
             <p>
-                The sum of <m>n </m> terms is given by;
+                <m>S_n = a + ar + ar^2 + \dots + ar^{n-1}</m>
             </p>
+
             <p>
-                <md>
-                    <mrow> S_n =  \amp\; a + ar + ar^2 + ar^3 + ar^4 + ... + ar^{n-1} ........ (i) </mrow>
-                    <mrow> rS_n \amp = \; ar + ar^2 + ar^3 + ar^4 + ar^5 + ... + ar^{n-1} + ar^n ......(ii) </mrow>
-                    <mrow> rS_n - S_n \amp = \; ar^n - a </mrow>
-                    <mrow> S_n(r-1) \amp = \; a(r^n-1) </mrow>
-                    <mrow>S_n \amp = \; \frac{a(r^n-1)}{r-1}  ...........(*)</mrow>
-                </md>
-                
+                <term>Task:</term> Repeat the process above to obtain a general formula for <m>S_n</m>.
             </p>
-            <p>
-                <term>Alternatively:</term>
-            </p>
-            <p>
-                We can subtract (ii) from (i) to give
-            </p>
-            <p>
-                <md>
-                    <mrow> S_n - rS_n \amp = \; a - ar^n</mrow>
-                    <mrow> S_n(1 - r) \amp = \; a(1 - r^n) </mrow>
-                    <mrow>S_n \amp = \; \frac{a(1 - r^n)}{1 - r}  ...........(**)</mrow>
-                </md>
-                
-            </p>
+
         </statement>
+        
      </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
@@ -195,13 +208,18 @@
     </axiom> -->
 
     <insight>
-        <p>
-            The formulae (*) and (**) above represent the sum of the first <m>n</m> terms of a geometric sequence with first term as <m>a</m> and common ratio <m>r</m>. Formula (*) is convenient when <m>|r| &gt; 1</m> while (**) is prefered when <m>|r| &lt; 1</m>
-        </p>
-        <p>
-            
-        </p>
-    </insight>
+    <p>
+        In a geometric sequence, each term is obtained by multiplying the previous term by a constant ratio. When finding the sum, multiplying the entire sum by this ratio allows most terms to cancel when subtracted.
+    </p>
+    <p>
+        This leads to the formula:
+    </p>
+    <p>
+        <md>
+            <mrow number="yes"> S_n = \amp\; \frac{a(r^n - 1)}{r - 1} </mrow>
+        </md>
+    </p>
+</insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

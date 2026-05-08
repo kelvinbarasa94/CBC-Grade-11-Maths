@@ -44,55 +44,160 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        15 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To discover the relationship between the coordinates of points on a circle and its center and radius using the distance formula.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Guide learners to use a compass or a piece of string to maintain a constant distance from a fixed point. Encourage them to apply the Pythagorean theorem or distance formula to generalize their findings.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in Groups</alert>
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            Graph paper
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A compass or a piece of string and a pencil
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A ruler
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Imagine you have a fixed point <m>C(2, 3)</m> on a coordinate plane. You want to find all points <m>P(x, y)</m> that are exactly 5 units away from <m>C</m>.
+            </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Plot the point <m>C(2, 3)</m> on a grid.
+                        </p>
+                        <image width="40%">
+                            <latex-image label="fig-activity-center">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (-5,-4) grid (9,10);
+                                    \draw[-&gt;] (-5,0) -- (9,0) node[right] {$x$};
+                                    \draw[-&gt;] (0,-4) -- (0,10) node[above] {$y$};
+                                    \foreach \x in {-4,-2,2,4,6,8} \draw (\x,2pt) -- (\x,-2pt) node[below] {\footnotesize $\x$};
+                                    \foreach \y in {-2,2,4,6,8} \draw (2pt,\y) -- (-2pt,\y) node[left] {\footnotesize $\y$};
+                                    \filldraw (2,3) circle (2pt) node[above right] {$C(2,3)$};
+                                \end{tikzpicture}
+                            </latex-image>      
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            Mark at least <m>8</m> points that are exactly <m>5</m> units away from <m>C</m>. (Hint: Think of points directly above, below, left, and right, and some in between using Pythagorean triples like 3, 4, 5).
+                        </p>
+                        <image width="40%">
+                            <latex-image label="fig-activity-points">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (-5,-4) grid (9,10);
+                                    \draw[-&gt;] (-5,0) -- (9,0) node[right] {$x$};
+                                    \draw[-&gt;] (0,-4) -- (0,10) node[above] {$y$};
+                                    \foreach \x in {-4,-2,2,4,6,8} \draw (\x,2pt) -- (\x,-2pt) node[below] {\footnotesize $\x$};
+                                    \foreach \y in {-2,2,4,6,8} \draw (2pt,\y) -- (-2pt,\y) node[left] {\footnotesize $\y$};
+                                    \filldraw (2,3) circle (2pt) node[above right] {$C(2,3)$};
+                                    \foreach \p in {(7,3), (-3,3), (2,8), (2,-2), (5,7), (-1,7), (5,-1), (-1,-1)}
+                                        \filldraw \p circle (1.5pt);
+                                \end{tikzpicture}
+                            </latex-image>   
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            Connect these points smoothly. What shape do you get?
+                        </p>
+                        <image width="40%">
+                            <latex-image label="fig-activity-circle">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (-5,-4) grid (9,10);
+                                    \draw[-&gt;] (-5,0) -- (9,0) node[right] {$x$};
+                                    \draw[-&gt;] (0,-4) -- (0,10) node[above] {$y$};
+                                    \foreach \x in {-4,-2,2,4,6,8} \draw (\x,2pt) -- (\x,-2pt) node[below] {\footnotesize $\x$};
+                                    \foreach \y in {-2,2,4,6,8} \draw (2pt,\y) -- (-2pt,\y) node[left] {\footnotesize $\y$};
+                                    \filldraw (2,3) circle (2pt) node[above right] {$C(2,3)$};
+                                    \draw[blue, thick] (2,3) circle (5);
+                                    \foreach \p in {(7,3), (-3,3), (2,8), (2,-2), (5,7), (-1,7), (5,-1), (-1,-1)}
+                                        \filldraw \p circle (1.5pt);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            Use the distance formula to write an expression for the distance between <m>C(2, 3)</m> and any point <m>P(x, y)</m> on this shape.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Set this distance expression equal to <m>5</m> and square both sides. What equation do you get?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What do you notice about the equation you derived? How does it relate to the points you plotted?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Share your work with the class.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the definition of a circle and derive its standard equation.
                 </p>
             </li>
             </dl>
@@ -102,44 +207,265 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Refer to the activity where learners found that the distance from <m>(2, 3)</m> to <m>(x, y)</m> is <m>d = \sqrt{(x - 2)^2 + (y - 3)^2}</m>. Setting <m>d = 5</m> and squaring gives <m>(x - 2)^2 + (y - 3)^2 = 25</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Generalization:</alert> Explain that for any center <m>(h, k)</m> and radius <m>r</m>, the equation is <m>(x - h)^2 + (y - k)^2 = r^2</m>.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            A <term>circle</term> is the set of all points in a plane that are at a constant distance, called the <term>radius</term> (<m>r</m>), from a fixed point called the <term>center</term> (<m>h, k</m>).
+        </p>
+        <p>
+            The <term>standard equation</term> of a circle with center <m>(h, k)</m> and radius <m>r</m> is:
+            <me>(x - h)^2 + (y - k)^2 = r^2</me>
+        </p>
+        <p>
+            If the center is at the origin <m>(0, 0)</m>, the equation simplifies to:
+            <me>x^2 + y^2 = r^2</me>
+        </p>
+        <p>
+        <alert> How to Graph a Circle </alert>
+        </p>
+        <p>
+            To graph a circle from its standard equation <m>(x - h)^2 + (y - k)^2 = r^2</m>, follow these steps:
+        </p>
+        <ol>
+            <li>
+                <p>
+                    <alert>Identify the Center:</alert> The center is the point <m>(h, k)</m>. Note that the signs in the equation are negative, so if you see <m>(x + 2)</m>, then <m>h = -2</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <alert>Identify the Radius:</alert> The constant term on the right is <m>r^2</m>. Take the square root to find the radius <m>r</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <alert>Plot the Center:</alert> Mark the point <m>(h, k)</m> on the coordinate plane.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <alert>Plot Four Key Points:</alert> From the center, move <m>r</m> units in four directions:
+                    <ul>
+                        <li><p>Up: <m>(h, k + r)</m></p></li>
+                        <li><p>Down: <m>(h, k - r)</m></p></li>
+                        <li><p>Left: <m>(h - r, k)</m></p></li>
+                        <li><p>Right: <m>(h + r, k)</m></p></li>
+                    </ul>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <alert>Draw the Circle:</alert> Connect these four points with a smooth, round curve.
+                </p>
+            </li>
+        </ol>
+    </insight> 
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Find the equation of a circle with center <m>(0, 0)</m> and radius <m>4</m> units. Sketch its graph.
+            </p>
         </statement>
         <solution>
+            <p>
+                Since the center is at the origin <m>(0, 0)</m>, we use the simplified equation <m>x^2 + y^2 = r^2</m>.
+            </p>
+            <p>
+                Given <m>r = 4</m>, we have:
+                <me>x^2 + y^2 = 4^2</me>
+                <me>x^2 + y^2 = 16</me>
+            </p>
+                <image xml:id="img-example-origin" width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-5,-5) grid (5,5);
+                            \draw[-&gt;] (-5,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
+                            \filldraw (0,0) circle (2pt) node[above right] {$(0,0)$};
+                            \draw[blue, thick] (0,0) circle (4);
+                            \filldraw (4,0) circle (1.5pt) node[below right] {$(4,0)$};
+                            \filldraw (-4,0) circle (1.5pt) node[below left] {$(-4,0)$};
+                            \filldraw (0,4) circle (1.5pt) node[above left] {$(0,4)$};
+                            \filldraw (0,-4) circle (1.5pt) node[below left] {$(0,-4)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Find the equation of a circle with center <m>(-2, 5)</m> and radius <m>3</m> units.
+            </p>
         </statement>
         <solution>
+            <p>
+                We use the standard equation <m>(x - h)^2 + (y - k)^2 = r^2</m>.
+            </p>
+            <p>
+                Here, <m>h = -2</m>, <m>k = 5</m>, and <m>r = 3</m>.
+            </p>
+            <p>
+                Substituting these values:
+                <me>(x - (-2))^2 + (y - 5)^2 = 3^2</me>
+                <me>(x + 2)^2 + (y - 5)^2 = 9</me>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Identify the center and radius of the circle with equation <m>(x - 3)^2 + (y + 4)^2 = 25</m>. Sketch its graph.
+            </p>
         </statement>
         <solution>
+            <p>
+                Comparing <m>(x - 3)^2 + (y + 4)^2 = 25</m> with <m>(x - h)^2 + (y - k)^2 = r^2</m>:
+                <ul>
+                    <li>
+                        <p>
+                            <m>h = 3</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>k = -4</m> (since <m>y + 4 = y - (-4)</m>)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>r^2 = 25 \Rightarrow r = \sqrt{25} = 5</m>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                The center is <m>(3, -4)</m> and the radius is <m>5</m>.
+            </p>
+                <image xml:id="img-example-h-k" width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-3,-10) grid (9,2);
+                            \draw[-&gt;] (-3,0) -- (9,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-10) -- (0,2) node[above] {$y$};
+                            \filldraw (3,-4) circle (2pt) node[above right] {$(3,-4)$};
+                            \draw[blue, thick] (3,-4) circle (5);
+                            \filldraw (8,-4) circle (1.5pt);
+                            \filldraw (-2,-4) circle (1.5pt);
+                            \filldraw (3,1) circle (1.5pt);
+                            \filldraw (3,-9) circle (1.5pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            <p>
+                To sketch the graph:
+                <ol>
+                    <li>
+                        <p>
+                            Plot the center <m>(3, -4)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Move 5 units up, down, left, and right from the center to find four points on the circle: <m>(3, 1), (3, -9), (-2, -4), (8, -4)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw a smooth circle passing through these points.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
-    </example> -->
+    </example>
+    <example>
+        <statement>
+            <p>
+                Identify the correct equation for the graph below:
+            </p>
+            <image width="40%">
+                <latex-image label="fig-example-multiple-choice">
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (-5,-10) grid (7,4);
+                        \draw[-&gt;] (-5,0) -- (7,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-10) -- (0,4) node[above] {$y$};
+                        \filldraw (1,-2) circle (2pt) node[above right] {$(1,-2)$};
+                        \draw[blue, thick] (1,-2) circle (6);
+                        \filldraw (7,-2) circle (1.5pt);
+                        \filldraw (-5,-2) circle (1.5pt);
+                        \filldraw (1,4) circle (1.5pt);
+                        \filldraw (1,-8) circle (1.5pt);
+                    \end{tikzpicture}
+                </latex-image>
+                
+            </image>
+            <p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            <m> y^2 = x^2 + 6^2 </m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x - 1)^2 + (y + 2)^2 = 36</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x + 1)^2 + (y - 2)^2 = 36</m>
+                        </p>        
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x - 1)^2 + (y - 2)^2 = 36</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Identify an <m>x^2</m> term and <m>y^2</m> term.
+            </p>
+            <p>
+                The equation must be in the form <m>(x - h)^2 + (y - k)^2 = r^2</m>.
+            </p>
+            <p>
+                The center is <m>(1, -2)</m>, so <m>h = 1</m> and <m>k = -2</m>.
+            </p>
+            <p>
+                The radius is 6, so <m>r^2 = 36</m>.
+            </p>
+            <p>
+                Substituting these values gives:
+                <me>(x - 1)^2 + (y - (-2))^2 = 36</me>
+                <me>(x - 1)^2 + (y + 2)^2 = 36</me>
+            </p>
+            <p>
+                Therefore, the correct equation is <m>(x - 1)^2 + (y + 2)^2 = 36</m>.
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -149,22 +475,186 @@
 
     <!-- Add STACK exercises if made -->
 
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
-            </statement>   
-            <solution>
-
-            </solution>             
+                <p>
+                    Write the equation of a circle with the following properties:
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            Center <m>(0, 0)</m>, radius <m>7</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Center <m>(1, -2)</m>, radius <m>6</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Center <m>(-3, -5)</m>, radius <m>\sqrt{10}</m>
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol>
+                    <li><p><m>x^2 + y^2 = 49</m></p></li>
+                    <li><p><m>(x - 1)^2 + (y + 2)^2 = 36</m></p></li>
+                    <li><p><m>(x + 3)^2 + (y + 5)^2 = 10</m></p></li>
+                </ol>
+            </answer>
+            <!-- <solution>
+                <ol>
+                    <li>
+                        <p>
+                            <m>x^2 + y^2 = 7^2 \Rightarrow x^2 + y^2 = 49</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x - 1)^2 + (y - (-2))^2 = 6^2 \Rightarrow (x - 1)^2 + (y + 2)^2 = 36</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x - (-3))^2 + (y - (-5))^2 = (\sqrt{10})^2 \Rightarrow (x + 3)^2 + (y + 5)^2 = 10</m>
+                        </p>
+                    </li>
+                </ol>
+            </solution>              -->
         </exercise>        
-    </exercises> -->
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    Identify the center and radius of the following circles:
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>x^2 + y^2 = 100</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x + 1)^2 + (y - 9)^2 = 81</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(x - 4.5)^2 + (y + 2.5)^2 = 16</m>
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol>
+                    <li><p>Center <m>(0, 0)</m>, radius <m>10</m></p></li>
+                    <li><p>Center <m>(-1, 9)</m>, radius <m>9</m></p></li>
+                    <li><p>Center <m>(4.5, -2.5)</m>, radius <m>4</m></p></li>
+                </ol>
+            </answer>
+            <!-- <solution>
+                <ol>
+                    <li>
+                        <p>
+                            Center <m>(0, 0)</m>, Radius <m>10</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Center <m>(-1, 9)</m>, Radius <m>9</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Center <m>(4.5, -2.5)</m>, Radius <m>4</m>
+                        </p>
+                    </li>
+                </ol>
+            </solution> -->
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
+        <exercise>
+            <statement>
+                <p>
+                    A circle has center <m>(2, 3)</m> and passes through the point <m>(5, 7)</m>. Find its equation.
+                </p>
+            </statement>
+            <answer>
+                <p><m>(x - 2)^2 + (y - 3)^2 = 25</m></p>
+            </answer>
+            <!-- <solution>
+                <p>
+                    First, find the radius using the distance formula between the center <m>(2, 3)</m> and point <m>(5, 7)</m>:
+                    <me>r = \sqrt{(5 - 2)^2 + (7 - 3)^2}</me>
+                    <me>r = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5</me>
+                </p>
+                <p>
+                    The equation is:
+                    <me>(x - 2)^2 + (y - 3)^2 = 5^2</me>
+                    <me>(x - 2)^2 + (y - 3)^2 = 25</me>
+                </p>
+            </solution> -->
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Sketch the graph of <m>(x + 2)^2 + y^2 = 4</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Center: <m>(-2, 0)</m>, Radius: <m>2</m>.
+                </p>
+                <p>
+                    Key points: <m>(-2, 2), (-2, -2), (0, 0), (-4, 0)</m>.
+                </p>
+                    <image xml:id="img-exercise-sketch" width="40%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \draw[help lines, color=gray!30, step=1] (-6,-3) grid (2,3);
+                                \draw[-&gt;] (-6,0) -- (2,0) node[right] {$x$};
+                                \draw[-&gt;] (0,-3) -- (0,3) node[above] {$y$};
+                                \filldraw (-2,0) circle (2pt) node[below] {$(-2,0)$};
+                                \draw[blue, thick] (-2,0) circle (2);
+                                \filldraw (0,0) circle (1.5pt);
+                                \filldraw (-4,0) circle (1.5pt);
+                                \filldraw (-2,2) circle (1.5pt);
+                                \filldraw (-2,-2) circle (1.5pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Determine if the point <m>(1, 2)</m> lies on, inside, or outside the circle <m>x^2 + y^2 = 9</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>Inside</p>
+            </answer>
+            <!-- <solution>
+                <p>
+                    Substitute the point <m>(1, 2)</m> into the left side of the equation:
+                    <me>x^2 + y^2 = 1^2 + 2^2 = 1 + 4 = 5</me>
+                </p>
+                <p>
+                    Since <m>5 &lt; 9</m>, the point lies <alert>inside</alert> the circle.
+                </p>
+            </solution> -->
+        </exercise>
+    </exercises>
+
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -173,32 +663,28 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide a physical compass and pre-drawn grids. Focus on circles centered at the origin before moving to <m>(h, k)</m>.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, including derivation of the formula.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Ask learners to find the equation of a circle given its diameter endpoints or to complete the square to find the center and radius from general form <m>x^2 + y^2 + Dx + Ey + F = 0</m>.
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
