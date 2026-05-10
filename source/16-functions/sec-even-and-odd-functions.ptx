@@ -200,4 +200,248 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+    <p>
+        
+    </p>
+    <p>
+        When studying functions, we often look for symmetrical patterns along the coordinate axes. A function is classified as <term>even</term> if its graph is symmetric with respect to the <m>y</m>-axis, and <term>odd</term> if it is symmetric with respect to the origin. In general, all functions can be categorized as even, odd, or neither.
+    </p>
+    <paragraphs>
+        <title>Even functions</title>
+
+        <!--  -->
+        <p>
+            From an algebraic perspective, we classify a function as <term>even</term> if substituting a negative input yields the exact same output as its positive counterpart. In formal terms, for any function <m>f</m> with a given domain, the function is even if every value of <m>x</m> satisfies the following rule:
+        </p>
+        <p>
+            <me>
+                f(-x) = f(x)
+            </me>
+        </p>
+        <figure xml:id="fig-absolute-value-even">
+            <caption>Graph of the even function <m>y = |x|</m></caption>
+            <image xml:id="tikz-absolute-value-even" width="60%">
+                <shortdescription>A V-shaped absolute value graph plotted on a Cartesian coordinate system, demonstrating perfect mirror symmetry across the y-axis.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1]
+                        % Axes
+                        \draw[-&gt;] (-4,0) -- (4,0) node[below] {x};
+                        \draw[-&gt;] (0,-0.5) -- (0,4.5) node[left] {y};
+
+                        % The Absolute Value V-shape
+                        \draw[thick] (-3,3) -- (0,0) -- (3,3);
+                        \node[below right] at (2, 2) {$f(x)=|x|$};
+
+                        % Annotation Text and Pointer
+                        \node[align=left, text width=4cm, color=gray, font=\small] at (-2.5, 3.5) {The function $f(x) = |x|$ is evenly balanced, forming a perfect mirror reflection across the vertical y-axis.};
+                        \draw[gray] (-1.5, 2.5) -- (-1.5, 1.6);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p>
+            Geometrically, this algebraic rule means the graph will fold perfectly in half along the <m>y</m>-axis. The figure above illustrates this with the absolute value function, <m>f(x) = |x|</m>. Because the distance from zero is identical whether you move in the positive or negative direction, the resulting graph is perfectly symmetrical.
+        </p>
+
+        <p>
+            Polynomials can also be even functions, provided that every term in the expression contains an even exponent. Constants (which can be thought of as having an <m>x^0</m> term) also preserve this symmetry. 
+        </p>
+
+    <figure xml:id="fig-transformed-parabola-even">
+        <caption>Graph of the even function <m>f(x) = 4 - x^2</m></caption>
+        <image xml:id="tikz-transformed-parabola-even" width="65%">
+            <shortdescription>A downward-opening parabola plotted on a Cartesian coordinate system with its vertex at the y-intercept.</shortdescription>
+            <latex-image>
+                \begin{tikzpicture}[scale=1]
+                    % Axes
+                    \draw[-&gt;] (-4,0) -- (4,0) node[below] {x};
+                    \draw[-&gt;] (0,-1.5) -- (0,5.5) node[left] {y};
+
+                    % Ticks
+                    \draw (-2, 0.1) -- (-2, -0.1) node[below left] {-2};
+                    \draw (2, 0.1) -- (2, -0.1) node[below right] {2};
+                    \draw (0.1, 4) -- (-0.1, 4) node[above right] {4};
+
+                    % The Downward Parabola
+                    \draw[thick, domain=-2.3:2.3, samples=100] plot (\x, {4 - \x*\x});
+                    
+                    % Points on the curve
+                    \filldraw[fill=white, draw=black, thick] (0, 4) circle (1.5pt) node[above left] {Vertex};
+                    \filldraw[fill=white, draw=black, thick] (2, 0) circle (1.5pt);
+                    \filldraw[fill=white, draw=black, thick] (-2, 0) circle (1.5pt);
+
+                    % Annotation Text and Pointer
+                    \node[align=left, text width=4cm, color=gray, font=\small] at (3, 4.5) {Adding a constant shifts the graph, but $f(x) = 4 - x^2$ remains an even function because the y-axis remains the line of symmetry.};
+                    \draw[gray] (1.8, 3.8) -- (1.2, 2.7);
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+    </paragraphs>
+
+    <paragraphs>
+        <title>Odd functions</title>
+        <p>
+            In contrast to even functions, an <term>odd function</term> behaves differently when the sign of the input is reversed. Algebraically, substituting a negative input into an odd function results in the exact opposite (or negative) of the original output. A function <m>f</m> is classified as odd if it satisfies the following condition for every <m>x</m> in its domain:
+        </p>
+        <p>
+            <me>
+                f(-x) = -f(x)
+            </me>
+        </p>
+
+        <figure xml:id="fig-cubic-odd">
+            <caption>Graph of the odd function <m>f(x) = x^3</m></caption>
+            <image xml:id="tikz-cubic-odd" width="60%">
+                <shortdescription>A cubic curve passing through the origin, demonstrating 180-degree rotational symmetry.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Axes
+                        \draw[-&gt;] (-3,0) -- (3,0) node[below] {x};
+                        \draw[-&gt;] (0,-3) -- (0,3) node[left] {y};
+
+                        % The Cubic Curve
+                        \draw[thick, domain=-1.4:1.4, samples=100] plot (\x, {\x*\x*\x});
+                        
+                        % Points to show symmetry
+                        \filldraw[fill=white, draw=black, thick] (1, 1) circle (1.5pt) node[right] {$(1, 1)$};
+                        \filldraw[fill=white, draw=black, thick] (-1, -1) circle (1.5pt) node[left] {$(-1, -1)$};
+                        \draw[dashed, gray] (1,0) -- (1,1) -- (0,1);
+                        \draw[dashed, gray] (-1,0) -- (-1,-1) -- (0,-1);
+
+                        % Annotation Text and Pointer
+                        \node[align=left, text width=4cm, color=gray, font=\small] at (2.5, -1.5) {The function $f(x) = x^3$ is odd. Notice how the point $(1,1)$ corresponds perfectly to $(-1,-1)$.};
+                        \draw[gray] (1.3, -1.2) -- (0.5, -0.5);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p>
+            From a geometric standpoint, odd functions do not fold across an axis. Instead, they exhibit <term>point symmetry</term> (or rotational symmetry) about the origin, <m>(0,0)</m>. If you were to take the graph of an odd function and rotate it exactly 180 degrees around the origin, the resulting curve would perfectly overlap the original graph. 
+        </p>
+
+        <p>
+            Polynomials consisting exclusively of terms with odd exponents (like <m>x^1, x^3, x^5</m>) are classic examples. However, rotational symmetry also appears in entirely different families of functions, such as rational functions.
+        </p>
+
+        <figure xml:id="fig-rational-odd">
+            <caption>Graph of the odd rational function <m>f(x) = \frac{1}{x}</m></caption>
+            <image xml:id="tikz-rational-odd" width="65%">
+                <shortdescription>A hyperbola split into the first and third quadrants, showing origin symmetry.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=0.8]
+                        % Axes
+                        \draw[-&gt;] (-5,0) -- (5,0) node[below] {x};
+                        \draw[-&gt;] (0,-5) -- (0,5) node[left] {y};
+
+                        % The Hyperbola (split to avoid dividing by zero)
+                        \draw[thick, domain=0.2:4.5, samples=100] plot (\x, {1/\x});
+                        \draw[thick, domain=-4.5:-0.2, samples=100] plot (\x, {1/\x});
+
+                        % Points to show symmetry
+                        \filldraw[fill=white, draw=black, thick] (2, 0.5) circle (2pt) node[above right] {$(2, 0.5)$};
+                        \filldraw[fill=white, draw=black, thick] (-2, -0.5) circle (2pt) node[below left] {$(-2, -0.5)$};
+                        
+                        % Connecting line through origin
+                        \draw[dashed, blue] (2, 0.5) -- (-2, -0.5);
+                        \filldraw[fill=blue, draw=blue] (0,0) circle (1.5pt) node[above left, text=black] {Origin};
+
+                        % Annotation Text
+                        \node[align=left, text width=4.5cm, color=gray, font=\small] at (3.5, 3.5) {The reciprocal function $f(x) = \frac{1}{x}$ is odd. Any point $(x, y)$ on the curve has a matching point $(-x, -y)$ directly across the origin.};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </paragraphs>
+    <example>
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+        <example>
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+        <example>
+        <statement>
+            <p>
+                
+            </p>
+        </statement>
+        <solution>
+            <p>
+                
+            </p>
+        </solution>
+    </example>
+
+    <!-- Static Exercises -->
+    <exercises xml:id="exercises-even-odd-functions">
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 </section>
