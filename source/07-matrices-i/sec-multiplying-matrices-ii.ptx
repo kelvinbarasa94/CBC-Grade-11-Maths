@@ -120,7 +120,12 @@
                     </p>
                     <solution component="lesson-plan">
                         <p>
-                            We would want to compute <me>\text{(mango quantity)} \times \text{(mango price)} + \text{(orange quantity)}\times \text{(orange price)} + \text{(banana quantity)}\times \text{(banana price)} </me> for each person (Kelvin and Esther) <em>and</em> each month (last month and this month). So we have:
+                            We want to compute 
+                            <md>
+                                <mrow> \text{cost} = \amp \phantom{+} \text{(mango quantity)} \times \text{(mango price)} </mrow>
+                                <mrow> \amp + \text{(orange quantity)}\times \text{(orange price)} </mrow>
+                                <mrow> \amp + \text{(banana quantity)}\times \text{(banana price)} </mrow>
+                            </md> for each person (Kelvin and Esther) <em>and</em> each month (last month and this month). So we have:
                             <md>
                                 <mrow> \mathbf{T} &amp; = \begin{bmatrix} 5(10) + 2(15) + 1(5) &amp; 5(12) + 2(20) + 1(8) \\ 6(10) + 1(15) + 3(5) &amp; 6(12) + 1(20) + 3(8)\end{bmatrix} </mrow>
                                 <mrow>  &amp; = \begin{bmatrix} 85 &amp; 108 \\ 90 &amp; 116 \end{bmatrix}</mrow>
@@ -139,7 +144,11 @@
                         </p>
                         <p>
                             We define <term>matrix multiplication</term> to represent these kinds of situations. We have:
-                            <me> \mathbf{T} = \mathbf{S} \times \mathbf{K} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix} \times \begin{bmatrix} x &amp; a\\ y &amp; b\\ z &amp; c\end{bmatrix} = \begin{bmatrix} 5x + 2y + z &amp; 5a + 2b + c \\ 6x + y + 3z &amp; 6a + b + 3c \end{bmatrix} </me>
+                            <md> 
+                                <mrow> \mathbf{T} \amp = \mathbf{S} \times \mathbf{K} </mrow> 
+                                <mrow> \amp = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix} \times \begin{bmatrix} x &amp; a\\ y &amp; b\\ z &amp; c\end{bmatrix} </mrow> 
+                                <mrow> \amp = \begin{bmatrix} 5x + 2y + z &amp; 5a + 2b + c \\ 6x + y + 3z &amp; 6a + b + 3c \end{bmatrix} </mrow> 
+                            </md>
                         </p>
                     </solution>
                     <note component="lesson-plan">
@@ -187,8 +196,52 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <ul>
+            <li>
+                <p>
+                    <term>Matrix Multiplication</term> is a way of combining the effect of two matrices.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Two matrices can <em>only</em> be multiplied together if the number of columns in the first matrix is the same as the number of rows in the second matrix. Their <term>inner dimensions</term> must match.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Suppose that <m>A</m> is a <m>2 \times 3</m> matrix, and <m>B</m> is a <m>3 \times 3</m> matrix, with <me>A = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \amp \color{blue}{c}\\ \color{red}{d} \amp \color{red}{e} \amp \color{red}{f}\end{bmatrix}, B = \begin{bmatrix}\color{teal}{r} \amp \color{orange}{u} \amp \color{purple}{x}\\ \color{teal}{s} \amp \color{orange}{v} \amp \color{purple}{y}\\ \color{teal}{t} \amp \color{orange}{w} \amp \color{purple}{z}\end{bmatrix}</me>.
+        </p>
+        <ul>
+            <li>
+                <p>
+                    Then the product <m>AB</m> is defined, and is a <m>2 \times 3</m> matrix given by: <me>
+                        AB = \begin{bmatrix} \color{blue}{a}\color{teal}{r} \,\color{black}{+}\, \color{blue}{b}\color{teal}{s} \,\color{black}{+}\, \color{blue}{c}\color{teal}{t} \amp \color{blue}{a}\color{orange}{u} \,\color{black}{+}\, \color{blue}{b}\color{orange}{v} \,\color{black}{+}\, \color{blue}{c}\color{orange}{w} \amp \color{blue}{a}\color{purple}{x} \,\color{black}{+}\, \color{blue}{b}\color{purple}{y} \,\color{black}{+}\, \color{blue}{c}\color{purple}{z} \\ \color{red}{d}\color{teal}{r} \,\color{black}{+}\, \color{red}{e}\color{teal}{s} \,\color{black}{+}\, \color{red}{f}\color{teal}{t} \amp \color{red}{d}\color{orange}{u} \,\color{black}{+}\, \color{red}{e}\color{orange}{v} \,\color{black}{+}\, \color{red}{f}\color{orange}{w} \amp \color{red}{d}\color{purple}{x} \,\color{black}{+}\, \color{red}{e}\color{purple}{y} \,\color{black}{+}\, \color{red}{f}\color{purple}{z} \end{bmatrix}
+                    </me>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Each entry of <m>AB</m> is a <em>row</em> of <m>A</m> multiplied by a <em>column</em> of <m>B</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    So the entry in the <m>\color{red}{\text{second}}</m> row and <m>\color{teal}{\text{first}}</m> column of AB (the <m>\color{red}{d}\color{teal}{r} \,\color{black}{+}\, \color{red}{e}\color{teal}{s} \,\color{black}{+}\, \color{red}{f}\color{teal}{t}</m> term) is the components of the <m>\color{red}{\text{second}}</m> row of <m>A</m>, <m>\color{red}{d,\,e,\,f}</m>, multiplied by their matching components of the <m>\color{teal}{\text{first}}</m> column of <m>B</m>, <m>\color{teal}{r,\,s,\,t}</m>, and added together.
+                </p>
+            </li>
+            <li>
+                <p>
+                    This product is defined since the inner dimensions match: <m>A</m> has 3 columns and <m>B</m> as 3 rows.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The dimension of the product is given by the <term>outer dimensions</term>: <m>A</m> has 2 rows and <m>B</m> has 3 columns, so <m>AB</m> has 2 rows and 3 columns.
+                </p>
+            </li>
+        </ul>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -201,26 +254,37 @@
             <p>
                 You are given the following matrices:
             </p>
-            <me>\mathbf{A} = \begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 3 &amp; -1 &amp; 4 \end{bmatrix}, \quad
-                \mathbf{B} = \begin{bmatrix} 2 &amp; 0 &amp; 1 &amp; -1 \\ 1 &amp; 3 &amp; 0 &amp; 2 \\ 4 &amp; 1 &amp; -2 &amp; 0 \end{bmatrix},</me>
-            <me>\mathbf{C} = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}, \quad
-                \mathbf{D} = \begin{bmatrix} 0 &amp; 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; -1 &amp; 2 \\ 2 &amp; 2 &amp; 0 &amp; -1 \end{bmatrix}.
+            <me>A = \begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 3 &amp; -1 &amp; 4 \end{bmatrix}, \quad
+                B = \begin{bmatrix} 2 &amp; 0 &amp; 1 &amp; -1 \\ 1 &amp; 3 &amp; 0 &amp; 2 \\ 4 &amp; 1 &amp; -2 &amp; 0 \end{bmatrix},</me>
+            <me>C = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}, \quad
+                D = \begin{bmatrix} 0 &amp; 1 &amp; 2 &amp; 1 \\ 1 &amp; 0 &amp; -1 &amp; 2 \\ 2 &amp; 2 &amp; 0 &amp; -1 \end{bmatrix}.
             </me>
             <p>
-                (So \(\mathbf{A}\) is \(2\times3\), \(\mathbf{B}\) and \(\mathbf{D}\) are \(3\times4\), and \(\mathbf{C}\) is \(4\times3\).)
+                (So <m>A</m> is <m>2\times3</m>, <m>B</m> and <m>D</m> are <m>3\times4</m>, and <m>C</m> is <m>4\times3</m>.)
             </p>
-            <ol marker="(a)">
+            <p> Which of the following products are defined? What dimension will the result be? (You don't need to compute them!) </p>
+            <ol marker="(a)" cols="2">
                 <li>
-                    <p>Which of the following products are defined? Explain briefly: \(AB, BA, ABC, C(B+D)\).</p>
+                    <p><m>AB</m></p>
                 </li>
                 <li>
-                    <p>Compute \(AB\) where it is defined.</p>
+                    <p><m>BA</m></p>
                 </li>
                 <li>
-                    <p>Compute \(ABC\).</p>
+                    <p><m>ABC</m></p>
                 </li>
                 <li>
-                    <p>Compute \(C(B+D)\).</p>
+                    <p><m>C(B+D)</m></p>
+                </li>
+                <li>
+                    <p>
+                        <m>BD</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>A^2</m>
+                    </p>
                 </li>
             </ol>
         </statement>
@@ -228,35 +292,36 @@
             <ol marker="(a)">
                 <li>
                     <p>
-                        Check inner dimensions: \(A\) is \(2\times3\) and \(B\) is \(3\times4\), so \(AB\) is defined (result \(2\times4\)).
-                        \(BA\) would require multiplying a \(3\times4\) matrix by a \(2\times3\) matrix — the inner dimensions \(4\) and \(2\) do not match, so \(BA\) is not defined.
-                        \(ABC\) is defined because \(AB\) is \(2\times4\) and \(C\) is \(4\times3\), so \((AB)C\) is \(2\times3\).
-                        Finally, \(B+D\) is defined (both are \(3\times4\)), and \(C(B+D)\) is defined because \(C\) is \(4\times3\) and \(B+D\) is \(3\times4\), so the product is \(4\times4\).
+                        Check inner dimensions: <m>A</m> is <m>2\times3</m> and <m>B</m> is <m>3\times4</m>, so <m>AB</m> is defined as <m>A</m> has the same number of columns (3) as <m>B</m> has rows (3). The result will be a <m>2\times4</m> matrix.
                     </p>
                 </li>
                 <li>
-                    <p>Compute \(AB\):</p>
-                    <md>
-                        <mrow>AB &amp;= \begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 3 &amp; -1 &amp; 4 \end{bmatrix}\begin{bmatrix} 2 &amp; 0 &amp; 1 &amp; -1 \\ 1 &amp; 3 &amp; 0 &amp; 2 \\ 4 &amp; 1 &amp; -2 &amp; 0 \end{bmatrix}</mrow>
-                        <mrow> &amp;= \begin{bmatrix} 1(2)+2(1)+0(4) &amp; 1(0)+2(3)+0(1) &amp; 1(1)+2(0)+0(-2) &amp; 1(-1)+2(2)+0(0) \\ 3(2)+-1(1)+4(4) &amp; 3(0)+-1(3)+4(1) &amp; 3(1)+-1(0)+4(-2) &amp; 3(-1)+-1(2)+4(0) \end{bmatrix}</mrow>
-                        <mrow> &amp;= \begin{bmatrix} 4 &amp; 6 &amp; 1 &amp; 3 \\ 21 &amp; 1 &amp; -5 &amp; -5 \end{bmatrix}</mrow>
-                    </md>
+                    <p>
+                        <m>BA</m> would require multiplying a <m>3\times4</m> matrix by a <m>2\times3</m> matrix — the inner dimensions <m>4</m> and <m>2</m> do not match, so <m>BA</m> is not defined.
+                    </p>
                 </li>
                 <li>
-                    <p>Compute \(ABC\):</p>
-                    <p>First note \(AB = \begin{bmatrix}4 &amp; 6 &amp; 1 &amp; 3 \\ 21 &amp; 1 &amp; -5 &amp; -5\end{bmatrix}\) and \(C = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}\).</p>
-                    <md>
-                        <mrow>ABC &amp;= \begin{bmatrix}4 &amp; 6 &amp; 1 &amp; 3 \\ 21 &amp; 1 &amp; -5 &amp; -5\end{bmatrix}\begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}</mrow>
-                        <mrow> &amp;= \begin{bmatrix} 4 &amp; 17 &amp; 15 \\ 10 &amp; -2 &amp; 38 \end{bmatrix}</mrow>
-                    </md>
+                    <p>
+                        <m>ABC</m> is defined because <m>AB</m> is <m>2\times4</m> (see (a)) and <m>C</m> is <m>4\times3</m>, which share inner dimensions (4). We will have <m>(AB)C</m> as a  <m>2\times3</m> matrix.
+                    </p>
                 </li>
                 <li>
-                    <p>Compute \(C(B+D)\):</p>
-                    <p>First form \(B+D = \begin{bmatrix} 2 &amp; 1 &amp; 3 &amp; 0 \\ 2 &amp; 3 &amp; -1 &amp; 4 \\ 6 &amp; 3 &amp; -2 &amp; -1 \end{bmatrix}\).</p>
-                    <md>
-                        <mrow>C(B+D) &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ -1 &amp; 3 &amp; 1 \\ 0 &amp; 2 &amp; 1 \\ 2 &amp; -1 &amp; 0 \end{bmatrix}\begin{bmatrix} 2 &amp; 1 &amp; 3 &amp; 0 \\ 2 &amp; 3 &amp; -1 &amp; 4 \\ 6 &amp; 3 &amp; -2 &amp; -1 \end{bmatrix}</mrow>
-                        <mrow> &amp;= \begin{bmatrix} 14 &amp; 7 &amp; -1 &amp; -2 \\ 10 &amp; 11 &amp; -8 &amp; 11 \\ 10 &amp; 9 &amp; -4 &amp; 7 \\ 2 &amp; -1 &amp; 7 &amp; -4 \end{bmatrix}</mrow>
-                    </md>
+                    <p>
+                        <m>B+D</m> is defined (both are <m>3\times4</m>), and <m>C(B+D)</m> is defined because <m>C</m> is <m>4\times3</m> and <m>B+D</m> is <m>3\times4</m>, so the product is <m>4\times4</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>BD</m> is a <m>3 \times 4</m> matrix multiplied by a <m>3 \times 4</m> matrix. The product is not defined because inner dimensions (4 and 3) do not match. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>A^2</m> is a <m>2 \times 3</m> matrix multiplied by a <m>2 \times 3</m> matrix. The product is not defined because inner dimensions (3 and 2) do not match.
+                    </p>
+                    <p>
+                        Only square matrices can be multiplied by themselves.
+                    </p>
                 </li>
             </ol>
         </solution>
@@ -300,27 +365,6 @@
       </solution>
     </example>
 
-    <!-- <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example> -->
-
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->
@@ -331,8 +375,154 @@
 
     <!-- Add static exercises -->
 
-    <exercises>
+    <exercises>   
         <exercise>
+            <statement>
+                <p>
+                    Compute each product if it is defined. If it is not defined, say so.
+                </p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; -1 \end{bmatrix}\begin{bmatrix} 3 &amp; 1 \\ 2 &amp; 4 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 2 &amp; 0 &amp; 1 \\ -1 &amp; 3 &amp; 2 \end{bmatrix}\begin{bmatrix} 1 &amp; -2 \\ 4 &amp; 0 \\ -1 &amp; 3 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; 0 \\ 2 &amp; -1 \end{bmatrix}\begin{bmatrix} 5 &amp; 3 &amp; 1 \\ -2 &amp; 4 &amp; 0 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 0 &amp; -1 &amp; 3 \end{bmatrix}\begin{bmatrix} 4 &amp; 1 \\ -1 &amp; 2 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} -1 &amp; 2 \\ 3 &amp; 0 \\ 1 &amp; -2 \end{bmatrix}\begin{bmatrix} 2 &amp; 1 \\ -3 &amp; 4 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; -2 \\ 3 &amp; 1 \end{bmatrix}\begin{bmatrix} 0 &amp; 1 &amp; -1 \\ 2 &amp; -1 &amp; 3 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 7 &amp; 9 \\ -2 &amp; -4 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; -1 \\ 9 &amp; 8 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 5 &amp; 3 &amp; 1 \\ 12 &amp; 2 &amp; 2 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Not defined.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} -8 &amp; 7 \\ 6 &amp; 3 \\ 8 &amp; -7 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} -4 &amp; 3 &amp; -7 \\ 2 &amp; 2 &amp; 0 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Compute each product if it is defined. If it is not defined, say so.
+                </p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 2 &amp; -1 &amp; 0 \\ 1 &amp; 3 &amp; -2 \end{bmatrix}\begin{bmatrix} 1 &amp; 3 \\ -2 &amp; 4 \\ 5 &amp; 0 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\begin{bmatrix} -1 &amp; 2 \\ 0 &amp; 1 \\ 3 &amp; -2 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 0 &amp; 1 &amp; 2 \\ -1 &amp; 3 &amp; 0 \end{bmatrix}\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; -1 \\ -1 &amp; 2 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; 0 \\ 2 &amp; -1 \end{bmatrix}\begin{bmatrix} 3 &amp; -2 \\ 1 &amp; 4 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 0 \end{bmatrix}\begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; -1 \end{bmatrix}\begin{bmatrix} 3 &amp; 1 &amp; 2 \\ -2 &amp; 0 &amp; 4 \\ 5 &amp; -1 &amp; 1 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 4 &amp; 2 \\ -15 &amp; 15 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Not defined.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} -1 &amp; 3 \\ 1 &amp; -4 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 3 &amp; -2 \\ 5 &amp; -8 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\begin{bmatrix} 3 &amp; -3 \\ 4 &amp; 0 \end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Not defined.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+                <exercise>
             <statement> 
                 <p> Define the 2-by-2 matrix <m>F</m> as <me> \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}  </me> </p>
                 <ol marker="(a)">
@@ -417,7 +607,7 @@
                     </li>
                 </ol>
             </solution>             
-        </exercise>        
+        </exercise>     
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
