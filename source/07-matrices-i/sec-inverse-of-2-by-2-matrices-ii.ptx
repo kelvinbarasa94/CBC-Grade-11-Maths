@@ -120,26 +120,80 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>Let <m>A = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}</m> and <m>\mathbf{b} = \begin{bmatrix} 7 \\ 12 \end{bmatrix}</m>.</p>
+            <ol marker="(a)">
+                <li>
+                    <p>Find <m>A^{-1}</m>.</p>
+                </li>
+                <li>
+                    <p>Solve <m>A\mathbf{x} = \mathbf{b}</m> using the inverse.</p>
+                </li>
+            </ol>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        <md>
+                            <mrow> A^{-1} 
+                            \amp = \frac{1}{(2)(2) - (1)(3)} \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <md>
+                            <mrow> \mathbf{x} = A^{-1}\mathbf{b} = \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} \begin{bmatrix} 7 \\ 12 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} 2 \\ 3 \end{bmatrix} </mrow>
+                        </md>
+                        Hence <m>x = 2</m> and <m>y = 3</m>.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>Find the inverse of <m>M = \begin{bmatrix} -1 &amp; 4 \\ 2 &amp; 5 \end{bmatrix}</m>.</p>
         </statement>
         <solution>
+            <p>
+                <md>
+                    <mrow> M^{-1} 
+                    \amp = \frac{1}{(-1)(5) - (4)(2)} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; -1 \end{bmatrix} </mrow>
+                    <mrow> \amp = -\frac{1}{13} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; -1 \end{bmatrix} </mrow>
+                    <mrow> \amp = \begin{bmatrix} -\tfrac{5}{13} &amp; \tfrac{4}{13} \\ \tfrac{2}{13} &amp; \tfrac{1}{13} \end{bmatrix} </mrow>
+                </md>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>Solve the system <m>2x - y = 1</m> and <m>3x + 2y = 14</m> using the inverse method.</p>
         </statement>
         <solution>
+            <p>
+                Write the system as
+                <md>
+                    <mrow> \begin{bmatrix} 2 &amp; -1 \\ 3 &amp; 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 14 \end{bmatrix}. </mrow>
+                </md>
+                The inverse is
+                <md>
+                    <mrow> A^{-1} = \frac{1}{(2)(2) - (-1)(3)} \begin{bmatrix} 2 &amp; 1 \\ -3 &amp; 2 \end{bmatrix} = \frac{1}{7} \begin{bmatrix} 2 &amp; 1 \\ -3 &amp; 2 \end{bmatrix}. </mrow>
+                </md>
+                Therefore,
+                <md>
+                    <mrow> \begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 1 \\ 14 \end{bmatrix} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}. </mrow>
+                </md>
+                So <m>x = 2</m> and <m>y = 4</m>.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -152,6 +206,367 @@
     <!-- Add static exercises -->
 
     <exercises>
+        <exercise>
+            <statement>
+                <p>Find the inverse of each matrix, if it exists.</p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A = \begin{bmatrix} 2 &amp; 1 \\ 5 &amp; 3 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B = \begin{bmatrix} 4 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>D = \begin{bmatrix} -3 &amp; 0 \\ 0 &amp; 5 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 2 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F = \begin{bmatrix} -2 &amp; 3 \\ 1 &amp; 1 \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A^{-1} = \begin{bmatrix} 3 &amp; -1 \\ -5 &amp; 2 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B^{-1} = \begin{bmatrix} \tfrac{1}{4} &amp; 0 \\ 0 &amp; -\tfrac{1}{2} \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p>No inverse, since <m>\det{C} = 0</m></p>
+                    </li>
+                    <li>
+                        <p><m>D^{-1} = \begin{bmatrix} -\tfrac{1}{3} &amp; 0 \\ 0 &amp; \tfrac{1}{5} \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E^{-1} = \begin{bmatrix} 2 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F^{-1} = \begin{bmatrix} -\tfrac{1}{5} &amp; \tfrac{3}{5} \\ \tfrac{1}{5} &amp; \tfrac{2}{5} \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Find the inverse of each matrix, if it exists.</p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A = \begin{bmatrix} 7 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B = \begin{bmatrix} 1 &amp; -4 \\ 2 &amp; 5 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C = \begin{bmatrix} -4 &amp; -1 \\ 2 &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>D = \begin{bmatrix} 0 &amp; -2 \\ 5 &amp; 1 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E = \begin{bmatrix} -1 &amp; 2 \\ 3 &amp; -6 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F = \begin{bmatrix} 2 &amp; -3 \\ 1 &amp; 4 \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A^{-1} = \begin{bmatrix} \tfrac{1}{7} &amp; 0 \\ 0 &amp; \tfrac{1}{3} \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B^{-1} = \begin{bmatrix} \tfrac{5}{13} &amp; \tfrac{4}{13} \\ -\tfrac{2}{13} &amp; \tfrac{1}{13} \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C^{-1} = \begin{bmatrix} 0 &amp; \tfrac{1}{2} \\ -1 &amp; -2 \end{bmatrix}</m></p>       
+                    </li>
+                    <li>
+                        <p><m>D^{-1} = \begin{bmatrix} \tfrac{1}{10} &amp; \tfrac{1}{5} \\ -\tfrac{1}{2} &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p>No inverse, since <m>\det{E} = 0</m></p>
+                    </li>
+                    <li>
+                        <p><m>F^{-1} = \begin{bmatrix} \tfrac{4}{11} &amp; \tfrac{3}{11} \\ -\tfrac{1}{11} &amp; \tfrac{2}{11} \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 3 \end{bmatrix}</m>.</p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Find <m>A^{-1}</m> and <m>B^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Compute <m>AB</m> and <m>(AB)^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Find <m>A^{-1}B^{-1}</m>, the product of the inverses. Is it equal to <m>(AB)^{-1}</m>? </p>
+                    </li>
+                    <li>
+                        <p>
+                            Instead, find <m>B^{-1}A^{-1}</m>, the product of the inverses in the opposite order. Is it equal to <m>(AB)^{-1}</m>?
+                        </p>
+                    </li>
+                    <li>
+                        <p>If <m>C</m> is any invertible <m>2\times 2</m> matrix, write a guess for the formula for <m>(ABC)^{-1}</m>.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Computing <m>A^{-1}</m> first:
+                            <md>
+                                <mrow> A^{-1} 
+                                \amp = \frac{1}{(1)(4) - (2)(3)} \begin{bmatrix} 4 &amp; -2 \\ -3 &amp; 1 \end{bmatrix} </mrow>
+                                <mrow> \amp = -\frac{1}{2} \begin{bmatrix} 4 &amp; -2 \\ -3 &amp; 1 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -2 &amp; 1 \\ \tfrac{3}{2} &amp; -\tfrac{1}{2} \end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                        <p>
+                            Now for <m>B^{-1} </m>:
+                            <md>
+                                <mrow> B^{-1} 
+                                \amp = \frac{1}{(2)(3) - (1)(0)} \begin{bmatrix} 3 &amp; -1 \\ 0 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = \frac{1}{6} \begin{bmatrix} 3 &amp; -1 \\ 0 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} \tfrac{1}{2} &amp; -\tfrac{1}{6} \\ 0 &amp; \tfrac{1}{3} \end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Finding the matrix product:
+                            <md>
+                                <mrow> AB \amp = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 3 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} 2 &amp; 7 \\ 6 &amp; 15 \end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                        <p>
+                            Taking the inverse:
+                            <md>
+                                <mrow> (AB)^{-1} 
+                                \amp = \frac{1}{(2)(15) - (7)(6)} \begin{bmatrix} 15 &amp; -7 \\ -6 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = -\frac{1}{12} \begin{bmatrix} 15 &amp; -7 \\ -6 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -\tfrac{5}{4} &amp; \tfrac{7}{12} \\ \tfrac{1}{2} &amp; -\tfrac{1}{6} \end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Multiplying the inverses in the same order as the original matrices:
+                            <md>
+                                <mrow> A^{-1}B^{-1} \amp = \begin{bmatrix} -2 &amp; 1 \\ \tfrac{3}{2} &amp; -\tfrac{1}{2} \end{bmatrix} \begin{bmatrix} \tfrac{1}{2} &amp; -\tfrac{1}{6} \\ 0 &amp; \tfrac{1}{3} \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -1 &amp; \tfrac{2}{3} \\ \tfrac{3}{4} &amp; -\tfrac{5}{12} \end{bmatrix} </mrow>
+                            </md>
+                            This is not the same as <m>(AB)^{-1}</m>.
+                        </p>
+                        <p>
+                            Multiplying the inverses in the opposite order:
+                            <md>
+                                <mrow> B^{-1}A^{-1} \amp = \begin{bmatrix} \tfrac{1}{2} &amp; -\tfrac{1}{6} \\ 0 &amp; \tfrac{1}{3} \end{bmatrix} \begin{bmatrix} -2 &amp; 1 \\ \tfrac{3}{2} &amp; -\tfrac{1}{2} \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -\tfrac{5}{4} &amp; \tfrac{7}{12} \\ \tfrac{1}{2} &amp; -\tfrac{1}{6} \end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                        <p>
+                            Hence <m>(AB)^{-1} = B^{-1}A^{-1}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Taking the inverse of a product inverts the order of the matrices, so we guess that <me>(ABC)^{-1} = C^{-1}B^{-1}A^{-1}</me>
+                            Try to confirm this by choosing a specific <m>C</m>.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A printing kiosk in Nairobi charges for black-and-white pages and colour pages. A student prints 3 black-and-white pages and 2 colour pages for KSh <m>110</m>. Another student prints 5 black-and-white pages and 1 colour page for KSh <m>125</m>.
+                </p>
+                <p>
+                    We need to find the cost of one black-and-white page and the cost of one colour page.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Let <m>x</m> be the cost of one black-and-white page and <m>y</m> be the cost of one colour page. Write the system of equations.</p>
+                    </li>
+                    <li>
+                        <p>Write the system in matrix form and find the inverse of the coefficient matrix.</p>
+                    </li>
+                    <li>
+                        <p>Use the inverse to solve for <m>x</m> and <m>y</m>.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The system is
+                            <md>
+                                <mrow> 3x + 2y = 110 </mrow>
+                                <mrow> 5x + y = 125 </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            In matrix form,
+                            <md>
+                                <mrow> \begin{bmatrix} 3 &amp; 2 \\ 5 &amp; 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 110 \\ 125 \end{bmatrix}. </mrow>
+                            </md>
+                            The inverse of the coefficient matrix is
+                            <md>
+                                <mrow> A^{-1} \amp = \frac{1}{(3)(1) - (2)(5)} \begin{bmatrix} 1 &amp; -2 \\ -5 &amp; 3 \end{bmatrix} </mrow>
+                                <mrow> \amp = -\frac{1}{7} \begin{bmatrix} 1 &amp; -2 \\ -5 &amp; 3 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -\tfrac{1}{7} &amp; \tfrac{2}{7} \\ \tfrac{5}{7} &amp; -\tfrac{3}{7} \end{bmatrix}. </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Therefore,
+                            <md>
+                                <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 110 \\ 125 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -\tfrac{1}{7} &amp; \tfrac{2}{7} \\ \tfrac{5}{7} &amp; -\tfrac{3}{7} \end{bmatrix} \begin{bmatrix} 110 \\ 125 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} 20 \\ 25 \end{bmatrix}. </mrow>
+                            </md>
+                            So a black-and-white page costs KSh <m>20</m> and a colour page costs KSh <m>25</m>.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A community theatre in Kisumu sells adult and student tickets. Two adult tickets and three student tickets cost KSh <m>1800</m>. Five adult tickets and two student tickets cost KSh <m>2300</m>.
+                </p>
+                <p>
+                    We need to find the cost of one adult ticket and one student ticket.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Let <m>x</m> be the cost of one adult ticket and <m>y</m> be the cost of one student ticket. Write the system of equations.</p>
+                    </li>
+                    <li>
+                        <p>Write the system in matrix form and find the inverse of the coefficient matrix.</p>
+                    </li>
+                    <li>
+                        <p>Use the inverse to solve for <m>x</m> and <m>y</m>.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The system is
+                            <md>
+                                <mrow> 2x + 3y = 1800 </mrow>
+                                <mrow> 5x + 2y = 2300 </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            In matrix form,
+                            <md>
+                                <mrow> \begin{bmatrix} 2 &amp; 3 \\ 5 &amp; 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1800 \\ 2300 \end{bmatrix}. </mrow>
+                            </md>
+                            The inverse of the coefficient matrix is
+                            <md>
+                                <mrow> A^{-1} \amp = \frac{1}{(2)(2) - (3)(5)} \begin{bmatrix} 2 &amp; -3 \\ -5 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = -\frac{1}{11} \begin{bmatrix} 2 &amp; -3 \\ -5 &amp; 2 \end{bmatrix} = \begin{bmatrix} -\tfrac{2}{11} &amp; \tfrac{3}{11} \\ \tfrac{5}{11} &amp; -\tfrac{2}{11} \end{bmatrix}. </mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Therefore,
+                            <md>
+                                <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 1800 \\ 2300 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} -\tfrac{2}{11} &amp; \tfrac{3}{11} \\ \tfrac{5}{11} &amp; -\tfrac{2}{11} \end{bmatrix} \begin{bmatrix} 1800 \\ 2300 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} 300 \\ 400 \end{bmatrix}. </mrow>
+                            </md>
+                            So an adult ticket costs KSh <m>300</m> and a student ticket costs KSh <m>400</m>.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A school bookshop sells notebooks and pens. Two notebooks and three pens cost KSh <m>480</m>, while five notebooks and one pen cost KSh <m>680</m>. Find the cost of one notebook and one pen using the matrix inverse method.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The system is
+                    <md>
+                        <mrow> 2x + 3y = 480 </mrow>
+                        <mrow> 5x + y = 680 </mrow>
+                    </md>
+                    so
+                    <md>
+                        <mrow> \begin{bmatrix} 2 &amp; 3 \\ 5 &amp; 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 480 \\ 680 \end{bmatrix}. </mrow>
+                    </md>
+                    The inverse is
+                    <md>
+                        <mrow> A^{-1} = \frac{1}{(2)(1) - (3)(5)} \begin{bmatrix} 1 &amp; -3 \\ -5 &amp; 2 \end{bmatrix} = -\frac{1}{13} \begin{bmatrix} 1 &amp; -3 \\ -5 &amp; 2 \end{bmatrix}. </mrow>
+                    </md>
+                    Hence
+                    <md>
+                        <mrow> \begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 480 \\ 680 \end{bmatrix} = \begin{bmatrix} 120 \\ 80 \end{bmatrix}. </mrow>
+                    </md>
+                    So a notebook costs KSh <m>120</m> and a pen costs KSh <m>80</m>.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A museum in Nairobi sells adult and learner tickets. Three adult tickets and four learner tickets cost KSh <m>2300</m>, while two adult tickets and five learner tickets cost KSh <m>2000</m>. Use the inverse method to find the cost of each ticket type.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The system is
+                    <md>
+                        <mrow> 3x + 4y = 2300 </mrow>
+                        <mrow> 2x + 5y = 2000 </mrow>
+                    </md>
+                    so
+                    <md>
+                        <mrow> \begin{bmatrix} 3 &amp; 4 \\ 2 &amp; 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 2300 \\ 2000 \end{bmatrix}. </mrow>
+                    </md>
+                    The inverse is
+                    <md>
+                        <mrow> A^{-1} = \frac{1}{(3)(5) - (4)(2)} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; 3 \end{bmatrix} = \frac{1}{7} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; 3 \end{bmatrix}. </mrow>
+                    </md>
+                    Therefore,
+                    <md>
+                        <mrow> \begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 2300 \\ 2000 \end{bmatrix} = \begin{bmatrix} 500 \\ 200 \end{bmatrix}. </mrow>
+                    </md>
+                    So an adult ticket costs KSh <m>500</m> and a learner ticket costs KSh <m>200</m>.
+                </p>
+            </solution>
+        </exercise>
         <exercise>
             <title>Inverse of Diagonal Matrices</title>
             <statement>   

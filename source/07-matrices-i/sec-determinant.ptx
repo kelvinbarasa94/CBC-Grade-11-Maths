@@ -119,26 +119,159 @@
 
     <!-- Show det(aM) = a det(A), det(AB) = det(A) det(B)-->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p> If <m>A = \begin{bmatrix} 5 &amp; 3 \\ 1 &amp; 4 \end{bmatrix}</m>, compute the determinant of <m>A</m>, written <m>\det{A}</m>.</p>
         </statement>
         <solution>
+            <p>
+                We can compute the determinant of a 2 by 2 matrix using the formula <m>\det{\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}} = ad - bc</m>. In this case, we have <m>a = 5</m>, <m>b = 3</m>, <m>c = 1</m>, and <m>d = 4</m>. Substituting these values into the formula gives us:
+
+                <md>
+                    <mrow> \det{A} \amp = (5)(4) - (3)(1) </mrow>
+                    <mrow>  \amp = 20 - 3 </mrow>
+                    <mrow> \amp = 17 </mrow>
+                </md>
+
+                Therefore, the determinant of matrix <m>A</m> is <m>17</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Let <m>M = \begin{bmatrix} 2 &amp; -1 \\ 4 &amp; -2 \end{bmatrix}</m>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Compute <m>\det{M}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What does the value of the determinant tell us about the inverse of <m>M</m>?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Using the formula for the determinant of a 2 by 2 matrix, we have:
+
+                        <md>
+                            <mrow> \det{M} \amp = ad - bc </mrow>
+                            <mrow> \amp = (2)(-2) - (-1)(4) </mrow>
+                            <mrow> \amp = -4 + 4 </mrow>
+                            <mrow> \amp = 0 </mrow>
+                        </md>
+
+                        Therefore, the determinant of matrix <m>M</m> is <m>0</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Since <m>\det{M} = 0</m>, the matrix <m>M</m> does not have an inverse. 
+                    </p>
+                    <p>
+                        This is because any system of equations <m>M\mathbf{x} = \mathbf{b}</m> would have either no solutions or infinitely many solutions, depending on the value of <m>\mathbf{b}</m>.
+                    </p>
+                    <p> 
+                        For example, if <m>\mathbf{x} = \begin{bmatrix} x \\ y \end{bmatrix}</m> and <m>\mathbf{b} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}</m>, then we get the system of equations:
+                        <md>
+                            <mrow> 2x - y \amp = 0 </mrow>
+                            <mrow> 4x - 2y \amp = 0 </mrow>
+                        </md>
+                        These are two parallel lines that coincide, meaning there are infinitely many solutions to this system of equations.
+                    </p>
+                    <p>
+                        In either case, we cannot find a unique solution for <m>\mathbf{x}</m>, which is why the matrix <m>M</m> does not have an inverse.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
+    
+
     <example>
         <statement>
+            <p>
+                Let <m>A = \begin{bmatrix}-4 \amp 0 \\ 0 \amp 3\end{bmatrix}</m> and <m> B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 2 \end{bmatrix}</m>.
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Compute <m>\det{A}</m> and <m>\det{B}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the product <m>AB</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Compute <m>\det{AB}</m> and verify that it is equal to <m>\det{A} \cdot \det{B}</m>.
+                        </p>
+                    </li>
+                </ol>   
+            </p>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Finding <m>\det{A}</m>:
+                        <md>
+                            <mrow> \det{A} \amp = ad - bc </mrow>
+                            <mrow> \amp = (-4)(3) - (0)(0) </mrow>
+                            <mrow> \amp = -12 </mrow>
+                        </md>
+                        Finding <m>\det{B}</m>:
+                        <md>
+                            <mrow> \det{B} \amp = ad - bc </mrow>
+                            <mrow> \amp = (1)(2) - (2)(3) </mrow>
+                            <mrow> \amp = 2 - 6 </mrow>
+                            <mrow> \amp = -4 </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        To find the product <m>AB</m>, we perform matrix multiplication:
+                        <md>
+                            <mrow> AB \amp = \begin{bmatrix} -4 \amp 0 \\ 0 \amp 3 \end{bmatrix} \begin{bmatrix} 1 \amp 2 \\ 3 \amp 2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} (-4)(1) + (0)(3) \amp (-4)(2) + (0)(2) \\ (0)(1) + (3)(3) \amp (0)(2) + (3)(2) \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} -4 \amp -8 \\ 9 \amp 6 \end{bmatrix} </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Finding <m>\det{AB}</m>:
+                        <md>
+                            <mrow> \det{AB} \amp = ad - bc </mrow>
+                            <mrow> \amp = (-4)(6) - (-8)(9) </mrow>
+                            <mrow> \amp = -24 + 72 </mrow>
+                            <mrow> \amp = 48 </mrow>
+                        </md>
+                        Now we verify that <m>\det{AB} = \det{A} \cdot \det{B}</m>:
+                        <md>
+                            <mrow> \det{A} \cdot \det{B} \amp = (-12)(-4) </mrow>
+                            <mrow> \amp = 48 </mrow>
+                            <mrow> \amp = \det{AB} </mrow>
+                        </md>
+                    </p>
+                    <p>
+                        In fact, the property <m>\det{AB} = \det{A} \cdot \det{B}</m> holds for all matrices <m>A</m> and <m>B</m> (as long as <m>AB</m> is defined).
+                    </p>
+                </li>
+            </ol>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -150,16 +283,186 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>Compute the determinant of each matrix.</p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A = \begin{bmatrix} 3 &amp; -1 \\ 2 &amp; 4 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B = \begin{bmatrix} -5 &amp; 0 \\ 0 &amp; 2 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C = \begin{bmatrix} 7 &amp; 2 \\ -3 &amp; 1 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>D = \begin{bmatrix} 0 &amp; -2 \\ 5 &amp; 1 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E = \begin{bmatrix} -4 &amp; -1 \\ 2 &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F = \begin{bmatrix} 1 &amp; 3 \\ 2 &amp; 6 \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>\det{A} = 14</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{B} = -10</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{C} = 13</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{D} = 10</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{E} = 2</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{F} = 0</m></p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Compute the determinant of each matrix.</p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A = \begin{bmatrix} 6 &amp; 0 \\ 0 &amp; -3 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B = \begin{bmatrix} 1 &amp; -4 \\ 2 &amp; 5 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C = \begin{bmatrix} -1 &amp; 2 \\ 3 &amp; -6 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>D = \begin{bmatrix} 2 &amp; -3 \\ 1 &amp; 4 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E = \begin{bmatrix} 0 &amp; 1 \\ 4 &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F = \begin{bmatrix} -2 &amp; 5 \\ 3 &amp; -1 \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>\det{A} = -18</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{B} = 13</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{C} = 0</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{D} = 11</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{E} = -4</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{F} = -13</m></p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <title>Determinant of Inverse</title>
+            <statement>
+                <p>Let <m>A = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 4 \end{bmatrix}</m>.
+                    <ol>
+                        <li>
+                            <p>
+                                Compute <m>\det{A}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find <m>A^{-1}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find <m>\det{A^{-1}}</m>, the determinant of the inverse of <m>A</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What's the relationship between <m>\det{A^{-1}}</m> and <m>\det{A}</m>? Can you prove it?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
             <solution>
+                <ol>
+                    <li>
+                        <p>
+                            Using the formula:
+                            <md>
+                                <mrow> \det{A} \amp = ad - bc </mrow>
+                                <mrow> \amp = (2)(4) - (1)(3) </mrow>
+                                <mrow> \amp = 8 - 3 </mrow>
+                                <mrow> \amp = 5 </mrow>
+                            </md>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+                            Therefore, <m>\det{A} = 5</m>.
+                        </p>    
+                    </li>
+                    <li>
+                        <p> 
+                            To find the inverse of a 2 by 2 matrix, we can use the formula:
+                            <md>
+                                <mrow> A^{-1} \amp = \frac{1}{ad - bc} \begin{bmatrix} d &amp; -b \\ -c &amp; a \end{bmatrix} </mrow>
+                            </md>
+
+                            Substituting the values from matrix <m>A</m>, we get:
+                            <md>
+                                <mrow> A^{-1} \amp = \frac{1}{5} \begin{bmatrix} 4 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} \frac{4}{5} &amp; -\frac{1}{5} \\ -\frac{3}{5} &amp; \frac{2}{5} \end{bmatrix} </mrow>
+                            </md>
+
+                            Therefore, the inverse of matrix <m>A</m> is <m>A^{-1} = \begin{bmatrix} \frac{4}{5} &amp; -\frac{1}{5} \\ -\frac{3}{5} &amp; \frac{2}{5} \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Now we compute the determinant of the inverse of <m>A</m>:
+                            <md>
+                                <mrow> \det{A^{-1}} \amp = ad - bc </mrow>
+                                <mrow> \amp = \left(\frac{4}{5}\right)\left(\frac{2}{5}\right) - \left(-\frac{1}{5}\right)\left(-\frac{3}{5}\right) </mrow>
+                                <mrow> \amp = \frac{8}{25} - \frac{3}{25} </mrow>
+                                <mrow> \amp = \frac{5}{25} </mrow>
+                                <mrow> \amp = \frac{1}{5} </mrow>
+                            </md>
+
+                            Therefore, <m>\det{A^{-1}} = \frac{1}{5}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The relationship between <m>\det{A^{-1}}</m> and <m>\det{A}</m> is that <m>\det{A^{-1}} = \frac{1}{\det{A}}</m>.
+                        </p>
+                        <p>
+                            You can prove this using the fact that <me>(\det{A})(\det{A^{-1}}) = \det{AA^{-1}} = \det{I} = 1</me>, where <m>I</m> is the identity matrix.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
