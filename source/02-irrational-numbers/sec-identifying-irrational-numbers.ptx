@@ -61,7 +61,7 @@
             <task>
                 <statement>
                     <p>
-                        Lists numbers between<m>50  and 100</m>
+                        Lists numbers between<m>50</m> and <m>100</m>
                     </p>
                 
                         <!-- Writes each number in square root form <m>(e.g., √50, √64).</m> -->
@@ -86,7 +86,7 @@
             <task>
                 <statement>
                     <p>
-                          Writes each number in square root form <m>(e.g., √50, √64).</m>
+                          Writes each number in square root form <m>(e.g., \sqrt50, \sqrt64).</m>
                     </p>
             
                     <!-- <tabular left="medium" right="medium" top="medium" bottom="medium">
@@ -137,13 +137,13 @@
                         <li>
                             <p>
                                 If the number is a perfect square, the square root is a Rational Number.
-                                Example: √64 = 8
+                                Example: <m>\sqrt 64 = 8</m>
                             </p>
                         </li>
                         <li>
                             <p>
                                 If the number is not a perfect square, the square root is an Irrational Number.
-                                Example: √80 ≈ 8.944...
+                                Example: <m>\sqrt 80 ≈ 8.944...</m> 
                             </p>
                         </li>
                     </p>
