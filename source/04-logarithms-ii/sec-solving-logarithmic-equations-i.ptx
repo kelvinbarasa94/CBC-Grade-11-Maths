@@ -41,7 +41,7 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <!-- LP: Add guidance on activity -->
 
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
@@ -69,10 +69,49 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+        <p>
+            <term> Work in groups</term>
+        </p>
+        <p>
+            <term>What you need</term>
+        </p>
+           <p>
+             Small cards with logarithmic equations
+             Manila paper
+             Markers
+             Calculators (optional)
+          </p>
+          <p>
+            <term>What to do</term>
+          </p>
+          <task>
+             <statement>
+                   <p>
+                      Divide into groups and each group will receive a set of cards with logarithmic equations. 
+                   </p>
+                    <p>
+                         Work collaboratively in your groups to solve the equations on the cards, then record your solutions on the manila paper.
+                    </p>
+             </statement>
+          </task>
+              <task>
+                 <statement>
+                     <p>
+                      Exchange the cards with another group and check each other's solutions.
+                     </p>
+                  </statement>
+              </task>
+          <task>
+            <statement>
+                <p>
+                    After checking the solutions, discuss any discrepancies with the other group and try to understand the correct solution together.
+                </p>
+            </statement>
+          </task>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +147,19 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <term>Key Takeaway:</term> Solving logarithmic equations often involves rewriting the equation in exponential form, which allows us to find the value of the variable. 
+            This process relies on understanding the relationship between logarithms and exponents, and it is a fundamental skill for working with logarithmic functions.
+        </p>
+           <p>
+             When solving logarithmic equations, it's important to remember that the argument of the logarithm must be positive. This is because the logarithm of a negative number or zero is undefined in the real number system.
+          </p>
+          <p>
+             Additionally, when solving logarithmic equations, remember the basic properties of logarithims such as
+             product rule that is <m>log_b(xy) = log_b(x) + log_b(y)</m>, the quotient rule that is <m>log_b(x/y) = log_b(x) - log_b(y)</m>, and the power rule that is <m>log_b(x^n) = n \cdot log_b(x)</m>.
+         </p>
+    </insight> 
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,26 +167,101 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+            Solve for x: <m>log₂(x) = 3</m>
+            </p>
         </statement>
         <solution>
+            <p>
+                To solve the equation <m>log₂(x) = 3</m>, first rewrite it in exponential form. 
+                The logarithmic equation <m>log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+            </p>
+            <p>
+                In our case, you have <m>b = 2</m>, <m>c = 3</m>, and <m>a = x</m>. 
+                Therefore, you can rewrite the equation as:
+            </p>
+            <p>
+                <m>2^3 = x</m>
+            </p>
+            <p>
+                Now, calculate <m>2^3</m>, which is equal to 8. 
+                Therefore, the solution to the equation is:
+            </p>
+            <p>
+                <m>x = 8</m>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+            Solve for x: <m>log₃(x + 1) = 2</m>
+            </p>
         </statement>
         <solution>
+            <p>
+                To solve the equation <m>log₃(x + 1) = 2</m>, first rewrite it in exponential form. 
+                The logarithmic equation <m>log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+            </p>
+            <p>
+                In our case, you have <m>b = 3</m>, <m>c = 2</m>, and <m>a = x + 1</m>. 
+                Therefore, you can rewrite the equation as:
+            </p>
+            <p>
+                <m>3^2 = x + 1</m>
+            </p>
+            <p>
+                Now, calculate <m>3^2</m>, which is equal to 9. 
+                Therefore, the solution to the equation is:
+            </p>
+            <p>
+                <m>x + 1 = 9</m>
+            </p>
+            <p>
+                Subtracting 1 from both sides gives:
+            </p>
+            <p>
+                <m>x = 8</m>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+            Solve for x: <m>log₄(x - 2) = 1</m>
+            </p>
         </statement>
         <solution>
+            <p>
+                To solve the equation <m>log₄(x - 2) = 1</m>, first rewrite it in exponential form. 
+                The logarithmic equation <m>log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+            </p>
+            <p>
+                In our case, you have <m>b = 4</m>, <m>c = 1</m>, and <m>a = x - 2</m>. 
+                Therefore, you can rewrite the equation as:
+            </p>
+            <p>
+                <m>4^1 = x - 2</m>
+            </p>
+            <p>
+                Now, calculate <m>4^1</m>, which is equal to 4. 
+                Therefore, the solution to the equation is:
+            </p>
+            <p>
+                <m>x - 2 = 4</m>
+            </p>
+            <p>
+                Adding 2 to both sides gives:
+            </p>
+            <p>
+                <m>x = 6</m>
+            </p>
         </solution>
-    </example> -->
+    </example> 
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,16 +273,31 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    Bella is trying to solve the logarithmic equation <m>log₅(x) = 2</m>. What answer does she get?
+                </p>
             </statement>   
             <solution>
-
+                <p>
+                    <m>x = 25</m>
+                </p>
             </solution>             
-        </exercise>        
-    </exercises> -->
+        </exercise>  
+        <exercise>
+            <statement>   
+                <p>
+                    Liam is trying to solve the logarithmic equation <m>log₆(x - 3) = 1</m>. What answer does he get?
+                </p>
+            </statement>   
+            <solution>
+                <p>
+                    <m>x = 9</m>
+                </p>
+            </solution>     
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
