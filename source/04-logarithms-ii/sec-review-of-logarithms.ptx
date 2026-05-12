@@ -41,7 +41,7 @@
                 </li>
             </dl>
             </p>
-        </introduction>
+        </introduction>  
     </objectives>
 
     <!-- [LP] Add guidance on activity -->
@@ -72,10 +72,26 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <term>Work in groups</term>
+            </p>
+            <p>
+                <term>What you need</term>
+            </p>
+            <p>
+                <ul>
+                    <li>Paper</li>
+                    <li>Pencil</li>
+                    <li>Calculator (optional)</li>
+                </ul>
+            </p>
+            <p>
+                <term>What to do</term>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,9 +124,39 @@
             </ol>
         </paragraphs>
     </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
+                                                                                                                                                                                                                  
+<!-- Add Activity -->
+    <activity>
+       <introduction>
+         <p>
+             In the previous chapter, we introduced logarithms and explored their relationship
+             with exponents. We also learned about the properties of logarithms and how to evaluate logarithmic 
+             expressions. In this section, we will review these concepts and build a strong foundation
+              for solving logarithmic equations in the upcoming sections.
+         </p>
+       </introduction>
+        <statement>
+            <p>
+                <term>Work in groups</term>
+            </p>
+            <p>
+                <term>What you need</term>
+            </p>
+            <p>
+                <ul>
+                    <li>Paper</li>
+                    <li>Pencil</li>
+                    <li>Calculator (optional)</li>
+                </ul>
+            </p>
+            <p>
+                <term>What to do</term>
+            </p>
+        </statement>
+    
+    </activity>
+    
+     <!-- Add insight / key takeaway directly related to activity / learner experience -->
     <!-- <insight>
     </insight> -->
 
@@ -120,26 +166,53 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Calculate <m>log 3 + log 5 - log 3</m>
+            </p>
         </statement>
         <solution>
+               <p> <term>Step 1:</term> Since <m>log a + log b = log (a \times b)</m>, 
+                 we can write <m>log 3 + log 5</m> as <m>log (3 \times 5)</m>,
+                 which simplifies to <m>log 15</m>. </p>
+               <p> <term>Step 2:</term> Now, we can rewrite the expression as <m>log 15 - log 3</m>. 
+                 Since <m>log a - log b = log (a \div b)</m>, this simplifies to
+                 <m>log (15 \div 3)</m>, which is <m>log \\ 5</m>. 
+             </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Calculate <m>log 100 - log 10</m>
+            </p>
         </statement>
         <solution>
+              <p>
+                    Since <m>log a - log b = log (a \div b)</m>, we can write
+                    <m>log 100 - log 10</m> as <m>log (100 \div 10)</m>, which simplifies to
+                    <m>log 10</m>. 
+              </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Calculate <m>log_2(8)</m>
+            </p>
         </statement>
         <solution>
+               <p>
+                 We can rewrite <m>log_2(8)</m> in exponential form as
+                 <m>2^x = 8</m>, where <m>x</m> is the value we want to find.
+                    Since <m>2^3 = 8</m>, we can conclude that <m>x = 3</m>, which means:
+                 <m>log_2(8) = 3</m>
+              </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -151,16 +224,56 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+     <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    Calculate <m>log 4 + log 25 - log 5</m>
+                </p>
             </statement>   
             <solution>
-
+                <p>
+                    <m>log 20</m>
+                </p>
             </solution>             
-        </exercise>        
-    </exercises> -->
+        </exercise>
+        <exercise>
+            <statement>   
+                <p>
+                    Calculate <m>log 50 - log 5</m>
+                </p>
+            </statement>   
+            <solution>
+                <p>
+                    <m>log 10</m>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>   
+                <p>
+                    Calculate <m>log_3(27)</m>
+                </p>
+            </statement>   
+            <solution>
+                <p>
+                    <m>3</m>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>   
+                <p>
+                    A student calculates <m>log_5(25)</m>. What is the correct answer?
+                </p>
+            </statement>   
+            <solution>
+                <p>
+                    <m>2</m>
+                </p>
+            </solution> 
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
@@ -199,8 +312,8 @@
             </tabular>
         </table>
     </axiom> -->
-
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
 </section>
+ 
