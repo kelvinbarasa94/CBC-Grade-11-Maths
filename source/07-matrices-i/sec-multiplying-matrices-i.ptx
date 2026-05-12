@@ -158,11 +158,51 @@
             </ol>
         </paragraphs>
     </axiom> -->
+    
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <ul>
+            <li>
+                <p>
+                    <term>Matrix-vector multiplication</term> combines a matrix with a vector to produce a new vector.
+                </p>
+            </li>
+            <li>
+                <p>
+                    A matrix can only multiply a vector if the number of columns in the matrix equals the number of entries in the vector. The <term>inner dimensions</term> must match.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Suppose that <m>A</m> is a <m>2 \times 3</m> matrix and <m>v</m> is a <m>3 \times 1</m> vector, with <me>A = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \amp \color{blue}{c}\\ \color{red}{d} \amp \color{red}{e} \amp \color{red}{f}\end{bmatrix},\quad v = \begin{bmatrix}\color{teal}{x}\\ \color{teal}{y}\\ \color{teal}{z}\end{bmatrix}</me>.
+        </p>
+        <ul>
+            <li>
+                <p>
+                    Then the product <m>Av</m> is defined, and is a <m>2 \times 1</m> vector given by: <me>
+                        Av = \begin{bmatrix} \color{blue}{a}\color{teal}{x} \,\color{black}{+}\, \color{blue}{b}\color{teal}{y} \,\color{black}{+}\, \color{blue}{c}\color{teal}{z} \\ \color{red}{d}\color{teal}{x} \,\color{black}{+}\, \color{red}{e}\color{teal}{y} \,\color{black}{+}\, \color{red}{f}\color{teal}{z} \end{bmatrix}
+                    </me>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Each entry of <m>Av</m> is a <em>row</em> of <m>A</m> multiplied by the vector <m>v</m> (matching components multiplied and then added).
+                </p>
+            </li>
+            <li>
+                <p>
+                    This product is defined since the inner dimensions match: <m>A</m> has 3 columns and <m>v</m> has 3 rows.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The dimension of the product is given by the <term>outer dimensions</term>: <m>A</m> has 2 rows and <m>v</m> has 1 column, so <m>Av</m> has 2 rows and 1 column.
+                </p>
+            </li>
+        </ul>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

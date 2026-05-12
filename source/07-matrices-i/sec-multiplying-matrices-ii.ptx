@@ -246,25 +246,27 @@
     <p>
         A smaller example: suppose that <m>C</m> is a <m>2 \times 2</m> matrix, and <m>D</m> is a <m>2 \times 2</m> matrix, with <me>C = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b}\\ \color{red}{c} \amp \color{red}{d}\end{bmatrix}, D = \begin{bmatrix}\color{teal}{p} \amp \color{orange}{q}\\ \color{teal}{r} \amp \color{orange}{s}\end{bmatrix}</me>.
     </p>
-    <ul>
-    <li>
-        <p>
-            Then the product <m>CD</m> is defined, and is a <m>2 \times 2</m> matrix given by: <me>
-                CD = \begin{bmatrix} \color{blue}{a}\color{teal}{p} \,\color{black}{+}\, \color{blue}{b}\color{teal}{r} \amp \color{blue}{a}\color{orange}{q} \,\color{black}{+}\, \color{blue}{b}\color{orange}{s} \\ \color{red}{c}\color{teal}{p} \,\color{black}{+}\, \color{red}{d}\color{teal}{r} \amp \color{red}{c}\color{orange}{q} \,\color{black}{+}\, \color{red}{d}\color{orange}{s} \end{bmatrix}
-            </me>
-        </p>
-    </li>
-    <li>
-        <p>
-            Each entry of <m>CD</m> is a <em>row</em> of <m>C</m> multiplied by a <em>column</em> of <m>D</m>.
-        </p>
-    </li>
-    <li>
-        <p>
-            The product is defined since the inner dimensions match (both are 2), and the result has the <term>outer dimensions</term> <m>2 \times 2</m>.
-        </p>
-    </li>
-    </ul>
+    <p>
+        <ul>
+        <li>
+            <p>
+                Then the product <m>CD</m> is defined, and is a <m>2 \times 2</m> matrix given by: <me>
+                    CD = \begin{bmatrix} \color{blue}{a}\color{teal}{p} \,\color{black}{+}\, \color{blue}{b}\color{teal}{r} \amp \color{blue}{a}\color{orange}{q} \,\color{black}{+}\, \color{blue}{b}\color{orange}{s} \\ \color{red}{c}\color{teal}{p} \,\color{black}{+}\, \color{red}{d}\color{teal}{r} \amp \color{red}{c}\color{orange}{q} \,\color{black}{+}\, \color{red}{d}\color{orange}{s} \end{bmatrix}
+                </me>
+            </p>
+        </li>
+        <li>
+            <p>
+                Each entry of <m>CD</m> is a <em>row</em> of <m>C</m> multiplied by a <em>column</em> of <m>D</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                The product is defined since the inner dimensions match (both are 2), and the result has the <term>outer dimensions</term> <m>2 \times 2</m>.
+            </p>
+        </li>
+        </ul>
+    </p>
 
     <note>
         <p>
@@ -291,6 +293,26 @@
             The size of <m>AB</m> is also clear: the number of rows of <m>A</m> and the number of columns of <m>B</m>.
         </p>
     </note>
+
+    <paragraphs>
+      <title>Properties of Matrix Multiplication</title>
+      <p>For the matrices <m>A,B,</m> and <m>C</m> the following properties hold:
+      <ul>
+        <li><m>(AB)C=A(BC)</m>
+        </li>
+        <li><m>C(A+B)=CA+CB</m>
+        </li>
+        <li><m>(A+B)C=AC+BC</m>
+        </li>
+      </ul>
+        </p>
+    </paragraphs>
+
+    <warning>
+        <p>
+            In general, order matters in matrix multiplication. So, in general, <m>AB \neq BA.</m>
+        </p>
+    </warning>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
