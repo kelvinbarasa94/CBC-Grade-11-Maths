@@ -200,5 +200,675 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+
     
+    <p>
+        The <term>domain of a function</term> is the set of all possible input values that can be substituted into a function without making the function undefined.
+    </p>
+
+    <p>
+        In simple terms, the domain tells us all the values of <m>x</m> that a function can accept.
+    </p>
+
+    <p>
+        For example, consider the function:
+    </p>
+
+    <p>
+        <me>
+            f(x)=2x
+        </me>
+    </p>
+
+    <p>
+        Since any real number can be multiplied by <m>2</m>, the domain of this function is all real numbers.
+    </p>
+
+    <p>
+        <me>
+            \text{Domain} = \mathbb{R} = (-\infty,\infty)
+        </me>
+    </p>
+
+    <paragraphs>
+
+        <title>Rules for Finding the Domain of a Function</title>
+
+        <p>
+            The following rules are commonly used when finding the domain of functions:
+        </p>
+
+        <p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        The domain of a polynomial function is all real numbers.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        For a square root function, the expression inside the root must be greater than or equal to zero.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        The domain of an exponential function is all real numbers.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        For a logarithmic function, the expression inside the logarithm must be greater than zero.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        For a rational function, the denominator must never be equal to zero.
+                    </p>
+                </li>
+            </ol>
+        </p>
+
+    </paragraphs>
+
+    <figure xml:id="fig-domain-graphs">
+
+        <caption>Graphs illustrating how to determine the domain of a function.</caption>
+
+        <image xml:id="tikz-domain-graphs" width="90%">
+
+            <shortdescription>
+                Two graphs used to determine domains. The first graph is a parabola with domain all real numbers. The second graph is a square root graph beginning at x equals negative two.
+            </shortdescription>
+
+            <latex-image>
+                \begin{tikzpicture}[scale=0.9]
+
+                    % ================= LEFT GRAPH ===================
+                    \begin{scope}[shift={(-5,0)}]
+
+                        % Axes
+                        \draw[-&gt;, thick] (-3.5,0) -- (3.5,0) node[below] {$x$};
+                        \draw[-&gt;, thick] (0,-1) -- (0,5) node[left] {$y$};
+
+                        % Graph
+                        \draw[blue, thick, domain=-2.2:2.2, samples=100]
+                        plot (\x, {\x*\x});
+
+                        % Labels
+                        \node at (0,4.5) {\small $y=x^2$};
+
+                        \node[align=left, text width=4cm, font=\small]
+                        at (0,-2)
+                        {Find the domain of the graph.\\
+                        Domain: $(-\infty,\infty)$};
+
+                    \end{scope}
+
+                    % ================= RIGHT GRAPH ===================
+                    \begin{scope}[shift={(5,0)}]
+
+                        % Axes
+                        \draw[-&gt;, thick] (-4,0) -- (4,0) node[below] {$x$};
+                        \draw[-&gt;, thick] (0,-1) -- (0,4) node[left] {$y$};
+
+                        % Graph
+                        \draw[red, thick, domain=-2:4, samples=100]
+                        plot (\x, {sqrt(\x+2)});
+
+                        % Endpoint
+                        \filldraw[black] (-2,0) circle (2pt);
+
+                        % Labels
+                        \node at (1.5,3.2) {\small $y=\sqrt{x+2}$};
+
+                        \node[align=left, text width=4.5cm, font=\small]
+                        at (0,-2)
+                        {Find the domain of the graph.\\
+                        Domain: $[-2,\infty)$};
+
+                    \end{scope}
+
+                \end{tikzpicture}
+            </latex-image>
+
+        </image>
+
+    </figure>
+
+    <paragraphs>
+
+        <title>How to Find the Domain of a Function</title>
+
+        <p>
+            To find the domain of a function, identify values of <m>x</m> that would make the function undefined and exclude them.
+        </p>
+
+        <p>
+            Different types of functions have different restrictions. For example:
+        </p>
+
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        Square roots cannot contain negative numbers.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Denominators cannot be zero.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Logarithms must contain positive numbers only.
+                    </p>
+                </li>
+            </ul>
+        </p>
+
+    </paragraphs>
+    <exploration>
+
+        <title>Domain of a Function</title>
+
+        <interactive
+            xml:id="interactive-domain-explorer"
+            platform="jsxgraph"
+            width="90%"
+            aspect="16:9"
+            source="jsxgraph/domain-function.js">
+
+            <slate
+                xml:id="jsxgraph-domain-explorer-board"
+                surface="jsxboard"
+                aspect="16:9"/>
+
+            <!-- <interactive xml:id="interactive-even-odd" platform="jsxgraph" width="90%" aspect="1:1" source="jsxgraph/even-odd-functions.js">
+            <slate xml:id="jsxgraph-even-odd" surface="jsxboard" aspect="1:1"/> -->
+
+            <instructions>
+
+                <p>
+
+                    <ul>
+
+                        <li>
+
+                            <p>
+                                Click the <alert>New Random Function</alert> button to generate different types of functions.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                Observe the <term>green shaded region</term>. The shaded region represents the <term>domain</term> of the function.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                The domain of a function is the set of all values of <m>x</m> for which the function is defined.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                Notice how different functions have different restrictions on their domains.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                For square root functions, the expression inside the square root must be greater than or equal to zero.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                For rational functions, values that make the denominator equal to zero are excluded from the domain.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                For logarithmic functions, the expression inside the logarithm must always be positive.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                Observe the highlighted boundary points and asymptotes carefully. These help determine where the function starts, stops, or becomes undefined.
+                            </p>
+
+                        </li>
+
+                        <li>
+
+                            <p>
+                                Use the graph and shaded regions to predict the domain before reading the displayed answer.
+                            </p>
+
+                        </li>
+
+                    </ul>
+
+                </p>
+
+            </instructions>
+
+        </interactive>
+
+    </exploration>
+
+    <example>
+        <statement>
+            <p>
+                Find the domain of the polynomial function <m>f(x) = 3x^3 - 2x^2 + 7x - 1</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Polynomial functions do not contain any division by variables, square roots of variables, or logarithms. Because there are no mathematical operations here that could result in an undefined value, there are no restrictions on the input.
+            </p>
+            <p>
+                Therefore, the function is defined for all real values of <m>x</m>. 
+            </p>
+            <p>
+                The domain is all real numbers, which in interval notation is written as <m>(-\infty, \infty)</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Determine the domain of the rational function <m>g(x) = \frac{x + 5}{x^2 - 16}</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                For a rational function, the denominator cannot equal zero because division by zero is undefined. To find the values that must be excluded from the domain, we set the denominator equal to zero and solve for <m>x</m>:
+            </p>
+            <p>
+                <m>x^2 - 16 = 0</m>
+            </p>
+            <p>
+                <m>(x - 4)(x + 4) = 0</m>
+            </p>
+            <p>
+                This gives us two restricted values: <m>x = 4</m> and <m>x = -4</m>. 
+            </p>
+            <p>
+                The domain includes all real numbers except <m>4</m> and <m>-4</m>. In interval notation, this is <m>(-\infty, -4) \cup (-4, 4) \cup (4, \infty)</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Calculate the domain of the square root function <m>h(x) = \sqrt{3x - 15}</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                For a square root function to produce a real number, the expression inside the radical must be greater than or equal to zero. We set up an inequality to find the valid inputs:
+            </p>
+            <p>
+                <m>3x - 15 \geq 0</m>
+            </p>
+            <p>
+                <m>3x \geq 15</m>
+            </p>
+            <p>
+                <m>x \geq 5</m>
+            </p>
+            <p>
+                The function is only defined for values of <m>x</m> that are <m>5</m> or greater. In interval notation, the domain is <m>[5, \infty)</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Determine the domain of the function <m>p(x)</m> represented by the graph below.
+            </p>
+            <figure xml:id="fig-domain-bounded-graph">
+                <caption>Graph of a continuous bounded function</caption>
+                <image xml:id="tikz-domain-bounded-graph" width="70%">
+                    <shortdescription>A curve on a coordinate plane starting at an inclusive solid dot at x = -2 and ending at an exclusive open dot at x = 5.</shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.9]
+                            % Axes
+                            \draw[-&gt;, thick] (-4,0) -- (7,0) node[below] {$x$};
+                            \draw[-&gt;, thick] (0,-2) -- (0,4) node[left] {$y$};
+                            
+                            % Ticks
+                            \draw (-2, 0.1) -- (-2, -0.1) node[below left] {$-2$};
+                            \draw (5, 0.1) -- (5, -0.1) node[below right] {$5$};
+                            
+                            % The curve
+                            \draw[very thick, blue] (-2,1) .. controls (0,4) and (3,-1) .. (5,2);
+                            
+                            % Endpoints
+                            \filldraw[blue] (-2,1) circle (2.5pt); % Solid dot
+                            \filldraw[fill=white, draw=blue, thick] (5,2) circle (2.5pt); % Open dot
+                            
+                            % Dashed reference lines
+                            \draw[dashed, gray] (-2,0) -- (-2,1);
+                            \draw[dashed, gray] (5,0) -- (5,2);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+        </statement>
+        <solution>
+            <p>
+                To find the domain from a graph, we look at the horizontal spread of the curve along the <m>x</m>-axis. 
+            </p>
+            <p>
+                The graph begins on the left at <m>x = -2</m>. The solid, filled-in dot indicates that <m>-2</m> is included in the domain. The curve continues uninterrupted until it reaches <m>x = 5</m> on the right. The open, unfilled dot at this coordinate means that <m>5</m> is a boundary but is not actually included in the domain.
+            </p>
+            <p>
+                Therefore, the domain consists of all <m>x</m>-values from <m>-2</m> up to, but not including, <m>5</m>. In interval notation, this is written as <m>[-2, 5)</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Find the domain of the rational function <m>q(x)</m> plotted in the graph below.
+            </p>
+            <figure xml:id="fig-domain-asymptote-graph">
+                <caption>Graph of a rational function with a vertical asymptote</caption>
+                <image xml:id="tikz-domain-asymptote-graph" width="70%">
+                    <shortdescription>A rational function graphed in two separate pieces, divided by a vertical dashed line indicating an asymptote at x = 1.</shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.9]
+                            % Axes
+                            \draw[-&gt;, thick] (-4,0) -- (6,0) node[below] {$x$};
+                            \draw[-&gt;, thick] (0,-3) -- (0,5) node[left] {$y$};
+                            
+                            % Vertical Asymptote
+                            \draw[dashed, very thick, red] (1,-3) -- (1,5) node[above right] {$x=1$};
+                            \draw (1, 0.1) -- (1, -0.1) node[below right, text=black] {$1$};
+                            
+                            % The curves
+                            \draw[very thick, purple, domain=-3.5:0.7, samples=50] plot (\x, {1/(\x-1) + 2});
+                            \draw[very thick, purple, domain=1.3:5.5, samples=50] plot (\x, {1/(\x-1) + 2});
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+        </statement>
+        <solution>
+            <p>
+                By looking at the arrows on the far left and far right of the graph, we can assume the function extends infinitely toward <m>-\infty</m> and <m>\infty</m> along the <m>x</m>-axis. 
+            </p>
+            <p>
+                However, there is a clear separation in the graph at <m>x = 1</m>. The red dashed line represents a vertical asymptote. As the graph approaches <m>x = 1</m> from either side, the <m>y</m>-values shoot off towards infinity or negative infinity, but the curve never actually touches or crosses the line <m>x = 1</m>. This means the function is completely undefined at this specific input.
+            </p>
+            <p>
+                Because the graph is defined for all <m>x</m>-values except exactly <m>1</m>, the domain is all real numbers except <m>1</m>. In interval notation, this is <m>(-\infty, 1) \cup (1, \infty)</m>.
+            </p>
+        </solution>
+    </example>
+
+        <exercises xml:id="exercise-domain-function">
+
+            <exercise>
+
+                <statement>
+
+                    <p>
+                        Find the domain of each of the following functions.
+                    </p>
+
+                    <p>
+                        <ol marker="1." cols="2">
+
+                            <li>
+                                <p>
+                                    <m>f(x)=x^3+2x-1</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>g(x)=\sqrt{x+7}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>h(x)=\dfrac{1}{x+5}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>p(x)=\sqrt{3x-9}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>q(x)=\ln(x-2)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>r(x)=\dfrac{x+1}{x^2-9}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>s(x)=5^x</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>t(x)=\sqrt{8-2x}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>u(x)=\dfrac{3}{x-1}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>v(x)=\sqrt{x^2-16}</m>
+                                </p>
+                            </li>
+
+                        </ol>
+                    </p>
+
+                </statement>
+
+                <answer>
+
+                    <p>
+
+                        <ol marker="1." cols="2">
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>[-7,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,-5)\cup(-5,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>[3,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(2,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,-3)\cup(-3,3)\cup(3,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,4]</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,1)\cup(1,\infty)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(-\infty,-4]\cup[4,\infty)</m>
+                                </p>
+                            </li>
+
+                        </ol>
+
+                    </p>
+
+                </answer>
+
+            </exercise>
+            <exercise>
+        <statement>
+            <p>Calculate the domain of <m>g(x) = \sqrt{x + 9}</m>.</p>
+        </statement>
+        <answer>
+            <p><m>[-9, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Find the domain of <m>h(x) = \frac{x}{x - 7}</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(-\infty, 7) \cup (7, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Determine the domain of <m>j(x) = \log_2(5x - 15)</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(3, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Calculate the domain of <m>k(x) = |3x + 4|</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(-\infty, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Find the domain of <m>m(x) = \frac{x + 2}{x^2 - 36}</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(-\infty, -6) \cup (-6, 6) \cup (6, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Determine the domain of <m>n(x) = e^{4x} + 2</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(-\infty, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Calculate the domain of <m>p(x) = \sqrt{10 - x}</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(-\infty, 10]</m></p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Find the domain of <m>q(x) = \tan(x)</m>.</p>
+        </statement>
+        <answer>
+            <p><m>\mathbb{R} - (2n + 1)\frac{\pi}{2}</m>, where <m>n</m> is any integer.</p>
+        </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>Determine the domain of <m>r(x) = \frac{1}{\sqrt{2x - 8}}</m>.</p>
+        </statement>
+        <answer>
+            <p><m>(4, \infty)</m></p>
+        </answer>
+    </exercise>
+
+    </exercises>
 </section>
