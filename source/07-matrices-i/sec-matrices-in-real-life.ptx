@@ -43,36 +43,285 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        20 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        Provide learners with an extended problem-solving experience that allows them to explore the use of matrices in real life situations. This Learner Experience include matrix-vector multiplication, matrix-matrix multiplication, matrix subtraction, and the inverse of a matrix, bringing together much of the sub-strand.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        This Learner Experience has many components. If Learners are struggling with one area, guide them through it, but try to let them discover the connections between the different components on their own.
+                    </p>
+                    <p>
+                        There is an optional interactive component to this Learner experience. If you do not have access to technology, you can still use the activity, but you may want to guide learners through the calculations for <m>A^n</m> by hand, and ask them to look for patterns in the entries of <m>A^n</m>. 
+                    </p>
+                </li>
+                <li>
+                    <title>Extension</title>
+                    <p>
+                        If students are confident with the material, you can work through the proof that <m>\mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots = (I-A)^{-1}\mathbf{x}_0</m>, and explore its connection to geometric sequences in more depth. (For example, why can't we have a fraction with a matrix on the denominator?). For details, see <url href="https://www.polyu.edu.hk/ama/profile/hwlee/AMA1007/supplementary11.pdf">this pdf</url>, or <url href="https://en.wikipedia.org/wiki/Neumann_series">this Wikipedia page</url>.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                The Kenyan Ministry of Health needs your help to model an outbreak of tuberculosis (TB) in Nairobi and Mombasa. They have determined that, if 100 people in Nairobi are infected with TB, they will infect 50 more people in Nairobi. Additionally, 30% of them will travel to Mombasa, producing 30 additional infections. 
+            </p>
+            <p>
+                If 100 people in Mombasa are infected, they will infect 90 more people in Mombasa, and 10 will travel to Nairobi to produce 10 additional infections.
+            </p>
+            <p>
+                Initial reporting indicates that there are 200 people currently infected in Nairobi and 300 in Mombasa. 
+            </p>
+            <p>
+                The Ministry wants your help to determine how many people will be infected next, and whether this outbreak will die out. 
+            </p>
+            <paragraphs>
+                <title>Exploring the Initial Outbreak</title>
+            <p>
+                <ol marker="(a)">
+                <li>
+                    <p>
+                        Let's use matrices to help answer these questions. We'll define <m>\mathbf{x}_0 = \begin{bmatrix}N_0 \\ M_0\end{bmatrix}</m> as a vector the initial cases of tuberculosis in Nairobi <m>(N_0)</m> and Mombasa <m>(M_0)</m>.
+                    </p>
+                    <p>
+                        Can you write down <m>\mathbf{x}_0</m>, using the previous information?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <m>\mathbf{x}_0 = \begin{bmatrix}200 \\ 300\end{bmatrix}</m> 
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        Try to find <m>\mathbf{x}_1</m>, the new cases created by the initial infections. 
+                    </p>
+                    <solution component="lesson-plan">
+                        <p> First looking at Nairobi, which receives infections from both Nairobi and Mombasa:
+                            <md>
+                                <mrow> N_1 \amp = \frac{50}{100}N_0 + \frac{10}{100}M_0 </mrow>
+                                <mrow> \amp = 0.5\times 200 + 0.1\times 300 </mrow>
+                                <mrow> \amp = 130 </mrow>
+                            </md>
+                            Now Mombasa:
+                            <md>
+                                <mrow> M_1 \amp = \frac{90}{100}M_0 + \frac{30}{100}N_0 </mrow>
+                                <mrow> \amp = 0.9\times 300 + 0.3\times 200 </mrow>
+                                <mrow> \amp = 330 </mrow>
+                            </md>
+                            Thus <m>\mathbf{x}_1 = \begin{bmatrix}130 \\ 330\end{bmatrix}</m>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Do not worry if learners are not using matrix multiplication yet. 
+                        </p>
+                        <p>
+                            Make sure learners get the direction correct: the new number of Nairobi cases from Mombasa infections should be 10% of the Mombasa cases, not 30% (the percentage of Nairobi cases that travel to Mombasa).
+                        </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        Let's define the matrix <m>A = \begin{bmatrix}0.5 &amp; 0.1 \\ 0.3 &amp; 0.9\end{bmatrix}</m>. Compute the product <m>A\mathbf{x}_0</m>. How does this compare to your answer for <m>\mathbf{x}_1</m>?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <md>
+                                <mrow> A\mathbf{x}_0 \amp = \begin{bmatrix}0.5 &amp; 0.1 \\ 0.3 &amp; 0.9\end{bmatrix} \begin{bmatrix}200 \\ 300\end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix}0.5 \times 200 + 0.1 \times 300 \\ 0.9 \times 300 + 0.3 \times 200 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix}130 \\ 330\end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Guide learners towards the comparison between their method of calculating <m>N_0</m> by hand <m>\left(0.5\times 200 + 0.1\times 300\right)</m> with the first row of the matrix product.
+                        </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        Could you explain why <m>A\mathbf{x}_0 = \mathbf{x}_1</m>?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            The columns of <m>A</m> represent the average new infections in either city from one infected person in either city. The first column says that 1 person will (on average) infect 0.5 people in Nairobi and 0.3 people in Mombasa.
+                        </p>
+                        <p>
+                            Thus multiplying <m>A</m> by <m>\mathbf{x}_0</m> gives the total new infections in each city from the initial infections.
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        How should we find the next round of infections <m>\mathbf{x}_2</m>?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <m>\mathbf{x}_2 = A \mathbf{x}_1 = A^2 \mathbf{x}_0</m>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Guide learners to a formula with <m>\mathbf{x}_0</m> if they only recognise <m>\mathbf{x}_2 = A\mathbf{x}_1</m>
+                        </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        Find <m>A^2</m> (which is <m>A\times A</m>), and use it to find <m>\mathbf{x}_2</m>, the number of new infections in the second round.
+                    </p>
+                <solution component="lesson-plan">
+                    <p> Learners should use the formula for matrix multiplication to find <m>A^2</m>. They should get:
+                        <md>
+                            <mrow> A^2 \amp = \begin{bmatrix}0.26 &amp; 0.14 \\ 0.42 &amp; 0.84\end{bmatrix} </mrow>
+                        </md>
+                        Thus
+                        <md>
+                            <mrow> \mathbf{x}_2 \amp = A^2\mathbf{x}_0 </mrow>
+                            <mrow> \amp = \begin{bmatrix}0.26 &amp; 0.14 \\ 0.42 &amp; 0.84\end{bmatrix}\begin{bmatrix}200 \\ 300\end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix}82 \\ 306\end{bmatrix} </mrow>
+                        </md>
+                    </p>
+                </solution>
+                </li>
+            </ol>
+                </p>
+            </paragraphs>
+        <paragraphs>
+            <title>Looking at the Long Term</title>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            What do you think will happen to the number of infections in each city as time goes on? What might <m>A^10 \mathbf{x}_10</m> look like?
+                        </p>
+                        <note component="lesson-plan">
+                            <p>
+                                Encourage learners to share different ideas. You might ask them to look at how the number of infections in Nairobi has changed so far (200 to 130 to 82), as well as the number of infections in Mombasa (300 to 330 to 306).
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            We can use technology to find <m>A^{10}</m>. Press the <c>Evaluate (Sage)</c> button to find <m>A^{10}</m>. 
+                            <sage>
+                            <input>
+                                A = matrix([[0.5, 0.1], [0.3, 0.9]])
+                                A^10
+                            </input>
+                            <output>
+                                [0.122460937500000 0.077539062500000]
+                                [0.185156250000000 0.877539062500000]
+                            </output>
+                        </sage>
+                            Are the entries big? Can you find <m>\mathbf{x}_{10}</m> from this?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                You should get <md>A^{10} = \begin{bmatrix} 0.122460937500000 \amp 0.077539062500000 \\ 0.185156250000000 \amp 0.877539062500000 \end{bmatrix}</md>Hence <m>\mathbf{x}_{10} = \begin{bmatrix} 38.46 \\ 281.54 \end{bmatrix}</m>, which we round to <m>\mathbf{x}_{10} = \begin{bmatrix} 38 \\ 282 \end{bmatrix}</m> (to avoid decimal people).
+                            </p>
+                        </solution>
+                        <note component="lesson-plan">
+                            <p>
+                                If you cannot use the interactive block, get learners to calculate <m>A^3</m> and <m>A^4</m> by hand and ask them to look for the pattern between <m>A,\,A^2\,A^3, \,A^4</m>
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            What happens if you increase the exponent? What does this mean in terms of the TB outbreak?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                As the exponent increases, the entries of <m>A^n</m> get smaller and smaller. This means that the number of new infections will decrease over time, and the outbreak will eventually die out.
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            The Ministry of Health wants to know the total number of infections expected in both Nairobi and Mombasa. Let's called this vector <m>\mathbf{x}_T</m>. This is the sum of all the stages of infection:
+                            <md>
+                                \mathbf{x}_T = \mathbf{x}_0 + \mathbf{x}_1 + \mathbf{x}_2 + \ldots
+                            </md>
+                            Can you write an expression for <m>\mathbf{x}_T</m> using only <m>\mathbf{x}_0</m> and <m>A</m>? Your previous answers might help
+                        </p>
+                        <solution component="lesson-plan">
+                            <p> Using the identity <m>\mathbf{x}_n = A^n\mathbf{x}_0</m>
+                                <md>
+                                    <mrow>\mathbf{x}_T \amp = \mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            Does this remind you of anything from previous topics? Is there a formula that gives us the sum in a similar situation?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                This looks like an infinite geometric sequence from <xref ref="sec-sum-of-geometric-sequences-ii"/>, with initial term <m>\mathbf{x}_0</m> and common ratio <m>A</m>.
+                            </p>
+                        </solution>
+                        <note component="lesson-plan">
+                            <p>
+                                Try to guide learners to this connection without giving it away.
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            In fact, we can adapt that formula! Under certain conditions<aside><title>Conditions for Convergence</title><p>These conditions are a little technical, but they are the equivalent of <m>-1 &lt; r &lt; 1</m> for GPs. Look up the <q>spectral radius</q> if you're curious! Don't worry, our specific <m>A</m> meets this condition.</p></aside> we have:
+                            <md>
+                                \mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots = (I-A)^{-1}\mathbf{x}_0
+                            </md>
+                            Here, <m>I = \begin{bmatrix}1 \amp 0 \\ 0 \amp 1\end{bmatrix}</m> is the identity matrix, and <m>(I-A)^{-1}</m> is the inverse of the matrix <m>(I-A)</m>.
+                        </p>
+                        <p>
+                            Can you compute <m>I-A</m>, find its inverse, and thus determine <m>\mathbf{x}_T</m>?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                We have <m>I-A = \begin{bmatrix}0.5 &amp; -0.1 \\ -0.3 &amp; 0.1\end{bmatrix}</m>. Using the formula for an inverse of a 2 by 2 matrix, <m>(I-A)^{-1} = \begin{bmatrix}5 &amp; 5 \\ 15 &amp; 25\end{bmatrix}</m>. Thus
+                                <md>
+                                    <mrow>\mathbf{x}_T \amp = (I-A)^{-1}\mathbf{x}_0</mrow>
+                                    <mrow> \amp = \begin{bmatrix}5 &amp; 5 \\ 15 &amp; 25\end{bmatrix}\begin{bmatrix}200 \\ 300\end{bmatrix}</mrow>
+                                    <mrow> \amp = \begin{bmatrix}2500 \\ 10500\end{bmatrix} </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            How many total cases of TB will there be in Nairobi and Mombasa?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The total number of cases in Nairobi will be 2500, and the total number of cases in Mombasa will be 10500.
+                            </p>
+                        </solution>
+                    </li>
+                </ol>
+            </p>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
