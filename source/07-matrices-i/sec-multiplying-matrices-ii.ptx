@@ -210,13 +210,13 @@
             </li>
         </ul>
         <p>
-            Suppose that <m>A</m> is a <m>2 \times 3</m> matrix, and <m>B</m> is a <m>3 \times 3</m> matrix, with <me>A = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \amp \color{blue}{c}\\ \color{red}{d} \amp \color{red}{e} \amp \color{red}{f}\end{bmatrix}, B = \begin{bmatrix}\color{teal}{r} \amp \color{orange}{u} \amp \color{purple}{x}\\ \color{teal}{s} \amp \color{orange}{v} \amp \color{purple}{y}\\ \color{teal}{t} \amp \color{orange}{w} \amp \color{purple}{z}\end{bmatrix}</me>.
+            Suppose that <m>A</m> is a <m>4 \times 3</m> matrix, and <m>B</m> is a <m>3 \times 2</m> matrix, with <me>A = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \amp \color{blue}{c}\\ \color{red}{d} \amp \color{red}{e} \amp \color{red}{f}\\ \color{green}{g} \amp \color{green}{h} \amp \color{green}{i}\\ \color{purple}{j} \amp \color{purple}{k} \amp \color{purple}{l}\end{bmatrix}, B = \begin{bmatrix}\color{teal}{r} \amp \color{orange}{u}\\ \color{teal}{s} \amp \color{orange}{v}\\ \color{teal}{t} \amp \color{orange}{w}\end{bmatrix}</me>.
         </p>
         <ul>
             <li>
                 <p>
-                    Then the product <m>AB</m> is defined, and is a <m>2 \times 3</m> matrix given by: <me>
-                        AB = \begin{bmatrix} \color{blue}{a}\color{teal}{r} \,\color{black}{+}\, \color{blue}{b}\color{teal}{s} \,\color{black}{+}\, \color{blue}{c}\color{teal}{t} \amp \color{blue}{a}\color{orange}{u} \,\color{black}{+}\, \color{blue}{b}\color{orange}{v} \,\color{black}{+}\, \color{blue}{c}\color{orange}{w} \amp \color{blue}{a}\color{purple}{x} \,\color{black}{+}\, \color{blue}{b}\color{purple}{y} \,\color{black}{+}\, \color{blue}{c}\color{purple}{z} \\ \color{red}{d}\color{teal}{r} \,\color{black}{+}\, \color{red}{e}\color{teal}{s} \,\color{black}{+}\, \color{red}{f}\color{teal}{t} \amp \color{red}{d}\color{orange}{u} \,\color{black}{+}\, \color{red}{e}\color{orange}{v} \,\color{black}{+}\, \color{red}{f}\color{orange}{w} \amp \color{red}{d}\color{purple}{x} \,\color{black}{+}\, \color{red}{e}\color{purple}{y} \,\color{black}{+}\, \color{red}{f}\color{purple}{z} \end{bmatrix}
+                    Then the product <m>AB</m> is defined, and is a <m>4 \times 2</m> matrix given by: <me>
+                        AB = \begin{bmatrix} \color{blue}{a}\color{teal}{r} \,\color{black}{+}\, \color{blue}{b}\color{teal}{s} \,\color{black}{+}\, \color{blue}{c}\color{teal}{t} \amp \color{blue}{a}\color{orange}{u} \,\color{black}{+}\, \color{blue}{b}\color{orange}{v} \,\color{black}{+}\, \color{blue}{c}\color{orange}{w} \\ \color{red}{d}\color{teal}{r} \,\color{black}{+}\, \color{red}{e}\color{teal}{s} \,\color{black}{+}\, \color{red}{f}\color{teal}{t} \amp \color{red}{d}\color{orange}{u} \,\color{black}{+}\, \color{red}{e}\color{orange}{v} \,\color{black}{+}\, \color{red}{f}\color{orange}{w} \\ \color{green}{g}\color{teal}{r} \,\color{black}{+}\, \color{green}{h}\color{teal}{s} \,\color{black}{+}\, \color{green}{i}\color{teal}{t} \amp \color{green}{g}\color{orange}{u} \,\color{black}{+}\, \color{green}{h}\color{orange}{v} \,\color{black}{+}\, \color{green}{i}\color{orange}{w} \\ \color{purple}{j}\color{teal}{r} \,\color{black}{+}\, \color{purple}{k}\color{teal}{s} \,\color{black}{+}\, \color{purple}{l}\color{teal}{t} \amp \color{purple}{j}\color{orange}{u} \,\color{black}{+}\, \color{purple}{k}\color{orange}{v} \,\color{black}{+}\, \color{purple}{l}\color{orange}{w} \end{bmatrix}
                     </me>
                 </p>
             </li>
@@ -237,13 +237,60 @@
             </li>
             <li>
                 <p>
-                    The dimension of the product is given by the <term>outer dimensions</term>: <m>A</m> has 2 rows and <m>B</m> has 3 columns, so <m>AB</m> has 2 rows and 3 columns.
+                    The dimension of the product is given by the <term>outer dimensions</term>: <m>A</m> has 4 rows and <m>B</m> has 2 columns, so <m>AB</m> has 4 rows and 2 columns.
                 </p>
             </li>
         </ul>
     </insight>
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <p>
+        A smaller example: suppose that <m>C</m> is a <m>2 \times 2</m> matrix, and <m>D</m> is a <m>2 \times 2</m> matrix, with <me>C = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b}\\ \color{red}{c} \amp \color{red}{d}\end{bmatrix}, D = \begin{bmatrix}\color{teal}{p} \amp \color{orange}{q}\\ \color{teal}{r} \amp \color{orange}{s}\end{bmatrix}</me>.
+    </p>
+    <ul>
+    <li>
+        <p>
+            Then the product <m>CD</m> is defined, and is a <m>2 \times 2</m> matrix given by: <me>
+                CD = \begin{bmatrix} \color{blue}{a}\color{teal}{p} \,\color{black}{+}\, \color{blue}{b}\color{teal}{r} \amp \color{blue}{a}\color{orange}{q} \,\color{black}{+}\, \color{blue}{b}\color{orange}{s} \\ \color{red}{c}\color{teal}{p} \,\color{black}{+}\, \color{red}{d}\color{teal}{r} \amp \color{red}{c}\color{orange}{q} \,\color{black}{+}\, \color{red}{d}\color{orange}{s} \end{bmatrix}
+            </me>
+        </p>
+    </li>
+    <li>
+        <p>
+            Each entry of <m>CD</m> is a <em>row</em> of <m>C</m> multiplied by a <em>column</em> of <m>D</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            The product is defined since the inner dimensions match (both are 2), and the result has the <term>outer dimensions</term> <m>2 \times 2</m>.
+        </p>
+    </li>
+    </ul>
+
+    <note>
+        <p>
+            The procedure for matrix multiplication can be tricky to remember. The trick outlined in <xref ref="matrix-multiplication-trick"/> can help you:
+            <figure xml:id="matrix-multiplication-trick" component="html">
+                <caption>A visual guide to matrix multiplication</caption>
+                <image source="images/matrix_mult.gif">
+                </image>
+                <!-- .gif generated by Ben Lloyd-Hurwitz with the help of Claude -->
+            </figure>
+            <figure xml:id="matrix-multiplication-trick" component="print">
+                <caption>A visual guide to matrix multiplication</caption>
+                <image source="images/matrix_mult_snapshot.png">
+                </image>
+            </figure>
+        </p>
+        <p>
+            By moving the second matrix <m>B</m> vertically upwards, we see that each entry in the product <m>AB</m> is a row of <m>A</m> multiplied by a column of <m>B</m>.
+        </p>
+        <p>
+            This also helps you check the inner dimensions. You should have a square in the top left corner, where the number of columns of <m>A</m> matches the number of rows of <m>B</m>. If you don't have this square, the product is not defined.
+        </p>
+        <p>
+            The size of <m>AB</m> is also clear: the number of rows of <m>A</m> and the number of columns of <m>B</m>.
+        </p>
+    </note>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
