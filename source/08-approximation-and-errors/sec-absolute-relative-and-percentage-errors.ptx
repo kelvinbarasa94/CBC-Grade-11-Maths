@@ -69,11 +69,13 @@
 
     <activity>
         <p>
-            <term>Work in Groups to:</term>
+            Your school locker serves as both your writing surface and your storage space. Because you use it every day, we will use it to test for measurement precision.
         </p>
         <p>
-            Use a <m>15</m> cm ruler to measure the length of the locker repeated times and record the observation in the table below.
+            <term>Work in Groups to:</term>
+            Clear the surface of one student's locker. Use a <m>15</m> cm ruler to measure the total length of the locker and record the observation in the table below.
         </p>
+        
         <tabular left="medium" right="medium" top="medium" bottom="medium">
             <row header="yes">
                 <cell>Attempt</cell>
@@ -99,43 +101,43 @@
             Find the difference between the measurement attempts?
         </p>
         <p>
-            Mr Zachariah Mbasu used a <m>90</m> cm ruler to measure the length of the locker and found out that the length is exactly the same as your second attempt.
+            Mr Zachariah Mbasu used a <m>90</m> cm ruler to measure the working length of the locker and found out that the length is exactly the same as your second attempt.
         </p>
         <p>
             <ol marker="(a)">
                 <li>
                     <p>
-                        What is the exact length of the locker?
+                        What is your group's working length of the locker?
                     </p>
                 </li>
                 <li>
                     <p>
-                        What is the difference between your second attempt and the exact length of the locker, why?
+                        What is the difference between your second attempt and the working length of the locker, why?
                     </p>
                 </li>
                 <li>
                     <p>
-                        What is the difference between your first attempt and the exact length of the locker?
+                        What is the difference between your first attempt and the working length of the locker?
                     </p>
                 </li>
                 <li>
                     <p>
-                         What is the difference between your third attempt and the exact length of the locker?
+                         What is the difference between your third attempt and the working  length of the locker?
                     </p>
                 </li>
                 <li>
                     <p>
-                       What is the quotient of the difference between your first attempt and the exact length of the locker and the exact length of the locker? 
+                       Divide the difference between your first attempt and the working length of the locker and the working length of the locker? 
                     </p>
                 </li>
                 <li>
                     <p>
-                         What is the quotient of the difference between your third attempt and the exact length of the locker and the exact length of the locker?
+                         Divide the difference between your third attempt and the working length of the locker and the working length of the locker?
                     </p>
                 </li>
                 <li>
                     <p>
-                        Find the percentages of these quotients in (e) and (f). Which one is greater and why?
+                        Find the percentages of these Divisions in (e) and (f). Which one is greater and why?
                     </p>
                 </li>
             </ol>
@@ -179,35 +181,32 @@
     </axiom> -->
 
     <insight>
-        <p>
-            <term>An absolute error:</term> is the difference between the measured value and the actual value.
-        </p>
-        <p>
-            <md>
-                <mrow> \text{Absolute error} = \amp \; \text{measured value} - \text{actual value} </mrow>
-            </md>
-            
-        </p>
-        <p>
-            <term>Relative error:</term> is the quotient of the absolute error and the actual value.
-        </p>
-        <p>
-            <md>
-                <mrow>\text{Relative error} = \amp \; \text{absolute error} \div \text{actual value} </mrow>
-            </md>
-            
-        </p>
-        <p>
-            <term>Percentage error:</term> is the quotient of the absolute error and the actual value multiplied by <m>100 \%</m>.
-        </p>
-        <p>
-            <md>
-                <mrow>\text{Percentage error} = \amp \; \frac{\text{absolute error}}{\text{actual value}} \; \times 100 \% </mrow>
-                <mrow> = \amp \; \text{Relative erroe} \times 100 \% </mrow>
-            </md>
-            
-        </p>
-    </insight>
+    <p>
+        <term>Absolute error</term> is the difference between the measured value and the working value.
+    </p>
+    <p>
+        <md>
+            <mrow>\text{Absolute error} \amp = \text{measured value} - \text{working value}</mrow>
+        </md>
+    </p>
+    <p>
+        <term>Relative error</term> is the absolute error divided by the working value.
+    </p>
+    <p>
+        <md>
+            <mrow>\text{Relative error} \amp = \text{absolute error} \div \text{working value}</mrow>
+        </md>
+    </p>
+    <p>
+        <term>Percentage error</term> is the relative error expressed as a percentage.
+    </p>
+    <p>
+        <md>
+            <mrow>\text{Percentage error} \amp = \frac{\text{absolute error}}{\text{working value}} \times 100\%</mrow>
+            <mrow>\amp = \text{Relative error} \times 100\%</mrow>
+        </md>
+    </p>
+</insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
