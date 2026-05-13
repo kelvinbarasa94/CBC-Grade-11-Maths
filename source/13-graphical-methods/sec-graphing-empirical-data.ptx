@@ -41,55 +41,121 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To interpret and analyze trends in real-world data represented graphically.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Provide the learners with the temperature graph. Guide them in identifying the independent and dependent variables. Ask probing questions about the rate of change at different intervals and what might cause the observed changes.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in groups</alert>
+            </p>
+            <p>
+                Grade <m>11</m> students were tasked with monitoring the temperature in their local town. 
+                They set up a digital thermometer at the school's weather station to record the ambient temperature every hour over a 24-hour period.
+            </p>
+            <p>
+                The data collected was plotted on a graph to show how the temperature changed throughout the day and night.
+            </p>
+            <image width="70%">
+                <latex-image label="temperature-graph">
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (0,0) grid (12,6);
+                        \draw[->] (0,0) -- (12.5,0) node[right] {Time (hours)};
+                        \draw[->] (0,0) -- (0,6.5) node[above] {Temp ($^\circ$C)};
+                        \foreach \x in {0,4,8,12,16,20,24}
+                            \draw (\x/2, 2pt) -- (\x/2, -2pt) node[below] {\x:00};
+                        \foreach \y in {0,10,20,30}
+                            \draw (2pt, \y/5) -- (-2pt, \y/5) node[left] {\y};
+                        
+                        \draw[blue, thick, smooth] plot coordinates {(0, 3) (2, 2.4) (4, 3.6) (6, 5) (8, 5.6) (10, 4.4) (12, 3.2)};
+                        \filldraw[blue] (0, 3) circle (1.5pt);
+                        \filldraw[blue] (2, 2.4) circle (1.5pt);
+                        \filldraw[blue] (4, 3.6) circle (1.5pt);
+                        \filldraw[blue] (6, 5) circle (1.5pt);
+                        \filldraw[blue] (8, 5.6) circle (1.5pt);
+                        \filldraw[blue] (10, 4.4) circle (1.5pt);
+                        \filldraw[blue] (12, 3.2) circle (1.5pt);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                Study the graph and answer the following questions:
+                <ol>
+                    <li>
+                        <p>What was the temperature at 00:00 and at 08:00?</p>
+                    </li>
+                    <li>
+                        <p>At what time was the maximum temperature recorded? What was this temperature?</p>
+                    </li>
+                    <li>
+                        <p>Between which two time intervals did the temperature decrease?</p>
+                    </li>
+                    <li>
+                        <p>Describe the overall trend of the temperature from 04:00 to 16:00.</p>
+                    </li>
+                    <li>
+                        <p>
+                            If the temperature at 14:00 was 5.2°C, how would this point affect the trend observed in the graph?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Explain the general trend of the temperature throughout the day and night.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Discuss possible reasons for the observed temperature changes, such as the time of day, weather conditions, or other environmental factors.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Share your findings with the class.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the process of graphing empirical data and identifying trends.
                 </p>
             </li>
             </dl>
@@ -99,44 +165,257 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Use the temperature activity to explain that real-world data (empirical data) often doesn't follow a simple straight line but can still show clear patterns or trends.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Graphing Essentials:</alert> Emphasize the importance of choosing a suitable scale, labeling axes correctly, and plotting points accurately. Discuss why some graphs use smooth curves while others use straight lines to connect points.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <term>Empirical data</term> is information gathered through direct observation, experiment, or experience rather than through theory or pure logic.
+        </p>
+        <p>
+            When graphing empirical data:
+            <ul>
+                <li>
+                    <p>
+                        The <term>independent variable</term> (the one we control or measure at set intervals, like time or diameter) is usually placed on the <term>horizontal axis</term> (x-axis).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The <term>dependent variable</term> (the one that changes in response, like temperature or age) is placed on the <term>vertical axis</term> (y-axis).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A <term>trend</term> is a general direction in which something is developing or changing. It can be <term>linear</term> (forming a straight line) or <term>non-linear</term> (curved, like quadratic or exponential).
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <image width="40%">
+            <latex-image label="graphical-empirical-data">
+                \begin{tikzpicture}
+                    \draw[help lines, color=gray!30, step=1] (0,0) grid (5,5);
+                    \draw[->] (0,0) -- (5.5,0) node[right] {Independent Variable};
+                    \draw[->] (0,0) -- (0,5.5) node[above] {Dependent Variable};
+                    \foreach \x in {0,1,2,3,4,5}
+                        \draw (\x/2, 2pt) -- (\x/2, -2pt) node[below] {\x};
+                    \foreach \y in {0,1,2,3,4,5}
+                        \draw (2pt, \y/2) -- (-2pt, \y/2) node[left] {\y};
+                    
+                    % Example of a linear trend
+                    \filldraw[red] (0.5, 1) circle (1.5pt);
+                    \filldraw[red] (1.0, 2) circle (1.5pt);
+                    \filldraw[red] (1.5, 3) circle (1.5pt);
+                    \filldraw[red] (2.0, 4) circle (1.5pt);
+                    \filldraw[red] (2.5, 5) circle (1.5pt);
+                    \draw[red, thick] (0.25, 0.75) -- (2.75, 5.25);
+                    
+                    % Example of a non-linear trend
+                    \filldraw[blue] (3.0, 1) circle (1.5pt);
+                    \filldraw[blue] (3.5, 1.8) circle (1.5pt);
+                    \filldraw[blue] (4.0, 3) circle (1.5pt);
+                    \filldraw[blue] (4.5, 4.8) circle (1.5pt);
+                    \filldraw[blue] (5.0, 7) circle (1.5pt);
+                    \draw[blue, thick] plot coordinates {(3.0, 1) (3.25, 1.4) (3.75, 2.4) (4.25, 3.6) (4.75, 5.8) (5.25, 8)};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                A forestry researcher measured the diameter and age of several trees in a forest to understand their growth patterns. The data is shown in the table below.
+            </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row>
+                        <cell>Diameter (inches)</cell>
+                        <cell>2</cell>
+                        <cell>4</cell>
+                        <cell>6</cell>
+                        <cell>8</cell>
+                        <cell>10</cell>
+                    </row>
+                    <row>
+                        <cell>Age (years)</cell>
+                        <cell>12</cell>
+                        <cell>25</cell>
+                        <cell>37</cell>
+                        <cell>50</cell>
+                        <cell>63</cell>
+                    </row>
+                </tabular>
+            <p>
+                <ol>
+                    <li><p>Identify the independent and dependent variables.</p></li>
+                    <li><p>Draw a graph to represent this data.</p></li>
+                    <li><p>Describe the relationship between the diameter of a tree and its age.</p></li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Independent variable: <term>Diameter</term> (x-axis); Dependent variable: <term>Age</term> (y-axis).
+                        </p>
+                    </li>
+                    <li>
+                        <image xml:id="img-tree-growth" width="50%">
+                            <latex-image label="tree-growth-graph">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (0,0) grid (6,7);
+                                    \draw[->] (0,0) -- (6.5,0) node[right] {Diameter (in)};
+                                    \draw[->] (0,0) -- (0,7.5) node[above] {Age (yr)};
+                                    \foreach \x in {2,4,6,8,10}
+                                        \draw (\x/2, 2pt) -- (\x/2, -2pt) node[below] {\x};
+                                    \foreach \y in {0,20,40,60}
+                                        \draw (2pt, \y/10) -- (-2pt, \y/10) node[left] {\y};
+                                    
+                                    \filldraw[red] (1, 1.2) circle (2pt);
+                                    \filldraw[red] (2, 2.5) circle (2pt);
+                                    \filldraw[red] (3, 3.7) circle (2pt);
+                                    \filldraw[red] (4, 5.0) circle (2pt);
+                                    \filldraw[red] (5, 6.3) circle (2pt);
+                                    \draw[red, thick, dashed] (0,0) -- (5.5, 6.93);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            The relationship is <term>linear</term> and shows a <term>positive trend</term>. As the diameter of the tree increases, its age also increases at a relatively constant rate.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The scatter plot below shows the relationship between the number of hours students spent studying for a mathematics exam and their final scores.
+            </p>
+            <image xml:id="img-scatter-study-ex" width="50%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (0,0) grid (5,5);
+                        \draw[->] (0,0) -- (5.5,0) node[right] {Hours};
+                        \draw[->] (0,0) -- (0,5.5) node[above] {Score (\%)};
+                        \foreach \x in {0,2,4,6,8,10}
+                            \draw (\x/2, 2pt) -- (\x/2, -2pt) node[below] {\x};
+                        \foreach \y in {0,20,40,60,80,100}
+                            \draw (2pt, \y/20) -- (-2pt, \y/20) node[left] {\y};
+                        
+                        \filldraw[blue] (0.5, 1.5) circle (1.5pt);
+                        \filldraw[blue] (1.0, 2.25) circle (1.5pt);
+                        \filldraw[blue] (1.5, 2.0) circle (1.5pt);
+                        \filldraw[blue] (2.0, 2.75) circle (1.5pt);
+                        \filldraw[blue] (2.5, 3.5) circle (1.5pt);
+                        \filldraw[blue] (3.0, 3.25) circle (1.5pt);
+                        \filldraw[blue] (3.5, 4.25) circle (1.5pt);
+                        \filldraw[blue] (4.0, 4.0) circle (1.5pt);
+                        \filldraw[blue] (4.5, 4.75) circle (1.5pt);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                <ol>
+                    <li><p>Does the data show a positive, negative, or no relationship?</p></li>
+                    <li><p>Based on the trend, what score would you expect a student who studied for 7 hours to achieve?</p></li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The data shows a <term>positive relationship</term> because the points generally move upwards from left to right.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For 7 hours of study (x = 3.5 on the graph), the points are clustered around the 80% mark (y = 4.0). 
+                            Therefore, we would expect a score of approximately 80%.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A car is purchased for <m>2,000,000</m> KES. The table below shows its value over the next <m>5</m> years.
+            </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row>
+                        <cell>Year</cell>
+                        <cell>0</cell>
+                        <cell>1</cell>
+                        <cell>2</cell>
+                        <cell>3</cell>
+                        <cell>4</cell>
+                        <cell>5</cell>
+                    </row>
+                    <row>
+                        <cell>Value (Millions KES)</cell>
+                        <cell>2.0</cell>
+                        <cell>1.6</cell>
+                        <cell>1.3</cell>
+                        <cell>1.0</cell>
+                        <cell>0.8</cell>
+                        <cell>0.6</cell>
+                    </row>
+                </tabular>
+            <p>
+                Describe the trend in the car's value and identify if the depreciation is linear.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            Trend: The value of the car decreases over time (negative trend).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Analysis:</alert> 
+                            The decrease in value each year is:
+                            <ul>
+                                <li>Year 0 to 1: 0.4 million</li>
+                                <li>Year 1 to 2: 0.3 million</li>
+                                <li>Year 2 to 3: 0.3 million</li>
+                                <li>Year 3 to 4: 0.2 million</li>
+                                <li>Year 4 to 5: 0.2 million</li>
+                            </ul>
+                            Since the value does not decrease by the same amount every year, the depreciation is <term>non-linear</term>.
+                        </p>
+                    </li>
+                </ul>
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -146,22 +425,69 @@
 
     <!-- Add STACK exercises if made -->
 
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    The following data shows the distance traveled by a cyclist (in km) over 5 hours.
+                </p>
+                    <tabular bottom="minor" top="minor" left="minor" right="minor">
+                        <row><cell>Time (h)</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row>
+                        <row><cell>Distance (km)</cell><cell>15</cell><cell>30</cell><cell>45</cell><cell>60</cell><cell>75</cell></row>
+                    </tabular>
+                <p>
+                    Draw a distance-time graph and state if the relationship is linear or non-linear.
+                </p>
+            </statement>
+            <answer>
+                <p>The relationship is <term>linear</term> because the distance increases by a constant amount (15 km) every hour.</p>
+            </answer>
+        </exercise>
 
-            </statement>   
-            <solution>
+        <exercise>
+            <statement>
+                <p>
+                    A science experiment measures the temperature of a cooling liquid over time.
+                </p>
+                <image width="40%">
+                    <latex-image label="cooling-graph">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (0,0) grid (5,5);
+                            \draw[->] (0,0) -- (5.5,0) node[right] {Time (min)};
+                            \draw[->] (0,0) -- (0,5.5) node[above] {Temp ($^\circ$C)};
+                            \draw[blue, thick, smooth, domain=0:5] plot (\x, {5*exp(-\x/2)});
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    Describe the trend in temperature and suggest what happens to the rate of cooling as time increases.
+                </p>
+            </statement>
+            <answer>
+                <p>There is a <term>negative trend</term>. The rate of cooling decreases as time increases (the graph becomes less steep).</p>
+            </answer>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    The table shows the number of new members who joined a school club over 4 months.
+                </p>
+                    <tabular bottom="minor" top="minor" left="minor" right="minor">
+                        <row><cell>Month</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell></row>
+                        <row><cell>New Members</cell><cell>5</cell><cell>10</cell><cell>20</cell><cell>40</cell></row>
+                    </tabular>
+                <p>
+                    Plot the data. What pattern do you notice in the number of new members joining each month?
+                </p>
+            </statement>
+            <answer>
+                <p>The number of new members doubles each month. This is an exponential pattern.</p>
+            </answer>
+        </exercise>
+    </exercises>
 
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -170,32 +496,28 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide pre-drawn axes with scales to help them focus on plotting points correctly. Use physical objects (like beads or blocks) to represent data points before plotting them on paper.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, focusing on choosing appropriate scales and accurately describing trends.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Analyze datasets with potential outliers. Discuss how outliers can affect the interpretation of a trend and whether they should be included or excluded in certain contexts.
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

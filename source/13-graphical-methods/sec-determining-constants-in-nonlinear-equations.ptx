@@ -41,55 +41,68 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    20 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To use the properties of a straight line (gradient and intercept) to find unknown values in a non-linear model.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Facilitate the "Cracking the Code" activity. Provide groups with "straightened" graphs and challenge them to find the original constants. Encourage them to verify their found values by testing a point from the original data.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in Groups: Cracking the Code</alert>
+            </p>
+            <p>
+                A group of engineers found that the relationship between the pressure <m>P</m> and volume <m>V</m> of a gas follows the law <m>PV^k = C</m>. They plotted a graph of <m>\lg P</m> against <m>\lg V</m> to "straighten" the data.
+            </p>
+            <p>
+                The resulting straight line passes through the points <m>(1, 2.3)</m> and <m>(2, 0.9)</m>.
+            </p>
+            <p>
+                <alert>What to do:</alert>
+                <ol>
+                    <li><p>Linearize the equation <m>PV^k = C</m> by taking logarithms on both sides.</p></li>
+                    <li><p>Identify which part of your linear equation corresponds to the gradient (<m>m</m>) and which corresponds to the y-intercept (<m>c</m>).</p></li>
+                    <li><p>Using the two points provided, calculate the gradient of the line. What is the value of <m>k</m>?</p></li>
+                    <li><p>Find the y-intercept of the line. Use it to calculate the value of the constant <m>C</m>.</p></li>
+                    <li><p>Write down the final non-linear equation relating <m>P</m> and <m>V</m>.</p></li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the procedure for calculating original constants from linear graph features.
                 </p>
             </li>
             </dl>
@@ -99,69 +112,198 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> In the activity, students learned that the gradient of the straight line is often equal to the power (or its negative) in the original law, and the intercept is the log of the original coefficient. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>The Mapping Rule:</alert> To find constants, always:
+                        <ul>
+                            <li>Calculate <m>m</m> from two points on the line.</li>
+                            <li>Calculate <m>c</m> by substituting one point into <m>Y = mX + c</m>.</li>
+                            <li>Equate <m>m</m> and <m>c</m> to their respective expressions in the linearized formula.</li>
+                        </ul>
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <insight>
+        <p>
+            Once a non-linear relationship has been converted to the linear form <m>Y = mX + c</m>, the original constants can be determined by mapping them to the gradient and y-intercept.
+        </p>
+        <p>
+            <alert>Common Mapping Scenarios:</alert>
+            <ul>
+                <li>
+                    <p>
+                        For <m>y = ax^n \implies \lg y = n\lg x + \lg a</m>:
+                        <me>n = \text{gradient}</me>
+                        <me>a = 10^{\text{intercept}}</me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For <m>y = ab^x \implies \lg y = (\lg b)x + \lg a</m>:
+                        <me>b = 10^{\text{gradient}}</me>
+                        <me>a = 10^{\text{intercept}}</me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For <m>y = ax^2 + b</m>:
+                        <me>a = \text{gradient}</me>
+                        <me>b = \text{intercept}</me>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                The variables <m>x</m> and <m>y</m> are related by the equation <m>y = kx^n</m>. When <m>\lg y</m> is plotted against <m>\lg x</m>, a straight line is obtained which passes through <m>(0.2, 0.7)</m> and <m>(0.5, 1.3)</m>. Find the values of <m>k</m> and <m>n</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Linearize: <m>\lg y = n\lg x + \lg k</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the gradient (<m>n</m>):
+                            <me>n = \frac{1.3 - 0.7}{0.5 - 0.2} = \frac{0.6}{0.3} = 2</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the y-intercept (<m>\lg k</m>):
+                            Substitute <m>n = 2</m> and the point <m>(0.2, 0.7)</m> into <m>Y = mX + c</m>:
+                            <me>0.7 = 2(0.2) + \lg k</me>
+                            <me>0.7 = 0.4 + \lg k</me>
+                            <me>\lg k = 0.3</me>
+                            <me>k = 10^{0.3} \approx 2</me>
+                        </p>
+                    </li>
+                </ol>
+                The values are <m>n = 2</m> and <m>k = 2</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                An experimental law is known to be <m>y = Ae^{bx}</m>. A graph of <m>\ln y</m> against <m>x</m> has a gradient of <m>-0.5</m> and passes through the point <m>(2, 4)</m>. Calculate <m>A</m> and <m>b</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Linearize using natural logs: <m>\ln y = bx + \ln A</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Gradient <m>m = b = -0.5</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the intercept (<m>\ln A</m>):
+                            Substitute <m>m = -0.5</m> and <m>(2, 4)</m>:
+                            <me>4 = -0.5(2) + \ln A</me>
+                            <me>4 = -1 + \ln A</me>
+                            <me>\ln A = 5</me>
+                            <me>A = e^5 \approx 148.4</me>
+                        </p>
+                    </li>
+                </ol>
+                The values are <m>b = -0.5</m> and <m>A = 148.4</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The variables <m>x</m> and <m>y</m> are connected by the law <m>y = \frac{a}{x} + b</m>. A student plots <m>y</m> against <m>1/x</m> and finds the line of best fit. The line has a gradient of 10 and crosses the y-axis at <m>(0, -2)</m>. Determine the values of <m>a</m> and <m>b</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                The equation is <m>y = a(1/x) + b</m>.
+                Comparing to <m>Y = mX + c</m> where <m>X = 1/x</m>:
+                <ul>
+                    <li><p>Gradient <m>m = a = 10</m>.</p></li>
+                    <li><p>Intercept <m>c = b = -2</m>.</p></li>
+                </ul>
+                The final equation is <m>y = \frac{10}{x} - 2</m>.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    A straight line graph is obtained by plotting <m>\lg y</m> against <m>\lg x</m>. The line passes through <m>(1, 3)</m> and <m>(3, 7)</m>. If the relationship is <m>y = ax^n</m>, find <m>a</m> and <m>n</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <me>n = \frac{7 - 3}{3 - 1} = 2</me>
+                    <me>3 = 2(1) + \lg a \implies \lg a = 1 \implies a = 10^1 = 10</me>
+                    Result: <m>n=2, a=10</m>.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The intensity <m>I</m> of light from a source at a distance <m>d</m> is given by <m>I = kd^n</m>. Data was plotted as <m>\lg I</m> vs <m>\lg d</m>, and the line has a gradient of <m>-2</m> and an intercept on the <m>\lg I</m> axis of <m>1.5</m>. 
+                    <ol>
+                        <li><p>Find the values of <m>k</m> and <m>n</m>.</p></li>
+                        <li><p>Calculate the intensity when the distance is 5 units.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <ol>
+                    <li><p><m>n = -2</m>, <m>\lg k = 1.5 \implies k = 10^{1.5} \approx 31.62</m>.</p></li>
+                    <li><p><m>I = 31.62 \times (5)^{-2} = \frac{31.62}{25} \approx 1.265</m>.</p></li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Variables <m>x</m> and <m>y</m> satisfy the equation <m>y^2 = ax + b</m>. A graph of <m>y^2</m> against <m>x</m> has a gradient of 3 and passes through <m>(4, 14)</m>. Find <m>a</m> and <m>b</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>a = 3</m>.
+                    <me>14 = 3(4) + b \implies b = 14 - 12 = 2</me>
+                    Result: <m>a=3, b=2</m>.
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
-
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -170,32 +312,28 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide a "Constant Finder" worksheet with the mapping formulas already written out. Focus on linear forms where the intercept is directly equal to the constant (e.g., <m>y^2 = ax + b</m>).
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>Complete the "Cracking the Code" activity and solve examples involving both power and exponential transformations.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Present cases with unknown bases in exponents (e.g., <m>y = k a^x</m>) or multi-step rational laws like <m>y = \frac{x}{ax + b}</m> where the intercept must be carefully mapped.
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

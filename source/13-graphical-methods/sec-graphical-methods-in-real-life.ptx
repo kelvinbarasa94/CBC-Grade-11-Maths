@@ -43,53 +43,124 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        20 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To apply graphical models (circles and coordinate geometry) to solve a spatial coverage problem in a telecommunications context.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Facilitate the group work by ensuring learners understand how to translate real-world locations into coordinates and how to represent coverage ranges as circles.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
+        <title>The Telecom Architect</title>
         <statement>
+            <p>
+                <alert>Work in groups of 4</alert>
+            </p>
+            <p>
+                You are network engineers for "GlobalLink Telecom". Your task is to provide signal coverage for a new rural community.
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+                <p>
+                    <ul>
+                        <li>
+                           <p> 
+                             Graph paper (representing a <m>10 \times 10</m> km map)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Compass and Ruler
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Colored pencils
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            On your graph paper, set the town center at the origin <m>(0,0)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The community has three key zones that MUST have signal:
+                            <ul>
+                                <li>Zone A (School): located at <m>(3, 4)</m></li>
+                                <li>Zone B (Hospital): located at <m>(-4, -3)</m></li>
+                                <li>Zone C (Market): located at <m>(0, -5)</m></li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            You have two cell towers. Each tower has a circular coverage range of <m>5</m> km.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Decide on the best coordinates to place your two towers so that all three zones receive a signal.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw the circles representing the coverage area for each tower.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Identify the area where the signals overlap. Discuss: Is overlap good for the users? Is it efficient for the company?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize how graphical methods are used across different professional fields to optimize solutions and visualize data.
                 </p>
             </li>
             </dl>
@@ -99,17 +170,43 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Visualization:</alert> Graphs transform raw data into visual patterns, making it easier to see signal "dead zones" or performance peaks.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Optimization:</alert> In engineering and business, graphs help find the "maximum" or "minimum" values (e.g., maximum profit, minimum waste) within specific constraints.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <title>Graphical Solutions in the Real World</title>
+        <p>
+            Graphs are not just mathematical exercises; they are essential tools in various industries:
+            <ul>
+                <li>
+                    <p>
+                        <alert>Telecommunications:</alert> Engineers use signal heat maps and circular models to ensure seamless connectivity and minimize interference.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Sports Science:</alert> Coaches use velocity-time graphs to analyze an athlete's acceleration and identify where they can shave off milliseconds from their time.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Engineering:</alert> Designers use stress-strain graphs to determine the safety limits of materials like steel and concrete before construction begins.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,26 +214,84 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
+        <title>Telecommunications: Signal Handoff</title>
         <statement>
+            <p>
+                Two cell towers are located at <m>A(0, 0)</m> and <m>B(8, 0)</m>. Tower A has a range of <m>5</m> km and Tower B has a range of <m>5</m> km. A car is traveling along the <m>x</m>-axis from Tower A to Tower B.
+            </p>
+            <p>
+                Determine the interval on the <m>x</m>-axis where the car receives a signal from BOTH towers simultaneously.
+            </p>
         </statement>
         <solution>
+            <p>
+                1. Tower A covers the interval <m>[0-5, 0+5] = [-5, 5]</m> on the <m>x</m>-axis.
+            </p>
+            <p>
+                2. Tower B covers the interval <m>[8-5, 8+5] = [3, 13]</m> on the <m>x</m>-axis.
+            </p>
+            <p>
+                3. The overlap is the intersection of these two intervals: <m>[3, 5]</m>.
+            </p>
+            <p>
+                The car receives signals from both towers between <m>x = 3</m> km and <m>x = 5</m> km. This is often where a "handoff" occurs in mobile networks.
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Sports Science: Comparing Sprinters</title>
         <statement>
+            <p>
+                A sports scientist records the velocity <m>v</m> (m/s) of two runners over <m>5</m> seconds:
+                <ul>
+                    <li>Runner 1: <m>v_1 = 2t</m></li>
+                    <li>Runner 2: <m>v_2 = 0.4t^2</m></li>
+                </ul>
+                Use a graph to determine which runner has a higher velocity at <m>t = 3</m> seconds.
+            </p>
         </statement>
         <solution>
+            <p>
+                Plotting both functions for <m>0 \le t \le 5</m>:
+                <ul>
+                    <li>At <m>t = 3</m>, <m>v_1 = 2(3) = 6</m> m/s.</li>
+                    <li>At <m>t = 3</m>, <m>v_2 = 0.4(3)^2 = 0.4(9) = 3.6</m> m/s.</li>
+                </ul>
+            </p>
+            <p>
+                Runner 1 is faster at 3 seconds. However, as the graph of <m>v_2</m> is a parabola, it will eventually overtake <m>v_1</m> (at <m>t = 5</m>).
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Engineering: Material Safety</title>
         <statement>
+            <p>
+                An engineer tests a new alloy. The extension <m>e</m> (mm) of a wire under load <m>L</m> (Newtons) is modeled by <m>e = 0.05L</m>. The wire will permanently deform if the extension exceeds <m>15</m> mm. 
+            </p>
+            <p>
+                Represent this on a graph and find the maximum safe load.
+            </p>
         </statement>
         <solution>
+            <p>
+                1. Plot the linear graph <m>e = 0.05L</m>.
+            </p>
+            <p>
+                2. Draw a horizontal line at <m>e = 15</m>.
+            </p>
+            <p>
+                3. The intersection point gives the maximum load:
+                <me>15 = 0.05L \implies L = \frac{15}{0.05} = 300\text{ N}</me>
+            </p>
+            <p>
+                The maximum safe load is <m>300</m> N.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,20 +303,90 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    The signal strength <m>S</m> (dBm) of a Wi-Fi router at distance <m>d</m> (meters) is modeled by <m>S = -20 \log_{10}(d) - 30</m>. For simplicity, let's use a linear approximation for short distances: <m>S = -5d - 30</m> for <m>1 \le d \le 10</m>.
+                </p>
+                <p>
+                    a) Plot the graph of the linear approximation.
+                </p>
+                <p>
+                    b) A device needs at least <m>-60</m> dBm to stream video. What is the maximum distance from the router?
+                </p>
             </statement>   
             <solution>
-
+                <p>
+                    a) Points: <m>(1, -35), (5, -55), (10, -80)</m>.
+                </p>
+                <p>
+                    b) Set <m>S = -60</m>:
+                    <me>-60 = -5d - 30 \implies -30 = -5d \implies d = 6\text{ meters}</me>
+                </p>
             </solution>             
         </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    A gymnast's height <m>h</m> (meters) during a vault is given by <m>h = -5t^2 + 10t + 1</m>, where <m>t</m> is time in seconds.
+                </p>
+                <p>
+                    a) Plot the graph for <m>0 \le t \le 2</m>.
+                </p>
+                <p>
+                    b) Use the graph to find the maximum height reached and the time it occurs.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    a) The graph is a downward opening parabola.
+                </p>
+                <p>
+                    b) The vertex is at <m>t = \frac{-10}{2(-5)} = 1</m> second.
+                </p>
+                <p>
+                    Max height = <m>-5(1)^2 + 10(1) + 1 = 6</m> meters.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A company produces two types of solar panels. Let <m>x</m> be Type A and <m>y</m> be Type B. The production constraints are:
+                    <ul>
+                        <li><m>x + y \le 50</m> (Total units)</li>
+                        <li><m>2x + y \le 80</m> (Labor hours)</li>
+                    </ul>
+                    Identify the feasible region graphically and find the point that maximizes profit if Type A yields <dollar/>100 and Type B yields <dollar/>150.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    1. Plot <m>x + y = 50</m> (intercepts at <m>50, 50</m>).
+                </p>
+                <p>
+                    2. Plot <m>2x + y = 80</m> (intercepts at <m>40, 80</m>).
+                </p>
+                <p>
+                    3. Vertices of the feasible region: <m>(0, 0), (40, 0), (30, 20), (0, 50)</m>.
+                </p>
+                <p>
+                    4. Check profits:
+                    <ul>
+                        <li><m>(40, 0) \to 4000</m></li>
+                        <li><m>(30, 20) \to 3000 + 3000 = 6000</m></li>
+                        <li><m>(0, 50) \to 7500</m></li>
+                    </ul>
+                    Maximum profit is at <m>(0, 50)</m>, i.e., producing 50 units of Type B only.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -175,7 +400,7 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide pre-drawn grids for the telecom activity and help them identify the "signal edge" as the circumference of the circle.
                     </cell>
                     <cell></cell>
                 </row>
@@ -189,13 +414,13 @@
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Introduce a third tower or a "forbidden zone" (e.g., a lake at <m>x^2 + y^2 \lt 4</m>) to the activity to increase complexity.
                     </cell>
                     <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
