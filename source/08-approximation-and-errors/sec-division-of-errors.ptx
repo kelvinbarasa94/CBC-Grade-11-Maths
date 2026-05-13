@@ -118,7 +118,7 @@
                                 <row header="yes">
                                     <cell>Tangent <m>(\frac{AC}{AB})</m></cell>
                                     <cell>Min AB</cell>
-                                    <cell>working AB</cell>
+                                    <cell>Working AB</cell>
                                     <cell>Max AB</cell>
                                 </row>
                                 <row>
@@ -126,7 +126,7 @@
                                     <cell>?</cell><cell>?</cell><cell>?</cell>
                                 </row>
                                 <row>
-                                    <cell>working AC</cell>
+                                    <cell>Working AC</cell>
                                     <cell>?</cell><cell>?</cell><cell>?</cell>
                                 </row>
                                 <row>
@@ -193,8 +193,9 @@
     </p>
     <p>
         <md>
-            <mrow> \text{Absolute error} \; = \amp \; \text{Maximum value}\; - \;\text{Actual value} </mrow>
-            <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute error}}{\text{Actual value}} </mrow>
+            <mrow> \text{Absolute error} \; = \amp \; \text{Maximum value}\; - \;\text{Working value} or </mrow>
+            <mrow> \text{Absolute error} \; = \amp \; \text{Working value}\; - \;\text{Minimum value} </mrow>
+            <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute error}}{\text{Working value}} </mrow>
             <mrow> \text{Percentage error} \; = \amp \; \text{Relative error} \times 100\% </mrow>
         </md>
         
