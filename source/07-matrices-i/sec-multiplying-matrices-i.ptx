@@ -64,9 +64,9 @@
     <activity xml:id="mango-shopping-2">
         <statement>
             <p> We continue with Kelvin and Esther from <xref ref="mango-shopping"/>. As a reminder, this matrix represents their purchases of mangoes, oranges, and bananas from the shop in Soy:
-            <me>
-                \mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}
-            </me>
+            <md>
+                S = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}
+            </md>
             The first column tells us that Kelvin bought 5 mangoes and Esther bought 6 mangoes.
             </p>    
                 <ol marker="(a)">
@@ -100,13 +100,13 @@
                         </p>
                         <note component="lesson-plan">
                             <p>
-                            Learners might write the costs as a <m>1\times3</m> matrix, like so: <me>\mathbf{C} = \begin{bmatrix} 10 &amp; 15 &amp; 5 \end{bmatrix}</me>.
+                            Learners might write the costs as a <m>1\times3</m> matrix, like so: <me>\mathbf{x} = \begin{bmatrix} 10 &amp; 15 &amp; 5 \end{bmatrix}</me>.
                             </p>
                             <p>
-                                Or they might write the costs as a <m>3\times1</m> matrix, like so: <me>\mathbf{C} = \begin{bmatrix} 10 \\ 15 \\ 5 \end{bmatrix}</me>.
+                                Or they might write the costs as a <m>3\times1</m> matrix, like so: <me>\mathbf{x} = \begin{bmatrix} 10 \\ 15 \\ 5 \end{bmatrix}</me>.
                             </p>
                             <p>
-                                Encourage both representations, and show Learners a different option if they only provide one. Foreshadow that the second representation will be more useful for the next part of the question.
+                                Encourage both representations, and show Learners a different option if they only provide one. Foreshadow that the second representation will be more useful for matrix-vector multiplication.
                             </p>
                             <p>
                                 Learners should not have units (like Ksh) in their matrix, but understand that these entries represent quantities of money.
@@ -129,14 +129,14 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
@@ -149,18 +149,16 @@
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Matrix-vector multiplication is tricky for Learners; take your time with this formula. 
                     </p>
                 </li>
-            </ol>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
     
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
     <insight>
         <ul>
@@ -174,14 +172,24 @@
                     A matrix can only multiply a vector if the number of columns in the matrix equals the number of entries in the vector. The <term>inner dimensions</term> must match.
                 </p>
             </li>
+            <li>
+                <p>
+                    Matrix-vector multiplication produces a vector with the same number of columns as the matrix.
+                </p>
+            </li>
         </ul>
         <p>
-            Suppose that <m>A</m> is a <m>2 \times 3</m> matrix and <m>v</m> is a <m>3 \times 1</m> vector, with <me>A = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \amp \color{blue}{c}\\ \color{red}{d} \amp \color{red}{e} \amp \color{red}{f}\end{bmatrix},\quad v = \begin{bmatrix}\color{teal}{x}\\ \color{teal}{y}\\ \color{teal}{z}\end{bmatrix}</me>.
+            Suppose that <m>A</m> is a <m>2 \times 3</m> matrix and <m>\mathbf{v}</m> is a <m>3 \times 1</m> vector, with <me>A = \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \amp \color{blue}{c}\\ \color{red}{d} \amp \color{red}{e} \amp \color{red}{f}\end{bmatrix},\quad \mathbf{v} = \begin{bmatrix}\color{teal}{x}\\ \color{teal}{y}\\ \color{teal}{z}\end{bmatrix}</me>.
         </p>
         <ul>
             <li>
                 <p>
-                    Then the product <m>Av</m> is defined, and is a <m>2 \times 1</m> vector given by: <me>
+                    The product <m>A \mathbf{v}</m> is defined since the inner dimensions match: <m>A</m> has 3 columns and <m>v</m> has 3 rows.
+                </p>
+            </li> 
+            <li> 
+                <p> 
+                    <m>A \mathbf{v}</m> is a <m>2 \times 1</m> vector given by: <me>
                         Av = \begin{bmatrix} \color{blue}{a}\color{teal}{x} \,\color{black}{+}\, \color{blue}{b}\color{teal}{y} \,\color{black}{+}\, \color{blue}{c}\color{teal}{z} \\ \color{red}{d}\color{teal}{x} \,\color{black}{+}\, \color{red}{e}\color{teal}{y} \,\color{black}{+}\, \color{red}{f}\color{teal}{z} \end{bmatrix}
                     </me>
                 </p>
@@ -191,47 +199,136 @@
                     Each entry of <m>Av</m> is a <em>row</em> of <m>A</m> multiplied by the vector <m>v</m> (matching components multiplied and then added).
                 </p>
             </li>
-            <li>
-                <p>
-                    This product is defined since the inner dimensions match: <m>A</m> has 3 columns and <m>v</m> has 3 rows.
-                </p>
-            </li>
-            <li>
-                <p>
-                    The dimension of the product is given by the <term>outer dimensions</term>: <m>A</m> has 2 rows and <m>v</m> has 1 column, so <m>Av</m> has 2 rows and 1 column.
-                </p>
-            </li>
         </ul>
     </insight>
 
-    <!-- Scalar Multiplication of matrix -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
-
-    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example>
+        <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <example>
         <statement>
+            <p>
+                As in <xref ref="mango-shopping-2"/>, let <m>\mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}</m> be the quantities of mangoes, oranges, and banans bought by Kelvin (first row) and Esther (second row). Suppose the cost vector is given by:
+                <md>
+                    \mathbf{x} = \begin{bmatrix} 10 \\ 15 \\ 5 \end{bmatrix}
+                </md>
+                Calculate <m>S\mathbf{x}</m>, and compare your answers to the Learner Experience.
+            </p>
         </statement>
         <solution>
+            <p>
+                Calculating the matrix-vector multiplication:
+                <md>
+                    <mrow>S \mathbf{x} \amp =  \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}  \begin{bmatrix} 10 \\ 15 \\ 5 \end{bmatrix} </mrow>
+                    <mrow> \amp = \begin{bmatrix}5(10) + 2(15) + 1(5) \\ 6(10) + 1(15) + 3(5)\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}85 \\ 90\end{bmatrix}</mrow>
+                </md>
+                This is the total cost for Kelvin and Esther (respectively) that we found in the Learner Experience.
+            </p>
         </solution>
     </example>
 
+    <paragraphs>
+      <title>Properties of Matrix-Vector Multiplication</title>
+      <p>For the matrices <m>A,B</m> of size <m>m\times n</m> and vectors <m>\mathbf{x}, \mathbf{y}</m> of size <m>n \times 1</m> the following properties hold:
+      <ul cols="2">
+        <li><m>A\left(\mathbf{x} + \mathbf{y}\right) = A\mathbf{x} + A\mathbf{y}</m>
+        </li>
+        <li><m>A\left(\mathbf{x} - \mathbf{y}\right) = A\mathbf{x} - A\mathbf{y}</m>
+        </li>
+        <li><m>(A+B)\mathbf{x} = A\mathbf{x} + B\mathbf{x}</m>
+        </li>
+        <li><m>(A-B)\mathbf{x} = A\mathbf{x} - B\mathbf{x}</m>
+        </li>
+      </ul>
+        </p>
+    </paragraphs>
+
     <example>
         <statement>
+            <p>
+                Given <m>A = \begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix}</m> and vectors <m>\mathbf{x} = \begin{bmatrix}4 \\ 1\end{bmatrix}</m> and <m>\mathbf{y} = \begin{bmatrix}-3 \\ 3\end{bmatrix}</m>, confirm that: <md>A\left(\mathbf{x} + \mathbf{y}\right) = A\mathbf{x} + A\mathbf{y}</md>
+            </p>
         </statement>
         <solution>
+            <p>
+                Firstly,
+                <md>
+                    <mrow> A\left(\mathbf{x} + \mathbf{y}\right) \amp = \begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix}\left(\begin{bmatrix}4 \\ 1\end{bmatrix} + \begin{bmatrix}-3 \\ 3\end{bmatrix}\right) </mrow>
+                    <mrow> \amp = \begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix} \begin{bmatrix} 1 \\ 4\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}2(1) + 1(4) \\ 0(1) + (-1)(4)\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}6 \\ -4\end{bmatrix}</mrow>
+                </md>
+                Additionally,
+                <md>
+                    <mrow> A\mathbf{x} + A\mathbf{y}\amp = \begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix}\begin{bmatrix}4 \\ 1\end{bmatrix} +\begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix}\begin{bmatrix}-3 \\ 3\end{bmatrix} </mrow>
+                    <mrow> \amp = \begin{bmatrix}2(4) + 1(1) \\ 0(4) + (-1)(1)\end{bmatrix} + \begin{bmatrix} 2(-3) + 1(3) \\ 0(-3) + (-1)(3)\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}9 \\ -1\end{bmatrix} + \begin{bmatrix} -3 \\ -3\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}6 \\ -4\end{bmatrix}</mrow>
+                </md>
+                Thus <m>A\left(\mathbf{x} + \mathbf{y}\right) = A\mathbf{x} + A\mathbf{y}</m>.
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <paragraphs>
+        <title>Multiplying a Matrix by a Scalar</title>
+        <p>
+            Multiplying a matrix by a scalar (a real number) is simple; just multiply each entry in the matrix by that scalar:
+            <md>
+                2\begin{bmatrix}a \amp b \amp c \\ d \amp e \amp f \end{bmatrix} = \begin{bmatrix}2a \amp 2b \amp 2c \\ 2d \amp 2e \amp 2f \end{bmatrix}
+            </md>
+        </p>
+        <p>
+            If <m>\alpha</m> and <m>\beta</m> are a real numbers and <m>A</m> and <m>B</m> are <m>m \times n</m> matrices, then the following are true:
+            <ul cols="2">
+                <li>
+                    <p>
+                        <m>\alpha\left(A + B\right) = \alpha A + \alpha B</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\alpha\left(A - B\right) = \alpha A - \alpha B</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(\alpha + \beta)A = \alpha A + \beta A </m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(\alpha - \beta)A = \alpha A - \beta A </m>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </paragraphs>
+
+    <example>
+        <statement>
+            <p>
+                Given <m>A = \begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix}</m> and <m>B = \begin{bmatrix}-1 \amp 4 \\ 0 \amp 0\end{bmatrix}</m>, confirm that <md>-3(A+B) = -3A - 3B</md>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Working with the left hand side, we have:
+                <md>
+                    <mrow>-3(A+B) \amp = -3\left(\begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix} + \begin{bmatrix}-1 \amp 4 \\ 0 \amp 0\end{bmatrix}\right)</mrow>
+                    <mrow> \amp = -3 \begin{bmatrix}1 \amp 5 \\ 0 \amp -1\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}-3 \amp -15 \\ 0 \amp 3\end{bmatrix}</mrow>
+                </md>
+                And on the right hand side:
+                <md>
+                    <mrow>-3A - 3B \amp = -3\begin{bmatrix}2 \amp 1 \\ 0 \amp -1\end{bmatrix} -3\begin{bmatrix}-1 \amp 4 \\ 0 \amp 0\end{bmatrix} </mrow>
+                    <mrow> \amp = \begin{bmatrix}-6 \amp -3 \\ 0 \amp 3 \end{bmatrix} - \begin{bmatrix}-3 \amp 12 \\ 0 \amp 0\end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix}-3 \amp -15 \\ 0 \amp 3\end{bmatrix}</mrow>
+                </md>
+                Thus <m>-3(A+B) = -3A - 3B</m>
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 

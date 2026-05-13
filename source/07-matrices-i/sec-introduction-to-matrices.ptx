@@ -558,7 +558,7 @@
                 </p>
             </answer>
         </exercise>
-        <exercise>
+        <exercise xml:id="magic-square-intro">
             <title>Magic Squares</title>
             <statement>
                 <p>
@@ -582,7 +582,7 @@
                 <aside>
                     <title>Handwriting Help</title>                    
                     <p>
-                        If you're struggling to make it out, the entry in the 3rd row and 1st column is 2.
+                        If you're struggling to make it out, the entry in the 3rd row and 1st column is 9.
                     </p>
                 </aside>
                 <ol markers="(a)">
