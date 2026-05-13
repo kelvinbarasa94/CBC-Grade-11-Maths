@@ -200,6 +200,9 @@
         </md>
         
     </p>
+    <p>
+        <term>Note:</term> The absolute error tells us the size of the mistake, while the percentage error tells us how significant that mistake is compared to the total size of the object.
+    </p>
    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
