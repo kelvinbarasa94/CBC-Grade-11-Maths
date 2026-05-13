@@ -73,16 +73,32 @@
     <!-- Add Activity -->
      <activity>
         <p>
-            <alert>In Groups, study and explore the following sequence</alert>
+            <alert>Group Exploration: Finding the Pattern</alert>
         </p>
         <p>
-            <m>3,7,11,15 ...</m>
+            Consider the sequence: <m>3, 7, 11, 15, \dots</m>
         </p>
         <p>
-            Find the next three terms of the sequence?<!--, What is the formula for getting the <m>n^{th} term?</m>--> Share with other groups your findings.
+            <ol>
+                <li>
+                    <p>Find the next three terms of the sequence.</p>
+                </li>
+                <li>
+                    <p>Discuss with your group: How is each term related to the one before it?</p>
+                </li>
+                <li>
+                    <p>Share your findings with other groups.</p>
+                </li>
+            </ol>
         </p>
+        
         <p>
-            The next term is obtained by adding <m>4</m> to the preceeding term. <m>4</m> is called the common difference (<m>d</m>) of the sequence. This is the difference betweeen any two consecutive terms of the sequence.
+            The next term is obtained by adding <m>4</m> to the preceding term. This constant value <m>4</m> is called the <term>common difference</term> (<m>d</m>). It is the difference between any two consecutive terms:
+            <me>d = 7 - 3 = 11 - 7 = 4</me>
+        </p>
+
+        <p>
+            <alert>Challenge:</alert> Without listing all the terms, how could you find the <m>20^{th}</m> term? Can you write a general rule for the <m>n^{th}</m> term?
         </p>
      </activity>
 
