@@ -591,9 +591,59 @@
                 </ol>
             </answer>
         </exercise>
-                <exercise>
+        <exercise xml:id="multiplicative-identity">
+            <title>The Identity Matrix</title>
+            <statement>
+                <p>
+                    Let <m>P = \begin{bmatrix}1 \amp 2 \amp -1 \\ -2 \amp 0 \amp 2 \\ 1 \amp -2 \amp 1\end{bmatrix}</m>
+                    <ol>
+                        <li>
+                            <p>
+                                Write down the identity matrix <m>(I)</m> of the same size as <m>P</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Compute <m>PI</m> and <m>IP</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What do you notice? Why do you think <m>I</m> is called the identity matrix?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <ol>
+                    <li>
+                        <p>
+                            The identity matrix of the same size as <m>P</m> (<m>3 \times 3</m>) is <m>I = \begin{bmatrix}1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1\end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Computing <m>PI</m> and <m>IP</m>:
+                            <md>
+                                PI = \begin{bmatrix}1 &amp; 2 &amp; -1 \\ -2 &amp; 0 &amp; 2 \\ 1 &amp; -2 &amp; 1\end{bmatrix} \begin{bmatrix}1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} = \begin{bmatrix}1 &amp; 2 &amp; -1 \\ -2 &amp; 0 &amp; 2 \\ 1 &amp; -2 &amp; 1\end{bmatrix}
+                            </md>
+                            <md>
+                                IP = \begin{bmatrix}1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix} \begin{bmatrix}1 &amp; 2 &amp; -1 \\ -2 &amp; 0 &amp; 2 \\ 1 &amp; -2 &amp; 1\end{bmatrix} = \begin{bmatrix}1 &amp; 2 &amp; -1 \\ -2 &amp; 0 &amp; 2 \\ 1 &amp; -2 &amp; 1\end{bmatrix}
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We notice that <m>PI = IP = P</m>. This is just like how <m>a \times 1 = 1 \times a = a</m> for any real number <m>a</m>. The identity matrix acts like the number 1 in matrix multiplication, which is why it is called the identity matrix.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+        <exercise>
             <statement> 
-                <p> Define the 2-by-2 matrix <m>F</m> as <me> \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}  </me> </p>
+                <p> Define the 2-by-2 matrix <m>F</m> as <md>F = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}  </md> </p>
                 <ol marker="(a)">
                     <li>
                         <p>
