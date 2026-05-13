@@ -182,14 +182,14 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
@@ -200,19 +200,20 @@
             </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+        <ul>
+            <li>
+                <p>
+                    Use the matrix from the Learner Experience to introduce the terms <term>matrix</term>, <term>row</term>, and <term>column</term>. Make sure to emphasise the difference between rows and columns, as this is a common point of confusion for learners.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Make sure Learners can distinguish between the different types of matrices mentioned here.
+                </p>
+            </li>
+        </ul>
+        
+    </axiom>
 
     <insight>
         <p>
@@ -277,20 +278,94 @@
         </paragraphs>
     </insight>
 
-    <!-- Borrowed from PRECALC fs-id1165132938226: Describing Matrices -->
+    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
+    <example>
+        <statement>
+            <p>
+                Suppose <md>M = \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \amp 0 \end{bmatrix}</md> What type(s) of matrix is <m>M</m>?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The matrix <m>M</m> not a square matrix, as it has 3 rows and 4 columns, thus it is a rectangular matrix. It is not a row matrix, as it has more than one row, and it is not a column matrix, as it has more than one column. It is not a null matrix, as it has some non-zero entries.
+            </p>
+            <p>
+                It is not an identity matrix: while it does have 1s on the diagonal, identity matrices must be <em>square</em>, which <m>M</m> is not.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Can you construct a matrix of the following types? If so, give an example. If not, explain why. (Do not include 1 by 1 matrices.)
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            Square <em>and</em> null matrix
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Identity <em>and</em> column matrix
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Rectangular <em>and</em> row matrix
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Column <em>and</em> row matrix
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            Yes: <m>\begin{bmatrix}0 \amp 0 \\ 0 \amp 0\end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            No: identity matrices must be square, while column matrices are rectangular (excluding 1 by 1 matrices).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Yes: <m>\begin{bmatrix}1 \amp 2\end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            No: excluding 1 by 1 matrices, row matrices have only 1 row, while column matries have multiple rows.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </example>
+
+    <!-- Borrowed from PRECALC fs-id1165132938226: Describing Matrices -->
+    <paragraphs>
+        <title>Locating Entries of Matrices</title> 
+    </paragraphs>
     <p>A matrix is often referred to by its size or dimensions: <m>m \times n</m> indicating <m>m</m> rows and <m>n</m> columns. Matrix entries are defined first by row and then by column. For example, to locate the entry in matrix <m>A</m> identified as <m>a_{ij},</m> we look for the entry in row <m>i,</m> column <m>j.</m> In matrix <m>A</m>, shown below, the entry in row 2, column 3 is <m>\color{blue}{a_{23}}.</m>
     </p>
     <p>
       <md>A=\begin{bmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; \color{blue}{a_{23}} \\ a_{31} &amp; a_{32} &amp; a_{33} \end{bmatrix}</md>
     </p>
 
-    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
     <!-- Add at least 3 examples -->
 
     <example xml:id="PRECALC-93DCuqGnJd" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
-      <title>Finding the Dimensions of the Given Matrix and Locating Entries</title>
+      <title>Locating Entries</title>
       <statement>
         <p>Let <m>A = \begin{bmatrix}2 &amp; 1 &amp; 0 &amp; 2 \\ 4 &amp; 7 &amp;3 &amp; 1 \end{bmatrix}</m>
         </p>
@@ -505,6 +580,7 @@
                     </sidebyside>
                 </figure>
                 <aside>
+                    <title>Handwriting Help</title>                    
                     <p>
                         If you're struggling to make it out, the entry in the 3rd row and 1st column is 2.
                     </p>

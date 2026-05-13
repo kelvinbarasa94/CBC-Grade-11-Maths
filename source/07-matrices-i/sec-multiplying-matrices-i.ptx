@@ -204,6 +204,8 @@
         </ul>
     </insight>
 
+    <!-- Scalar Multiplication of matrix -->
+
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
@@ -240,6 +242,8 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
+
+    <!-- Add exercise with magic square, mutliplied by a scalar, still a magic square-->
 
     <!-- <exercises>
         <exercise>
