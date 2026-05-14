@@ -337,8 +337,13 @@
 
     <exercises>
         <exercise>
+            <introduction>
+                <p>
+                    Solve the following equations by completing the square method.
+                </p>
+            </introduction>
             <statement>   
-                Solve the equation <m>4x^2 - 12x + 9 = 0</m> by completing the square.
+                <m>4x^2 - 12x + 9 = 0</m>.
             </statement>   
             <answer>
                 <p>
@@ -349,7 +354,7 @@
         </exercise>  
         <exercise>
             <statement>   
-                Solve the equation <m>5x^2 + 10x - 15 = 0</m> .
+                 <m>5x^2 + 10x - 15 = 0</m> .
             </statement>   
             <answer>
                 <p>
@@ -360,7 +365,7 @@
         </exercise>   
         <exercise>
             <statement>   
-                Solve the equation <m>6x^2 - 3x + 1 = 0</m>
+                <m>6x^2 - 3x + 1 = 0</m>
             </statement>   
             <answer>
                 <p>
@@ -372,7 +377,7 @@
         <exercise>
             <statement>
                 <p>
-                    Solve the equation <m>2x^2 + 7x - 3 = 0</m>
+                 <m>2x^2 + 7x - 3 = 0</m>
                 </p>
             </statement>
             <answer>
