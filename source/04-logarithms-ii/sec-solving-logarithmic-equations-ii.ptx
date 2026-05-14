@@ -142,60 +142,141 @@
         </statement>
         <solution>
             <p>
-               To solve the equation log₂(x+5) = log₂(2x−1) + 1, we can use the product rule of logarithms, which states that log_b(m) + log_b(n) = log_b(m*n).
+               To solve the equation log₂(x+5) = log₂(2x−1) + 1, use the product rule of logarithms to combine the logarithmic expressions on the right side of the equation. The product rule states that log_b(m) + log_b(n) = log_b(m*n). Applying this rule gives us:
             </p>
               <p>
-                  Applying the product rule, combine the logarithmic expressions on the left side:
-                 log₂(x+5) = log₂(2x−1) + 1
+                <m>log₂(x+5) = log₂(2x−1) + log₂(2)</m>
               </p>
                 <p>
-                    Now we can rewrite the equation as:
-                    log₂(x² - 3x) = 3
+                Now combine the logarithmic expressions on the right side using the product rule again to get:
                 </p>
                     <p>
-                        Next, we can use the fact that if log_b(m) = n, then m = b^n. In this case, we have:
-                        x² - 3x = 2^3
+                        <m>log₂(x+5) = log₂((2x−1) * 2)</m>
                     </p>
                     <p>
-                        Simplifying the right side gives us:
-                        x² - 3x = 8
+                        <m>log₂(x+5) = log₂(4x−2)</m>
                     </p>
                     <p>
-                        Now we can rearrange the equation to set it equal to zero:
-                        x² - 3x - 8 = 0
+                        Rearrange the equation to set the arguments of the logarithms equal to each other as:
+                        <m>x + 5 = 4x - 2</m>
                     </p>
                     <p>
-                        We can factor the quadratic equation:
-                        (x - 4)(x + 2) = 0
+                        Collect like terms to get:
+                        <m>3x = 7</m>
                     </p>
                     <p>
-                        Setting each factor equal to zero gives us the potential solutions:
-                        x - 4 = 0   or   x + 2 = 0
+                        Solving for x gives us:
+                        <m>x = \frac{7}{3}</m>
                     </p>
                     <p>
-                        Solving these equations gives us:
-                        x = 4   or   x = -2
+                        Finally, you need to check if the solution is valid by substituting it back into the original equation. Ensure that the arguments of the logarithms are positive, as logarithms are only defined for positive numbers.
                     </p>
                     <p>
-                        
-                    </p>
-                    <p>
-                        Therefore, there are no valid solutions to the equation log_2(x) + log_2(x - 3) = 3.
+                        For log₂(x+5), you have:
+                        <m>log₂\left(\frac{7}{3} + 5\right) = log₂\left(\frac{7}{3} + \frac{15}{3}\right) = log₂\left(\frac{22}{3}\right)</m>
                     </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Solve the logarithmic equation: log₃(2x+1) - log₃(x-2) = 1
+            </p>
         </statement>
         <solution>
+            <p>
+                To solve the equation log₃(2x+1) - log₃(x-2) = 1, consider using the quotient rule of logarithms, which states that log_b(m) - log_b(n) = log_b(m/n). Applying this rule gives:
+            </p>
+              <p>
+                <m>log₃\left(\frac{2x+1}{x-2}\right) = 1</m>
+              </p>
+                <p>
+                Now rewrite the equation in exponential form. The equation log_b(a) = c can be rewritten as b^c = a. Applying this to the equation gives us:
+                </p>
+                    <p>
+                        <m>3^1 = \frac{2x+1}{x-2}</m>
+                    </p>
+                    <p>
+                        Simplifying this gives:
+                        <m>3 = \frac{2x+1}{x-2}</m>
+                    </p>
+                    <p>
+                        Cross-multiplying gives:
+                        <m>3(x-2) = 2x + 1</m>
+                    </p>
+                    <p>
+                        Expanding the left side gives:
+                        <m>3x - 6 = 2x + 1</m>
+                    </p>
+                    <p>
+                        Collecting like terms gives:
+                        <m>x = 7</m>
+                    </p>
+                    <p>
+                        Finally, you need to check if the solution is valid by substituting it back into the original equation. Ensure that the arguments of the logarithms are positive.
+                    </p>
+                    <p>
+                        For log₃(2x+1), you have:
+                        <m>log₃(2(7)+1) = log₃(15)</m>, which is valid since 15 is positive.
+                    </p>
+                    <p>
+                        For log₃(x-2), you have:
+                        <m>log₃(7-2) = log₃(5)</m>, which is also valid since 5 is positive.
+                    </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Solve the logarithmic equation: log₂(x+5) - log₂(x-3) = 2
+            </p>
         </statement>
         <solution>
+            <p>
+                To solve the equation log₂(x+5) - log₂(x-3) = 2, use the quotient rule of logarithms, which states that log_b(m) - log_b(n) = log_b(m/n). Applying this rule gives:
+            </p>
+              <p>
+                <m>log₂\left(\frac{x+5}{x-3}\right) = 2</m>
+              </p>
+                <p>
+                Now rewrite the equation in exponential form. The equation log_b(a) = c can be rewritten as b^c = a. Applying this to the equation gives us:
+                </p>
+                    <p>
+                        <m>2^2 = \frac{x+5}{x-3}</m>
+                    </p>
+                    <p>
+                        Simplifying this gives:
+                        <m>4 = \frac{x+5}{x-3}</m>
+                    </p>
+                    <p>
+                        Cross-multiplying gives :
+                        <m>4(x-3) = x + 5</m>
+                    </p>
+                    <p>
+                        Expanding the left side gives:
+                        <m>4x - 12 = x + 5</m>
+                    </p>
+                    <p>
+                        Collecting like terms gives:
+                        <m>3x = 17</m>
+                    </p>
+                    <p>
+                        Solving for x gives us:
+                        <m>x = \frac{17}{3}</m>
+                    </p>
+                    <p>
+                        Finally, check if the solution is valid by substituting it back into the original equation. We need to ensure that the arguments of the logarithms are positive.
+                    </p>
+                    <p>
+                        For log₂(x+5), you have:
+                        <m>log₂\left(\frac{17}{3} + 5\right) = log₂\left(\frac{17}{3} + \frac{15}{3}\right) = log₂\left(\frac{32}{3}\right)</m>, which is valid since \(\frac{32}{3}\) is positive.
+                    </p>
+                    <p>
+                        For log₂(x-3), you have:
+                        <m>log₂\left (\frac{17}{3} - 3\right) = log₂\left(\frac{17}{3} - \frac{9}{3}\right) = log₂\left(\frac{8}{3}\right)</m>, which is valid since \(\frac{8}{3}\) is positive.
+                    </p>
         </solution>
     </example>
 
@@ -209,16 +290,46 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    Calculate <m>logx​(25)=logx​(5)+1</m>
+                </p>
             </statement>   
             <solution>
-
+                        <p>
+                            Solving for x gives us:
+                            <m>x = 5</m>
+                        </p>
             </solution>             
-        </exercise>        
-    </exercises> -->
+        </exercise> 
+        <exercise>
+            <statement>   
+                <p>
+                    Calculate <m>logx​(64)=logx​(8)+1</m>
+                </p>
+            </statement>   
+            <solution>
+                        <p>
+                            Solving for x gives us:
+                            <m>x = 8</m>
+                        </p>
+            </solution>
+        </exercise> 
+        <exercise>
+            <statement>   
+                <p>
+                    Calculate <m>logx​(100)=logx​(10)+1</m>
+                </p>
+            </statement>   
+            <solution>
+                        <p>
+                            Solving for x gives us:
+                            <m>x = 10</m>
+                        </p>
+            </solution>      
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 

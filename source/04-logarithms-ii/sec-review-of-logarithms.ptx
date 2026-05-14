@@ -72,26 +72,6 @@
 
     <!-- Add Activity -->
 
-    <activity>
-        <statement>
-            <p>
-                <term>Work in groups</term>
-            </p>
-            <p>
-                <term>What you need</term>
-            </p>
-            <p>
-                <ul>
-                    <li>Paper</li>
-                    <li>Pencil</li>
-                    <li>Calculator (optional)</li>
-                </ul>
-            </p>
-            <p>
-                <term>What to do</term>
-            </p>
-        </statement>
-    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
