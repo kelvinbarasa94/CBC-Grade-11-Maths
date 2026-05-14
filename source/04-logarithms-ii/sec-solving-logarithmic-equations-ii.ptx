@@ -21,7 +21,7 @@
                 <li>
                     <title>Specific Learning Outcomes</title> 
                     <p>
-                        Solve logarithmic equations in different situations
+                        Solve advanced logarithmic equations in different situations
                     </p>
                 </li>
                 <li component="lesson-plan">
@@ -69,10 +69,19 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <term>Work in groups</term>
+            </p>
+            <p>
+                <term>What you need</term>
+            </p>
+            <p>
+                
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,8 +117,16 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight> 
+          <p>
+             <term>Key Takeaway</term>
+          </p>
+              <p>
+              While solving logarithmic equations, it is important to remember that the properties of logarithms can be used to simplify the equations and make them easier to solve. For example, the product rule, quotient rule, and power rule can help us combine or break down logarithmic expressions. 
+             Additionally, we can use the fact that if log_b(x) = log_b(y), then x = y,
+             which allows us to set the arguments of the logarithms equal to each other when the bases are the same. 
+          </p>  
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,10 +134,54 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Solve the logarithmic equation: log₂(x+5) = log₂(2x−1) + 1
+            </p>
         </statement>
         <solution>
+            <p>
+               To solve the equation log₂(x+5) = log₂(2x−1) + 1, we can use the product rule of logarithms, which states that log_b(m) + log_b(n) = log_b(m*n).
+            </p>
+              <p>
+                  Applying the product rule, combine the logarithmic expressions on the left side:
+                 log₂(x+5) = log₂(2x−1) + 1
+              </p>
+                <p>
+                    Now we can rewrite the equation as:
+                    log₂(x² - 3x) = 3
+                </p>
+                    <p>
+                        Next, we can use the fact that if log_b(m) = n, then m = b^n. In this case, we have:
+                        x² - 3x = 2^3
+                    </p>
+                    <p>
+                        Simplifying the right side gives us:
+                        x² - 3x = 8
+                    </p>
+                    <p>
+                        Now we can rearrange the equation to set it equal to zero:
+                        x² - 3x - 8 = 0
+                    </p>
+                    <p>
+                        We can factor the quadratic equation:
+                        (x - 4)(x + 2) = 0
+                    </p>
+                    <p>
+                        Setting each factor equal to zero gives us the potential solutions:
+                        x - 4 = 0   or   x + 2 = 0
+                    </p>
+                    <p>
+                        Solving these equations gives us:
+                        x = 4   or   x = -2
+                    </p>
+                    <p>
+                        
+                    </p>
+                    <p>
+                        Therefore, there are no valid solutions to the equation log_2(x) + log_2(x - 3) = 3.
+                    </p>
         </solution>
     </example>
 
@@ -136,7 +197,7 @@
         </statement>
         <solution>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 

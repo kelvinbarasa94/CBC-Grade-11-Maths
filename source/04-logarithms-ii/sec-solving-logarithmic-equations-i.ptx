@@ -289,14 +289,15 @@
         <exercise>
             <statement>   
                 <p>
-                    Liam is trying to solve the logarithmic equation <m>log₆(x - 3) = 1</m>. What answer does he get?
+                    Liam is trying to solve the logarithmic equation <m>\log_4(x - 3) = 1</m>. What answer does he get?
                 </p>
             </statement>   
             <solution>
                 <p>
-                    <m>x = 9</m>
+                    <m>x = 7</m>
                 </p>
-            </solution>     
+            </solution> 
+        </exercise>    
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
