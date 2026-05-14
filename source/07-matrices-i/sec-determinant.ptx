@@ -43,31 +43,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    10 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To provide a visual explanation for the formula for the determinant.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    If time allows, prepare the shapes from <xref ref="det-triangles"/> in advance, so that you can cut them out and rearrange them with the class during the activity. If not, you can ask learners to draw and cut out the shapes themselves.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
     <!-- TODO, create a quick JS visualiser with different matrices, creating the parallelogram-->
     <activity>
@@ -81,16 +79,89 @@
                             <p>
                                 If <m>\mathbf{x} = \begin{bmatrix} 1\\ 0\end{bmatrix}</m> and <m>\mathbf{y} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}</m>, find <m>A\mathbf{x}</m> and <m>A\mathbf{y}</m>.
                             </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    <m>A\mathbf{x} = \begin{bmatrix}6 \\ 2.2\end{bmatrix}</m>, the first column of <m>A</m> and <m>A\mathbf{y} = \begin{bmatrix}2.5 \\ 3\end{bmatrix}</m>, the second column of <m>A</m>.
+                                </p>
+                            </solution>
                         </li>
                         <li>
                             <p>
                                 Plot the vectors <m>A\mathbf{x}</m> and <m>A\mathbf{y}</m> on the coordinate plane, with their tails at the origin
                             </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                <figure xml:id="Ax-Ay">
+                                <caption>Plotting the vectors</caption>
+                                <image width="70%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
+                                        % Dimensions
+                                        \def\a{6}
+                                        \def\b{2.5}
+                                        \def\c{2.2}
+                                        \def\d{3}
+                                        \pgfmathsetmacro{\W}{\a+\b}
+                                        \pgfmathsetmacro{\H}{\c+\d}
+
+                                        % Helper points (line intersections)
+                                        \coordinate (x1) at (\a,\c);
+                                        \coordinate (x2) at (\b,\d);
+
+                                        \draw (0,0) grid (9,6);
+
+                                        % Main outline and diagonals
+                                        \draw[very thick, -&gt;] (0,0) -- (x1) node [below right, fill=white, opacity=0.8] {$A\mathbf{x} = (6, 2.2)$};
+                                        \draw[very thick, -&gt;] (0,0) -- (x2) node [above left, fill=white, opacity=0.8] {$A\mathbf{y} = (2.5, 3)$};
+
+
+                                        
+                                        % Labels
+                                        \node[below right] at (0,0) {$O$};
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                            </figure>
+                                </p>
+                            </solution>
                         </li>
                         <li>
                             <p>
                                 Also plot a point representing the sum <m>A\mathbf{x} + A\mathbf{y}</m>, and connect the tips of your previous vectors to this point to form a parallelogram.
                             </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                <figure xml:id="Ax-Ay-P">
+                                <caption>Creating the Parallelogram</caption>
+                                <image width="70%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
+                                        % Dimensions
+                                        \def\a{6}
+                                        \def\b{2.5}
+                                        \def\c{2.2}
+                                        \def\d{3}
+                                        \pgfmathsetmacro{\W}{\a+\b}
+                                        \pgfmathsetmacro{\H}{\c+\d}
+
+                                        % Helper points (line intersections)
+                                        \coordinate (x1) at (\a,\c);
+                                        \coordinate (x2) at (\b,\d);
+
+                                        \draw (0,0) grid (9,6);
+                                        % Main outline and diagonals
+                                        \draw[very thick, -&gt;] (0,0) -- (x1) node [below right, fill=white, opacity=0.8] {$A\mathbf{x} = (6, 2.2)$};
+                                        \draw[very thick] (x1) -- (\W, \H) -- (x2);
+                                        \draw[very thick, -&gt;] (0,0) -- (x2) node [above left, fill=white, opacity=0.8] {$A\mathbf{y} = (2.5, 3)$};
+                                        
+                                        % Labels
+                                        \node[below left] at (0,0) {$O$};
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                            </figure>
+                                </p>
+                            </solution>
                         </li>
                     </ol>
                     The <term>determinant</term> of a matrix tells us how it changes areas (like the parallelogram we just created). We'll explore how to find it.
@@ -166,16 +237,50 @@
                         <p>
                             What's the total area of the large rectangle?
                         </p>
+                        <solution>
+                            <p>
+                                The area of the large rectangle is given by the product of its width and height, which are <m>a + b</m> and <m>c + d</m> respectively. Therefore, the area of the large rectangle is:
+                                <md>
+                                    <mrow> \text{Total Area} \amp = (a + b)(c + d) </mrow>
+                                    <mrow number="yes" xml:id="total-area"> \amp = ac + ad + bc + bd </mrow>
+                                </md>
+                            </p>
+                        </solution>
                     </li>
                     <li>
                         <p>
-                            Cut out all the coloured triangles and squares. Can you find a helpful way to rearrange them to figure out their combined area?
+                            Cut out all the coloured triangles and squares. Can you find a helpful way to rearrange them to figure out the total coloured area?
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The two red triangles can be combined to form a rectangle with area <m>ac</m>, and the two blue triangles can be combined to form a rectangle with area <m>bd</m>. Thus the combined area is:
+                                <md>
+                                    <mrow> \text{Coloured Area} \amp = \color{red}{\text{red area}} + \color{blue}{\text{blue area}} + \color{orange}{\text{orange area}} </mrow>
+                                    <mrow number="yes" xml:id="coloured-area"> \amp = \color{red}{ac} + \color{blue}{bd} + \color{orange}{2bc} </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                        <note component="lesson-plan">
+                            <p>
+                                Gently guide Learners if they are struggly to find the area. There are many different ways to rearrange the shapes, so encourage Learners to be creative.
+                            </p>
+                        </note>
                     </li>
                     <li>
                         <p>
-                            What's the area of the parallelogram <m>D</m>?
+                            What is the area of the parallelogram <m>D</m>?
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The area of the parallelogram <m>D</m> is given by the total area of the large rectangle minus the coloured area. Thus, using <xref ref="total-area"/> and <xref ref="coloured-area"/>, we have:
+                                <md>
+                                    <mrow> \text{Area of } D \amp = \text{Total Area} - \text{Coloured Area} </mrow>
+                                    <mrow> \amp = (ac + ad + bc + bd) - (ac + bd + 2bc) </mrow>
+                                    <mrow> \amp = ad + bc - 2bc </mrow>
+                                    <mrow> \amp = ad - bc </mrow>
+                                </md>
+                            </p>
+                        </solution>
                     </li>
                 </ol>
                 </p>
@@ -183,16 +288,14 @@
         </statement>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    5 minutes
                 </p>
             </li>
             <li>
@@ -205,20 +308,78 @@
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Make sure Learners recognise the area <m>D = ad - bc</m> from the Learner Experience is the determinant of the matrix <m>A</m>.
                     </p>
                 </li>
-            </ol>
+                <li>
+                    <p>
+                        Stress the connection between determinants and inverses. Relate this to how we cannot divide by zero.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Remind Learners that they only need to find the determinant of 2 by 2 matrices in this course. Point them to <xref ref="det-technology"/> if they are curious about higher dimensions.
+                    </p>
+                </li>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        The <term>determinant</term> measures how an area changes when we apply a matrix to it.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The determinant of a matrix <m>A</m> is denoted by <m>\det{A}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m>, then <m>\det{A} = ad - bc</m>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <paragraphs>
+            <title>The Determinant and the Inverse</title>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            You might recognise this expression from the formula for the inverse of a 2 by 2 matrix. We have: <md>
+                                A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix} \frac{1}{\det{A}}\begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If the determinant of a matrix is zero, then the matrix does not have an inverse.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            This is because the matrix <q>collapses</q> areas to zero, meaning that we cannot reverse the transformation to get back to our original vectors.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </paragraphs>
+    </insight>
 
-    <!-- <insight>
-    </insight> -->
+    <technology xml:id="det-technology">
+        <p> For a visual introduction to the determinant, check out this video, by 3Blue1Brown. It uses a similar visual approach to the one we used in the activity, but also explores how the determinant changes when we apply different transformations to our matrix.</p>
+
+        <video xml:id="yt-list-vars" youtube="Ip3X9LOh2dk"/>
+    </technology>
+    
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
