@@ -72,10 +72,42 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <paragraphs>
+                <title>Work In Pairs</title>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                In your pairs, write your own 2 by 2 matrix <m>M</m>. You can choose any 4 numbers (don't make them too big!) 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Choose one person to be the <term>Oracle</term> and the other to be the <term>Seeker</term>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The <term>Oracle</term> should secretly pick a vector<m>\mathbf{v}</m>, such as <m>\begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>, and compute <m>\mathbf{w} = M\mathbf{v}</m>. The <term>Oracle</term> should then share the vector <m>\mathbf{w}</m> with the <term>Seeker</term>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The <term>Seeker's</term> job is to figure out what the original vector <m>\mathbf{v}</m> was, using only the information about the matrix <m>M</m> and the vector <m>\mathbf{w}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                After a while, switch roles and repeat the process with a new matrix and vector.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -141,6 +173,29 @@
         </solution>
     </example> -->
 
+    <example>
+        <title>Checking an Inverse by Multiplication</title>
+        <statement>
+            <p>
+                Suppose
+                <m>M = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}</m>
+                and
+                <m>M^{-1} = \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix}</m>.
+                Verify that these matrices are inverses by finding <m>MM^{-1}</m> and <m>M^{-1}M</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <md>
+                    <mrow>MM^{-1} &amp;= \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix} \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                    <mrow>&amp;= \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</mrow>
+                </md>
+                Similarly,
+                <m>M^{-1}M = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</m>.
+            </p>
+        </solution>
+    </example>
+
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->
@@ -151,16 +206,131 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>
+                    Let
+                    <m>A = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}</m>
+                    and
+                    <m>A^{-1} = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix}</m>.
+                    Take <m>\mathbf{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Compute <m>\mathbf{y} = A\mathbf{x}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Compute <m>A^{-1}\mathbf{y}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Plot <m>\mathbf{x}</m>, <m>\mathbf{y}</m>, and <m>A^{-1}\mathbf{y}</m> on the same axes and describe what you notice.</p>
+                    </li>
+                </ol>
+            </statement>
             <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p><m>\mathbf{y} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}</m>.</p>
+                    </li>
+                    <li>
+                        <p><m>A^{-1}\mathbf{y} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \mathbf{x}</m>.</p>
+                    </li>
+                    <li>
+                        <p>The final point lands back on <m>\mathbf{x}</m>, showing the inverse undoes the transformation.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    If <m>A\mathbf{x} = \mathbf{b}</m>, then <m>\mathbf{x} = A^{-1}\mathbf{b}</m>. Use this idea to solve for <m>\mathbf{x}</m> when
+                    <m>A^{-1} = \begin{bmatrix} 2 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}</m>
+                    and
+                    <m>\mathbf{b} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <m>\mathbf{x} = A^{-1}\mathbf{b} = \begin{bmatrix} 8 \\ 5 \end{bmatrix}</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The rotation matrix for a <m>90^\circ</m> anticlockwise turn is
+                    <m>R = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}</m>.
+                    What should <m>R^{-1}</m> do to a point?
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Write a matrix for <m>R^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Verify your answer by multiplying <m>RR^{-1}</m>.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p><m>R^{-1}</m> is a <m>90^\circ</m> clockwise rotation:
+                        <m>R^{-1} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}</m>.</p>
+                    </li>
+                    <li>
+                        <p><m>RR^{-1} = I</m>.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The reflection matrix across the <m>x</m>-axis is
+                    <m>F = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}</m>.
+                    Predict what <m>F^{-1}</m> should do.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Write down <m>F^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Verify by multiplication.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p><m>F^{-1} = F</m>.</p>
+                    </li>
+                    <li>
+                        <p><m>F^2 = I</m>.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The scaling matrix
+                    <m>S = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}</m>
+                    stretches the <m>x</m>-coordinate by 2 and the <m>y</m>-coordinate by 3. Write the matrix that undoes this scaling and verify that it is an inverse of <m>S</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <m>S^{-1} = \begin{bmatrix} \tfrac{1}{2} &amp; 0 \\ 0 &amp; \tfrac{1}{3} \end{bmatrix}</m>, and <m>SS^{-1} = I</m>.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 

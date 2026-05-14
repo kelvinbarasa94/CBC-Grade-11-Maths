@@ -40,7 +40,6 @@
             </p>
         </introduction>
     </objectives>
-
     <axiom component="lesson-plan">
         <title>Problem-Solving and Discovery</title>
         <dl>
@@ -773,5 +772,6 @@
 
     <convention>
         <p>This section includes material adapted from "<url href="https://github.com/openstax/osbooks-college-algebra-bundle/tree/e10e6b91143fe884c7c60dc0ad82ef23e1be0aa5/modules/m49433/index.cnxml">Finding the Product of Two Matrices</url>" in Open STAX Precalculus 2e, used under <url href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY-4.0</url>.</p>
-    </convention>
+    </convention> -->
+
 </section>
