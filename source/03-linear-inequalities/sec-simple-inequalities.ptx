@@ -104,12 +104,12 @@
                     </li>
                     <li>
                         <p>
-                            With the remaining money, you want to buy as many <m>\textbf{exercise books}</m> as possible. Each exercise book costs Ksh. <m>50</m>.
+                            With the remaining money, you want to buy as many exercise books as possible. Each exercise book costs Ksh. <m>50</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Discuss, if you will be able to buy <m>6</m> exercise books? Also explain <m>\textbf{why}</m> or <m>\textbf{why not}</m>.
+                            Discuss, if you will be able to buy <m>6</m> exercise books? Also explain why or why not.
                         </p>
                     </li>
                 </ul>
@@ -162,13 +162,10 @@
             Inequalities allow us to compare quantities using symbols like <m>\gt</m> (greater than), <m>\lt</m> (less than), <m>\ge</m> (greater than or equal to), and <m>\le</m> (less than or equal to). Solving a simple linear inequality in one unknown follows the exact same steps as solving a standard equation, such as grouping like terms.
         </p>
         <p>
-            However, there is one critical rule you must always remember: <m>\textbf{Whenever you multiply or divide both sides of an inequality by a negative}</m>
+            However, there is one critical rule you must always remember: Whenever you multiply or divide both sides of an inequality by a negative number,the inequality sign must reverse (flip) its direction.
         </p>
         <p>
-            <m>\textbf{number,the inequality sign must reverse (flip) its direction}</m>.
-        </p>
-        <p>
-            For instance, if <m>\textbf{-x \lt 5}</m>, dividing by <m>-1</m> results in <m>\textbf{x \gt -5}</m>.
+            For instance, if <m>-x \lt 5</m>, dividing by <m>-1</m> results in <m>x \gt -5</m>.
         </p>
     </insight>
 
@@ -213,26 +210,26 @@
                 Solve the following inequality:
             </p>
             <p>
-                <me>3x - 9 \lt 6</me>
+                <me>3x - 9 \lt 6 + x</me>
             </p>
         </statement>
         <solution>
             <p>
-                First you add <m>9</m> to both sides to group the constants:
+                First, we group the variable terms on one side and the constants on the other side. We can do this by subtracting <m>x</m> from both sides and adding <m>9</m> to both sides:
             </p>
             <p>
                 <md>
-                    <mrow>3x \amp \lt 6 + 9</mrow>
-                    <mrow>3x \amp \lt 15</mrow>
+                    <mrow>3x - x \amp \lt 6 + 9</mrow>
+                    <mrow>2x \amp \lt 15</mrow>
                 </md>
             </p>
             <p>
-                Then we divide both sides by <m>3</m>. Since we are dividing by a positive number, the inequality symbol remains unchanged:
+                Then we divide both sides by <m>2</m> to solve for <m>x</m>:
             </p>
             <p>
                 <md>
-                    <mrow>x \amp \lt \frac{15}{3}</mrow>
-                    <mrow>x \amp \lt 5</mrow>
+                    <mrow>x \amp \lt \frac{15}{2}</mrow>
+                    <mrow>x \amp \lt 7.5</mrow>
                 </md>
             </p>
         </solution>
@@ -241,17 +238,38 @@
     <example>
         <statement>
             <p>
-                Solve for <m>\textbf{x}</m> in <m>-4x + 8 \gt 20</m>.
+                <em>Shireri</em> primary school has a handwashing water tank that currently holds <m>80</m> litres of water. The tap has a slight leak and loses water at a rate of <m>4</m> litres every hour. The school security guard wants to ensure there are always strictly more than <m>20</m> litres left in the tank for the afternoon classes.
+            </p>
+            <p>
+                If <m>h</m> represents the number of hours the tank has been leaking, write an inequality for this situation and solve for <m>h</m> to find out how many hours the water will remain above the <m>20</m>-litre mark.
             </p>
         </statement>
         <solution>
             <p>
-                First you subtract <m>8</m> from both sides to group the constants:
+                We can start by writing an expression for the amount of water left in the tank after <m>h</m> hours. Since the tank loses <m>4</m> litres every hour, the amount of water lost after <m>h</m> hours is <m>4h</m>. Therefore, the amount of water left in the tank after <m>h</m> hours can be expressed as:
             </p>
             <p>
                 <md>
-                    <mrow>4x \amp \gt 20 - 8</mrow>
-                    <mrow>4x \amp \gt 12</mrow>
+                    <mrow> \text{Water left} \amp = 80 - 4h </mrow>
+                </md>
+            </p>
+            <p>
+                The security guard wants to ensure that there are always more than <m>20</m> litres left, so we can set up the inequality:
+            </p>
+            <p>
+                <md>
+                    <mrow> 80 - 4h \amp \gt 20</mrow>
+                </md>
+            </p>
+            <p>
+                Next, we solve for <m>h</m>. First, we subtract <m>80</m> from both sides:
+            </p>
+            <p>
+                <md>
+                    <mrow>-4h \amp \gt 20 - 80 </mrow>
+                </md>
+                <md>
+                    <mrow>-4h \amp \gt -60</mrow>
                 </md>
             </p>
             <p>
@@ -259,9 +277,14 @@
             </p>
             <p>
                 <md>
-                    <mrow>x \amp \lt \frac{12}{-4}</mrow>
-                    <mrow>x \amp \lt -3</mrow>
+                    <mrow>h \amp \lt \frac{-60}{-4}</mrow>
                 </md>
+                <md>
+                    <mrow>h \amp \lt 15</mrow>
+                </md>
+            </p>
+            <p>
+                Therefore, the water will remain above the <m>20</m>-litre mark for less than <m>15</m> hours.
             </p>
         </solution>
     </example>
@@ -292,7 +315,7 @@
         <exercise>
             <statement>
                 <p>
-                    A <em>matatu</em> is licensed to carry a maximum of <m>14</m> passengers. If <m>\textbf{p}</m> represents the number of passengers currently in the <em>matatu</em>, write a simple inequality to represent the legal number of passengers it can carry.
+                    A <em>matatu</em> is licensed to carry a maximum of <m>14</m> passengers. If <m>p</m> represents the number of passengers currently in the <em>matatu</em>, write a simple inequality to represent the legal number of passengers it can carry.
                 </p>
             </statement>
             <answer>
@@ -309,7 +332,7 @@
             </statement>
             <answer>
                 <p>
-                    <m>x \ge 5</m> or <m>x \ge \frac{20}{4}</m>
+                    <m>x \ge 5</m>
                 </p>
             </answer>
         </exercise>
@@ -319,10 +342,12 @@
                     <em>Wanjiku</em>, a Grade <m>11</m> student, was asked to solve the inequality <m>-3x + 4 \gt 19</m>. She showed her working as follows:
                 </p>
                 <p>
-                    <m>-3x \gt 19 - 4</m>
-                    <m>-3x \gt 15</m>
-                    <m>x \gt \frac{15}{-3}</m>
-                    <m>x \gt -5</m>
+                    <md>
+                        <mrow>-3x \amp \gt 19 - 4</mrow>
+                        <mrow>-3x \amp \gt 15</mrow>
+                        <mrow>x \amp \gt \frac{15}{-3}</mrow>
+                        <mrow>x \amp \gt -5</mrow>
+                    </md>
                 </p>
                 <p>
                     Is <em>Wanjiku's</em> solution correct? If not, identify the error and provide the correct solution.
@@ -330,7 +355,10 @@
             </statement>
             <answer>
                 <p>
-                    <em>Wanjiku's</em> solution is incorrect. The error occurs in the step where she divides both sides of the inequality by <m>-3</m>. Since she is dividing by a negative number, she should have flipped the inequality symbol from <m>\gt</m> to <m>\lt</m>. The correct solution is:
+                    <em>Wanjiku's</em> solution is incorrect.
+                </p>
+                 <p>
+                    The error occurs in the step where she divides both sides of the inequality by <m>-3</m>. Since she is dividing by a negative number, she should have flipped the inequality symbol from <m>\gt</m> to <m>\lt</m>. The correct solution is:
                 </p>
                 <p>
                     <m>x \lt -5</m>
@@ -345,7 +373,7 @@
             </statement>
             <answer>
                 <p>
-                    Let <m>n</m> represent the number of bags of chick mash.
+                    When <m>n</m> represent the number of bags of chick mash.
                 </p>
                 <p>
                     <m>n \le 4.15</m>
