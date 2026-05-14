@@ -75,29 +75,23 @@
                 <alert>Work in Groups</alert>
             </p>
             <p>
-                
-            </p>
-            <p>
-                <alert>What you need</alert>
-            </p>
-            <p>
-                In groups, choose <m>4</m> members and assigned each of them the following roles:
+                Choose <m>4</m> members and assigned each of them the following roles:
             </p>
             <p>
                 <ul>
                     <li>
                         <p>
-                            Person 1: Chooses a number
+                            Person 1: Chooses a variable number
                         </p>
                     </li>
                     <li>
                         <p>
-                            Person 2: Adds
+                            Person 2:  Choose a number and adds to the the variable chosen by Person 1 
                         </p>
                     </li>
                     <li>
                         <p>
-                            Person 3: Multiplies
+                            Person 3: Multiplies the numbers chosen by Person 1 and Person 2
                         </p>
                     </li>
                     <li>
@@ -108,13 +102,13 @@
                 </ul>
             </p>
             <p>
-                The group will work together to find the secret number chosen by Person 1 (value of <m>x</m>).
+                The group will work together to find the value of the secret number chosen by Person 1 (value of <m>x</m>).
             </p>
             <p>
                 <alert>What to do</alert>
             </p>
             <p>
-                <ol>
+                <ul>
                     <li>
                         <p>
                             Person <m>1</m> chooses a single-digit number <m>x</m>
@@ -146,14 +140,14 @@
                             Person <m>4</m> announces the final result.
                         </p>
                     </li>
-                </ol>
+                </ul>
             </p>
 
         </introduction>
         <task>
             <statement>
                 <p>
-                    If person <m>4</m> says the product is <m>14</m>, can you guess the secret number?
+                    If person <m>4</m> says the product is <m>14</m>, guess the secret number?
                 </p>
             </statement>
         </task>
@@ -180,13 +174,23 @@
         <task>
             <statement>
                 <p>
-                    What method did you use to solve the equations?
-                </p>
-                <p>
-                    What are the advantages of using the quadratic formula compared to other methods of solving quadratic equations?
-                </p>
-                <p>
-                    Can you think of any real-life situations where applying the quadratic formula would be useful?
+                    <ul>
+                        <li>
+                            <p>
+                                 What method did you use to solve the equations?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                 What are the advantages of using the quadratic formula compared to other methods of solving quadratic equations?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Can you think of any real-life situations where applying the quadratic formula would be useful?
+                            </p>
+                        </li>
+                    </ul>
                 </p>
             </statement>
         </task>
@@ -238,9 +242,6 @@
             The quadratic formula is a universal method for solving quadratic equations of the form <m>ax^2 + bx + c = 0</m>
             , particularly when factoring is difficult or impossible. 
             
-        </p>
-        <p>
-            It is derived from the "completing the square" method and provides a direct way to find the roots of any quadratic equation, regardless of whether the coefficients are rational or irrational.
         </p>
         <p>
             The formula is given by:

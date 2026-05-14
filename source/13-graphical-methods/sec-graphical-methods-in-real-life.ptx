@@ -21,7 +21,7 @@
                 <li>
                     <title>Specific Learning Outcomes</title> 
                     <p>
-                        Promote the use of graphical solutions to day to day life
+                        Apply graphical methods (circles, quadratics, simultaneous equations, rates of change, and linearization) to solve real-world problems in various fields.
                     </p>
                 </li>
                 <li component="lesson-plan">
@@ -55,13 +55,13 @@
                 <li>
                     <title>Objective</title>
                     <p>
-                        To apply graphical models (circles and coordinate geometry) to solve a spatial coverage problem in a telecommunications context.
+                        To apply graphical models (circles and simultaneous solutions) to solve spatial coverage and resource optimization problems.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        Facilitate the group work by ensuring learners understand how to translate real-world locations into coordinates and how to represent coverage ranges as circles.
+                        Facilitate the group work by ensuring learners understand how to translate real-world locations into coordinates and how to represent constraints as mathematical boundaries.
                     </p>
                 </li>
             </dl>
@@ -70,13 +70,12 @@
     <!-- Add Activity -->
 
     <activity>
-        <title>The Telecom Architect</title>
         <statement>
             <p>
-                <alert>Work in groups of 4</alert>
+                <alert>Work in groups</alert>
             </p>
             <p>
-                You are network engineers for "GlobalLink Telecom". Your task is to provide signal coverage for a new rural community.
+                You are network engineers for "GlobalLink Telecom". Your task is to provide signal coverage for your rural community.
             </p>
             <p>
                 <alert>What you need</alert>
@@ -124,20 +123,47 @@
                         <p>
                             You have two cell towers. Each tower has a circular coverage range of <m>5</m> km.
                         </p>
+                        <image width="40%">
+                            <latex-image label="Graphical representation of the telecom problem">
+                                \begin{tikzpicture}
+                                    \draw[help lines] (-6,-6) grid (6,6);
+                                    \draw[thick,->] (-6,0) -- (6,0) node[anchor=north west] {x (km)};
+                                    \draw[thick,->] (0,-6) -- (0,6) node[anchor=south east] {y (km)};
+                                    \filldraw[red] (3,4) circle (2pt) node[anchor=south west] {Zone A};
+                                    \filldraw[blue] (-4,-3) circle (2pt) node[anchor=north east] {Zone B};
+                                    \filldraw[green] (0,-5) circle (2pt) node[anchor=north] {Zone C};
+                                \end{tikzpicture}
+                            </latex-image>
+                            
+                        </image>
                     </li>
                     <li>
                         <p>
-                            Decide on the best coordinates to place your two towers so that all three zones receive a signal.
+                            Decide on the best coordinates to place your two towers so that all three zones receive a signal. Hint: Use the equations of circles <m>(x-h)^2 + (y-k)^2 = r^2</m>.
                         </p>
                     </li>
                     <li>
                         <p>
                             Draw the circles representing the coverage area for each tower.
                         </p>
+                        <image width="40%">
+                            <latex-image label="Graphical representation of the telecom problem with coverage circles">
+                                \begin{tikzpicture}
+                                    \draw[help lines] (-6,-6) grid (6,6);
+                                    \draw[thick,->] (-6,0) -- (6,0) node[anchor=north west] {x (km)};
+                                    \draw[thick,->] (0,-6) -- (0,6) node[anchor=south east] {y (km)};
+                                    \filldraw[red] (3,4) circle (2pt) node[anchor=south west] {Zone A};
+                                    \filldraw[blue] (-4,-3) circle (2pt) node[anchor=north east] {Zone B};
+                                    \filldraw[green] (0,-5) circle (2pt) node[anchor=north] {Zone C};
+                                    \draw[thick, dashed] (1,1) circle (5);
+                                    \draw[thick, dashed] (-2,-2) circle (5);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p>
-                            Identify the area where the signals overlap. Discuss: Is overlap good for the users? Is it efficient for the company?
+                            Identify the area where the signals overlap. Discuss: Is overlap good for the users (e.g., seamless handoff)? Is it efficient for the company (e.g., redundant equipment)?
                         </p>
                     </li>
                 </ol>
@@ -160,7 +186,7 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize how graphical methods are used across different professional fields to optimize solutions and visualize data.
+                    To formalize how graphical methods (simultaneous equations, rates of change, and linearization) are used across professional fields.
                 </p>
             </li>
             </dl>
@@ -170,12 +196,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Visualization:</alert> Graphs transform raw data into visual patterns, making it easier to see signal "dead zones" or performance peaks.
+                        <alert>Visualization:</alert> Graphs transform abstract data into visual patterns, revealing critical points like intersections (solutions), vertices (maximums/minimums), and gradients (rates of change).
                     </p>
                 </li>
                 <li>
                     <p>
-                        <alert>Optimization:</alert> In engineering and business, graphs help find the "maximum" or "minimum" values (e.g., maximum profit, minimum waste) within specific constraints.
+                        <alert>Optimization:</alert> Finding the "sweet spot" in business or engineering often requires locating the vertex of a quadratic or the intersection of constraints.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Prediction:</alert> Linearization allows us to take complex, non-linear real-world trends and simplify them into predictable straight-line models.
                     </p>
                 </li>
             </ol>
@@ -185,23 +216,27 @@
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
     <insight>
-        <title>Graphical Solutions in the Real World</title>
         <p>
-            Graphs are not just mathematical exercises; they are essential tools in various industries:
+            Graphical methods are used in countless real-world applications to make informed decisions, optimize outcomes, and predict future trends. Here are just a few examples:
             <ul>
                 <li>
                     <p>
-                        <alert>Telecommunications:</alert> Engineers use signal heat maps and circular models to ensure seamless connectivity and minimize interference.
+                        <alert>Economics:</alert> Analysts use "Break-Even" graphs to find the point where costs and revenue meet, determining the minimum sales needed for profit.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <alert>Sports Science:</alert> Coaches use velocity-time graphs to analyze an athlete's acceleration and identify where they can shave off milliseconds from their time.
+                        <alert>Medicine:</alert> Doctors use growth charts and dosage-response curves to monitor patient health and determine the safe rate of drug metabolism.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <alert>Engineering:</alert> Designers use stress-strain graphs to determine the safety limits of materials like steel and concrete before construction begins.
+                        <alert>Environmental Science:</alert> Scientists use lines of best fit on historical temperature data to predict future climate trends and guide policy.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Sports Science:</alert> Coaches use velocity-time graphs to analyze acceleration, helping athletes find the exact moment to shift their effort for peak performance.
                     </p>
                 </li>
             </ul>
@@ -215,80 +250,244 @@
     <!-- Add at least 3 examples -->
 
     <example>
-        <title>Telecommunications: Signal Handoff</title>
         <statement>
             <p>
-                Two cell towers are located at <m>A(0, 0)</m> and <m>B(8, 0)</m>. Tower A has a range of <m>5</m> km and Tower B has a range of <m>5</m> km. A car is traveling along the <m>x</m>-axis from Tower A to Tower B.
+                A small business produces eco-friendly bags. The total monthly cost <m>C</m> (in KSh) is given by <m>C = 200x + 10000</m>, where <m>x</m> is the number of bags produced. The revenue <m>R</m> from selling the bags is <m>R = 450x</m>.
             </p>
             <p>
-                Determine the interval on the <m>x</m>-axis where the car receives a signal from BOTH towers simultaneously.
+                a) Plot both graphs on the same axes for <m>0 \le x \le 100</m>.
+            </p>
+            <p>
+                b) Use the graph to find the "Break-Even Point" (where <m>R = C</m>).
             </p>
         </statement>
         <solution>
             <p>
-                1. Tower A covers the interval <m>[0-5, 0+5] = [-5, 5]</m> on the <m>x</m>-axis.
+                (a)
+            </p>
+          
+            <image width="70%">                   
+                <latex-image label="Cost and Revenue Functions">
+                    \begin{tikzpicture}[scale=0.09]
+
+                        % Grid
+                        \draw[help lines, dashed, step=20] (0,0) grid (120,60);
+
+                    % Axes
+                    \draw[thick,->] (0,0) -- (125,0)
+                        node[anchor=north, xshift=-30pt, yshift=-18pt] {Number of bags $x$};
+
+                    \draw[thick,->] (0,0) -- (0,64);
+                    \node[rotate=90, anchor=south, xshift=32pt, yshift=-38pt] at (-20,32)
+                        {Cost / Revenue (KSh $\times 1000$)};
+
+                        % Title
+                        \node[font=\bfseries] at (60,68)
+                        {Graphical Representation of the Cost and Revenue Functions};
+
+                        % X-axis tick marks and labels
+                        \foreach \x/\xval in {20/20, 40/40, 60/60, 80/80, 100/100, 120/120} {
+                            \draw[thick] (\x, 1) -- (\x, -1);
+                            \node[anchor=north, yshift=-4pt, font=\small] at (\x, 0) {\xval};
+                        }
+                        \node[anchor=north, yshift=-4pt, font=\small] at (0, 0) {0};
+
+                        % Y-axis tick marks and labels (graph units 10–60 = KSh 10000–60000)
+                        \foreach \y/\yval in {10/10, 20/20, 30/30, 40/40, 50/50, 60/60} {
+                            \draw[thick] (1, \y) -- (-1, \y);
+                            \node[anchor=east, xshift=-4pt, font=\small] at (0, \y) {\yval};
+                        }
+
+                        % Cost function
+                        \draw[blue, thick, dashed]
+                            plot coordinates {
+                                (0,10)
+                                (20,14)
+                                (40,18)
+                                (60,22)
+                                (80,26)
+                                (100,30)
+                                (120,34)
+                            };
+
+                        % Revenue function
+                        \draw[red, thick]
+                            plot coordinates {
+                                (0,0)
+                                (20,9)
+                                (40,18)
+                                (60,27)
+                                (80,36)
+                                (100,45)
+                                (120,54)
+                            };
+
+                        % Labels boxes
+                        \node[draw=blue, rounded corners, text=blue]
+                            at (28,53)
+                            {$C = 200x + 10000$};
+
+                        \node[draw=red, rounded corners, text=red]
+                            at (24,47)
+                            {$R = 450x$};
+
+                        % Cost points
+                        \filldraw[blue] (20,14) circle (1.5pt);
+                        \filldraw[blue] (40,18) circle (1.5pt);
+                        \filldraw[blue] (60,22) circle (1.5pt);
+                        \filldraw[blue] (80,26) circle (1.5pt);
+                        \filldraw[blue] (100,30) circle (1.5pt);
+
+                        % Revenue points
+                        \filldraw[red] (20,9) circle (1.5pt);
+                        \filldraw[red] (40,18) circle (1.5pt);
+                        \filldraw[red] (60,27) circle (1.5pt);
+                        \filldraw[red] (80,36) circle (1.5pt);
+                        \filldraw[red] (100,45) circle (1.5pt);
+
+                        % Blue coordinate labels
+                        \node[blue] at (20,17) {$\left(20,14000\right)$};
+                        \node[blue] at (44,15) {$\left(40,18000\right)$};
+                        \node[blue] at (66,19) {$\left(60,22000\right)$};
+                        \node[blue] at (82,29) {$\left(80,26000\right)$};
+                        \node[blue] at (102,33) {$\left(100,30000\right)$};
+
+                        % Red coordinate labels
+                        \node[red] at (24,6) {$\left(20,9000\right)$};
+                        \node[red] at (40,21) {$\left(40,18000\right)$};
+                        \node[red] at (60,30) {$\left(60,27000\right)$};
+                        \node[red] at (82,39) {$\left(80,36000\right)$};
+                        \node[red] at (104,48) {$\left(100,45000\right)$};
+
+                    \end{tikzpicture}
+                 </latex-image>
+            </image>
+   
+            <p>
+                (b). The intersection point is where <m>450x = 200x + 10000 \implies 250x = 10000 \implies x = 40</m>.
             </p>
             <p>
-                2. Tower B covers the interval <m>[8-5, 8+5] = [3, 13]</m> on the <m>x</m>-axis.
-            </p>
-            <p>
-                3. The overlap is the intersection of these two intervals: <m>[3, 5]</m>.
-            </p>
-            <p>
-                The car receives signals from both towers between <m>x = 3</m> km and <m>x = 5</m> km. This is often where a "handoff" occurs in mobile networks.
+                The break-even point is <m>40</m> bags. Selling more than <m>40</m> bags results in profit.
             </p>
         </solution>
     </example>
 
     <example>
-        <title>Sports Science: Comparing Sprinters</title>
         <statement>
             <p>
-                A sports scientist records the velocity <m>v</m> (m/s) of two runners over <m>5</m> seconds:
-                <ul>
-                    <li>Runner 1: <m>v_1 = 2t</m></li>
-                    <li>Runner 2: <m>v_2 = 0.4t^2</m></li>
-                </ul>
-                Use a graph to determine which runner has a higher velocity at <m>t = 3</m> seconds.
+                The concentration <m>K</m> (mg/L) of a certain medicine in a patient's blood over time <m>t</m> (hours) follows the curve <m>K = -t^2 + 6t + 2</m> for <m>0 \le t \le 6</m>. 
+            </p>
+            <p>
+                Use a graph to estimate the instantaneous rate of change of the concentration at <m>t = 2</m> hours.
             </p>
         </statement>
         <solution>
+            
+                <image width="40%">
+                    <latex-image label="Graphical representation of the drug concentration over time">
+                        \begin{tikzpicture}[scale=0.85]
+
+                            % Grid
+                            \draw[help lines, dashed] (0,0) grid (6,11);
+
+                            % Axes
+                            \draw[thick,->] (0,0) -- (6.8,0);
+                            \node[anchor=north] at (3.4,-0.6) {Time $t$ (hours)};
+
+                            \draw[thick,->] (0,0) -- (0,11.8);
+                            \node[rotate=90, anchor=south] at (-0.9,5.9) {Concentration $K$ (mg/L)};
+
+                            % X-axis ticks and labels
+                            \foreach \x in {1,2,3,4,5,6} {
+                                \draw[thick] (\x, 0.08) -- (\x, -0.08);
+                                \node[anchor=north, yshift=-2pt] at (\x, 0) {\x};
+                            }
+                            \node[anchor=north east, yshift=-2pt] at (0,0) {0};
+
+                            % Y-axis ticks and labels
+                            \foreach \y in {1,2,3,4,5,6,7,8,9,10,11} {
+                                \draw[thick] (0.08, \y) -- (-0.08, \y);
+                                \node[anchor=east, xshift=-2pt] at (0, \y) {\y};
+                            }
+
+                            % Drug concentration curve
+                            \draw[thick, blue]
+                                plot[smooth] coordinates {(0,2) (1,7) (2,10) (3,11) (4,10) (5,7) (6,2)};
+
+                            % Tangent line at (2,10): y = 2x + 6, from x=0 to x=2.5
+                            \draw[red, thick] (0, 6) -- (2.5, 11);
+
+                            % Point of tangency
+                            \filldraw[blue] (2,10) circle (2pt);
+                            \node[anchor=south west] at (2,10) {$(2,10)$};
+
+                            % Tangent label
+                            \node[red, anchor=west] at (0.1, 6.8) {\small tangent at $(2,10)$};
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             <p>
-                Plotting both functions for <m>0 \le t \le 5</m>:
-                <ul>
-                    <li>At <m>t = 3</m>, <m>v_1 = 2(3) = 6</m> m/s.</li>
-                    <li>At <m>t = 3</m>, <m>v_2 = 0.4(3)^2 = 0.4(9) = 3.6</m> m/s.</li>
-                </ul>
+                From the graph, we estimate the gradient of the tangent by choosing two points on the tangent, say <m>(1, 8)</m> and <m>(3, 12)</m>:
+                <me>m = \frac{12 - 8}{3 - 1} = \frac{4}{2} = 2\text{ mg/L per hour}</me>
             </p>
             <p>
-                Runner 1 is faster at 3 seconds. However, as the graph of <m>v_2</m> is a parabola, it will eventually overtake <m>v_1</m> (at <m>t = 5</m>).
+                At 2 hours, the drug concentration is increasing at a rate of 2 mg/L per hour.
             </p>
         </solution>
     </example>
 
     <example>
-        <title>Engineering: Material Safety</title>
         <statement>
             <p>
-                An engineer tests a new alloy. The extension <m>e</m> (mm) of a wire under load <m>L</m> (Newtons) is modeled by <m>e = 0.05L</m>. The wire will permanently deform if the extension exceeds <m>15</m> mm. 
+                A circular support pillar has a cross-section modeled by the equation <m>x^2 + y^2 = 9</m> (units in cm). An engineer needs to install a brace along the line <m>y = x + 3</m>. 
             </p>
             <p>
-                Represent this on a graph and find the maximum safe load.
+                Determine graphically where the brace will touch the edge of the pillar.
             </p>
         </statement>
         <solution>
             <p>
-                1. Plot the linear graph <m>e = 0.05L</m>.
+                To find the intersection points, we can substitute <m>y = x + 3</m> into the circle equation:
+                <me>
+                    x^2 + (x + 3)^2 = 9 \\
+                    x^2 + x^2 + 6x + 9 = 9 \\
+                    2x^2 + 6x = 0 \\
+                    2x(x + 3) = 0
+                </me>
+                This gives us two solutions: <m>x = 0</m> and <m>x = -3</m>.
             </p>
             <p>
-                2. Draw a horizontal line at <m>e = 15</m>.
+                Corresponding <m>y</m> values are:
+                <me>
+                    y = 0 + 3 = 3 \\
+                    y = -3 + 3 = 0
+                </me>
+            </p>
+            
+            <image width="40%">
+                <latex-image label="Graphical representation of the pillar and brace">
+                    \begin{tikzpicture}
+                        \draw[help lines] (-4,-1) grid (4,4);
+                        \draw[thick,->] (-4,0) -- (4,0) node[anchor=north west] {x (cm)};
+                        \draw[thick,->] (0,-1) -- (0,4) node[anchor=south east] {y (cm)};
+                        \draw[thick, dashed] (0,0) circle (3);
+                        \draw[thick, dashed] plot[smooth] coordinates {(-3,0) (0,3)};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            
+            <p>
+                1. Draw the circle with center <m>(0,0)</m> and radius <m>3</m>.
             </p>
             <p>
-                3. The intersection point gives the maximum load:
-                <me>15 = 0.05L \implies L = \frac{15}{0.05} = 300\text{ N}</me>
+                2. Draw the line <m>y = x + 3</m> (intercepts at <m>(0, 3)</m> and <m>(-3, 0)</m>).
             </p>
             <p>
-                The maximum safe load is <m>300</m> N.
+                3. The intersection points on the graph are <m>(0, 3)</m> and <m>(-3, 0)</m>.
+            </p>
+            <p>
+                The brace touches the pillar at these two points.
             </p>
         </solution>
     </example>
@@ -307,80 +506,280 @@
         <exercise>
             <statement>   
                 <p>
-                    The signal strength <m>S</m> (dBm) of a Wi-Fi router at distance <m>d</m> (meters) is modeled by <m>S = -20 \log_{10}(d) - 30</m>. For simplicity, let's use a linear approximation for short distances: <m>S = -5d - 30</m> for <m>1 \le d \le 10</m>.
+                     A farmer records the yield <m>Y</m> of maize (tons) against the amount of fertilizer <m>F</m> (kg) used over 5 years.
+                </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row><cell>Fertilizer <m>F</m></cell><cell>10</cell><cell>20</cell><cell>30</cell><cell>40</cell><cell>50</cell></row>
+                    <row><cell>Yield <m>Y</m></cell><cell>2.1</cell><cell>3.9</cell><cell>6.2</cell><cell>8.1</cell><cell>9.8</cell></row>
+                </tabular>
+                <p>
+                    a) Plot the empirical data and draw a line of best fit.
                 </p>
                 <p>
-                    a) Plot the graph of the linear approximation.
-                </p>
-                <p>
-                    b) A device needs at least <m>-60</m> dBm to stream video. What is the maximum distance from the router?
+                    b) Use your line to predict the yield if 60 kg of fertilizer is used.
                 </p>
             </statement>   
-            <solution>
+            <answer>
                 <p>
-                    a) Points: <m>(1, -35), (5, -55), (10, -80)</m>.
+                    (a)
                 </p>
+                <image width="40%">
+                    <latex-image label="Graphical representation of the fertilizer and yield data">
+                        \begin{tikzpicture}[x=0.12cm, y=0.8cm]
+
+                            % Grid
+                            \draw[help lines, dashed] (0,0) grid[xstep=10, ystep=1] (60,10);
+
+                            % Axes
+                            \draw[thick,->] (0,0) -- (65,0);
+                            \node[anchor=north] at (32,-0.9) {Fertilizer $F$ (kg)};
+
+                            \draw[thick,->] (0,0) -- (0,11);
+                            \node[rotate=90, anchor=south] at (-7,5) {Yield $Y$ (tons)};
+
+                            % X-axis ticks and labels
+                            \foreach \x in {10,20,30,40,50,60} {
+                                \draw[thick] (\x, 0.06) -- (\x, -0.06);
+                                \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
+                            }
+                            \node[anchor=north east, yshift=-3pt] at (0,0) {0};
+
+                            % Y-axis ticks and labels
+                            \foreach \y in {1,2,3,4,5,6,7,8,9,10} {
+                                \draw[thick] (0.6, \y) -- (-0.6, \y);
+                                \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
+                            }
+
+                            % Data points
+                            \filldraw[red] (10,2.1) circle (2pt);
+                            \filldraw[red] (20,3.9) circle (2pt);
+                            \filldraw[red] (30,6.2) circle (2pt);
+                            \filldraw[red] (40,8.1) circle (2pt);
+                            \filldraw[red] (50,9.8) circle (2pt);
+
+                            % Line of best fit
+                            \draw[blue, thick, dashed] (0,0.2) -- (50,10);
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
                 <p>
-                    b) Set <m>S = -60</m>:
-                    <me>-60 = -5d - 30 \implies -30 = -5d \implies d = 6\text{ meters}</me>
+                    b) Extending the line to <m>F = 60</m>, the predicted yield is approximately <m>12.0</m> tons.
                 </p>
-            </solution>             
+                    <image width="40%">
+                        <latex-image label="Extended graphical representation of the fertilizer and yield data">
+                            \begin{tikzpicture}[x=0.12cm, y=0.8cm]
+
+                                % Grid
+                                \draw[help lines, dashed] (0,0) grid[xstep=10, ystep=1] (60,12);
+
+                                % Axes
+                                \draw[thick,->] (0,0) -- (65,0);
+                                \node[anchor=north] at (32,-0.9) {Fertilizer $F$ (kg)};
+
+                                \draw[thick,->] (0,0) -- (0,13);
+                                \node[rotate=90, anchor=south] at (-7,6) {Yield $Y$ (tons)};
+
+                                % X-axis ticks and labels
+                                \foreach \x in {10,20,30,40,50,60} {
+                                    \draw[thick] (\x, 0.06) -- (\x, -0.06);
+                                    \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
+                                }
+                                \node[anchor=mid east, yshift=0pt] at (0,0) {0};
+
+                                % Y-axis ticks and labels
+                                \foreach \y in {1,2,3,4,5,6,7,8,9,10,11,12} {
+                                    \draw[thick] (0.6, \y) -- (-0.6, \y);
+                                    \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
+                                }
+
+                                % Data points
+                                \filldraw[red] (10,2.1) circle (2pt);
+                                \filldraw[red] (20,3.9) circle (2pt);
+                                \filldraw[red] (30,6.2) circle (2pt);
+                                \filldraw[red] (40,8.1) circle (2pt);
+                                \filldraw[red] (50,9.8) circle (2pt);
+
+                                % Line of best fit extended to x=60
+                                % Original line: y = 0.196x + 0.2, extended to (60, 11.96)
+                                \draw[blue, thick, dashed] (0,0.2) -- (60,12);
+
+                                % Predicted point at x=60
+                                \filldraw[green!60!black] (60,12) circle (2.5pt);
+                                \node[anchor=west, xshift=3pt, text=green!60!black] at (60,12)
+                                    {$(60,\ 12)$ tons};
+
+                                % Dotted reading lines for the prediction
+                                \draw[gray, dotted, thick] (60,0) -- (60,12);
+                                \draw[gray, dotted, thick] (0,12) -- (60,12);
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+            </answer>             
         </exercise>        
         <exercise>
             <statement>
                 <p>
-                    A gymnast's height <m>h</m> (meters) during a vault is given by <m>h = -5t^2 + 10t + 1</m>, where <m>t</m> is time in seconds.
+                  A toy rocket is launched. Its height <m>h</m> (meters) after <m>t</m> seconds is <m>h = -5t^2 + 20t</m>.
                 </p>
                 <p>
-                    a) Plot the graph for <m>0 \le t \le 2</m>.
+                    a) Plot the graph for <m>0 \le t \le 4</m>.
                 </p>
                 <p>
-                    b) Use the graph to find the maximum height reached and the time it occurs.
+                    b) Use the graph to find the roots of the equation. What do these roots represent in terms of the rocket's flight?
                 </p>
             </statement>
-            <solution>
+            <answer>
                 <p>
-                    a) The graph is a downward opening parabola.
+                    (a)
+                </p>
+                <image width="40%">
+                    <latex-image label="Graphical representation of the rocket's flight">
+                        \begin{tikzpicture}[x=1.2cm, y=0.35cm]
+
+                            % Grid
+                            \draw[help lines, dashed] (0,0) grid[xstep=1, ystep=2] (4,20);
+
+                            % Axes
+                            \draw[thick,->] (0,0) -- (4.8,0);
+                            \node[anchor=north] at (2.4,-1.2) {Time $t$ (seconds)};
+
+                            \draw[thick,->] (0,0) -- (0,22);
+                            \node[rotate=90, anchor=south] at (-0.9,11) {Height $h$ (metres)};
+
+                            % X-axis ticks and labels
+                            \foreach \x in {1,2,3,4} {
+                                \draw[thick] (\x, 0.3) -- (\x, -0.3);
+                                \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
+                            }
+                            \node[anchor=mid east, yshift=0pt] at (0,0) {0};
+
+                            % Y-axis ticks and labels
+                            \foreach \y in {2,4,6,8,10,12,14,16,18,20} {
+                                \draw[thick] (0.07, \y) -- (-0.07, \y);
+                                \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
+                            }
+
+                            % Parabola: h = -5t^2 + 20t
+                            \draw[blue, thick]
+                                plot[smooth, samples=100, domain=0:4]
+                                (\x, {-5*\x*\x + 20*\x});
+
+                            % Vertex point
+                            \filldraw[red] (2,20) circle (2.5pt);
+                            \node[anchor=south west, text=red] at (2,20) {$(2,\ 20)$};
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    b) The roots (where <m>h = 0</m>) are <m>t = 0</m> and <m>t = 4</m>.
                 </p>
                 <p>
-                    b) The vertex is at <m>t = \frac{-10}{2(-5)} = 1</m> second.
+                    The roots represent the time of launch (<m>t=0</m>) and the time the rocket hits the ground (<m>t=4</m>).
                 </p>
-                <p>
-                    Max height = <m>-5(1)^2 + 10(1) + 1 = 6</m> meters.
-                </p>
-            </solution>
+            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    A company produces two types of solar panels. Let <m>x</m> be Type A and <m>y</m> be Type B. The production constraints are:
-                    <ul>
-                        <li><m>x + y \le 50</m> (Total units)</li>
-                        <li><m>2x + y \le 80</m> (Labor hours)</li>
-                    </ul>
-                    Identify the feasible region graphically and find the point that maximizes profit if Type A yields <dollar/>100 and Type B yields <dollar/>150.
+                     A company's production cost follows a power law <m>y = ax^b</m>. They take the logarithm of both sides to get <m>\log y = \log a + b \log x</m>. 
+                     They plot <m>\log y</m> against <m>\log x</m> and get a straight line with gradient <m>0.5</m> and intercept <m>2</m>.
+                </p>
+                <p>
+                    Identify the constants <m>a</m> and <m>b</m> and write the original equation.
                 </p>
             </statement>
-            <solution>
+            <answer>
+                <ul>
+                    <li>
+                        <p>
+                            The gradient <m>b = 0.5</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The intercept <m>\log a = 2 \implies a = 10^2 = 100</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The original equation is <m>y = 100x^{0.5}</m> or <m>y = 100\sqrt{x}</m>.
+                        </p>
+                    </li>
+                </ul>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
                 <p>
-                    1. Plot <m>x + y = 50</m> (intercepts at <m>50, 50</m>).
+                    A car's speed <m>v</m> (km/h) over time <m>t</m> (seconds) is given by <m>v = 3t^2 - 12t + 9</m>.
                 </p>
                 <p>
-                    2. Plot <m>2x + y = 80</m> (intercepts at <m>40, 80</m>).
+                    a) Plot the speed-time graph for <m>0 \le t \le 4</m>.
                 </p>
                 <p>
-                    3. Vertices of the feasible region: <m>(0, 0), (40, 0), (30, 20), (0, 50)</m>.
+                    b) Use the graph to find the time when the car is at rest and when it reaches its maximum speed.
+                </p>
+
+            </statement>
+            <answer>
+                <p>
+                    a) 
+                </p>
+                    <image width="40%">
+                        <latex-image label="Graphical representation of the car's speed">
+                            \begin{tikzpicture}[x=1.2cm, y=0.45cm]
+
+                                % Grid
+                                \draw[help lines, dashed] (0,-5) grid[xstep=1, ystep=1] (4,10);
+
+                                % Axes
+                                \draw[thick,->] (0,0) -- (4.8,0);
+                                \node[anchor=north] at (2.4,-0.8) {Time $t$ (seconds)};
+
+                                \draw[thick,->] (0,-5) -- (0,11.5);
+                                \node[rotate=90, anchor=south] at (-0.9,3) {Speed $v$ (km/h)};
+
+                                % X-axis ticks and labels
+                                \foreach \x in {1,2,3,4} {
+                                    \draw[thick] (\x, 0.2) -- (\x, -0.2);
+                                    \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
+                                }
+                                \node[anchor=mid east, yshift=0pt] at (0,0) {0};
+
+                                % Y-axis ticks and labels (negative and positive)
+                                \foreach \y in {-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10} {
+                                    \draw[thick] (0.07, \y) -- (-0.07, \y);
+                                    \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
+                                }
+
+                                % Parabola: v = 3t^2 - 12t + 9
+                                \draw[blue, thick]
+                                    plot[smooth, samples=100, domain=0:4]
+                                    (\x, {3*\x*\x - 12*\x + 9});
+
+                                % Vertex point at (2, -3)
+                                \filldraw[red] (2,-3) circle (2.5pt);
+                                \node[anchor=north west, text=red] at (2,-3) {$(2,\ -3)$};
+
+                                % x-intercepts at t=1 and t=3
+                                \filldraw[green!60!black] (1,0) circle (2.5pt);
+                                \node[anchor=south west, text=green!60!black] at (1,0) {$(1,\ 0)$};
+                                \filldraw[green!60!black] (3,0) circle (2.5pt);
+                                \node[anchor=south east, text=green!60!black] at (3,0) {$(3,\ 0)$};
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                <p>
+                    b) The car is at rest when <m>v = 0</m>, which occurs at <m>t = 1</m> and <m>t = 3</m>. The maximum speed occurs at the vertex of the parabola, which is at <m>t = 2</m>.
                 </p>
                 <p>
-                    4. Check profits:
-                    <ul>
-                        <li><m>(40, 0) \to 4000</m></li>
-                        <li><m>(30, 20) \to 3000 + 3000 = 6000</m></li>
-                        <li><m>(0, 50) \to 7500</m></li>
-                    </ul>
-                    Maximum profit is at <m>(0, 50)</m>, i.e., producing 50 units of Type B only.
+                    At <m>t = 2</m>, the speed is <m>v = -3</m> km/h, which indicates the car is moving backward at its maximum speed.      
                 </p>
-            </solution>
+            </answer>
         </exercise>
     </exercises>
 

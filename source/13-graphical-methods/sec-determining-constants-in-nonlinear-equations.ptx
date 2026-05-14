@@ -68,10 +68,11 @@
     <activity>
         <statement>
             <p>
-                <alert>Work in Groups: Cracking the Code</alert>
+                <alert>Work in Groups</alert>
             </p>
             <p>
-                A group of engineers found that the relationship between the pressure <m>P</m> and volume <m>V</m> of a gas follows the law <m>PV^k = C</m>. They plotted a graph of <m>\lg P</m> against <m>\lg V</m> to "straighten" the data.
+                A group of engineers found that the relationship between the pressure <m>P</m> and volume <m>V</m> of a gas follows the law <m>PV^k = C</m>. 
+                They plotted a graph of <m>\log P</m> against <m>\log V</m> to "straighten" the data.
             </p>
             <p>
                 The resulting straight line passes through the points <m>(1, 2.3)</m> and <m>(2, 0.9)</m>.
@@ -159,6 +160,32 @@
                 </li>
             </ul>
         </p>
+        <p>
+            <alert>How to determine constants in non-linear equations:</alert>
+        </p>
+        <ol>
+            <li><p>Identify the linearized form of the equation.</p>
+            <p>
+                For example, if the original equation is <m>y = ax^n</m>, the linearized form is <m>\log y = n \log x + \log a</m>.
+            </p></li>
+            <li><p>Calculate the gradient and intercept from the straightened graph.</p>
+            <p>
+                For instance, if the line passes through <m>(X_1, Y_1)</m> and <m>(X_2, Y_2)</m>, the gradient is:
+                <me>m = \frac{Y_2 - Y_1}{X_2 - X_1}</me>
+                Then, using one point (e.g., <m>(X_1, Y_1)</m>) the intercept is:
+                <me>Y_1 = mX_1 + c \implies c = Y_1 - mX_1</me>
+            </p></li>
+            <li><p>Map the gradient and intercept back to the original constants using the relationships established in the linearized form.</p>
+            <p>
+                For the example of <m>y = ax^n</m>, if the gradient is <m>m</m> and the intercept is <m>c</m>, then:
+               <md>
+                <mrow> n =\amp m </mrow>
+                <mrow> a =\amp 10^c </mrow>
+                <mrow> y = 10^c \times x^m </mrow>
+               </md>
+            </p></li>
+        </ol>
+
     </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
@@ -166,7 +193,8 @@
     <example>
         <statement>
             <p>
-                The variables <m>x</m> and <m>y</m> are related by the equation <m>y = kx^n</m>. When <m>\lg y</m> is plotted against <m>\lg x</m>, a straight line is obtained which passes through <m>(0.2, 0.7)</m> and <m>(0.5, 1.3)</m>. Find the values of <m>k</m> and <m>n</m>.
+                The variables <m>x</m> and <m>y</m> are related by the equation <m>y = kx^n</m>. 
+                When <m>\log y</m> is plotted against <m>\log x</m>, a straight line is obtained which passes through <m>(0.2, 0.7)</m> and <m>(0.5, 1.3)</m>. Find the values of <m>k</m> and <m>n</m>.
             </p>
         </statement>
         <solution>
@@ -174,7 +202,7 @@
                 <ol>
                     <li>
                         <p>
-                            Linearize: <m>\lg y = n\lg x + \lg k</m>.
+                            Linearize: <m>\log y = n\log x + \log k</m>.
                         </p>
                     </li>
                     <li>
@@ -185,12 +213,14 @@
                     </li>
                     <li>
                         <p>
-                            Find the y-intercept (<m>\lg k</m>):
+                            Find the y-intercept (<m>\log k</m>):
                             Substitute <m>n = 2</m> and the point <m>(0.2, 0.7)</m> into <m>Y = mX + c</m>:
-                            <me>0.7 = 2(0.2) + \lg k</me>
-                            <me>0.7 = 0.4 + \lg k</me>
-                            <me>\lg k = 0.3</me>
-                            <me>k = 10^{0.3} \approx 2</me>
+                            <md>
+                            <mrow>0.7 = 2(0.2) + \log k</mrow>
+                            <mrow>0.7 = 0.4 + \log k</mrow>
+                            <mrow>\log k = 0.3</mrow>
+                            <mrow>k = 10^{0.3} = 2</mrow>
+                            </md>
                         </p>
                     </li>
                 </ol>
@@ -202,53 +232,45 @@
     <example>
         <statement>
             <p>
-                An experimental law is known to be <m>y = Ae^{bx}</m>. A graph of <m>\ln y</m> against <m>x</m> has a gradient of <m>-0.5</m> and passes through the point <m>(2, 4)</m>. Calculate <m>A</m> and <m>b</m>.
+                An experimental law is known to be <m>y = Ak^x</m>. A graph of <m>\log y</m> against <m>x</m> has a gradient of <m>-0.5</m> and passes through the point <m>(2, 4)</m>. Calculate <m>A</m> and <m>k</m>.
             </p>
         </statement>
         <solution>
             <p>
-                <ol>
-                    <li>
-                        <p>
-                            Linearize using natural logs: <m>\ln y = bx + \ln A</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Gradient <m>m = b = -0.5</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Find the intercept (<m>\ln A</m>):
-                            Substitute <m>m = -0.5</m> and <m>(2, 4)</m>:
-                            <me>4 = -0.5(2) + \ln A</me>
-                            <me>4 = -1 + \ln A</me>
-                            <me>\ln A = 5</me>
-                            <me>A = e^5 \approx 148.4</me>
-                        </p>
-                    </li>
-                </ol>
-                The values are <m>b = -0.5</m> and <m>A = 148.4</m>.
-            </p>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-            <p>
-                The variables <m>x</m> and <m>y</m> are connected by the law <m>y = \frac{a}{x} + b</m>. A student plots <m>y</m> against <m>1/x</m> and finds the line of best fit. The line has a gradient of 10 and crosses the y-axis at <m>(0, -2)</m>. Determine the values of <m>a</m> and <m>b</m>.
-            </p>
-        </statement>
-        <solution>
-            <p>
-                The equation is <m>y = a(1/x) + b</m>.
-                Comparing to <m>Y = mX + c</m> where <m>X = 1/x</m>:
-                <ul>
-                    <li><p>Gradient <m>m = a = 10</m>.</p></li>
-                    <li><p>Intercept <m>c = b = -2</m>.</p></li>
-                </ul>
-                The final equation is <m>y = \frac{10}{x} - 2</m>.
+            <ol>
+                <li>
+                <p>
+                    Linearize: <m>\log y = x \log k + \log A</m>.
+                </p>
+                </li>
+                <li>
+                <p>
+                    The gradient is <m>\log k = -0.5</m>.
+                </p>
+                </li>
+                <li>
+                <p>
+                    Find the intercept (<m>\log A</m>):
+                    Substitute the gradient and point <m>(2, 4)</m> into <m>Y = mX + c</m>:
+                    <md>
+                    <mrow>4 = -0.5(2) + \log A</mrow>
+                    <mrow>4 = -1 + \log A</mrow>
+                    <mrow>\log A = 5</mrow>
+                    <mrow>A = 10^5 = 100000</mrow>
+                    </md>
+                </p>
+                </li>
+                <li>
+                <p>
+                    Find <m>k</m>:
+                    <md>
+                    <mrow>\log k = -0.5</mrow>
+                    <mrow>k = 10^{-0.5} = 0.316</mrow>
+                    </md>
+                </p>
+                </li>
+            </ol>
+            The values are <m>A = 100000</m> and <m>k = 0.316</m>.
             </p>
         </solution>
     </example>
@@ -259,13 +281,13 @@
         <exercise>
             <statement>
                 <p>
-                    A straight line graph is obtained by plotting <m>\lg y</m> against <m>\lg x</m>. The line passes through <m>(1, 3)</m> and <m>(3, 7)</m>. If the relationship is <m>y = ax^n</m>, find <m>a</m> and <m>n</m>.
+                    A straight line graph is obtained by plotting <m>\log y</m> against <m>\log x</m>. The line passes through <m>(1, 3)</m> and <m>(3, 7)</m>. If the relationship is <m>y = ax^n</m>, find <m>a</m> and <m>n</m>.
                 </p>
             </statement>
             <answer>
                 <p>
                     <me>n = \frac{7 - 3}{3 - 1} = 2</me>
-                    <me>3 = 2(1) + \lg a \implies \lg a = 1 \implies a = 10^1 = 10</me>
+                    <me>3 = 2(1) + \log a \implies \log a = 1 \implies a = 10^1 = 10</me>
                     Result: <m>n=2, a=10</m>.
                 </p>
             </answer>
@@ -273,7 +295,7 @@
         <exercise>
             <statement>
                 <p>
-                    The intensity <m>I</m> of light from a source at a distance <m>d</m> is given by <m>I = kd^n</m>. Data was plotted as <m>\lg I</m> vs <m>\lg d</m>, and the line has a gradient of <m>-2</m> and an intercept on the <m>\lg I</m> axis of <m>1.5</m>. 
+                    The intensity <m>I</m> of light from a source at a distance <m>d</m> is given by <m>I = kd^n</m>. Data was plotted as <m>\log I</m> vs <m>\log d</m>, and the line has a gradient of <m>-2</m> and an intercept on the <m>\log I</m> axis of <m>1.5</m>. 
                     <ol>
                         <li><p>Find the values of <m>k</m> and <m>n</m>.</p></li>
                         <li><p>Calculate the intensity when the distance is 5 units.</p></li>
@@ -282,8 +304,23 @@
             </statement>
             <answer>
                 <ol>
-                    <li><p><m>n = -2</m>, <m>\lg k = 1.5 \implies k = 10^{1.5} \approx 31.62</m>.</p></li>
-                    <li><p><m>I = 31.62 \times (5)^{-2} = \frac{31.62}{25} \approx 1.265</m>.</p></li>
+                    <li>
+                        <p>
+                        <md>
+                            <mrow>n =\amp -2</mrow>
+                            <mrow>\log k =\amp 1.5 \implies k = 10^{1.5} = 31.62</mrow>
+                        </md>
+                       </p> 
+                    </li> 
+                    <li>
+                        <p>
+                        <md>
+                            <mrow>I =\amp 31.62 \times (5)^{-2}</mrow>
+                            <mrow> =\amp \frac{31.62}{25}</mrow>
+                            <mrow> =\amp 1.265</mrow>
+                        </md> 
+                       </p>
+                    </li>
                 </ol>
             </answer>
         </exercise>
@@ -295,8 +332,11 @@
             </statement>
             <answer>
                 <p>
-                    <m>a = 3</m>.
-                    <me>14 = 3(4) + b \implies b = 14 - 12 = 2</me>
+                    <md>
+                        <mrow>a =\amp 3</mrow>
+                        <mrow>14 =\amp 3(4) + b</mrow>
+                        <mrow> b =\amp 2</mrow>
+                    </md>
                     Result: <m>a=3, b=2</m>.
                 </p>
             </answer>
