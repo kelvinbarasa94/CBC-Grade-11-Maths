@@ -200,4 +200,404 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+
+    <activity xml:id="activity-discovering-function-rule">
+
+        <introduction>
+            <p>
+                A function follows a rule that connects every input value to exactly one output value. 
+                In this activity, you will investigate a pattern in a table of values and try to discover the function rule yourself.
+            </p>
+        </introduction>
+
+        <task>
+            <p>
+                Study the table below carefully.
+            </p>
+
+            <tabular top="minor" bottom="minor">
+                <row>
+                    <cell><alert>Input <m>x</m></alert></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>4</m></cell>
+                </row>
+
+                <row>
+                    <cell><alert>Output <m>f(x)</m></alert></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>5</m></cell>
+                    <cell><m>7</m></cell>
+                    <cell><m>9</m></cell>
+                </row>
+            </tabular>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Describe the pattern you observe in the output values.
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    How is each output related to its corresponding input?
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Write a function rule that connects the input values to the output values.
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Use the discovered rule to determine:
+                </p>
+                <p>
+                    <ol marker="i">
+                        <li><p><m>f(50)</m></p></li>
+                        <li><p><m>f(88)</m></p></li>
+                    </ol>
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Explain your reasoning for the function rule you discovered.
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Compare your function rule with those of your classmates. 
+                    Explain how you discovered the relationship between the inputs and outputs. 
+                </p>
+            </statement>
+        </task>
+
+    </activity>
+    
+    <definition xml:id="def-function-notation">
+        <statement>
+            <p>
+                A <term>function</term> <m>f</m> is a rule that assigns exactly one output value to each input value. 
+                If the function maps elements from a set <m>A</m> to a set <m>B</m>, we write
+            </p>
+
+            
+            <p>
+                <me>f: A \rightarrow B</me>
+            </p>
+
+            <p>
+                which is read as “<q>a function from <m>A</m> to <m>B</m></q>.” 
+                The set <m>A</m> is called the <term>domain</term>, while the set <m>B</m> is called the 
+                <term>co-domain</term>. The collection of all actual outputs produced by the function is called the 
+                <term>range</term> or <term>image</term> of the function.
+            </p>
+
+            <p>
+                An element from the domain is called an <term>argument</term> or <term>input value</term>. 
+                If <m>x \in A</m>, then the output produced by the function is written as <m>f(x)</m>, 
+                which is read as “<q>f of x</q>.” The value <m>f(x)</m> is called the 
+                <term>function value</term>, <term>image</term>, or <term>output</term>.
+            </p>
+
+            <p>
+                Since a function assigns exactly one output to each input, two different outputs cannot come from the same input. 
+                However, different inputs may produce the same output.
+            </p>
+        </statement>
+    </definition>
+
+    <p>
+        Function notation provides a simple and organized way of describing how a function works. 
+        The letter naming the function, such as <m>f</m>, tells us which rule is being used, while the expression inside the parentheses represents the input value being substituted into the rule.
+    </p>
+
+    <p>
+        You can think of a function as a machine: an input value is placed into the function, the rule performs an operation, and a single output value is produced.
+    </p>
+
+    <figure xml:id="fig-function-machine-notation">
+        <caption>The input-output process of a function using function notation.</caption>
+        <image xml:id="img-function-machine" width="60%">
+            <latex-image>
+                \begin{tikzpicture}[&gt;=stealth, font=\sffamily]
+
+                    % Input arrow
+                    \draw[-&gt;, ultra thick, blue!80!black] (-4,0) -- (-1.8,0);
+                    \node[align=center] at (-3,0.9)
+                    {\textbf{Input}\\$x \in A$};
+
+                    % Function box
+                    \draw[thick, rounded corners=10pt, fill=blue!10]
+                    (-1.8,-1.5) rectangle (1.8,1.5);
+
+                    \node[align=center] at (0,0)
+                    {\textbf{Function}\\$f$};
+
+                    % Output arrow
+                    \draw[-&gt;, ultra thick, orange!80!black] (1.8,0) -- (4,0);
+
+                    \node[align=center] at (3,0.9)
+                    {\textbf{Output}\\$f(x) \in B$};
+
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+
+    <p>
+        The usefulness of function notation becomes clearer when we evaluate functions. 
+        To evaluate a function, we replace the input variable with a given value or expression and simplify the result.
+    </p>
+
+    <example xml:id="ex-eval-positive">
+
+        <statement>
+            <p>
+                Given the function <m>f(x)=4x-7</m>, determine <m>f(3)</m>.
+            </p>
+        </statement>
+
+        <solution>
+            <p>
+                Replace every occurrence of <m>x</m> with <m>3</m>.
+            </p>
+
+            <p>
+                <me>f(3)=4(3)-7</me>
+                <me>f(3)=12-7</me>
+                <me>f(3)=5</me>
+            </p>
+
+            <p>
+                Therefore, the function value corresponding to the input <m>3</m> is <m>5</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example xml:id="ex-eval-negative">
+
+        <statement>
+            <p>
+                Given <m>g(t)=t^2+2t</m>, evaluate <m>g(-4)</m>.
+            </p>
+        </statement>
+
+        <solution>
+            <p>
+                Substitute <m>-4</m> for every occurrence of <m>t</m>.
+            </p>
+
+            <p>
+                <me>g(-4)=(-4)^2+2(-4)</me>
+                <me>g(-4)=16-8</me>
+                <me>g(-4)=8</me>
+            </p>
+
+            <p>
+                Hence, <m>g(-4)=8</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example xml:id="ex-eval-expression">
+        <statement>
+            <p>
+                If <m>h(x)=5x+1</m>, determine <m>h(a+3)</m>.
+            </p>
+        </statement>
+
+        <solution>
+            <p>
+                The input can also be an algebraic expression. 
+                Replace <m>x</m> with <m>a+3</m>.
+            </p>
+
+            <p>
+                <me>h(a+3)=5(a+3)+1</me>
+                <me>h(a+3)=5a+15+1</me>
+                <me>h(a+3)=5a+16</me>
+            </p>
+
+            <p>
+                Therefore, <m>h(a+3)=5a+16</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example xml:id="ex-function-notation-word">
+        <statement>
+            <p>
+                A taxi company charges a fixed fee of <m>200</m> shillings and an additional 
+                <m>50</m> shillings per kilometre travelled. The total fare is given by
+            </p>
+
+            <p>
+                <me>F(k)=50k+200</me>
+            </p>
+
+            <p>
+                where <m>k</m> represents the number of kilometres travelled. Find <m>F(6)</m>.
+            </p>
+        </statement>
+
+        <solution>
+            <p>
+                Substitute <m>6</m> for <m>k</m>.
+            </p>
+
+            <p>
+                <me>F(6)=50(6)+200</me>
+                <me>F(6)=300+200</me>
+                <me>F(6)=500</me>
+            </p>
+
+            <p>
+                Therefore, the cost of travelling <m>6</m> kilometres is 
+                <m>500</m> shillings.
+            </p>
+        </solution>
+    </example>
+
+    <exercises xml:id="exercises-function-notation">
+        <exercise>
+            <statement>
+                <p>
+                    If <m>f(x)=4x-1</m>, determine <m>f(5)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>19</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Given <m>g(x)=x^2+2x</m>, evaluate <m>g(-3)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>3</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Let <m>h(t)=3t+7</m>. Find <m>h(0)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>7</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    If <m>p(x)=\frac{x-4}{2}</m>, determine <m>p(10)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>3</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Given <m>m(x)=2x^2-3</m>, evaluate <m>m(-2)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>5</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Let <m>f(x)=5x+2</m>. Determine <m>f(a)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>5a+2</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    If <m>g(x)=3x-4</m>, find <m>g(k+2)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>3k+2</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Given <m>h(x)=x^2+1</m>, determine <m>h(2a)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>4a^2+1</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A mobile network charges <m>10</m> shillings per minute for a call and a fixed connection fee of <m>5</m> shillings. 
+                    The total cost is given by <m>C(t)=10t+5</m>, where <m>t</m> is the number of minutes. Find <m>C(8)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>85</m></p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A farmer sells eggs at <m>15</m> shillings each. If the total amount earned is represented by 
+                    <m>E(n)=15n</m>, where <m>n</m> is the number of eggs sold, determine <m>E(24)</m>.
+                </p>
+            </statement>
+
+            <answer>
+                <p><m>360</m></p>
+            </answer>
+        </exercise>
+
+
+    </exercises>
+
+
 </section>
