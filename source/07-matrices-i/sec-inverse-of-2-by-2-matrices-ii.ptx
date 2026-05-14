@@ -2,6 +2,7 @@
 
 <section xml:id="sec-inverse-of-2-by-2-matrices-ii" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Inverse of 2 by 2 Matrices II</title>
+
     <objectives component="outcomes">
         <introduction>
             <p>
@@ -44,81 +45,351 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Teaching Idea</title>
+                <p>
+                    This Learner Experience uses productive failure and guided discovery. Students first try to invent the inverse formula by reverse-engineering a matrix that undoes another matrix. The point is not that every pair succeeds immediately, but that their attempts create a need for the formula and make its pieces meaningful.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Do not give the formula at the start. Instead, keep students anchored on the equation <m>AX=I</m>. Prompt them to multiply matrices entry by entry, notice that the two columns of <m>X</m> can be solved separately, and connect each part of the final formula to a step in the algebra.
+                </p>
+            </li>
+            <li>
+                <title>Materials Needed</title>
+                <p>One printed activity sheet per pair, pens or pencils, and board space for collecting student findings.</p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
+        <title>The Undo Machine</title>
         <statement>
+            <p>
+                In arithmetic, every number has an undo. Multiplying by <m>3</m> can be undone by multiplying by <m>\frac{1}{3}</m>. Their product is <m>1</m>, the do-nothing number.
+            </p>
+            <p>
+                Matrices have the same idea. The identity matrix <m>I</m> is the do-nothing matrix. A matrix's inverse is its undo. In this activity, you will figure out what that undo matrix looks like and why the formula works.
+            </p>
+            <p>
+                We want to solve
+                <me>
+                    A A^{-1}=I, \qquad \text{that is} \qquad
+                    \begin{bmatrix}a &amp; b \\ c &amp; d\end{bmatrix}
+                    \begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}
+                    =
+                    \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}.
+                </me>
+                Your job is to find <m>e</m>, <m>f</m>, <m>g</m>, and <m>h</m> in terms of <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m>.
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
-            </li>
-            </dl>
-        </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+    <activity xml:id="undo-machine-specific-case">
+        <title>Part 1: Warm-up with a Specific Case</title>
+        <statement>
+            <p>
+                Work with your partner. Let
+                <me>A=\begin{bmatrix}2 &amp; 3 \\ 1 &amp; 4\end{bmatrix}.</me>
+                We want to find a mystery matrix
+                <me>X=\begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}</me>
+                so that <m>AX=I</m>.
+            </p>
+            <p>
+                That means
+                <me>
+                    \begin{bmatrix}2 &amp; 3 \\ 1 &amp; 4\end{bmatrix}
+                    \begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}
+                    =
+                    \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}.
+                </me>
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>Multiply out the left side. You will get four expressions, one for each entry of the result.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>
+                                \begin{bmatrix}2e+3g &amp; 2f+3h \\ e+4g &amp; f+4h\end{bmatrix}
+                                =
+                                \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}.
+                            </me>
+                        </p>
+                    </solution>
+                </li>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Notice that the left column of <m>X</m>, which contains <m>e</m> and <m>g</m>, and the right column of <m>X</m>, which contains <m>f</m> and <m>h</m>, can be solved separately. Write out the two systems of equations.
                     </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            Left column:
+                            <me>2e+3g=1, \qquad e+4g=0.</me>
+                            Right column:
+                            <me>2f+3h=0, \qquad f+4h=1.</me>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Solve each system using substitution, elimination, or another method you know.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            From the left column, <m>e=\frac{4}{5}</m> and <m>g=-\frac{1}{5}</m>. From the right column, <m>f=-\frac{3}{5}</m> and <m>h=\frac{2}{5}</m>.
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Write down your mystery matrix <m>X</m>. Then verify it works by computing <m>AX</m>.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>
+                                X=\begin{bmatrix}\frac{4}{5} &amp; -\frac{3}{5} \\ -\frac{1}{5} &amp; \frac{2}{5}\end{bmatrix}
+                                =\frac{1}{5}\begin{bmatrix}4 &amp; -3 \\ -1 &amp; 2\end{bmatrix}.
+                            </me>
+                            Multiplying <m>AX</m> gives the identity matrix.
+                        </p>
+                    </solution>
                 </li>
             </ol>
-        </paragraphs>
-    </axiom> -->
+            <p>
+                <em>Check-in:</em> compare your matrix <m>X</m> with another pair before moving on.
+            </p>
+        </statement>
+    </activity>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <activity xml:id="undo-machine-spot-pattern">
+        <title>Part 2: Spot the Pattern</title>
+        <statement>
+            <p>
+                Now repeat the same process for these two matrices:
+                <me>
+                    B=\begin{bmatrix}5 &amp; 2 \\ 3 &amp; 1\end{bmatrix}, \qquad
+                    C=\begin{bmatrix}1 &amp; 0 \\ 2 &amp; 3\end{bmatrix}.
+                </me>
+                For each matrix, solve <m>AX=I</m> to find <m>X</m>.
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>Record the values of <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> for each matrix.</p>
+                </li>
+                <li>
+                    <p>Write the inverse you found for each matrix.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>
+                                A^{-1}=\frac{1}{5}\begin{bmatrix}4 &amp; -3 \\ -1 &amp; 2\end{bmatrix}, \qquad
+                                B^{-1}=\frac{1}{-1}\begin{bmatrix}1 &amp; -2 \\ -3 &amp; 5\end{bmatrix}
+                                =\begin{bmatrix}-1 &amp; 2 \\ 3 &amp; -5\end{bmatrix},
+                            </me>
+                            <me>
+                                C^{-1}=\frac{1}{3}\begin{bmatrix}3 &amp; 0 \\ -2 &amp; 1\end{bmatrix}
+                                =\begin{bmatrix}1 &amp; 0 \\ -\frac{2}{3} &amp; \frac{1}{3}\end{bmatrix}.
+                            </me>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Look at the top-left and bottom-right entries of each inverse. What do you notice?</p>
+                    <solution component="lesson-plan">
+                        <p>The diagonal entries appear to come from swapping <m>a</m> and <m>d</m>.</p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Look at the top-right and bottom-left entries. What do you notice?</p>
+                    <solution component="lesson-plan">
+                        <p>The off-diagonal entries appear to become <m>-b</m> and <m>-c</m>.</p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Look at the denominators. Can you express the denominator using <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m>?</p>
+                    <solution component="lesson-plan">
+                        <p>The denominator is <m>ad-bc</m>.</p>
+                    </solution>
+                </li>
+            </ol>
+        </statement>
+    </activity>
 
-    <!-- <insight>
-    </insight> -->
+    <activity xml:id="undo-machine-general-formula">
+        <title>Part 3: Derive the General Formula</title>
+        <statement>
+            <p>
+                Now derive the formula in general. Let
+                <me>
+                    A=\begin{bmatrix}a &amp; b \\ c &amp; d\end{bmatrix}, \qquad
+                    X=\begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}, \qquad
+                    AX=I.
+                </me>
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>Write out the four equations you get from <m>AX=I</m>.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>
+                                ae+bg=1, \quad af+bh=0, \quad ce+dg=0, \quad cf+dh=1.
+                            </me>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Solve for <m>e</m> and <m>g</m> from the left-column system. Use elimination.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            The left-column system is
+                            <me>ae+bg=1, \qquad ce+dg=0.</me>
+                            Eliminate <m>g</m> by multiplying the first equation by <m>d</m> and the second by <m>b</m>:
+                            <me>ade+bdg=d, \qquad bce+bdg=0.</me>
+                            Subtract to get <m>(ad-bc)e=d</m>, so <m>e=\frac{d}{ad-bc}</m>. A similar elimination gives <m>g=\frac{-c}{ad-bc}</m>.
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Solve for <m>f</m> and <m>h</m> from the right-column system.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            The right-column system is
+                            <me>af+bh=0, \qquad cf+dh=1.</me>
+                            Solving gives <m>f=\frac{-b}{ad-bc}</m> and <m>h=\frac{a}{ad-bc}</m>.
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>What expression keeps appearing in every denominator?</p>
+                    <solution component="lesson-plan">
+                        <p><m>ad-bc</m></p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Write the inverse of <m>A</m> as a single formula.</p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <me>
+                                A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d &amp; -b \\ -c &amp; a\end{bmatrix}, \qquad \text{where } ad-bc\neq 0.
+                            </me>
+                        </p>
+                    </solution>
+                </li>
+            </ol>
+        </statement>
+    </activity>
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <axiom component="lesson-plan">
+        <title>Whole-Class Consolidation</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>7 minutes</p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Ask two or three pairs to share what they found. Then write the formula inverse formula.
+                    Ask, <q>Where did this come from? Which step in your algebra gave you this?</q>
+                </p>
+            </li>
+            <li>
+                <title>Key Questions</title>
+                <p>
+                    Ask, <q>What happens if <m>ad - bc</m> equals zero? What would that mean in your system of equations?</q> Let students suggest ideas such as no unique solution or parallel equations, then connect this to the idea of a non-invertible matrix.
+                </p>
+            </li>
+            <li>
+                <title>Mnemonic</title>
+                <p>
+                    Introduce <em>Swap, Negate, Divide</em> only after the derivation: swap the diagonal entries, negate the off-diagonal entries, and divide by <m>ad-bc</m>.
+                </p>
+            </li>
+        </dl>
+    </axiom>
+    <insight>
+        <p>
+            The formula for the inverse of the 2 by 2 matrix <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m> is:
+            <md>
+                A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}d \amp -b \\ -c \amp a \end{bmatrix}
+            </md>
+            This only exists if <m>ad - bc \neq 0</m>.
+        </p>
+        <p>
+            You can remember this formula by the mnemonic <em>Swap, Negate, Divide</em>: 
+            <dl>
+                <li>
+                    <title>Swap</title>
+                    <p>
+                        Swap the positions of the diagonal entries <m>a</m> and <m>d</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Negate</title>
+                    <p>
+                        Negate the off-diagonal entries <m>b</m> and <m>c</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Divide</title>
+                    <p>
+                        Divide each entry by <m>ad-bc</m>.
+                    </p>
+                </li>
+            </dl>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
+    <example>
+        <statement>
+            <p>
+                Your friend used a matrix to encode a secret message. She multiplied a vector of numbers by the matrix
+                <me>M=\begin{bmatrix}3 &amp; 1 \\ 5 &amp; 2\end{bmatrix}</me>
+                to scramble it. After encoding, she got the message vector
+                <me>\begin{bmatrix}11 \\ 19\end{bmatrix}.</me>
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>Find <m>M^{-1}</m> using your new formula.</p>
+                    <solution>
+                        <p>
+                            <m>\det(M)=3(2)-1(5)=1</m>, so
+                            <me>M^{-1}=\begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}.</me>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Use <m>M^{-1}</m> to decode the message by computing <m>M^{-1}\begin{bmatrix}11 \\ 19\end{bmatrix}</m>.</p>
+                    <solution>
+                        <p>
+                            <me>
+                                \begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}
+                                \begin{bmatrix}11 \\ 19\end{bmatrix}
+                                =
+                                \begin{bmatrix}3 \\ 2\end{bmatrix}.
+                            </me>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>What was the original vector?</p>
+                    <solution>
+                        <p>The original vector was <m>\begin{bmatrix}3 \\ 2\end{bmatrix}</m>.</p>
+                    </solution>
+                </li>
+                <li>
+                    <p>Extension: Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}</m>?</p>
+                    <solution>
+                        <p>
+                            No. This matrix has <m>ad - bc = 2(2)-4(1)=0</m>, so it has no inverse. If a matrix has no inverse, there is no reliable undo step for decoding.
+                        </p>
+                    </solution>
+                </li>
+            </ol>
+        </statement>
+    </example>
 
     <example>
         <statement>
@@ -238,8 +509,6 @@
             </ol>
         </solution>
     </example>
-
-    <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->
 
@@ -623,45 +892,8 @@
         </exercise>        
     </exercises>
 
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
-
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
-
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
 </section>

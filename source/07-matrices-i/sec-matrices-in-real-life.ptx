@@ -207,7 +207,7 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            What do you think will happen to the number of infections in each city as time goes on? What might <m>A^10 \mathbf{x}_10</m> look like?
+                            What do you think will happen to the number of infections in each city as time goes on? What might <m>A^{10} \mathbf{x}_{10}</m> look like?
                         </p>
                         <note component="lesson-plan">
                             <p>
