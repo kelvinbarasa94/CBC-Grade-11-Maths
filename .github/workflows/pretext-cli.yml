@@ -36,7 +36,7 @@ jobs:
 
                 tlmgr option repository "$REPO"
                 tlmgr update --self
-                tlmgr install tkz-euclide
+                tlmgr install tkz-euclide tikz-3dplot
                   
             - name: install local ptx files
               run: pretext --version
