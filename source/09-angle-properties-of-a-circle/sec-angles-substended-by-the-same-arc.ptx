@@ -42,6 +42,108 @@
     </objectives>
 
     <!-- [LP] Add guidance on activity -->
+     <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <p>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    20 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To use physical, dynamic modeling to visually and tactilely discover the Angle at the Centre Theorem and the Angles in the Same Segment Theorem.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Facilitate material distribution. Guide groups to keep their baseline rubber band anchored at the same two "boundary pins" while they stretch their "circumference bands" to different points on the rim. 
+                </p>
+            </li>
+        </dl>
+        </p>
+    </axiom>
+
+    <activity xml:id="act-dynamic-circle-geoboard">
+        <statement>
+            <p><strong>Learner Experience: The Elastic Circle Investigation</strong></p>
+            
+            <p><strong>Work in Groups:</strong></p>
+            <p>
+                This activity must be carried out in collaborative learning groups of 3 to 4 students. Allocate roles within your group: 
+                <ul>
+                    <li><p><strong>The Builder:</strong> Manipulates the board, pins, and bands.</p></li>
+                    <li><p><strong>The Measurer:</strong> Uses the protractor to read angles accurately.</p></li>
+                    <li><p><strong>The Scribe:</strong> Records coordinates, angles, and group observations.</p></li>
+                    <li><p><strong>The Presenter:</strong> Explains the group's findings to the rest of the class.</p></li>
+                </ul>
+            </p>
+
+            <p><strong>Materials Needed:</strong></p>
+            <p>
+                Each group will require the following local materials:
+                <ul>
+                    <li><p>One circular wooden board or thick piece of cardboard (minimum 30 cm diameter).</p></li>
+                    <li><p>12 push-pins or small nails spaced evenly around the perimeter of the circle (representing hours on a clock face), plus 1 pin pushed firmly into the exact center <m>O</m>.</p></li>
+                    <li><p>3 elastic rubber bands of different colors (or non-stretchy colored strings and paperclips).</p></li>
+                    <li><p>A standard 180-degree protractor.</p></li>
+                    <li><p>A ruler or straight-edge.</p></li>
+                </ul>
+            </p>
+
+            <p><strong>Step-by-Step Practical Investigation:</strong></p>
+            <ol>
+                <li>
+                    <p>
+                        <strong>Anchor the Base:</strong> Place your board flat on the desk. Select two perimeter pins at the bottom of the board to be your anchor points, <m>A</m> and <m>B</m> (for example, the "5 o'clock" and "7 o'clock" positions). 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Create the Central Angle:</strong> Take your first rubber band (Color 1). Stretch it from pin <m>A</m>, around the center pin <m>O</m>, and back to pin <m>B</m>. This forms the central angle <m>\angle AOB</m>. Measure this angle using your protractor and record it.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Create the Circumference Angle:</strong> Take your second rubber band (Color 2). Stretch it from the same anchor pin <m>A</m>, all the way to a pin <m>P</m> on the upper opposite side of the circle (e.g., the "12 o'clock" position), and back down to anchor pin <m>B</m>. Measure the angle <m>\angle APB</m> at pin <m>P</m> and record it.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Analyze the Ratio:</strong> Divide the measurement of the central angle by the circumference angle:
+                    </p>
+                    <me>\text{Ratio} = \frac{\angle AOB}{\angle APB}</me>
+                    <p>
+                        What whole number does this ratio approximate?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>The Moving Vertex:</strong> Take your third rubber band (Color 3). Stretch it from <m>A</m>, to a different upper pin <m>Q</m> (e.g., the "2 o'clock" position), and back to <m>B</m>. Measure the angle <m>\angle AQB</m>. What do you notice when you compare the value of <m>\angle AQB</m> with <m>\angle APB</m>?
+                    </p>
+                </li>
+            </ol>
+
+            <p><strong>Group Discussion and Reporting Questions:</strong></p>
+            <ul>
+                <li>
+                    <p>
+                        How does the "slackness" or "sharpness" of the rubber band triangle change physically as you stretch it to the center versus stretching it to the far boundary?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Formulate a general rule describing what happens to the angle at the boundary when the vertex point slides from one boundary pin to another, while staying anchored on the same baseline arc <m>AB</m>.
+                    </p>
+                </li>
+            </ul>
+        </statement>
+    </activity>
+     
 
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
@@ -107,8 +209,103 @@
     </axiom> -->
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
+     <axiom component="lesson-plan">
+        <title>Structured Instruction</title>
+        <p>
+            <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    10 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To formalize the concepts and properties learners discovered in the anchor task.
+                </p>
+            </li>
+            </dl>
+        </p>
+        <paragraphs>
+            <title>Key Takeaways &amp; Teacher Connection</title>
+            <ol>
+                <li>
+                    <p>
+                        <alert>Connecting to Learner Work:</alert> Collect measured values from different groups on the board. Highlight that regardless of circle size, the ratio of the center angle to the boundary angle is consistently <m>2:1</m>.
+                    </p>
+                </li>
+            </ol>
+        </paragraphs>
+    </axiom>
 
+    <!-- <insight xml:id="insight-double-angle-theorem">
+        <p>
+            <strong>Core Circle Theorem: The "Double Angle" Connection</strong>
+        </p>
+        <p>
+            The most fundamental relationship in circle geometry is the connection between the angle at the center and the angle at the edge (circumference). 
+        </p>
+        <p>
+            Imagine anchoring two string ends on the boundary of a circle at points <m>A</m> and <m>B</m>:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    If you pull the strings to meet exactly at the center point <m>O</m>, you form a wide, open central angle <m>\angle AOB</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If you stretch those same strings much further back to meet at any point <m>P</m> on the opposite far edge of the circle, the angle "pinches" and becomes narrower.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Because the center <m>O</m> is physically closer to the arc than the far wall is, the angle at the center is always exactly <strong>twice</strong> as large as the angle at the circumference:
+        </p>
+        <me>\text{Angle at the Centre} = 2 \times \text{Angle at the Circumference}</me>
+        <me>\angle AOB = 2 \times \angle APB</me>
+        <p>
+            Furthermore, as long as you stay on that same curved major segment boundary (points <m>P</m>, <m>Q</m>, and <m>R</m>), your viewing angle does not change:
+        </p>
+        <me>\angle APB = \angle AQB = \angle ARB</me>
+    </insight> -->
+<insight xml:id="insight-angles-same-arc">
+        <p>
+            <strong>Core Circle Theorem: Angles Standing on the Same Arc</strong>
+        </p>
+        <p>
+            When two or more angles are drawn from the same standing arc to any points on the remaining part of the circle's circumference, those angles are exactly equal in measure.
+        </p>
+        <p>
+            This is widely known as the <strong>"Bow-Tie"</strong> or <strong>"Butterfly"</strong> theorem due to the distinct geometric shape formed by the intersecting chords.
+        </p>
+        
+        <p><strong>Areas of Concern &amp;</strong></p>
+        <ul>
+            <li>
+                <p>
+                    <strong>The "Same Segment" Boundary Rule:</strong> The vertices of the angles must lie in the <em>same segment</em> (usually the major segment). If one vertex is on the major arc and another is on the minor arc, they are no longer equal; instead, they become supplementary (adding up to <m>180^\circ</m>) because they form a cyclic quadrilateral.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Touching the Circumference:</strong> Every vertex of the subtended angles <em>must</em> lie exactly on the outer boundary of the circle. If a vertex stops short of the circumference or goes past it, the theorem does not apply.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Hidden Overlaps:</strong> In complex multi-line circle problems, the "bow-tie" shape might be rotated, stretched, or partially hidden by other chords. Advise learners to physically trace the two arms of an angle down to their "landing points" on the circumference to identify their standing arc. If two angles share the exact same landing points, they are equal.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Whenever you are stuck on a circle geometry proof, find the baseline arc and trace upwards to locate your equal angles!
+        </p>
+    </insight>
     <!-- <insight>
+     
     </insight> -->
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
@@ -116,6 +313,145 @@
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
+     <example xml:id="eg-same-arc-direct">
+        <statement>
+            <!-- <p><strong>Example 1</strong></p> -->
+            <p>
+                Points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> lie on the circumference of a circle in that order. Chords <m>AC</m> and <m>BD</m> intersect at point <m>X</m> inside the circle. If the angle <m>\angle ABD = 38^\circ</m>, find the measure of <m>\angle ACD</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Identify the arc that subtends both angles:
+            </p>
+            <ul>
+                <li><p>The angle <m>\angle ABD</m> stands on the arc <m>AD</m>.</p></li>
+                <li><p>The angle <m>\angle ACD</m> also stands on the arc <m>AD</m>.</p></li>
+            </ul>
+            <p>
+                By the Angles in the Same Segment Theorem, angles subtended by the same arc at the circumference are equal:
+            </p>
+            <me>\angle ACD = \angle ABD</me>
+            <p>
+                Since <m>\angle ABD = 38^\circ</m>, it follows directly that:
+            </p>
+            <me>\angle ACD = 38^\circ</me>
+        </solution>
+    </example>
+
+    <example xml:id="eg-same-arc-algebraic-bowtie">
+        <statement>
+            <!-- <p><strong>Example 2</strong></p> -->
+            <p>
+                Four points <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m> are positioned on a circle. Chords <m>PR</m> and <m>QS</m> cross each other. The angle subtended by arc <m>SR</m> at point <m>P</m> is <m>\angle SPR = 3x + 10^\circ</m> and at point <m>Q</m> is <m>\angle SQR = 5x - 12^\circ</m>. Solve for <m>x</m> and determine the physical size of these angles.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Since both angles <m>\angle SPR</m> and <m>\angle SQR</m> are subtended by the same boundary arc <m>SR</m> at the circumference, they must be equal:
+            </p>
+            <me>\angle SPR = \angle SQR</me>
+            <p>
+                Substitute the given algebraic expressions:
+            </p>
+            <me>3x + 10 = 5x - 12</me>
+            <p>
+                Isolate the variable terms:
+            </p>
+            <me>10 + 12 = 5x - 3x</me>
+            <me>22 = 2x</me>
+            <me>x = 11</me>
+            <p>
+                Calculate the actual size of the angles by substituting <m>x = 11</m> back into either expression:
+            </p>
+            <me>\angle SPR = 3(11) + 10 = 33 + 10 = 43^\circ</me>
+            <me>\angle SQR = 5(11) - 12 = 55 - 12 = 43^\circ</me>
+            <p>
+                The value of <m>x</m> is <m>11</m>, and both angles measure <m>43^\circ</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example xml:id="eg-same-arc-triangle-system">
+        <statement>
+            <!-- <p><strong>Example 3</strong></p> -->
+            <p>
+                In a circle, points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> are arranged such that chords <m>AC</m> and <m>BD</m> intersect at <m>E</m>. If <m>\angle BAC = 45^\circ</m> and <m>\angle AEB = 80^\circ</m>, find the measure of <m>\angle BDC</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Let us analyze triangle <m>ABE</m> first to find the angle <m>\angle ABD</m> (which is the same as <m>\angle ABE</m>):
+            </p>
+            <p>
+                The sum of angles in triangle <m>ABE</m> is <m>180^\circ</m>:
+            </p>
+            <me>\angle BAE + \angle AEB + \angle ABE = 180^\circ</me>
+            <me>45^\circ + 80^\circ + \angle ABE = 180^\circ</me>
+            <me>125^\circ + \angle ABE = 180^\circ</me>
+            <me>\angle ABE = 55^\circ \implies \angle ABD = 55^\circ</me>
+            <p>
+                Now, identify the relationship between <m>\angle ABD</m> and the target angle <m>\angle BDC</m> (which is the same as <m>\angle ADC</m>):
+            </p>
+            <ul>
+                <li><p>The angle <m>\angle ABD</m> is subtended by arc <m>AD</m> at the circumference.</p></li>
+                <li><p>The angle <m>\angle ACD</m> is also subtended by arc <m>AD</m>.</p></li>
+            </ul>
+            <p>
+                However, looking closely at the diagram, the target angle is <m>\angle BDC</m>. Let's identify its subtending arc:
+            </p>
+            <ul>
+                <li><p><m>\angle BDC</m> stands on the arc <m>BC</m>.</p></li>
+                <li><p>The angle <m>\angle BAC</m> also stands on the arc <m>BC</m>.</p></li>
+            </ul>
+            <p>
+                Applying the Angles in the Same Segment Theorem:
+            </p>
+            <me>\angle BDC = \angle BAC</me>
+            <p>
+                Since <m>\angle BAC = 45^\circ</m>, it follows directly that:
+            </p>
+            <me>\angle BDC = 45^\circ</me>
+        </solution>
+    </example>
+    <example xml:id="eg-same-arc-system-algebra">
+            <statement>
+                <p>
+                    Two distinct angles on a circumference, <m>\angle PQS</m> and <m>\angle PRS</m>, stand on the same arc <m>PS</m>. If <m>\angle PQS = 3a + 2b</m> and <m>\angle PRS = a + 4b</m> where the physical measure of <m>\angle PQS = 54^\circ</m>, find the values of constants <m>a</m> and <m>b</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since both angles stand on the same arc <m>PS</m> at the circumference, they must be equal to each other:
+                </p>
+                <me>\angle PQS = \angle PRS</me>
+                <p>
+                    We are given that <m>\angle PQS = 54^\circ</m>, which means both algebraic expressions are equal to <m>54</m>:
+                </p>
+                <me>3a + 2b = 54 \quad \text{--- (Equation 1)}</me>
+                <me>a + 4b = 54 \quad \text{--- (Equation 2)}</me>
+                <p>
+                    We can solve this system of linear equations. Multiply Equation 1 by <m>2</m> to match the <m>b</m> terms:
+                </p>
+                <me>6a + 4b = 108 \quad \text{--- (Equation 3)}</me>
+                <p>
+                    Subtract Equation 2 from Equation 3:
+                </p>
+                <me>(6a + 4b) - (a + 4b) = 108 - 54</me>
+                <me>5a = 54</me>
+                <me>a = 10.8</me>
+                <p>
+                    Substitute <m>a = 10.8</m> back into Equation 2 to find <m>b</m>:
+                </p>
+                <me>10.8 + 4b = 54</me>
+                <me>4b = 54 - 10.8</me>
+                <me>4b = 43.2</me>
+                <me>b = 10.8</me>
+                <p>
+                    The constants are <m>a = 10.8</m> and <m>b = 10.8</m>.
+                </p>
+            </solution>
+        </example>
 
     <!-- <example>
         <statement>
@@ -147,6 +483,171 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
+     <exercises xml:id="ex-same-arc-only-practice">
+
+        <exercise>
+            <statement>
+                <p>
+                    On a circular radar display, two sensor beams originate from the same boundary points <m>A</m> and <m>B</m>. One beam meets the outer ring at target point <m>P</m> and the other meets at target point <m>Q</m>. If the angle measured at target <m>P</m> is <m>\angle APB = 44^\circ</m>, calculate the angle <m>\angle AQB</m> measured at target <m>Q</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Both angles <m>\angle APB</m> and <m>\angle AQB</m> are subtended at the circumference by the exact same boundary arc <m>AB</m>.
+                </p>
+                <p>
+                    According to the theorem, angles standing on the same arc are equal in measure:
+                </p>
+                <me>\angle AQB = \angle APB = 44^\circ</me>
+                <p>
+                    The measure of the angle <m>\angle AQB</m> is <m>44^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Four points <m>W</m>, <m>X</m>, <m>Y</m>, and <m>Z</m> are spaced sequentially on a circle. Chords <m>WY</m> and <m>XZ</m> cross at an intersection point <m>E</m>. If <m>\angle XWZ = 27^\circ</m>, identify which other angle in the circle must be exactly <m>27^\circ</m> and write down your geometric reasoning.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Trace the arms of the angle <m>\angle XWZ</m> back to their endpoints on the circumference. The angle stands on the arc <m>XZ</m>.
+                </p>
+                <p>
+                    Now locate the other angle that has its vertex on the circumference and stands on the same arc <m>XZ</m>. This is angle <m>\angle XYZ</m>.
+                </p>
+                <p>
+                    By the theorem that angles standing on the same arc are equal:
+                </p>
+                <me>\angle XYZ = \angle XWZ = 27^\circ</me>
+                <p>
+                    The angle <m>\angle XYZ</m> (or <m>\angle XYE</m>) is <m>27^\circ</m> because both stand on arc <m>XZ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Two angles on the circumference of a circle stand on the same arc <m>MN</m>. The first angle is <m>\angle MKN = 3k + 12^\circ</m> and the second is <m>\angle MLN = 5k - 8^\circ</m>. Solve for <m>k</m> and determine the actual measure of the angles.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since both angles stand on the same arc <m>MN</m> at the circumference, they must be equal:
+                </p>
+                <me>\angle MKN = \angle MLN</me>
+                <me>3k + 12 = 5k - 8</me>
+                <p>
+                    Isolate the terms with variable <m>k</m>:
+                </p>
+                <me>12 + 8 = 5k - 3k</me>
+                <me>20 = 2k</me>
+                <me>k = 10</me>
+                <p>
+                    Substitute <m>k = 10</m> back into either equation to calculate the angle measure:
+                </p>
+                <me>\angle MKN = 3(10) + 12 = 30 + 12 = 42^\circ</me>
+                <p>
+                    The value of <m>k</m> is <m>10</m>, and both angles measure <m>42^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    In a circle, chords <m>PR</m> and <m>QS</m> cross at point <m>T</m> inside the circle. If the angle <m>\angle SPQ = 68^\circ</m> and the vertical angle of the intersection is <m>\angle PTQ = 82^\circ</m>, find the measure of <m>\angle PRQ</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Let us first analyze triangle <m>PTQ</m>. The angle <m>\angle PTQ = 82^\circ</m> and <m>\angle SPQ = 68^\circ</m> (which is the same as <m>\angle TPQ = 68^\circ</m>).
+                </p>
+                <p>
+                    Calculate the third angle <m>\angle TQP</m> in triangle <m>PTQ</m>:
+                </p>
+                <me>\angle TQP = 180^\circ - (82^\circ + 68^\circ)</me>
+                <me>\angle TQP = 180^\circ - 150^\circ = 30^\circ</me>
+                <p>
+                    Note that the angle <m>\angle TQP</m> is the same as <m>\angle SQP</m>. This angle stands on the boundary arc <m>SP</m>.
+                </p>
+                <p>
+                    Identify the standing arc for the target angle <m>\angle PRQ</m> (which is <m>\angle SRQ</m>):
+                </p>
+                <ul>
+                    <li><p><m>\angle PRQ</m> stands on the arc <m>PQ</m>.</p></li>
+                    <li><p>The angle <m>\angle PSQ</m> also stands on the arc <m>PQ</m>.</p></li>
+                </ul>
+                <p>
+                    Let's find the measure of <m>\angle PSQ</m> (which is <m>\angle PST</m>). In triangle <m>PTS</m>, the vertical angle <m>\angle PTS = \angle PTQ = 82^\circ</m> (vertically opposite). 
+                </p>
+                <p>
+                    However, we can look at the standing arcs directly:
+                </p>
+                <ul>
+                    <li><p><m>\angle PRQ</m> stands on arc <m>PQ</m>.</p></li>
+                    <li><p><m>\angle PSQ</m> stands on arc <m>PQ</m>.</p></li>
+                </ul>
+                <p>
+                    Also:
+                </p>
+                <ul>
+                    <li><p><m>\angle SPQ = 68^\circ</m> stands on arc <m>SQ</m>.</p></li>
+                    <li><p><m>\angle SRQ</m> must also stand on arc <m>SQ</m>, which means <m>\angle SRQ = 68^\circ</m>.</p></li>
+                </ul>
+                <p>
+                    Now let's trace the angle <m>\angle SQP = 30^\circ</m>, which stands on arc <m>SP</m>. The angle <m>\angle SRP</m> (which is <m>\angle PRQ</m>) also stands on arc <m>SP</m>.
+                </p>
+                <p>
+                    Therefore, by the theorem:
+                </p>
+                <me>\angle PRQ = \angle SQP = 30^\circ</me>
+                <p>
+                    The measure of the angle <m>\angle PRQ</m> is <m>30^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    An arc <m>AB</m> subtends two angles at the circumference of a circle, <m>\angle APB = x^2 - 10^\circ</m> and <m>\angle AQB = 3x + 18^\circ</m>. Set up a quadratic equation, solve for the positive value of <m>x</m>, and calculate the size of <m>\angle APB</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since both angles stand on the same arc <m>AB</m> at the circumference, they are equal:
+                </p>
+                <me>x^2 - 10 = 3x + 18</me>
+                <p>
+                    Rearrange the terms to form a standard quadratic equation (<m>ax^2 + bx + c = 0</m>):
+                </p>
+                <me>x^2 - 3x - 10 - 18 = 0</me>
+                <me>x^2 - 3x - 28 = 0</me>
+                <p>
+                    Factor the quadratic expression (find two numbers that multiply to <m>-28</m> and add to <m>-3</m>, which are <m>-7</m> and <m>4</m>):
+                </p>
+                <me>(x - 7)(x + 4) = 0</me>
+                <p>
+                    This gives two possible solutions:
+                </p>
+                <me>x = 7 \quad \text{or} \quad x = -4</me>
+                <p>
+                    Since we are looking for the positive value of <m>x</m>, we select <m>x = 7</m>.
+                </p>
+                <p>
+                    Calculate the actual angle size:
+                </p>
+                <me>\angle APB = (7)^2 - 10 = 49 - 10 = 39^\circ</me>
+                <p>
+                    The positive value of <m>x</m> is <m>7</m>, and the angle size is <m>39^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- <exercises>
         <exercise>
