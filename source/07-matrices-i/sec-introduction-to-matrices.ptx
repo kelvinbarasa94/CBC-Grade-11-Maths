@@ -89,7 +89,7 @@
                             <me>
                                 \begin{bmatrix} 
                                 2 &amp; 5 &amp; 0 &amp; 1 \\ 
-                                \xcancel{8} &amp; ⑪ &amp; \xcancel{6} &amp; \xcancel{7} \\ 
+                                \xcancel{8} &amp; &#9322; &amp; \xcancel{6} &amp; \xcancel{7} \\ 
                                 4 &amp; 7 &amp; 2 &amp; 3 \\ 
                                 6 &amp; 9 &amp; 4 &amp; 5 
                                 \end{bmatrix}
@@ -110,7 +110,7 @@
                             <me>
                                 \begin{bmatrix} 
                                 2 &amp; \xcancel{5} &amp; 0 &amp; 1 \\ 
-                                \xcancel{8} &amp; ⑪ &amp; \xcancel{6} &amp; \xcancel{7} \\ 
+                                \xcancel{8} &amp; &#9322; &amp; \xcancel{6} &amp; \xcancel{7} \\ 
                                 4 &amp; \xcancel{7} &amp; 2 &amp; 3 \\ 
                                 6 &amp; \xcancel{9} &amp; 4 &amp; 5 
                                 \end{bmatrix}
@@ -132,10 +132,10 @@
                                 One possible result is:
                                 <me>
                                 \begin{bmatrix} 
-                                \xcancel{2} &amp; \xcancel{5} &amp; \xcancel{0} &amp; ① \\ 
-                                \xcancel{8} &amp; ⑪ &amp; \xcancel{6} &amp; \xcancel{7} \\ 
-                                \xcancel{4} &amp; \xcancel{7} &amp; ② &amp; \xcancel{3} \\ 
-                                ⑥ &amp; \xcancel{9} &amp; \xcancel{4} &amp; \xcancel{5} 
+                                \xcancel{2} &amp; \xcancel{5} &amp; \xcancel{0} &amp; &#9312; \\ 
+                                \xcancel{8} &amp; &#9322; &amp; \xcancel{6} &amp; \xcancel{7} \\ 
+                                \xcancel{4} &amp; \xcancel{7} &amp; &#9313; &amp; \xcancel{3} \\ 
+                                &#9317; &amp; \xcancel{9} &amp; \xcancel{4} &amp; \xcancel{5} 
                                 \end{bmatrix}
                                 </me>
                             </p>

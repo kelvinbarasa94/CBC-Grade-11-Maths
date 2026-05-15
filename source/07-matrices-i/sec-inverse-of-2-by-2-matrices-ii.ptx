@@ -353,42 +353,49 @@
             <ol marker="(a)">
                 <li>
                     <p>Find <m>M^{-1}</m> using your new formula.</p>
-                    <solution>
-                        <p>
-                            <m>\det(M)=3(2)-1(5)=1</m>, so
-                            <me>M^{-1}=\begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}.</me>
-                        </p>
-                    </solution>
                 </li>
                 <li>
                     <p>Use <m>M^{-1}</m> to decode the message by computing <m>M^{-1}\begin{bmatrix}11 \\ 19\end{bmatrix}</m>.</p>
-                    <solution>
-                        <p>
-                            <me>
-                                \begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}
-                                \begin{bmatrix}11 \\ 19\end{bmatrix}
-                                =
-                                \begin{bmatrix}3 \\ 2\end{bmatrix}.
-                            </me>
-                        </p>
-                    </solution>
                 </li>
                 <li>
                     <p>What was the original vector?</p>
-                    <solution>
-                        <p>The original vector was <m>\begin{bmatrix}3 \\ 2\end{bmatrix}</m>.</p>
-                    </solution>
                 </li>
                 <li>
-                    <p>Extension: Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}</m>?</p>
-                    <solution>
-                        <p>
-                            No. This matrix has <m>ad - bc = 2(2)-4(1)=0</m>, so it has no inverse. If a matrix has no inverse, there is no reliable undo step for decoding.
-                        </p>
-                    </solution>
+                    <p>Extension: Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}</m>?
+                    </p>
                 </li>
             </ol>
         </statement>
+        <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        <m>\det(M)=3(2)-1(5)=1</m>, so
+                        <md>M^{-1}=\begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}.</md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <md>
+                            \begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}
+                            \begin{bmatrix}11 \\ 19\end{bmatrix}
+                            =
+                            \begin{bmatrix}3 \\ 2\end{bmatrix}.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The original vector was <m>\begin{bmatrix}3 \\ 2\end{bmatrix}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        No. This matrix has <m>ad - bc = 2(2)-4(1)=0</m>, so it has no inverse. If a matrix has no inverse, there is no reliable undo step for decoding.
+                    </p>
+                </li>
+            </ol>
+        </solution>
     </example>
 
     <example>

@@ -237,7 +237,7 @@
                         <p>
                             What's the total area of the large rectangle?
                         </p>
-                        <solution>
+                        <solution component="lesson-plan">
                             <p>
                                 The area of the large rectangle is given by the product of its width and height, which are <m>a + b</m> and <m>c + d</m> respectively. Therefore, the area of the large rectangle is:
                                 <md>
