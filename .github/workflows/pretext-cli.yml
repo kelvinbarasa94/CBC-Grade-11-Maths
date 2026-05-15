@@ -32,9 +32,11 @@ jobs:
             # Reverting to previous tlmgr repository
             - name: install tex dependencies
               run: |
-                tlmgr install \
-                  --repository https://texlive.info/historic/systems/texlive/2025/tlnet-final \
-                  tkz-euclide
+                REPO=https://texlive.info/historic/systems/texlive/2025/tlnet-final
+
+                tlmgr option repository "$REPO"
+                tlmgr update --self
+                tlmgr install tkz-euclide
                   
             - name: install local ptx files
               run: pretext --version
