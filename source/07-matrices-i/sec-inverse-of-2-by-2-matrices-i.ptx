@@ -83,7 +83,7 @@
                         </li>
                         <li>
                             <p>
-                                The <term>Oracle</term> should secretly pick a vector<m>\mathbf{v}</m>, such as <m>\begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>, and compute <m>\mathbf{w} = M\mathbf{v}</m>. The <term>Oracle</term> should then share the vector <m>\mathbf{w}</m> with the <term>Seeker</term>.
+                                The <term>Oracle</term> should secretly pick a vector <m>\mathbf{v}</m>, such as <m>\begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>, and compute <m>\mathbf{w} = M\mathbf{v}</m>. The <term>Oracle</term> should then share the vector <m>\mathbf{w}</m> with the <term>Seeker</term>.
                             </p>
                         </li>
                         <li>
@@ -155,16 +155,22 @@
             </li>
             <li>
                 <p>
-                    We write it as <m>M^{-1}</m>, and in <xref ref="sec-inverse-of-2-by-2-matrices-ii"/> we will discover a formula for computing it.
+                    We write it as <m>M^{-1}</m>.
                 </p>
             </li>
             <li>
                 <p>
-                    Applying <m>M</m> and then <m>M^{-1}</m> will result in no change: <m>M^{-1}M\mathbf{x} = \mathbf{x}</m>. Hence <m>M^{-1}M = I</m>, the identity matrix, and <m>MM^{-1} = I </m> too.
+                    Applying <m>M</m> to a vector <m>\mathbf{x}</m>, and then applying <m>M^{-1}</m> will return <m>\mathbf{x}</m> to its original position: <m>M^{-1}M\mathbf{x} = \mathbf{x}</m>. Hence <m>M^{-1}M = I</m>, the identity matrix, and <m>MM^{-1} = I </m> too.
                 </p>
             </li>
         </ul>
     </insight>
+
+    <note>
+        <p>
+            So far, we have explored what inverses do and how to verify them. In the next lesson (<xref ref="sec-inverse-of-2-by-2-matrices-ii"/>), we will develop a general formula for finding the inverse of any invertible 2 by 2 matrix.
+        </p>
+    </note>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -182,7 +188,7 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            Check this is true by applying <m>R</m> to the vector <m>\mathbf{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}</m>.
+                            Verify that <m>R</m> rotates vectors by <m>30^\circ</m> anticlockwise by applying it to the vector <m>\mathbf{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}</m>.
                         </p>
                     </li>
                     <li>
@@ -270,7 +276,7 @@
                 A matrix sends <m>\mathbf{x}</m> to <m>\mathbf{b}</m> by <m>A\mathbf{x} = \mathbf{b}</m>. If
                 <m>A^{-1} = \begin{bmatrix} 1 &amp; 2 \\ -1 &amp; 0 \end{bmatrix}</m>
                 and
-                <m>\mathbf{b} = \begin{bmatrix} 4 \\ -1 \end{bmatrix}</m>,
+                <m>\mathbf{b} = \begin{bmatrix} 2 \\ -4 \end{bmatrix}</m>,
                 find <m>\mathbf{x}</m>.
             </p>
         </statement>
@@ -401,6 +407,47 @@
         </exercise>
 
         <exercise>
+            <title>Which Matrices Cannot Be Undone?</title>
+            <statement>
+                <p>
+                    Consider the matrix
+                    <m>A = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Compute <m>A\begin{bmatrix} 1 \\ 0 \end{bmatrix}</m> and <m>A\begin{bmatrix} 0.5 \\ 0.25 \end{bmatrix}</m>.</p>
+                    </li>
+                    <li>
+                        <p>What do you notice?</p>
+                    </li>
+                    <li>
+                        <p>Explain why <m>A</m> cannot have an inverse.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>A\begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m> and
+                                <m>A\begin{bmatrix} 0.5 \\ 0.25 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Two different vectors are sent to the same vector.</p>
+                        </li>
+                        <li>
+                            <p>
+                                Since different inputs produce the same output, the matrix <m>A^{-1}</m> (if it existed) would not be able to send the output back to <em>both</em> the original inputs. Therefore <m>A</m> has no inverse.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
             <statement>
                 <p>
                     The scaling matrix
@@ -418,7 +465,7 @@
             <title>Inverse of a Product</title>
             <statement>
                 <p>
-                    Let's suppose <m>S</m> represents the act of putting a shirt on, and <m>J</m> represents the act of putting a jumper on.
+                    Let's suppose <m>S</m> represents the act of putting a shirt on, and <m>J</m> represents the act of putting a jumper on. So if <m>\mathbf{x}</m> was a person without clothes, <m>S\mathbf{x}</m> would be a person wearing a shirt.
                     <ol marker="(a)">
                         <li>
                             <p>

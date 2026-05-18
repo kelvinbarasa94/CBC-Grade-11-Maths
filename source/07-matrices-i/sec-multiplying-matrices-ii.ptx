@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<section xml:id="sec-multiplying-matrices-ii" xmlns:xi="http:\\www.w3.org/2001/XInclude">
+<section xml:id="sec-multiplying-matrices-ii" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Multiplying Matrices II</title>
     <objectives component="outcomes">
         <introduction>
@@ -52,13 +52,13 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To familiarise students with matrix-matrix multiplication via a practical example (prices and quantities)
+                    To familiarise learners with matrix-matrix multiplication via a practical example (prices and quantities)
                 </p>
             </li>
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    This Learner Experience continues from <xref ref="mango-shopping-2"/>. Quickly recap the takeaways from that before this lesson, and write the key matrices on the board. Remind students which columns correspond to mangoes, oranges, and bananas.
+                    This Learner Experience continues from <xref ref="mango-shopping-2"/>. Quickly recap the takeaways from that before this lesson, and write the key matrices on the board. Remind learners which columns correspond to mangoes, oranges, and bananas.
                 </p>
             </li>
         </dl>
@@ -106,7 +106,7 @@
                         </p>
                     </solution>
                     <note component="lesson-plan">
-                        <p> If students have the transpose of this matrix (with Kelvin and Esther as columns), encourage them to write it the other way (since this preserves the rows for Kelvin and Esther). </p>
+                        <p> If learners have the transpose of this matrix (with Kelvin and Esther as columns), encourage them to write it the other way (since this preserves the rows for Kelvin and Esther). </p>
                     </note>
                 </li>
                 <li>
@@ -151,9 +151,9 @@
                         </p>
                     </solution>
                     <note component="lesson-plan">
-                        <p> If students struggle to get this abstraction, break it up step by step (e.g. Kelvin's total cost in the first month, then second week etc.) </p>
+                        <p> If learners struggle to get this abstraction, break it up step by step (e.g. Kelvin's total cost in the first month, then second week etc.) </p>
                         <p>
-                            Use this opportunity to help define matrix multiplication for students.
+                            Use this opportunity to help define matrix multiplication for learners.
                         </p>
                     </note>
                 </li>

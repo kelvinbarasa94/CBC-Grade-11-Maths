@@ -177,7 +177,7 @@
                     </md>
                     To do so, this figure will help:
                 <figure xml:id="det-triangles">
-                    <caption>Finding the area of a parralelogram</caption>
+                    <caption>Finding the area of a parallelogram</caption>
                     <image width="70%">
                     <latex-image>
                         \begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
@@ -262,7 +262,7 @@
                         </solution>
                         <note component="lesson-plan">
                             <p>
-                                Gently guide Learners if they are struggly to find the area. There are many different ways to rearrange the shapes, so encourage Learners to be creative.
+                                Gently guide Learners if they are struggling to find the area. There are many different ways to rearrange the shapes, so encourage Learners to be creative.
                             </p>
                         </note>
                     </li>
@@ -328,6 +328,15 @@
         </paragraphs>
     </axiom>
 
+    <definition xml:id="def-determinant">
+        <title>The Determinant</title>
+        <statement>
+            <p>
+                If <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m> is a 2 by 2 matrix, then the <term>determinant</term> of <m>A</m> is given by the formula <md>\det{A} = ad - bc</md>.
+            </p>
+        </statement>
+    </definition>
+
     <insight>
         <p>
             <ul>
@@ -355,7 +364,7 @@
                     <li>
                         <p>
                             You might recognise this expression from the formula for the inverse of a 2 by 2 matrix. We have: <md>
-                                A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix} \frac{1}{\det{A}}\begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}
+                                A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix} = \frac{1}{\det{A}}\begin{bmatrix}d \amp -b \\ -c \amp a\end{bmatrix}
                             </md>
                         </p>
                     </li>
@@ -455,7 +464,7 @@
                             <mrow> 2x - y \amp = 0 </mrow>
                             <mrow> 4x - 2y \amp = 0 </mrow>
                         </md>
-                        These are two parallel lines that coincide, meaning there are infinitely many solutions to this system of equations.
+                        These equations represent the same line, so the system has infinitely many solutions.
                     </p>
                     <p>
                         In either case, we cannot find a unique solution for <m>\mathbf{x}</m>, which is why the matrix <m>M</m> does not have an inverse.
@@ -821,7 +830,7 @@
                                 Since multiplication of real numbers can be done in any order, we have <md> <mrow>\det{AB} = \det{A} \cdot \det{B} = \det{B} \cdot \det{A} = \det{BA}</mrow></md>
                             </p>
                             <p>
-                                This is surprising! While <m>AB \neq BA</m>, we have <m>\det{AB} = \det{BA}</m>.
+                                This should be surprising: while <m>AB \neq BA</m> in general, we have <m>\det{AB} = \det{BA}</m>.
                             </p>
                         </li>
                     </ol>
@@ -903,10 +912,10 @@
                     </li>
                     <li>
                         <p>
-                            The relationship between <m>\det{\left(A^{-1}\right)}</m> and <m>\det{A}</m> is that <m>\det{\left(A^{-1}\right)} = \frac{1}{\det{A}}</m>.
+                            The relationship between <m>\det{\left(A^{-1}\right)}</m> and <m>\det{A}</m> is: <md>\det{\left(A^{-1}\right)} = \frac{1}{\det{A}}</md>
                         </p>
                         <p>
-                            You can prove this using the fact from <xref ref="proof-det-AB"/> that <md>\det{AB} = \det{A} \cdot \det{B}</md>. Letting <m>B = A^{-1}</m>, and remembering that <m>AA^{-1} = I</m> by definition, we have <md>(\det{A})(\det{\left(A^{-1}\right)}) = \det{AA^{-1}} = \det{I} = 1</md>, where <m>I</m> is the identity matrix.
+                            You can prove this using the fact from <xref ref="proof-det-AB"/> that <md>\det{AB} = \det{A} \cdot \det{B}</md>. Letting <m>B = A^{-1}</m>, and remembering that <m>AA^{-1} = I</m> by definition, we have <md>(\det{A})(\det{\left(A^{-1}\right)}) = \det{\left(AA^{-1}\right)} = \det{I} = 1</md>, where <m>I</m> is the identity matrix.
                         </p>
                     </li>
                 </ol>

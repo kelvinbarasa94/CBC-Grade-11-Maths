@@ -51,18 +51,18 @@
             <li>
                 <title>Teaching Idea</title>
                 <p>
-                    This Learner Experience uses productive failure and guided discovery. Students first try to invent the inverse formula by reverse-engineering a matrix that undoes another matrix. The point is not that every pair succeeds immediately, but that their attempts create a need for the formula and make its pieces meaningful.
+                    This Learner Experience uses productive failure and guided discovery. Learners first try to invent the inverse formula by reverse-engineering a matrix that undoes another matrix. The point is not that every pair succeeds immediately, but that their attempts create a need for the formula and make its pieces meaningful.
                 </p>
             </li>
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Do not give the formula at the start. Instead, keep students anchored on the equation <m>AX=I</m>. Prompt them to multiply matrices entry by entry, notice that the two columns of <m>X</m> can be solved separately, and connect each part of the final formula to a step in the algebra.
+                    Do not give the formula at the start. Instead, keep learners anchored on the equation <m>AX=I</m>. Prompt them to multiply matrices entry by entry, notice that the two columns of <m>X</m> can be solved separately, and connect each part of the final formula to a step in the algebra.
                 </p>
             </li>
             <li>
                 <title>Materials Needed</title>
-                <p>One printed activity sheet per pair, pens or pencils, and board space for collecting student findings.</p>
+                <p>One printed activity sheet per pair, pens or pencils, and board space for collecting learner findings.</p>
             </li>
         </dl>
     </axiom>
@@ -296,7 +296,7 @@
             <li>
                 <title>Key Questions</title>
                 <p>
-                    Ask, <q>What happens if <m>ad - bc</m> equals zero? What would that mean in your system of equations?</q> Let students suggest ideas such as no unique solution or parallel equations, then connect this to the idea of a non-invertible matrix.
+                    Ask, <q>What happens if <m>ad - bc</m> equals zero? What would that mean in your system of equations?</q> Let learners suggest ideas such as no unique solution or parallel equations, then connect this to the idea of a non-invertible matrix.
                 </p>
             </li>
             <li>
@@ -361,7 +361,7 @@
                     <p>What was the original vector?</p>
                 </li>
                 <li>
-                    <p>Extension: Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}</m>?
+                    <p>Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}</m>?
                     </p>
                 </li>
             </ol>
@@ -841,7 +841,7 @@
                         </p>
                         <note>
                             <p>
-                                Why is the order reversed? Think about <m>A</m> representing putting your shoes on, and <m>B</m> representing putting your socks on. <m>AB</m> represents putting on your socks and then your shoes. To undo this, we must first take off our shoes, <m>A^{-1}</m>, and then take off our socks, <m>B^{-1}</m>, which is <m>B^{-1}A^{-1}</m>.
+                                Why is the order reversed? Suppose <m>B</m> represents putting on socks and <m>A</m> represents putting on shoes. Then <m>AB</m> means socks first, then shoes. To undo this process, we must first remove the shoes <m>\left(A^{-1}\right)</m> and then remove the socks <m>\left(B^{-1}\right)</m>, which is <m>B^{-1}A^{-1}</m>.
                             </p>
                         </note>
                     </li>

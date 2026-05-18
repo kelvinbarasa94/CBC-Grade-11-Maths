@@ -67,7 +67,7 @@
                 <li>
                     <title>Extension</title>
                     <p>
-                        If students are confident with the material, you can work through the proof that <m>\mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots = (I-A)^{-1}\mathbf{x}_0</m>, and explore its connection to geometric sequences in more depth. (For example, why can't we have a fraction with a matrix on the denominator?). For details, see <url href="https://www.polyu.edu.hk/ama/profile/hwlee/AMA1007/supplementary11.pdf">this pdf</url>, or <url href="https://en.wikipedia.org/wiki/Neumann_series">this Wikipedia page</url>.
+                        If learners are confident with the material, you can work through the proof that <m>\mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots = (I-A)^{-1}\mathbf{x}_0</m>, and explore its connection to geometric sequences in more depth. (For example, why can't we have a fraction with a matrix on the denominator?). For details, see <url href="https://www.polyu.edu.hk/ama/profile/hwlee/AMA1007/supplementary11.pdf">this pdf</url>, or <url href="https://en.wikipedia.org/wiki/Neumann_series">this Wikipedia page</url>.
                     </p>
                 </li>
             </dl>
@@ -612,7 +612,7 @@
         <exercise>
             <statement>
                 <p>
-                    A school canteen sells three items: chapati (C), juice (J), and fruit (F). The quantities bought by Grade 11 and Grade 12 students during Week 1 are
+                    A school canteen sells three items: chapati (C), juice (J), and fruit (F). The quantities bought by Grade 11 and Grade 12 learners during Week 1 are
                     <md>S = \begin{bmatrix} 40 &amp; 25 &amp; 15 \\ 35 &amp; 30 &amp; 20 \end{bmatrix}</md>
                     Prices changed in Week 2. The price matrix (Ksh) for Week 1 and Week 2 is
                     <m>K = \begin{bmatrix} 20 &amp; 22 \\ 30 &amp; 28 \\ 25 &amp; 27 \end{bmatrix}</m>,

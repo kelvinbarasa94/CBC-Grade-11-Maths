@@ -174,7 +174,7 @@
             </li>
             <li>
                 <p>
-                    Matrix-vector multiplication produces a vector with the same number of columns as the matrix.
+                    Matrix-vector multiplication produces a vector with the same number of rows / entries as the matrix.
                 </p>
             </li>
         </ul>
@@ -207,7 +207,7 @@
     <example>
         <statement>
             <p>
-                As in <xref ref="mango-shopping-2"/>, let <m>\mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}</m> be the quantities of mangoes, oranges, and banans bought by Kelvin (first row) and Esther (second row). Suppose the cost vector is given by:
+                As in <xref ref="mango-shopping-2"/>, let <m>\mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}</m> be the quantities of mangoes, oranges, and bananas bought by Kelvin (first row) and Esther (second row). Suppose the cost vector is given by:
                 <md>
                     \mathbf{x} = \begin{bmatrix} 10 \\ 15 \\ 5 \end{bmatrix}
                 </md>
@@ -229,7 +229,7 @@
 
     <paragraphs>
       <title>Properties of Matrix-Vector Multiplication</title>
-      <p>For the matrices <m>A,B</m> of size <m>m\times n</m> and vectors <m>\mathbf{x}, \mathbf{y}</m> of size <m>n \times 1</m> the following properties hold:
+      <p>For matrices <m>A,B</m> of size <m>m\times n</m> and vectors <m>\mathbf{x}, \mathbf{y}</m> of size <m>n \times 1</m> the following properties hold:
       <ul cols="2">
         <li><m>A\left(\mathbf{x} + \mathbf{y}\right) = A\mathbf{x} + A\mathbf{y}</m>
         </li>
