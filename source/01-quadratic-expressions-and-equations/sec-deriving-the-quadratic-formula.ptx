@@ -104,11 +104,12 @@
                     Now, you need to derive a formula that will work for any rectangular foundation. 
                 </p>
                 <p>
-                    Suppose the specific numbers are replaced with variables <m>a, b,</m> and <m>c</m>.
+                    Replace the specific numbers in the equation abovewith variables <m>a, b,</m> and <m>c</m> respectively.
                 </p>
                 <p>
-                    Using the method of completing the square, derive a formula for solving equations of the form <m>ax^2 + bx + c = 0</m>.
+                    Derive a formula for <m>x</m> in terms of <m>a, b,</m> and <m>c</m>.
                 </p>
+                
             </statement>
         </task>
         <task>
