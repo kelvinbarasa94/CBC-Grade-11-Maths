@@ -288,7 +288,7 @@
         </statement>
         <solution>
             <p>
-                The matrix <m>M</m> not a square matrix, as it has 3 rows and 4 columns, thus it is a rectangular matrix. It is not a row matrix, as it has more than one row, and it is not a column matrix, as it has more than one column. It is not a null matrix, as it has some non-zero entries.
+                The matrix <m>M</m> is not a square matrix, as it has 3 rows and 4 columns, thus it is a rectangular matrix. It is not a row matrix, as it has more than one row, and it is not a column matrix, as it has more than one column. It is not a null matrix, as it has some non-zero entries.
             </p>
             <p>
                 It is not an identity matrix: while it does have 1s on the diagonal, identity matrices must be <em>square</em>, which <m>M</m> is not.
