@@ -20,12 +20,12 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
-                            <ul>
-                              <li>Determine the inverse of a 2 by 2 matrix</li>
-                              <li>Solve linear equations in two unknowns using matrix method</li>
-                            </ul>
+                        <ul>
+                            <li>Determine the inverse of a 2 by 2 matrix</li>
+                            <li>Solve linear equations in two unknowns using matrix method</li>
+                        </ul>
                     </p>
                 </li>
                 <li component="lesson-plan">
@@ -51,226 +51,377 @@
             <li>
                 <title>Teaching Idea</title>
                 <p>
-                    This Learner Experience uses productive failure and guided discovery. Learners first try to invent the inverse formula by reverse-engineering a matrix that undoes another matrix. The point is not that every pair succeeds immediately, but that their attempts create a need for the formula and make its pieces meaningful.
-                </p>
-            </li>
-            <li>
-                <title>Teacher's Role</title>
-                <p>
-                    Do not give the formula at the start. Instead, keep learners anchored on the equation <m>AX=I</m>. Prompt them to multiply matrices entry by entry, notice that the two columns of <m>X</m> can be solved separately, and connect each part of the final formula to a step in the algebra.
+                    This section uses a two-stage guided discovery. Learners first meet an inverse matrix and spot its pattern without being told the formula. They then derive that formula themselves by solving a system of simultaneous equations — first with specific numbers, then with general letters.
                 </p>
             </li>
             <li>
                 <title>Materials Needed</title>
-                <p>One printed activity sheet per pair, pens or pencils, and board space for collecting learner findings.</p>
+                <p>
+                    One printed activity sheet per pair, pens or pencils, and board space for collecting learner findings.
+                </p>
             </li>
         </dl>
     </axiom>
 
-    <activity>
-        <title>The Undo Machine</title>
-        <statement>
-            <p>
-                In arithmetic, every number has an undo. Multiplying by <m>3</m> can be undone by multiplying by <m>\frac{1}{3}</m>. Their product is <m>1</m>, the do-nothing number.
-            </p>
-            <p>
-                Matrices have the same idea. The identity matrix <m>I</m> is the do-nothing matrix. A matrix's inverse is its undo. In this activity, you will figure out what that undo matrix looks like and why the formula works.
-            </p>
-            <p>
-                We want to solve
-                <me>
-                    A A^{-1}=I, \qquad \text{that is} \qquad
-                    \begin{bmatrix}a &amp; b \\ c &amp; d\end{bmatrix}
-                    \begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}
-                    =
-                    \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}.
-                </me>
-                Your job is to find <m>e</m>, <m>f</m>, <m>g</m>, and <m>h</m> in terms of <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m>.
-            </p>
-        </statement>
-    </activity>
+    <!-- ============================================================
+         HOOK: Pattern recognition before instruction
+    ============================================================ -->
 
-    <activity xml:id="undo-machine-specific-case">
-        <title>Part 1: Warm-up with a Specific Case</title>
+    <activity xml:id="activity-hook-pattern">
+        <title> What Do You Notice?</title>
+
         <statement>
             <p>
-                Work with your partner. Let
-                <me>A=\begin{bmatrix}2 &amp; 3 \\ 1 &amp; 4\end{bmatrix}.</me>
-                We want to find a mystery matrix
-                <me>X=\begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}</me>
-                so that <m>AX=I</m>.
+                Here are three matrices, each paired with a mystery matrix. In each case the two matrices have been multiplied together.
             </p>
             <p>
-                That means
-                <me>
-                    \begin{bmatrix}2 &amp; 3 \\ 1 &amp; 4\end{bmatrix}
-                    \begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}
-                    =
-                    \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}.
-                </me>
+                With your partner: multiply each pair together and record what you get. Then look carefully at the mystery matrices. What patterns do you notice?
             </p>
             <ol marker="(a)">
                 <li>
-                    <p>Multiply out the left side. You will get four expressions, one for each entry of the result.</p>
+                    <p>
+                        <me>
+                            \begin{bmatrix} 3 \amp 2 \\ 1 \amp 1 \end{bmatrix}
+                            \times
+                            \begin{bmatrix} 1 \amp -2 \\ -1 \amp 3 \end{bmatrix}
+                            = \mathord{?}
+                        </me>
+                    </p>
                     <solution component="lesson-plan">
                         <p>
                             <me>
-                                \begin{bmatrix}2e+3g &amp; 2f+3h \\ e+4g &amp; f+4h\end{bmatrix}
-                                =
-                                \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}.
+                                \begin{bmatrix} 3(1)+2(-1) \amp 3(-2)+2(3) \\ 1(1)+1(-1) \amp 1(-2)+1(3) \end{bmatrix}
+                                = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
                             </me>
                         </p>
                     </solution>
                 </li>
                 <li>
                     <p>
-                        Notice that the left column of <m>X</m>, which contains <m>e</m> and <m>g</m>, and the right column of <m>X</m>, which contains <m>f</m> and <m>h</m>, can be solved separately. Write out the two systems of equations.
+                        <me>
+                            \begin{bmatrix} 4 \amp 1 \\ 3 \amp 1 \end{bmatrix}
+                            \times
+                            \begin{bmatrix} 1 \amp -1 \\ -3 \amp 4 \end{bmatrix}
+                            = \mathord{?}
+                        </me>
                     </p>
                     <solution component="lesson-plan">
                         <p>
-                            Left column:
-                            <me>2e+3g=1, \qquad e+4g=0.</me>
-                            Right column:
-                            <me>2f+3h=0, \qquad f+4h=1.</me>
+                            <me>
+                                \begin{bmatrix} 4(1)+1(-3) \amp 4(-1)+1(4) \\ 3(1)+1(-3) \amp 3(-1)+1(4) \end{bmatrix}
+                                = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+                            </me>
                         </p>
                     </solution>
                 </li>
                 <li>
-                    <p>Solve each system using substitution, elimination, or another method you know.</p>
-                    <solution component="lesson-plan">
-                        <p>
-                            From the left column, <m>e=\frac{4}{5}</m> and <m>g=-\frac{1}{5}</m>. From the right column, <m>f=-\frac{3}{5}</m> and <m>h=\frac{2}{5}</m>.
-                        </p>
-                    </solution>
-                </li>
-                <li>
-                    <p>Write down your mystery matrix <m>X</m>. Then verify it works by computing <m>AX</m>.</p>
+                    <p>
+                        <me>
+                            \begin{bmatrix} 2 \amp 5 \\ 1 \amp 3 \end{bmatrix}
+                            \times
+                            \begin{bmatrix} 3 \amp -5 \\ -1 \amp 2 \end{bmatrix}
+                            = \mathord{?}
+                        </me>
+                    </p>
                     <solution component="lesson-plan">
                         <p>
                             <me>
-                                X=\begin{bmatrix}\frac{4}{5} &amp; -\frac{3}{5} \\ -\frac{1}{5} &amp; \frac{2}{5}\end{bmatrix}
-                                =\frac{1}{5}\begin{bmatrix}4 &amp; -3 \\ -1 &amp; 2\end{bmatrix}.
+                                \begin{bmatrix} 2(3)+5(-1) \amp 2(-5)+5(2) \\ 1(3)+3(-1) \amp 1(-5)+3(2) \end{bmatrix}
+                                = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
                             </me>
-                            Multiplying <m>AX</m> gives the identity matrix.
                         </p>
                     </solution>
                 </li>
             </ol>
             <p>
-                <em>Check-in:</em> compare your matrix <m>X</m> with another pair before moving on.
+                After multiplying, look at the three mystery matrices alongside the original matrices. Discuss:
+            </p>
+            <ul>
+                <li>
+                    <p>What happened to the diagonal entries?</p>
+                </li>
+                <li>
+                    <p>What happened to the off-diagonal entries?</p>
+                </li>
+            </ul>
+            <p>
+                Write down your best guess for the rule in your own words. You will check whether your guess is right by the end of this section.
             </p>
         </statement>
     </activity>
 
-    <activity xml:id="undo-machine-spot-pattern">
-        <title>Part 2: Spot the Pattern</title>
+    <!-- ============================================================
+         NARRATIVE BRIDGE
+    ============================================================ -->
+    <!-- ============================================================
+         PART 1: Concrete simultaneous equations
+    ============================================================ -->
+
+    <activity xml:id="activity-sim-equations-specific">
+        <title>Part 1: Solving a Pair of Simultaneous Equations</title>
+
+        <axiom component="lesson-plan">
+            <title>Notes on Part 1</title>
+            <dl>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>8 minutes</p>
+                </li>
+                <li>
+                    <title>Purpose</title>
+                    <p>
+                        Students solve a concrete system by elimination. This is revision — they have done this before. The point is to make the elimination steps explicit and visible, because those same steps will be repeated with letters in Part 3 to produce the inverse formula.
+                    </p>
+                </li>
+            </dl>
+        </axiom>
+
         <statement>
             <p>
-                Now repeat the same process for these two matrices:
-                <me>
-                    B=\begin{bmatrix}5 &amp; 2 \\ 3 &amp; 1\end{bmatrix}, \qquad
-                    C=\begin{bmatrix}1 &amp; 0 \\ 2 &amp; 3\end{bmatrix}.
-                </me>
-                For each matrix, solve <m>AX=I</m> to find <m>X</m>.
+                Consider the following pair of simultaneous equations:
+                <md>
+                    <mrow number="yes" xml:id="eq1"> 2x + y \amp= 5 </mrow>
+                    <mrow number="yes" xml:id="eq2">  3x + 2y \amp= 8 </mrow>
+                </md>
             </p>
             <ol marker="(a)">
                 <li>
-                    <p>Record the values of <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> for each matrix.</p>
-                </li>
-                <li>
-                    <p>Write the inverse you found for each matrix.</p>
+                    <p>
+                        Can you solve these equations for <m>x</m> and <m>y</m>?
+                    </p>
                     <solution component="lesson-plan">
                         <p>
-                            <me>
-                                A^{-1}=\frac{1}{5}\begin{bmatrix}4 &amp; -3 \\ -1 &amp; 2\end{bmatrix}, \qquad
-                                B^{-1}=\frac{1}{-1}\begin{bmatrix}1 &amp; -2 \\ -3 &amp; 5\end{bmatrix}
-                                =\begin{bmatrix}-1 &amp; 2 \\ 3 &amp; -5\end{bmatrix},
-                            </me>
-                            <me>
-                                C^{-1}=\frac{1}{3}\begin{bmatrix}3 &amp; 0 \\ -2 &amp; 1\end{bmatrix}
-                                =\begin{bmatrix}1 &amp; 0 \\ -\frac{2}{3} &amp; \frac{1}{3}\end{bmatrix}.
-                            </me>
+                            Multiply <xref ref="eq1"/> by 2:
+                            <md>
+                                <mrow number="yes" xml:id="eq1-double">4x + 2y \amp= 10</mrow>
+                            </md>
+                            Subtract <xref ref="eq2"/> from <xref ref="eq1-double"/>:
+                            <md>
+                                 <mrow> (4x+2y)-(3x+2y)\amp= 10-8</mrow>
+                                 <mrow> x \amp= 2 </mrow>
+                            </md>
+                            To find <m>y</m>, substitute back into <xref ref="eq1"/>:
+                            <md>
+                                <mrow> 2(2) + y \amp= 5 </mrow>
+                                <mrow>y \amp= 1 </mrow>
+                            </md>.
                         </p>
                     </solution>
                 </li>
                 <li>
-                    <p>Look at the top-left and bottom-right entries of each inverse. What do you notice?</p>
+                    <p>
+                        Verify your solution by checking that both original equations are satisfied.
+                    </p>
                     <solution component="lesson-plan">
-                        <p>The diagonal entries appear to come from swapping <m>a</m> and <m>d</m>.</p>
-                    </solution>
-                </li>
-                <li>
-                    <p>Look at the top-right and bottom-left entries. What do you notice?</p>
-                    <solution component="lesson-plan">
-                        <p>The off-diagonal entries appear to become <m>-b</m> and <m>-c</m>.</p>
-                    </solution>
-                </li>
-                <li>
-                    <p>Look at the denominators. Can you express the denominator using <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m>?</p>
-                    <solution component="lesson-plan">
-                        <p>The denominator is <m>ad-bc</m>.</p>
+                        <p>
+                            Checking <xref ref="eq1"/>: <md><mrow>2(2)+1=5\,\checkmark</mrow></md>
+                            Checking <xref ref="eq2"/>: <md><mrow>3(2)+2(1)=8\,\checkmark</mrow></md>
+                        </p>
                     </solution>
                 </li>
             </ol>
         </statement>
     </activity>
 
-    <activity xml:id="undo-machine-general-formula">
-        <title>Part 3: Derive the General Formula</title>
+    <!-- ============================================================
+         PART 2: Rewrite as a matrix equation, notice the connection
+    ============================================================ -->
+
+    <activity xml:id="activity-matrix-form">
+        <title>Part 2: Writing the System as a Matrix Equation</title>
+
         <statement>
             <p>
-                Now derive the formula in general. Let
+                The system from Part 1 can be written compactly using matrices. Define
                 <me>
-                    A=\begin{bmatrix}a &amp; b \\ c &amp; d\end{bmatrix}, \qquad
-                    X=\begin{bmatrix}e &amp; f \\ g &amp; h\end{bmatrix}, \qquad
-                    AX=I.
+                    A = \begin{bmatrix} 2 \amp 1 \\ 3 \amp 2 \end{bmatrix}, \qquad
+                    \mathbf{x} = \begin{bmatrix} x \\ y \end{bmatrix}, \qquad
+                    \mathbf{b} = \begin{bmatrix} 5 \\ 8 \end{bmatrix}.
                 </me>
             </p>
             <ol marker="(a)">
                 <li>
-                    <p>Write out the four equations you get from <m>AX=I</m>.</p>
+                    <p>
+                        Expand the matrix product <m>A\mathbf{x}</m>. Show that the equation <m>A\mathbf{x} = \mathbf{b}</m> is exactly the same as the two simultaneous equations in Part 1.
+                    </p>
                     <solution component="lesson-plan">
                         <p>
                             <me>
-                                ae+bg=1, \quad af+bh=0, \quad ce+dg=0, \quad cf+dh=1.
+                                A\mathbf{x} = \begin{bmatrix}2 \amp 1 \\ 3 \amp 2\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}
+                                = \begin{bmatrix}2x+y \\ 3x+2y\end{bmatrix}.
                             </me>
+                            Setting this equal to <m>\begin{bmatrix}5 \\ 8\end{bmatrix}</m> recovers equations and <xref ref="eq1"/>, <xref ref="eq2"/>
                         </p>
                     </solution>
                 </li>
                 <li>
-                    <p>Solve for <m>e</m> and <m>g</m> from the left-column system. Use elimination.</p>
+                    <p>
+                        In ordinary arithmetic, if <m>a \cdot x = b</m>, we solve by writing <m>x = \frac{b}{a} = a^{-1} \cdot b</m>. By analogy, if <m>A\mathbf{x} = \mathbf{b}</m> and we knew a matrix <m>A^{-1}</m> that <q>undoes</q> <m>A</m>, how would you write the solution for <m>\mathbf{x}</m>?
+                    </p>
                     <solution component="lesson-plan">
                         <p>
-                            The left-column system is
-                            <me>ae+bg=1, \qquad ce+dg=0.</me>
-                            Eliminate <m>g</m> by multiplying the first equation by <m>d</m> and the second by <m>b</m>:
-                            <me>ade+bdg=d, \qquad bce+bdg=0.</me>
-                            Subtract to get <m>(ad-bc)e=d</m>, so <m>e=\frac{d}{ad-bc}</m>. A similar elimination gives <m>g=\frac{-c}{ad-bc}</m>.
+                            Left-multiply both sides by <m>A^{-1}</m>:
+                            <me>A^{-1}A\mathbf{x} = A^{-1}\mathbf{b} \implies I\mathbf{x} = A^{-1}\mathbf{b} \implies \mathbf{x} = A^{-1}\mathbf{b}.</me>
                         </p>
                     </solution>
                 </li>
                 <li>
-                    <p>Solve for <m>f</m> and <m>h</m> from the right-column system.</p>
+                    <p>
+                        From Part 1 you found <m>x = 2</m> and <m>y = 1</m>.
+                        The inverse of <m>A</m> turns out to be
+                        <me>A^{-1} = \begin{bmatrix}2 \amp -1 \\ -3 \amp 2\end{bmatrix}.</me>
+                        Compute <m>A^{-1}\mathbf{b}</m> and confirm that you get the same answer as Part 1.
+                    </p>
                     <solution component="lesson-plan">
                         <p>
-                            The right-column system is
-                            <me>af+bh=0, \qquad cf+dh=1.</me>
-                            Solving gives <m>f=\frac{-b}{ad-bc}</m> and <m>h=\frac{a}{ad-bc}</m>.
+                            <md>
+                                <mrow>
+                                    A^{-1}\mathbf{b}
+                                    \amp= \begin{bmatrix}2 \amp -1 \\ -3 \amp 2\end{bmatrix}\begin{bmatrix}5 \\ 8\end{bmatrix}
+                                </mrow>
+                                <mrow>
+                                    \amp= \begin{bmatrix}2(5)+(-1)(8) \\ (-3)(5)+2(8)\end{bmatrix}
+                                </mrow>
+                                <mrow>
+                                    \amp= \begin{bmatrix}2 \\ 1\end{bmatrix}. \checkmark
+                                </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Point out to students that the determinant is <m>1</m> here. Ask: <q>Can you express <m>1</m> using the entries <m>2, 1, 3, 2</m> of matrix <m>A</m>?</q> They should spot that <m>2\times 2 - 1\times 3 = 1</m>. This foreshadows the determinant without naming it yet.
+                        </p>
+                    </note>
+                </li>
+            </ol>
+        </statement>
+    </activity>
+
+    <!-- ============================================================
+         PART 3: General case — derive the formula
+    ============================================================ -->
+
+    <activity xml:id="activity-general-derivation">
+        <title>Part 3: The General Case — Deriving the Formula</title>
+
+        <axiom component="lesson-plan">
+            <title>Notes on Part 3</title>
+            <dl>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>10 minutes</p>
+                </li>
+                <li>
+                    <title>Purpose</title>
+                    <p>
+                        Students repeat the elimination from Part 1 with general coefficients <m>a, b, c, d</m> and general right-hand sides <m>w, z</m>. Each elimination step produces one entry of <m>A^{-1}</m>. The formula is not given — it emerges from their own algebra. Encourage pairs to compare each step with what they did in Part 1.
+                    </p>
+                </li>
+            </dl>
+        </axiom>
+
+        <statement>
+            <p>
+                Now generalise. Replace the specific numbers with letters:
+                <md>
+                    <mrow number="yes" xml:id="eq3"> ax + by \amp= 5 </mrow>
+                    <mrow number="yes" xml:id="eq4"> cx + dy \amp= 8 </mrow>
+                </md>
+                Here <m>a, b, c, d</m> are the coefficients. We want to solve for <m>x</m> and <m>y</m> in terms of these letters.
+            </p>
+            <p>
+                Note that equations <xref ref="eq3"/> and <xref ref="eq4"/> are equivalent to the matrix equation:
+                <md>
+                    \begin{bmatrix}a \amp b \\ c \amp d \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix} = \begin{bmatrix} 5 \\ 8 \end{bmatrix}
+                </md>
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Eliminate <m>x</m> to get an equation in just <m>y</m>.
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            Multiply <xref ref="eq3"/> by <m>c</m>: 
+                            <md>
+                                <mrow number="yes" xml:id="eq3c"> acx + bcy = 5c </mrow>
+                            </md>
+                            Multiply <xref ref="eq4"/> by <m>a</m>:
+                            <md>
+                                <mrow number="yes" xml:id="eq4a">acx + ady = 8a</mrow>
+                            </md>
+                            Subtract <xref ref="eq3c"/> from <xref ref="eq4a"/>:
+                            <md>
+                                <mrow>(acx + ady) - (acx + bcy) \amp = 8a - 5c </mrow>
+                                <mrow>(ad - bc)y \amp= 8a - 5c</mrow>
+                            </md>
                         </p>
                     </solution>
                 </li>
                 <li>
-                    <p>What expression keeps appearing in every denominator?</p>
+                    <p>
+                        Assuming <m>ad - bc \neq 0</m>, solve for <m>y</m>.
+                    </p>
                     <solution component="lesson-plan">
-                        <p><m>ad-bc</m></p>
+                        <p>
+                            <md>y = \frac{8a - 5c}{ad - bc}</md>
+                        </p>
                     </solution>
                 </li>
                 <li>
-                    <p>Write the inverse of <m>A</m> as a single formula.</p>
+                    <p>
+                        Now solve for <m>x</m>.
+                    </p>
                     <solution component="lesson-plan">
                         <p>
+                            Inserting the value of <m>y</m> into <xref ref="eq3"/>:
+                            <md>
+                                <mrow>ax + b\left(\frac{8a - 5c}{ad - bc}\right) \amp= 5 </mrow>
+                                <mrow>ax \amp= 5 - \frac{8ab - 5bc)}{ad - bc} </mrow>
+                                <mrow>ax \amp= \frac{5ad - \cancel{5bc} - (8ab + \cancel{5bc})}{ad - bc} </mrow>
+                                <mrow>ax \amp= \frac{5ad - 8ab}{ad - bc} </mrow>
+                                <mrow>x \amp= \frac{5d - 8b}{ad - bc} </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        Write your solutions for <m>x</m> and <m>y</m> together as a single column vector. For simplicity, let <m>ad - bc = D</m>.
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <md>
+                                <mrow> \begin{bmatrix}x \\ y\end{bmatrix} \amp= \begin{bmatrix}\dfrac{5d - 8b}{ad-bc} \\[6pt] \dfrac{8a - 5c}{ad-bc}\end{bmatrix} </mrow>
+                                <mrow number="yes" xml:id="eq5"> \amp= \frac{1}{D}\begin{bmatrix}5d - 8b \\ 8a - 5c\end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        You should get an expression involving the vector <m>\begin{bmatrix}5d - 8b \\ 8a - 5c\end{bmatrix}</m>. Try to rewrite this vector as a matrix multiplied by <m>\begin{bmatrix}5 \\ 8\end{bmatrix}</m> and thus write your solution for <m>x</m> and <m>y</m> as a matrix-vector product.
+                    </p>
+                    <solution component="lesson-plan">
+                        <p> We have <m>\begin{bmatrix}5d - 8b \\ 8a - 5c\end{bmatrix}
+                                = \begin{bmatrix}d \amp -b \\ -c \amp a\end{bmatrix}\begin{bmatrix}5 \\ 8\end{bmatrix}</m>, thus return to <xref ref="eq5"/>:
+                            <md>
+                                <mrow> \begin{bmatrix}x \\ y\end{bmatrix}
+                                = \frac{1}{D}\begin{bmatrix}d \amp -b \\ -c \amp a\end{bmatrix}\begin{bmatrix}5 \\ 8\end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        Recall from Part 2 that the solution is also equal to <m>A^{-1}\mathbf{b}</m>, where <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m> and <m>\mathbf{b} = \begin{bmatrix}5 \\ 8\end{bmatrix}</m>. By comparing with your previoous answer, write down the formula for <m>A^{-1}</m>.
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            Since <m>\mathbf{x} = A^{-1}\mathbf{b}</m>, the matrix multiplying <m>\begin{bmatrix}5 \\ 8\end{bmatrix}</m> in the previous question must be <m>A^{-1}</m>:
                             <me>
-                                A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d &amp; -b \\ -c &amp; a\end{bmatrix}, \qquad \text{where } ad-bc\neq 0.
+                                A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}d \amp -b \\ -c \amp a\end{bmatrix}.
                             </me>
                         </p>
                     </solution>
@@ -307,6 +458,8 @@
             </li>
         </dl>
     </axiom>
+
+
     <insight>
         <p>
             The formula for the inverse of the 2 by 2 matrix <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m> is:
@@ -340,19 +493,22 @@
         </p>
     </insight>
 
+    <!-- ============================================================
+         EXAMPLES
+    ============================================================ -->
+
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <example>
         <statement>
             <p>
                 Your friend used a matrix to encode a secret message. She multiplied a vector of numbers by the matrix
-                <me>M=\begin{bmatrix}3 &amp; 1 \\ 5 &amp; 2\end{bmatrix}</me>
-                to scramble it. After encoding, she got the message vector
-                <me>\begin{bmatrix}11 \\ 19\end{bmatrix}.</me>
+                <me>M=\begin{bmatrix}3 \amp 1 \\ 5 \amp 2\end{bmatrix}</me>
+                to scramble it. After encoding, she got the message vector <m>\begin{bmatrix}11 \\ 19\end{bmatrix}</m>.
             </p>
             <ol marker="(a)">
                 <li>
-                    <p>Find <m>M^{-1}</m> using your new formula.</p>
+                    <p>Find <m>M^{-1}</m> using the formula.</p>
                 </li>
                 <li>
                     <p>Use <m>M^{-1}</m> to decode the message by computing <m>M^{-1}\begin{bmatrix}11 \\ 19\end{bmatrix}</m>.</p>
@@ -361,8 +517,7 @@
                     <p>What was the original vector?</p>
                 </li>
                 <li>
-                    <p>Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}</m>?
-                    </p>
+                    <p>Could she have chosen any encoding matrix? What would go wrong if she chose <m>\begin{bmatrix}2 \amp 4 \\ 1 \amp 2\end{bmatrix}</m>?</p>
                 </li>
             </ol>
         </statement>
@@ -371,27 +526,25 @@
                 <li>
                     <p>
                         <m>\det(M)=3(2)-1(5)=1</m>, so
-                        <md>M^{-1}=\begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}.</md>
+                        <me>M^{-1}=\frac{1}{1}\begin{bmatrix}2 \amp -1 \\ -5 \amp 3\end{bmatrix}=\begin{bmatrix}2 \amp -1 \\ -5 \amp 3\end{bmatrix}.</me>
                     </p>
                 </li>
                 <li>
                     <p>
-                        <md>
-                            \begin{bmatrix}2 &amp; -1 \\ -5 &amp; 3\end{bmatrix}
-                            \begin{bmatrix}11 \\ 19\end{bmatrix}
-                            =
-                            \begin{bmatrix}3 \\ 2\end{bmatrix}.
-                        </md>
+                        <me>
+                            M^{-1}\begin{bmatrix}11 \\ 19\end{bmatrix}
+                            =\begin{bmatrix}2 \amp -1 \\ -5 \amp 3\end{bmatrix}\begin{bmatrix}11 \\ 19\end{bmatrix}
+                            =\begin{bmatrix}22-19 \\ -55+57\end{bmatrix}
+                            =\begin{bmatrix}3 \\ 2\end{bmatrix}.
+                        </me>
                     </p>
                 </li>
                 <li>
-                    <p>
-                        The original vector was <m>\begin{bmatrix}3 \\ 2\end{bmatrix}</m>.
-                    </p>
+                    <p>The original vector was <m>\begin{bmatrix}3 \\ 2\end{bmatrix}</m>.</p>
                 </li>
                 <li>
                     <p>
-                        No. This matrix has <m>ad - bc = 2(2)-4(1)=0</m>, so it has no inverse. If a matrix has no inverse, there is no reliable undo step for decoding.
+                        No. The proposed matrix has <m>\det = 2(2)-4(1)=0</m>, so it has no inverse. If there is no inverse, the encoded message cannot be decoded.
                     </p>
                 </li>
             </ol>
@@ -400,7 +553,7 @@
 
     <example>
         <statement>
-            <p>Let <m>A = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}</m> and <m>\mathbf{b} = \begin{bmatrix} 7 \\ 12 \end{bmatrix}</m>.</p>
+            <p>Let <m>A = \begin{bmatrix} 2 \amp 1 \\ 3 \amp 2 \end{bmatrix}</m> and <m>\mathbf{b} = \begin{bmatrix} 7 \\ 12 \end{bmatrix}</m>.</p>
             <ol marker="(a)">
                 <li>
                     <p>Find <m>A^{-1}</m>.</p>
@@ -413,20 +566,20 @@
         <solution>
             <ol marker="(a)">
                 <li>
-                    <p> Applying the formula,
+                    <p>
+                        Applying the formula,
                         <md>
-                            <mrow> A^{-1} 
-                            \amp = \frac{1}{(2)(2) - (1)(3)} \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
-                            <mrow> \amp = \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                            <mrow> A^{-1}
+                            \amp = \frac{1}{(2)(2) - (1)(3)} \begin{bmatrix} 2 \amp -1 \\ -3 \amp 2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} 2 \amp -1 \\ -3 \amp 2 \end{bmatrix}. </mrow>
                         </md>
                     </p>
                 </li>
                 <li>
-                    <p> Since <m>A\mathbf{x} = \mathbf{b}</m>, we can left multiply by <m>A^{-1}</m> to get <m>\mathbf{x} = A^{-1}\mathbf{b}</m>. So:
+                    <p>
+                        Since <m>A\mathbf{x} = \mathbf{b}</m>, left-multiply both sides by <m>A^{-1}</m> to get <m>\mathbf{x} = A^{-1}\mathbf{b}</m>:
                         <md>
-                            <mrow> \mathbf{x} \amp = A^{-1}\mathbf{b} </mrow>
-                            <mrow> \amp = \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} \begin{bmatrix} 7 \\ 12 \end{bmatrix} </mrow>
-                            <mrow> \amp = \begin{bmatrix} 2 \\ 3 \end{bmatrix} </mrow>
+                            <mrow> \mathbf{x} \amp = \begin{bmatrix} 2 \amp -1 \\ -3 \amp 2 \end{bmatrix} \begin{bmatrix} 7 \\ 12 \end{bmatrix} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}. </mrow>
                         </md>
                         Hence <m>x = 2</m> and <m>y = 3</m>.
                     </p>
@@ -441,17 +594,13 @@
         </statement>
         <solution>
             <p>
-                Write the system as
-                <md>
-                    <mrow> \begin{bmatrix} 2 &amp; -1 \\ 3 &amp; 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 14 \end{bmatrix}. </mrow>
-                </md>
-                The inverse is
-                <md>
-                    <mrow> A^{-1} = \frac{1}{(2)(2) - (-1)(3)} \begin{bmatrix} 2 &amp; 1 \\ -3 &amp; 2 \end{bmatrix} = \frac{1}{7} \begin{bmatrix} 2 &amp; 1 \\ -3 &amp; 2 \end{bmatrix}. </mrow>
-                </md>
+                Write the system in matrix form:
+                <me>\begin{bmatrix} 2 \amp -1 \\ 3 \amp 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 14 \end{bmatrix}.</me>
+                The determinant is <m>2(2)-(-1)(3)=7</m>, so the inverse is
+                <me>A^{-1} = \frac{1}{7} \begin{bmatrix} 2 \amp 1 \\ -3 \amp 2 \end{bmatrix}.</me>
                 Therefore,
                 <md>
-                    <mrow> \begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 1 \\ 14 \end{bmatrix} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}. </mrow>
+                    <mrow> \begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 1 \\ 14 \end{bmatrix} = \frac{1}{7}\begin{bmatrix} 2(1)+1(14) \\ -3(1)+2(14) \end{bmatrix} = \frac{1}{7}\begin{bmatrix}16 \\ 25\end{bmatrix} = \begin{bmatrix}2 \\ 4\end{bmatrix}. </mrow>
                 </md>
                 So <m>x = 2</m> and <m>y = 4</m>.
             </p>
@@ -462,9 +611,6 @@
         <statement>
             <p>
                 A community theatre in Kisumu sells adult and student tickets. Two student tickets and three adult tickets cost KSh <m>1800</m>. Five student tickets and two adult tickets cost KSh <m>2300</m>.
-            </p>
-            <p>
-                We need to find the cost of one adult ticket and one student ticket.
             </p>
             <ol marker="(a)">
                 <li>
@@ -482,33 +628,26 @@
             <ol marker="(a)">
                 <li>
                     <p>
-                        The system is
                         <md>
-                            <mrow> 2x + 3y = 1800 </mrow>
-                            <mrow> 5x + 2y = 2300 </mrow>
+                            <mrow> 2x + 3y \amp= 1800 </mrow>
+                            <mrow> 5x + 2y \amp= 2300 </mrow>
                         </md>
                     </p>
                 </li>
                 <li>
                     <p>
-                        In matrix form,
+                        In matrix form:
+                        <me>\begin{bmatrix} 2 \amp 3 \\ 5 \amp 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1800 \\ 2300 \end{bmatrix}.</me>
+                        The determinant is <m>2(2)-3(5)=-11</m>, so
                         <md>
-                            <mrow> \begin{bmatrix} 2 &amp; 3 \\ 5 &amp; 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1800 \\ 2300 \end{bmatrix}. </mrow>
-                        </md>
-                        The inverse of the coefficient matrix is
-                        <md>
-                            <mrow> A^{-1} \amp = \frac{1}{(2)(2) - (3)(5)} \begin{bmatrix} 2 &amp; -3 \\ -5 &amp; 2 \end{bmatrix} </mrow>
-                            <mrow> \amp = -\frac{1}{11} \begin{bmatrix} 2 &amp; -3 \\ -5 &amp; 2 \end{bmatrix} = \begin{bmatrix} -\tfrac{2}{11} &amp; \tfrac{3}{11} \\ \tfrac{5}{11} &amp; -\tfrac{2}{11} \end{bmatrix}. </mrow>
+                            <mrow> A^{-1} \amp = \frac{1}{-11} \begin{bmatrix} 2 \amp -3 \\ -5 \amp 2 \end{bmatrix} = \begin{bmatrix} -\tfrac{2}{11} \amp \tfrac{3}{11} \\ \tfrac{5}{11} \amp -\tfrac{2}{11} \end{bmatrix}. </mrow>
                         </md>
                     </p>
                 </li>
                 <li>
                     <p>
-                        Therefore,
                         <md>
-                            <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 1800 \\ 2300 \end{bmatrix} </mrow>
-                            <mrow> \amp = \begin{bmatrix} -\tfrac{2}{11} &amp; \tfrac{3}{11} \\ \tfrac{5}{11} &amp; -\tfrac{2}{11} \end{bmatrix} \begin{bmatrix} 1800 \\ 2300 \end{bmatrix} </mrow>
-                            <mrow> \amp = \begin{bmatrix} 300 \\ 400 \end{bmatrix}. </mrow>
+                            <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 1800 \\ 2300 \end{bmatrix} = \begin{bmatrix} -\tfrac{2}{11} \amp \tfrac{3}{11} \\ \tfrac{5}{11} \amp -\tfrac{2}{11} \end{bmatrix} \begin{bmatrix} 1800 \\ 2300 \end{bmatrix} = \begin{bmatrix} 300 \\ 400 \end{bmatrix}. </mrow>
                         </md>
                         So a student ticket costs KSh <m>300</m> and an adult ticket costs KSh <m>400</m>.
                     </p>
@@ -517,176 +656,110 @@
         </solution>
     </example>
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
+    <!-- ============================================================
+         EXERCISES (carried over unchanged from the original file)
+    ============================================================ -->
 
     <exercises>
         <exercise>
             <statement>
-                <p>Find the inverse of <m>M = \begin{bmatrix} -1 &amp; 4 \\ 2 &amp; 5 \end{bmatrix}</m>.</p>
+                <p>Find the inverse of <m>M = \begin{bmatrix} -1 \amp 4 \\ 2 \amp 5 \end{bmatrix}</m>.</p>
             </statement>
             <solution>
                 <p>
                     <md>
-                        <mrow> M^{-1} 
-                        \amp = \frac{1}{(-1)(5) - (4)(2)} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; -1 \end{bmatrix} </mrow>
-                        <mrow> \amp = -\frac{1}{13} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; -1 \end{bmatrix} </mrow>
-                        <mrow> \amp = \begin{bmatrix} -\tfrac{5}{13} &amp; \tfrac{4}{13} \\ \tfrac{2}{13} &amp; \tfrac{1}{13} \end{bmatrix} </mrow>
+                        <mrow> M^{-1}
+                        \amp = \frac{1}{(-1)(5) - (4)(2)} \begin{bmatrix} 5 \amp -4 \\ -2 \amp -1 \end{bmatrix} </mrow>
+                        <mrow> \amp = -\frac{1}{13} \begin{bmatrix} 5 \amp -4 \\ -2 \amp -1 \end{bmatrix} </mrow>
+                        <mrow> \amp = \begin{bmatrix} -\tfrac{5}{13} \amp \tfrac{4}{13} \\ \tfrac{2}{13} \amp \tfrac{1}{13} \end{bmatrix}. </mrow>
                     </md>
                 </p>
             </solution>
         </exercise>
+
         <exercise>
             <statement>
                 <p>Find the inverse of each matrix, if it exists.</p>
                 <ol marker="(a)" cols="2">
-                    <li>
-                        <p><m>A = \begin{bmatrix} 2 &amp; 1 \\ 5 &amp; 3 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>B = \begin{bmatrix} 4 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>C = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>D = \begin{bmatrix} -3 &amp; 0 \\ 0 &amp; 5 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>E = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 2 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>F = \begin{bmatrix} -2 &amp; 3 \\ 1 &amp; 1 \end{bmatrix}</m></p>
-                    </li>
+                    <li><p><m>A = \begin{bmatrix} 2 \amp 1 \\ 5 \amp 3 \end{bmatrix}</m></p></li>
+                    <li><p><m>B = \begin{bmatrix} 4 \amp 0 \\ 0 \amp -2 \end{bmatrix}</m></p></li>
+                    <li><p><m>C = \begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}</m></p></li>
+                    <li><p><m>D = \begin{bmatrix} -3 \amp 0 \\ 0 \amp 5 \end{bmatrix}</m></p></li>
+                    <li><p><m>E = \begin{bmatrix} 0 \amp 1 \\ -1 \amp 2 \end{bmatrix}</m></p></li>
+                    <li><p><m>F = \begin{bmatrix} -2 \amp 3 \\ 1 \amp 1 \end{bmatrix}</m></p></li>
                 </ol>
             </statement>
             <answer>
                 <ol marker="(a)" cols="2">
-                    <li>
-                        <p><m>A^{-1} = \begin{bmatrix} 3 &amp; -1 \\ -5 &amp; 2 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>B^{-1} = \begin{bmatrix} \tfrac{1}{4} &amp; 0 \\ 0 &amp; -\tfrac{1}{2} \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p>No inverse, since <m>\det{C} = 0</m></p>
-                    </li>
-                    <li>
-                        <p><m>D^{-1} = \begin{bmatrix} -\tfrac{1}{3} &amp; 0 \\ 0 &amp; \tfrac{1}{5} \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>E^{-1} = \begin{bmatrix} 2 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>F^{-1} = \begin{bmatrix} -\tfrac{1}{5} &amp; \tfrac{3}{5} \\ \tfrac{1}{5} &amp; \tfrac{2}{5} \end{bmatrix}</m></p>
-                    </li>
+                    <li><p><m>A^{-1} = \begin{bmatrix} 3 \amp -1 \\ -5 \amp 2 \end{bmatrix}</m></p></li>
+                    <li><p><m>B^{-1} = \begin{bmatrix} \tfrac{1}{4} \amp 0 \\ 0 \amp -\tfrac{1}{2} \end{bmatrix}</m></p></li>
+                    <li><p>No inverse, since <m>\det(C) = 0</m>.</p></li>
+                    <li><p><m>D^{-1} = \begin{bmatrix} -\tfrac{1}{3} \amp 0 \\ 0 \amp \tfrac{1}{5} \end{bmatrix}</m></p></li>
+                    <li><p><m>E^{-1} = \begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m></p></li>
+                    <li><p><m>F^{-1} = \begin{bmatrix} -\tfrac{1}{5} \amp \tfrac{3}{5} \\ \tfrac{1}{5} \amp \tfrac{2}{5} \end{bmatrix}</m></p></li>
                 </ol>
             </answer>
         </exercise>
+
         <exercise>
             <statement>
                 <p>Find the inverse of each matrix, if it exists.</p>
                 <ol marker="(a)" cols="2">
-                    <li>
-                        <p><m>A = \begin{bmatrix} 7 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>B = \begin{bmatrix} 1 &amp; -4 \\ 2 &amp; 5 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>C = \begin{bmatrix} -4 &amp; -1 \\ 2 &amp; 0 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>D = \begin{bmatrix} 0 &amp; -2 \\ 5 &amp; 1 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>E = \begin{bmatrix} -1 &amp; 2 \\ 3 &amp; -6 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>F = \begin{bmatrix} 2 &amp; -3 \\ 1 &amp; 4 \end{bmatrix}</m></p>
-                    </li>
+                    <li><p><m>A = \begin{bmatrix} 7 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m></p></li>
+                    <li><p><m>B = \begin{bmatrix} 1 \amp -4 \\ 2 \amp 5 \end{bmatrix}</m></p></li>
+                    <li><p><m>C = \begin{bmatrix} -4 \amp -1 \\ 2 \amp 0 \end{bmatrix}</m></p></li>
+                    <li><p><m>D = \begin{bmatrix} 0 \amp -2 \\ 5 \amp 1 \end{bmatrix}</m></p></li>
+                    <li><p><m>E = \begin{bmatrix} -1 \amp 2 \\ 3 \amp -6 \end{bmatrix}</m></p></li>
+                    <li><p><m>F = \begin{bmatrix} 2 \amp -3 \\ 1 \amp 4 \end{bmatrix}</m></p></li>
                 </ol>
             </statement>
             <answer>
                 <ol marker="(a)" cols="2">
-                    <li>
-                        <p><m>A^{-1} = \begin{bmatrix} \tfrac{1}{7} &amp; 0 \\ 0 &amp; \tfrac{1}{3} \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>B^{-1} = \begin{bmatrix} \tfrac{5}{13} &amp; \tfrac{4}{13} \\ -\tfrac{2}{13} &amp; \tfrac{1}{13} \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p><m>C^{-1} = \begin{bmatrix} 0 &amp; \tfrac{1}{2} \\ -1 &amp; -2 \end{bmatrix}</m></p>       
-                    </li>
-                    <li>
-                        <p><m>D^{-1} = \begin{bmatrix} \tfrac{1}{10} &amp; \tfrac{1}{5} \\ -\tfrac{1}{2} &amp; 0 \end{bmatrix}</m></p>
-                    </li>
-                    <li>
-                        <p>No inverse, since <m>\det{E} = 0</m></p>
-                    </li>
-                    <li>
-                        <p><m>F^{-1} = \begin{bmatrix} \tfrac{4}{11} &amp; \tfrac{3}{11} \\ -\tfrac{1}{11} &amp; \tfrac{2}{11} \end{bmatrix}</m></p>
-                    </li>
+                    <li><p><m>A^{-1} = \begin{bmatrix} \tfrac{1}{7} \amp 0 \\ 0 \amp \tfrac{1}{3} \end{bmatrix}</m></p></li>
+                    <li><p><m>B^{-1} = \begin{bmatrix} \tfrac{5}{13} \amp \tfrac{4}{13} \\ -\tfrac{2}{13} \amp \tfrac{1}{13} \end{bmatrix}</m></p></li>
+                    <li><p><m>C^{-1} = \begin{bmatrix} 0 \amp \tfrac{1}{2} \\ -1 \amp -2 \end{bmatrix}</m></p></li>
+                    <li><p><m>D^{-1} = \begin{bmatrix} \tfrac{1}{10} \amp \tfrac{1}{5} \\ -\tfrac{1}{2} \amp 0 \end{bmatrix}</m></p></li>
+                    <li><p>No inverse, since <m>\det(E) = 0</m>.</p></li>
+                    <li><p><m>F^{-1} = \begin{bmatrix} \tfrac{4}{11} \amp \tfrac{3}{11} \\ -\tfrac{1}{11} \amp \tfrac{2}{11} \end{bmatrix}</m></p></li>
                 </ol>
             </answer>
         </exercise>
+
         <exercise>
             <statement>
                 <p>
                     A printing kiosk in Nairobi charges for black-and-white pages and colour pages. A student prints 3 black-and-white pages and 2 colour pages for KSh <m>110</m>. Another student prints 5 black-and-white pages and 1 colour page for KSh <m>125</m>.
                 </p>
-                <p>
-                    We need to find the cost of one black-and-white page and the cost of one colour page.
-                </p>
                 <ol marker="(a)">
-                    <li>
-                        <p>Let <m>x</m> be the cost of one black-and-white page and <m>y</m> be the cost of one colour page. Write the system of equations.</p>
-                    </li>
-                    <li>
-                        <p>Write the system in matrix form and find the inverse of the coefficient matrix.</p>
-                    </li>
-                    <li>
-                        <p>Use the inverse to solve for <m>x</m> and <m>y</m>.</p>
-                    </li>
+                    <li><p>Let <m>x</m> be the cost of one black-and-white page and <m>y</m> the cost of one colour page. Write the system of equations.</p></li>
+                    <li><p>Write the system in matrix form and find the inverse of the coefficient matrix.</p></li>
+                    <li><p>Use the inverse to solve for <m>x</m> and <m>y</m>.</p></li>
                 </ol>
             </statement>
             <solution>
                 <ol marker="(a)">
                     <li>
                         <p>
-                            The system is
                             <md>
-                                <mrow> 3x + 2y = 110 </mrow>
-                                <mrow> 5x + y = 125 </mrow>
+                                <mrow>3x + 2y \amp= 110</mrow>
+                                <mrow>5x + y \amp= 125</mrow>
                             </md>
                         </p>
                     </li>
                     <li>
                         <p>
-                            In matrix form,
+                            In matrix form:
+                            <me>\begin{bmatrix} 3 \amp 2 \\ 5 \amp 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 110 \\ 125 \end{bmatrix}.</me>
+                            The determinant is <m>3(1)-2(5)=-7</m>, so
                             <md>
-                                <mrow> \begin{bmatrix} 3 &amp; 2 \\ 5 &amp; 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 110 \\ 125 \end{bmatrix}. </mrow>
-                            </md>
-                            The inverse of the coefficient matrix is
-                            <md>
-                                <mrow> A^{-1} \amp = \frac{1}{(3)(1) - (2)(5)} \begin{bmatrix} 1 &amp; -2 \\ -5 &amp; 3 \end{bmatrix} </mrow>
-                                <mrow> \amp = -\frac{1}{7} \begin{bmatrix} 1 &amp; -2 \\ -5 &amp; 3 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} -\tfrac{1}{7} &amp; \tfrac{2}{7} \\ \tfrac{5}{7} &amp; -\tfrac{3}{7} \end{bmatrix}. </mrow>
+                                <mrow> A^{-1} \amp = -\frac{1}{7} \begin{bmatrix} 1 \amp -2 \\ -5 \amp 3 \end{bmatrix} = \begin{bmatrix} -\tfrac{1}{7} \amp \tfrac{2}{7} \\ \tfrac{5}{7} \amp -\tfrac{3}{7} \end{bmatrix}. </mrow>
                             </md>
                         </p>
                     </li>
                     <li>
                         <p>
-                            Therefore,
                             <md>
-                                <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 110 \\ 125 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} -\tfrac{1}{7} &amp; \tfrac{2}{7} \\ \tfrac{5}{7} &amp; -\tfrac{3}{7} \end{bmatrix} \begin{bmatrix} 110 \\ 125 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} 20 \\ 25 \end{bmatrix}. </mrow>
+                                <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 110 \\ 125 \end{bmatrix} = \begin{bmatrix} 20 \\ 25 \end{bmatrix}. </mrow>
                             </md>
                             So a black-and-white page costs KSh <m>20</m> and a colour page costs KSh <m>25</m>.
                         </p>
@@ -694,6 +767,7 @@
                 </ol>
             </solution>
         </exercise>
+
         <exercise>
             <statement>
                 <p>
@@ -704,25 +778,20 @@
                 <p>
                     The system is
                     <md>
-                        <mrow> 2x + 3y = 480 </mrow>
-                        <mrow> 5x + y = 680 </mrow>
+                        <mrow>2x + 3y \amp= 480</mrow>
+                        <mrow>5x + y \amp= 680</mrow>
                     </md>
                     so
-                    <md>
-                        <mrow> \begin{bmatrix} 2 &amp; 3 \\ 5 &amp; 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 480 \\ 680 \end{bmatrix}. </mrow>
-                    </md>
-                    The inverse is
-                    <md>
-                        <mrow> A^{-1} = \frac{1}{(2)(1) - (3)(5)} \begin{bmatrix} 1 &amp; -3 \\ -5 &amp; 2 \end{bmatrix} = -\frac{1}{13} \begin{bmatrix} 1 &amp; -3 \\ -5 &amp; 2 \end{bmatrix}. </mrow>
-                    </md>
+                    <me>\begin{bmatrix} 2 \amp 3 \\ 5 \amp 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 480 \\ 680 \end{bmatrix}.</me>
+                    The determinant is <m>2(1)-3(5)=-13</m>, so
+                    <me>A^{-1} = -\frac{1}{13} \begin{bmatrix} 1 \amp -3 \\ -5 \amp 2 \end{bmatrix}.</me>
                     Hence
-                    <md>
-                        <mrow> \begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 480 \\ 680 \end{bmatrix} = \begin{bmatrix} 120 \\ 80 \end{bmatrix}. </mrow>
-                    </md>
+                    <me>\begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 480 \\ 680 \end{bmatrix} = \begin{bmatrix} 120 \\ 80 \end{bmatrix}.</me>
                     So a notebook costs KSh <m>120</m> and a pen costs KSh <m>80</m>.
                 </p>
             </solution>
         </exercise>
+
         <exercise>
             <statement>
                 <p>
@@ -733,48 +802,86 @@
                 <p>
                     The system is
                     <md>
-                        <mrow> 3x + 4y = 2300 </mrow>
-                        <mrow> 2x + 5y = 2000 </mrow>
+                        <mrow>3x + 4y \amp= 2300</mrow>
+                        <mrow>2x + 5y \amp= 2000</mrow>
                     </md>
                     so
-                    <md>
-                        <mrow> \begin{bmatrix} 3 &amp; 4 \\ 2 &amp; 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 2300 \\ 2000 \end{bmatrix}. </mrow>
-                    </md>
-                    The inverse is
-                    <md>
-                        <mrow> A^{-1} = \frac{1}{(3)(5) - (4)(2)} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; 3 \end{bmatrix} = \frac{1}{7} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; 3 \end{bmatrix}. </mrow>
-                    </md>
+                    <me>\begin{bmatrix} 3 \amp 4 \\ 2 \amp 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 2300 \\ 2000 \end{bmatrix}.</me>
+                    The determinant is <m>3(5)-4(2)=7</m>, so
+                    <me>A^{-1} = \frac{1}{7} \begin{bmatrix} 5 \amp -4 \\ -2 \amp 3 \end{bmatrix}.</me>
                     Therefore,
                     <md>
-                        <mrow> \begin{bmatrix} x \\ y \end{bmatrix} \amp = A^{-1} \begin{bmatrix} 2300 \\ 2000 \end{bmatrix} </mrow>
-                        <mrow> \amp =  \frac{1}{7} \begin{bmatrix} 5 &amp; -4 \\ -2 &amp; 3 \end{bmatrix}\begin{bmatrix} 2300 \\ 2000 \end{bmatrix} </mrow>
-                        <mrow> \amp = \begin{bmatrix} 500 \\ 200 \end{bmatrix}. </mrow>
+                        <mrow>\begin{bmatrix} x \\ y \end{bmatrix} \amp= \frac{1}{7}\begin{bmatrix}5 \amp -4 \\ -2 \amp 3\end{bmatrix}\begin{bmatrix}2300 \\ 2000\end{bmatrix} = \begin{bmatrix}500 \\ 200\end{bmatrix}.</mrow>
                     </md>
                     So a tourist ticket costs KSh <m>500</m> and a local ticket costs KSh <m>200</m>.
                 </p>
             </solution>
         </exercise>
+
         <exercise>
             <title>Inverse of the Product of Matrices</title>
             <statement>
-                <p>Let <m>A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 3 \end{bmatrix}</m>.</p>
+                <p>Let <m>A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m> and <m>B = \begin{bmatrix} 2 \amp 1 \\ 0 \amp 3 \end{bmatrix}</m>.</p>
+                <ol marker="(a)">
+                    <li><p>Find <m>A^{-1}</m> and <m>B^{-1}</m>.</p></li>
+                    <li><p>Compute <m>AB</m> and <m>(AB)^{-1}</m>.</p></li>
+                    <li><p>Find <m>A^{-1}B^{-1}</m>. Is it equal to <m>(AB)^{-1}</m>?</p></li>
+                    <li><p>Find <m>B^{-1}A^{-1}</m>. Is it equal to <m>(AB)^{-1}</m>?</p></li>
+                    <li><p>If <m>C</m> is any invertible <m>2\times2</m> matrix, write a guess for <m>(ABC)^{-1}</m>.</p></li>
+                </ol>
+            </statement>
+            <solution>
                 <ol marker="(a)">
                     <li>
-                        <p>Find <m>A^{-1}</m> and <m>B^{-1}</m>.</p>
-                    </li>
-                    <li>
-                        <p>Compute <m>AB</m> and <m>(AB)^{-1}</m>.</p>
-                    </li>
-                    <li>
-                        <p>Find <m>A^{-1}B^{-1}</m>, the product of the inverses. Is it equal to <m>(AB)^{-1}</m>? </p>
-                    </li>
-                    <li>
                         <p>
-                            Instead, find <m>B^{-1}A^{-1}</m>, the product of the inverses in the opposite order. Is it equal to <m>(AB)^{-1}</m>?
+                            <md>
+                                <mrow>A^{-1} \amp= \frac{1}{4-6}\begin{bmatrix}4 \amp -2 \\ -3 \amp 1\end{bmatrix} = \begin{bmatrix}-2 \amp 1 \\ \tfrac{3}{2} \amp -\tfrac{1}{2}\end{bmatrix},</mrow>
+                                <mrow>B^{-1} \amp= \frac{1}{6}\begin{bmatrix}3 \amp -1 \\ 0 \amp 2\end{bmatrix} = \begin{bmatrix}\tfrac{1}{2} \amp -\tfrac{1}{6} \\ 0 \amp \tfrac{1}{3}\end{bmatrix}.</mrow>
+                            </md>
                         </p>
                     </li>
                     <li>
-                        <p>If <m>C</m> is any invertible <m>2\times 2</m> matrix, write a guess for the formula for <m>(ABC)^{-1}</m>.</p>
+                        <p>
+                            <md>
+                                <mrow>AB \amp= \begin{bmatrix}2 \amp 7 \\ 6 \amp 15\end{bmatrix},</mrow>
+                                <mrow>(AB)^{-1} \amp= \frac{1}{30-42}\begin{bmatrix}15 \amp -7 \\ -6 \amp 2\end{bmatrix} = \begin{bmatrix}-\tfrac{5}{4} \amp \tfrac{7}{12} \\ \tfrac{1}{2} \amp -\tfrac{1}{6}\end{bmatrix}.</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <me>A^{-1}B^{-1} = \begin{bmatrix}-1 \amp \tfrac{2}{3} \\ \tfrac{3}{4} \amp -\tfrac{5}{12}\end{bmatrix} \neq (AB)^{-1}.</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <me>B^{-1}A^{-1} = \begin{bmatrix}-\tfrac{5}{4} \amp \tfrac{7}{12} \\ \tfrac{1}{2} \amp -\tfrac{1}{6}\end{bmatrix} = (AB)^{-1}. \checkmark</me>
+                        </p>
+                        <note>
+                            <p>
+                                Why is the order reversed? Suppose <m>B</m> represents putting on socks and <m>A</m> represents putting on shoes. Then <m>AB</m> means socks first, then shoes. To undo this, we remove the shoes <m>(A^{-1})</m> first, then remove the socks <m>(B^{-1})</m>, giving <m>B^{-1}A^{-1}</m>.
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p><me>(ABC)^{-1} = C^{-1}B^{-1}A^{-1}.</me></p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <title>Inverse of Diagonal Matrices</title>
+            <statement>
+                <ol marker="(a)">
+                    <li>
+                        <p>Let <m>M = \begin{bmatrix}5 \amp 0 \\ 0 \amp -2\end{bmatrix}</m>. Find <m>M^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>
+                            Let <m>N = \begin{bmatrix}a \amp 0 \\ 0 \amp b\end{bmatrix}</m>. Prove that
+                            <me>N^{-1} = \begin{bmatrix}\tfrac{1}{a} \amp 0 \\ 0 \amp \tfrac{1}{b}\end{bmatrix}.</me>
+                        </p>
                     </li>
                 </ol>
             </statement>
@@ -782,121 +889,21 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            Computing <m>A^{-1}</m> first:
                             <md>
-                                <mrow> A^{-1} 
-                                \amp = \frac{1}{(1)(4) - (2)(3)} \begin{bmatrix} 4 &amp; -2 \\ -3 &amp; 1 \end{bmatrix} </mrow>
-                                <mrow> \amp = -\frac{1}{2} \begin{bmatrix} 4 &amp; -2 \\ -3 &amp; 1 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} -2 &amp; 1 \\ \tfrac{3}{2} &amp; -\tfrac{1}{2} \end{bmatrix} </mrow>
-                            </md>
-                        </p>
-                        <p>
-                            Now for <m>B^{-1} </m>:
-                            <md>
-                                <mrow> B^{-1} 
-                                \amp = \frac{1}{(2)(3) - (1)(0)} \begin{bmatrix} 3 &amp; -1 \\ 0 &amp; 2 \end{bmatrix} </mrow>
-                                <mrow> \amp = \frac{1}{6} \begin{bmatrix} 3 &amp; -1 \\ 0 &amp; 2 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} \tfrac{1}{2} &amp; -\tfrac{1}{6} \\ 0 &amp; \tfrac{1}{3} \end{bmatrix} </mrow>
+                                <mrow>M^{-1} \amp= \frac{1}{(5)(-2)-0}\begin{bmatrix}-2 \amp 0 \\ 0 \amp 5\end{bmatrix} = \begin{bmatrix}\tfrac{1}{5} \amp 0 \\ 0 \amp -\tfrac{1}{2}\end{bmatrix}.</mrow>
                             </md>
                         </p>
                     </li>
                     <li>
                         <p>
-                            Finding the matrix product:
                             <md>
-                                <mrow> AB \amp = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 3 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} 2 &amp; 7 \\ 6 &amp; 15 \end{bmatrix} </mrow>
+                                <mrow>N^{-1} \amp= \frac{1}{ab}\begin{bmatrix}b \amp 0 \\ 0 \amp a\end{bmatrix} = \begin{bmatrix}\tfrac{1}{a} \amp 0 \\ 0 \amp \tfrac{1}{b}\end{bmatrix}.</mrow>
                             </md>
-                        </p>
-                        <p>
-                            Taking the inverse:
-                            <md>
-                                <mrow> (AB)^{-1} 
-                                \amp = \frac{1}{(2)(15) - (7)(6)} \begin{bmatrix} 15 &amp; -7 \\ -6 &amp; 2 \end{bmatrix} </mrow>
-                                <mrow> \amp = -\frac{1}{12} \begin{bmatrix} 15 &amp; -7 \\ -6 &amp; 2 \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} -\tfrac{5}{4} &amp; \tfrac{7}{12} \\ \tfrac{1}{2} &amp; -\tfrac{1}{6} \end{bmatrix} </mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Multiplying the inverses in the same order as the original matrices:
-                            <md>
-                                <mrow> A^{-1}B^{-1} \amp = \begin{bmatrix} -2 &amp; 1 \\ \tfrac{3}{2} &amp; -\tfrac{1}{2} \end{bmatrix} \begin{bmatrix} \tfrac{1}{2} &amp; -\tfrac{1}{6} \\ 0 &amp; \tfrac{1}{3} \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} -1 &amp; \tfrac{2}{3} \\ \tfrac{3}{4} &amp; -\tfrac{5}{12} \end{bmatrix} </mrow>
-                            </md>
-                            This is not the same as <m>(AB)^{-1}</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Multiplying the inverses in the opposite order:
-                            <md>
-                                <mrow> B^{-1}A^{-1} \amp = \begin{bmatrix} \tfrac{1}{2} &amp; -\tfrac{1}{6} \\ 0 &amp; \tfrac{1}{3} \end{bmatrix} \begin{bmatrix} -2 &amp; 1 \\ \tfrac{3}{2} &amp; -\tfrac{1}{2} \end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix} -\tfrac{5}{4} &amp; \tfrac{7}{12} \\ \tfrac{1}{2} &amp; -\tfrac{1}{6} \end{bmatrix} </mrow>
-                            </md>
-                        </p>
-                        <p>
-                            Hence <m>(AB)^{-1} = B^{-1}A^{-1}</m>.
-                        </p>
-                        <note>
-                            <p>
-                                Why is the order reversed? Suppose <m>B</m> represents putting on socks and <m>A</m> represents putting on shoes. Then <m>AB</m> means socks first, then shoes. To undo this process, we must first remove the shoes <m>\left(A^{-1}\right)</m> and then remove the socks <m>\left(B^{-1}\right)</m>, which is <m>B^{-1}A^{-1}</m>.
-                            </p>
-                        </note>
-                    </li>
-                    <li>
-                        <p>
-                            Taking the inverse of a product inverts the order of the matrices, so we guess that <me>(ABC)^{-1} = C^{-1}B^{-1}A^{-1}</me>
-                            Try to confirm this by choosing a specific <m>C</m>.
                         </p>
                     </li>
                 </ol>
             </solution>
         </exercise>
-        <exercise>
-            <title>Inverse of Diagonal Matrices</title>
-            <statement>   
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            Let <m>M = \begin{bmatrix}5 &amp; 0 \\ 0 &amp; -2\end{bmatrix}</m>. Find <m>M^{-1}</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Let <m>N = \begin{bmatrix}a &amp; 0 \\ 0 &amp; b\end{bmatrix}</m> be a diagonal matrix with entries <m>a</m> and <m>b</m>. Prove that <me>N^{-1} = \begin{bmatrix}\frac{1}{a} &amp; 0 \\ 0 &amp; \frac{1}{b}\end{bmatrix}</me>.
-                        </p>
-                    </li>
-                </ol>
-            </statement>   
-            <solution>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            Using the formula for the inverse of a 2 by 2 matrix, we have
-                            <md>
-                                <mrow> M^{-1} \amp = \frac{1}{(5)(-2) - (0)(0)} \begin{bmatrix}-2 &amp; 0 \\ 0 &amp; 5\end{bmatrix}</mrow>
-                                <mrow> \amp = \frac{1}{-10} \begin{bmatrix}-2 &amp; 0 \\ 0 &amp; 5\end{bmatrix}</mrow>
-                                <mrow> \amp = \begin{bmatrix}\frac{-2}{-10} &amp; 0 \\ 0 &amp; \frac{5}{-10}\end{bmatrix}</mrow>
-                                <mrow> \amp = \begin{bmatrix}\frac{1}{5} &amp; 0 \\ 0 &amp; -\frac{1}{2}\end{bmatrix} </mrow>
-                            </md>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Using the formula for the inverse of a 2 by 2 matrix, we have
-                            <md>
-                                <mrow> N^{-1} \amp = \frac{1}{(a)(b) - (0)(0)} \begin{bmatrix}b &amp; 0 \\ 0 &amp; a\end{bmatrix} </mrow>
-                                <mrow> \amp = \frac{1}{ab} \begin{bmatrix}b &amp; 0 \\ 0 &amp; a\end{bmatrix} </mrow>
-                                <mrow> \amp = \begin{bmatrix}\frac{1}{a} &amp; 0 \\ 0 &amp; \frac{1}{b}\end{bmatrix}  </mrow>
-                            </md>
-                            as required.
-                        </p>
-                    </li>
-                </ol>
-            </solution>             
-        </exercise>        
     </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
