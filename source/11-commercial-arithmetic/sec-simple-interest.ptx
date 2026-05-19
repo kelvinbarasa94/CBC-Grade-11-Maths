@@ -271,7 +271,7 @@
                 <md>
                     <mrow> I \amp = \;?</mrow>
                     <mrow> P \amp = \;\text{Ksh}\; 12,500</mrow>
-                    <mrow> R \amp = \;4 \;\text{%}</mrow>
+                    <mrow> R \amp = \;4 \;\%</mrow>
                     <mrow> T \amp = \;5 \;\text{years}</mrow>
                 </md>
                 
@@ -306,7 +306,7 @@
                 <md>
                     <mrow> I \amp = \; ?</mrow>
                     <mrow> P \amp = \; \text{Ksh}\;900,000</mrow>
-                    <mrow> R \amp = \; 2.1 \; \text{%}</mrow>
+                    <mrow> R \amp = \; 2.1 \; \%</mrow>
                     <mrow> T \amp = \; 10 \; \text{months}</mrow>
                 </md>
                 
@@ -359,11 +359,11 @@
                 <md>
                     <mrow> R =  \amp \; \frac{100 \times I}{P \times T}</mrow>
                     <mrow> \amp = \; \frac{100 \times 66,000}{300,000 \times 4}</mrow>
-                    <mrow> \amp = \; 5.5\; \text{%}</mrow>
+                    <mrow> \amp = \; 5.5\; \%</mrow>
                 </md>
             </p>
             <p>
-                The rate of interest is <m>5.5\; \text{%}</m>
+                The rate of interest is <m>5.5\; \%</m>
             </p>
         </solution>
     </example>
@@ -381,7 +381,7 @@
         <exercise>
             <statement>
                 <p>
-                    Find the simple interest earned after <m>4</m> years on <m>\text{Ksh} \; 8,000</m> at an interest rate of <m> 5 \;\text{%}</m>.
+                    Find the simple interest earned after <m>4</m> years on <m>\text{Ksh} \; 8,000</m> at an interest rate of <m> 5 \;\%</m>.
                 </p>
             </statement>
             <answer>
@@ -391,7 +391,7 @@
         <exercise>
             <statement>
                 <p>
-                    Find the simple interest earned after <m>2</m> years on <m>\text{Ksh} \; 70,000 </m> at an interest rate of <m> 4 \;\text{%}</m>.
+                    Find the simple interest earned after <m>2</m> years on <m>\text{Ksh} \; 70,000 </m> at an interest rate of <m> 4 \;\%</m>.
                 </p>
             </statement>
             <answer>
@@ -401,7 +401,7 @@
         <exercise>
             <statement>
                 <p>
-                    Find the principal invested if <m>\text{Ksh}\; 4950 </m> interest was earned in <m>3</m> years at an interest rate of <m> 6 \;\text{%}</m>.
+                    Find the principal invested if <m>\text{Ksh}\; 4950 </m> interest was earned in <m>3</m> years at an interest rate of <m> 6 \;\%</m>.
                 </p>
             </statement>
             <answer>
@@ -411,7 +411,7 @@
         <exercise>
             <statement>
                 <p>
-                    Sean's new car loan statement saiOd he would pay <m>\text{Ksh} \; 486,625</m> in interest from an interest rate of <m>8.5 \;\text{%}</m>.  If sean borrowed <m>1,145,000</m> from the bank to but the car. After how long should the loan be payed back?
+                    Sean's new car loan statement saiOd he would pay <m>\text{Ksh} \; 486,625</m> in interest from an interest rate of <m>8.5 \;\%</m>.  If sean borrowed <m>1,145,000</m> from the bank to but the car. After how long should the loan be payed back?
                 </p>
             </statement>
             <answer>
