@@ -288,11 +288,6 @@
                             </md>
                         </p>
                     </solution>
-                    <note component="lesson-plan">
-                        <p>
-                            Point out to students that the determinant is <m>1</m> here. Ask: <q>Can you express <m>1</m> using the entries <m>2, 1, 3, 2</m> of matrix <m>A</m>?</q> They should spot that <m>2\times 2 - 1\times 3 = 1</m>. This foreshadows the determinant without naming it yet.
-                        </p>
-                    </note>
                 </li>
             </ol>
         </statement>
@@ -466,7 +461,7 @@
             <md>
                 A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}d \amp -b \\ -c \amp a \end{bmatrix}
             </md>
-            This only exists if <m>ad - bc \neq 0</m>.
+            This only exists if <m>ad - bc \neq 0</m>.<fn>In <xref ref="sec-determinant"/> we will see that <m>ad - bc</m> is the <term>determinant</term> of the matrix.</fn>
         </p>
         <p>
             You can remember this formula by the mnemonic <em>Swap, Negate, Divide</em>: 
@@ -525,7 +520,7 @@
             <ol marker="(a)">
                 <li>
                     <p>
-                        <m>\det(M)=3(2)-1(5)=1</m>, so
+                        <m>ad - bc = 3(2) - 1(5) = 1</m>, so
                         <me>M^{-1}=\frac{1}{1}\begin{bmatrix}2 \amp -1 \\ -5 \amp 3\end{bmatrix}=\begin{bmatrix}2 \amp -1 \\ -5 \amp 3\end{bmatrix}.</me>
                     </p>
                 </li>
@@ -544,7 +539,7 @@
                 </li>
                 <li>
                     <p>
-                        No. The proposed matrix has <m>\det = 2(2)-4(1)=0</m>, so it has no inverse. If there is no inverse, the encoded message cannot be decoded.
+                        No. The proposed matrix has <m>ad - bc = 2(2)-4(1)=0</m>, so it has no inverse. If there is no inverse, the encoded message cannot be decoded.
                     </p>
                 </li>
             </ol>
@@ -596,7 +591,7 @@
             <p>
                 Write the system in matrix form:
                 <me>\begin{bmatrix} 2 \amp -1 \\ 3 \amp 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 14 \end{bmatrix}.</me>
-                The determinant is <m>2(2)-(-1)(3)=7</m>, so the inverse is
+                <m>ad - bc = 2(2)-(-1)(3)=7</m>, so the inverse is
                 <me>A^{-1} = \frac{1}{7} \begin{bmatrix} 2 \amp 1 \\ -3 \amp 2 \end{bmatrix}.</me>
                 Therefore,
                 <md>
@@ -638,7 +633,7 @@
                     <p>
                         In matrix form:
                         <me>\begin{bmatrix} 2 \amp 3 \\ 5 \amp 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1800 \\ 2300 \end{bmatrix}.</me>
-                        The determinant is <m>2(2)-3(5)=-11</m>, so
+                        <m>ad-bc = 2(2)-3(5)=-11</m>, so
                         <md>
                             <mrow> A^{-1} \amp = \frac{1}{-11} \begin{bmatrix} 2 \amp -3 \\ -5 \amp 2 \end{bmatrix} = \begin{bmatrix} -\tfrac{2}{11} \amp \tfrac{3}{11} \\ \tfrac{5}{11} \amp -\tfrac{2}{11} \end{bmatrix}. </mrow>
                         </md>
@@ -693,7 +688,7 @@
                 <ol marker="(a)" cols="2">
                     <li><p><m>A^{-1} = \begin{bmatrix} 3 \amp -1 \\ -5 \amp 2 \end{bmatrix}</m></p></li>
                     <li><p><m>B^{-1} = \begin{bmatrix} \tfrac{1}{4} \amp 0 \\ 0 \amp -\tfrac{1}{2} \end{bmatrix}</m></p></li>
-                    <li><p>No inverse, since <m>\det(C) = 0</m>.</p></li>
+                    <li><p>No inverse, since <m>ad - bc = 1(4) - 2(2) = 0</m>.</p></li>
                     <li><p><m>D^{-1} = \begin{bmatrix} -\tfrac{1}{3} \amp 0 \\ 0 \amp \tfrac{1}{5} \end{bmatrix}</m></p></li>
                     <li><p><m>E^{-1} = \begin{bmatrix} 2 \amp -1 \\ 1 \amp 0 \end{bmatrix}</m></p></li>
                     <li><p><m>F^{-1} = \begin{bmatrix} -\tfrac{1}{5} \amp \tfrac{3}{5} \\ \tfrac{1}{5} \amp \tfrac{2}{5} \end{bmatrix}</m></p></li>
@@ -719,7 +714,7 @@
                     <li><p><m>B^{-1} = \begin{bmatrix} \tfrac{5}{13} \amp \tfrac{4}{13} \\ -\tfrac{2}{13} \amp \tfrac{1}{13} \end{bmatrix}</m></p></li>
                     <li><p><m>C^{-1} = \begin{bmatrix} 0 \amp \tfrac{1}{2} \\ -1 \amp -2 \end{bmatrix}</m></p></li>
                     <li><p><m>D^{-1} = \begin{bmatrix} \tfrac{1}{10} \amp \tfrac{1}{5} \\ -\tfrac{1}{2} \amp 0 \end{bmatrix}</m></p></li>
-                    <li><p>No inverse, since <m>\det(E) = 0</m>.</p></li>
+                    <li><p>No inverse, since <m>ad - bc = -1(-6) - 2(3) = 0</m>.</p></li>
                     <li><p><m>F^{-1} = \begin{bmatrix} \tfrac{4}{11} \amp \tfrac{3}{11} \\ -\tfrac{1}{11} \amp \tfrac{2}{11} \end{bmatrix}</m></p></li>
                 </ol>
             </answer>
@@ -750,7 +745,7 @@
                         <p>
                             In matrix form:
                             <me>\begin{bmatrix} 3 \amp 2 \\ 5 \amp 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 110 \\ 125 \end{bmatrix}.</me>
-                            The determinant is <m>3(1)-2(5)=-7</m>, so
+                            <m>ad - bc = 3(1)-2(5)=-7</m>, so
                             <md>
                                 <mrow> A^{-1} \amp = -\frac{1}{7} \begin{bmatrix} 1 \amp -2 \\ -5 \amp 3 \end{bmatrix} = \begin{bmatrix} -\tfrac{1}{7} \amp \tfrac{2}{7} \\ \tfrac{5}{7} \amp -\tfrac{3}{7} \end{bmatrix}. </mrow>
                             </md>
@@ -783,11 +778,11 @@
                     </md>
                     so
                     <me>\begin{bmatrix} 2 \amp 3 \\ 5 \amp 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 480 \\ 680 \end{bmatrix}.</me>
-                    The determinant is <m>2(1)-3(5)=-13</m>, so
+                    <m>ad - bc = 2(1)-3(5)=-13</m>, so
                     <me>A^{-1} = -\frac{1}{13} \begin{bmatrix} 1 \amp -3 \\ -5 \amp 2 \end{bmatrix}.</me>
                     Hence
-                    <me>\begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 480 \\ 680 \end{bmatrix} = \begin{bmatrix} 120 \\ 80 \end{bmatrix}.</me>
-                    So a notebook costs KSh <m>120</m> and a pen costs KSh <m>80</m>.
+                        <me>\begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 480 \\ 680 \end{bmatrix} = \begin{bmatrix} 120 \\ 80 \end{bmatrix}.</me>
+                        So a notebook costs KSh <m>120</m> and a pen costs KSh <m>80</m>.
                 </p>
             </solution>
         </exercise>
@@ -807,7 +802,7 @@
                     </md>
                     so
                     <me>\begin{bmatrix} 3 \amp 4 \\ 2 \amp 5 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 2300 \\ 2000 \end{bmatrix}.</me>
-                    The determinant is <m>3(5)-4(2)=7</m>, so
+                    <m>ad - bc = 3(5)-4(2)=7</m>, so
                     <me>A^{-1} = \frac{1}{7} \begin{bmatrix} 5 \amp -4 \\ -2 \amp 3 \end{bmatrix}.</me>
                     Therefore,
                     <md>
