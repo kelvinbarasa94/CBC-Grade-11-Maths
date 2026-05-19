@@ -46,73 +46,131 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        8 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
+                        To engage learners in a problem-solving activity that introduces matrix inverses.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
-    <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <paragraphs>
+                <title>Work In Pairs</title>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                In your pairs, write your own 2 by 2 matrix <m>M</m>. You can choose any 4 numbers (don't make them too big!) 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Choose one person to be the <term>Oracle</term> and the other to be the <term>Seeker</term>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The <term>Oracle</term> should secretly pick a vector <m>\mathbf{v}</m>, such as <m>\begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>, and compute <m>\mathbf{w} = M\mathbf{v}</m>. The <term>Oracle</term> should then share the vector <m>\mathbf{w}</m> with the <term>Seeker</term>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The <term>Seeker's</term> job is to figure out what the original vector <m>\mathbf{v}</m> was, using only the information about the matrix <m>M</m> and the vector <m>\mathbf{w}</m>. Spend a few minutes trying to solve this problem.
+                            </p>
+                            <note component="lesson-plan">
+                                <p>
+                                    If Learners are struggling to find the original vector, set up a system of equations based on the matrix-vector product and encourage them to solve it using substitution or elimination.
+                                </p>
+                            </note>
+                        </li>
+                        <li>
+                            <p>
+                                After a few minutes, switch roles and repeat the process with a new matrix and vector.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To connect the Learner Experience to the matrix inverse
                 </p>
             </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Do not introduce the formula for the matrix inverse yet, but familiarise Learners with its key properties.
                     </p>
                 </li>
-            </ol>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <ul>
+            <li>
+                <p>
+                    In the Learner Experience, we had <m>M\mathbf{v} = \mathbf{w}</m>, where we knew <m>M</m> and <m>\mathbf{w}</m>, and were trying to find the original vector <m>\mathbf{v}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    The <term>inverse</term> of a matrix undoes the effect of a matrix, just like how closing a door is the inverse operation to opening it.
+                </p>
+            </li>
+            <li>
+                <p>
+                    We write it as <m>M^{-1}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Applying <m>M</m> to a vector <m>\mathbf{x}</m>, and then applying <m>M^{-1}</m> will return <m>\mathbf{x}</m> to its original position: <m>M^{-1}M\mathbf{x} = \mathbf{x}</m>. Hence <m>M^{-1}M = I</m>, the identity matrix, and <m>MM^{-1} = I </m> too.
+                </p>
+            </li>
+        </ul>
+    </insight>
+
+    <note>
+        <p>
+            So far, we have explored what inverses do and how to verify them. In the next lesson (<xref ref="sec-inverse-of-2-by-2-matrices-ii"/>), we will develop a general formula for finding the inverse of any invertible 2 by 2 matrix.
+        </p>
+    </note>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -120,26 +178,114 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
+        <title>Undoing a Rotation</title>
+            <statement>
+                <p>
+                    The rotation matrix for a <m>30^\circ</m> anticlockwise turn is
+                    <md>R = \begin{bmatrix} \cos 30^\circ &amp; -\sin 30^\circ \\ \sin 30^\circ &amp; \cos 30^\circ \end{bmatrix}</md>
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Verify that <m>R</m> rotates vectors by <m>30^\circ</m> anticlockwise by applying it to the vector <m>\mathbf{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What will the inverse matrix <m>R^{-1}</m> do to a vector?
+                        </p>
+                    </li>
+                    <li>
+                        <p>Write a matrix for <m>R^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Verify your solution by finding <m>RR^{-1}</m>.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p> Calculating the product, we have:
+                            <md>
+                                <mrow> R \mathbf{x} \amp = \begin{bmatrix} \cos 30^\circ &amp; -\sin 30^\circ \\ \sin 30^\circ &amp; \cos 30^\circ \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} </mrow>
+                                <mrow> &amp;= \begin{bmatrix} \cos 30^\circ \\ \sin 30^\circ \end{bmatrix}</mrow>
+                                <mrow> &amp;= \begin{bmatrix} \sqrt{3}/2 \\ 1/2 \end{bmatrix}</mrow>
+                            </md>
+                            Plotting this point, we can see it is indeed a 30 degree anticlockwise rotation of the original point <m>\mathbf{x}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p><m>R^{-1}</m> is a <m>30^\circ</m> <em>clockwise</em> rotation of a vector, undoing the effect of <m>R</m>.</p>
+                    </li>
+                    <li>
+                        <p>
+                            We can replace <m>30^\circ</m> with <m>-30^\circ</m> in the formula for the rotation matrix to get a matrix for <m>R^{-1}</m>, and use the fact that <m>\cos(-\theta) = \cos \theta</m> and <m>\sin(-\theta) = -\sin \theta</m> to simplify:
+                        <md>
+                            <mrow> R^{-1} \amp  \begin{bmatrix} \cos \left(-30^\circ\right) &amp; \sin \left(-30^\circ\right) \\ -\sin \left(-30^\circ\right) &amp; \cos \left(-30^\circ\right) \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} \cos 30^\circ &amp; \sin 30^\circ \\ -\sin 30^\circ &amp; \cos 30^\circ \end{bmatrix}</mrow>
+                        </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Verifying by multiplication, we have
+                            <md>
+                                <mrow> RR^{-1} \amp = \begin{bmatrix} \cos 30^\circ &amp; -\sin 30^\circ \\ \sin 30^\circ &amp; \cos 30^\circ \end{bmatrix} \begin{bmatrix} \cos 30^\circ &amp; \sin 30^\circ \\ -\sin 30^\circ &amp; \cos 30^\circ \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} \cos^2 30^\circ + \sin^2 30^\circ &amp; \cos 30^\circ \sin 30^\circ - \sin 30^\circ \cos 30^\circ \\ \sin 30^\circ \cos 30^\circ - \cos 30^\circ \sin 30^\circ &amp; \sin^2 30^\circ + \cos^2 30^\circ \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} </mrow>
+                                <mrow> \amp = I </mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </example>
+
+    <example>
+        <title>Checking an Inverse by Multiplication</title>
         <statement>
+            <p>
+                Suppose
+                <m>M = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}</m>
+                and
+                <m>M^{-1} = \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix}</m>.
+                Verify that these matrices are inverses by finding <m>MM^{-1}</m> and <m>M^{-1}M</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <md>
+                    <mrow>MM^{-1} &amp;= \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix} \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                    <mrow>&amp;= \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</mrow>
+                </md>
+                Similarly,
+                <md>
+                    <mrow>M^{-1}M &amp;= \begin{bmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \end{bmatrix} </mrow>
+                    <mrow>&amp;= \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</mrow>
+                </md>
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Finding the Original Vector</title>
         <statement>
+            <p>
+                A matrix sends <m>\mathbf{x}</m> to <m>\mathbf{b}</m> by <m>A\mathbf{x} = \mathbf{b}</m>. If
+                <m>A^{-1} = \begin{bmatrix} 1 &amp; 2 \\ -1 &amp; 0 \end{bmatrix}</m>
+                and
+                <m>\mathbf{b} = \begin{bmatrix} 2 \\ -4 \end{bmatrix}</m>,
+                find <m>\mathbf{x}</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <m>\mathbf{x} = A^{-1}\mathbf{b} = \begin{bmatrix} 1 &amp; 2 \\ -1 &amp; 0 \end{bmatrix}\begin{bmatrix} 2 \\ -4 \end{bmatrix} = \begin{bmatrix} -6 \\ -2 \end{bmatrix}</m>.
+            </p>
         </solution>
     </example>
-
-    <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example> -->
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -151,16 +297,227 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>
+                    Let
+                    <m>A = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}</m> and <m>\mathbf{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Compute <m>\mathbf{y} = A\mathbf{x}</m>.</p>
+                    </li>
+                    <li>
+                        <p>If you are given that <m>A^{-1} = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix}</m>, compute <m>A^{-1}\mathbf{y}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Plot <m>\mathbf{x}</m>, <m>\mathbf{y}</m>, and <m>A^{-1}\mathbf{y}</m> on the same axes and describe what you notice.</p>
+                    </li>
+                </ol>
+            </statement>
             <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p><m>\mathbf{y} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}</m>.</p>
+                    </li>
+                    <li>
+                        <p><m>A^{-1}\mathbf{y} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \mathbf{x}</m>.</p>
+                    </li>
+                    <li>
+                        <p>The final point lands back on <m>\mathbf{x}</m>, showing the inverse undoes the transformation.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    If <m>A\mathbf{x} = \mathbf{b}</m>, then <m>\mathbf{x} = A^{-1}\mathbf{b}</m>. Use this idea to solve for <m>\mathbf{x}</m> when
+                    <m>A^{-1} = \begin{bmatrix} 2 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}</m>
+                    and
+                    <m>\mathbf{b} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <m>\mathbf{x} = A^{-1}\mathbf{b} = \begin{bmatrix} 8 \\ 5 \end{bmatrix}</m>.
+                </p>
+            </solution>
+        </exercise>
+
+
+        <exercise>
+            <statement>
+                <p>
+                    The matrix <m>S = \begin{bmatrix}0 \amp 1 \\ 1 \amp 0\end{bmatrix}</m> flips a point across the line <m>y = x</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Describe the effect of <m>S^{-1}</m> on a point.</p>
+                    </li>
+                    <li>
+                        <p>Hence write down <m>S^{-1}</m>.</p>
+                    </li>
+                    <li>
+                        <p>
+                            Confirm that <m>S^{-1}S = I</m> and <m>SS^{-1} = I</m>.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p><m>S^{-1}</m> also flips a point across the line <m>y = x</m>, since flipping again will return the point to its original position.</p>
+                    </li>
+                    <li>
+                        <p><m>S^{-1} = S = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>S^{-1}S \amp = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix} \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix} = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix} = I</mrow>
+                                <mrow>S S^{-1} \amp = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix} \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix} = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix} = I</mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <title>Undoing a Transformation</title>
+            <statement>
+                <p>
+                    Let
+                    <m>A = \begin{bmatrix} 1 &amp; 3 \\ 0 &amp; 1 \end{bmatrix}</m>
+                    and
+                    <m>A^{-1} = \begin{bmatrix} 1 &amp; -3 \\ 0 &amp; 1 \end{bmatrix}</m>.
+                    Take <m>\mathbf{x} = \begin{bmatrix} 2 \\ -1 \end{bmatrix}</m> and compute <m>\mathbf{y} = A\mathbf{x}</m>. Then compute <m>A^{-1}\mathbf{y}</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <m>\mathbf{y} = \begin{bmatrix} -1 \\ -1 \end{bmatrix}</m> and
+                    <m>A^{-1}\mathbf{y} = \begin{bmatrix} 2 \\ -1 \end{bmatrix} = \mathbf{x}</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <title>Which Matrices Cannot Be Undone?</title>
+            <statement>
+                <p>
+                    Consider the matrix
+                    <m>A = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Compute <m>A\begin{bmatrix} 1 \\ 0 \end{bmatrix}</m> and <m>A\begin{bmatrix} 0.5 \\ 0.25 \end{bmatrix}</m>.</p>
+                    </li>
+                    <li>
+                        <p>What do you notice?</p>
+                    </li>
+                    <li>
+                        <p>Explain why <m>A</m> cannot have an inverse.</p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>A\begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m> and
+                                <m>A\begin{bmatrix} 0.5 \\ 0.25 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Two different vectors are sent to the same vector.</p>
+                        </li>
+                        <li>
+                            <p>
+                                Since different inputs produce the same output, the matrix <m>A^{-1}</m> (if it existed) would not be able to send the output back to <em>both</em> the original inputs. Therefore <m>A</m> has no inverse.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The scaling matrix
+                    <m>S = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}</m>
+                    stretches the <m>x</m>-coordinate by 2 and the <m>y</m>-coordinate by 3. Write the matrix that undoes this scaling and verify that it is an inverse of <m>S</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <m>S^{-1} = \begin{bmatrix} \tfrac{1}{2} &amp; 0 \\ 0 &amp; \tfrac{1}{3} \end{bmatrix}</m>, and <m>SS^{-1} = I</m>.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <title>Inverse of a Product</title>
+            <statement>
+                <p>
+                    Let's suppose <m>S</m> represents the act of putting a shirt on, and <m>J</m> represents the act of putting a jumper on. So if <m>\mathbf{x}</m> was a person without clothes, <m>S\mathbf{x}</m> would be a person wearing a shirt.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                What would <m>S^{-1}</m> and <m>J^{-1}</m> represent?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What would <m>JS</m> represent?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What effect would <m>\left(JS\right)^{-1}</m> have?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Can you guess what <m>\left(JS\right)^{-1}</m> might be in terms of <m>J^{-1}</m> and <m>S^{-1}</m>? Think carefully about the order of operations here!
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                Taking off a shirt and taking off a jumper, respectively.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Putting on a shirt and then putting on a jumper. Note the order: in the expression <m>JS\mathbf{x} = J\left(S\mathbf{x}\right)</m>, we first apply <m>S</m> (putting on the shirt) to <m>\mathbf{x}</m>, <em>then</em> apply <m>J</m> (putting on the jumper).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                It would remove a jumper and a shirt
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\left(JS\right)^{-1} = S^{-1}J^{-1}</m>. To undo putting on a jumper and then a shirt, we first need to take off the jumper, and then take off the shirt.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
