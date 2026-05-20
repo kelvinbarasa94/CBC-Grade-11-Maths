@@ -174,20 +174,18 @@
             <ol marker="i)">
                 <li>
                     <p>
-                        <m>\textbf{"AND" Inequalities (Intersection)}</m>: Both conditions must be true at the same time. It represents a continuous range of values. For example, <m>x \gt-2</m> AND <m>x \lt 5</m> is usually written as a single statement: <m>-2 \lt x \lt 5</m> (read as "<m>x</m> is greater than <m>-2</m> and less than <m>5</m>").
+                        <m>\textbf{"AND" Inequalities (Intersection)}</m>: Both conditions must be true at the same time. It represents a continuous range of values. For example, <md>x \gt -2 \quad \text{AND} \quad x \lt 5</md> is usually written as a single statement: <md>-2 \lt x \lt 5</md> (read as <q><m>x</m> is greater than <m>-2</m> and less than <m>5</m></q>).
                     </p>
                 </li>
                 <li>
                     <p>
-                        <m>\textbf{"OR" Inequalities (Union)}</m>: Only one of the conditions needs to be true. The solutions go in opposite directions and cannot be written as a single combined statement. For example, a discount ticket applies if your age <m>a</m> is <m>\lt 12</m> OR <m>\ge 60</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <m>\textbf{Solving Continuous Inequalities}</m>: If an inequality has three parts (e.g., <m>a \lt x \lt b</m>), you can solve it by splitting it into two separate inequalities using "AND", solving each, and then recombining the final answer.
+                        <m>\textbf{"OR" Inequalities (Union)}</m>: Only one of the conditions needs to be true. The solutions go in opposite directions and cannot be written as a single combined statement. For example, a discount ticket applies if your age <m>a</m> is <md>a \lt 12\quad \text{OR} \quad a \ge 60</md>
                     </p>
                 </li>
             </ol>
+        </p>
+        <p>
+            <m>\textbf{Solving Continuous Inequalities}</m>: If an inequality has three parts (e.g., <m>a \lt x \lt b</m>), you can solve it by splitting it into two separate inequalities using "AND", solving each, and then recombining the final answer.
         </p>
     </insight>
 
@@ -203,7 +201,7 @@
                 Solve the following compound inequality:
             </p>
             <p>
-                <me>x \le 4 \text{ AND } 2x -10 \lt 6</me>
+                <me>x \le 4 \quad \text{ AND } \quad 2x -10 \lt 6</me>
             </p>
         </statement>
         <solution>
@@ -224,13 +222,10 @@
                 Now we combine the two inequalities to get the final answer:
             </p>
             <p>
-                <m>x</m> must be <m>\textbf{greater than}-5</m> AND <m>x</m> must be <m>\textbf{less than or equal to } 4</m>.
+                <m>x</m> must be <em>less than</em> <m>8</m> AND <m>x</m> must be <m>\textbf{less than or equal to } 4</m>. Since any number less than or equal to 4 is also less than 8, the solution to the compound inequality is:
             </p>
             <p>
-                Therefore:
-            </p>
-            <p>
-                <me>-5 \lt x \le 4</me>
+                <me>x \le 4</me>
             </p>
         </solution>
     </example>
@@ -247,12 +242,11 @@
         <solution>
             <p>
                 First we split the compound inequality into two separate simple inequalities:
-            </p>
-            <p>
-                <me>2x + 4 \lt 5 + 3x \text{ and } 5 + 3x \lt 8 + 2x</me>
-            </p>
-            <p>
-                The first inequality we solve as follows:
+                <md>
+                    <mrow number="yes" xml:id="ineq1">  2x + 4 \lt 5 + 3x </mrow>
+                    <mrow number="yes" xml:id="ineq2"> 5 + 3x \lt 8 + 2x </mrow>
+                </md>
+                Inequality <xref ref="ineq1"/> can be solved as follows:
             </p>
             <p>
                 <md>
@@ -265,7 +259,7 @@
                 We can also write it as <m>x \gt -1</m>
             </p>
             <p>
-                Then the second inequality we solve as follows:
+                Then inequality <xref ref="ineq2"/> is solved as follows:
             </p>
             <p>
                 <md>
@@ -289,7 +283,7 @@
     <example>
         <statement>
             <p>
-                A matatu travelling from Nairobi to Nakuru takes <m>t</m> hours. Traffic regulations state that the trip must take a minimum of <m>2</m> hours (to prevent over-speeding) but strictly less than <m>4</m> hours. If the time taken is represented by the expression <m>t = \frac{x + 10}{30}</m>. Write a compound inequality to represent this situation and solve for <m>x</m>.
+                A matatu travelling from Nairobi to Nakuru takes <m>t</m> hours. Traffic regulations state that the trip must take a minimum of <m>2</m> hours (to prevent over-speeding) but strictly less than <m>4</m> hours. If the time taken is represented by the expression <m>t = \frac{x + 10}{30}</m>, write a compound inequality to represent this situation and solve for <m>x</m>.
             </p>
         </statement>
         <solution>
@@ -442,6 +436,64 @@
                     </ol>
                 </p>
             </answer>
+        </exercise>
+        <exercise>
+            <statement marker="(a)">
+                <p>
+                    The <term>Arithmetic Mean-Geometric Mean-Harmonic Mean</term> (AM-GM-HM) inequality states that, for positive numbers <m>a</m> and <m>b</m>:
+                    <md>
+                        \frac{a + b}{2} \ge \sqrt{ab} \ge \frac{2}{\frac{1}{a} + \frac{1}{b}}
+                    </md>
+                    The first term is the arithmetic mean (AM), the second term is the geometric mean (GM), and the third term is the harmonic mean (HM).
+                    <ol>
+                        <li>
+                            <p>
+                                Verify the AM-GM-HM inequality for the numbers <m>4</m> and <m>9</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Can you find two positive numbers for which the AM-GM-HM inequality becomes an equality (i.e., all three means are equal)? If so, what are those numbers?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                For <m>a = 4</m> and <m>b = 9</m>:
+                                <md>
+                                    \frac{4 + 9}{2} = \frac{13}{2} = 6.5
+                                </md>
+                                <md>
+                                    \sqrt{4 \times 9} = \sqrt{36} = 6
+                                </md>
+                                <md>
+                                    \frac{2}{\frac{1}{4} + \frac{1}{9}} = \frac{2}{\frac{13}{36}} = \frac{72}{13} \approx 5.54
+                                </md>
+                                Therefore, we have:
+                                <md>
+                                    6.5 \ge 6 \ge 5.54
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Equality occurs whenever <m>a = b</m>, because in that case:
+                                <md>
+                                    <mrow>\text{AM} \amp = \frac{a + b}{2} = \frac{2a}{2} = a</mrow>
+                                    <mrow>\text{GM} \amp = \sqrt{ab} = \sqrt{a^2} = a</mrow>
+                                    <mrow>\text{HM} \amp = \frac{2}{\frac{1}{a} + \frac{1}{b}} = \frac{2}{\frac{2}{a}} = a</mrow>
+                                </md>
+                                Therefore, all three means are equal when <m>a = b</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
     </exercises>
 

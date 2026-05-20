@@ -417,6 +417,67 @@
         <exercise>
             <statement>
                 <p>
+                    Mike says the following are all true statements:
+                    <ol marker="(a)" cols="2">
+                        <li>
+                            <p>
+                                <m>a + b \lt a - b</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>2\sqrt{ab} \le a + b </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>-a \le a </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>a \ge \frac{1}{a}</m>
+                            </p>
+                        </li>
+                    </ol>
+                    Explain which statements are true, and provide a counterexample for any statement that is false.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                This statement is false. A counterexample is when <m>a = 5</m> and <m>b = 2</m>, which gives us <m>7 \lt 3</m>, which is not true.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This statement is true (for non-negative <m>a</m> and <m>b</m>). We can prove it by noticing that squares are always positive, so:
+                                <md>
+                                    <mrow>0 \amp \le \left(\sqrt{a} - \sqrt{b}\right)^2 </mrow>
+                                    <mrow>0 \amp \le a - 2\sqrt{ab} + b </mrow>
+                                    <mrow>2\sqrt{ab} \amp \le a + b </mrow>
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This statement is true for non-negative <m>a</m>. However, if <m>a</m> is negative, the statement is false. For example, if <m>a = -3</m>, then <m>-a = 3</m>, which is not less than or equal to <m>-3</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This statement is false. A counterexample is when <m>a = 0.5</m>, which gives us <m>0.5 \ge 2</m>, which is not true.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
                     Consider the triangle shown below with side lengths <m>a</m>, <m>b</m>, and <m>c</m>.
                 </p>
                 <figure>
