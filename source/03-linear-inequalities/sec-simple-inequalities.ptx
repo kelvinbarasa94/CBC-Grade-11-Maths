@@ -414,6 +414,121 @@
                 </p>
             </answer>
         </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Consider the triangle shown below with side lengths <m>a</m>, <m>b</m>, and <m>c</m>.
+                </p>
+                <figure>
+                    <caption>Triangle with side lengths <m>a</m>, <m>b</m>, and <m>c</m></caption>
+                    <image>
+                        <shortdescription>A triangle with three sides labeled a, b, and c.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1]
+                                \coordinate (A) at (0,0);
+                                \coordinate (B) at (4,0);
+                                \coordinate (C) at (1.2,2.5);
+                                \draw (A)--(B) node[midway, below] {$c$};
+                                \draw (B)--(C) node[midway, right] {$a$};
+                                \draw (C)--(A) node[midway, left] {$b$};
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <p>
+                    The triangle inequality theorem tells us that:
+                </p>
+                <theorem xml:id="thm-triangle-ineq">
+                    <title>The Triangle Inequality</title>
+                    <statement>
+                        <p>
+                            The sum of the lengths of any two sides of a triangle must be greater than the length of the third side
+                        </p>
+                    </statement>
+                </theorem>
+                <p>
+                    Translate this statement into three mathematical inequalities using the side lengths <m>a</m>, <m>b</m>, and <m>c</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>a + b \gt c</m>
+                </p>
+                <p>
+                    <m>a + c \gt b</m>
+                </p>
+                <p>
+                    <m>b + c \gt a</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    In this exercise, you will verify the triangle inequality theorem by constructing and measuring your own triangle.
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Draw a triangle of any shape and size on a sheet of paper. Label the three sides as <m>a</m>, <m>b</m>, and <m>c</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Use a ruler to measure each side length in centimetres. Record your measurements.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                For each pair of sides, add their lengths and verify that the sum is greater than the third side. Record your results in the following format:
+                            </p>
+                            <tabular>
+                                <row header="yes">
+                                    <cell>Sum of two sides</cell>
+                                    <cell>Third side</cell>
+                                    <cell>Is the sum greater than the third side?</cell>
+                                </row>
+                                <row>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                </row>
+                                <row>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                </row>
+                                <row>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                    <cell>?</cell>
+                                </row>
+                            </tabular>
+                        </li>
+                        <li>
+                            <p>
+                                Based on your measurements, does the triangle inequality theorem hold for your triangle? Explain your findings.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    This is a practical exercise where learners verify the triangle inequality theorem using their own measurements. Answers will vary depending on the triangle drawn and measurements taken.
+                </p>
+                <p>
+                    The key finding should be that for the triangle drawn, all three inequalities hold:
+                </p>
+                <p>
+                    <m>a + b \gt c</m>, <m>a + c \gt b</m>, and <m>b + c \gt a</m>
+                </p>
+                <p>
+                    This confirms that the triangle inequality theorem is true for their triangle.
+                </p>
+            </solution>
+        </exercise>
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
