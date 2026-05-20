@@ -43,29 +43,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        5 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To re-introduce simple inequalities through a real life problem
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Guide learners to using the <m>\le</m> symbol and solve the equation.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <activity>
         <statement>
@@ -104,12 +104,12 @@
                     </li>
                     <li>
                         <p>
-                            With the remaining money, you want to buy as many exercise books as possible. Each exercise book costs Ksh. <m>50</m>.
+                            With the remaining money, you want to buy as many bananas as possible. Each banana costs Ksh. <m>50</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Discuss, if you will be able to buy <m>6</m> exercise books? Also explain why or why not.
+                            Will you be able to buy <m>6</m> bananas? Discuss with your group why or why not.
                         </p>
                     </li>
                 </ul>
@@ -120,49 +120,84 @@
                 Since you cannot spend more than the Ksh. <m>500</m> you have, use an inequality symbol (<m>\lt</m>, <m>\gt</m>, <m>\le</m>, or <m>\ge</m>) to connect your total cost expression to your budget of Ksh. <m>500</m>.
             </p>
         </hint>
+        <solution component="lesson-plan">
+            <p>
+                The total cost is <m>230 + 50b</m>, where <m>b</m> represents the number of bananas. Since you cannot spend more than Ksh. <m>500</m>, we have:
+                <md>
+                    <mrow>230 + 50b \amp \le 500 </mrow>
+                    <mrow>50 b \amp \le 270</mrow>
+                    <mrow>b \amp \le 5.4 </mrow>
+                </md>
+                Since you cannot buy a fraction of a banana, the maximum number of bananas you can buy is <m>5</m>. Therefore, you will not be able to buy <m>6</m> bananas.
+            </p>
+        </solution>
     </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the concepts and properties learners discovered in the Learner Experience.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Remind learners of the key properties of inequalities and how to solve them, including the rule about flipping the inequality sign when multiplying or dividing by a negative number.
                 </p>
             </li>
             </dl>
         </p>
-
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
     <insight>
         <p>
-            Inequalities allow us to compare quantities using symbols like <m>\gt</m> (greater than), <m>\lt</m> (less than), <m>\ge</m> (greater than or equal to), and <m>\le</m> (less than or equal to). Solving a simple linear inequality in one unknown follows the exact same steps as solving a standard equation, such as grouping like terms.
+            Inequalities allow us to compare quantities. We use these four symbols:
+            <dl>
+                <li>
+                    <title><m>\gt</m></title>
+                    <p>
+                        greater than
+                    </p>
+                </li>
+                <li>
+                    <title><m>\ge</m></title>
+                    <p>
+                        greater than or equal to
+                    </p>
+                </li>
+                <li>
+                    <title><m>\lt</m></title>
+                    <p>
+                        less than
+                    </p>
+                </li>
+                <li>
+                    <title><m>\le</m></title>
+                    <p>
+                        less than or equal to
+                    </p>
+                </li>
+            </dl>
         </p>
         <p>
-            However, there is one critical rule you must always remember: Whenever you multiply or divide both sides of an inequality by a negative number,the inequality sign must reverse (flip) its direction.
+            We solve inequalities by performing the same operations on both sides of the inequality, just like we do with equations.
+        </p>
+        <p>
+            However, remember that whenever you multiply or divide both sides of an inequality by a negative number, the inequality sign must reverse (flip) its direction, so less than becomes greater than.
         </p>
         <p>
             For instance, if <m>-x \lt 5</m>, dividing by <m>-1</m> results in <m>x \gt -5</m>.
@@ -267,8 +302,6 @@
             <p>
                 <md>
                     <mrow>-4h \amp \gt 20 - 80 </mrow>
-                </md>
-                <md>
                     <mrow>-4h \amp \gt -60</mrow>
                 </md>
             </p>
@@ -278,8 +311,6 @@
             <p>
                 <md>
                     <mrow>h \amp \lt \frac{-60}{-4}</mrow>
-                </md>
-                <md>
                     <mrow>h \amp \lt 15</mrow>
                 </md>
             </p>
@@ -353,7 +384,7 @@
                     Is <em>Wanjiku's</em> solution correct? If not, identify the error and provide the correct solution.
                 </p>
             </statement>
-            <answer>
+            <solution>
                 <p>
                     <em>Wanjiku's</em> solution is incorrect.
                 </p>
@@ -363,12 +394,12 @@
                 <p>
                     <m>x \lt -5</m>
                 </p>
-            </answer>
+            </solution>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    <em>Mwakidize</em>,a local poultry farmer has a total budget of Ksh. <m>3,000</m> to buy chick mash. Transporting the feed to the farm costs a flat rate of Ksh <m>300</m> regardless of the amount bought. If each bag of chick mash costs Ksh <m>650</m>, write and solve an inequality to determine the maximum number of bags the farmer can buy. Explain why your final mathematical answer must be a whole number in this real-life situation.
+                    <em>Mwakidize</em>, a local poultry farmer has a total budget of Ksh. <m>3,000</m> to buy chick mash. Transporting the feed to the farm costs a flat rate of Ksh <m>300</m> regardless of the amount bought. If each bag of chick mash costs Ksh <m>650</m>, write and solve an inequality to determine the maximum number of bags the farmer can buy. Explain why your final mathematical answer must be a whole number in this real-life situation.
                 </p>
             </statement>
             <answer>
