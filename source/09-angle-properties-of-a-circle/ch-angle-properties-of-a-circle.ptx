@@ -77,7 +77,6 @@
   </p>
 </introduction> -->
 
-  <!-- include sections -->
   <!-- <xi:include href="sec-section-name.ptx" /> -->
   <xi:include href="sec-arcs-chords-and-segments.ptx" />
   <xi:include href="sec-angles-at-the-centre-and-on-the-circumference.ptx" />
