@@ -69,10 +69,57 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <term>Work in Groups to:</term>
+            </p>
+            <p>
+                Measure the length of a mathematics textbook using a <m>30</m> cm ruler and compare your measurements with the other groups.
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                           Do you find the same measurements as the other groups? If not, what could be the reason for the different measurements? 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Could the measurement be slightly longer or shorter?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What is the smallest unit of measurement on the ruller?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What is half the smallest unit of measurement on the ruler?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                Mr. Kizito measured the actual length of the textbook to be <m>x </m> cm. Find?
+            </p>
+            <p>
+                <ol marker="(i)">
+                    <li>
+                        <p>
+                            The sum of the actual length and the quotient?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The difference between the actual length and the quotient?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +153,28 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            From the activity, we can see that the measurements of the length of the textbook can be slightly longer or shorter than the actual length.
+        </p>
+        <p>
+            <md>
+                <mrow> \text{Limit of measurement}\; = \amp \; \frac{\text{smallest unit}}{2} </mrow>
+                <mrow> \text{Upper limit}\; = \amp \; \text{actual value}\; + \;\text{limit of measurement} </mrow>
+                <mrow> \text{Lower limit}\; = \amp \; \text{actual value}\; - \;\text{limit of measurement} </mrow>
+            </md>
+            
+        </p>
+        <p>
+            The limits of measurement are the maximum and minimum values that a measurement can take. The upper limit is the actual value plus the limit of measurement, while the lower limit is the actual value minus the limit of measurement.
+        </p>
+        <p>
+            <md>
+                <mrow> \text{Lower limit}\; \le \amp \; \text{actual value}\; \le \text{Upper limit} </mrow>
+            </md>
+            
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

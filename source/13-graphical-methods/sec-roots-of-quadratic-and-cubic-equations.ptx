@@ -41,55 +41,114 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        15 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To discover that the roots of an equation are the points where its graph intersects the x-axis.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Provide graph paper or graphing software. Guide learners to observe the relationship between the equation $y = f(x)$ and the solutions to $f(x) = 0$.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in Groups</alert>
+            </p>
+            <p>
+                Imagine you are a mathematical detective tasked with finding the "hidden" solutions to equations. Your most powerful tool is the graph.
+            </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Solve the equation <m>x^2 - 4 = 0</m>. What values of <m>x</m> make this true?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Look at the graph of <m>y = x^2 - 4</m> below. 
+                        </p>
+                        <image width="50%">
+                            <latex-image label="Graph_activity-quadratic-detective">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (-3,-5) grid (3,2);
+                                    \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                                    \draw[-&gt;] (0,-5) -- (0,2) node[above] {$y$};
+                                    \draw[blue, thick, domain=-2.5:2.5, smooth] plot (\x, {\x*\x - 4});
+                                    \filldraw[red] (-2,0) circle (2pt) node[below] {?};
+                                    \filldraw[red] (2,0) circle (2pt) node[below] {?};
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                        <p>
+                        <ul>
+                            <li><p>At what coordinates do the red "clue markers" sit?</p></li>
+                            <li><p>What is the value of <m>y</m> at these points?</p></li>
+                            <li><p>How do the <m>x</m>-coordinates of these points compare to your algebraic solutions from Step 1?</p></li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                             Based on your investigation, if you wanted to find the roots of a complex cubic equation like <m>x^3 - x^2 - 2x = 0</m>, how could you use a graph of <m>y = x^3 - x^2 - 2x</m> to find them without doing any hard algebra?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Plot <m>y = x^3 - x^2 - 2x</m> and verify that all points where the graph crosses the <m>x</m>-axis correspond to the solutions of the equation.
+                        </p>
+                        <image width="50%">
+                            <latex-image label="Graph_activity-cubic-solution">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (-2,-3) grid (3,3);
+                                    \draw[-&gt;] (-2,0) -- (3,0) node[right] {$x$};
+                                    \draw[-&gt;] (0,-3) -- (0,3) node[above] {$y$};
+                                    \draw[red, thick, domain=-1.5:2.5, smooth] plot (\x, {\x*\x*\x - \x*\x - 2*\x});
+                                    \filldraw[blue] (-1,0) circle (1.5pt) node[below left] {$x=-1$};
+                                    \filldraw[blue] (0,0) circle (1.5pt) node[below right] {$x=0$};
+                                    \filldraw[blue] (2,0) circle (1.5pt) node[below right] {$x=2$};
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the concept of graphical roots for quadratic and cubic equations.
                 </p>
             </li>
             </dl>
@@ -99,69 +158,353 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Link the x-intercepts found in the activity to the solutions of the equation <m>f(x) = 0</m>. Explain that "roots" and "zeros" are other names for these solutions.
                     </p>
                 </li>
+                <li>
+                    <p>
+                        <alert>Visualization:</alert> Emphasize that a quadratic graph (parabola) can have 0, 1, or 2 roots, while a cubic graph can have 1, 2, or 3 roots.
+                    </p>
+                </li>
+                    <li>
+                        <p>
+                            <alert>Challenges:</alert> Discuss the limitations of graphical methods, such as:
+                            <ul>
+                                <li><p><term>Accuracy:</term> Reading values from a grid is often an approximation.</p></li>
+                                <li><p><term>Scale:</term> Missing roots that fall outside the plotted range.</p></li>
+                                <li><p><term>Tangency:</term> Difficulty in identifying exact repeated roots where the graph just touches the axis.</p></li>
+                            </ul>
+                        </p>
+                    </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <insight>
+        <p>
+            The <term>roots</term> (or solutions) of an equation <m>f(x) = 0</m> are the <m>x</m>-coordinates of the points where the graph of <m>y = f(x)</m> intersects the <m>x</m>-axis.
+        </p>
+        <p>
+            <alert>Quadratic Equations:</alert> The roots of a quadratic equation are the x-coordinates where the graph intersects the x-axis. 
+             For example, the graph of <m>y = x^2 + 5x + 6</m> intersects the x-axis at <m>x = -3</m> and <m>x = -2</m>. 
+             These points are the roots of the equation.
+        </p>
+        <p>
+            <alert>Cubic Equations:</alert> The roots of a cubic equation are the x-coordinates where the graph intersects the x-axis. 
+                For example, the graph of <m>y = x^3 - 6x^2 + 11x - 6</m> intersects the x-axis at <m>x=1, x=2,</m> and <m>x=3</m>.
+                 These points are the roots of the equation.
+        </p>
+        <p>
+            <alert>Solving Quadratic Equations Graphically</alert>
+            <ol>
+                <li><p>Rearrange the equation into the form <m>ax^2 + bx + c = 0</m>.</p></li>
+                <li><p>Plot the function <m>y = ax^2 + bx + c</m>.</p></li>
+                <li><p>The roots are the <m>x</m>-values where the parabola crosses the <m>x</m>-axis.</p></li>
+            </ol>
+        </p>
+        <image width="40%">
+            <latex-image>
+                \begin{tikzpicture}
+                    \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                    \draw[-&gt;] (0,-1) -- (0,3) node[above] {$y$};
+                    \draw[blue, thick, domain=-2.2:2.2, smooth] plot (\x, {\x*\x - 2});
+                    \filldraw[red] (1.414,0) circle (2pt) node[below right] {Root};
+                    \filldraw[red] (-1.414,0) circle (2pt) node[below left] {Root};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
 
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+        <p>
+            <alert>Solving Cubic Equations Graphically</alert>
+            <ol>
+                <li><p>Rearrange the equation into the form <m>ax^3 + bx^2 + cx + d = 0</m>.</p></li>
+                <li><p>Plot the function <m>y = ax^3 + bx^2 + cx + d</m>.</p></li>
+                <li><p>The roots are the <m>x</m>-values where the curve crosses the <m>x</m>-axis. A cubic can have 1, 2, or 3 real roots.</p></li>
+            </ol>
+        </p>
+        <image width="40%">
+            <latex-image>
+                \begin{tikzpicture}
+                    \draw[-&gt;] (-2.5,0) -- (2.5,0) node[right] {$x$};
+                    \draw[-&gt;] (0,-3) -- (0,3) node[above] {$y$};
+                    \draw[red, thick, domain=-2:2, smooth] plot (\x, {0.5*\x*\x*\x - 2*\x});
+                    \filldraw[blue] (2,0) circle (2pt);
+                    \filldraw[blue] (0,0) circle (2pt);
+                    \filldraw[blue] (-2,0) circle (2pt);
+                    \node[below] at (1,-0.5) {3 Roots};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Solve the equation <m>x^2 - 2x - 3 = 0</m> graphically.
+            </p>
         </statement>
         <solution>
+            <p>
+                Let <m>y = x^2 - 2x - 3</m>. We create a table of values:
+            </p>
+            <tabular bottom="minor" top="minor" left="minor" right="minor">
+                <row>
+                    <cell><m>x</m></cell>
+                    <cell>-2</cell>
+                    <cell>-1</cell>
+                    <cell>0</cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                </row>
+                <row>
+                    <cell><m>y</m></cell>
+                    <cell>5</cell>
+                    <cell>0</cell>
+                    <cell>-3</cell>
+                    <cell>-4</cell>
+                    <cell>-3</cell>
+                    <cell>0</cell>
+                    <cell>5</cell>
+                </row>
+            </tabular>
+            <p>
+                Plotting these points gives the following parabola:
+            </p>
+            <image xml:id="img-roots-quadratic" width="50%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (-3,-5) grid (5,6);
+                        \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-5) -- (0,6) node[above] {$y$};
+                        \draw[blue, thick, domain=-1.5:3.5, smooth] plot (\x, {\x*\x - 2*\x - 3});
+                        \filldraw (-1,0) circle (2pt) node[above left] {$x=-1$};
+                        \filldraw (3,0) circle (2pt) node[above right] {$x=3$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                The graph intersects the <m>x</m>-axis at <m>x = -1</m> and <m>x = 3</m>. 
+                Therefore, the roots of <m>x^2 - 2x - 3 = 0</m> are <m>x = -1</m> and <m>x = 3</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Solve the cubic equation <m>x^3 - 3x + 1 = 0</m> graphically for <m>-2.5 \le x \le 2.5</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                Let <m>y = x^3 - 3x + 1</m>. We plot the curve:
+            </p>
+            <image xml:id="img-roots-cubic" width="40%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (-3,-4) grid (3,4);
+                        \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-4) -- (0,4) node[above] {$y$};
+                        \draw[red, thick, domain=-2.1:2.1, smooth] plot (\x, {\x*\x*\x - 3*\x + 1});
+                        \filldraw (-1.88,0) circle (1.5pt);
+                        \filldraw (0.35,0) circle (1.5pt);
+                        \filldraw (1.53,0) circle (1.5pt);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                From the graph, the curve crosses the <m>x</m>-axis at three points. Approximating from the grid:
+                <ul>
+                    <li><p><m>x = -1.9</m></p></li>
+                    <li><p><m>x = 0.3</m></p></li>
+                    <li><p><m>x = 1.5</m></p></li>
+                </ul>
+                These are the roots of the equation <m>x^3 - 3x + 1 = 0</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Find the roots of <m>x^2 - 4x + 4 = 0</m> graphically.
+            </p>
         </statement>
         <solution>
+            <p>
+                Plotting <m>y = x^2 - 4x + 4</m>:
+            </p>
+            <image xml:id="img-roots-repeated" width="40%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (-1,-1) grid (5,5);
+                        \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-1) -- (0,5) node[above] {$y$};
+                        \draw[blue, thick, domain=0:4, smooth] plot (\x, {\x*\x - 4*\x + 4});
+                        \filldraw (2,0) circle (2pt) node[below] {$x=2$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                The graph touches the <m>x</m>-axis at only one point, <m>(2, 0)</m>. 
+                This means the equation <m>x^2 - 4x + 4 = 0</m> has one repeated root, <m>x = 2</m>.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    The graph of <m>y = x^2 + k</m> is shown below. If the graph does not cross the <m>x</m>-axis, what can you say about the roots of the equation <m>x^2 + k = 0</m>?
+                </p>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \draw[-&gt;] (-2,0) -- (2,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-1) -- (0,3) node[above] {$y$};
+                            \draw[blue, thick, domain=-1.5:1.5] plot (\x, {\x*\x + 1});
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             </statement>   
-            <solution>
+            <answer>
+                <p>
+                    If the graph does not intersect the <m>x</m>-axis, the equation has no real roots.
+                </p>
+            </answer>             
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    Solve the equation <m>x^3 - x^2 - 2x = 0</m> by plotting the graph of <m>y = x^3 - x^2 - 2x</m> for <m>-2 \le x \le 3</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Factoring <m>y = x(x^2 - x - 2) = x(x - 2)(x + 1)</m>. 
+                </p>
+                <image width="40%">
+                    <latex-image label="Graph_exercise-cubic-roots">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-2.5,-3) grid (3.5,4);
+                            \draw[-&gt;] (-2.5,0) -- (3.5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-3) -- (0,4) node[above] {$y$};
+                            \draw[red, thick, domain=-2:3, smooth] plot (\x, {\x*\x*\x - \x*\x - 2*\x});
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The graph crosses the <m>x</m>-axis at <m>x = -1, x = 0,</m> and <m>x = 2</m>.
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    Use a graph to estimate the roots of <m>x^2 - 5 = 0</m>. (Hint: Plot <m>y = x^2 - 5</m>).
+                </p>
+            </statement>
+            <answer>
+                <image width="40%">
+                    <latex-image label="Graph_exercise-quadratic-roots">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-3,-1) grid (3,6);
+                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-1) -- (0,6) node[above] {$y$};
+                            \draw[blue, thick, domain=-2.5:2.5, smooth] plot (\x, {\x*\x - 5});
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The roots are <m>x = \pm \sqrt{5}</m>. Graphically, these are approximately <m>x \approx -2.2</m> and <m>x \approx 2.2</m>.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Here is the graph of the function <m>y = x^3 - 6x^2 + 11x - 6</m>. 
+                </p>
+                <image width="40%">
+                    <latex-image label="Graph_exercise-cubic-roots-2">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-1,-1) grid (4,4);
+                            \draw[-&gt;] (-1,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-1) -- (0,4) node[above] {$y$};
+                            \clip (-1,-1) rectangle (4,4);
+                            \draw[red, thick, domain=-0.5:3.5, smooth] plot (\x, {\x*\x*\x - 6*\x*\x + 11*\x - 6});
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Find the roots of <m>x</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Use this graph to find the solution of the equation <m>x^3 - 6x^2 + 11x - 6 = 1</m>.
+                        </p>
+                    </li>
+                </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p> 
+                                From the graph, we can see that the roots are approximately <m>x = 1</m>, <m>x = 2</m>, and <m>x = 3</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                To solve <m>x^3 - 6x^2 + 11x - 6 = 1</m>, we can rearrange it to <m>x^3 - 6x^2 + 11x - 7 = 0</m>. 
+                                This means we need to find where the graph of <m>y = x^3 - 6x^2 + 11x - 7</m> intersects the x-axis. 
+                                Since this is just a vertical shift of our original graph, we can see that the new graph will intersect the x-axis at approximately <m>x = 1.5</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
 
-    <!-- <axiom component="lesson-plan">
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Find the solutions of the equation <m>x^3 - 2x^2 + x - 1 = 0</m> graphically.
+                </p>
+            </statement>
+            <answer>
+                <image width="40%">
+                    <latex-image label="Graph_exercise-cubic-roots-3">
+                        \begin{tikzpicture}
+                            \draw[help lines, color=gray!30, step=1] (-2,-3) grid (4,4);
+                            \draw[-&gt;] (-2,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-3) -- (0,4) node[above] {$y$};
+                            \draw[red, thick, domain=-1:3.5, smooth] plot (\x, {\x*\x*\x - 2*\x*\x + \x - 1});
+                        \end{tikzpicture}
+                    </latex-image>  
+                </image>
+                <p>
+                    Plotting <m>y = x^3 - 2x^2 + x - 1</m> shows that it crosses the <m>x</m>-axis at approximately <m>x = 1.5</m>.
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
+
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -170,34 +513,31 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Focus on quadratic equations first. Use technology (like Desmos) to visualize how shifting a graph vertically changes the number of roots.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        Practice plotting both quadratic and cubic functions accurately to read roots from the graph.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Explore the relationship between the coefficients of a cubic equation and the number of real roots. Investigate "turning points" and how they relate to the existence of roots.
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
 </section>
+
