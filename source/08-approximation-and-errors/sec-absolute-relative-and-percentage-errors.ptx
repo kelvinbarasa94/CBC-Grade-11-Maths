@@ -95,7 +95,7 @@
             </row>
         </tabular>
         <p>
-            Do you get the same results, Explain?
+            Do you get the same results each time?
         </p>
         <p>
             Find the difference between the measurement attempts?
@@ -181,32 +181,41 @@
     </axiom> -->
 
     <insight>
-    <p>
-        <term>Absolute error</term> is the difference between the measured value and the working value.
-    </p>
-    <p>
-        <md>
-            <mrow>\text{Absolute error} \amp = \text{measured value} - \text{working value}</mrow>
-        </md>
-    </p>
-    <p>
-        <term>Relative error</term> is the absolute error divided by the working value.
-    </p>
-    <p>
-        <md>
-            <mrow>\text{Relative error} \amp = \text{absolute error} \div \text{working value}</mrow>
-        </md>
-    </p>
-    <p>
-        <term>Percentage error</term> is the relative error expressed as a percentage.
-    </p>
-    <p>
-        <md>
-            <mrow>\text{Percentage error} \amp = \frac{\text{absolute error}}{\text{working value}} \times 100\%</mrow>
-            <mrow>\amp = \text{Relative error} \times 100\%</mrow>
-        </md>
-    </p>
-</insight>
+        <p>
+            <term>An absolute error:</term> is the difference between the measured value and the actual value.
+        </p>
+        <p>
+            <md>
+                <mrow> \text{Absolute error} = \amp \; \text{measured value} - \text{actual value} </mrow>
+            </md>
+            
+        </p>
+        <p>
+            Sometimes we have absolute errors from rounding. When you are just given a measured value (and no absolute value), find the absolute error by halving the smallest unit of measurement. 
+        </p>
+        <p>
+            For example, if we measure Yasmin's height as <m>1.70</m> m, the smallest unit of measurement is <m>0.01</m> m (since we have 2 decimal places), hence the absolute error is <m>0.005</m> m. 
+        </p>
+        <p>
+            <term>Relative error:</term> is the quotient of the absolute error and the actual value.
+        </p>
+        <p>
+            <md>
+                <mrow>\text{Relative error} = \amp \; \frac{\text{absolute error}}{\text{actual value}} </mrow>
+            </md>
+            
+        </p>
+        <p>
+            <term>Percentage error:</term> is the ratio of the absolute error and the actual value multiplied by <m>100 \%</m>.
+        </p>
+        <p>
+            <md>
+                <mrow>\text{Percentage error} = \amp \; \frac{\text{absolute error}}{\text{actual value}} \; \times 100 \% </mrow>
+                <mrow> = \amp \; \text{Relative error} \times 100 \% </mrow>
+            </md>
+            
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -216,7 +225,7 @@
      <example>
         <statement>
             <p>
-                The capacity of a gourd is stated as <m>2,000</m> millilitres to the nearest <m>10</m> millilitres. Find:
+                The capacity of a pumpkin is stated as <m>2,000</m> millilitres to the nearest <m>10</m> millilitres. Find:
             </p>
             <p>
                 <ol marker="(a)">
@@ -292,7 +301,7 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            The smallest unit of measurement is <m>0.01</m>.
+                            Since we are told the thickness is <m>0.20</m> cm, with two decimal places, the smallest unit of measurement is <m>0.01</m>. Hence the actual thickness must be between <m>0.195</m> cm and <m>0.205</m> cm. To get the absolute error, we half the smallest unit of measurement:
                         </p>
                         <p>
                             <md>
