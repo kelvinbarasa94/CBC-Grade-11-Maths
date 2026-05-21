@@ -154,12 +154,13 @@
                 </li>
             </ol>
         </p>
-        <figure xml:id="fig-partial-variation-graph">
+        <!-- TODO: Find partial_variation_graph.png -->
+        <!-- <figure xml:id="fig-partial-variation-graph">
             <caption>Graph of partial variation showing the non-zero Y-intercept (<inline-math>b</inline-math>).</caption>
             <image source="partial_variation_graph.png">
                 <description>Linear graph starting above the origin.</description>
             </image>
-        </figure>
+        </figure> -->
     </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />

@@ -43,53 +43,119 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        15 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To discover how to estimate the rate of change at a specific point on a curve by drawing a tangent line.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Provide learners with curved graphs. Guide them in the technique of placing a ruler so it just touches the curve at a single point without crossing it.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert> Work in groups </alert>
+            </p>
+            <p>
+                You are helping design a modern, energy-efficient greenhouse.
+                The roof of the greenhouse follows a perfect parabolic curve defined by the equation <m>y = x^2</m>, where <m>y</m> is the height and <m>x</m> is the horizontal distance from the center.
+            </p>
+            <p>
+                A support beam needs to be attached to the roof exactly at the point where <m>x = 2</m>.
+                To ensure the joint is secure, the lead engineer needs to know the gradient (slope) of the roof at that specific point. 
+                This gradient tells us "how fast <m>y</m> is changing" compared to <m>x</m>.
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            Graph paper
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A transparent ruler
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A pencil or pen
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Carefully plot the graph of <m>y = x^2</m> for <m>x</m> from <m>0</m> to <m>4</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Identify the point <m>(2, 4)</m> on your graph.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Using a transparent ruler, draw a line that <alert>just touches</alert> the curve at <m>(2, 4)</m>. This is the tangent line.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Pick two points on this tangent line that are easy to read from the grid.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the gradient of the tangent line. What does this value tell you about the curve at <m>x = 2</m>?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the concept of instantaneous rate of change as the gradient of the tangent at a point.
                 </p>
             </li>
             </dl>
@@ -99,17 +165,69 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>The Tangent Line:</alert> A tangent to a curve at a point is a straight line that touches the curve at that point and has the same gradient as the curve at that point.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Instantaneous Rate:</alert> The gradient of the tangent gives the <alert>instantaneous rate of change</alert> (the rate of change at that specific instant).
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        The <alert>instantaneous rate of change</alert> at a single point on a curve is the gradient of the <alert>tangent line</alert> at that point.
+                    </p>
+                    <p>
+                        <term>Tangent line:</term> is a straight line that touches a curve at only one point.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        To find the gradient at an instant from a graph:
+                        <ol>
+                            <li>
+                                <p>
+                                    Identify the point on the curve.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Draw a tangent line at that point using a ruler.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Pick two points on the tangent line and calculate its gradient using <m>m = \frac{\Delta y}{\Delta x}</m>.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <image xml:id="img-tangent-illustration" width="40%">
+            <latex-image label="Tangent Line Illustration">
+                \begin{tikzpicture}[scale=0.8]
+                    \draw[-&gt;] (-0.5,0) -- (5,0) node[right] {$x$};
+                    \draw[-&gt;] (0,-0.5) -- (0,5) node[above] {$y$};
+                    \draw[thick, blue, domain=0.5:4] plot (\x, {0.2*\x*\x + 1});
+                    % Tangent
+                    \coordinate (C) at (2, 1.8);
+                    \draw[green!60!black, thick] (0.5, 0.6) -- (3.5, 3) node[right] {Tangent line};
+                    \filldraw (C) circle (1.5pt) node[below right] {Point of tangency};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,26 +235,160 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Using a graph of <m>y = x^2</m>, estimate the gradient of the curve at the point <m>(2, 4)</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Plot the graph of <m>y = x^2</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw a tangent line to the curve at the point <m>(2, 4)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Choose two points on the tangent line, for example <m>(1, 0)</m> and <m>(3, 8)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the gradient of the tangent:
+                            <me>\text{Gradient} = \frac{8 - 0}{3 - 1} = \frac{8}{2} = 4</me>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <image xml:id="img-example-tangent-inst" width="30%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=0.6]
+                        \draw[help lines, color=gray!30, step=1] (-1,0) grid (5,10);
+                        \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-1) -- (0,10) node[above] {$y$};
+                        \draw[thick, blue, domain=0:3.1] plot (\x, {\x*\x});
+                        \draw[green!60!black, thick] (0.5, -2) -- (3.5, 10);
+                        \filldraw (2,4) circle (2pt) node[above left] {$(2, 4)$};
+                        \filldraw (1,0) circle (2pt) node[below left] {$(1, 0)$};
+                        \filldraw (3,8) circle (2pt) node[right] {$(3, 8)$};
+                        % Gradient triangle
+                        \draw[thick, black, dashed] (1,0) -- (3,0) node[midway, below] {$\Delta x = 2$};
+                        \draw[thick, black, dashed] (3,0) -- (3,8) node[midway, right] {$\Delta y = 8$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                The estimated instantaneous rate of change at <m>x = 2</m> is <m>4</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The volume of water <m>V</m> (litres) in a leaking tank over time <m>t</m> (minutes) is given by <m>V = 100 - t^2</m>. Find the rate at which water is leaking exactly at <m>t = 5</m> minutes by drawing a tangent.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Plot the graph of <m>V = 100 - t^2</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw a tangent at the point <m>(5, 75)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Pick points on the tangent like <m>(4, 85)</m> and <m>(6, 65)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Gradient = <m>\frac{65 - 85}{6 - 4} = \frac{-20}{2} = -10</m> litres/minute.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <image xml:id="img-example-volume-inst" width="30%">
+                <description>Graph of V = 100 - t^2 with a tangent line and gradient triangle at t=5.</description>
+                <latex-image>
+                    \begin{tikzpicture}[x=0.5cm, y=0.05cm]
+                        \draw[help lines, color=gray!30, ystep=10, xstep=1] (0,0) grid (10,100);
+                        \draw[-&gt;] (-1,0) -- (11,0) node[right] {$t$};
+                        \draw[-&gt;] (0,-10) -- (0,110) node[above] {$V$};
+                        \draw[thick, blue, domain=0:10] plot (\x, {100 - \x*\x});
+                        \draw[green!60!black, thick] (3, 95) -- (7, 55) node[right] {Tangent at $t=5$};
+                        \filldraw (5,75) circle (3pt) node[above right] {$(5, 75)$};
+                        % Gradient triangle
+                        \draw[thick, black, dashed] (4,85) -- (6,85);
+                        \draw[thick, black, dashed] (6,85) -- (6,65) node[midway, right] {$\Delta V = -20$};
+                        \filldraw (4,85) circle (2pt);
+                        \filldraw (6,65) circle (2pt);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Estimate the instantaneous rate of change of <m>y = x^3</m> at <m>x = 1</m> from a graph.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Plot <m>y = x^3</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw the tangent at <m>(1, 1)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Picking points on the tangent such as <m>(0, -2)</m> and <m>(2, 4)</m>:
+                            <me>\text{Gradient} = \frac{4 - (-2)}{2 - 0} = \frac{6}{2} = 3</me>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <image xml:id="img-example-cubic-tangent-inst" width="30%">
+                <description>Graph of y = x^3 with a tangent line and gradient triangle at x=1.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=0.8]
+                        \draw[help lines, color=gray!30, step=1] (-2,-8) grid (2,8);
+                        \draw[-&gt;] (-2.5,0) -- (2.5,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-8.5) -- (0,8.5) node[above] {$y$};
+                        \draw[thick, blue, domain=-2.04:2.04] plot (\x, {\x*\x*\x});
+                        \draw[green!60!black, thick] (-1, -5) -- (2.5, 5.5);
+                        \filldraw (1,1) circle (2pt) node[right] {$(1, 1)$};
+                        % Gradient triangle
+                        \draw[thick, black, dashed] (0,-2) -- (2,-2) node[midway, below] {$\Delta x = 2$};
+                        \draw[thick, black, dashed] (2,-2) -- (2,4) node[midway, right] {$\Delta y = 6$};
+                        \filldraw (0,-2) circle (2pt);
+                        \filldraw (2,4) circle (2pt);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,20 +400,150 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
+            <statement>
+                <p>
+                    Sketch the graph of <m>y = 2x^2 + 1</m>. Estimate the gradient of the curve at <m>x = 1</m> by drawing a tangent.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    (The learner should draw the curve and a tangent at <m>(1, 3)</m>).
+                    Picking points on the tangent such as <m>(0, -1)</m> and <m>(2, 7)</m>:
+                    <me>\text{Gradient} = \frac{7 - (-1)}{2 - 0} = \frac{8}{2} = 4</me>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A ball is thrown upwards such that its height <m>h</m> at time <m>t</m> is <m>h = 20t - 5t^2</m>. Use a graph to estimate the velocity of the ball at <m>t = 1</m> second.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    The velocity at an instant is the gradient of the tangent at that time.
+                    Plotting <m>h = 20t - 5t^2</m> and drawing a tangent at <m>(1, 15)</m>:
+                    Estimated gradient should be around <m>10</m> m/s.
+                </p>
+                <image xml:id="img-ex-velocity-inst" width="30%">
+                    <latex-image label="Projectile Motion with Tangent Line">
+                        \begin{tikzpicture}[scale=0.25]
+                            \draw[help lines, color=gray!30, step=5, ystep=5, xstep=1] (-1,0) grid (5,25);
+                            \draw[-&gt;] (-0.5,0) -- (4.5,0) node[right] {$t$};
+                            \draw[-&gt;] (0,-2) -- (0,25) node[above] {$h$};
+                            \draw[thick, blue, domain=0:4] plot (\x, {20*\x - 5*\x*\x});
+                            \draw[green!60!black, thick] (0, 5) -- (2, 25) node[right] {Tangent at $t=1$};
+                            \filldraw (1,15) circle (2pt);
+                            % Gradient triangle
+                            \draw[thick, black, dashed] (0,5) -- (2,5);
+                            \draw[thick, black, dashed] (2,5) -- (2,25) node[midway, right] {$\Delta h = 20$};
+                            \filldraw (0,5) circle (2pt);
+                            \filldraw (2,25) circle (2pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Sketch the graph of <m>y = 4 - x^2</m>. Estimate the gradient of the curve at <m>x = 1</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Plot <m>y = 4 - x^2</m> and draw a tangent at <m>(1, 3)</m>.
+                    Picking points on the tangent like <m>(0, 5)</m> and <m>(2, 1)</m>:
+                    <me>\text{Gradient} = \frac{1 - 5}{2 - 0} = \frac{-4}{2} = -2</me>
+                </p>
+                <image xml:id="img-ex-quad-neg-inst" width="50%">
+                    <latex-image label="Quadratic Function with Tangent Line">
+                        \begin{tikzpicture}[scale=0.4]
+                            \draw[help lines, color=gray!30, step=1] (-3,-5) grid (3,5);
+                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
+                            \draw[thick, blue, domain=-2.5:2.5] plot (\x, {4 - \x*\x});
+                            \draw[green!60!black, thick] (-0.5, 6) -- (2.5, 0);
+                            \filldraw (1,3) circle (2pt);
+                            % Gradient triangle
+                            \draw[thick, black, dashed] (0,5) -- (2,5);
+                            \draw[thick, black, dashed] (2,5) -- (2,1) node[midway, right] {$\Delta y = -4$};
+                            \filldraw (0,5) circle (2pt);
+                            \filldraw (2,1) circle (2pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The number of bacteria <m>N</m> in a culture after <m>t</m> hours is given by <m>N = 2t^2 + 10</m>. Estimate the rate of growth of the bacteria at <m>t = 3</m> hours.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    At <m>t = 3</m>, <m>N = 2(3)^2 + 10 = 28</m>.
+                    Draw a tangent at <m>(3, 28)</m> and pick points like <m>(2, 16)</m> and <m>(4, 40)</m>.
+                    <me>\text{Rate} = \frac{40 - 16}{4 - 2} = \frac{24}{2} = 12 \text{ bacteria/hour}</me>
+                </p>
+                <image xml:id="img-ex-bacteria-inst" width="30%">
+                    <latex-image label="Bacterial Growth with Tangent Line">
+                        \begin{tikzpicture}[scale=0.1]
+                            \draw[help lines, color=gray!30, step=1, ystep=10, xstep=1] (0,0) grid (6,50);
+                            \draw[-&gt;] (0,0) -- (6,0) node[right] {$t$};
+                            \draw[-&gt;] (0,0) -- (0,50) node[above] {$N$};
+                            \draw[thick, blue, domain=0:4.4] plot (\x, {2*\x*\x + 10});
+                            \draw[green!60!black, thick] (1, 4) -- (4.5, 46);
+                            \filldraw (3,28) circle (3pt);
+                            % Gradient triangle
+                            \draw[thick, black, dashed] (2,16) -- (4,16) node[midway, below] {$\Delta t = 2$};
+                            \draw[thick, black, dashed] (4,16) -- (4,40) node[midway, right] {$\Delta N = 24$};
+                            \filldraw (2,16) circle (2pt);
+                            \filldraw (4,40) circle (2pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Sketch the graph of <m>y = \frac{1}{2}x^2</m>. Estimate the instantaneous rate of change at <m>x = -2</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    At <m>x = -2</m>, <m>y = 2</m>. Draw a tangent at <m>(-2, 2)</m>.
+                    Pick points on the tangent such as <m>(0, -2)</m> and <m>(-3, 4)</m>.
+                    <me>\text{Gradient} = \frac{4 - (-2)}{-3 - 0} = \frac{6}{-3} = -2</me>
+                </p>
+                <image xml:id="img-ex-quad-neg-x-inst" width="30%">
+                    <latex-image label="Quadratic_Function_Tangent_Line">
+                        \begin{tikzpicture}[scale=0.4]
+                            \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,6);
+                            \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-3) -- (0,6) node[above] {$y$};
+                            \draw[thick, blue, domain=-3.4:2] plot (\x, {0.5*\x*\x});
+                            \draw[green!60!black, thick] (0.5, -3) -- (-3.5, 5);
+                            \filldraw (-2,2) circle (2pt);
+                            % Gradient triangle
+                            \draw[thick, black, dashed] (0,-2) -- (-3,-2) node[midway, below] {$\Delta x = -3$};
+                            \draw[thick, black, dashed] (-3,-2) -- (-3,4) node[midway, left] {$\Delta y = 6$};
+                            \filldraw (0,-2) circle (2pt);
+                            \filldraw (-3,4) circle (2pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -175,7 +557,7 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide pre-drawn graphs with points marked. Focus on the physical act of aligning the ruler correctly.
                     </cell>
                     <cell></cell>
                 </row>
@@ -189,13 +571,13 @@
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Compare the graphical estimate with the calculated derivative (if they have encountered basic calculus) to discuss accuracy.
                     </cell>
                     <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

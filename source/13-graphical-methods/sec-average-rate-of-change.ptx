@@ -21,7 +21,7 @@
                 <li>
                     <title>Specific Learning Outcomes</title> 
                     <p>
-                        Determine average rate of change and average rate of change at an instant from a graph
+                        Determine the average rate of change from a graph over a given interval.
                     </p>
                 </li>
                 <li component="lesson-plan">
@@ -43,53 +43,113 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        15 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To discover that the average rate of change is constant for linear functions but varies for non-linear functions over different intervals.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Encourage learners to compare the "steepness" of the line connecting two points on a curve at different parts of the graph.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <!-- Add Activity -->
 
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in groups</alert>
+            </p>
+            <p>
+                Imagine a car accelerating. Its distance <m>s</m> (meters) after <m>t</m> seconds is <m>s = t^2</m>.
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+                <p>
+                    <ul>
+                        <li>
+                           <p> 
+                             Graph paper
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Ruler
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Calculator
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            <p>
+                <alert>What to do</alert>
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Plot the graph of <m>s = t^2</m> for <m>0 \le t \le 5</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the average speed (rate of change) between <m>t = 0</m> and <m>t = 2</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the average speed between <m>t = 3</m> and <m>t = 5</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw straight lines (secants) connecting the points used in steps 2 and 3.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Compare the gradients of these two lines. What does this tell you about how the car is moving?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the calculation of the average rate of change using the gradient formula.
                 </p>
             </li>
             </dl>
@@ -99,17 +159,55 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>The Secant Line:</alert> A line connecting two distinct points on a curve is called a secant line.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Average Rate of Change:</alert> The gradient of the secant line represents the average rate of change of the function over that interval.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        The <alert>average rate of change</alert> of a function <m>y = f(x)</m> between <m>x = x_1</m> and <m>x = x_2</m> is given by:
+                        <me>\text{Average Rate of Change} = \frac{y_2 - y_1}{x_2 - x_1}</me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Graphically, this is the gradient of the <alert>secant line</alert> passing through <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m>.
+                    </p>
+                    <p>
+                        <term>Secant line:</term> is a straight line that cuts a curve at two different points.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <image xml:id="img-secant-illustration-avg" width="40%">
+            <latex-image label="Secant Line Illustration">
+                \begin{tikzpicture}[scale=0.8]
+                    \draw[-&gt;] (-0.5,0) -- (5,0) node[right] {$x$};
+                    \draw[-&gt;] (0,-0.5) -- (0,5) node[above] {$y$};
+                    \draw[thick, blue, domain=0.5:4] plot (\x, {0.2*\x*\x + 1});
+                    % Secant
+                    \coordinate (A) at (1, 1.2);
+                    \coordinate (B) at (3.5, 3.45);
+                    \draw[red, dashed] (0.5, 0.75) -- (4, 3.9) node[right] {Secant line};
+                    \filldraw (A) circle (1.5pt) node[below right] {$(x_1, y_1)$};
+                    \filldraw (B) circle (1.5pt) node[above left] {$(x_2, y_2)$};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,26 +215,178 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Find the average rate of change for the function <m>y = x^2 + 2x</m> between the points where <m>x = 1</m> and <m>x = 3</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                First, find the <m>y</m>-coordinates:
+            </p>
+            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                <row>
+                    <cell><m>x</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                </row>
+                <row>
+                    <cell><m>y</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>8</m></cell>
+                    <cell><m>15</m></cell>
+                </row>
+            </tabular>
+            <p>
+                Now, calculate the gradient:
+                <me>\text{Gradient} = \frac{15 - 3}{3 - 1} = \frac{12}{2} = 6</me>
+            </p>
+            <image width="40%">
+                <latex-image label="QuadraticSecant Line">
+                    \begin{tikzpicture}[x=1cm, y=0.25cm]
+
+                       % Grid
+                        \draw[help lines, color=gray!40,
+                            xstep=1, ystep=2]
+                            (-0.5,-1) grid (4.5,16);
+
+
+                        % Axes
+                        \draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+                        \draw[->] (0,-1) -- (0,16.5) node[above] {$y$};
+
+                        % Quadratic curve
+                        \draw[thick, blue, domain=0:3.4, smooth]
+                            plot (\x, {\x*\x + 2*\x});
+
+                        % Secant line
+                        \draw[red, dashed] (1,3) -- (3,15);
+
+                        % Points
+                        \filldraw (1,3) circle (2pt)
+                            node[left] {$(1,3)$};
+
+                        \filldraw (3,15) circle (2pt)
+                            node[right] {$(3,15)$};
+
+                        % Delta x
+                        \draw[thick, black, dashed]
+                            (1,3) -- (3,3);
+
+                        \node at (2,1.5) {$\Delta x = 2$};
+
+                        % Delta y
+                        \draw[thick, black, dashed]
+                            (3,3) -- (3,15);
+
+                        \node at (3.8,9) {$\Delta y = 12$};
+
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                The average rate of change is <m>6</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Find the average rate of change for the function <m>y = x^3 - 4x</m> on the interval <m>[-1, 2]</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                Evaluate the function at the endpoints:
+            </p>
+            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                <row>
+                    <cell><m>x</m></cell>
+                    <cell><m>-1</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell>
+                </row>
+                <row>
+                    <cell><m>y</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>-3</m></cell>
+                    <cell><m>0</m></cell>
+                </row>
+            </tabular>
+            <p>
+                Calculate the average rate of change:
+                <me>\text{Rate} = \frac{0 - 3}{2 - (-1)} = \frac{-3}{3} = -1</me>
+            </p>
+            <image xml:id="img-example-cubic-avg" width="50%">
+                <latex-image label="Cubic_Function_Secant Line">
+                    \begin{tikzpicture}[scale=0.8]
+                        \draw[help lines, color=gray!30, step=1] (-2,-4) grid (3,4);
+                        \draw[-&gt;] (-2,0) -- (3,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-4) -- (0,4) node[above] {$y$};
+                        \draw[thick, blue, domain=-2.1:2.3] plot (\x, {\x*\x*\x - 4*\x});
+                        \draw[red, dashed] (-1.5, 4.5) -- (2.5, -1.5);
+                        \filldraw (-1,3) circle (2pt) node[above left] {$(-1, 3)$};
+                        \filldraw (2,0) circle (2pt) node[below left] {$(2, 0)$};
+                        % Gradient triangle
+                        \draw[thick, black, dashed] (-1,3) -- (2,3) node[midway, above] {$\Delta x = 3$};
+                        \draw[thick, black, dashed] (2,3) -- (2,0) node[midway, right] {$\Delta y = -3$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The population <m>P</m> of a town (in thousands) is modeled by <m>P = 5 + 0.1t^2</m>, where <m>t</m> is years since 2020. Find the average annual population growth rate between 2022 and 2025.
+            </p>
         </statement>
         <solution>
+            <p>
+                <m>2022</m> corresponds to <m>t = 2</m> and 2025 corresponds to <m>t = 5</m>.
+            </p>
+            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                <row>
+                    <cell><m>t</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>5</m></cell>
+                </row>
+                <row>
+                    <cell><m>P</m></cell>
+                    <cell><m>5.4</m></cell>
+                    <cell><m>5.9</m></cell>
+                    <cell><m>6.6</m></cell>
+                    <cell><m>7.5</m></cell>
+                </row>
+            </tabular>
+            <p>
+                Average growth rate = <m>\frac{7.5 - 5.4}{5 - 2} = \frac{2.1}{3} = 0.7</m> thousand people per year.
+            </p>
+            <image xml:id="img-example-pop-avg" width="50%">
+                <latex-image label="Population Growth with Secant Line">
+                    \begin{tikzpicture}[scale=0.6]
+                        \draw[help lines, color=gray!30, step=1] (0,4) grid (6,9);
+                        \draw[-&gt;] (0,4) -- (6,4) node[right] {$t$};
+                        \draw[-&gt;] (0,4) -- (0,9) node[above] {$P$};
+                        \draw[thick, blue, domain=0:6] plot (\x, {5 + 0.1*\x*\x});
+                        \draw[red, dashed] (1, 4.7) -- (6, 8.2);
+                        \filldraw (2,5.4) circle (3pt);
+                        \filldraw (5,7.5) circle (3pt);
+                        \draw[thick, black, dashed] (2,5.4) -- (5,5.4) node[midway, below] {$\Delta t = 3$};
+                        \draw[thick, black, dashed] (5,5.4) -- (5,7.5) node[midway, right] {$\Delta P = 2.1$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,20 +398,96 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
+            <statement>
+                <p>
+                    Calculate the average rate of change of <m>y = 3x^2 - 5</m> between <m>x = 0</m> and <m>x = 2</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    When <m>x = 0, y = 3(0)^2 - 5 = -5</m>.
+                </p>
+                <p>
+                    When <m>x = 2, y = 3(2)^2 - 5 = 12 - 5 = 7</m>.
+                </p>
+                <p>
+                    Average rate of change = <m>\frac{7 - (-5)}{2 - 0} = \frac{12}{2} = 6</m>.
+                </p>
+                <image xml:id="img-ex-secant-quad-avg" width="50%">
+                    <latex-image label="Quadratic_Secant Line">
+                        \begin{tikzpicture}[scale=0.5]
+                            \draw[help lines, color=gray!30, step=1] (-1,-6) grid (4,10);
+                            \draw[-&gt;] (-1,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-6) -- (0,10) node[above] {$y$};
+                            \draw[thick, blue, domain=-0.5:2.2] plot (\x, {3*\x*\x - 5});
+                            \draw[red, dashed] (-0.5, -8) -- (2.5, 10);
+                            \filldraw (0,-5) circle (2pt);
+                            \filldraw (2,7) circle (2pt);
+                            % Gradient triangle from (0,-5) to (2,7)
+                            \draw[thick, black, dashed] (0,-5) -- (2,-5) node[midway, below] {$\Delta x = 2$};
+                            \draw[thick, black, dashed] (2,-5) -- (2,7) node[midway, right] {$\Delta y = 12$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    For the function <m>y = \frac{1}{x}</m>, find the average rate of change from <m>x = 1</m> to <m>x = 4</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ul>
+                        <li>
+                            <p>
+                                When <m>x = 1, y = 1</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                When <m>x = 4, y = 0.25</m>.
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Average rate = <m>\frac{0.25 - 1}{4 - 1} = \frac{-0.75}{3} = -0.25</m>.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A tank is filled with water. The volume <m>V</m> at time <m>t</m> is <m>V = 2t^2 + 10</m>. Find the average rate at which volume increases between <m>t = 1</m> and <m>t = 4</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ul>
+                        <li>
+                            <p>
+                                At <m>t = 1, V = 2(1)^2 + 10 = 12</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                At <m>t = 4, V = 2(4)^2 + 10 = 32 + 10 = 42</m>.
+                            </p>
+                        </li>
+                    </ul>
+                    Average rate = <m>\frac{42 - 12}{4 - 1} = \frac{30}{3} = 10</m> units/s.
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -175,7 +501,7 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide a step-by-step checklist: find $y_1$, find $y_2$, calculate $\Delta y$, calculate $\Delta x$, divide.
                     </cell>
                     <cell></cell>
                 </row>
@@ -189,13 +515,13 @@
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Investigate functions where the average rate of change is zero over certain intervals (e.g., $y = x^2$ on $[-2, 2]$).
                     </cell>
                     <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
