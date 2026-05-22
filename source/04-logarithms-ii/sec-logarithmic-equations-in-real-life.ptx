@@ -72,10 +72,77 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+    <activity>
+    <statement>
+        <p>
+            <term>Work in groups</term>
+        </p>
+
+        <p>
+            <term>What you need</term>
+        </p>
+
+        <p>
+            Scenario cards on real-life applications of logarithms
+            Manila paper
+            Markers
+            Scientific calculators
+            Graph paper (optional)
+        </p>
+
+        <p>
+            <term>What to do</term>
+        </p>
+
+        <task>
+            <statement>
+                <p>
+                    Divide into groups and let each group receive a scenario card showing a real-life application of logarithms such as disease spread, mobile network signal strength, food cooling, or fraud detection.
+                </p>
+
+                <p>
+                    Read the scenario carefully and discuss how logarithms are used in that situation.
+                </p>
+
+                <p>
+                    Solve the questions provided on the scenario card and record your answers on the manila paper.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Use calculators to evaluate logarithmic expressions related to your scenario and explain what the answers mean in real life.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Exchange your scenario card and solutions with another group and check each other's work.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Discuss any differences in answers with the other group and work together to determine the correct interpretation of the logarithmic calculations.
+                </p>
+            </statement>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Present your findings to the class and explain how logarithms help solve real-life problems in your assigned scenario.
+                </p>
+            </statement>
+        </task>
+    </statement>
+</activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -111,8 +178,11 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            Logarithmic equations are powerful tools that can help us understand and solve a wide range of real-life problems, from population growth to sound intensity. By applying logarithmic properties and calculations, we can make sense of complex phenomena and make informed decisions based on data.
+        </p>
+    </insight> 
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -120,26 +190,110 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+         <p>
+            A bacterium population doubles every 3 hours. If the initial population is 100, how many bacteria will there be after 24 hours? Use logarithms to solve this problem.
+         </p>
         </statement>
         <solution>
+            <p>
+                Let P(t) be the population at time t hours. We can express the population growth as:
+            </p>
+            <p>
+               <m>P(t) = P_0 * 2^(t/3)</m>
+            </p>
+            <p>
+                Where P_0 is the initial population (100) and t is the time in hours. We want to find P(24):
+            </p>
+            <p>
+                <m>P(24) = 100 * 2^(24/3) = 100 * 2^8 = 100 * 256 = 25600</m>
+            </p>
+            <p>
+                Therefore, after 24 hours, there will be 25,600 bacteria.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The intensity of a sound is measured in decibels (dB) and is given by the formula:
+            </p>
+            <p>
+                <m>I = 10 * log_{10}(P/P_0)</m>
+            </p>
+            <p>
+                Where I is the intensity in decibels, P is the power of the sound, and P_0 is the reference power (the threshold of hearing). If a sound has a power of 1 watt and the reference power is 10^-12 watts, what is the intensity of the sound in decibels?
+            </p>
         </statement>
         <solution>
+            <p>
+                Substituting the values into the formula:
+            </p>
+            <p>
+                <m>I = 10 * log_{10}(1 / 10^{-12}) = 10 * log_{10}(10^{12}) = 10 * 12 = 120</m>
+            </p>
+            <p>
+                Therefore, the intensity of the sound is 120 decibels.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A radioactive substance decays at a rate proportional to its current amount. If the half-life of the substance is 5 years, how long will it take for a sample of 100 grams to decay to 25 grams? Use logarithms to solve this problem.
+            </p>
         </statement>
         <solution>
+            <p>
+                Let P(t) be the amount of the substance at time t years. The decay can be modeled as:
+            </p>
+            <p>
+                <m>P(t) = P_0 * (1/2)^(t/5)</m>
+            </p>
+            <p>
+                Where P_0 is the initial amount (100 grams) and t is the time in years. We want to find t when P(t) = 25:
+            </p>
+            <p>
+                <m>25 = 100 * (1/2)^(t/5)</m>
+            </p>
+            <p>
+                Dividing both sides by 100:
+            </p>
+            <p>
+                <m>0.25 = (1/2)^(t/5)</m>
+            </p>
+            <p>
+                Taking the logarithm base 2 of both sides:
+            </p>
+            <p>
+                <m>log_2(0.25) = t/5</m>
+            </p>
+            <p>
+                Since log_2(0.25) = log_2(1/4) = -2:
+            </p>
+            <p>
+                <m>-2 = t/5</m>
+            </p>
+            <p>
+                Multiplying both sides by 5:
+            </p>
+            <p>
+                <m>t = -10</m>
+            </p>
+            <p>
+                Since time cannot be negative, we take the absolute value:
+            </p>
+            <p>
+                <m>t = 10</m>
+            </p>
+            <p>
+                Therefore, it will take 10 years for the sample to decay to 25 grams.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -151,16 +305,60 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
-
+                <p>
+                    A population of rabbits doubles every 4 months. If there are initially 50 rabbits, how many rabbits will there be after 2 years? Use logarithms to solve this problem.
+                </p>
             </statement>   
-            <solution>
-
+            <solution> 
+                <p>
+                    <m>P(24) = 50 * 2^(24/4) = 50 * 2^6 = 50 * 64 = 3200</m>
+                </p>
+                <p>
+                    Therefore, after 2 years, there will be 3,200 rabbits.
+                </p>
             </solution>             
-        </exercise>        
-    </exercises> -->
+        </exercise> 
+        <exercise>
+            <statement>   
+                <p>
+                    The pH of a solution is given by the formula:
+                </p>
+                <p>
+                    <m>pH = -log_{10}([H^+])</m>
+                </p>
+                <p>
+                    Where [H^+] is the concentration of hydrogen ions in moles per liter. If a solution has a pH of 3, what is the concentration of hydrogen ions in the solution?
+                </p>
+            </statement>   
+            <solution> 
+                <p>
+                    <m>[H^+] = 10^{-3} = 0.001</m>
+                </p>
+                <p>
+                    Therefore, the concentration of hydrogen ions in the solution is 0.001 moles per liter.
+                </p>
+            </solution> 
+        </exercise>
+        <exercise>
+            <statement>   
+                <p>
+                    A sound has an intensity of 80 decibels. If the reference power is 10^-12 watts, what is the power of the sound in watts? Use logarithms to solve this problem.
+                </p>
+            </statement>   
+            <solution> 
+                <p>
+                    <m>P = 10^8 * 10^{-12} = 10^{-4} = 0.0001</m>
+                </p>
+                <p>
+                    Therefore, the power of the sound is 0.0001 watts.
+                </p>
+            </solution> 
+        </exercise>
+
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
