@@ -156,8 +156,8 @@
              When solving logarithmic equations, it's important to remember that the argument of the logarithm must be positive. This is because the logarithm of a negative number or zero is undefined in the real number system.
           </p>
           <p>
-             Additionally, when solving logarithmic equations, remember the basic properties of logarithims such as
-             product rule that is <m>log_b(xy) = log_b(x) + log_b(y)</m>, the quotient rule that is <m>log_b(x/y) = log_b(x) - log_b(y)</m>, and the power rule that is <m>log_b(x^n) = n \cdot log_b(x)</m>.
+             Additionally, when solving logarithmic equations, remember the basic properties of logarithims such as the
+             product rule that is <m>\log_b(xy) = \log_b(x) + \log_b(y)</m>, the quotient rule that is <m>\log_b(x/y) = \log_b(x) - \log_b(y)</m>, and the power rule that is <m>\log_b(x^n) = n \cdot \log_b(x)</m>.
          </p>
     </insight> 
 
@@ -170,13 +170,13 @@
     <example>
         <statement>
             <p>
-            Solve for x: <m>log₂(x) = 3</m>
+            Solve for x: <m>\log₂(x) = 3</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>log₂(x) = 3</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+                To solve the equation <m>\log₂(x) = 3</m>, first rewrite it in exponential form. 
+                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
             </p>
             <p>
                 In our case, you have <m>b = 2</m>, <m>c = 3</m>, and <m>a = x</m>. 
@@ -198,13 +198,13 @@
     <example>
         <statement>
             <p>
-            Solve for x: <m>log₃(x + 1) = 2</m>
+            Solve for x: <m>\log₃(x + 1) = 2</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>log₃(x + 1) = 2</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+                To solve the equation <m>\log₃(x + 1) = 2</m>, first rewrite it in exponential form. 
+                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
             </p>
             <p>
                 In our case, you have <m>b = 3</m>, <m>c = 2</m>, and <m>a = x + 1</m>. 
@@ -232,16 +232,16 @@
     <example>
         <statement>
             <p>
-            Solve for x: <m>log₄(x - 2) = 1</m>
+            Solve for x: <m>\log₄(x - 2) = 1</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>log₄(x - 2) = 1</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+                To solve the equation <m>\log₄(x - 2) = 1</m>, first rewrite it in exponential form. 
+                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
             </p>
             <p>
-                In our case, you have <m>b = 4</m>, <m>c = 1</m>, and <m>a = x - 2</m>. 
+                In this case, you have <m>\b = 4</m>, <m>\c = 1</m>, and <m>\a = x - 2</m>. 
                 Therefore, you can rewrite the equation as:
             </p>
             <p>
@@ -277,7 +277,7 @@
         <exercise>
             <statement>   
                 <p>
-                    Bella is trying to solve the logarithmic equation <m>log₅(x) = 2</m>. What answer does she get?
+                    Bella is trying to solve the logarithmic equation <m>\log₅(x) = 2</m>. What answer does she get?
                 </p>
             </statement>   
             <solution>

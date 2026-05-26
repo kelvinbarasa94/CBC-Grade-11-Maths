@@ -109,7 +109,7 @@
     <activity>
        <introduction>
          <p>
-             In the previous chapter, we introduced logarithms and explored their relationship
+             In grade 10, we introduced logarithms and explored their relationship
              with exponents. We also learned about the properties of logarithms and how to evaluate logarithmic 
              expressions. In this section, we will review these concepts and build a strong foundation
               for solving logarithmic equations in the upcoming sections.
@@ -202,16 +202,16 @@
     <example>
         <statement>
             <p>
-                Calculate <m>log 3 + log 5 - log 3</m>
+                Calculate <m>\log 3 + \log 5 - \log 3</m>
             </p>
         </statement>
         <solution>
                 <p>
                         With refrence to the product and quotient laws of logarithms, we rewrite the expression as: 
-                        <m>log (3 \times 5) \div log 3</m>.      
+                        <m>\log (3 \times 5) \div \log 3</m>.      
               </p>
               <p>
-                Solving this gives us <m>log 5</m> as the final answer.
+                Solving this gives us <m>\log 5</m> as the final answer.
               </p>
         </solution>
     </example>
@@ -219,13 +219,13 @@
     <example>
         <statement>
             <p>
-                Calculate <m>log 100 - log 10</m>
+                Calculate <m>\log 100 - \log 10</m>
             </p>
         </statement>
         <solution>
               <p>
-                Using the quotient law of logarithms, we can rewrite the expression as <m>log (100 \div 10)</m>. 
-                Solving this gives us <m>log 10</m> as the final answer.
+                Using the quotient law of logarithms, we can rewrite the expression as <m>\log (100 \div 10)</m>. 
+                Solving this gives us <m>\log 10</m> as the final answer.
               </p>
         </solution>
     </example>
@@ -233,15 +233,15 @@
     <example>
         <statement>
             <p>
-                Calculate <m>log_2 (8)</m>
+                Calculate <m>\log_2 (8)</m>
             </p>
         </statement>
         <solution>
                <p>
-                 Rewrite the expression in exponential form as <m>2^t = 8</m>. 
+                 Rewrite the expression in exponential form as <m>\2^t = 8</m>. 
               </p>
               <p>
-                Rewrite the expression such that right side to has a common base with the left side. By doing this the result is <m>2^t = 2^3</m>. 
+                Rewrite the expression such that right side to has a common base with the left side. By doing this the result is <m>\2^t = \2^3</m>. 
               </p>
               <p>
                 Since the bases are the same, we can equate the exponents to get <m>t = 3</m>.
@@ -263,31 +263,31 @@
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>log 4 + log 25 - log 5</m>
+                    Calculate <m>\log 4 + \log 25 - \log 5</m>
                 </p>
             </statement>   
             <solution>
                 <p>
-                    <m>log 20</m>
+                    <m>\log 20</m>
                 </p>
             </solution>             
         </exercise>
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>log 50 - log 5</m>
+                    Calculate <m>\log 50 - \log 5</m>
                 </p>
             </statement>   
             <solution>
                 <p>
-                    <m>log 10</m>
+                    <m>\log 10</m>
                 </p>
             </solution>
         </exercise>
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>log_3 (27)</m>
+                    Calculate <m>\log_3 (27)</m>
                 </p>
             </statement>   
             <solution>
@@ -299,7 +299,7 @@
         <exercise>
             <statement>   
                 <p>
-                    A student calculates <m>log_5 (25)</m>. What is the correct answer?
+                    A student calculates <m>\log_5 (25)</m>. What is the correct answer?
                 </p>
             </statement>   
             <solution>

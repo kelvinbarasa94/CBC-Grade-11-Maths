@@ -221,7 +221,7 @@
                 The intensity of a sound is measured in decibels (dB) and is given by the formula:
             </p>
             <p>
-                <m>I = 10 \times log_{10}(P/P_0)</m>
+                <m>I = 10 \times \log_{10}(P/P_0)</m>
             </p>
             <p>
                 Where <m>I</m> is the intensity in decibels, <m>P</m> is the power of the sound, and <m>P_0</m> is the reference power (the threshold of hearing). If a sound has a power of <m>1</m> watt and the reference power is <m>10^{-12}</m> watts, what is the intensity of the sound in decibels?
@@ -232,7 +232,7 @@
                 Substituting the values into the formula:
             </p>
             <p>
-                <m>I = 10 \times log_{10}(1 / 10^{-12}) = 10 \times log_{10}(10^{12}) = 10 \times 12 = 120</m>
+                <m>I = 10 \times \log_{10}(1 / 10^{-12}) = 10 \times \log_{10}(10^{12}) = 10 \times 12 = 120</m>
             </p>
             <p>
                 Therefore, the intensity of the sound is <m>120</m> decibels.
@@ -269,10 +269,10 @@
                 Taking the logarithm base 2 of both sides:
             </p>
             <p>
-                <m>log_2(0.25) = t/5</m>
+                <m>\log_2(0.25) = t/5</m>
             </p>
             <p>
-                Since <m>log_2(0.25) = log_2(1/4) = -2</m>:
+                Since <m>\log_2(0.25) = \log_2(1/4) = -2</m>:
             </p>
             <p>
                 <m>-2 = t/5</m>
@@ -327,7 +327,7 @@
                     The pH of a solution is given by the formula:
                 </p>
                 <p>
-                    <m>pH = -log_{10}([H^+])</m>
+                    <m>pH = -\log_{10}([H^+])</m>
                 </p>
                 <p>
                     Where <m>[H^+]</m> is the concentration of hydrogen ions in moles per liter. If a solution has a pH of <m>3</m>, what is the concentration of hydrogen ions in the solution?
