@@ -122,9 +122,8 @@
              <term>Key Takeaway</term>
           </p>
               <p>
-              While solving logarithmic equations, it is important to remember that the properties of logarithms can be used to simplify the equations and make them easier to solve. For example, the product rule, quotient rule, and power rule can help us combine or break down logarithmic expressions. 
-             Additionally, we can use the fact that if log_b(x) = log_b(y), then x = y,
-             which allows us to set the arguments of the logarithms equal to each other when the bases are the same. 
+             While solving logarithmic equations, it is important to remember the properties of logarithms to help with simplification.
+             Kindly ensure that logarithims are of the same base before attempting to solve the equation.
           </p>  
     </insight>
 
@@ -137,12 +136,12 @@
     <example>
         <statement>
             <p>
-                Solve the logarithmic equation: log₂(x+5) = log₂(2x−1) + 1
+                Solve the logarithmic equation: <m>log₂(x+5) = log₂(2x−1) + 1 </m>
             </p>
         </statement>
         <solution>
             <p>
-               To solve the equation log₂(x+5) = log₂(2x−1) + 1, use the product rule of logarithms to combine the logarithmic expressions on the right side of the equation. The product rule states that log_b(m) + log_b(n) = log_b(m*n). Applying this rule gives us:
+               To solve the equation <m>log₂(x+5) = log₂(2x−1) + 1</m>, use the product rule of logarithms to combine the logarithmic expressions on the right side of the equation. The product rule states that <m>log_b(m) + log_b(n) = log_b(m*n) </m>. Applying this rule gives us:
             </p>
               <p>
                 <m>log₂(x+5) = log₂(2x−1) + log₂(2)</m>
@@ -151,10 +150,10 @@
                 Now combine the logarithmic expressions on the right side using the product rule again to get:
                 </p>
                     <p>
-                        <m>log₂(x+5) = log₂((2x−1) * 2)</m>
-                    </p>
-                    <p>
-                        <m>log₂(x+5) = log₂(4x−2)</m>
+                        <md>
+                             <m>log₂(x+5) = log₂((2x−1) * 2)</m>
+                             <m>log₂(x+5) = log₂(4x−2)</m>
+                        </md>
                     </p>
                     <p>
                         Rearrange the equation to set the arguments of the logarithms equal to each other as:
@@ -181,18 +180,18 @@
     <example>
         <statement>
             <p>
-                Solve the logarithmic equation: log₃(2x+1) - log₃(x-2) = 1
+                Solve the logarithmic equation: <m>log₃(2x+1) - log₃(x-2) = 1</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation log₃(2x+1) - log₃(x-2) = 1, consider using the quotient rule of logarithms, which states that log_b(m) - log_b(n) = log_b(m/n). Applying this rule gives:
+                To solve the equation <m>log₃(2x+1) - log₃(x-2) = 1</m>, consider using the quotient rule of logarithms, which states that <m>log_b(m) - log_b(n) = log_b(m/n)</m>. Applying this rule gives:
             </p>
               <p>
                 <m>log₃\left(\frac{2x+1}{x-2}\right) = 1</m>
               </p>
                 <p>
-                Now rewrite the equation in exponential form. The equation log_b(a) = c can be rewritten as b^c = a. Applying this to the equation gives us:
+                Now rewrite the equation in exponential form. The equation <m>log_b(a) = c</m> can be rewritten as <m>b^c = a</m>. Applying this to the equation gives us:
                 </p>
                     <p>
                         <m>3^1 = \frac{2x+1}{x-2}</m>
@@ -217,11 +216,11 @@
                         Finally, you need to check if the solution is valid by substituting it back into the original equation. Ensure that the arguments of the logarithms are positive.
                     </p>
                     <p>
-                        For log₃(2x+1), you have:
+                        For <m>log₃(2x+1)</m>, you have:
                         <m>log₃(2(7)+1) = log₃(15)</m>, which is valid since 15 is positive.
                     </p>
                     <p>
-                        For log₃(x-2), you have:
+                        For <m>log₃(x-2)</m>, you have:
                         <m>log₃(7-2) = log₃(5)</m>, which is also valid since 5 is positive.
                     </p>
         </solution>
@@ -230,18 +229,18 @@
     <example>
         <statement>
             <p>
-                Solve the logarithmic equation: log₂(x+5) - log₂(x-3) = 2
+                Solve the logarithmic equation: <m>log₂(x+5) - log₂(x-3) = 2</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation log₂(x+5) - log₂(x-3) = 2, use the quotient rule of logarithms, which states that log_b(m) - log_b(n) = log_b(m/n). Applying this rule gives:
+                To solve the equation <m>log₂(x+5) - log₂(x-3) = 2</m>, use the quotient rule of logarithms, which states that <m>log_b(m) - log_b(n) = log_b(m/n)</m>. Applying this rule gives:
             </p>
               <p>
                 <m>log₂\left(\frac{x+5}{x-3}\right) = 2</m>
               </p>
                 <p>
-                Now rewrite the equation in exponential form. The equation log_b(a) = c can be rewritten as b^c = a. Applying this to the equation gives us:
+                Now rewrite the equation in exponential form. The equation <m>log_b(a) = c</m> can be rewritten as <m>b^c = a</m>. Applying this to the equation gives us:
                 </p>
                     <p>
                         <m>2^2 = \frac{x+5}{x-3}</m>
@@ -270,12 +269,12 @@
                         Finally, check if the solution is valid by substituting it back into the original equation. We need to ensure that the arguments of the logarithms are positive.
                     </p>
                     <p>
-                        For log₂(x+5), you have:
-                        <m>log₂\left(\frac{17}{3} + 5\right) = log₂\left(\frac{17}{3} + \frac{15}{3}\right) = log₂\left(\frac{32}{3}\right)</m>, which is valid since \(\frac{32}{3}\) is positive.
+                        For <m>log₂(x+5)</m>, you have:
+                        <m>log₂\left(\frac{17}{3} + 5\right) = log₂\left(\frac{17}{3} + \frac{15}{3}\right) = log₂\left(\frac{32}{3}\right)</m>, which is valid since <m>\(\frac{32}{3}\)</m> is positive.
                     </p>
                     <p>
-                        For log₂(x-3), you have:
-                        <m>log₂\left (\frac{17}{3} - 3\right) = log₂\left(\frac{17}{3} - \frac{9}{3}\right) = log₂\left(\frac{8}{3}\right)</m>, which is valid since \(\frac{8}{3}\) is positive.
+                        For <m>log₂(x-3)</m>, you have:
+                        <m>log₂\left (\frac{17}{3} - 3\right) = log₂\left(\frac{17}{3} - \frac{9}{3}\right) = log₂\left(\frac{8}{3}\right)</m>, which is valid since <m>\(\frac{8}{3}\)</m> is positive.
                     </p>
         </solution>
     </example>

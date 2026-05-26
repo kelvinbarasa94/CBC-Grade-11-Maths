@@ -193,24 +193,24 @@
     <example>
         <statement>
          <p>
-            A bacterium population doubles every 3 hours. If the initial population is 100, how many bacteria will there be after 24 hours? Use logarithms to solve this problem.
+            A bacterium population doubles every <m>3</m> hours. If the initial population is <m>100</m>, how many bacteria will there be after <m>24</m> hours? Use logarithms to solve this problem.
          </p>
         </statement>
         <solution>
             <p>
-                Let P(t) be the population at time t hours. We can express the population growth as:
+                Let <m>P(t)</m> be the population at time <m>t</m> hours. We can express the population growth as:
             </p>
             <p>
-               <m>P(t) = P_0 * 2^(t/3)</m>
+               <m>P(t) = P_0 \times 2^{t/3}</m>
             </p>
             <p>
-                Where P_0 is the initial population (100) and t is the time in hours. We want to find P(24):
+                Where <m>P_0</m> is the initial population <m>(100)</m>and <m>t</m> is the time in hours. We want to find <m>P(24)</m>:
             </p>
             <p>
-                <m>P(24) = 100 * 2^(24/3) = 100 * 2^8 = 100 * 256 = 25600</m>
+                <m>P(24) = 100 \times 2^{24/3} = 100 \times 2^8 = 100 \times 256 = 25600</m>
             </p>
             <p>
-                Therefore, after 24 hours, there will be 25,600 bacteria.
+                Therefore, after <m>24</m> hours, there will be <m>25,600</m> bacteria.
             </p>
         </solution>
     </example>
@@ -221,10 +221,10 @@
                 The intensity of a sound is measured in decibels (dB) and is given by the formula:
             </p>
             <p>
-                <m>I = 10 * log_{10}(P/P_0)</m>
+                <m>I = 10 \times log_{10}(P/P_0)</m>
             </p>
             <p>
-                Where I is the intensity in decibels, P is the power of the sound, and P_0 is the reference power (the threshold of hearing). If a sound has a power of 1 watt and the reference power is 10^-12 watts, what is the intensity of the sound in decibels?
+                Where <m>I</m> is the intensity in decibels, <m>P</m> is the power of the sound, and <m>P_0</m> is the reference power (the threshold of hearing). If a sound has a power of <m>1</m> watt and the reference power is <m>10^{-12}</m> watts, what is the intensity of the sound in decibels?
             </p>
         </statement>
         <solution>
@@ -232,10 +232,10 @@
                 Substituting the values into the formula:
             </p>
             <p>
-                <m>I = 10 * log_{10}(1 / 10^{-12}) = 10 * log_{10}(10^{12}) = 10 * 12 = 120</m>
+                <m>I = 10 \times log_{10}(1 / 10^{-12}) = 10 \times log_{10}(10^{12}) = 10 \times 12 = 120</m>
             </p>
             <p>
-                Therefore, the intensity of the sound is 120 decibels.
+                Therefore, the intensity of the sound is <m>120</m> decibels.
             </p>
         </solution>
     </example>
@@ -243,27 +243,27 @@
     <example>
         <statement>
             <p>
-                A radioactive substance decays at a rate proportional to its current amount. If the half-life of the substance is 5 years, how long will it take for a sample of 100 grams to decay to 25 grams? Use logarithms to solve this problem.
+                A radioactive substance decays at a rate proportional to its current amount. If the half-life of the substance is <m>5</m> years, how long will it take for a sample of <m>100</m> grams to decay to <m>25</m> grams? Use logarithms to solve this problem.
             </p>
         </statement>
         <solution>
             <p>
-                Let P(t) be the amount of the substance at time t years. The decay can be modeled as:
+                Let <m>P(t)</m> be the amount of the substance at time <m>t</m> years. The decay can be modeled as:
             </p>
             <p>
-                <m>P(t) = P_0 * (1/2)^(t/5)</m>
+                <m>P(t) = P_0 \times (1/2)^{t/5}</m>
             </p>
             <p>
-                Where P_0 is the initial amount (100 grams) and t is the time in years. We want to find t when P(t) = 25:
+                Where <m>P_0</m> is the initial amount <m>(100</m> grams) and <m>t</m> is the time in years. We want to find <m>t</m> when <m>P(t) = 25</m>:
             </p>
             <p>
-                <m>25 = 100 * (1/2)^(t/5)</m>
+                <m>25 = 100 \times (1/2)^{t/5}</m>
             </p>
             <p>
                 Dividing both sides by 100:
             </p>
             <p>
-                <m>0.25 = (1/2)^(t/5)</m>
+                <m>0.25 = (1/2)^{t/5}</m>
             </p>
             <p>
                 Taking the logarithm base 2 of both sides:
@@ -272,7 +272,7 @@
                 <m>log_2(0.25) = t/5</m>
             </p>
             <p>
-                Since log_2(0.25) = log_2(1/4) = -2:
+                Since <m>log_2(0.25) = log_2(1/4) = -2</m>:
             </p>
             <p>
                 <m>-2 = t/5</m>
@@ -290,7 +290,7 @@
                 <m>t = 10</m>
             </p>
             <p>
-                Therefore, it will take 10 years for the sample to decay to 25 grams.
+                Therefore, it will take <m>10</m> years for the sample to decay to <m>25</m> grams.
             </p>
         </solution>
     </example>
@@ -309,15 +309,15 @@
         <exercise>
             <statement>   
                 <p>
-                    A population of rabbits doubles every 4 months. If there are initially 50 rabbits, how many rabbits will there be after 2 years? Use logarithms to solve this problem.
+                    A population of rabbits doubles every <m>4</m> months. If there are initially <m>50</m> rabbits, how many rabbits will there be after <m>2</m> years? Use logarithms to solve this problem.
                 </p>
             </statement>   
             <solution> 
                 <p>
-                    <m>P(24) = 50 * 2^(24/4) = 50 * 2^6 = 50 * 64 = 3200</m>
+                    <m>P(24) = 50 \times 2^{24/4} = 50 \times 2^6 = 50 \times 64 = 3200</m>
                 </p>
                 <p>
-                    Therefore, after 2 years, there will be 3,200 rabbits.
+                    Therefore, after <m>2</m> years, there will be <m>3,200</m> rabbits.
                 </p>
             </solution>             
         </exercise> 
@@ -330,7 +330,7 @@
                     <m>pH = -log_{10}([H^+])</m>
                 </p>
                 <p>
-                    Where [H^+] is the concentration of hydrogen ions in moles per liter. If a solution has a pH of 3, what is the concentration of hydrogen ions in the solution?
+                    Where <m>[H^+]</m> is the concentration of hydrogen ions in moles per liter. If a solution has a pH of <m>3</m>, what is the concentration of hydrogen ions in the solution?
                 </p>
             </statement>   
             <solution> 
@@ -338,22 +338,22 @@
                     <m>[H^+] = 10^{-3} = 0.001</m>
                 </p>
                 <p>
-                    Therefore, the concentration of hydrogen ions in the solution is 0.001 moles per liter.
+                    Therefore, the concentration of hydrogen ions in the solution is <m>0.001</m> moles per liter.
                 </p>
             </solution> 
         </exercise>
         <exercise>
             <statement>   
                 <p>
-                    A sound has an intensity of 80 decibels. If the reference power is 10^-12 watts, what is the power of the sound in watts? Use logarithms to solve this problem.
+                    A sound has an intensity of <m>80</m> decibels. If the reference power is <m>10^{-12}</m> watts, what is the power of the sound in watts? Use logarithms to solve this problem.
                 </p>
             </statement>   
             <solution> 
                 <p>
-                    <m>P = 10^8 * 10^{-12} = 10^{-4} = 0.0001</m>
+                    <m>P = 10^8 \times 10^{-12} = 10^{-4} = 0.0001</m>
                 </p>
                 <p>
-                    Therefore, the power of the sound is 0.0001 watts.
+                    Therefore, the power of the sound is <m>0.0001</m> watts.
                 </p>
             </solution> 
         </exercise>

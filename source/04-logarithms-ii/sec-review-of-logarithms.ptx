@@ -206,13 +206,13 @@
             </p>
         </statement>
         <solution>
-               <p> <term>Step 1:</term> Since <m>log a + log b = log (a \times b)</m>, 
-                 we can write <m>log 3 + log 5</m> as <m>log (3 \times 5)</m>,
-                 which simplifies to <m>log 15</m>. </p>
-               <p> <term>Step 2:</term> Now, we can rewrite the expression as <m>log 15 - log 3</m>. 
-                 Since <m>log a - log b = log (a \div b)</m>, this simplifies to
-                 <m>log (15 \div 3)</m>, which is <m>log \\ 5</m>. 
-             </p>
+                <p>
+                        With refrence to the product and quotient laws of logarithms, we rewrite the expression as: 
+                        <m>log (3 \times 5) \div log 3</m>.      
+              </p>
+              <p>
+                Solving this gives us <m>log 5</m> as the final answer.
+              </p>
         </solution>
     </example>
 
@@ -224,9 +224,8 @@
         </statement>
         <solution>
               <p>
-                    Since <m>log a - log b = log (a \div b)</m>, we can write
-                    <m>log 100 - log 10</m> as <m>log (100 \div 10)</m>, which simplifies to
-                    <m>log 10</m>. 
+                Using the quotient law of logarithms, we can rewrite the expression as <m>log (100 \div 10)</m>. 
+                Solving this gives us <m>log 10</m> as the final answer.
               </p>
         </solution>
     </example>
@@ -234,15 +233,18 @@
     <example>
         <statement>
             <p>
-                Calculate <m>log_2(8)</m>
+                Calculate <m>log_2 (8)</m>
             </p>
         </statement>
         <solution>
                <p>
-                 We can rewrite <m>log_2(8)</m> in exponential form as
-                 <m>2^x = 8</m>, where <m>x</m> is the value we want to find.
-                    Since <m>2^3 = 8</m>, we can conclude that <m>x = 3</m>, which means:
-                 <m>log_2(8) = 3</m>
+                 Rewrite the expression in exponential form as <m>2^t = 8</m>. 
+              </p>
+              <p>
+                Rewrite the expression such that right side to has a common base with the left side. By doing this the result is <m>2^t = 2^3</m>. 
+              </p>
+              <p>
+                Since the bases are the same, we can equate the exponents to get <m>t = 3</m>.
               </p>
         </solution>
     </example>
@@ -285,7 +287,7 @@
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>log_3(27)</m>
+                    Calculate <m>log_3 (27)</m>
                 </p>
             </statement>   
             <solution>
@@ -297,7 +299,7 @@
         <exercise>
             <statement>   
                 <p>
-                    A student calculates <m>log_5(25)</m>. What is the correct answer?
+                    A student calculates <m>log_5 (25)</m>. What is the correct answer?
                 </p>
             </statement>   
             <solution>
