@@ -67,12 +67,149 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+
+            <p>
+                <term>Group Investigation Activity</term>
+            </p>
+
+            <p>
+                In Mombasa County, a group of learners have started a small weekend business selling bottled water and snacks during school events and public gatherings. They notice that their income changes depending on the season, transport costs, and demand from customers.
+            </p>
+
+            <p>
+                One weekend, they borrow Ksh <m>12,000</m> from a community youth fund to expand their business. The fund manager gives them two repayment plans:
+            </p>
+
+            <p>
+                <term>Plan A:</term> A fixed simple interest rate of <m>8\%</m> per year is charged on the original amount for <m>3</m> years.
+            </p>
+
+            <p>
+                <term>Plan B:</term> A reducing balance system is used where interest is charged each year on the updated amount after previous growth is included, at a rate of <m>8\%</m> per year.
+            </p>
+
+            <p>
+                The group is unsure which plan is fair and sustainable for their business.
+            </p>
+
+            <p>
+                <term>In your groups, investigate:</term>
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            For <term>Plan A</term>:
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    Determine the interest charged each year.
+                                </li>
+                                <li>
+                                    Find the total interest after <m>3</m> years.
+                                </li>
+                                <li>
+                                    Determine the total amount to be repaid.
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                            What do you observe about how the interest behaves over time?
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            For <term>Plan B</term>:
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    Compute the amount owed at the end of each year.
+                                </li>
+                                <li>
+                                    Determine the total repayment after <m>3</m> years.
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                            What changes each year in this system, and what remains the basis for calculation?
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Compare the two plans:
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    Which plan is cheaper for the group in the long run?
+                                </li>
+                                <li>
+                                    Which plan grows faster over time?
+                                </li>
+                                <li>
+                                    Which plan would you recommend for a growing business? Give reasons.
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <term>Further Exploration</term>
+            </p>
+
+            <p>
+                The group notices a pattern in Plan B where each year the amount is multiplied by the same factor.
+                Investigate how this pattern can be written in a general mathematical form.
+            </p>
+
+            <p>
+                Use your result to predict:
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        The amount after <m>4</m> years
+                    </li>
+                    <li>
+                        The amount after <m>5</m> years
+                    </li>
+                    <li>
+                        The amount after <m>n</m> years
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <term>Reflection</term>
+            </p>
+
+            <p>
+                Discuss in your group:
+            </p>
+
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        How does mathematics help in making financial decisions in real life situations?
+                    </li>
+                    <li>
+                        Why is it important for business owners to understand different growth patterns of money?
+                    </li>
+                </ol>
+            </p>
+
         </statement>
-    </activity> -->
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +243,171 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <insight>
+        <p>
+            
+                <term>Exploring Growth of Money in Real Life</term>
+        </p>
 
-    <!-- <insight>
-    </insight> -->
+                <p>
+                    From the group investigation, learners observed that money can grow in different ways depending on the financial system used.
+                    Some systems increase the amount steadily, while others grow faster over time.
+                </p>
+                <p>
+                    <term>Observing Simple Growth</term>
+                </p>
+
+                    <p>
+                        In Plan A, the interest is calculated on the original amount only.
+                        This means the increase in money each year remains the same.
+                    </p>
+
+                    <p>
+                        On computing the total amount over several years, notice:
+                    </p>
+                <p>
+
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                The same amount of interest is added each year.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                               The total grows in a steady and predictable way.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The original amount remains the reference point throughout.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                    <p>
+                        <term>Think about it:</term> Why does the total increase at a constant rate even after several years?
+                    </p>
+                <p>
+                    <term>Observing Changing Growth</term>
+                </p>
+
+                    <p>
+                        In Plan B, the situation is different. Each year, the amount used for calculation changes because previous growth is included.
+                    </p>
+
+                    <p>
+                        On computation year by year, observe that:
+                    </p>
+                <p>
+
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                The increase becomes larger each year.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The base amount keeps changing after every cycle.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The growth starts slowly but accelerates over time.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+
+                    <p>
+                        <term>Think about it:</term> Why does the amount grow faster in later years compared to earlier years?
+                    </p>
+                <p>
+                    <term>Searching for a Pattern</term>
+                </p>
+
+                    <p>
+                        What do you notice when comparing yearly values in Plan B.
+                    </p>
+
+                    <p>
+                        Instead of adding a fixed amount, each new value is obtained by multiplying the previous amount by the same factor.
+                    </p>
+
+                    <p>
+                        <term>Discuss in groups:</term>
+                    </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Can we predict future values without calculating each year step by step?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What is the simplest way to describe repeated multiplication?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How does this pattern differ from simple addition growth?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                <p>
+                    <term>From Patterns to General Understanding</term>
+                </p>
+                    <p>
+                        From these observations, we can describe financial growth  in two main ways:
+                    </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Steady growth based on a fixed reference value.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Accelerating growth based on repeated multiplication.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+                    <p>
+                        This prepares us to introduce formal methods for calculating interest, profit, and long-term financial changes.
+                    </p>
+
+                <p>
+                    <term>Reflection</term>
+                </p>
+
+                    <p>
+                        Consider real-life situations such as savings accounts, loans, and business investments.
+                    </p>
+
+                    <p>
+                        <term>Reflect:</term>
+                    </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Why do different financial systems lead to different outcomes over time?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How can understanding patterns help individuals make better financial decisions?
+                            </p>
+                        </li>
+                    </ol>
+
+                </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,26 +415,180 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                In a youth SACCO in Kisumu, members save money to support small business projects. One group deposits Ksh <m>20,000</m> in an account that earns simple interest at a rate of <m>5\%</m> per year.
+            </p>
+
+            <p>
+                Determine the total amount the group will have after <m>3</m> years.
+            </p>
         </statement>
+
         <solution>
+            <p>
+                Annual interest:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        I = \amp \; \frac{5}{100} \times 20,000 = 1,000
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Total interest for 3 years:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        1,000 \times 3 = 3,000
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Total amount:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        20,000 + 3,000 = 23,000
+                    </mrow>
+                </md>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A student uses a mobile savings app that rewards users with compound interest at a rate of <m>10\%</m> per year. The student invests Ksh <m>10,000</m>.
+            </p>
+
+            <p>
+                Find the amount after <m>2</m> years.
+            </p>
         </statement>
+
         <solution>
+            <p>
+                Year 1:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        10,000 \times 1.1 = 11,000
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Year 2:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        11,000 \times 1.1 = 12,100
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Final amount = Ksh <m>12,100</m>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A learner buys a smartphone for Ksh <m>30,000</m>. The phone loses value at a rate of <m>20\%</m> per year due to wear and technology changes.
+            </p>
+
+            <p>
+                Find its value after <m>2</m> years.
+            </p>
         </statement>
+
         <solution>
+            <p>
+                Year 1:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        30,000 \times 0.8 = 24,000
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Year 2:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        24,000 \times 0.8 = 19,200
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Final value = Ksh <m>19,200</m>
+            </p>
         </solution>
-    </example> -->
+    </example>
+    <example>
+        <statement>
+            <p>
+                A family buys a television on hire purchase. The cash price is Ksh <m>24,000</m>. They pay a deposit of Ksh <m>6,000</m> and the balance is paid in <m>12</m> monthly instalments of Ksh <m>1,500</m>.
+            </p>
+
+            <p>
+                Determine the total amount paid and comment on the cost.
+            </p>
+        </statement>
+
+        <solution>
+            <p>
+                Total instalments:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        12 \times 1,500 = 18,000
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                Total amount paid:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>
+                        18,000 + 6,000 = 24,000
+                    </mrow>
+                </md>
+            </p>
+
+            <p>
+                The total cost equals the cash price, meaning there is no extra cost in this simplified case.
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,16 +600,45 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    A group saves Ksh <m>18,000</m> in a bank at <m>5\%</m> simple interest per year. Find the total interest after <m>3</m> years.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Ksh <m>2,700</m>
+                </p>
+            </answer>
+        </exercise>
 
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    A mobile savings app gives <m>8\%</m> compound interest per year. If Ksh <m>15,000</m> is invested, find the amount after <m>2</m> years.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Ksh <m>17,496</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A laptop costs Ksh <m>50,000</m> and depreciates at <m>10\%</m> per year. Find its value after <m>2</m> years.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Ksh <m>40,500</m>
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 

@@ -69,11 +69,34 @@
 
     <!-- Add Activity -->
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+  <axiom component="lesson-plan">
+      <title>Problem-Solving and Discovery</title>
+      <dl>
+        <li>
+          <title>Suggested Time</title>
+          <p>15 minutes</p>
+        </li>
+        <li>
+          <title>Objective</title>
+          <p>To discover the rules for combining surds through grouping similar terms.</p>
+        </li>
+        <li>
+          <title>Teacher's Role</title>
+          <p>Guide learners to compare adding surds to adding algebraic variables. Use a calculator to demonstrate that <m>\sqrt{2} + \sqrt{3} \neq \sqrt{5}</m>.</p>
+        </li>
+      </dl>
+    </axiom>
 
+    <activity>
+      <statement>
+        <p>Working in pairs, consider the following expressions and use your knowledge of <q>like terms</q> to answer the questions:</p>
+        <ol>
+          <li>If you have 3 bags of <m>\sqrt{5}</m> and your friend gives you 2 more bags of <m>\sqrt{5}</m>, how many total bags do you have?</li>
+          <li>Use a calculator to find the value of <m>\sqrt{9} + \sqrt{16}</m>. Is the answer equal to <m>\sqrt{25}</m>?</li>
+          <li>Can you simplify <m>5\sqrt{2} + 3\sqrt{7}</m> into a single term? Explain your reasoning.</li>
+        </ol>
+      </statement>
+    </activity>
     <!-- [LP] Add guidance on structured lesson plan-->
 
     <!-- <axiom component="lesson-plan">
@@ -117,26 +140,40 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
+    <example>
+      <statement>Simplify: <m>8\sqrt{3} + 5\sqrt{3} - 2\sqrt{3}</m></statement>
+      <solution>
+        <p>All terms are <q>like surds.</q> We perform the operations on the coefficients: <m>(8 + 5 - 2)\sqrt{3} = 11\sqrt{3}</m>.</p>
+      </solution>
     </example>
 
     <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
+      <statement>Simplify: <m>4\sqrt{2} + 7\sqrt{5} + 3\sqrt{2} - 2\sqrt{5}</m></statement>
+      <solution>
+        <p>Group like surds: <m>(4\sqrt{2} + 3\sqrt{2}) + (7\sqrt{5} - 2\sqrt{5}) = 7\sqrt{2} + 5\sqrt{5}</m>.</p>
+      </solution>
     </example>
 
     <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example> -->
+      <statement>Simplify: <m>\sqrt{18} + \sqrt{50}</m></statement>
+      <solution>
+        <p>First, simplify each surd: <m>\sqrt{18} = 3\sqrt{2}</m> and <m>\sqrt{50} = 5\sqrt{2}</m>. Now add: <m>3\sqrt{2} + 5\sqrt{2} = 8\sqrt{2}</m>.</p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>Simplify: <m>2\sqrt{27} - \sqrt{12}</m></statement>
+      <solution>
+        <p>Simplify: <m>2(3\sqrt{3}) = 6\sqrt{3}</m> and <m>\sqrt{12} = 2\sqrt{3}</m>. Result: <m>6\sqrt{3} - 2\sqrt{3} = 4\sqrt{3}</m>.</p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>Find the perimeter of a rectangle with length <m>\sqrt{20}</m> cm and width <m>\sqrt{5}</m> cm.</statement>
+      <solution>
+        <p>Perimeter <m>= 2(2\sqrt{5} + \sqrt{5}) = 2(3\sqrt{5}) = 6\sqrt{5}</m> cm.</p>
+      </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -147,8 +184,30 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
-
+<exercises>
+      <exercise>
+        <statement><p>Simplify <m>12\sqrt{7} - 9\sqrt{7}</m>.</p></statement>
+        <solution><p><m>3\sqrt{7}</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>Simplify <m>\sqrt{8} + \sqrt{32}</m>.</p></statement>
+        <solution><p><m>2\sqrt{2} + 4\sqrt{2} = 6\sqrt{2}</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>Simplify <m>5\sqrt{3} + 2\sqrt{12} - \sqrt{27}</m>.</p></statement>
+        <solution><p><m>5\sqrt{3} + 4\sqrt{3} - 3\sqrt{3} = 6\sqrt{3}</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>A triangle has sides of <m>\sqrt{24}</m> units, <m>\sqrt{54}</m> units, and <m>\sqrt{6}</m> units. Calculate its perimeter.</p></statement>
+        <solution><p><m>2\sqrt{6} + 3\sqrt{6} + \sqrt{6} = 6\sqrt{6}</m> units.</p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>Show that <m>\sqrt{45} - \sqrt{20}</m> is equal to <m>\sqrt{5}</m>.</p></statement>
+        <solution><p><m>3\sqrt{5} - 2\sqrt{5} = \sqrt{5}</m>.</p></solution>
+      </exercise>
+    </exercises>
     <!-- <exercises>
+     
         <exercise>
             <statement>   
 

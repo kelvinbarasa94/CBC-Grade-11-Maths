@@ -67,12 +67,84 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
+    <activity>
+        <p>
+            <term>Work in Groups to:</term>
+        </p>
+        <p>
+            Use a <m>15</m> cm ruler to measure the length of the locker repeated times and record the observation in the table below.
+        </p>
+        <tabular left="medium" right="medium" top="medium" bottom="medium">
+            <row header="yes">
+                <cell>Attempt</cell>
+                <cell>Measurement (cm)</cell>
+            </row>
+            <row>
+                <cell><m>1</m></cell>
+                <cell>?</cell>
+            </row>
+            <row>
+                <cell><m>2</m></cell>
+                <cell>?</cell>
+            </row>
+            <row>
+                <cell><m>3</m></cell>
+                <cell>?</cell>
+            </row>
+        </tabular>
+        <p>
+            Do you get the same results, Explain?
+        </p>
+        <p>
+            Find the difference between the measurement attempts?
+        </p>
+        <p>
+            Mr Zachariah Mbasu used a <m>90</m> cm ruler to measure the length of the locker and found out that the length is exactly the same as your second attempt.
+        </p>
+        <p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        What is the exact length of the locker?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What is the difference between your second attempt and the exact length of the locker, why?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What is the difference between your first attempt and the exact length of the locker?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                         What is the difference between your third attempt and the exact length of the locker?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       What is the quotient of the difference between your first attempt and the exact length of the locker and the exact length of the locker? 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                         What is the quotient of the difference between your third attempt and the exact length of the locker and the exact length of the locker?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Find the percentages of these quotients in (e) and (f). Which one is greater and why?
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </activity>
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+
+     
+
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +178,36 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <term>An absolute error:</term> is the difference between the measured value and the actual value.
+        </p>
+        <p>
+            <md>
+                <mrow> \text{Absolute error} = \amp \; \text{measured value} - \text{actual value} </mrow>
+            </md>
+            
+        </p>
+        <p>
+            <term>Relative error:</term> is the quotient of the absolute error and the actual value.
+        </p>
+        <p>
+            <md>
+                <mrow>\text{Relative error} = \amp \; \text{absolute error} \div \text{actual value} </mrow>
+            </md>
+            
+        </p>
+        <p>
+            <term>Percentage error:</term> is the quotient of the absolute error and the actual value multiplied by <m>100 \%</m>.
+        </p>
+        <p>
+            <md>
+                <mrow>\text{Percentage error} = \amp \; \frac{\text{absolute error}}{\text{actual value}} \; \times 100 \% </mrow>
+                <mrow> = \amp \; \text{Relative erroe} \times 100 \% </mrow>
+            </md>
+            
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -160,9 +258,9 @@
                         <p>
                             <md>
                                 <mrow> 
-                                \text{Percentage error} \; = \amp \; \frac{\text{absolute error}}{\text{actual measurement}} \; \times 100 \% </mrow>
-                                <mrow> = \amp \; \frac{5 \; \text{ml}}{2,000 \;\text{ml}}\; \times 100 \% </mrow>
-                                <mrow> = \amp \; 0.25 \% </mrow>
+                                \text{Percentage error} \; \amp = \; \frac{\text{absolute error}}{\text{actual measurement}} \; \times 100 \% </mrow>
+                                <mrow> \amp = \; \frac{5 \; \text{ml}}{2,000 \;\text{ml}}\; \times 100 \% </mrow>
+                                <mrow> \amp = \; 0.25 \% </mrow>
                             </md>
                         </p>
                     </li>
@@ -199,10 +297,10 @@
                         </p>
                         <p>
                             <md>
-                                <mrow> \text{Absolute error} \; = \amp \; \frac{1}{2} \times 0.01 </mrow>
-                                <mrow> = \amp \; 0.005 </mrow>
-                                <mrow> \text{Percentage error} \; = \amp \; \frac{0.005}{0.20} \times 100 \% </mrow>
-                                <mrow> = \amp \; 2.5 \% </mrow>
+                                <mrow> \text{Absolute error} \; \amp = \; \frac{1}{2} \times 0.01 </mrow>
+                                <mrow> \amp = \; 0.005 </mrow>
+                                <mrow> \text{Percentage error} \; \amp = \; \frac{0.005}{0.20} \times 100 \% </mrow>
+                                <mrow> \amp = \; 2.5 \% </mrow>
                             </md>
                         </p>
                     </li>
@@ -212,10 +310,10 @@
                         </p>
                         <p>
                             <md>
-                                <mrow> \text{Absolute error} \; = \amp \; \frac{1}{2} \times 0.1 </mrow>
-                                <mrow> = \amp \; 0.05 \;\text{cm}</mrow> 
-                                <mrow> \text{Percentage error} \; = \amp \; \frac{0.05}{0.2} \times 100 \% </mrow>
-                                <mrow> = \amp \; 25 \% </mrow>
+                                <mrow> \text{Absolute error} \; \amp = \; \frac{1}{2} \times 0.1 </mrow>
+                                <mrow> \amp = \; 0.05 \;\text{cm}</mrow> 
+                                <mrow> \text{Percentage error} \; \amp = \; \frac{0.05}{0.2} \times 100 \% </mrow>
+                                <mrow> \amp = \; 25 \% </mrow>
                             </md>
                             
                         </p>

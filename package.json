@@ -1,0 +1,22 @@
+{
+  "name": "cbc-grade-11-maths",
+  "version": "1.0.0",
+  "description": "This repository contains the source files for the CBC Grade 11 Mathematics book, developed using [PreTeXt](https://pretextbook.org) and will incoorporate [STACK](https://stack-assessment.org/) exercises for student's personalised learning. PreTeXt is a powerful tool for creating high-quality educational materials, including textbooks, in multiple formats.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNODEMS/CBC-Grade-11-Maths.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/INNODEMS/CBC-Grade-11-Maths/issues"
+  },
+  "homepage": "https://github.com/INNODEMS/CBC-Grade-11-Maths#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0"
+  }
+}

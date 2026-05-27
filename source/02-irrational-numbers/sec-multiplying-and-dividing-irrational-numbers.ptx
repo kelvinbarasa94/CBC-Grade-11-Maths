@@ -68,11 +68,36 @@
         </axiom> -->
 
     <!-- Add Activity -->
+     <axiom component="lesson-plan">
+      <title>Problem-Solving and Discovery</title>
+      <dl>
+        <li>
+          <title>Suggested Time</title>
+          <p>15 minutes</p>
+        </li>
+        <li>
+          <title>Objective</title>
+          <p>To discover that the product of two square roots is the square root of their product.</p>
+        </li>
+        <li>
+          <title>Teacher's Role</title>
+          <p>Provide pairs of square roots (e.g., <m>\sqrt{4}</m> and <m>\sqrt{9}</m>). Ask learners to find the product of the roots first, then find the root of the product (<m>\sqrt{4 \times 9}</m>). Challenge them to see if this works for non-perfect squares like <m>\sqrt{2}</m> and <m>\sqrt{3}</m> using calculators.</p>
+        </li>
+      </dl>
+    </axiom>
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+    <activity>
+      <statement>
+        <p>In your groups, investigate the relationship between multiplication and radicals:</p>
+        <ol>
+          <li>Calculate <m>\sqrt{4} \times \sqrt{9}</m>. Now calculate <m>\sqrt{4 \times 9}</m>. Are they the same?</li>
+          <li>Using a calculator, find the value of <m>\sqrt{2} \times \sqrt{8}</m>. What is the square root of 16? What does this tell you about <m>\sqrt{2} \times \sqrt{8}</m>?</li>
+          <li>Predict the result of <m>\frac{\sqrt{50}}{\sqrt{2}}</m> without a calculator, then check your answer.</li>
+        </ol>
+      </statement>
+    </activity>
+
+
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -108,35 +133,83 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
-    <!-- <insight>
-    </insight> -->
+    <axiom component="lesson-plan">
+      <title>Structured Instruction</title>
+      <p>
+        <dl>
+          <li>
+            <title>Suggested Time</title>
+            <p>10 minutes</p>
+          </li>
+          <li>
+            <title>Objective</title>
+            <p>To formalize the product and quotient rules for surds.</p>
+          </li>
+        </dl>
+      </p>
+      <paragraphs>
+        <title>Key Takeaways &amp; Teacher Connection</title>
+        <ol>
+          <li>
+            <p>
+              <alert>Connecting to Learner Work:</alert> Emphasize that while we cannot add different radicands, we <em>can</em> multiply and divide them. Explain that <m>\sqrt{a} \times \sqrt{b} = \sqrt{ab}</m>.
+            </p>
+          </li>
+        </ol>
+      </paragraphs>
+    </axiom>
 
+    <insight>
+      <p>
+        Unlike addition, multiplication and division of irrational numbers allow us to combine different radicands under a single radical sign.
+      </p>
+      <p>
+        The Multiplication Rule: <m>\sqrt{a} \times \sqrt{b} = \sqrt{a \times b}</m>
+      </p>
+      <p>
+        The Division Rule: <m>\frac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}</m> (where <m>b \neq 0</m>)
+      </p>
+    </insight>
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
+    <example>
+      <statement>Simplify: <m>\sqrt{3} \times \sqrt{12}</m></statement>
+      <solution>
+        <p>Apply the multiplication rule: <m>\sqrt{3 \times 12} = \sqrt{36}</m>. Since 36 is a perfect square, the result is <m>6</m>.</p>
+      </solution>
     </example>
 
     <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
+      <statement>Simplify: <m>2\sqrt{5} \times 3\sqrt{2}</m></statement>
+      <solution>
+        <p>Multiply the coefficients and the radicands separately: <m>(2 \times 3)\sqrt{5 \times 2} = 6\sqrt{10}</m>.</p>
+      </solution>
     </example>
 
     <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example> -->
+      <statement>Simplify: <m>\frac{\sqrt{75}}{\sqrt{3}}</m></statement>
+      <solution>
+        <p>Apply the division rule: <m>\sqrt{\frac{75}{3}} = \sqrt{25}</m>. The result is <m>5</m>.</p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>Simplify: <m>\sqrt{2}(3 + \sqrt{2})</m></statement>
+      <solution>
+        <p>Distribute <m>\sqrt{2}</m> over the terms: <m>3\sqrt{2} + (\sqrt{2} \times \sqrt{2}) = 3\sqrt{2} + \sqrt{4} = 3\sqrt{2} + 2</m>.</p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>A rectangle has a length of <m>4\sqrt{6}</m> and a width of <m>\sqrt{2}</m>. Calculate its area.</statement>
+      <solution>
+        <p>Area = <m>4\sqrt{6} \times \sqrt{2} = 4\sqrt{12}</m>. Simplify <m>\sqrt{12}</m> to <m>2\sqrt{3}</m>. Result: <m>4 \times 2\sqrt{3} = 8\sqrt{3}</m> square units.</p>
+      </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,16 +221,57 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
-        <exercise>
-            <statement>   
+   <exercises>
+      <exercise>
+        <statement><p>Simplify <m>\sqrt{5} \times \sqrt{20}</m>.</p></statement>
+        <solution><p><m>\sqrt{100} = 10</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>Simplify <m>\frac{\sqrt{48}}{\sqrt{6}}</m>.</p></statement>
+        <solution><p><m>\sqrt{8} = 2\sqrt{2}</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>Expand and simplify: <m>\sqrt{3}(\sqrt{3} - \sqrt{2})</m>.</p></statement>
+        <solution><p><m>3 - \sqrt{6}</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>What is the value of <m>(2\sqrt{7})^2</m>?</p></statement>
+        <solution><p><m>2^2 \times (\sqrt{7})^2 = 4 \times 7 = 28</m></p></solution>
+      </exercise>
+      <exercise>
+        <statement><p>Divide <m>10\sqrt{24}</m> by <m>2\sqrt{3}</m>.</p></statement>
+        <solution><p><m>5\sqrt{8} = 5(2\sqrt{2}) = 10\sqrt{2}</m></p></solution>
+      </exercise>
+      <exercise>
+      <statement>
+        <p>
+          A rectangular carpet has an area of <m>\sqrt{108}</m> square meters. If the width of the carpet is <m>\sqrt{3}</m> meters, find the length of the carpet in its simplest form.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Length = <m>\frac{\text{Area}}{\text{Width}} = \frac{\sqrt{108}}{\sqrt{3}}</m>. 
+          Using the division rule: <m>\sqrt{\frac{108}{3}} = \sqrt{36}</m>. 
+          The length is <m>6</m> meters.
+        </p>
+      </solution>
+    </exercise>
 
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
+    <exercise>
+      <statement>
+        <p>
+          In a physics experiment, a learner finds that the velocity of a particle is given by <m>v = \sqrt{5} \times \sqrt{15}</m> meters per second. Simplify this velocity and express it as a single surd in its simplest form.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>v = \sqrt{5 \times 15} = \sqrt{75}</m>. 
+          Simplifying the surd: <m>\sqrt{25 \times 3} = 5\sqrt{3}</m>. 
+          The velocity is <m>5\sqrt{3}</m> m/s.
+        </p>
+      </solution>
+    </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 

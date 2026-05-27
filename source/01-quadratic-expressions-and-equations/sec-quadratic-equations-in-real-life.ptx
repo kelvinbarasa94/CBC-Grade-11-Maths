@@ -68,7 +68,7 @@
         </dl>
     </axiom>
 
-    <activity>
+    <!-- <activity>
         <title>Activity 1: Tracking the Path of a Ball</title>
         <introduction>
             <p>
@@ -135,10 +135,9 @@
                 </p>
             </statement>
         </task>
-    </activity>
+    </activity> -->
 
     <activity>
-        <title>Activity 2: The String and Area Challenge</title>
         <introduction>
             <p>
                 <alert>Work in Groups</alert>
@@ -161,6 +160,40 @@
                         <p>
                             Form a rectangle with your string. Since the total length is <m>30</m> cm, the sum of one length and one width must be <m>15</m> cm.
                         </p>
+                        <image width="50%">
+                            <latex-image label="Rectangle with perimeter 30 cm">
+                                \begin{tikzpicture}[x=1cm, y=1cm]
+
+                                    % Rectangle
+                                    \draw[thick, blue] (0,0) rectangle (9,6);
+
+                                    % Length label (bottom)
+                                    \draw[latex-latex, thick] (0,-0.7) -- (9,-0.7);
+                                    \node[anchor=north] at (4.5,-0.7) {$l$ cm};
+
+                                    % Width label (right)
+                                    \draw[latex-latex, thick] (9.7,0) -- (9.7,6);
+                                    \node[anchor=west] at (9.7,3) {$w$ cm};
+
+                                    % Short tick marks on dimension lines
+                                    \draw[thick] (0,-0.5) -- (0,-0.9);
+                                    \draw[thick] (9,-0.5) -- (9,-0.9);
+                                    \draw[thick] (9.5,0) -- (9.9,0);
+                                    \draw[thick] (9.5,6) -- (9.9,6);
+
+                                    % Constraint label inside rectangle
+                                    \node[align=center, font=\large] at (4.5,3.5)
+                                        {$l + w = 15$ cm};
+
+                                    % Corner marks
+                                    \draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+                                    \draw (8.7,0) -- (8.7,0.3) -- (9,0.3);
+                                    \draw (0.3,6) -- (0.3,5.7) -- (0,5.7);
+                                    \draw (8.7,6) -- (8.7,5.7) -- (9,5.7);
+
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p>
@@ -171,20 +204,17 @@
                         <p>
                             Try different lengths and calculate the Area (<m>A = \text{length} \times \text{width}</m>):
                         </p>
-                        <table>
-                            <title>Area Investigation Table</title>
-                            <tabular border="minor">
+                            <tabular border="minor" left="medium" right="medium" top="medium" bottom="medium">
                                 <row header="yes">
                                     <cell>Length (<m>x</m>)</cell>
                                     <cell>Width (<m>15 - x</m>)</cell>
                                     <cell>Area (<m>x \times (15-x)</m>)</cell>
                                 </row>
                                 <row><cell>2 cm</cell><cell>13 cm</cell><cell>26 cm<m>^2</m></cell></row>
-                                <row><cell>5 cm</cell><cell>10 cm</cell><cell>50 cm<m>^2</m></cell></row>
-                                <row><cell>7.5 cm</cell><cell>7.5 cm</cell><cell>?</cell></row>
-                                <row><cell>10 cm</cell><cell>5 cm</cell><cell>50 cm<m>^2</m></cell></row>
+                                <row><cell>5 cm</cell><cell>10 cm</cell><cell>? cm<m>^2</m></cell></row>
+                                <row><cell>7.5 cm</cell><cell>7.5 cm</cell><cell>? cm<m>^2</m></cell></row>
+                                <row><cell>10 cm</cell><cell>5 cm</cell><cell>? cm<m>^2</m></cell></row>
                             </tabular>
-                        </table>
                     </li>
                 </ol>
             </p>
@@ -192,7 +222,7 @@
         <task>
             <statement>
                 <p>
-                    Write the Area as a quadratic equation: <m>A = x(15 - x) = 15x - x^2</m>.
+                    Write the Area as a quadratic equation: <me>A = x(15 - x) = 15x - x^2</me>.
                 </p>
             </statement>
         </task>
@@ -207,6 +237,13 @@
             <statement>
                 <p>
                     Use your equation to find the dimensions if the Area must be <m>54</m> cm<m>^2</m>. Solve <m>15x - x^2 = 54</m>.
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Share your work with your fellow learners.
                 </p>
             </statement>
         </task>
@@ -268,8 +305,8 @@
             <ol>
                 <li><p>Define the variable clearly.</p></li>
                 <li><p>Set up the equation based on the given relationships.</p></li>
-                <li><p>Solve using the most efficient method (Factoring, Quadratic Formula, etc.).</p></li>
-                <li><p>Verify solutions against real-world constraints.</p></li>
+                <li><p>Solve using the most efficient method (Factoring, Quadratic Formula, completing the square, perfect square trinomials, etc.).</p></li>
+                <li><p>Verify solutions by substituting the values back into the original equation.</p></li>
             </ol>
         </p>
     </insight>
@@ -277,7 +314,6 @@
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <example>
-        <title>Projectile Motion</title>
         <statement>
             <p>
                 A ball is thrown from a height of <m>3</m> meters with an initial velocity of <m>14</m> m/s. Its height <m>h</m> at time <m>t</m> is given by <m>h = 3 + 14t - 5t^2</m>. When does the ball hit the ground?
@@ -297,13 +333,13 @@
                 Using the quadratic formula: <m>a=5, b=-14, c=-3</m>.
             </p>
             <p>
-                <m>t = \frac{-(-14) \pm \sqrt{(-14)^2 - 4(5)(-3)}}{2(5)}</m>
-            </p>
-            <p>
-                <m>t = \frac{14 \pm \sqrt{196 + 60}}{10}</m>
-            </p>
-            <p>
-                <m>t = \frac{14 \pm \sqrt{256}}{10} = \frac{14 \pm 16}{10}</m>
+                <md>
+                    <mrow>t =\amp \frac{-(-14) \pm \sqrt{(-14)^2 - 4(5)(-3)}}{2(5)} </mrow>
+                    <mrow> =\amp \frac{14 \pm \sqrt{196 + 60}}{10} </mrow>
+                    <mrow> =\amp \frac{14 \pm \sqrt{256}}{10}</mrow>
+                    <mrow> =\amp \frac{14 \pm 16}{10}</mrow>
+                </md>
+                
             </p>
             <p>
                 Solutions: <m>t = \frac{30}{10} = 3</m> or <m>t = \frac{-2}{10} = -0.2</m>.
@@ -315,7 +351,6 @@
     </example>
 
     <example>
-        <title>Area of a Frame</title>
         <statement>
             <p>
                 A rectangular steel frame has an external length of <m>10</m> cm and width of <m>8</m> cm. The metal has a uniform width of <m>x</m> cm. If the area of the metal is <m>28</m> cm<m>^2</m>, find the width <m>x</m>.
@@ -341,16 +376,16 @@
                 Given Area = <m>28</m>, so: <m>36x - 4x^2 = 28</m>.
             </p>
             <p>
-                Divide by 4: <m>9x - x^2 = 7 \implies x^2 - 9x + 7 = 0</m>.
+                Divide by 4: <me>9x - x^2 = 7 \implies x^2 - 9x + 7 = 0</me>.
             </p>
             <p>
-                Using quadratic formula: <m>x = \frac{9 \pm \sqrt{81 - 28}}{2} = \frac{9 \pm \sqrt{53}}{2}</m>.
+                Using quadratic formula: <me>x = \frac{9 \pm \sqrt{81 - 28}}{2} = \frac{9 \pm \sqrt{53}}{2}</me>.
             </p>
             <p>
-                <m>x \approx \frac{9 \pm 7.28}{2}</m>.
+                <m>x = \frac{9 \pm 7.28}{2}</m>.
             </p>
             <p>
-                <m>x \approx 8.14</m> or <m>x \approx 0.86</m>.
+                <m>x = 8.14</m> or <m>x = 0.86</m>.
             </p>
             <p>
                 Since <m>x</m> cannot be greater than half the width (<m>4</m>), the width of the metal is approximately <m>0.86</m> cm.
@@ -359,7 +394,6 @@
     </example>
 
     <example>
-        <title>Speed and Time</title>
         <statement>
             <p>
                 A boat travels <m>15</m> km upstream and <m>15</m> km back downstream. The total time taken is <m>4</m> hours. If the speed of the current is <m>2</m> km/h, find the speed of the boat in still water.
@@ -373,22 +407,21 @@
                 Upstream speed = <m>v - 2</m>, Downstream speed = <m>v + 2</m>.
             </p>
             <p>
-                Time = <m>\frac{\text{Distance}}{\text{Speed}}</m>.
+                Time = <me>\frac{\text{Distance}}{\text{Speed}}</me>.
             </p>
             <p>
-                Total Time: <m>\frac{15}{v-2} + \frac{15}{v+2} = 4</m>.
+                Total Time: <me>\frac{15}{v-2} + \frac{15}{v+2} = 4</me>.
             </p>
             <p>
                 Multiply by <m>(v-2)(v+2)</m>:
             </p>
             <p>
-                <m>15(v+2) + 15(v-2) = 4(v^2 - 4)</m>
-            </p>
-            <p>
-                <m>15v + 30 + 15v - 30 = 4v^2 - 16</m>
-            </p>
-            <p>
-                <m>30v = 4v^2 - 16 \implies 4v^2 - 30v - 16 = 0</m>.
+                <md>
+                    <mrow> 15(v+2) + 15(v-2) =\amp 4(v^2 - 4) </mrow>
+                    <mrow> 30v =\amp 4v^2 - 16 </mrow>
+                    <mrow>4v^2-30v-16 =\amp 0</mrow>
+                </md>
+                
             </p>
             <p>
                 Divide by 2: <m>2v^2 - 15v - 8 = 0</m>.
@@ -440,12 +473,6 @@
             </statement>
             <answer>
                 <p>
-                    <m>-x^2 + 40x - 300 = 0 \implies x^2 - 40x + 300 = 0</m>.
-                </p>
-                <p>
-                    <m>(x-10)(x-30) = 0</m>.
-                </p>
-                <p>
                     The company breaks even at <m>10</m> units and <m>30</m> units.
                 </p>
             </answer>
@@ -457,7 +484,7 @@
                 </p>
             </statement>
             <answer>
-                <p>
+                <!-- <p>
                     Let the integers be <m>n</m> and <m>n+1</m>.
                 </p>
                 <p>
@@ -465,10 +492,10 @@
                 </p>
                 <p>
                     <m>n^2 + n^2 + 2n + 1 = 61 \implies 2n^2 + 2n - 60 = 0</m>.
-                </p>
-                <p>
+                </p> -->
+                <!-- <p>
                     <m>n^2 + n - 30 = 0 \implies (n+6)(n-5) = 0</m>.
-                </p>
+                </p> -->
                 <p>
                     Since <m>n</m> is positive, <m>n=5</m>. The integers are <m>5</m> and <m>6</m>.
                 </p>
@@ -481,7 +508,7 @@
                 </p>
             </statement>
             <answer>
-                <p>
+                <!-- <p>
                     Let length be <m>L</m> and width be <m>W</m>. <m>2(L+W) = 20 \implies L+W = 10 \implies W = 10-L</m>.
                 </p>
                 <p>
@@ -489,7 +516,7 @@
                 </p>
                 <p>
                     Factoring: <m>(L-6)(L-4) = 0</m>.
-                </p>
+                </p> -->
                 <p>
                     Dimensions are <m>6</m> m by <m>4</m> m.
                 </p>
@@ -502,12 +529,12 @@
                 </p>
             </statement>
             <answer>
-                <p>
+                <!-- <p>
                     Set <m>h = 15</m>: <m>15 = 20t - 5t^2 \implies 5t^2 - 20t + 15 = 0</m>.
                 </p>
                 <p>
                     Divide by 5: <m>t^2 - 4t + 3 = 0</m>.
-                </p>
+                </p> -->
                 <p>
                     Factoring: <m>(t-1)(t-3) = 0</m>.
                 </p>

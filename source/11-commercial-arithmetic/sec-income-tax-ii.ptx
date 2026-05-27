@@ -66,13 +66,107 @@
                 </li>
             </dl>
         </axiom> -->
+        <activity>
+            <statement>
 
-    <!-- Add Activity -->
+                <p>
+                    <term>Work in Groups to:</term>
+                </p>
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
+                <p>
+                    In real taxation systems, income is not taxed at a single rate. Instead, different portions of income are taxed at different rates. This system is called a <term>progressive tax system</term>.
+                </p>
+
+                <p>
+                    In this activity, learners investigate how tax increases as income increases, and how personal relief affects final PAYE.
+                </p>
+
+                <p>
+                    Identify how workers with different salaries contribute differently to taxation and discuss fairness in the tax system.
+                </p>
+
+                <tabular top="medium" bottom="medium" right="medium" left="medium">
+                    <row header="yes">
+                        <cell>Income Level</cell>
+                        <cell>Possible Tax Effect</cell>
+                    </row>
+                    <row>
+                        <cell>Low income worker</cell>
+                        <cell>?</cell>
+                    </row>
+                    <row>
+                        <cell>Middle income worker</cell>
+                        <cell>?</cell>
+                    </row>
+                    <row>
+                        <cell>High income worker</cell>
+                        <cell>?</cell>
+                    </row>
+                </tabular>
+
+                <p>
+                    <alert>Case Study:</alert>
+                </p>
+
+                <p>
+                    A worker earns a taxable income of Ksh <m>10,000</m>. The income falls within the tax band Ksh <m>1 – 12,298</m> which is taxed at <m>10\%</m>.
+                </p>
+
+                <p>
+                    In groups, learners are required to:
+                </p>
+
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>Calculate the gross tax payable.</p>
+                        </li>
+                        <li>
+                            <p>Interpret what the tax percentage means in real life.</p>
+                        </li>
+                    </ol>
+                </p>
+
+                <p>
+                    <alert>Case Study 2:</alert>
+                </p>
+
+                <p>
+                    After computing tax, a worker finds that his gross tax is Ksh <m>4,500</m>. He is entitled to a personal relief of Ksh <m>2,400</m>.
+                </p>
+
+                <p>
+                    Determine his net tax (PAYE).
+                </p>
+
+                <p>
+                    <alert>Higher Order Thinking Task:</alert>
+                </p>
+
+                <p>
+                    Discuss:
+                </p>
+
+                <p>
+                    <ol marker="(a)">
+                        <li>Why does the government apply relief after tax is calculated and not before?</li>
+                        <li>What happens to take-home pay when relief increases?</li>
+                        <li>Why do higher income earners contribute more tax?</li>
+                    </ol>
+                </p>
+
+                <p>
+                    <alert>Extension Challenge:</alert>
+                </p>
+
+                <p>
+                    Suppose a worker earns a higher salary that falls into multiple tax bands. Discuss how tax is applied on different portions of income rather than the whole income at once.
+                </p>
+
+            </statement>
+        </activity>
+
+    
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -106,10 +200,36 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <insight>
+        <p>
+            Income tax is calculated using a progressive system where different portions of income are taxed at different rates depending on income level.
+        </p>
 
-    <!-- <insight>
-    </insight> -->
+        <p>
+            The taxation process involves:
+        </p>
+
+        <p>
+            <md>
+                <mrow> \text{Gross Tax} = \amp \; \text{Taxable Income} \times \text{Applicable Rate(s)} </mrow>
+                <mrow> \text{Net Tax (PAYE)} = \amp \; \text{Gross Tax} - \text{Personal Relief} </mrow>
+            </md>
+        </p>
+
+        <p>
+            In a progressive system, only portions of income fall into higher tax bands, meaning tax increases with income but not uniformly.
+        </p>
+
+        <p>
+            The key idea is that:
+        </p>
+
+        <p>
+            <em>
+                Tax systems are designed to distribute financial responsibility fairly, ensuring higher earners contribute more while relief protects low-income earners.
+            </em>
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -170,9 +290,9 @@
             <p>
                 <md>
                     <mrow> \text{Taxable income per month}\; =\amp \; \text{sh.}\;(15,000 + 2,400 + 12,000) </mrow>
-                    <mrow> = \amp\; \text{sh.}\; 29,400</mrow>
-                    <mrow> \text{Converting to K£ p.a.} \; = \amp \;\text{K£} \; 29,400 \times \frac{12}{20}</mrow>
-                    <mrow> = \amp \;\text{K£}\; 17,640 </mrow>
+                    <mrow> \amp =\; \text{sh.}\; 29,400</mrow>
+                    <mrow> \text{Converting to K£ p.a.} \; \amp = \;\text{K£} \; 29,400 \times \frac{12}{20}</mrow>
+                    <mrow> \amp = \;\text{K£}\; 17,640 </mrow>
                 </md>
             </p>
             <p>
@@ -180,13 +300,13 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{First slab}\; = \amp \;\text{sh.} \; 5,808 \times 2 = \text{sh.}\; 11,616 </mrow>
-                    <mrow>\text{Second slab}\; = \amp \;\text{sh.} \; 5,472 \times 3 = \text{sh.}\; 16,416 </mrow>
-                    <mrow>\text{Third slab}\; = \amp \;\text{sh.} \; 5,472 \times 4 = \text{sh.}\; 21,888 </mrow>
-                    <mrow>\text{Foorth slab}\; = \amp \;\text{sh.} \; 888 \times 5 = \text{sh.}\; 4,440 </mrow>
-                    <mrow> \text{Total tax due} \; = \amp\; \text{sh.} \;54,360</mrow>
-                    <mrow> \text{Less personal relief} \; = \amp \;\text{sh.}\; 12,672 </mrow>
-                    <mrow> \text{Therefore, tax payable p.a.}\; = \amp \;\text{sh.}\; 41,688 </mrow>
+                    <mrow> \text{First slab}\; \amp = \;\text{sh.} \; 5,808 \times 2 = \text{sh.}\; 11,616 </mrow>
+                    <mrow>\text{Second slab}\; \amp = \;\text{sh.} \; 5,472 \times 3 = \text{sh.}\; 16,416 </mrow>
+                    <mrow>\text{Third slab}\; \amp = \;\text{sh.} \; 5,472 \times 4 = \text{sh.}\; 21,888 </mrow>
+                    <mrow>\text{Foorth slab}\; \amp = \;\text{sh.} \; 888 \times 5 = \text{sh.}\; 4,440 </mrow>
+                    <mrow> \text{Total tax due} \; \amp =\; \text{sh.} \;54,360</mrow>
+                    <mrow> \text{Less personal relief} \; \amp = \;\text{sh.}\; 12,672 </mrow>
+                    <mrow> \text{Therefore, tax payable p.a.}\; \amp = \;\text{sh.}\; 41,688 </mrow>
                 </md>
             </p>
         </solution>
@@ -268,10 +388,10 @@
                         </p>
                         <p>
                             <md>
-                                <mrow> \text{Taxable income}\; = \amp \; \text{Ksh.}\; (16,000 + 12,000 + 3,060 + 4,635) </mrow>
-                                <mrow> = \amp \; \text{Ksh.} \; 35,695 </mrow>
+                                <mrow> \text{Taxable income}\; \amp = \; \text{Ksh.}\; (16,000 + 12,000 + 3,060 + 4,635) </mrow>
+                                <mrow> \amp = \; \text{Ksh.} \; 35,695 </mrow>
                                 <mrow> \text{Converting to K£} =\amp \; \text{K£}\; \frac{35,695}{20} </mrow>
-                                <mrow> = \amp \; \text{K£}\; 1,784.75 </mrow>
+                                <mrow> \amp = \; \text{K£}\; 1,784.75 </mrow>
                             </md>
                             
                         </p>
@@ -284,18 +404,18 @@
                                 <mrow>\text{Second slab} : \amp \;\text{K£}\; 456 \times \frac{15}{100} = \; \text{K£} \; 68.40 </mrow>
                                 <mrow>\text{Third slab} : \amp \;\text{K£}\; 456 \times \frac{20}{100} = \; \text{K£} \; 91.20 </mrow>
                                 <mrow>\text{Forth slab} : \amp \;\text{K£}\; 388 \times \frac{25}{100} = \; \text{K£} \; 97.00 </mrow>
-                                <mrow> \text{Gross tax} \; = \amp \; \text{K£}\; 305.00 </mrow>
-                                <mrow> = \amp\; \text{Ksh.}\; 6,100 </mrow>
+                                <mrow> \text{Gross tax} \; \amp = \; \text{K£}\; 305.00 </mrow>
+                                <mrow> \amp =\; \text{Ksh.}\; 6,100 </mrow>
                             </md>
                         </p>
                         <p>
                             <md>
                                 
-                                <mrow> \text{Insurance relief} \; = \amp \; \text{Ksh.} \; \frac{800}{20} \times 3 = \text{Ksh.}\; 120 </mrow>
-                                <mrow>\text{Personal relief} \; = \amp \; \text{Ksh.}\; 1,056 </mrow>
-                                <mrow> \text{Total relief} \; = \amp \; \text{Ksh.}\; 1,176 </mrow>
-                                <mrow>\text{Tax payable per month} \; = \amp \; \text{Gross tax} \;- \text{Total relief} </mrow>
-                                <mrow> = \amp \; \text{Ksh.} \; (6,100 - 1,176) = \;\text{Ksh.}\; 4,924 </mrow>
+                                <mrow> \text{Insurance relief} \; \amp = \; \text{Ksh.} \; \frac{800}{20} \times 3 = \text{Ksh.}\; 120 </mrow>
+                                <mrow>\text{Personal relief} \; \amp = \; \text{Ksh.}\; 1,056 </mrow>
+                                <mrow> \text{Total relief} \; \amp = \; \text{Ksh.}\; 1,176 </mrow>
+                                <mrow>\text{Tax payable per month} \; \amp = \; \text{Gross tax} \;- \text{Total relief} </mrow>
+                                <mrow> \amp = \; \text{Ksh.} \; (6,100 - 1,176) = \;\text{Ksh.}\; 4,924 </mrow>
                             </md>
                         </p>
                         <p>
@@ -308,12 +428,12 @@
                         </p>
                         <p>
                             <md>
-                                <mrow> \text{Net pay} \; = \amp \; \text{Taxable income}\; - \; \text{Total deductions} </mrow>
-                                <mrow> \text{Total deductions}\; = \amp \; \text{PAYE} \; + \; \text{Other deductions} </mrow>
-                                <mrow> = \amp \; \text{Ksh.} \; (4,924 + \frac{2}{100} \times 16,000 + 400 + 4,800 + 800) </mrow>
-                                <mrow> = \amp \; \text{Ksh.} \; 11,244 </mrow>
+                                <mrow> \text{Net pay} \; \amp = \; \text{Taxable income}\; - \; \text{Total deductions} </mrow>
+                                <mrow> \text{Total deductions}\; \amp = \; \text{PAYE} \; + \; \text{Other deductions} </mrow>
+                                <mrow> \amp = \; \text{Ksh.} \; (4,924 + \frac{2}{100} \times 16,000 + 400 + 4,800 + 800) </mrow>
+                                <mrow> \amp = \; \text{Ksh.} \; 11,244 </mrow>
                                 <mrow>\text{Net pay}\; =  \amp \; \text{Ksh.}\; (35,695 - 11,244) </mrow>
-                                <mrow> = \amp \; \text{Ksh.} \; 24,451 </mrow>
+                                <mrow> \amp = \; \text{Ksh.} \; 24,451 </mrow>
                             </md>
                         </p>
                     </li>
@@ -375,10 +495,10 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{Basic salary} \; = \amp \; \text{Ksh}\; 28,600 </mrow>
-                    <mrow> \text{House allowance} \; = \amp \; \text{Ksh}\; 15,000 </mrow>
-                    <mrow> \text{Medical allowance} \; = \amp \; \text{Ksh}\; 3,200 </mrow>
-                    <mrow> \text{Transport allowance} \; = \amp \; \text{Ksh}\; 540 </mrow>
+                    <mrow> \text{Basic salary} \; \amp = \; \text{Ksh}\; 28,600 </mrow>
+                    <mrow> \text{House allowance} \; \amp = \; \text{Ksh}\; 15,000 </mrow>
+                    <mrow> \text{Medical allowance} \; \amp = \; \text{Ksh}\; 3,200 </mrow>
+                    <mrow> \text{Transport allowance} \; \amp = \; \text{Ksh}\; 540 </mrow>
                 </md>
             </p>
             <p>
