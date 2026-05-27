@@ -46,7 +46,6 @@
     </definition>
   </introduction>
   <!-- include sections -->
-  <!-- <xi:include href="sec-section-name.ptx" /> -->
   <xi:include href="sec-perfect-squares.ptx" />
   <xi:include href="sec-completing-the-square-i.ptx" />
   <xi:include href="sec-completing-the-square-ii.ptx" />
