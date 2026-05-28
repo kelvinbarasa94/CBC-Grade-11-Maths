@@ -352,20 +352,27 @@
 
     <exercises>
         <exercise>
-            <statement>   
+            <statement>
                 <p>
-                    A population of rabbits doubles every <m>4</m> months. If there are initially <m>50</m> rabbits, how many rabbits will there be after <m>2</m> years? Use logarithms to solve this problem.
+                    A population of rabbits doubles every <m>4</m> months, starting with <m>50</m> rabbits. After how many months will the population reach <m>3200</m>? Use logarithms to solve.
                 </p>
-            </statement>   
+            </statement>
             <solution>
+                <p>
+                    The growth model is <m>P(t) = 50 \times 2^{t/4}</m>. Setting <m>P(t) = 3200</m>:
+                </p>
                 <md>
-                    <mrow>P(24) \amp= 50 \times 2^{24/4}</mrow>
-                    <mrow>\amp= 50 \times 2^6</mrow>
-                    <mrow>\amp= 50 \times 64</mrow>
-                    <mrow>\amp= 3200</mrow>
+                    <mrow>3200 \amp= 50 \times 2^{t/4}</mrow>
+                    <intertext>Divide both sides by 50:</intertext>
+                    <mrow>64 \amp= 2^{t/4}</mrow>
+                    <intertext>Take <m>\log_2</m> of both sides:</intertext>
+                    <mrow>\log_2(64) \amp= \frac{t}{4}</mrow>
+                    <mrow>6 \amp= \frac{t}{4}</mrow>
+                    <intertext>Multiply both sides by 4:</intertext>
+                    <mrow>t \amp= 24</mrow>
                 </md>
                 <p>
-                    Therefore, after <m>2</m> years, there will be <m>3{,}200</m> rabbits.
+                    Therefore, the population will reach <m>3200</m> after <m>24</m> months (2 years).
                 </p>
             </solution>             
         </exercise> 
@@ -382,11 +389,18 @@
                 </p>
             </statement>   
             <solution>
+                <p>
+                    Substitute <m>pH = 3</m> into the formula and solve for <m>[H^+]</m>:
+                </p>
                 <md>
+                    <mrow>3 \amp= -\log_{10}([H^+])</mrow>
+                    <intertext>Multiply both sides by <m>-1</m>:</intertext>
+                    <mrow>\log_{10}([H^+]) \amp= -3</mrow>
+                    <intertext>Rewrite in exponential form:</intertext>
                     <mrow>[H^+] \amp= 10^{-3} = 0.001</mrow>
                 </md>
                 <p>
-                    Therefore, the concentration of hydrogen ions in the solution is <m>0.001</m> moles per liter.
+                    Therefore, the concentration of hydrogen ions is <m>0.001</m> moles per liter.
                 </p>
             </solution> 
         </exercise>
@@ -397,8 +411,17 @@
                 </p>
             </statement>   
             <solution>
+                <p>
+                    Substitute <m>I = 80</m> and <m>P_0 = 10^{-12}</m> into <m>I = 10 \times \log_{10}(P/P_0)</m> and solve for <m>P</m>:
+                </p>
                 <md>
-                    <mrow>P \amp= 10^8 \times 10^{-12} = 10^{-4} = 0.0001</mrow>
+                    <mrow>80 \amp= 10 \times \log_{10}\!\left(\frac{P}{10^{-12}}\right)</mrow>
+                    <intertext>Divide both sides by 10:</intertext>
+                    <mrow>8 \amp= \log_{10}\!\left(\frac{P}{10^{-12}}\right)</mrow>
+                    <intertext>Rewrite in exponential form:</intertext>
+                    <mrow>\frac{P}{10^{-12}} \amp= 10^{8}</mrow>
+                    <intertext>Multiply both sides by <m>10^{-12}</m>:</intertext>
+                    <mrow>P \amp= 10^{8} \times 10^{-12} = 10^{-4} = 0.0001</mrow>
                 </md>
                 <p>
                     Therefore, the power of the sound is <m>0.0001</m> watts.
