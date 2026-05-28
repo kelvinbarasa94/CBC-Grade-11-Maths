@@ -80,9 +80,7 @@
            <ul>
             <li>
                 <p>
-                    <p>
-             Small cards with logarithmic equations
-          </p>
+                   Small cards with logarithmic equations
                 </p>
             </li>
                 <li>
@@ -172,8 +170,7 @@
     <insight>
         <p>
             <term>Key Takeaway:</term> Solving logarithmic equations often involves rewriting the equation in exponential form, which allows us to find the value of the variable. 
-            This process relies on understanding the relationship between logarithms and exponents, and it is a fundamental skill for working with logarithmic functions.
-        </p>
+            This process relies on understanding the relationship between logarithms and exponents.
            <p>
              When solving logarithmic equations, it's important to remember that the argument of the logarithm must be positive. This is because the logarithm of a negative number or zero is undefined in the real number system.
           </p>

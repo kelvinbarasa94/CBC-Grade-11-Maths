@@ -183,32 +183,32 @@
     <example>
         <statement>
             <p>
-                Solve the logarithmic equation: <m>log₂(x+5) = log₂(2x−1) + 1 </m>
+                Solve the logarithmic equation: <m>\log₂(x+5) = \log₂(2x−1) + 1 </m>
             </p>
         </statement>
         <solution>
             <p>
-               To solve the equation <m>log₂(x+5) = log₂(2x−1) + 1</m>, use the product rule of logarithms to combine the logarithmic expressions on the right side of the equation. The product rule states that <m>log_b(m) + log_b(n) = log_b(m*n) </m>. Applying this rule gives us:
+               To solve the equation <m>\log₂(x+5) = \log₂(2x−1) + 1</m>, use the product rule of logarithms to combine the logarithmic expressions on the right side of the equation. The product rule states that <m>\log_b(m) + \log_b(n) = \log_b(m*n) </m>. Applying this rule gives us:
             </p>
               <p>
-                <m>log₂(x+5) = log₂(2x−1) + log₂(2)</m>
+                <m>\log₂(x+5) = \log₂(2x−1) + \log₂(2)</m>
               </p>
                 <p>
                 Now combine the logarithmic expressions on the right side using the product rule again to get:
                 </p>
                     <p>
                         <md>
-                             <m>/log₂(x+5) = /log₂((2x−1) /times 2)</m>
-                             <m>/log₂(x+5) = /log₂(4x−2)</m>
+                             <m>\log₂(x+5) = \log₂((2x−1) \times 2)</m>
+                             <m>\log₂(x+5) = \log₂(4x−2)</m>
                         </md>
                     </p>
                     <p>
                         Rearrange the equation to set the arguments of the logarithms equal to each other as:
-                        <m>/x + 5 = 4x - 2</m>
+                        <m>x + 5 = 4x - 2</m>
                     </p>
                     <p>
                         Collect like terms to get:
-                        <m>/3x = 7</m>
+                        <m>3x = 7</m>
                     </p>
                     <p>
                         Solving for x gives us:
@@ -232,13 +232,13 @@
         </statement>
         <solution>
             <p>
-                To solve the equation <m>log₃(2x+1) - log₃(x-2) = 1</m>, consider using the quotient rule of logarithms, which states that <m>log_b(m) - log_b(n) = log_b(m/n)</m>. Applying this rule gives:
+                To solve the equation <m>\log₃(2x+1) - \log₃(x-2) = 1</m>, consider using the quotient rule of logarithms, which states that <m>\log_b(m) - \log_b(n) = \log_b(m/n)</m>. Applying this rule gives:
             </p>
               <p>
-                <m>log₃\left(\frac{2x+1}{x-2}\right) = 1</m>
+                <m>\log₃\left(\frac{2x+1}{x-2}\right) = 1</m>
               </p>
                 <p>
-                Now rewrite the equation in exponential form. The equation <m>log_b(a) = c</m> can be rewritten as <m>b^c = a</m>. Applying this to the equation gives us:
+                Now rewrite the equation in exponential form. The equation <m>\log_b(a) = c</m> can be rewritten as <m>\b^c = a</m>. Applying this to the equation gives us:
                 </p>
                     <p>
                         <m>3^1 = \frac{2x+1}{x-2}</m>
@@ -263,12 +263,12 @@
                         Finally, you need to check if the solution is valid by substituting it back into the original equation. Ensure that the arguments of the logarithms are positive.
                     </p>
                     <p>
-                        For <m>log₃(2x+1)</m>, you have:
-                        <m>log₃(2(7)+1) = log₃(15)</m>, which is valid since 15 is positive.
+                        For <m>\log₃(2x+1)</m>, you have:
+                        <m>\log₃(2(7)+1) = \log₃(15)</m>, which is valid since 15 is positive.
                     </p>
                     <p>
-                        For <m>log₃(x-2)</m>, you have:
-                        <m>log₃(7-2) = log₃(5)</m>, which is also valid since 5 is positive.
+                        For <m>\log₃(x-2)</m>, you have:
+                        <m>\log₃(7-2) = \log₃(5)</m>, which is also valid since 5 is positive.
                     </p>
         </solution>
     </example>
@@ -276,18 +276,18 @@
     <example>
         <statement>
             <p>
-                Solve the logarithmic equation: <m>log₂(x+5) - log₂(x-3) = 2</m>
+                Solve the logarithmic equation: <m>\log₂(x+5) - \log₂(x-3) = 2</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>log₂(x+5) - log₂(x-3) = 2</m>, use the quotient rule of logarithms, which states that <m>log_b(m) - log_b(n) = log_b(m/n)</m>. Applying this rule gives:
+                To solve the equation <m>\log₂(x+5) - \log₂(x-3) = 2</m>, use the quotient rule of logarithms, which states that <m>\log_b(m) - \log_b(n) = \log_b(m/n)</m>. Applying this rule gives:
             </p>
               <p>
-                <m>log₂\left(\frac{x+5}{x-3}\right) = 2</m>
+                <m>\log₂\left(\frac{x+5}{x-3}\right) = 2</m>
               </p>
                 <p>
-                Now rewrite the equation in exponential form. The equation <m>log_b(a) = c</m> can be rewritten as <m>b^c = a</m>. Applying this to the equation gives us:
+                Now rewrite the equation in exponential form. The equation <m>\log_b(a) = c</m> can be rewritten as <m>\b^c = a</m>. Applying this to the equation gives us:
                 </p>
                     <p>
                         <m>2^2 = \frac{x+5}{x-3}</m>
@@ -316,12 +316,12 @@
                         Finally, check if the solution is valid by substituting it back into the original equation. We need to ensure that the arguments of the logarithms are positive.
                     </p>
                     <p>
-                        For <m>log₂(x+5)</m>, you have:
-                        <m>log₂\left(\frac{17}{3} + 5\right) = log₂\left(\frac{17}{3} + \frac{15}{3}\right) = log₂\left(\frac{32}{3}\right)</m>, which is valid since <m>\(\frac{32}{3}\)</m> is positive.
+                        For <m>\log₂(x+5)</m>, you have:
+                        <m>\log₂\left(\frac{17}{3} + 5\right) = \log₂\left(\frac{17}{3} + \frac{15}{3}\right) = \log₂\left(\frac{32}{3}\right)</m>, which is valid since <m>\(\frac{32}{3}\)</m> is positive.
                     </p>
                     <p>
-                        For <m>log₂(x-3)</m>, you have:
-                        <m>log₂\left (\frac{17}{3} - 3\right) = log₂\left(\frac{17}{3} - \frac{9}{3}\right) = log₂\left(\frac{8}{3}\right)</m>, which is valid since <m>\(\frac{8}{3}\)</m> is positive.
+                        For <m>\log₂(x-3)</m>, you have:
+                        <m>\log₂\left (\frac{17}{3} - 3\right) = \log₂\left(\frac{17}{3} - \frac{9}{3}\right) = \log₂\left(\frac{8}{3}\right)</m>, which is valid since <m>\(\frac{8}{3}\)</m> is positive.
                     </p>
         </solution>
     </example>
@@ -340,7 +340,7 @@
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>logx​(25)=logx​(5)+1</m>
+                    Calculate <m>\log_x(25) = \log_x(5) + 1</m>
                 </p>
             </statement>   
             <solution>
@@ -353,7 +353,7 @@
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>logx​(64)=logx​(8)+1</m>
+                    Calculate <m>\log_x(64) = \log_x(8) + 1</m>
                 </p>
             </statement>   
             <solution>
@@ -366,7 +366,7 @@
         <exercise>
             <statement>   
                 <p>
-                    Calculate <m>logx​(100)=logx​(10)+1</m>
+                    Calculate <m>\log_x(100) = \log_x(10) + 1</m>
                 </p>
             </statement>   
             <solution>
