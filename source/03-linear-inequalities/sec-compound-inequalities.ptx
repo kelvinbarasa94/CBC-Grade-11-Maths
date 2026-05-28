@@ -297,7 +297,10 @@
                 Substituting the expression for <m>t</m>:
             </p>
             <p>
-                <me>2 \lt \frac{x + 10}{30} \lt 4</me>
+    <p>
+        First we set up the continuous inequality using the given limits:
+        <md>2 \lt t \lt 4</md>
+    </p>
             </p>
             <p>
                 Then, we multiply all three parts by <m>30</m> to eliminate the denominator:
