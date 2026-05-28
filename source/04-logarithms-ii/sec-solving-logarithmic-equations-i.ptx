@@ -168,16 +168,17 @@
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
     <insight>
-        <p>
-            <term>Key Takeaway:</term> Solving logarithmic equations often involves rewriting the equation in exponential form, which allows us to find the value of the variable. 
-            This process relies on understanding the relationship between logarithms and exponents.
+          <p>
+             <term>Key Takeaway:</term> Solving logarithmic equations often involves rewriting the equation in exponential form, which allows us to find the value of the variable. 
+             This process relies on understanding the relationship between logarithms and exponents.
+          </p>
            <p>
              When solving logarithmic equations, it's important to remember that the argument of the logarithm must be positive. This is because the logarithm of a negative number or zero is undefined in the real number system.
-          </p>
-          <p>
+           </p>
+           <p>
              Additionally, when solving logarithmic equations, remember the basic properties of logarithims such as the
              product rule that is <m>\log_b(xy) = \log_b(x) + \log_b(y)</m>, the quotient rule that is <m>\log_b(x/y) = \log_b(x) - \log_b(y)</m>, and the power rule that is <m>\log_b(x^n) = n \cdot \log_b(x)</m>.
-         </p>
+          </p>
     </insight> 
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
