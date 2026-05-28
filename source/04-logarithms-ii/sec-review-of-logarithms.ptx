@@ -190,8 +190,11 @@
     
     
      <!-- Add insight / key takeaway directly related to activity / learner experience -->
-    <!-- <insight>
-    </insight> -->
+    <insight>
+          <p>
+              <alert>Key Takeaway:</alert> It is important to have a clear understanding of the properties of logarithms, so that you know how to apply as per the question at hand.
+          </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 

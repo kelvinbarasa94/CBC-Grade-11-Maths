@@ -21,7 +21,7 @@
                 <li>
                     <title>Specific Learning Outcomes</title> 
                     <p>
-                        Solve advanced logarithmic equations in different situations
+                        Solve logarithmic equations in different situations
                     </p>
                 </li>
                 <li component="lesson-plan">
@@ -78,10 +78,57 @@
                 <term>What you need</term>
             </p>
             <p>
-                
+                <ul>
+                    <li>
+                        <p>
+                        Plain sheets of paper and pens for recording your solutions.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculators
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Set of logarithmic equations on cards, which can be prepared in advance by the teacher.
+                        </p>
+                    </li>
+                </ul>
             </p>
+            <p>
+                <term>What to do</term>
+            </p>
+            <task>
+                <statement>
+                    <p>
+                        Divide into groups of 4 and each group will receive a set of cards with logarithmic equations.
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Work collaboratively in your groups to solve the equations on the cards, then record your solutions on the sheet of paper provided. 
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        After solving the equations, and a representative from each group will present their solutions to the class, explaining the steps they took to arrive at their answers.
+                    </p>
+                </statement>
+            </task>
+                <task>
+                    <statement>
+                        <p>
+                            With the teachers guidance, discuss the different approaches used by each group to solve the equations, and clarify any misconceptions that may arise during the presentations.
+                        </p>
+                    </statement>
+                </task>
         </statement>
-    </activity>
+ </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -122,7 +169,7 @@
              <term>Key Takeaway</term>
           </p>
               <p>
-             While solving logarithmic equations, it is important to remember the properties of logarithms to help with simplification.
+             While solving logarithmic equations, it is important to watch out for the operation symbols in between the logs so that you choose the most relevant property to apply.
              Kindly ensure that logarithims are of the same base before attempting to solve the equation.
           </p>  
     </insight>
@@ -151,17 +198,17 @@
                 </p>
                     <p>
                         <md>
-                             <m>log₂(x+5) = log₂((2x−1) * 2)</m>
-                             <m>log₂(x+5) = log₂(4x−2)</m>
+                             <m>/log₂(x+5) = /log₂((2x−1) /times 2)</m>
+                             <m>/log₂(x+5) = /log₂(4x−2)</m>
                         </md>
                     </p>
                     <p>
                         Rearrange the equation to set the arguments of the logarithms equal to each other as:
-                        <m>x + 5 = 4x - 2</m>
+                        <m>/x + 5 = 4x - 2</m>
                     </p>
                     <p>
                         Collect like terms to get:
-                        <m>3x = 7</m>
+                        <m>/3x = 7</m>
                     </p>
                     <p>
                         Solving for x gives us:

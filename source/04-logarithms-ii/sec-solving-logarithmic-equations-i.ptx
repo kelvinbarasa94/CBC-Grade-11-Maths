@@ -88,12 +88,12 @@
           </p>
           <task>
              <statement>
-                   <p>
-                      Divide into groups and each group will receive a set of cards with logarithmic equations. 
-                   </p>
-                    <p>
+                       <p>
+                          Divide into groups and each group will receive a set of cards with logarithmic equations. 
+                      </p>
+                       <p>
                          Work collaboratively in your groups to solve the equations on the cards, then record your solutions on the manila paper.
-                    </p>
+                      </p>
              </statement>
           </task>
               <task>
@@ -207,18 +207,18 @@
                 The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
             </p>
             <p>
-                In our case, you have <m>b = 3</m>, <m>c = 2</m>, and <m>a = x + 1</m>. 
+                In this case, you have <m>b = 3</m>, <m>c = 2</m>, and <m>a = x + 1</m>. 
                 Therefore, you can rewrite the equation as:
             </p>
             <p>
-                <m>3^2 = x + 1</m>
+                <m>\3^2 = \x + 1</m>
             </p>
             <p>
                 Now, calculate <m>3^2</m>, which is equal to 9. 
                 Therefore, the solution to the equation is:
             </p>
             <p>
-                <m>x + 1 = 9</m>
+                <m>\x + 1 = 9</m>
             </p>
             <p>
                 Subtracting 1 from both sides gives:
@@ -245,14 +245,14 @@
                 Therefore, you can rewrite the equation as:
             </p>
             <p>
-                <m>4^1 = x - 2</m>
+                <m>\4^1 = x - 2</m>
             </p>
             <p>
-                Now, calculate <m>4^1</m>, which is equal to 4. 
+                Now, calculate <m>\4^1</m>, which is equal to 4. 
                 Therefore, the solution to the equation is:
             </p>
             <p>
-                <m>x - 2 = 4</m>
+                <m>\x - 2 = 4</m>
             </p>
             <p>
                 Adding 2 to both sides gives:
@@ -282,7 +282,7 @@
             </statement>   
             <solution>
                 <p>
-                    <m>x = 25</m>
+                    <m>\x = 25</m>
                 </p>
             </solution>             
         </exercise>  
@@ -294,10 +294,21 @@
             </statement>   
             <solution>
                 <p>
-                    <m>x = 7</m>
+                    <m>\x = 7</m>
                 </p>
             </solution> 
-        </exercise>    
+        </exercise> 
+        <exercise>
+            <statement>   
+                <p>
+                    Zuri is trying to solve the logarithmic equation <m>\log_2(x + 5) = 3</m>. What answer does she get?
+                </p>
+            </statement>   
+            <solution>
+                <p>
+                    <m>\x = 3</m>
+                </p>
+            </solution>   
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
