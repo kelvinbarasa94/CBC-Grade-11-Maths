@@ -264,24 +264,25 @@
     <example>
         <statement>
          <p>
-            A bacterium population doubles every <m>3</m> hours. If the initial population is <m>100</m>, how many bacteria will there be after <m>24</m> hours? Use logarithms to solve this problem.
+            A bacterium population doubles every <m>3</m> hours. The initial population is <m>100</m>. How many hours will it take for the population to reach <m>3200</m>? Use logarithms to solve.
          </p>
         </statement>
         <solution>
             <p>
-                Let <m>P(t)</m> be the population at time <m>t</m> hours. We can express the population growth as:
+                The growth model is <m>P(t) = 100 \times 2^{t/3}</m>. Setting <m>P(t) = 3200</m>:
             </p>
+            <md>
+                <mrow>3200 \amp= 100 \times 2^{t/3}</mrow>
+                <intertext>Divide both sides by 100:</intertext>
+                <mrow>32 \amp= 2^{t/3}</mrow>
+                <intertext>Take <m>\log_2</m> of both sides:</intertext>
+                <mrow>\log_2(32) \amp= \frac{t}{3}</mrow>
+                <mrow>5 \amp= \frac{t}{3}</mrow>
+                <intertext>Multiply both sides by 3:</intertext>
+                <mrow>t \amp= 15</mrow>
+            </md>
             <p>
-               <m>P(t) = P_0 \times 2^{t/3}</m>
-            </p>
-            <p>
-                Where <m>P_0</m> is the initial population <m>(100)</m> and <m>t</m> is the time in hours. We want to find <m>P(24)</m>:
-            </p>
-            <p>
-                <m>P(24) = 100 \times 2^{24/3} = 100 \times 2^8 = 100 \times 256 = 25600</m>
-            </p>
-            <p>
-                Therefore, after <m>24</m> hours, there will be <m>25,600</m> bacteria.
+                Therefore, the population will reach <m>3200</m> after <m>15</m> hours.
             </p>
         </solution>
     </example>
@@ -300,11 +301,14 @@
         </statement>
         <solution>
             <p>
-                Substituting the values into the formula:
+                Substituting <m>P = 1</m> and <m>P_0 = 10^{-12}</m>:
             </p>
-            <p>
-                <m>I = 10 \times \log_{10}(1 / 10^{-12}) = 10 \times \log_{10}(10^{12}) = 10 \times 12 = 120</m>
-            </p>
+            <md>
+                <mrow>I \amp= 10 \times \log_{10}\!\left(\frac{1}{10^{-12}}\right)</mrow>
+                <mrow>\amp= 10 \times \log_{10}(10^{12})</mrow>
+                <mrow>\amp= 10 \times 12</mrow>
+                <mrow>\amp= 120</mrow>
+            </md>
             <p>
                 Therefore, the intensity of the sound is <m>120</m> decibels.
             </p>
@@ -319,49 +323,19 @@
         </statement>
         <solution>
             <p>
-                Let <m>P(t)</m> be the amount of the substance at time <m>t</m> years. The decay can be modeled as:
+                The decay model is <m>P(t) = P_0 \times (1/2)^{t/5}</m>. Substituting <m>P_0 = 100</m> and <m>P(t) = 25</m>:
             </p>
+            <md>
+                <mrow>25 \amp= 100 \times \left(\frac{1}{2}\right)^{t/5}</mrow>
+                <intertext>Divide both sides by 100:</intertext>
+                <mrow>0.25 \amp= \left(\frac{1}{2}\right)^{t/5}</mrow>
+                <intertext>Take <m>\log_2</m> of both sides. Since <m>\log_2(0.25) = \log_2(1/4) = -2</m>:</intertext>
+                <mrow>-2 \amp= \frac{t}{5}</mrow>
+                <intertext>Multiply both sides by 5:</intertext>
+                <mrow>t \amp= -10</mrow>
+            </md>
             <p>
-                <m>P(t) = P_0 \times (1/2)^{t/5}</m>
-            </p>
-            <p>
-                Where <m>P_0</m> is the initial amount <m>(100</m> grams) and <m>t</m> is the time in years. We want to find <m>t</m> when <m>P(t) = 25</m>:
-            </p>
-            <p>
-                <m>25 = 100 \times (1/2)^{t/5}</m>
-            </p>
-            <p>
-                Dividing both sides by 100:
-            </p>
-            <p>
-                <m>0.25 = (1/2)^{t/5}</m>
-            </p>
-            <p>
-                Taking the logarithm base 2 of both sides:
-            </p>
-            <p>
-                <m>\log_2(0.25) = t/5</m>
-            </p>
-            <p>
-                Since <m>\log_2(0.25) = \log_2(1/4) = -2</m>:
-            </p>
-            <p>
-                <m>-2 = t/5</m>
-            </p>
-            <p>
-                Multiplying both sides by 5:
-            </p>
-            <p>
-                <m>t = -10</m>
-            </p>
-            <p>
-                Since time cannot be negative, we take the absolute value:
-            </p>
-            <p>
-                <m>t = 10</m>
-            </p>
-            <p>
-                Therefore, it will take <m>10</m> years for the sample to decay to <m>25</m> grams.
+                Since time cannot be negative, <m>t = 10</m>. Therefore, it will take <m>10</m> years for the sample to decay to <m>25</m> grams.
             </p>
         </solution>
     </example>
@@ -383,12 +357,15 @@
                     A population of rabbits doubles every <m>4</m> months. If there are initially <m>50</m> rabbits, how many rabbits will there be after <m>2</m> years? Use logarithms to solve this problem.
                 </p>
             </statement>   
-            <solution> 
+            <solution>
+                <md>
+                    <mrow>P(24) \amp= 50 \times 2^{24/4}</mrow>
+                    <mrow>\amp= 50 \times 2^6</mrow>
+                    <mrow>\amp= 50 \times 64</mrow>
+                    <mrow>\amp= 3200</mrow>
+                </md>
                 <p>
-                    <m>P(24) = 50 \times 2^{24/4} = 50 \times 2^6 = 50 \times 64 = 3200</m>
-                </p>
-                <p>
-                    Therefore, after <m>2</m> years, there will be <m>3,200</m> rabbits.
+                    Therefore, after <m>2</m> years, there will be <m>3{,}200</m> rabbits.
                 </p>
             </solution>             
         </exercise> 
@@ -404,10 +381,10 @@
                     Where <m>[H^+]</m> is the concentration of hydrogen ions in moles per liter. If a solution has a pH of <m>3</m>, what is the concentration of hydrogen ions in the solution?
                 </p>
             </statement>   
-            <solution> 
-                <p>
-                    <m>[H^+] = 10^{-3} = 0.001</m>
-                </p>
+            <solution>
+                <md>
+                    <mrow>[H^+] \amp= 10^{-3} = 0.001</mrow>
+                </md>
                 <p>
                     Therefore, the concentration of hydrogen ions in the solution is <m>0.001</m> moles per liter.
                 </p>
@@ -419,10 +396,10 @@
                     A sound has an intensity of <m>80</m> decibels. If the reference power is <m>10^{-12}</m> watts, what is the power of the sound in watts? Use logarithms to solve this problem.
                 </p>
             </statement>   
-            <solution> 
-                <p>
-                    <m>P = 10^8 \times 10^{-12} = 10^{-4} = 0.0001</m>
-                </p>
+            <solution>
+                <md>
+                    <mrow>P \amp= 10^8 \times 10^{-12} = 10^{-4} = 0.0001</mrow>
+                </md>
                 <p>
                     Therefore, the power of the sound is <m>0.0001</m> watts.
                 </p>

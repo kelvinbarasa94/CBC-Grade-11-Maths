@@ -195,23 +195,12 @@
         </statement>
         <solution>
             <p>
-                To solve the equation <m>\log_2(x) = 3</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+                Rewrite in exponential form using <m>\log_b(a) = c \iff b^c = a</m>:
             </p>
-            <p>
-                In our case, you have <m>b = 2</m>, <m>c = 3</m>, and <m>a = x</m>. 
-                Therefore, you can rewrite the equation as:
-            </p>
-            <p>
-                <m>2^3 = x</m>
-            </p>
-            <p>
-                Now, calculate <m>2^3</m>, which is equal to 8. 
-                Therefore, the solution to the equation is:
-            </p>
-            <p>
-                <m>x = 8</m>
-            </p>
+            <md>
+                <mrow>2^3 \amp= x</mrow>
+                <mrow>x \amp= 8</mrow>
+            </md>
         </solution>
     </example>
 
@@ -223,29 +212,14 @@
         </statement>
         <solution>
             <p>
-                To solve the equation <m>\log_3(x + 1) = 2</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+                Rewrite in exponential form:
             </p>
-            <p>
-                In this case, you have <m>b = 3</m>, <m>c = 2</m>, and <m>a = x + 1</m>. 
-                Therefore, you can rewrite the equation as:
-            </p>
-            <p>
-                <m>3^2 = x + 1</m>
-            </p>
-            <p>
-                Now, calculate <m>3^2</m>, which is equal to 9. 
-                Therefore, the solution to the equation is:
-            </p>
-            <p>
-                <m> x + 1 = 9</m>
-            </p>
-            <p>
-                Subtracting 1 from both sides gives:
-            </p>
-            <p>
-                <m>x = 8</m>
-            </p>
+            <md>
+                <mrow>3^2 \amp= x + 1</mrow>
+                <mrow>9 \amp= x + 1</mrow>
+                <intertext>Subtract 1 from both sides:</intertext>
+                <mrow>x \amp= 8</mrow>
+            </md>
         </solution>
     </example>
 
@@ -257,29 +231,14 @@
         </statement>
         <solution>
             <p>
-                To solve the equation <m>\log_4(x - 2) = 1</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
+                Rewrite in exponential form:
             </p>
-            <p>
-                In this case, you have <m>b = 4</m>, <m>c = 1</m>, and <m>a = x - 2</m>. 
-                Therefore, you can rewrite the equation as:
-            </p>
-            <p>
-                <m>4^1 = x - 2</m>
-            </p>
-            <p>
-                Now, calculate <m>4^1</m>, which is equal to 4. 
-                Therefore, the solution to the equation is:
-            </p>
-            <p>
-                <m>x - 2 = 4</m>
-            </p>
-            <p>
-                Adding 2 to both sides gives:
-            </p>
-            <p>
-                <m>x = 6</m>
-            </p>
+            <md>
+                <mrow>4^1 \amp= x - 2</mrow>
+                <mrow>4 \amp= x - 2</mrow>
+                <intertext>Add 2 to both sides:</intertext>
+                <mrow>x \amp= 6</mrow>
+            </md>
         </solution>
     </example> 
 
