@@ -72,100 +72,148 @@
 
     <!-- Add Activity -->
 
-    <activity>
-    <statement>
-        <p>
-            <term>Work in groups</term>
-        </p>
-
-        <p>
-            <term>What you need</term>
-        </p>
-
-        <p>
-            <ul>
-                <li>
-                    <p>
-                        Scenario cards on real-life applications of logarithms
-           
-                    </p>
-                </li>
-                    <li>
-                        <p>
-                            Manila paper and markers
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Scientific calculators
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Graph paper (optional) 
-                        </p>
-                    </li>
-            </ul>
-        </p>
-
-        <p>
-            <term>What to do</term>
-        </p>
-
+    <activity xml:id="act-number-guessing-log2">
+        <introduction>
+            <p>
+                <term>Work in pairs.</term> One person secretly picks a whole number from 1 to 64. The other person tries to find it by asking yes/no questions.
+            </p>
+        </introduction>
         <task>
             <statement>
                 <p>
-                    Divide into groups of 3-4 and let each group receive a scenario card showing a real-life application of logarithms such as disease spread, mobile network signal strength, food cooling, or fraud detection.
+                    Play the game. Person A picks a number from 1 to 64 and keeps it secret. Person B asks yes/no questions to find it. Count how many questions Person B needs. Play twice and swap roles.
                 </p>
             </statement>
-        </task>
-         <task>
-            <statement>
+            <solution component="lesson-plan">
                 <p>
-                    Read the scenario on your card and identify the logarithmic equations or expressions that are relevant to the situation. Discuss how logarithms are used in the context of your scenario and what they represent in real life.
+                    Allow free play before guiding students. They may use many different strategies at first — this is fine. The goal is to get them curious about efficiency.
                 </p>
-            </statement>
-         </task>
-         <task>
-            <statement>
-                <p>
-                    Use the properties of logarithms to simplify the equations or expressions related to your scenario. Show your working steps on the manila paper.
-                </p>
-            </statement>
+            </solution>
         </task>
         <task>
             <statement>
                 <p>
-                    Use calculators to evaluate logarithmic expressions related to your scenario and explain what the answers mean in real life.
+                    Share your question counts with the class. What was the fewest questions anyone used? Do you think it is always possible to guarantee finding the number in 6 questions or fewer?
                 </p>
             </statement>
+            <note component="lesson-plan">
+                <p>
+                    Expect a range of answers (often 6–15). The point of sharing is to spark curiosity: why do some students need fewer questions? Accept all answers here without resolving the question — the next tasks build towards it.
+                </p>
+            </note>
         </task>
-
         <task>
             <statement>
                 <p>
-                    Exchange your scenario card and solutions with another group and check each other's work.
+                    Consider this opening question: <q>Is the number greater than 32?</q> No matter whether the answer is yes or no, how many numbers are left as possibilities?
                 </p>
             </statement>
+            <solution component="lesson-plan">
+                <p>
+                    If yes: numbers 33–64 remain (32 possibilities). If no: numbers 1–32 remain (32 possibilities). Either way, exactly half the numbers are eliminated. Ask students: what question should come next?
+                </p>
+            </solution>
+            <note component="lesson-plan">
+                <p>
+                    Compare with a question like <q>Is it odd?</q> — that also splits into 32 each time, but subsequent questions are harder to plan. Guide students towards questions of the form <q>Is it greater than <m>k</m>?</q> as a reliable strategy.
+                </p>
+            </note>
         </task>
-
         <task>
             <statement>
                 <p>
-                    Discuss any differences in answers with the other group and work together to determine the correct interpretation of the logarithmic calculations.
+                    Suppose you always ask a question that cuts the remaining possibilities exactly in half. Complete this table:
                 </p>
+                <tabular halign="center" top="minor" left="minor" right="minor" bottom="minor">
+                    <row header="yes">
+                        <cell>Questions asked</cell>
+                        <cell>Numbers still possible</cell>
+                    </row>
+                    <row><cell>0</cell><cell>64</cell></row>
+                    <row><cell>1</cell><cell>32</cell></row>
+                    <row><cell>2</cell><cell></cell></row>
+                    <row><cell>3</cell><cell></cell></row>
+                    <row><cell>4</cell><cell></cell></row>
+                    <row><cell>5</cell><cell></cell></row>
+                    <row><cell>6</cell><cell></cell></row>
+                </tabular>
             </statement>
+            <solution component="lesson-plan">
+                <tabular halign="center" top="minor" left="minor" right="minor" bottom="minor">
+                    <row header="yes">
+                        <cell>Questions asked</cell>
+                        <cell>Numbers still possible</cell>
+                    </row>
+                    <row><cell>0</cell><cell>64</cell></row>
+                    <row><cell>1</cell><cell>32</cell></row>
+                    <row><cell>2</cell><cell>16</cell></row>
+                    <row><cell>3</cell><cell>8</cell></row>
+                    <row><cell>4</cell><cell>4</cell></row>
+                    <row><cell>5</cell><cell>2</cell></row>
+                    <row><cell>6</cell><cell>1</cell></row>
+                </tabular>
+                <p>
+                    After 6 questions, exactly 1 number remains — the answer is known with certainty.
+                </p>
+            </solution>
         </task>
-
         <task>
             <statement>
                 <p>
-                    Present your findings to the class and explain how logarithms help solve real-life problems in your assigned scenario.
+                    Write the number of remaining possibilities after <m>k</m> questions as a power of 2. What is the connection between 64 and the number 6?
                 </p>
             </statement>
+            <solution component="lesson-plan">
+                <p>
+                    After <m>k</m> questions, <m>64 \div 2^k</m> numbers remain. When <m>k = 6</m>, this is <m>64 \div 2^6 = 1</m>. The connection is <m>64 = 2^6</m>, so 6 questions suffice.
+                </p>
+            </solution>
         </task>
-    </statement>
-</activity>
+        <task>
+            <statement>
+                <p>
+                    Using your pattern, complete this table for different starting ranges, then express the result using a logarithm:
+                </p>
+                <tabular halign="center" top="minor" left="minor" right="minor" bottom="minor">
+                    <row header="yes">
+                        <cell>Range of numbers</cell>
+                        <cell>Minimum questions guaranteed</cell>
+                    </row>
+                    <row><cell>1 to 2</cell><cell></cell></row>
+                    <row><cell>1 to 4</cell><cell></cell></row>
+                    <row><cell>1 to 8</cell><cell></cell></row>
+                    <row><cell>1 to 16</cell><cell></cell></row>
+                    <row><cell>1 to 32</cell><cell></cell></row>
+                    <row><cell>1 to 64</cell><cell>6</cell></row>
+                </tabular>
+                <p>
+                    For a range of 1 to <m>n</m>, write a formula for the minimum number of questions needed (assume <m>n</m> is a power of 2).
+                </p>
+            </statement>
+            <solution component="lesson-plan">
+                <p>
+                    The answers are 1, 2, 3, 4, 5, 6. For a range of 1 to <m>n = 2^k</m>, the minimum number of questions is <m>k = \log_2 n</m>.
+                </p>
+            </solution>
+            <note component="lesson-plan">
+                <p>
+                    If students struggle to see the logarithm, ask: <q>If <m>2^k = n</m>, how do you solve for <m>k</m>?</q> This connects directly to the definition of logarithm from earlier in the chapter.
+                </p>
+            </note>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    A friend picks a number from 1 to 1000. What is the minimum number of yes/no questions you need to guarantee finding it? Use the change of base formula <m>\log_2 x = \dfrac{\log_{10} x}{\log_{10} 2}</m> and a calculator.
+                </p>
+            </statement>
+            <solution component="lesson-plan">
+                <p>
+                    <m>\log_2 1000 = \dfrac{\log_{10} 1000}{\log_{10} 2} = \dfrac{3}{\log_{10} 2} \approx 9.97</m>. Since we need a whole number of questions, we round up to 10. Students can verify: <m>2^{10} = 1024 \geq 1000</m>, while <m>2^9 = 512 \lt 1000</m>.
+                </p>
+            </solution>
+        </task>
+    </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -224,13 +272,13 @@
                 Let <m>P(t)</m> be the population at time <m>t</m> hours. We can express the population growth as:
             </p>
             <p>
-               <m>\P(t) = \P_0 \times 2^{t/3}</m>
+               <m>P(t) = P_0 \times 2^{t/3}</m>
             </p>
             <p>
-                Where <m>P_0</m> is the initial population <m>(100)</m>and <m>t</m> is the time in hours. We want to find <m>P(24)</m>:
+                Where <m>P_0</m> is the initial population <m>(100)</m> and <m>t</m> is the time in hours. We want to find <m>P(24)</m>:
             </p>
             <p>
-                <m>\P(24) = \100 \times 2^{24/3} = 100 \times 2^8 = 100 \times 256 = 25600</m>
+                <m>P(24) = 100 \times 2^{24/3} = 100 \times 2^8 = 100 \times 256 = 25600</m>
             </p>
             <p>
                 Therefore, after <m>24</m> hours, there will be <m>25,600</m> bacteria.
@@ -244,10 +292,10 @@
                 The intensity of a sound is measured in decibels (dB) and is given by the formula:
             </p>
             <p>
-                <m>\I = 10 \times \log_{10}(P/P_0)</m>
+                <m>I = 10 \times \log_{10}(P/P_0)</m>
             </p>
             <p>
-                Where <m>\I</m> is the intensity in decibels, <m>\P</m> is the power of the sound, and <m>\P_0</m> is the reference power (the threshold of hearing). If a sound has a power of <m>\1</m> watt and the reference power is <m>\10^{-12}</m> watts, what is the intensity of the sound in decibels?
+                Where <m>I</m> is the intensity in decibels, <m>P</m> is the power of the sound, and <m>P_0</m> is the reference power (the threshold of hearing). If a sound has a power of <m>1</m> watt and the reference power is <m>10^{-12}</m> watts, what is the intensity of the sound in decibels?
             </p>
         </statement>
         <solution>
@@ -255,10 +303,10 @@
                 Substituting the values into the formula:
             </p>
             <p>
-                <m>\I = 10 \times \log_{10}(\1 / \10^{-12}) = 10 \times \log_{10}(\10^{12}) = 10 \times 12 = 120</m>
+                <m>I = 10 \times \log_{10}(1 / 10^{-12}) = 10 \times \log_{10}(10^{12}) = 10 \times 12 = 120</m>
             </p>
             <p>
-                Therefore, the intensity of the sound is <m>\120</m> decibels.
+                Therefore, the intensity of the sound is <m>120</m> decibels.
             </p>
         </solution>
     </example>
@@ -266,7 +314,7 @@
     <example>
         <statement>
             <p>
-                A radioactive substance decays at a rate proportional to its current amount. If the half-life of the substance is <m>\5</m> years, how long will it take for a sample of <m>\100</m> grams to decay to <m>\25</m> grams? Use logarithms to solve this problem.
+                A radioactive substance decays at a rate proportional to its current amount. If the half-life of the substance is <m>5</m> years, how long will it take for a sample of <m>100</m> grams to decay to <m>25</m> grams? Use logarithms to solve this problem.
             </p>
         </statement>
         <solution>
@@ -274,19 +322,19 @@
                 Let <m>P(t)</m> be the amount of the substance at time <m>t</m> years. The decay can be modeled as:
             </p>
             <p>
-                <m>\P(t) = \P_0 \times (1/2)^{t/5}</m>
+                <m>P(t) = P_0 \times (1/2)^{t/5}</m>
             </p>
             <p>
-                Where <m>\P_0</m> is the initial amount <m>(100</m> grams) and <m>\t</m> is the time in years. We want to find <m>\t</m> when <m>\P(t) = 25</m>:
+                Where <m>P_0</m> is the initial amount <m>(100</m> grams) and <m>t</m> is the time in years. We want to find <m>t</m> when <m>P(t) = 25</m>:
             </p>
             <p>
-                <m>\25 = \100 \times (1/2)^{t/5}</m>
+                <m>25 = 100 \times (1/2)^{t/5}</m>
             </p>
             <p>
                 Dividing both sides by 100:
             </p>
             <p>
-                <m>\0.25 = (1/2)^{t/5}</m>
+                <m>0.25 = (1/2)^{t/5}</m>
             </p>
             <p>
                 Taking the logarithm base 2 of both sides:
@@ -298,13 +346,13 @@
                 Since <m>\log_2(0.25) = \log_2(1/4) = -2</m>:
             </p>
             <p>
-                <m>\-2 = \t/5</m>
+                <m>-2 = t/5</m>
             </p>
             <p>
                 Multiplying both sides by 5:
             </p>
             <p>
-                <m>\t = -10</m>
+                <m>t = -10</m>
             </p>
             <p>
                 Since time cannot be negative, we take the absolute value:
@@ -313,7 +361,7 @@
                 <m>t = 10</m>
             </p>
             <p>
-                Therefore, it will take <m>\10</m> years for the sample to decay to <m>\25</m> grams.
+                Therefore, it will take <m>10</m> years for the sample to decay to <m>25</m> grams.
             </p>
         </solution>
     </example>
@@ -358,10 +406,10 @@
             </statement>   
             <solution> 
                 <p>
-                    <m>\[H^+] = \10^{-3} = \0.001</m>
+                    <m>[H^+] = 10^{-3} = 0.001</m>
                 </p>
                 <p>
-                    Therefore, the concentration of hydrogen ions in the solution is <m>\0.001</m> moles per liter.
+                    Therefore, the concentration of hydrogen ions in the solution is <m>0.001</m> moles per liter.
                 </p>
             </solution> 
         </exercise>
@@ -373,7 +421,7 @@
             </statement>   
             <solution> 
                 <p>
-                    <m>\P = \10^8 \times \10^{-12} = \10^{-4} = \0.0001</m>
+                    <m>P = 10^8 \times 10^{-12} = 10^{-4} = 0.0001</m>
                 </p>
                 <p>
                     Therefore, the power of the sound is <m>0.0001</m> watts.

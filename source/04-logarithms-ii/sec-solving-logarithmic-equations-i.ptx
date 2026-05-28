@@ -190,12 +190,12 @@
     <example>
         <statement>
             <p>
-            Solve for x: <m>\log₂(x) = 3</m>
+            Solve for x: <m>\log_2(x) = 3</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>\log₂(x) = 3</m>, first rewrite it in exponential form. 
+                To solve the equation <m>\log_2(x) = 3</m>, first rewrite it in exponential form. 
                 The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
             </p>
             <p>
@@ -218,12 +218,12 @@
     <example>
         <statement>
             <p>
-            Solve for x: <m>\log₃(x + 1) = 2</m>
+            Solve for x: <m>\log_3(x + 1) = 2</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>\log₃(x + 1) = 2</m>, first rewrite it in exponential form. 
+                To solve the equation <m>\log_3(x + 1) = 2</m>, first rewrite it in exponential form. 
                 The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
             </p>
             <p>
@@ -252,12 +252,12 @@
     <example>
         <statement>
             <p>
-            Solve for x: <m>\log₄(x - 2) = 1</m>
+            Solve for x: <m>\log_4(x - 2) = 1</m>
             </p>
         </statement>
         <solution>
             <p>
-                To solve the equation <m>\log₄(x - 2) = 1</m>, first rewrite it in exponential form. 
+                To solve the equation <m>\log_4(x - 2) = 1</m>, first rewrite it in exponential form. 
                 The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
             </p>
             <p>
@@ -297,7 +297,7 @@
         <exercise>
             <statement>   
                 <p>
-                    Bella is trying to solve the logarithmic equation <m>\log₅(x) = 2</m>. What answer does she get?
+                    Bella is trying to solve the logarithmic equation <m>\log_5(x) = 2</m>. What answer does she get?
                 </p>
             </statement>   
             <solution>
