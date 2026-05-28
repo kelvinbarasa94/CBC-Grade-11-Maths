@@ -83,11 +83,29 @@
         </p>
 
         <p>
-            Scenario cards on real-life applications of logarithms
-            Manila paper
-            Markers
-            Scientific calculators
-            Graph paper (optional)
+            <ul>
+                <li>
+                    <p>
+                        Scenario cards on real-life applications of logarithms
+           
+                    </p>
+                </li>
+                    <li>
+                        <p>
+                            Manila paper and markers
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Scientific calculators
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Graph paper (optional) 
+                        </p>
+                    </li>
+            </ul>
         </p>
 
         <p>
@@ -97,19 +115,24 @@
         <task>
             <statement>
                 <p>
-                    Divide into groups and let each group receive a scenario card showing a real-life application of logarithms such as disease spread, mobile network signal strength, food cooling, or fraud detection.
-                </p>
-
-                <p>
-                    Read the scenario carefully and discuss how logarithms are used in that situation.
-                </p>
-
-                <p>
-                    Solve the questions provided on the scenario card and record your answers on the manila paper.
+                    Divide into groups of 3-4 and let each group receive a scenario card showing a real-life application of logarithms such as disease spread, mobile network signal strength, food cooling, or fraud detection.
                 </p>
             </statement>
         </task>
-
+         <task>
+            <statement>
+                <p>
+                    Read the scenario on your card and identify the logarithmic equations or expressions that are relevant to the situation. Discuss how logarithms are used in the context of your scenario and what they represent in real life.
+                </p>
+            </statement>
+         </task>
+         <task>
+            <statement>
+                <p>
+                    Use the properties of logarithms to simplify the equations or expressions related to your scenario. Show your working steps on the manila paper.
+                </p>
+            </statement>
+        </task>
         <task>
             <statement>
                 <p>

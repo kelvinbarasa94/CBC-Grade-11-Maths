@@ -77,12 +77,30 @@
         <p>
             <term>What you need</term>
         </p>
-           <p>
+           <ul>
+            <li>
+                <p>
+                    <p>
              Small cards with logarithmic equations
-             Manila paper
-             Markers
-             Calculators (optional)
           </p>
+                </p>
+            </li>
+                <li>
+                    <p>
+                        Manila paper
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Markers
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Calculators (optional)
+                    </p>
+                </li>
+           </ul>
           <p>
             <term>What to do</term>
           </p>
@@ -91,10 +109,14 @@
                        <p>
                           Divide into groups and each group will receive a set of cards with logarithmic equations. 
                       </p>
-                       <p>
-                         Work collaboratively in your groups to solve the equations on the cards, then record your solutions on the manila paper.
-                      </p>
              </statement>
+          </task>
+          <task>
+            <statement>
+                 <p>
+                     Work collaboratively in your groups to solve the equations on the cards, then record your solutions on the manila paper.
+                 </p>
+            </statement>
           </task>
               <task>
                  <statement>
