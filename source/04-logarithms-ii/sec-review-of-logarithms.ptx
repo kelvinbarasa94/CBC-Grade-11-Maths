@@ -126,11 +126,23 @@
         </p>
 
         <p>
-            Cards with logarithmic expressions and equations
-            Manila paper
-            Markers
-            Scientific calculators
-            Sticky notes (optional)
+            <ul>
+                <li>
+                    <p>
+                        Cards with logarithmic expressions and equations
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Markers for recording answers   
+                    </p>
+                </li>
+                <li>
+                    <p>
+                         Scientific calculators and manilla paper
+                    </p>
+                </li>
+            </ul>
         </p>
 
         <p>
@@ -142,17 +154,22 @@
                 <p>
                     Divide into groups and let each group receive a set of cards containing logarithmic expressions, laws of logarithms, and logarithmic equations.
                 </p>
-
+            </statement>
+        </task>
+        <task>
+            <statement>
                 <p>
-                    Work together to simplify the expressions, apply the logarithm laws correctly, and solve the equations on the cards.
-                </p>
-
-                <p>
-                    Record all solutions and working steps on the manila paper.
+                    Each group will work together to match the logarithmic expressions with the correct logarithm laws and solve the equations on the cards.
                 </p>
             </statement>
         </task>
-
+        <task>
+            <statement>
+                <p>
+                    Record your answers on the manilla paper provided, showing the steps taken to simplify the expressions and solve the equations.
+                </p>
+            </statement>
+        </task>
         <task>
             <statement>
                 <p>
@@ -186,9 +203,7 @@
         </task>
      </statement>
 </activity>
-    
-    
-    
+
      <!-- Add insight / key takeaway directly related to activity / learner experience -->
     <insight>
           <p>
