@@ -40,6 +40,7 @@
             </p>
         </introduction>
     </objectives>
+    
 
     <!-- [LP] Add guidance on activity -->
 
@@ -68,6 +69,97 @@
         </axiom> -->
 
     <!-- Add Activity -->
+     <activity>
+        <statement>
+            <p><strong>Work in Groups</strong></p>
+            <p>
+                <alert>Materials Needed:</alert>
+            </p>
+            <ol><li><p>drawing board</p></li>
+            <li><p>pen</p></li>
+            <li><p>paper</p></li>
+            <li><p>compass</p></li></ol>
+            
+            <p>
+                <strong>Inquiry Question:</strong> How does the angle of a structural support change when we anchor it at different points along a circular frame?
+            </p>
+            <p>
+                Imagine your group is designing a traditional circular pavilion for a community cultural site. To support the conical roof, you need to run straight wooden beams from a central pillar <m>O</m> to the circular perimeter, as well as spanning beams across the perimeter. 
+            </p>
+            
+            <p><strong>Step-by-Step Practical Investigation:</strong></p>
+            <ol>
+                <li>
+                    <p>
+                        Using a drawing board, paper, and a compass, draw a large circle with center <m>O</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Mark two fixed points, <m>A</m> and <m>B</m>, on the lower half of your circumference. The arc <m>AB</m> is your foundation arc.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Draw radii <m>OA</m> and <m>OB</m>. Use a protractor to measure the central angle <m>\angle AOB</m>. Record this value.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Mark any point <m>P</m> on the major arc <m>AB</m> (on the upper curve of the circle). Draw chords <m>PA</m> and <m>PB</m>. Measure the angle subtended at the circumference, <m>\angle APB</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Move point <m>P</m> to two other positions on the major arc (let's call them <m>Q</m> and <m>R</m>). Measure angles <m>\angle AQB</m> and <m>\angle ARB</m>.
+                    </p>
+                </li>
+            </ol>
+
+            <p><strong>Group Discussion and Recording:</strong></p>
+            <ul>
+                <li>
+                    <p>
+                        Compare the central angle <m>\angle AOB</m> with the circumference angle <m>\angle APB</m>. What mathematical relationship do you notice between their values?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What did you observe about the values of <m>\angle APB</m>, <m>\angle AQB</m>, and <m>\angle ARB</m> as you moved the point along the same arc? Write down a conjecture based on your measurements.
+                    </p>
+                </li>
+            </ul>
+        </statement>
+        <figure>
+            <caption>A circle illustrating a central angle AOB and a circumference angle APB subtended by the same arc AB.</caption>
+            <image>
+                <shortdescription>Circle with center O, central angle AOB, and inscribed angle APB on the circumference.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.1]
+                        \draw[thick] (0,0) circle (2.5);
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (-2.165,-1.25);
+                        \coordinate (B) at (2.165,-1.25);
+                        \coordinate (P) at (0.434,2.462);
+                        
+                        \draw[red, thick] (O) -- (A);
+                        \draw[red, thick] (O) -- (B);
+                        \draw[blue, thick] (P) -- (A);
+                        \draw[blue, thick] (P) -- (B);
+                        
+                        \node[below left] at (A) {A};
+                        \node[below right] at (B) {B};
+                        \node[above] at (P) {P};
+                        \node[below] at (O) {O};
+                        
+                        \draw (-0.346,-0.2) arc (210:330:0.4);
+                        \node[below] at (0,-0.5) {\small $2x$};
+                        \node[below] at (0.434,2.0) {\small $x$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </activity>
 
     <!-- <activity>
         <statement>
@@ -106,7 +198,85 @@
             </instructions>
         </interactive>
     </exploration>
-    
+    <insight>
+        <p>
+            <strong>Making Sense of the Geometry: Real-World Visualizations</strong>
+        </p>
+        <p>
+            To understand how these circle theorems work, let us connect them to everyday visual ideas:
+        </p>
+        
+        <p>
+            <strong>1. The Slingshot Rule (Angle at the Centre)</strong>
+        </p>
+        <p>
+            Imagine holding a giant circular slingshot anchored at two fixed perimeter pegs, <m>A</m> and <m>B</m> (your arc). 
+        </p>
+        <ul>
+            <li>
+                <p>
+                    If you pull the slingshot pocket back to the exact center point <m>O</m>, the elastic forms a wide, open angle (<m>\angle AOB</m>).
+                </p>
+            </li>
+            <li>
+                <p>
+                    If you stretch it all the way back to any point <m>P</m> on the far circular boundary, the elastic becomes tighter and narrower. 
+                </p>
+            </li>
+        </ul>
+        <p>
+            Because the boundary point <m>P</m> is much farther away from your pegs than the center, the angle at the circumference is always exactly <strong>half</strong> the size of the angle at the center. Alternatively:
+        </p>
+        <me>\text{Angle at the Centre} = 2 \times \text{Angle at the Circumference}</me>
+        <me>\angle AOB = 2 \times \angle APB</me>
+
+        <p>
+            <strong>2. The Theater Stage Rule (Angles in the Same Segment)</strong>
+        </p>
+        <p>
+            Imagine points <m>A</m> and <m>B</m> represent the left and right sides of a stage in a circular amphitheater. Points <m>P</m>, <m>Q</m>, and <m>R</m> are seats at different locations in the balcony.
+        </p>
+        <p>
+            Even though the seats are in different spots (one on the left, one in the middle, and one on the right), every single spectator looks at the exact same width of the stage. As long as you stay on that same curved balcony boundary, your "viewing angle" stays constant!
+        </p>
+        <me>\angle APB = \angle AQB = \angle ARB</me>
+
+        <p>
+            <strong>3. The Right-Angle Split (Angle in a Semicircle)</strong>
+        </p>
+        <p>
+            This is a special case of the Slingshot Rule. If you place your anchors directly opposite each other, the line connecting them is the diameter (<m>RT</m>). 
+        </p>
+        <p>
+            The central angle is now a perfectly flat straight line running through the center <m>O</m>, which measures exactly <m>180^\circ</m>. Since the angle at the edge must be half of the angle at the center, picking any boundary point <m>S</m> and connecting it to the diameter ends will always create a perfect right angle:
+        </p>
+        <me>\angle RST = \frac{180^\circ}{2} = 90^\circ</me>
+    </insight>
+    <insight>
+        <p>
+            <strong>Mastering Circle Geometry</strong>
+        </p>
+        <p>
+            . To build spatial reasoning and solve complex geometric problems, a  learner needs to master three key skills:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <strong>Identifying Subtending Arcs:</strong> Always trace back from the vertices of the angles to the circle's boundary. Identifying which specific arc (or chord) is "holding up" the angles is the secret to choosing the correct theorem.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Spotting the Radii:</strong> Many circle geometry problems involve hidden isosceles triangles. Remember that any line drawn from the center <m>O</m> to the boundary is a radius (<m>r</m>). Since all radii are equal, triangles formed by two radii and a chord always have two equal base angles.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>Recognizing Segments:</strong> A chord splits a circle into a major segment (the larger area) and a minor segment (the smaller area). Remember that the <em>Angles in the Same Segment</em> theorem only applies when the vertices of the circumference angles lie within the exact same segment.
+                </p>
+            </li>
+        </ul>
+    </insight>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -150,6 +320,138 @@
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
+    
+        <example>
+            <statement>
+                <p>
+                    An arc <m>AB</m> of a circle with center <m>O</m> subtends an angle <m>\angle AOB = 148^\circ</m> at the center. If point <m>P</m> is a variable point moving along the major arc <m>AB</m> on the circumference, determine the constant measure of <m>\angle APB</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Identify the relationship between the central angle and the angle at the circumference standing on the same arc <m>AB</m>:
+                </p>
+                <me>\angle AOB = 2 \times \angle APB</me>
+                <p>
+                    Substitute the given value <m>\angle AOB = 148^\circ</m> into the formula:
+                </p>
+                <me>148^\circ = 2 \times \angle APB</me>
+                <me>\angle APB = \frac{148^\circ}{2} = 74^\circ</me>
+                <p>
+                    Because of the Angles in the Same Segment Theorem, the angle <m>\angle APB</m> remains constant at <m>74^\circ</m> no matter where point <m>P</m> moves along the major arc.
+                </p>
+            </solution>
+        </example>
+
+        <example>
+            <statement>
+                <p>
+                    In a circle with center <m>O</m>, a triangle <m>ABC</m> is drawn such that the side <m>AC</m> passes through the center <m>O</m>. If the angle <m>\angle ACB = 28^\circ</m>, find the measure of the remaining interior angle <m>\angle BAC</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since the side <m>AC</m> passes through the center of the circle <m>O</m>, <m>AC</m> is a diameter. By the Angle in a Semicircle Theorem, the angle subtended by the diameter at the circumference is a right angle:
+                </p>
+                <me>\angle ABC = 90^\circ</me>
+                <p>
+                    The sum of the angles in triangle <m>ABC</m> is <m>180^\circ</m>:
+                </p>
+                <me>\angle BAC + \angle ABC + \angle ACB = 180^\circ</me>
+                <p>
+                    Substitute the known values to find the missing angle:
+                </p>
+                <me>\angle BAC + 90^\circ + 28^\circ = 180^\circ</me>
+                <me>\angle BAC + 118^\circ = 180^\circ</me>
+                <me>\angle BAC = 180^\circ - 118^\circ = 62^\circ</me>
+                <p>
+                    The measure of the angle <m>\angle BAC</m> is <m>62^\circ</m>.
+                </p>
+            </solution>
+        </example>
+
+        <example>
+            <statement>
+                <p>
+                    Points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> lie on a circle in that order. The chords <m>AC</m> and <m>BD</m> intersect at point <m>E</m>. If the inscribed angle <m>\angle ABD = 42^\circ</m> and <m>\angle BEC = 85^\circ</m>, calculate the measure of <m>\angle ACD</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    According to the Angles in the Same Segment Theorem, the angles subtended by the same arc <m>AD</m> at the circumference are equal:
+                </p>
+                <me>\angle ACD = \angle ABD</me>
+                <p>
+                    Since the problem states that <m>\angle ABD = 42^\circ</m>, we can conclude directly without further calculation that:
+                </p>
+                <me>\angle ACD = 42^\circ</me>
+            </solution>
+        </example>
+
+        <example>
+            <statement>
+                <p>
+                    In a circle with center <m>O</m>, a triangle <m>OAB</m> is formed where <m>A</m> and <m>B</m> lie on the circumference. If the base angle <m>\angle OAB = 35^\circ</m>, find the measure of the central angle <m>\angle AOB</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Because the line segments <m>OA</m> and <m>OB</m> are lines drawn from the center <m>O</m> to the circumference, they are radii of the circle. Since all radii are equal in length:
+                </p>
+                <me>OA = OB</me>
+                <p>
+                    This makes triangle <m>OAB</m> an isosceles triangle, meaning the base angles opposite the equal sides are also equal:
+                </p>
+                <me>\angle OBA = \angle OAB = 35^\circ</me>
+                <p>
+                    The sum of angles in a triangle is <m>180^\circ</m>:
+                </p>
+                <me>\angle AOB + \angle OAB + \angle OBA = 180^\circ</me>
+                <me>\angle AOB + 35^\circ + 35^\circ = 180^\circ</me>
+                <me>\angle AOB + 70^\circ = 180^\circ</me>
+                <me>\angle AOB = 180^\circ - 70^\circ = 110^\circ</me>
+                <p>
+                    The central angle <m>\angle AOB</m> measures <m>110^\circ</m>.
+                </p>
+            </solution>
+        </example>
+
+        <example>
+            <statement>
+                <p>
+                    An arc <m>CD</m> subtends a central angle <m>\angle COD = 4x + 16^\circ</m> and an angle at the circumference <m>\angle CGD = 3x - 12^\circ</m>. Solve for <m>x</m> and calculate the actual measures of both angles.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Apply the Angle at the Centre Theorem to establish the mathematical relationship:
+                </p>
+                <me>\angle COD = 2 \times \angle CGD</me>
+                <p>
+                    Substitute the given algebraic expressions into the equation:
+                </p>
+                <me>4x + 16 = 2(3x - 12)</me>
+                <p>
+                    Expand the right side of the equation:
+                </p>
+                <me>4x + 16 = 6x - 24</me>
+                <p>
+                    Rearrange the equation to isolate the terms with <m>x</m> on one side:
+                </p>
+                <me>16 + 24 = 6x - 4x</me>
+                <me>40 = 2x</me>
+                <me>x = 20</me>
+                <p>
+                    Substitute <m>x = 20</m> back into the expressions to find the angle measurements:
+                </p>
+                <me>\angle CGD = 3(20) - 12 = 60 - 12 = 48^\circ</me>
+                <me>\angle COD = 4(20) + 16 = 80 + 16 = 96^\circ</me>
+                <p>
+                    Verifying the result: <m>2 \times 48^\circ = 96^\circ</m>, which matches the theorem.
+                </p>
+            </solution>
+        </example>
+    
 
     <!-- <example>
         <statement>
@@ -181,6 +483,114 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
+     <exercises xml:id="exercises-circle-geometry">
+        <title>Exercises</title>
+
+        <exercise>
+            <statement>
+                <p>
+                    A circular community shield design has three decorative brass studs placed at points <m>A</m>, <m>B</m>, and <m>P</m> on its outer rim. If the center of the shield is <m>O</m> and the central angle is <m>\angle AOB = 130^\circ</m>, calculate the angle <m>\angle APB</m> on the rim.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    By the Angle at the Centre Theorem, the angle at the center is twice the angle at the circumference:
+                </p>
+                <me>\angle APB = \frac{\angle AOB}{2}</me>
+                <me>\angle APB = \frac{130^\circ}{2} = 65^\circ</me>
+                <p>
+                    The angle on the rim is <m>65^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    In a local irrigation layout, water pipes form a triangle <m>XYZ</m> inside a circular holding field with center <m>O</m>. The main feed pipe <m>XZ</m> is a straight line passing through the center of the reservoir. If <m>\angle YXZ = 55^\circ</m>, calculate the angle <m>\angle YZX</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since <m>XZ</m> passes through the center, it is a diameter. By the Angle in a Semicircle Theorem:
+                </p>
+                <me>\angle XYZ = 90^\circ</me>
+                <p>
+                    Using the sum of angles in triangle <m>XYZ</m>:
+                </p>
+                <me>\angle YXZ + \angle XYZ + \angle YZX = 180^\circ</me>
+                <me>55^\circ + 90^\circ + \angle YZX = 180^\circ</me>
+                <me>145^\circ + \angle YZX = 180^\circ</me>
+                <me>\angle YZX = 180^\circ - 145^\circ = 35^\circ</me>
+                <p>
+                    The angle <m>\angle YZX</m> is <m>35^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Four peg markers are placed on a circular school playing field at points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> in clockwise order. Students tie ropes between the pegs forming paths <m>AC</m>, <m>AD</m>, <m>BC</m>, and <m>BD</m>. If the angle formed at peg <m>C</m> by paths <m>AC</m> and <m>BC</m> is <m>\angle ACB = 47^\circ</m>, state the measure of <m>\angle ADB</m> and explain your reasoning.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    By the Angles in the Same Segment Theorem, angles subtended by the same arc at the circumference in the same segment are equal:
+                </p>
+                <me>\angle ADB = \angle ACB = 47^\circ</me>
+                <p>
+                    Therefore, the measure of <m>\angle ADB</m> is <m>47^\circ</m> because both angles are subtended by the same boundary arc <m>AB</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A circular structural gear has points <m>M</m> and <m>N</m> on its perimeter. The axle is at the center <m>O</m>. A sensor at point <m>K</m> on the outer shell measures the angle <m>\angle MKN = 41^\circ</m>. What central angle <m>\angle MON</m> is formed by the spokes connecting <m>M</m> and <m>N</m> to the axle <m>O</m>?
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    By applying the Angle at the Centre Theorem:
+                </p>
+                <me>\angle MON = 2 \times \angle MKN</me>
+                <me>\angle MON = 2 \times 41^\circ = 82^\circ</me>
+                <p>
+                    The central angle formed by the spokes is <m>82^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    In a circle with center <m>O</m>, the central angle subtended by arc <m>AB</m> is <m>\angle AOB = 5y - 20^\circ</m>. If the angle subtended by the same arc at the circumference is <m>\angle APB = 2y + 5^\circ</m>, solve for <m>y</m> and calculate the size of <m>\angle APB</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    By the Angle at the Centre Theorem:
+                </p>
+                <me>\angle AOB = 2 \times \angle APB</me>
+                <p>
+                    Substitute the algebraic expressions:
+                </p>
+                <me>5y - 20 = 2(2y + 5)</me>
+                <me>5y - 20 = 4y + 10</me>
+                <p>
+                    Solve for <m>y</m>:
+                </p>
+                <me>5y - 4y = 10 + 20</me>
+                <me>y = 30</me>
+                <p>
+                    Now calculate the size of <m>\angle APB</m>:
+                </p>
+                <me>\angle APB = 2(30) + 5^\circ = 65^\circ</me>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- <exercises>
         <exercise>

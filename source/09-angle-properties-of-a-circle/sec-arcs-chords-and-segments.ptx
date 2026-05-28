@@ -43,36 +43,125 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    Learners identify and describe arcs, chords, and segments in circles, and distinguish between minor and major arcs.
+                </p>
+            </li>
+            <li>
+                <title>Materials Needed</title>
+                <p>
+                    Paper, compass, ruler, protractor, and a set of coloured pencils or markers.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Guide learners through diagrams and ask questions that focus on identifying parts of a circle and comparing curved and straight boundaries.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p><strong>Part A: Draw and Identify</strong></p>
+            <p>
+                Learners work in groups to study or draw a circle with centre <m>O</m> and points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> on the circumference. In each group, identify and label the following on your diagram:
+            </p>
+            <ol>
+                <li><p><strong>The chord AB</strong>: Draw a straight line connecting points <m>A</m> and <m>B</m>.</p></li>
+                <li><p><strong>The minor arc ACB</strong>: Trace the shortest curved path along the edge from <m>A</m> to <m>B</m> passing through <m>C</m>.</p></li>
+                <li><p><strong>The major arc ADB</strong>: Trace the longer curved path along the edge from <m>A</m> to <m>B</m> passing through <m>D</m>.</p></li>
+                <li><p><strong>The segment defined by chord CD</strong>: Shade the region enclosed between the straight line chord <m>CD</m> and the boundary arc <m>CD</m>.</p></li>
+                <li><p><strong>The sector formed by radii OC and OD</strong>: Shade the region enclosed by the center <m>O</m> and the radii <m>OC</m> and <m>OD</m> (resembling a pizza slice).</p></li>
+            </ol>
+            <p><strong>Part B: Hands-On Measurements</strong></p>
+            <ul>
+                <li><p><strong>The Chord Length:</strong> Use a ruler to measure the straight line <m>AB</m> in centimeters. Note how it compares to the diameter (a chord can never be longer than the diameter).</p></li>
+                <li><p><strong>The Sector Angle (<m>\theta</m>):</strong> Use a protractor to measure the central angle <m>\angle COD</m> at the center.</p></li>
+                <li><p><strong>The Arc Fraction:</strong> Divide your measured angle by <m>360^\circ</m> to find what fraction of the circle your sector represents: <m>\text{Fraction} = \frac{\theta}{360^\circ}</m>.</p></li>
+            </ul>
         </statement>
-    </activity> -->
+        <figure>
+            <caption>Circle diagram showing chord AB, minor arc ACB, major arc ADB, segment CD, and sector COD.</caption>
+            <image>
+                <shortdescription>A circle with labeled points A, B, C, D, and O showing the chords, arcs, sector, and segment shading.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Draw circle and center
+                        \draw[thick] (0,0) circle (2.5);
+                        \coordinate (O) at (0,0);
+                        
+                        % Define angles for points
+                        \coordinate (A) at (160:2.5);
+                        \coordinate (B) at (20:2.5);
+                        \coordinate (C) at (-40:2.5);
+                        \coordinate (D) at (120:2.5);
+                        
+                        % 1. Shade Segment CD (between chord CD and arc CD)
+                        \fill[gray!20] (D) -- (C) arc (-40:120:2.5) -- cycle;
+                        
+                        % 2. Shade Sector COD (light blue tint)
+                        \fill[blue!10] (O) -- (C) arc (-40:120:2.5) -- cycle;
+                        
+                        % Redraw lines so they sit on top of shading
+                        \draw[thick] (0,0) circle (2.5);
+                        \draw[thick, black] (A) -- (B); % Chord AB
+                        \draw[thick, dashed, black] (C) -- (D); % Chord CD
+                        
+                        \draw[red, thick] (O) -- (C); % Radius OC
+                        \draw[red, thick] (O) -- (D); % Radius OD
+                        
+                        % Labels
+                        \node[above left] at (A) {A};
+                        \node[above right] at (B) {B};
+                        \node[below right] at (C) {C};
+                        \node[above left] at (D) {D};
+                        \node[below] at (O) {O};
+                        
+                        \node[below right] at (1.1,-0.3) {ACB (Minor Arc)};
+                        \node[left] at (-1.7,0.3) {ADB (Major Arc)};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </activity>
+
+    <insight>
+        <p>
+            Understanding arcs, chords, and segments strengthens learners' ability to read circle diagrams and prepares them for reasoning about angles, lengths, and areas using the following calculation steps:
+        </p>
+        <ul>
+            <li>
+                <p><strong>Arc Length:</strong> An arc is a curved portion of the circumference. To work out its length, multiply the total circumference by the fraction of the circle's central angle <m>\theta</m>:</p>
+                <me>\text{Arc Length} = \frac{\theta}{360^\circ} \times 2\pi r</me>
+            </li>
+            <li>
+                <p><strong>Sector Area:</strong> A sector is a region bounded by two radii and an arc. To work out its area, multiply the total area of the circle by the fraction of the central angle:</p>
+                <me>\text{Area of Sector} = \frac{\theta}{360^\circ} \times \pi r^2</me>
+            </li>
+            <li>
+                <p><strong>Chord Length:</strong> A chord is a straight line joining two points on the circle. If the radius <m>r</m> and the central angle <m>\theta</m> are known, the chord length can be calculated using trigonometry:</p>
+                <me>\text{Chord Length} = 2r \sin\left(\frac{\theta}{2}\right)</me>
+            </li>
+            <li>
+                <p><strong>Segment Area:</strong> A segment is the region between a chord and its associated arc. To work out its area, subtract the area of the central triangle formed by the radii and the chord from the total sector area:</p>
+                <me>\text{Area of Segment} = \text{Area of Sector} - \text{Area of Triangle}</me>
+                <me>\text{Area of Segment} = \left(\frac{\theta}{360^\circ} \times \pi r^2\right) - \left(\frac{1}{2}r^2 \sin\theta\right)</me>
+            </li>
+        </ul>
+    </insight>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -115,30 +204,243 @@
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    Examples
+    <example>
         <statement>
+            <p>
+                Find the length of the minor arc <m>ACB</m> in a circle with a radius of <m>10\text{ cm}</m> and a central angle <m>\angle AOB = 60^\circ</m>. Use <m>\pi \approx 3.14</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                First, identify the given variables: radius <m>r = 10\text{ cm}</m> and central angle <m>\theta = 60^\circ</m>.
+            </p>
+            <p>
+                Using the arc length formula:
+            </p>
+            <me>\text{Arc Length} = \frac{\theta}{360^\circ} \times 2\pi r</me>
+            <p>
+                Substitute the values into the formula:
+            </p>
+            <me>\text{Arc Length} = \frac{60}{360} \times 2 \times 3.14 \times 10</me>
+            <me>\text{Arc Length} = \frac{1}{6} \times 62.8 \approx 10.47\text{ cm}</me>
+            <p>
+                Thus, the length of the minor arc <m>ACB</m> is approximately <m>10.47\text{ cm}</m>.
+            </p>
+            <figure>
+                <caption>Diagram showing a circle with a radius of 10 cm and a central angle of 60 degrees forming minor arc ACB.</caption>
+                <image>
+                    <shortdescription>A circle with radius 10cm and central angle 60 degrees pointing to arc ACB.</shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+                            \draw[thick] (0,0) circle (2.5);
+                            \coordinate (O) at (0,0);
+                            \coordinate (A) at (30:2.5);
+                            \coordinate (B) at (90:2.5);
+                            
+                            \draw[red, thick] (O) -- (A) node[midway, below right] {10 cm};
+                            \draw[red, thick] (O) -- (B);
+                            \draw[blue, very thick] (A) arc (30:90:2.5);
+                            
+                            \node[right] at (A) {A};
+                            \node[above] at (B) {B};
+                            \node[below left] at (O) {O};
+                            \node[above right] at (60:2.5) {C};
+                            
+                            \draw (0.4,0) arc (0:60:0.4);
+                            \path (60:0.7) node {\small $60^\circ$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The length of a minor arc is <m>15.7\text{ cm}</m>. If the radius of the circle is <m>12\text{ cm}</m>, find the central angle <m>\theta</m> that subtends this arc. Use <m>\pi \approx 3.14</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                Identify the variables: Arc Length <m>= 15.7\text{ cm}</m> and radius <m>r = 12\text{ cm}</m>. Rearrange the arc length formula to solve for the central angle <m>\theta</m>:
+            </p>
+            <me>\theta = \frac{\text{Arc Length} \times 360^\circ}{2\pi r}</me>
+            <p>
+                Substitute the given values into the rearranged formula:
+            </p>
+            <me>\theta = \frac{15.7 \times 360}{2 \times 3.14 \times 12}</me>
+            <me>\theta = \frac{5652}{75.36} = 75^\circ</me>
+            <p>
+                The central angle subtended by the arc is <m>75^\circ</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A pizza has a diameter of <m>40\text{ cm}</m> and is cut into 8 equal slices. Find the area of one slice (sector). Use <m>\pi \approx 3.14</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                First, find the radius from the diameter: <m>r = \frac{40}{2} = 20\text{ cm}</m>. Since the pizza is cut into 8 equal sectors, the central angle <m>\theta</m> for one slice is:
+            </p>
+            <me>\theta = \frac{360^\circ}{8} = 45^\circ</me>
+            <p>
+                Now, apply the sector area formula:
+            </p>
+            <me>\text{Area of Sector} = \frac{\theta}{360^\circ} \times \pi r^2</me>
+            <me>\text{Area of Sector} = \frac{45}{360} \times 3.14 \times (20)^2</me>
+            <me>\text{Area of Sector} = \frac{1}{8} \times 3.14 \times 400 = 157\text{ cm}^2</me>
+            <p>
+                The area of one slice of pizza is <m>157\text{ cm}^2</m>.
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Find the area of the minor segment defined by chord <m>AB</m> in a circle with a radius of <m>8\text{ cm}</m>, given that the central angle <m>\angle AOB</m> is <m>90^\circ</m>. Use <m>\pi \approx 3.14</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The area of a segment is calculated by subtracting the area of the central triangle <m>AOB</m> from the area of the sector <m>AOB</m>:
+            </p>
+            <me>\text{Area of Segment} = \text{Area of Sector} - \text{Area of Triangle}</me>
+            <p>
+                1. Calculate the Area of Sector <m>AOB</m>:
+            </p>
+            <me>\text{Area of Sector} = \frac{90}{360} \times 3.14 \times 8^2 = 0.25 \times 3.14 \times 64 = 50.24\text{ cm}^2</me>
+            <p>
+                2. Calculate the Area of Triangle <m>AOB</m>. Since the central angle is <m>90^\circ</m>, this is a right-angled triangle with base and height equal to the radius (<m>8\text{ cm}</m>):
+            </p>
+            <me>\text{Area of Triangle} = \frac{1}{2} \times \text{base} \times \text{height} = \frac{1}{2} \times 8 \times 8 = 32\text{ cm}^2</me>
+            <p>
+                3. Subtract the triangle area from the sector area:
+            </p>
+            <me>\text{Area of Segment} = 50.24 - 32 = 18.24\text{ cm}^2</me>
+            <p>
+                The area of the minor segment is <m>18.24\text{ cm}^2</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A chord subtends a central angle of <m>120^\circ</m> in a circle with a radius of <m>6\text{ cm}</m>. Calculate the length of this chord. Use <m>\sin(60^\circ) \approx 0.866</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We can calculate the chord length directly using the trigonometric chord formula:
+            </p>
+            <me>\text{Chord Length} = 2r \sin\left(\frac{\theta}{2}\right)</me>
+            <p>
+                Substitute the given values <m>r = 6\text{ cm}</m> and <m>\theta = 120^\circ</m>:
+            </p>
+            <me>\text{Chord Length} = 2 \times 6 \times \sin\left(\frac{120^\circ}{2}\right)</me>
+            <me>\text{Chord Length} = 12 \times \sin(60^\circ)</me>
+            <me>\text{Chord Length} = 12 \times 0.866 = 10.392\text{ cm}</me>
+            <p>
+                The length of the chord is approximately <m>10.39\text{ cm}</m>.
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
+
+    <exercises>
+        <exercise>
+            <statement>
+                <p>
+                    In a circle with centre <m>O</m> and radius <m>14\text{ cm}</m>, a central angle <m>\angle POQ</m> is <m>40^\circ</m>. Find the length of the minor arc <m>PQ</m>. Use <m>\pi \approx 3.14</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Using the arc length formula:
+                </p>
+                <me>\text{Arc Length} = \frac{\theta}{360^\circ} \times 2\pi r</me>
+                <me>\text{Arc Length} = \frac{40}{360} \times 2 \times 3.14 \times 14 = \frac{1}{9} \times 87.92 \approx 9.77\text{ cm}</me>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A sector has a central angle of <m>150^\circ</m> and an area of <m>235.5\text{ cm}^2</m>. What is the radius of the circle? Use <m>\pi \approx 3.14</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Using the sector area formula, solve for <m>r^2</m>:
+                </p>
+                <me>\text{Area} = \frac{\theta}{360^\circ} \times \pi r^2 \implies r^2 = \frac{\text{Area} \times 360^\circ}{\theta \times \pi}</me>
+                <me>r^2 = \frac{235.5 \times 360}{150 \times 3.14} = \frac{84780}{471} = 180</me>
+                <me>r = \sqrt{180} \approx 13.42\text{ cm}</me>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Calculate the area of the major sector defined by a central angle of <m>70^\circ</m> in a circle with a radius of <m>5\text{ cm}</m>. Use <m>\pi \approx 3.14</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The central angle for the major sector is:
+                </p>
+                <me>\theta_{\text{major}} = 360^\circ - 70^\circ = 290^\circ</me>
+                <p>
+                    Using the sector area formula:
+                </p>
+                <me>\text{Area} = \frac{290}{360} \times 3.14 \times 5^2 \approx 0.8056 \times 78.5 \approx 63.24\text{ cm}^2</me>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Find the area of the minor segment formed by chord <m>RS</m> in a circle with radius <m>12\text{ cm}</m>, given that the central angle <m>\angle ROS</m> is <m>60^\circ</m>. Use <m>\pi \approx 3.14</m> and <m>\sqrt{3} \approx 1.732</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    1. Calculate the Sector Area:
+                </p>
+                <me>\text{Area of Sector} = \frac{60}{360} \times 3.14 \times 12^2 = \frac{1}{6} \times 3.14 \times 144 = 75.36\text{ cm}^2</me>
+                <p>
+                    2. Calculate the Area of Triangle <m>ROS</m>. Since the central angle is <m>60^\circ</m> and the two sides are radii, <m>\triangle ROS</m> is an equilateral triangle with side length <m>s = 12\text{ cm}</m>:
+                </p>
+                <me>\text{Area of Triangle} = \frac{\sqrt{3}}{4}s^2 = \frac{1.732}{4} \times 12^2 = 0.433 \times 144 = 62.352\text{ cm}^2</me>
+                <p>
+                    3. Calculate Segment Area:
+                </p>
+                <me>\text{Area of Segment} = 75.36 - 62.352 = 13.008\text{ cm}^2 \approx 13.01\text{ cm}^2</me>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A circle has a radius of <m>9\text{ cm}</m>. A sector formed by radii <m>OT</m> and <m>OU</m> has an area of <m>63.585\text{ cm}^2</m>. Calculate the measure of the central angle <m>\angle TOU</m> in degrees. Use <m>\pi \approx 3.14</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Using the sector area formula, solve for <m>\theta</m>:
+                </p>
+                <me>\text{Area} = \frac{\theta}{360^\circ} \times \pi r^2 \implies \theta = \frac{\text{Area} \times 360^\circ}{\pi r^2}</me>
+                <me>\theta = \frac{63.585 \times 360}{3.14 \times 9^2} = \frac{22890.6}{3.14 \times 81} = \frac{22890.6}{254.34} = 90^\circ</me>
+                <p>
+                    The measure of the central angle <m>\angle TOU</m> is <m>90^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- If STACK questions are included, uncomment this: -->
 

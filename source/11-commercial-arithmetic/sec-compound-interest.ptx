@@ -71,6 +71,112 @@
         </axiom> -->
 
     <!-- Add Activity -->
+     <activity>
+        <statement>
+            <p>
+                <term>Work in Groups</term>
+            </p>
+            <p>
+                A youth group in Kisumu County want to invest Ksh <m>10,000</m> for <m>3</m> years. The bank offers two investment options.
+            </p>
+            <p>
+                Option A : The interest is calculated on the original amount for the period of investment.
+            </p>
+            <p>
+                Option B : The interest is calculated on the original amount and the interest accumulated at the end of each year for the period of investment.
+            </p>
+            <p>
+                If the interest rate is given to be <m>10 \%</m> p.a for both options.
+            </p>
+            <p>
+                <term>In Groups</term> you are required to:
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Calculate using option A,
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Interest earned each year for the three years?
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Total interest earned each year for the three years?
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Total amount at the end of three years?
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                            Does the interest earned change each year? What stays constant in the system? Why?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate using option B,
+                        </p>
+                        <p>
+                            <ol marker="(i)">
+                                <li>
+                                    <p>
+                                        Interest earned each year for the three years?
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Total interest earned each year for the three years?
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Total amount at the end of three years?
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                            Does the interest earned change each year? What is changing in the system? Why?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <term>Explore in your groups</term> how to express the interest and totals earned each year in option B in power form.
+            </p>
+            <p>
+                Predict the amount after:
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>4</m> years?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>5</m> years?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>T</m> years?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            
+        </statement>
+     </activity>
 
     <!-- <activity>
         <statement>
@@ -113,6 +219,84 @@
 
     <!-- <insight>
     </insight> -->
+    <insight>
+        <p>
+            From the learner experience we can get the amount by 
+        </p>
+        <p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Amount after year <m>1</m>
+                    </p>
+                    <p>
+                        <md>
+                            <mrow>110,000 = \amp \; 100,000 + 10,000 </mrow>
+                            <mrow> = \amp \; 100,000\left(1 + 0.1\right) </mrow>
+                            <mrow> = \amp \; 100,000 \left( 1 + \frac{10}{100}\right) </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Amount after <m>2</m> years
+                    </p>
+                    <p>
+                        Notice that here our <m>P =\; \text{Ksh}\;110,000</m>
+                    </p>
+                    <p>
+                        <md>
+                            <mrow>\text{Interest} \; =\amp \; \frac{R}{100} \times P </mrow>
+                            <mrow> I = \amp \; \frac{10}{100}\times 100,000\left(1 + \frac{10}{100}\right) </mrow>
+                            <mrow> A = \amp \; P + I </mrow>
+                            <mrow> = \amp \; 100,000 \left(1 + \frac{10}{100}\right) +  \frac{10}{100}\times 100,000\left(1 + \frac{10}{100}\right) </mrow>
+                            <mrow> = \amp \; 100,000 \left(1 + \frac{10}{100}\right) \left(1 + \frac{10}{100}\right) </mrow>
+                            <mrow> 121,000 = \amp \;100,000 \left(1 + \frac{10}{100}\right)^2  </mrow>
+                        </md>
+                        
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What is the amount after <m>3,4,5</m> years?
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            The general formula for Compound interest is therefore;
+        </p>
+        <p>
+            <md>
+                <mrow> A = \amp \; P \left( 1 + \frac{R}{100}\right) ^ T </mrow>
+                <mrow> CI = \amp \; A - P </mrow>
+            </md>
+            where
+            <ol marker="(i)">
+                <li>
+                    <p>
+                        <m>A</m> is the amount,
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>P</m> is the principal,
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>R</m> is the rate,
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>T</m> is the time in years,
+                    </p>
+                </li>
+            </ol>
+            
+        </p>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -123,12 +307,12 @@
     <example>
         <statement>
             <p>
-              Onyimbo invest Ksh <m>3,000</m> in an investment account paying <m>3</m> % interest compounded quarterly, how much will the account be worth in <m>10</m> years?  
+              Onyimbo invest Ksh <m>3,000</m> in an investment account paying <m>3 \%</m> interest compounded quarterly, how much will the account be worth in <m>10</m> years?  
             </p>
         </statement>
         <solution>
             <p>
-                Because we are starting with Ksh <m>3,000</m>, <m>P=3000.</m> Our interest rate is <m>3</m> %, so <m>r=0.03.</m> Because we are compounding quarterly, we are compounding <m>4</m> times per year, so <m>n=4.</m> We want to know the value of the account in <m>10</m> years, so we are looking for <m>A(10),</m> the value when <m>t=10.</m>
+                Because we are starting with Ksh <m>3,000</m>, <m>P=3000.</m> Our interest rate is <m>3 \%</m>, so <m>r=0.03.</m> Because we are compounding quarterly, we are compounding <m>4</m> times per year, so <m>n=4.</m> We want to know the value of the account in <m>10</m> years, so we are looking for <m>A(10),</m> the value when <m>t=10.</m>
             </p>
             <p>
             <md>
@@ -150,7 +334,7 @@
         </statement>
         <solution>
             <p>
-                The nominal interest rate is <m>6</m> %, so <m>r=0.06.</m> Interest is compounded twice a year, so <m>n=2.</m>
+                The nominal interest rate is <m>6 \%</m>, so <m>r=0.06.</m> Interest is compounded twice a year, so <m>n=2.</m>
             </p>
             <p>
                 We want to find the initial investment, <m>P,</m> needed so that the value of the account will be worth Ksh <m>400,000</m> in <m>18</m> years. Substitute the given values into the compound interest formula, and solve for <m>P.</m>
@@ -170,7 +354,7 @@
     <example>
         <statement>
             <p>
-                An investor has <m>50,000</m> Shillings to save for <m>2</m> years. They are offered a nominal interest rate of <m>12</m> % per annum. Calculate and compare the total interest earned if the interest is
+                An investor has <m>50,000</m> Shillings to save for <m>2</m> years. They are offered a nominal interest rate of <m>12 \%</m> per annum. Calculate and compare the total interest earned if the interest is
             </p>
             <p>
                 <ol marker="(a)">
@@ -190,9 +374,9 @@
         <solution>
             <p>
                 <md>
-                    <mrow> P = \amp \; \text{Ksh} \; 50,000</mrow>
-                    <mrow> R = \amp 12 \;\text{%} </mrow>
-                    <mrow> T = \amp 2 \; \text{years} </mrow>
+                    <mrow> P \amp = \; \text{Ksh} \; 50,000</mrow>
+                    <mrow> R \amp = 12 \;\% </mrow>
+                    <mrow> T \amp = 2 \; \text{years} </mrow>
                 </md>
                 
             </p>
@@ -204,9 +388,9 @@
                     <li>
                         <p>
                            <md>
-                                <mrow> A = \amp 50,000 \left(1 + \frac{12}{100}\right)^2 </mrow>
-                                <mrow> = \amp 50,000(1.12)^2 </mrow>
-                                <mrow> = \amp 62,720 \;\text{shillings} </mrow>
+                                <mrow> A \amp = 50,000 \left(1 + \frac{12}{100}\right)^2 </mrow>
+                                <mrow> \amp = 50,000(1.12)^2 </mrow>
+                                <mrow> \amp = 62,720 \;\text{shillings} </mrow>
                            </md>
                             
                         </p>
@@ -216,14 +400,14 @@
                     </li>
                     <li>
                         <p>
-                            We adjust the rates to <m>R = \frac{12\;\text{%}}{2} = 6 \;\text{%} </m> and time to <m>4 \;\text{years}</m>
+                            We adjust the rates to <m>R = \frac{12\;\%}{2} = 6 \;\% </m> and time to <m>4 \;\text{years}</m>
                         </p>
                         <p>
                             Applying the compound interest formula gives
                             <md>
-                                <mrow> A = \amp \;50,000 \left(1 + \frac{6}{100}\right)^4</mrow>
-                                <mrow> = \amp \;50,000(1.006)^4 </mrow>
-                                <mrow> = \amp\; 63,123.85 \;\text{shillings} </mrow>
+                                <mrow> A \amp = \;50,000 \left(1 + \frac{6}{100}\right)^4</mrow>
+                                <mrow> \amp = \;50,000(1.006)^4 </mrow>
+                                <mrow> \amp =\; 63,123.85 \;\text{shillings} </mrow>
                             </md>
                             
                         </p>
@@ -244,12 +428,12 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                           <alert>Bank A :</alert> Offers <m>12</m> % per annum compounded Quarterly.
+                           <alert>Bank A :</alert> Offers <m>12 \%</m> per annum compounded Quarterly.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <alert>Bank B :</alert> Offers <m>12.5</m> % per annum compounded Annually.
+                            <alert>Bank B :</alert> Offers <m>12.5 \%</m> per annum compounded Annually.
                         </p>
                     </li>
                 </ol>
@@ -263,12 +447,12 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            Adjust the rates <m>R = \frac{12 \;\text{%}}{4} = 3 \;\text{%}</m>
+                            Adjust the rates <m>R = \frac{12 \;\%}{4} = 3 \;\%</m>
                         </p>
                         <p>
                             <md>
-                                <mrow> A = \amp \;100,000(1+0.03)^4</mrow>
-                                <mrow> = \amp \; 112,550.88 \;\text{shillings}</mrow>
+                                <mrow> A \amp = \;100,000(1+0.03)^4</mrow>
+                                <mrow> \amp = \; 112,550.88 \;\text{shillings}</mrow>
                             </md>
                             
                         </p>
@@ -279,8 +463,8 @@
                     <li>
                         <p>
                             <md>
-                                <mrow> A = \amp \;100,000(1+0.125)^1</mrow>
-                                <mrow> = \amp \; 122,500 \;\text{shillings}</mrow>
+                                <mrow> A \amp = \;100,000(1+0.125)^1</mrow>
+                                <mrow> \amp = \; 122,500 \;\text{shillings}</mrow>
                             </md>
                         </p>
                         <p>

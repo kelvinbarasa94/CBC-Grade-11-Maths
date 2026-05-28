@@ -8,197 +8,189 @@
             <dl>
                 <li>
                     <title>Strand</title>
-                    <p>
-                        3.0 Statistics and Probability
-                    </p>
+                    <p>3.0 Statistics and Probability</p>
                 </li>
                 <li>
                     <title>Sub-Strand</title>
-                    <p>
-                        3.1 Permutations and Combinations
-                    </p>
+                    <p>3.1 Permutations and Combinations</p>
                 </li>
                 <li>
                     <title>Specific Learning Outcomes</title> 
                     <p>
-                            <ul>
-                              <li>Apply permutations and combinations to real life situations</li>
-                              <li>Explore the use of permutations and combinations in real life situations</li>
-                            </ul>
+                        <ul>
+                            <li>Apply permutations and combinations to real life situations</li>
+                            <li>Explore the use of permutations and combinations in real life situations</li>
+                        </ul>
                     </p>
                 </li>
                 <li component="lesson-plan">
                     <title>Grade Level</title>
-                    <p>
-                        11
-                    </p>
+                    <p>11</p>
                 </li>
                 <li component="lesson-plan">
                     <title>Estimated Duration</title>
-                    <p>
-                        40 minutes
-                    </p>
+                    <p>40 minutes</p>
                 </li>
             </dl>
             </p>
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
             <li>
                 <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
+                <p>10 minutes</p>
             </li>
             <li>
                 <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
+                <p>To distinguish between 'order matters' and 'grouping matters' in everyday logic.</p>
             </li>
-            </dl>
+            <li>
+                <title>Teacher's Role</title>
+                <p>Pose a scenario: "A coach picks a Captain and a Vice-Captain" vs "A coach picks two players to carry the ball bag." Ask students why the second scenario results in fewer unique possibilities.</p>
+            </li>
+        </dl>
+    </axiom>
+
+    <activity>
+        <title>The Menu Planner</title>
+        <statement>
+            <p>
+                A local restaurant offers a "Lunch Special" where you choose 3 side dishes from a list of 8 options (Chips, Matoke, Rice, Beans, Beef, Maize, Fruit, and Soup).
+                <ol>
+                    <li>If you choose Chips, Matoke, and Rice, is that a different meal than choosing Rice, Matoke, and Chips?</li>
+                    <li>How many different side-dish combinations can a customer order?</li>
+                    <li>If the restaurant decides to rank the sides as "Primary," "Secondary," and "Tertiary," how would the calculation change?</li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+
+    <insight>
+        <title><p>Identifying Combinations in Daily Life</p></title>
+        <p>
+            In real-world applications, combinations appear whenever we are forming a <strong>collection</strong> or <strong>subset</strong> where the individual items do not have unique roles or rankings.
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+        <p>
+            <strong>Common Real-Life Triggers:</strong>
+            <ul>
+                <li><strong>Sampling:</strong> Selecting a group of people for a survey or a medical trial.</li>
+                <li><strong>Games of Chance:</strong> Card games (poker hands) and lottery draws where the order of cards/numbers dealt doesn't change the hand.</li>
+                <li><strong>Resource Allocation:</strong> Choosing which projects to fund from a pool of proposals.</li>
+            </ul>
+        </p>
+        <p>
+            <strong>The Mental Filter:</strong>
+            <line>If swapping two selected items results in the exact same outcome, it is a <strong>Combination</strong>.</line>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
+        <title>Medical Research</title>
         <statement>
+            <p>1. A doctor needs to select 5 patients from a group of 12 volunteers to test a new vitamin. How many different groups can be formed?</p>
         </statement>
         <solution>
+            <p>
+                Since all 5 patients are receiving the same vitamin, their order of selection is irrelevant.
+                <me>_{12}C_5 = \frac{12!}{5!(12-5)!} = \frac{12 \times 11 \times 10 \times 9 \times 8}{5 \times 4 \times 3 \times 2 \times 1} = 792 \text{ groups.}</me>
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Quality Control</title>
         <statement>
+            <p>2. A factory inspector picks 3 smartphones at random from a box of 20 to check for defects. How many different samples can the inspector choose?</p>
         </statement>
         <solution>
+            <p>
+                Testing phone A, B, and C is the same as testing C, B, and A.
+                <me>_{20}C_3 = \frac{20 \times 19 \times 18}{3 \times 2 \times 1} = 1,140 \text{ possible samples.}</me>
+            </p>
         </solution>
     </example>
 
     <example>
+        <title>Social Committee</title>
         <statement>
+            <p>3. A company has 15 employees. They want to choose a 4-person team to plan the office party. How many different teams are possible?</p>
         </statement>
         <solution>
+            <p>
+                <me>_{15}C_4 = \frac{15 \times 14 \times 13 \times 12}{4 \times 3 \times 2 \times 1} = 1,365 \text{ teams.}</me>
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>A student must answer any 7 out of 10 questions on a history exam. How many ways can the student choose the questions?</p>
+            </statement>
             <solution>
+                <p><me>_{10}C_7 = _{10}C_3 = \frac{10 \times 9 \times 8}{6} = 120 \text{ ways.}</me></p>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>A pizza shop offers 10 toppings. How many different 3-topping pizzas can be made?</p>
+            </statement>
+            <solution>
+                <p><me>_{10}C_3 = 120 \text{ pizzas.}</me></p>
+            </solution>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>A jury of 12 people is to be selected from a pool of 30 citizens. How many different juries are possible?</p>
+            </statement>
+            <solution>
+                <p><me>_{30}C_{12} = 86,493,225 \text{ juries.}</me></p>
+            </solution>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
+        <exercise>
+            <statement>
+                <p>In a deck of 52 cards, how many different 5-card hands can be dealt?</p>
+            </statement>
+            <solution>
+                <p><me>_{52}C_5 = 2,598,960 \text{ hands.}</me></p>
+            </solution>
+        </exercise>
+    </exercises>
+
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
-
         <table>
-            <title>Differentiation</title>
+            <title>Differentiation Strategies</title>
             <tabular halign="left">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
+                    <cell>Use "Role Play": Assign 3 students roles (Chair, Secretary) and then no roles (Team). Count the outcomes physically.</cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
+                    <cell>Focus on keyword identification (e.g., "group," "sample," "selection") vs (e.g., "rank," "arrange," "order").</cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
+                    <cell>Solve multi-step combinations (e.g., "Select 3 men from 8 and 2 women from 10 to form a committee").</cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

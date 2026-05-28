@@ -200,4 +200,437 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+
+    <paragraphs>
+
+        <title>Common Types of Functions</title>
+
+        <p>
+            Here are the foundational categories of functions you will frequently encounter:
+        </p>
+
+        <p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        <term>Linear Functions:</term> Written in the form <m>f(x) = mx + c</m> (or <m>y = mx + b</m>). These functions graph as perfectly straight lines. They possess a constant rate of change, represented by the slope <m>m</m>. The value <m>c</m> represents the <m>y</m>-intercept.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Quadratic Functions:</term> Written in the form <m>f(x) = ax^2 + bx + c</m>. Their graphs are U-shaped curves called <term>parabolas</term>. A key feature of a parabola is its turning point, known as the <term>vertex</term>, which represents the absolute maximum or minimum value of the function.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Polynomial Functions:</term> These are broader generalizations that include linear and quadratic functions, as well as higher-degree functions like cubics (<m>x^3</m>) and quartics (<m>x^4</m>). They consist of variables with non-negative integer exponents. Their graphs are smooth, continuous curves that can have multiple turning points.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>Trigonometric Functions:</term> Functions such as <m>f(x) = \sin(x)</m>, <m>f(x) = \cos(x)</m>, and <m>f(x) = \tan(x)</m>. These functions relate angles to the ratios of side lengths in right triangles. Graphically, they are <term>periodic</term>, meaning they repeat their wave-like patterns infinitely over regular intervals.
+                    </p>
+                </li>
+            </ol>
+        </p>
+
+    </paragraphs>
+
+    <paragraphs>
+
+        <title>One-to-One Functions vs. Relations</title>
+
+        <p>
+            When categorizing how inputs map to outputs, it is crucial to distinguish between functions and general relations:
+        </p>
+
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <term>One-to-One Functions (Injective):</term> A function where every output value corresponds to exactly <em>one</em> unique input value. Graphically, these functions pass the <term>horizontal line test</term> (no horizontal line intersects the graph more than once). For example, <m>f(x) = 2x</m> is a one-to-one function.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <term>A "One-to-Many" Relation:</term> It is important to note that a "one-to-many" mapping is <alert>not a function</alert>. By definition, a function must have only one output for any given input. If one input yields multiple outputs (like a circle on a graph), it fails the <term>vertical line test</term> and is simply called a mathematical <em>relation</em>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+
+    </paragraphs>
+
+    <figure xml:id="fig-types-of-functions">
+
+        <caption>Graphs illustrating Linear, Quadratic, and Trigonometric functions.</caption>
+
+        <image xml:id="tikz-types-of-functions" width="100%">
+
+            <shortdescription>
+                Three graphs side-by-side. The first is a straight line, the second is a parabola opening upwards, and the third is a repeating sine wave.
+            </shortdescription>
+
+            <latex-image>
+                \begin{tikzpicture}[scale=0.8]
+
+                    % ================= LINEAR GRAPH ===================
+                    \begin{scope}[shift={(-6,0)}]
+                        \draw[-&gt;, thick] (-3,0) -- (3,0) node[below] {$x$};
+                        \draw[-&gt;, thick] (0,-2) -- (0,4) node[left] {$y$};
+                        
+                        % Graph
+                        \draw[blue, thick, domain=-2:2] plot (\x, {1.5*\x + 1});
+                        
+                        % Labels
+                        \node at (0,-3) {\textbf{Linear Function}};
+                        \node at (0,-3.5) {$f(x) = mx + c$};
+                    \end{scope}
+
+                    % ================= QUADRATIC GRAPH ===================
+                    \begin{scope}[shift={(0,0)}]
+                        \draw[-&gt;, thick] (-3,0) -- (3,0) node[below] {$x$};
+                        \draw[-&gt;, thick] (0,-2) -- (0,4) node[left] {$y$};
+                        
+                        % Graph
+                        \draw[red, thick, domain=-2:2, samples=100] plot (\x, {\x*\x - 1});
+                        
+                        % Vertex dot
+                        \filldraw[black] (0,-1) circle (2pt);
+                        \node at (0.5, -1) [below right] {\small Vertex};
+                        
+                        % Labels
+                        \node at (0,-3) {\textbf{Quadratic Function}};
+                        \node at (0,-3.5) {$f(x) = ax^2 + bx + c$};
+                    \end{scope}
+
+                    % ================= TRIGONOMETRIC GRAPH ===================
+                    \begin{scope}[shift={(6,0)}]
+                        \draw[-&gt;, thick] (-3,0) -- (3,0) node[below] {$x$};
+                        \draw[-&gt;, thick] (0,-2) -- (0,4) node[left] {$y$};
+                        
+                        % Graph
+                        \draw[purple, thick, domain=-3:3, samples=100] plot (\x, {1.5*sin(\x*100)});
+                        
+                        % Labels
+                        \node at (0,-3) {\textbf{Trigonometric Function}};
+                        \node at (0,-3.5) {$f(x) = \sin(x)$};
+                    \end{scope}
+
+                \end{tikzpicture}
+            </latex-image>
+
+        </image>
+
+    </figure>
+
+    <example>
+        <statement>
+            <p>
+                Identify the type of function for <m>f(x) = -3x + 7</m> and state its rate of change.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                This function is written in the form <m>f(x) = mx + c</m>. Therefore, it is a <alert>linear function</alert>.
+            </p>
+            <p>
+                The graph of this function is a straight line. Its rate of change is constant and is represented by the slope <m>m</m>. In this equation, the slope is <m>-3</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Consider the function <m>g(x) = 2x^2 - 8x + 5</m>. Identify the type of function and determine whether its vertex is a maximum or a minimum.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Because the highest exponent of the variable <m>x</m> is 2, this is a <alert>quadratic function</alert>. Its graph is a parabola.
+            </p>
+            <p>
+                To determine if the vertex is a maximum or minimum, we look at the leading coefficient, <m>a</m>. Here, <m>a = 2</m>. Since <m>a</m> is positive (<m>a &gt; 0</m>), the parabola opens upwards. 
+            </p>
+            <p>
+                Because the parabola opens upwards, its turning point (vertex) represents the lowest point on the graph. Therefore, the vertex is a <alert>minimum</alert>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Determine if the quadratic function <m>h(x) = x^2</m> is a one-to-one function.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                For a function to be one-to-one, every <m>y</m>-value must be paired with exactly one <m>x</m>-value. Let's test a couple of inputs:
+            </p>
+            <p>
+                If <m>x = 2</m>, <m>h(2) = 2^2 = 4</m>.
+            </p>
+            <p>
+                If <m>x = -2</m>, <m>h(-2) = (-2)^2 = 4</m>.
+            </p>
+            <p>
+                Because two different inputs (<m>2</m> and <m>-2</m>) yield the exact same output (<m>4</m>), the function fails the horizontal line test. Therefore, <m>h(x) = x^2</m> is <alert>not a one-to-one function</alert>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Classify the function <m>p(x) = 4x^5 - 3x^3 + x - 9</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                This function consists of multiple terms with variables raised to non-negative integer powers. Because the highest power is 5 (which is greater than 2), it is a higher-degree function.
+            </p>
+            <p>
+                Specifically, this is a <alert>polynomial function</alert> of degree 5.
+            </p>
+        </solution>
+    </example>
+
+    <exercises xml:id="exercise-types-of-functions">
+
+        <exercise>
+
+            <statement>
+
+                <p>
+                    Categorize each of the following equations as a Linear Function, Quadratic Function, Polynomial Function (higher degree), Trigonometric Function, or Not a Function (a Relation).
+                </p>
+
+                <p>
+                    <ol marker="1." cols="2">
+
+                        <li>
+                            <p>
+                                <m>f(x) = 5x - 12</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>g(x) = -x^2 + 4x + 1</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>h(x) = \cos(x) + 2</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>p(x) = 7x^4 - 2x^2</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>x^2 + y^2 = 25</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>q(x) = \frac{1}{2}x</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>r(x) = \tan(x)</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>s(x) = x^3 - 8</m>
+                            </p>
+                        </li>
+
+                    </ol>
+                </p>
+
+            </statement>
+
+            <answer>
+
+                <p>
+
+                    <ol marker="1." cols="2">
+
+                        <li>
+                            <p>
+                                Linear Function
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Quadratic Function
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Trigonometric Function
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Polynomial Function (Degree 4)
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Not a Function (Relation / Circle)
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Linear Function
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Trigonometric Function
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Polynomial Function (Cubic)
+                            </p>
+                        </li>
+
+                    </ol>
+
+                </p>
+
+            </answer>
+
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Determine whether each of the following descriptions represents a <alert>function</alert> or a <alert>relation that is not a function</alert>.
+                </p>
+                <p>
+                    <ol marker="a.">
+                        <li>
+                            <p>A graph of a circle with a radius of 3 centered at the origin.</p>
+                        </li>
+                        <li>
+                            <p>A mapping where the input is a student's ID number and the output is the student's legal first name.</p>
+                        </li>
+                        <li>
+                            <p>A set of coordinate pairs: <m>\{(1, 2), (2, 4), (1, 5), (3, 6)\}</m>.</p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="a.">
+                        <li>
+                            <p>Relation (fails the vertical line test)</p>
+                        </li>
+                        <li>
+                            <p>Function (each unique ID maps to exactly one name)</p>
+                        </li>
+                        <li>
+                            <p>Relation (the input 1 maps to multiple outputs: 2 and 5)</p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Which of the following functions are <alert>one-to-one</alert> (injective)? Explain your reasoning using the horizontal line test or algebraic properties.
+                </p>
+                <p>
+                    <ol marker="a.">
+                        <li>
+                            <p><m>f(x) = 3x - 2</m></p>
+                        </li>
+                        <li>
+                            <p><m>g(x) = |x|</m></p>
+                        </li>
+                        <li>
+                            <p><m>h(x) = x^3</m></p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="a.">
+                        <li>
+                            <p>One-to-one. It is a straight, slanted line with a constant slope, so it passes the horizontal line test.</p>
+                        </li>
+                        <li>
+                            <p>Not one-to-one. It forms a V-shape, meaning a positive and a negative input (e.g., <m>x = 2</m> and <m>x = -2</m>) share the exact same output (<m>2</m>).</p>
+                        </li>
+                        <li>
+                            <p>One-to-one. The cubic curve strictly increases across its entire domain, passing the horizontal line test.</p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A company calculates its daily revenue, <m>R</m>, based on the number of items sold, <m>x</m>, using the equation <m>R(x) = -2x^2 + 100x</m>.
+                </p>
+                <p>
+                    <ol marker="a.">
+                        <li>
+                            <p>What type of function is <m>R(x)</m>?</p>
+                        </li>
+                        <li>
+                            <p>Does the graph of this function have a maximum or a minimum turning point? Explain why.</p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="a.">
+                        <li>
+                            <p>Quadratic Function</p>
+                        </li>
+                        <li>
+                            <p>Maximum. The leading coefficient (<m>a = -2</m>) is a negative number, meaning the parabola opens downwards, making its vertex the highest point on the graph.</p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+        
+    </exercises>
+
 </section>

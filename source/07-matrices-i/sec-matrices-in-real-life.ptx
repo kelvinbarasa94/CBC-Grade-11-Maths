@@ -43,100 +43,468 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        20 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        Provide learners with an extended problem-solving experience that allows them to explore the use of matrices in real life situations.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        There is an optional interactive component to this Learner experience. If you do not have access to technology, you can still use the activity, but you may want to guide learners through the calculations for <m>A^n</m> by hand, and ask them to look for patterns in the entries of <m>A^n</m>. 
+                    </p>
+                </li>
+                <li>
+                    <title>Extension</title>
+                    <p>
+                        If learners are confident with the material, you can work through the proof that <m>\mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots = (I-A)^{-1}\mathbf{x}_0</m>, and explore its connection to geometric sequences in more depth. (For example, why can't we have a fraction with a matrix on the denominator?). For details, see <url href="https://www.polyu.edu.hk/ama/profile/hwlee/AMA1007/supplementary11.pdf">this pdf</url>, or <url href="https://en.wikipedia.org/wiki/Neumann_series">this Wikipedia page</url>.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                The Kenyan Ministry of Health needs your help to model an outbreak of tuberculosis (TB) in Nairobi and Mombasa. They have determined that, if 100 people in Nairobi are infected with TB, they will infect 50 more people in Nairobi. Additionally, 30% of them will travel to Mombasa, producing 30 additional infections. 
+            </p>
+            <p>
+                If 100 people in Mombasa are infected, they will infect 90 more people in Mombasa, and 10 will travel to Nairobi to produce 10 additional infections.
+            </p>
+            <p>
+                Initial reporting indicates that there are 200 people currently infected in Nairobi and 300 in Mombasa. 
+            </p>
+            <p>
+                The Ministry wants your help to determine how many people will be infected next, and whether this outbreak will die out. 
+            </p>
+            <paragraphs>
+                <title>Exploring the Initial Outbreak</title>
+            <p>
+                <ol marker="(a)">
+                <li>
+                    <p>
+                        Let's use matrices to help answer these questions. We'll define <m>\mathbf{x}_0 = \begin{bmatrix}N_0 \\ M_0\end{bmatrix}</m> as a vector the initial cases of tuberculosis in Nairobi <m>(N_0)</m> and Mombasa <m>(M_0)</m>.
+                    </p>
+                    <p>
+                        Can you write down <m>\mathbf{x}_0</m>, using the previous information?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <m>\mathbf{x}_0 = \begin{bmatrix}200 \\ 300\end{bmatrix}</m> 
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        Try to find <m>\mathbf{x}_1</m>, the new cases created by the initial infections. 
+                    </p>
+                    <solution component="lesson-plan">
+                        <p> First looking at Nairobi, which receives infections from both Nairobi and Mombasa:
+                            <md>
+                                <mrow> N_1 \amp = \frac{50}{100}N_0 + \frac{10}{100}M_0 </mrow>
+                                <mrow> \amp = 0.5\times 200 + 0.1\times 300 </mrow>
+                                <mrow> \amp = 130 </mrow>
+                            </md>
+                            Now Mombasa:
+                            <md>
+                                <mrow> M_1 \amp = \frac{90}{100}M_0 + \frac{30}{100}N_0 </mrow>
+                                <mrow> \amp = 0.9\times 300 + 0.3\times 200 </mrow>
+                                <mrow> \amp = 330 </mrow>
+                            </md>
+                            Thus <m>\mathbf{x}_1 = \begin{bmatrix}130 \\ 330\end{bmatrix}</m>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Do not worry if learners are not using matrix multiplication yet. 
+                        </p>
+                        <p>
+                            Make sure learners get the direction correct: the new number of Nairobi cases from Mombasa infections should be 10% of the Mombasa cases, not 30% (the percentage of Nairobi cases that travel to Mombasa).
+                        </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        Let's define the matrix <m>A = \begin{bmatrix}0.5 &amp; 0.1 \\ 0.3 &amp; 0.9\end{bmatrix}</m>. Compute the product <m>A\mathbf{x}_0</m>. How does this compare to your answer for <m>\mathbf{x}_1</m>?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <md>
+                                <mrow> A\mathbf{x}_0 \amp = \begin{bmatrix}0.5 &amp; 0.1 \\ 0.3 &amp; 0.9\end{bmatrix} \begin{bmatrix}200 \\ 300\end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix}0.5 \times 200 + 0.1 \times 300 \\ 0.9 \times 300 + 0.3 \times 200 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix}130 \\ 330\end{bmatrix} </mrow>
+                            </md>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Guide learners towards the comparison between their method of calculating <m>N_0</m> by hand <m>\left(0.5\times 200 + 0.1\times 300\right)</m> with the first row of the matrix product.
+                        </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        Could you explain why <m>A\mathbf{x}_0 = \mathbf{x}_1</m>?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            The columns of <m>A</m> represent the average new infections in either city from one infected person in either city. The first column says that 1 person will (on average) infect 0.5 people in Nairobi and 0.3 people in Mombasa.
+                        </p>
+                        <p>
+                            Thus multiplying <m>A</m> by <m>\mathbf{x}_0</m> gives the total new infections in each city from the initial infections.
+                        </p>
+                    </solution>
+                </li>
+                <li>
+                    <p>
+                        How should we find the next round of infections <m>\mathbf{x}_2</m>?
+                    </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            <m>\mathbf{x}_2 = A \mathbf{x}_1 = A^2 \mathbf{x}_0</m>
+                        </p>
+                    </solution>
+                    <note component="lesson-plan">
+                        <p>
+                            Guide learners to a formula with <m>\mathbf{x}_0</m> if they only recognise <m>\mathbf{x}_2 = A\mathbf{x}_1</m>
+                        </p>
+                    </note>
+                </li>
+                <li>
+                    <p>
+                        Find <m>A^2</m> (which is <m>A\times A</m>), and use it to find <m>\mathbf{x}_2</m>, the number of new infections in the second round.
+                    </p>
+                <solution component="lesson-plan">
+                    <p> Learners should use the formula for matrix multiplication to find <m>A^2</m>. They should get:
+                        <md>
+                            <mrow> A^2 \amp = \begin{bmatrix}0.26 &amp; 0.14 \\ 0.42 &amp; 0.84\end{bmatrix} </mrow>
+                        </md>
+                        Thus
+                        <md>
+                            <mrow> \mathbf{x}_2 \amp = A^2\mathbf{x}_0 </mrow>
+                            <mrow> \amp = \begin{bmatrix}0.26 &amp; 0.14 \\ 0.42 &amp; 0.84\end{bmatrix}\begin{bmatrix}200 \\ 300\end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix}82 \\ 306\end{bmatrix} </mrow>
+                        </md>
+                    </p>
+                </solution>
+                </li>
+            </ol>
+                </p>
+            </paragraphs>
+        <paragraphs>
+            <title>Looking at the Long Term</title>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            What do you think will happen to the number of infections in each city as time goes on? What might <m>A^{10} \mathbf{x}_{10}</m> look like?
+                        </p>
+                        <note component="lesson-plan">
+                            <p>
+                                Encourage learners to share different ideas. You might ask them to look at how the number of infections in Nairobi has changed so far (200 to 130 to 82), as well as the number of infections in Mombasa (300 to 330 to 306).
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            We can use technology to find <m>A^{10}</m>. Press the <c>Evaluate (Sage)</c> button to find <m>A^{10}</m>. 
+                            <sage>
+                            <input>
+                                A = matrix([[0.5, 0.1], [0.3, 0.9]])
+                                A^10
+                            </input>
+                            <output>
+                                [0.122460937500000 0.077539062500000]
+                                [0.185156250000000 0.877539062500000]
+                            </output>
+                        </sage>
+                            Are the entries big? Can you find <m>\mathbf{x}_{10}</m> from this?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                You should get <md>A^{10} = \begin{bmatrix} 0.122460937500000 \amp 0.077539062500000 \\ 0.185156250000000 \amp 0.877539062500000 \end{bmatrix}</md>Hence <m>\mathbf{x}_{10} = \begin{bmatrix} 38.46 \\ 281.54 \end{bmatrix}</m>, which we round to <m>\mathbf{x}_{10} = \begin{bmatrix} 38 \\ 282 \end{bmatrix}</m> (to avoid decimal people).
+                            </p>
+                        </solution>
+                        <note component="lesson-plan">
+                            <p>
+                                If you cannot use the interactive block, get learners to calculate <m>A^3</m> and <m>A^4</m> by hand and ask them to look for the pattern between <m>A,\,A^2\,A^3, \,A^4</m>
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            What happens if you increase the exponent? What does this mean in terms of the TB outbreak?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                As the exponent increases, the entries of <m>A^n</m> get smaller and smaller. This means that the number of new infections will decrease over time, and the outbreak will eventually die out.
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            The Ministry of Health wants to know the total number of infections expected in both Nairobi and Mombasa. Let's called this vector <m>\mathbf{x}_T</m>. This is the sum of all the stages of infection:
+                            <md>
+                                \mathbf{x}_T = \mathbf{x}_0 + \mathbf{x}_1 + \mathbf{x}_2 + \ldots
+                            </md>
+                            Can you write an expression for <m>\mathbf{x}_T</m> using only <m>\mathbf{x}_0</m> and <m>A</m>? Your previous answers might help
+                        </p>
+                        <solution component="lesson-plan">
+                            <p> Using the identity <m>\mathbf{x}_n = A^n\mathbf{x}_0</m>
+                                <md>
+                                    <mrow>\mathbf{x}_T \amp = \mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            Does this remind you of anything from previous topics? Is there a formula that gives us the sum in a similar situation?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                This looks like an infinite geometric sequence from <xref ref="sec-sum-of-geometric-sequences-ii"/>, with initial term <m>\mathbf{x}_0</m> and common ratio <m>A</m>.
+                            </p>
+                        </solution>
+                        <note component="lesson-plan">
+                            <p>
+                                Try to guide learners to this connection without giving it away.
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            In fact, we can adapt that formula! Under certain conditions<aside><title>Conditions for Convergence</title><p>These conditions are a little technical, but they are the equivalent of <m>-1 &lt; r &lt; 1</m> for GPs. Look up the <q>spectral radius</q> if you're curious! Don't worry, our specific <m>A</m> meets this condition.</p></aside> we have:
+                            <md>
+                                \mathbf{x}_0 +A\mathbf{x}_0 + A^2\mathbf{x}_0 + \ldots = (I-A)^{-1}\mathbf{x}_0
+                            </md>
+                            Here, <m>I = \begin{bmatrix}1 \amp 0 \\ 0 \amp 1\end{bmatrix}</m> is the identity matrix, and <m>(I-A)^{-1}</m> is the inverse of the matrix <m>(I-A)</m>.
+                        </p>
+                        <p>
+                            Can you compute <m>I-A</m>, find its inverse, and thus determine <m>\mathbf{x}_T</m>?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                We have <m>I-A = \begin{bmatrix}0.5 &amp; -0.1 \\ -0.3 &amp; 0.1\end{bmatrix}</m>. Using the formula for an inverse of a 2 by 2 matrix, <m>(I-A)^{-1} = \begin{bmatrix}5 &amp; 5 \\ 15 &amp; 25\end{bmatrix}</m>. Thus
+                                <md>
+                                    <mrow>\mathbf{x}_T \amp = (I-A)^{-1}\mathbf{x}_0</mrow>
+                                    <mrow> \amp = \begin{bmatrix}5 &amp; 5 \\ 15 &amp; 25\end{bmatrix}\begin{bmatrix}200 \\ 300\end{bmatrix}</mrow>
+                                    <mrow> \amp = \begin{bmatrix}2500 \\ 10500\end{bmatrix} </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            How many total cases of TB will there be in Nairobi and Mombasa?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The total number of cases in Nairobi will be 2500, and the total number of cases in Mombasa will be 10500.
+                            </p>
+                        </solution>
+                    </li>
+                </ol>
+            </p>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    2 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To provide general guidance on how to solve real-world matrix problems.
                 </p>
             </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+    </axiom>
+
+    <insight>
+        <p>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Matrices can be used to model real life situations, especially when there are multiple categories (e.g. cities, fruits, types of equipment) that interact with each other. 
                     </p>
                 </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
+                <li>
+                    <p>
+                        When converting a word problem into matrix form, pay careful attention to what the rows and columns represent; it's easy to get these the wrong way around.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <example xml:id="PRECALC-9OMJggLJ7g" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+      <title>Soccer Spending</title>
+      <statement>
+        <p><xref ref="PRECALC-sBwn0YwlSd"/> shows the equipment needs of two soccer teams, the <term>Wildcats</term> and the <term>Mud Cats</term> </p>
+        <table xml:id="PRECALC-sBwn0YwlSd" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+          <tabular>
+            <row header="yes">
+                <cell></cell>
+                <cell>Wildcats</cell>
+                <cell>Mud Cats</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Goals</em>
+              </cell>
+              <cell>6</cell>
+              <cell>10</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Balls</em>
+              </cell>
+              <cell>30</cell>
+              <cell>24</cell>
+            </row>
+            <row>
+              <cell>
+                <em>Jerseys</em>
+              </cell>
+              <cell>14</cell>
+              <cell>20</cell>
+            </row>
+          </tabular>
+        </table>
+        <p>We are also given the prices of the equipment, as shown in <xref ref="PRECALC-ol0utIPRhz"/>.</p>
+        <table xml:id="PRECALC-ol0utIPRhz" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+          <tabular>
+            <row>
+              <cell>
+                Goal
+              </cell>
+              <cell>30,000 Ksh</cell>
+            </row>
+            <row>
+              <cell>
+                Ball
+              </cell>
+              <cell>1000 Ksh</cell>
+            </row>
+            <row>
+              <cell>
+                Jersey
+              </cell>
+              <cell>3000 Ksh</cell>
+            </row>
+          </tabular>
+        </table>
+        <p> What is the total cost of the equipment for each team? </p>
+    </statement>
+    <solution>
+        <p>We will convert the data to matrices. Thus, the equipment need matrix is written as</p>
+        <p>
+          <me> E = \begin{bmatrix} 6 &amp; 10 \\ 30 &amp; 24 \\ 14 &amp; 20 \end{bmatrix} </me>
+        </p>
+        <p>The cost matrix is written as</p>
+        <p>
+          <me>C=\begin{bmatrix} 30000 &amp; 1000 &amp; 3000 \end{bmatrix}</me>
+        </p>
+        <p> We perform matrix multiplication to obtain costs for the equipment.</p>
+        <p>
+            <md>
+                <mrow> CE &amp;=\begin{bmatrix} 30,000 &amp; 1000 &amp; 3000 \end{bmatrix}\begin{bmatrix} 6 &amp; 10 \\ 30 &amp; 24 \\ 14 &amp; 20 \end{bmatrix} </mrow>
+                <mrow> &amp; =\begin{bmatrix} 30,000(6)+100(30)+300(14) &amp; 3000(10)+10(24)+300(20) \end{bmatrix} </mrow> 
+                <mrow> &amp; =\begin{bmatrix} 252,000 &amp; 384,000 \end{bmatrix} </mrow>
+            </md>
+        </p>
+        <p>The total cost for equipment for the Wildcats is 252,000 Ksh, and the total cost for equipment for the Mud Cats is 384,000 Ksh.</p>
+      </solution>
+    </example>
+
+    <example>
+        <title>Library Borrowing Totals</title>
         <statement>
+            <p>
+                Two classes record how many books they borrow in three categories: fiction (F), science (S), and history (H). On Monday and Tuesday the totals are
+                <md>M = \begin{bmatrix} 14 &amp; 7 &amp; 5 \\ 9 &amp; 10 &amp; 6 \end{bmatrix}\quad \text{and}\quad T = \begin{bmatrix} 11 &amp; 9 &amp; 4 \\ 12 &amp; 8 &amp; 7 \end{bmatrix}</md>
+                where the first row is Class 1 and the second row is Class 2.
+            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Find the total books borrowed over both days.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Find the change (Tuesday minus Monday) for each class and category.
+                    </p>
+                </li>
+            </ol>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        <m>M+T = \begin{bmatrix} 25 &amp; 16 &amp; 9 \\ 21 &amp; 18 &amp; 13 \end{bmatrix}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>T-M = \begin{bmatrix} -3 &amp; 2 &amp; -1 \\ 3 &amp; -2 &amp; 1 \end{bmatrix}</m>.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
     <example>
+        <title>Canteen Cost Comparison</title>
         <statement>
+            <p>
+                A school canteen sells three items: chapati (C), juice (J), and fruit (F). The quantities bought by Grade 11 and Grade 12 during Week 1 are
+                <md>Q = \begin{bmatrix} 36 &amp; 22 &amp; 18 \\ 30 &amp; 25 &amp; 20 \end{bmatrix}</md>
+                Prices changed in Week 2. The price matrix (Ksh) for Week 1 and Week 2 is
+                <md>P = \begin{bmatrix} 18 &amp; 20 \\ 28 &amp; 26 \\ 24 &amp; 25 \end{bmatrix}</md>,
+                where columns represent Week 1 and Week 2.
+            </p>
+            <p>
+                Compute <m>QP</m>. What does each entry represent?
+            </p>
         </statement>
         <solution>
+            <p>
+                <md>
+                    <mrow>QP &amp;= \begin{bmatrix} 36 &amp; 22 &amp; 18 \\ 30 &amp; 25 &amp; 20 \end{bmatrix} \begin{bmatrix} 18 &amp; 20 \\ 28 &amp; 26 \\ 24 &amp; 25 \end{bmatrix} </mrow>
+                    <mrow>&amp;= \begin{bmatrix} 36(18)+22(28)+18(24) &amp; 36(20)+22(26)+18(25) \\ 30(18)+25(28)+20(24) &amp; 30(20)+25(26)+20(25) \end{bmatrix}</mrow>
+                    <mrow>&amp;= \begin{bmatrix} 1704 &amp; 1742 \\ 1660 &amp; 1700 \end{bmatrix}</mrow>
+                </md>
+                Each entry is the total cost for a form (row) in a week (column). Grade 11 totals are 1704 Ksh (Week 1) and 1742 Ksh (Week 2); Grade 12 totals are 1660 Ksh (Week 1) and 1700 Ksh (Week 2).
+            </p>
         </solution>
     </example>
 
-    <example>
-        <statement>
-        </statement>
-        <solution>
-        </solution>
-    </example> -->
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -146,18 +514,228 @@
 
     <!-- Add STACK exercises if made -->
 
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    Two classes keep track of how many books they borrow from the school library in three categories: fiction (F), science (S), and history (H). The totals for Monday and Tuesday are
+                    <m>M = \begin{bmatrix} 12 &amp; 9 &amp; 4 \\ 8 &amp; 11 &amp; 5 \end{bmatrix}</m> and
+                    <m>T = \begin{bmatrix} 10 &amp; 7 &amp; 6 \\ 9 &amp; 8 &amp; 4 \end{bmatrix}</m>,
+                    where the first row is Class 1 and the second row is Class 2.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Find the total books borrowed over both days.</p>
+                    </li>
+                    <li>
+                        <p>Find the change (Tuesday minus Monday) for each class and category.</p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>M+T = \begin{bmatrix} 22 &amp; 16 &amp; 10 \\ 17 &amp; 19 &amp; 9 \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>T-M = \begin{bmatrix} -2 &amp; -2 &amp; 2 \\ 1 &amp; -3 &amp; -1 \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
 
-            </statement>   
-            <solution>
+        <exercise>
+            <statement>
+                <p>
+                    A printing club designs posters in three sizes. The cost (in Ksh) per poster is
+                    <m>\mathbf{c} = \begin{bmatrix} 40 \\ 60 \\ 90 \end{bmatrix}</m>. The printer raises all costs by 15%.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Find the new cost vector.</p>
+                    </li>
+                    <li>
+                        <p>If the club prints 12 small, 8 medium, and 5 large posters, find the total cost before and after the increase.</p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>1.15\mathbf{c} = \begin{bmatrix} 46 \\ 69 \\ 103.5 \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Before:
+                            <md>
+                                <mrow>\begin{bmatrix} 12 &amp; 8 &amp; 5 \end{bmatrix} \mathbf{c} &amp;= 12(40) + 8(60) + 5(90) </mrow>
+                                <mrow>&amp;= 1530</mrow>
+                            </md>
+                            After:
+                            <md>
+                                <mrow>12(46) + 8(69) + 5(103.5) &amp;= 1756.5</mrow>
+                            </md>
+                            Ksh.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    A matatu company has three routes. The prices for each route (in Ksh) are given by the fare vector
+                    <md>\mathbf{f} = \begin{bmatrix} 70 \\ 90 \\ 120 \end{bmatrix}</md> The the passenger counts on a Saturday are
+                    <m>\mathbf{p} = \begin{bmatrix} 180 &amp; 140 &amp; 95 \end{bmatrix}</m>.
+                </p>
+                <p>
+                    Use a matrix-vector product to find the total income that day.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <md>
+                        <mrow>\mathbf{p}\mathbf{f} &amp;= 180(70) + 140(90) + 95(120) </mrow>
+                        <mrow>&amp;= 36{,}900 \text{ Ksh}</mrow>
+                    </md>
+                </p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A school canteen sells three items: chapati (C), juice (J), and fruit (F). The quantities bought by Grade 11 and Grade 12 learners during Week 1 are
+                    <md>S = \begin{bmatrix} 40 &amp; 25 &amp; 15 \\ 35 &amp; 30 &amp; 20 \end{bmatrix}</md>
+                    Prices changed in Week 2. The price matrix (Ksh) for Week 1 and Week 2 is
+                    <m>K = \begin{bmatrix} 20 &amp; 22 \\ 30 &amp; 28 \\ 25 &amp; 27 \end{bmatrix}</m>,
+                    where columns represent Week 1 and Week 2.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Compute <m>SK</m>. What does each entry represent?</p>
+                    </li>
+                    <li>
+                        <p>Find the total cost for each form in Week 1 and Week 2.</p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p> Computing the product, we have
+                            <md>
+                                <mrow>SK &amp;= \begin{bmatrix} 40 &amp; 25 &amp; 15 \\ 35 &amp; 30 &amp; 20 \end{bmatrix} \begin{bmatrix} 20 &amp; 22 \\ 30 &amp; 28 \\ 25 &amp; 27 \end{bmatrix} </mrow>
+                                <mrow>&amp;= \begin{bmatrix} 40(20)+25(30)+15(25) &amp; 40(22)+25(28)+15(27) \\ 35(20)+30(30)+20(25) &amp; 35(22)+30(28)+20(27) \end{bmatrix}</mrow>
+                            </md>
+                            Each entry is the total cost for a form (row) in a week (column).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>SK = \begin{bmatrix} 1875 &amp; 1930 \\ 1900 &amp; 2000 \end{bmatrix}</m>. The first column is Week 1 totals; the second column is Week 2 totals.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A tech club sells two types of kits: Basic (<m>b</m>) and Pro (<m>p</m>). On one day they sell 6 Basic and 4 Pro kits and collect Ksh 38,000. On another day they sell 3 Basic and 7 Pro kits and collect Ksh 41,000.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Write a matrix equation to model this situation</p>
+                    </li>
+                    <li>
+                        <p>Compute the determinant of the coefficient matrix and explain why the inverse exists.</p>
+                    </li>
+                    <li>
+                        <p>
+                            Solve for the price of each kit using the inverse of a <m>2\times2</m> matrix.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p> Let columns of <m>M = \begin{bmatrix}6 &amp; 4 \\ 3 &amp; 7 \end{bmatrix}</m> represent the quantity of Basic (first row) and Pro kits sold (second row) on the first day (first column) and second day (second column). If the price of the Basic kit is <m>b</m> and the price of the Pro kit is <m>p</m>, then we can write the total income for each day as a matrix-vector product:
+                            <md>
+                                <mrow>\begin{bmatrix}6 &amp; 4 \\ 3 &amp; 7 \end{bmatrix} \begin{bmatrix} b \\ p \end{bmatrix} &amp;= \begin{bmatrix} 38000 \\ 41000 \end{bmatrix}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\det M = 6\cdot 7 - 4\cdot 3 &amp;= 30</mrow>
+                            </md>
+                            Since the determinant is nonzero, the matrix is invertible.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The inverse is
+                            <md>
+                                <mrow>\frac{1}{\det M} \begin{bmatrix} 7 &amp; -4 \\ -3 &amp; 6 \end{bmatrix} &amp;= \frac{1}{30} \begin{bmatrix} 7 &amp; -4 \\ -3 &amp; 6 \end{bmatrix}</mrow>
+                            </md>
+                            Hence
+                            <md>
+                                <mrow>\begin{bmatrix} b \\ p \end{bmatrix} &amp;= \frac{1}{30} \begin{bmatrix} 7 &amp; -4 \\ -3 &amp; 6 \end{bmatrix} \begin{bmatrix} 38000 \\ 41000 \end{bmatrix}</mrow>
+                                <mrow>&amp;= \begin{bmatrix} 4000 \\ 3500 \end{bmatrix}</mrow>
+                            </md>
+                            Thus the price of a Basic kit is 4000 Ksh, and the price of a Pro kit is 3500 Ksh.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A delivery company sends parcels from two hubs (East, West) to three destinations (A, B, C). The parcels sent on Monday are 120, 80, 60 from East and 90, 70, 50 from West. The cost per parcel (in Ksh) for each destination is 50, 65, and 40 respectively.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Write the shipment data as a matrix <m>S</m> and the cost data as a vector <m>\mathbf{c}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Use a matrix-vector product to find the total shipping cost for each hub.</p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>S = \begin{bmatrix} 120 &amp; 80 &amp; 60 \\ 90 &amp; 70 &amp; 50 \end{bmatrix}</m>,
+                            <m>\mathbf{c} = \begin{bmatrix} 50 \\ 65 \\ 40 \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p> We have:
+                            <md>
+                                <mrow>S\mathbf{c} &amp;= \begin{bmatrix} 120(50)+80(65)+60(40) \\ 90(50)+70(65)+50(40) \end{bmatrix}</mrow>
+                                <mrow>&amp;= \begin{bmatrix} 13{,}200 \\ 10{,}050 \end{bmatrix}</mrow>
+                            </md>
+                        Thus the total shipping cost for the East hub is 13,200 Ksh, and the total shipping cost for the West hub is 10,050 Ksh.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
@@ -200,4 +778,8 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+    <convention>
+         <p>This section <xref ref="sec-multiplying-matrices-i" text="title"/> is adapted from "<url href="https://github.com/openstax/osbooks-college-algebra-bundle/tree/e10e6b91143fe884c7c60dc0ad82ef23e1be0aa5/modules/m49433/index.cnxml">Finding Scalar Multiples of a Matrix</url>" in Open STAX Precalculus 2e, used under <url href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY-4.0</url>.</p>
+    </convention>
 </section>

@@ -279,7 +279,7 @@
     <example>
         <statement>
             <p>
-                Find the equation of a circle with center <m>(0, 0)</m> and radius <m>4</m> units.
+                Find the equation of a circle with center <m>(0, 0)</m> and radius <m>4</m> units. Sketch its graph.
             </p>
         </statement>
         <solution>
@@ -291,9 +291,7 @@
                 <me>x^2 + y^2 = 4^2</me>
                 <me>x^2 + y^2 = 16</me>
             </p>
-            <figure xml:id="fig-example-origin">
-                <caption>Circle <m>x^2 + y^2 = 16</m></caption>
-                <image xml:id="img-example-origin">
+                <image xml:id="img-example-origin" width="40%">
                     <latex-image>
                         \begin{tikzpicture}
                             \draw[help lines, color=gray!30, step=1] (-5,-5) grid (5,5);
@@ -308,7 +306,6 @@
                         \end{tikzpicture}
                     </latex-image>
                 </image>
-            </figure>
         </solution>
     </example>
 
@@ -406,7 +403,7 @@
                 Identify the correct equation for the graph below:
             </p>
             <image width="40%">
-                <latex-image>
+                <latex-image label="fig-example-multiple-choice">
                     \begin{tikzpicture}
                         \draw[help lines, color=gray!30, step=1] (-5,-10) grid (7,4);
                         \draw[-&gt;] (-5,0) -- (7,0) node[right] {$x$};
@@ -422,7 +419,7 @@
                 
             </image>
             <p>
-                <ol marker="(a)" cols="1">
+                <ol marker="(a)" cols="2">
                     <li>
                         <p>
                             <m> y^2 = x^2 + 6^2 </m>

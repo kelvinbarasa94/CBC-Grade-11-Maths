@@ -40,8 +40,340 @@
             </p>
         </introduction>
     </objectives>
+<activity>
+    <alert>Discovering Side Lengths of Squares</alert>
+        <statement>
+            <p>
+                <term>Work in Groups</term>
+            </p>
+            <p>
+                <term>What you need</term>
+            </p>
+            <p>
+                <ol>
+                    <li><p>Ruler (with cm markings)</p></li>
+                    <li><p>Masking tape or chalk </p></li>
+                    <li><p> Paper and pen</p></li>
+                    <li><p>Square tile or a drawn square</p></li>
+                </ol>
+            </p>
+            <p>
+                    <term>What to do</term>     
+            </p>
+            <task>
+                <statement>
+                    <p>
+                        Create or choose a square and decide on its area (for example: <m>16 cm², 20 cm², 25 cm², 18 cm²,36 cm²</m>).
+                    </p>
+                
+                        <!-- Writes each number in square root form <m>(e.g., √50, √64).</m> -->
+                    
+                    <!-- <image>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.6]
 
-    <!-- [LP] Add guidance on activity -->
+                                \foreach \n in {1,2,3,4,5} {
+                                    \begin{scope}[shift={(\n*5,0)}]
+                                        \draw[step=1cm] (0,0) grid (\n,\n);
+                                        \draw[thick] (0,0) rectangle (\n,\n);
+                                        \node at (\n/2,-0.7) {$\n$};
+                                    \end{scope}
+                                }
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image> -->
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                          Work together to find the side length of your square using: <m> s=\sqrt{Area}</m>
+                    </p>
+            
+                    <!-- <tabular left="medium" right="medium" top="medium" bottom="medium">
+                        <row>
+                            <cell right="medium">Side Length (<m>n</m>)</cell>
+                            <cell>Number of Unit Squares (<m>n^2</m>)</cell>
+                        </row>
+                        <row>
+                            
+                            <cell right="medium"><m>1</m></cell>
+                            <cell><m>1</m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>2</m></cell>
+                            <cell><m>4</m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>3</m></cell>
+                            <cell><m></m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>4</m></cell>
+                            <cell><m></m></cell>
+                        </row>
+                        <row>
+                            <cell right="medium"><m>5</m></cell>
+                            <cell><m></m></cell>
+                        </row>
+                    </tabular> -->
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                      Write down your answer.
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    Look at your answer: 
+                    <ol>
+                        <li>
+                            <p>
+                                Is it a whole number?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Or does it remain as a square root?
+                            </p>
+                        </li>
+                    </ol>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        If your answer is not exact (for example <m>\sqrt{20}</m>, try to simplify it using a factor tree.
+
+                       Example:<m>\sqrt{20} = \sqrt{2\times10} = \sqrt{2\times 2\times5} = 2\sqrt5 </m>
+                    </p>
+                </statement>
+            </task>
+            <task>
+            <statement>
+                <p>
+                    Compare your findings with other groups
+                </p>
+            </statement>
+        </task>        
+        </statement>
+        
+    </activity> 
+    <insight>
+        <p>
+            Simplifying irrational numbers means rewriting a  (root) in its simplest form by removing perfect square factors from inside the root.
+            <ol>
+                <li>
+                    <p>
+                        <alert>Product Rule:</alert> 
+                         When a square root contains a product, it can be split:
+                         <m>\sqrt{ab}= \sqrt{a}\times \sqrt{b}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                      <alert> Quotient Rule:</alert> 
+                         A square root of a fraction can be split:
+                   <m>\sqrt{\frac{a}{b}}</m>
+                   <m>=\frac{\sqrt{a}}{\sqrt{b}}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Extracting Perfect Squares:</alert>
+                        Always look for perfect square factors inside the root:
+                        Example:
+                            <m>\sqrt{18}=\sqrt{9\times 2}
+                              =3\sqrt{2} </m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Simplifying Coefficients:</alert>
+                        Numbers outside the root multiply normally
+                        Example;
+                        <m>=3\sqrt{20} =3\times 2\sqrt{5}
+                          = 6\sqrt{5} </m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Adding and Subtracting irrational numbers:</alert>
+                        You can only add or subtract like surds (same root inside).
+                        Example;
+                        <m>=2\sqrt{3}+ 5\sqrt{3}
+                        =7\sqrt{3} </m>
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </insight>
+    <example>
+        <statement>
+            <p>
+                Simplify:
+                <ol>
+                    <li>
+                        <p>
+                            <m>\sqrt{45}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sqrt{72}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sqrt{48}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>3\sqrt{20}</m>
+                        </p>
+                    </li>
+                </ol> 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>45 = 9 \times 5</m>   Therefore;
+                        </p>
+                                                <p>
+                            <me>\sqrt{45}= \sqrt{9\times5}</me>
+                            
+                        </p>
+                        <p>
+                            <me>=\sqrt{9}\times \sqrt{5} </me>
+                        </p>
+                        <p>
+                            <me>=3\sqrt{5}</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sqrt{72}</m>
+                            <p>
+                                <m>\sqrt{36\times2}</m>
+                                <m>=\sqrt{36}\times \sqrt{2} </m>
+                            </p>
+                            <p>
+                                <m>=6\sqrt{2}</m>
+                            </p>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sqrt{48}</m>
+                        </p>
+                        <p>
+                            <m>\sqrt{16\times 3}</m>
+                            <m>=\sqrt{16}\times \sqrt{3} </m>
+                        </p>
+                        <m>=4\sqrt{3}</m>
+                    </li>
+                    <li>
+                        <p>
+                             <m>3\sqrt{20}</m>
+                             <p>
+                                First simplify <m>\sqrt{20}</m>:
+                                <p>
+                                    <m>\sqrt{20}=\sqrt{4\times5}</m>
+                                    <p>
+                                        <m>=\sqrt{4}\times\sqrt{5}</m>
+                                        <p>
+                                           <m>=2\sqrt{5}</m> 
+                                        </p>
+                                        <p>
+                                            Therefore:<m>3\sqrt{20}</m>
+                                            <p>
+                                                <m> =3\times 2\sqrt{5}</m>
+                                                <p>
+                                                    <m>=6\sqrt{5}</m>
+                                                </p>
+                                            </p>
+                                        </p>
+                                    </p>
+                                </p>
+                             </p>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </example>
+    <exercises>
+        <exercise>
+            <statement>
+             <li>
+                <p>
+                    A square garden has area 50 m². Find the side length in simplest  form.
+                </p>
+             </li>
+            </statement>
+            <answer>
+                <p>
+                    <m>A=\text{s}^{2}</m>
+                </p>
+                <p>
+                    <me>50=\text{s}^{2}</me>
+                </p>
+                <p>
+                    <me>\sqrt{50}=\sqrt{\text{s}^{2}}</me>
+                </p>
+                <p>
+                    <me>=\sqrt{25\times2}</me>
+                </p>
+                <p>
+                    <me>=\sqrt{25}\times{2}</me>
+                </p>
+                <p>
+                    <me>=5\sqrt{2} m </me>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The diagonal of a rectangle is <m>\sqrt{98}</m>cm. Simplify the length.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A square section of a playground has an area of 200 m².
+                    Find the exact side length in simplest form.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A classroom is build in square shape and has a side length of <m>\sqrt{20}</m>cm.
+                    If the length is doubled, express the new length in simplest form.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A square notice board has a side length of <m>\sqrt{27}</m>cm.
+                    If two such sides are placed end to end, find the total length in simplest form.
+                </p>
+            </statement>
+        </exercise>
+    </exercises>
+        
+    <!-- ex[LP] Add guidance on activity -->
 
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>

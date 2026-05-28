@@ -41,55 +41,114 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    20 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To understand that a single line can represent the general trend of scattered data points.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Organize the class into groups. Provide rulers and measuring tapes. Encourage students to think about why their lines might differ slightly and what makes one line "better" than another.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in Groups</alert>
+            </p>
+            <p>
+                <alert>What you need</alert>
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            A measuring tape or ruler for each group to measure height and shoe length.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Graph paper
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A pencil and ruler for drawing.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Students had a discussion on whether taller people generally have longer feet. 
+                To verify their ideas using real evidence, they decided to collect and analyse data. 
+                They carried out the following steps:
+            </p>
+            <p>
+                <alert>What to do:</alert>
+                <ol>
+                    <li>
+                        <p>Measure each member's height (in cm) and shoe length (in cm).</p>
+                    </li>
+                    <li>
+                        <p>Record the data in a table with two columns: Height (x) and Shoe Length (y).</p>
+                    </li>
+                    <li>
+                        <p>Plot these points on a coordinate grid. Do the points fall exactly on a straight line?</p>
+                    </li>
+                    <li>
+                        <p>Using a ruler, position it so that it passes through at least <m>3</m> points, then draw a single straight line along the edge of the ruler.</p>
+                    </li>
+                    <li>
+                        <p>
+                            Discuss if your line represent the trend of the data.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                             How many points are above the line and how many are below? Which points are those points?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What can you say about the relationship between height and shoe length based on your line of best fit?
+                        </p>
+                    </li>
+                    <li>
+                        <p>Compare your work with other groups. </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To define the line of best fit and establish criteria for drawing it accurately.
                 </p>
             </li>
             </dl>
@@ -99,44 +158,293 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Definition:</alert> A <term>line of best fit</term> (or trend line) is a straight line that best represents the data on a scatter plot.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Drawing Criteria:</alert> Explain that while there are mathematical ways to find the exact "best" line, we use the "eyeball method" to draw a line that:
+                        <ul>
+                            <li>Passes through the center of the cluster of points.</li>
+                            <li>Has roughly an equal number of points above and below it.</li>
+                            <li>Follows the overall direction (slope) of the data.</li>
+                        </ul>
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            A line of best fit allows us to model the relationship between two variables and make predictions.
+        </p>
+        <p>
+            The line does not need to pass through every point. Instead, it represents the overall pattern of the data:
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        An upward sloping line shows a positive relationship.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A downward sloping line shows a negative relationship.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A nearly horizontal line shows little or no relationship.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The equation of the line of best fit is usually written in the form <m>y = mx + c</m>, where <m>m</m> is the gradient and <m>c</m> is the y-intercept.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            A line of best fit is used to:
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        Identify trends in data.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Make predictions based on the observed data.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Understand the relationships between two variables.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Estimate values for data points that were not measured (interpolation) or predict values outside the measured range (extrapolation).
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            <alert>How to draw a line of best fit</alert>
+        </p>
+        <p>
+            <ol>
+                <li><p>Plot the data points on a scatter plot.</p></li>
+                <li><p>Use a ruler to draw a straight line that passes through the middle of the points, ensuring that there are roughly equal numbers of points above and below the line.</p></li>
+            </ol>
+        </p>
+        <image width="50%">
+            <latex-image label="fig-line-of-best-fit">
+            \begin{tikzpicture}
+                \draw[help lines, color=gray!30, step=1] (0,0) grid (6,6);
+                \draw[->] (0,0) -- (6.5,0) node[right] {x};
+                \draw[->] (0,0) -- (0,6.5) node[above] {y};
+                \foreach \x in {0,1,...,5}
+                \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
+                \foreach \y in {0,1,...,5}
+                \draw (2pt, \y) -- (-2pt, \y) node[left] {\y};
+                
+                \filldraw[blue] (1, 1.2) circle (2pt);
+                \filldraw[blue] (2, 2.8) circle (2pt);
+                \filldraw[blue] (2.5, 2.1) circle (2pt);
+                \filldraw[blue] (3, 3.6) circle (2pt);
+                \filldraw[blue] (4, 3.9) circle (2pt);
+                \filldraw[blue] (4.5, 5.2) circle (2pt);
+                \filldraw[blue] (5, 5.1) circle (2pt);
+                
+                \draw[red, thick] (0.5, 1) -- (5.5, 6);
+            \end{tikzpicture}
+            </latex-image>
+        </image>
+    </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                The table below shows the amount of fertilizer used (in grams) and the height of maize plants (in cm) after four weeks.
+            </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row><cell>Fertilizer (g)</cell><cell>5</cell><cell>10</cell><cell>15</cell><cell>20</cell><cell>25</cell></row>
+                    <row><cell>Height (cm)</cell><cell>12</cell><cell>22</cell><cell>30</cell><cell>41</cell><cell>48</cell></row>
+                </tabular>
+            <p>
+                Plot the data points and draw a line of best fit.
+            </p>
         </statement>
         <solution>
+            <p>
+                To draw the line of best fit:
+                <ol>
+                    <li><p>Plot the points: (5, 12), (10, 22), (15, 30), (20, 41), (25, 48).</p></li>
+                    <li><p>Use a ruler to draw a straight line that passes through the middle of the points. In this case, we can draw a line that passes exactly through (5, 12), (15, 30), and (25, 48).</p></li>
+                </ol>
+            </p>
+            <image width="50%">
+                <latex-image label="fig-line-of-best-fit-example">
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (0,0) grid (6,6);
+                        \draw[->] (0,0) -- (6.5,0) node[right] {Fertilizer (g)};
+                        \draw[->] (0,0) -- (0,6.5) node[above] {Height (cm)};
+                        \foreach \x in {0,5,10,15,20,25}
+                            \draw (\x/5, 2pt) -- (\x/5, -2pt) node[below] {\x};
+                        \foreach \y in {0,10,20,30,40,50}
+                            \draw (2pt, \y/10) -- (-2pt, \y/10) node[left] {\y};
+                        
+                        \filldraw[blue] (1, 1.2) circle (2pt);
+                        \filldraw[blue] (2, 2.2) circle (2pt);
+                        \filldraw[blue] (3, 3.0) circle (2pt);
+                        \filldraw[blue] (4, 4.1) circle (2pt);
+                        \filldraw[blue] (5, 4.8) circle (2pt);
+                        
+                        \draw[red, thick] (0, 0.3) -- (6, 5.7);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A teacher collected data on the number of hours students spent studying and their scores on a mathematics test.
+            </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row><cell>Study Hours (x)</cell><cell>2</cell><cell>4</cell><cell>6</cell><cell>8</cell><cell>10</cell></row>
+                    <row><cell>Test Score (y)</cell><cell>45</cell><cell>55</cell><cell>68</cell><cell>75</cell><cell>88</cell></row>
+                </tabular>
+            <p>
+                Find the equation of the line of best fit drawn for this data.
+            </p>
+            <image width="50%">
+                <latex-image label="fig-line-of-best-fit-study-hours">
+                    \begin{tikzpicture}
+                        \draw[help lines, color=gray!30, step=1] (0,0) grid (6,10);
+                        \draw[->] (0,0) -- (6.5,0) node[right] {Study Hours};
+                        \draw[->] (0,0) -- (0,10.5) node[above] {Test Score};
+                        \foreach \x in {0,2,4,6,8,10,12}
+                            \draw (\x/2, 2pt) -- (\x/2, -2pt) node[below] {\x};
+                        \foreach \y in {0,10,20,30,40,50,60,70,80,90,100}
+                            \draw (2pt, \y/10) -- (-2pt, \y/10) node[left] {\y};
+                        
+                        \filldraw[blue] (1, 4.5) circle (2pt);
+                        \filldraw[blue] (2, 5.5) circle (2pt);
+                        \filldraw[blue] (3, 6.8) circle (2pt);
+                        \filldraw[blue] (4, 7.5) circle (2pt);
+                        \filldraw[blue] (5, 8.8) circle (2pt);
+                        
+                        \draw[red, thick] (0, 3.5) -- (6, 9.5);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Pick two points that lie exactly on the red line. From the graph, the line passes through <m>(2, 45)</m> and <m>(8, 75)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the gradient (<m>m</m>):
+                            <me>m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{75 - 45}{8 - 2} = \frac{30}{6} = 5</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Identify the y-intercept (<m>c</m>): The line crosses the y-axis at <m>y = 35</m>, so <m>c = 35</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Write the equation: <me>y = 5x + 35</me>
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The value of a certain model of car decreases as it gets older. The table below shows the age (in years) and the value (in thousands of KSh) of several cars of this model.
+            </p>
+            <tabular bottom="minor" top="minor" left="minor" right="minor">
+                <row><cell>Age (years)</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell></row>
+                <row><cell>Value (000 KSh)</cell><cell>20</cell><cell>18</cell><cell>15</cell><cell>13</cell><cell>10</cell><cell>8</cell></row>
+            </tabular>
+            <p>
+                A line of best fit for this data has the equation <m>y = -2.5x + 23</m>.
+                <ol>
+                    <li><p>Draw the scatter plot and the line of best fit.</p></li>
+                    <li><p>Predict the value of a car that is 3.5 years old. Is this interpolation or extrapolation?</p></li>
+                    <li><p>Predict the value of a car that is 10 years old. Comment on the reliability of this prediction.</p></li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Plot the points and draw the line <m>y = -2.5x + 23</m>. Note that this line passes exactly through <m>(2, 18)</m>, <m>(4, 13)</m>, and <m>(6, 8)</m>.
+                        </p>
+                        <image width="50%">
+                            <latex-image label="fig-line-of-best-fit-car-value">
+                                \begin{tikzpicture}
+                                    \draw[help lines, color=gray!30, step=1] (0,0) grid (8,6);
+                                    \draw[->] (0,0) -- (8.5,0) node[right] {Age (years)};
+                                    \draw[->] (0,0) -- (0,6.5) node[above] {Value (000 KSh)};
+                                    \foreach \x in {0,1,...,8}
+                                        \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
+                                    \foreach \y in {0,5,10,15,20,25}
+                                        \draw (2pt, \y/4) -- (-2pt, \y/4) node[left] {\y};
+                                    
+                                    \filldraw[blue] (1, 5) circle (2pt);
+                                    \filldraw[blue] (2, 4.5) circle (2pt);
+                                    \filldraw[blue] (3, 3.75) circle (2pt);
+                                    \filldraw[blue] (4, 3.25) circle (2pt);
+                                    \filldraw[blue] (5, 2.5) circle (2pt);
+                                    \filldraw[blue] (6, 2) circle (2pt);
+                                    
+                                    \draw[red, thick] (0, 5.75) -- (8, 0.75);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            Substitute <m>x = 3.5</m> into the equation:
+                            <me>y = -2.5(3.5) + 23 = -8.75 + 23 = 14.25</me>
+                            The predicted value is <m>14,250</m> KSh. This is <term>interpolation</term> because 3.5 years is within the range of the observed data (1 to 6 years).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Substitute <m>x = 10</m> into the equation:
+                            <me>y = -2.5(10) + 23 = -25 + 23 = -2</me>
+                            The predicted value is <m>-2,000</m> KSh. This is <term>extrapolation</term> because 10 years is outside the range of observed data. This prediction is <alert>not reliable</alert> and doesn't make sense (a car cannot have a negative value).
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -146,22 +454,189 @@
 
     <!-- Add STACK exercises if made -->
 
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    A student recorded the number of hours spent exercising per week and their resting heart rate (beats per minute).
+                </p>
+                <table>
+                    <tabular bottom="minor" top="minor" left="minor" right="minor">
+                        <row><cell>Exercise (h)</cell><cell>1</cell><cell>3</cell><cell>5</cell><cell>7</cell><cell>9</cell></row>
+                        <row><cell>Heart Rate (bpm)</cell><cell>80</cell><cell>75</cell><cell>68</cell><cell>63</cell><cell>56</cell></row>
+                    </tabular>
+                </table>
+                <p>
+                    <ol>
+                        <li><p>Plot the data points and draw a line of best fit. </p></li>
+                        <li><p>Is their relationship positive or negative? What does this mean in the context of the data?</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                The line should have a negative slope, passing through through the points <m>(1, 80)</m>, <m>(5, 68)</m>, and <m>(9, 56)</m>.
+                            </p>
+                            <image width="50%">
+                                <latex-image label="heart-rate-exercisising">
+                                    \begin{tikzpicture}
+                                        \draw[help lines, color=gray!30, step=1] (0,0) grid (10,10);
+                                        \draw[->] (0,0) -- (10.5,0) node[right] {Exercise (h)};
+                                        \draw[->] (0,0) -- (0,10.5) node[above] {Heart Rate (bpm)};
+                                        \foreach \x in {0,1,2,3,4,5,6,7,8,9,10}
+                                            \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
+                                        \foreach \y/\pos in {50/0,60/2,70/4,80/6,90/8,100/10}
+                                            \draw (2pt, \pos) -- (-2pt, \pos) node[left] {\y};
+                                        
+                                        \filldraw[blue] (1, 6) circle (2pt); % (1, 80)
+                                        \filldraw[blue] (3, 5) circle (2pt); % (3, 75)
+                                        \filldraw[blue] (5, 3.6) circle (2pt); % (5, 68)
+                                        \filldraw[blue] (7, 2.6) circle (2pt); % (7, 63)
+                                        \filldraw[blue] (9, 1.2) circle (2pt); % (9, 56)
+                                        
+                                        \draw[red, thick] (0, 6.6) -- (10, 0.6);
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                        <li><p><term>Negative relationship</term>. This means that as the number of hours spent exercising increases, the resting heart rate tends to decrease.</p></li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
 
-            </statement>   
-            <solution>
+        <exercise>
+            <statement>
+                <p>
+                    A student monitored the battery percentage of their mobile phone over several hours of continuous use.
+                </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row><cell>Time (hours)</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row>
+                    <row><cell>Battery (%)</cell><cell>88</cell><cell>75</cell><cell>60</cell><cell>48</cell><cell>32</cell></row>
+                </tabular>
+                <p>
+                    <ol>
+                        <li><p>Find the equation of the line of best fit that passes through <m>(1, 88)</m>, <m>(3, 60)</m>, and <m>(5, 32)</m>.</p></li>
+                        <li><p>What does the gradient of the line represent?</p></li>
+                        <li><p>Use the equation to predict the battery percentage after 6 hours of use.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <ol>
+                    <li>
+                        <p>
+                            Gradient <m>m = \frac{60 - 88}{3 - 1} = \frac{-28}{2} = -14</m>.
+                            Intercept: <m>88 = -14(1) + c \implies c = 102</m>.
+                            Equation: <m>y = -14x + 102</m>.
+                        </p>
+                    </li>
+                    <li><p>The rate at which the battery is draining: it loses 14% of its charge every hour.</p></li>
+                    <li><p><m>y = -14(6) + 102 = -84 + 102 = 18\%</m>.</p></li>
+                </ol>
+            </answer>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    Explain the difference between interpolation and extrapolation. Why is extrapolation often considered risky?
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <term>Interpolation</term> is predicting within the data range, while <term>extrapolation</term> is predicting outside it. Extrapolation is risky because the observed trend may not hold true for values far beyond the measured data (e.g., a plant might stop growing or a car might run out of fuel).
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    The weight of a suitcase (<m>w</m>, in kg) and the cost to ship it (<m>c</m>, in KSh) are related as shown in the table:
+                </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row><cell>Weight (kg)</cell><cell>2</cell><cell>4</cell><cell>6</cell><cell>8</cell><cell>10</cell></row>
+                    <row><cell>Cost (KSh)</cell><cell>500</cell><cell>950</cell><cell>1300</cell><cell>1750</cell><cell>2100</cell></row>
+                </tabular>
+                <p>
+                    <ol>
+                        <li><p>Find the equation of the line of best fit that passes through <m>(2, 500)</m> and <m>(10, 2100)</m>.</p></li>
+                        <li><p>Use your equation to predict the cost of shipping a suitcase that weighs 15 kg.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <ol>
+                    <li>
+                        <p>
+                            Gradient <m>m = \frac{2100 - 500}{10 - 2} = \frac{1600}{8} = 200</m>.
+                            Intercept: <m>500 = 200(2) + c \implies c = 100</m>.
+                            Equation: <m>c = 200w + 100</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>c = 200(15) + 100 = 3000 + 100 = 3100</m> KSh.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The table below shows the number of hours spent on playing video games and the number of hours spent sleeping for a group of students.
+                </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row><cell>Gaming Hours</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row>
+                    <row><cell>Sleeping Hours</cell><cell>8</cell><cell>7</cell><cell>6</cell><cell>5</cell><cell>4</cell></row>
+                </tabular>
+                <p>
+                    <ol>
+                        <li><p>Plot the data points and draw a line of best fit. </p></li>
+                        <li><p>Describe the relationship between gaming hours and sleeping hours.</p></li>
+                    </ol>
+                </p>
 
-    <!-- <axiom component="lesson-plan">
+            </statement>
+            <answer>
+                <p>
+                    <ol>
+                        <li>
+                            <image width="50%">
+                                <latex-image label="gaming-sleeping-hours">
+                                    \begin{tikzpicture}
+                                        \draw[help lines, color=gray!30, step=1] (0,0) grid (6,5);
+                                        \draw[->] (0,0) -- (6.5,0) node[right] {Gaming Hours};
+                                        \draw[->] (0,0) -- (0,5.5) node[above] {Sleeping Hours};
+                                        \foreach \x in {0,1,...,6}
+                                            \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
+                                        \foreach \y in {0,2,...,10}
+                                            \draw (2pt, \y/2) -- (-2pt, \y/2) node[left] {\y};
+                                        
+                                        \filldraw[blue] (1, 4) circle (2pt); % (1, 8)
+                                        \filldraw[blue] (2, 3.5) circle (2pt); % (2, 7)
+                                        \filldraw[blue] (3, 3.0) circle (2pt); % (3, 6)
+                                        \filldraw[blue] (4, 2.5) circle (2pt); % (4, 5)
+                                        \filldraw[blue] (5, 2.0) circle (2pt); % (5, 4)
+                                        
+                                        \draw[red, thick] (0.5, 4.5) -- (5.5, 1.5); % y = -0.75x + 8.75 in local coords
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                        <li><p>There is a negative relationship between gaming hours and sleeping hours: as gaming hours increase, sleeping hours decrease.</p></li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
+
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -170,32 +645,28 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide datasets with very strong correlations so the line of best fit is easier to identify. Use pieces of string to "fit" the line before drawing it with a ruler.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities, focusing on drawing the line manually and determining its equation to make predictions.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Introduce data with an obvious <term>outlier</term>. Discuss how the outlier affects the line of best fit and whether it should be removed (if it was a measurement error) or kept (if it is a genuine but rare piece of data).
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
