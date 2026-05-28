@@ -196,7 +196,7 @@
         <solution>
             <p>
                 To solve the equation <m>\log₂(x) = 3</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
+                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
             </p>
             <p>
                 In our case, you have <m>b = 2</m>, <m>c = 3</m>, and <m>a = x</m>. 
@@ -224,21 +224,21 @@
         <solution>
             <p>
                 To solve the equation <m>\log₃(x + 1) = 2</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
+                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
             </p>
             <p>
                 In this case, you have <m>b = 3</m>, <m>c = 2</m>, and <m>a = x + 1</m>. 
                 Therefore, you can rewrite the equation as:
             </p>
             <p>
-                <m>\3^2 = \x + 1</m>
+                <m>3^2 = x + 1</m>
             </p>
             <p>
                 Now, calculate <m>3^2</m>, which is equal to 9. 
                 Therefore, the solution to the equation is:
             </p>
             <p>
-                <m>\x + 1 = 9</m>
+                <m> x + 1 = 9</m>
             </p>
             <p>
                 Subtracting 1 from both sides gives:
@@ -258,21 +258,21 @@
         <solution>
             <p>
                 To solve the equation <m>\log₄(x - 2) = 1</m>, first rewrite it in exponential form. 
-                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>\b^c = a</m>.
+                The logarithmic equation <m>\log_b(a) = c</m> is equivalent to the exponential equation <m>b^c = a</m>.
             </p>
             <p>
-                In this case, you have <m>\b = 4</m>, <m>\c = 1</m>, and <m>\a = x - 2</m>. 
+                In this case, you have <m>b = 4</m>, <m>c = 1</m>, and <m>a = x - 2</m>. 
                 Therefore, you can rewrite the equation as:
             </p>
             <p>
-                <m>\4^1 = x - 2</m>
+                <m>4^1 = x - 2</m>
             </p>
             <p>
-                Now, calculate <m>\4^1</m>, which is equal to 4. 
+                Now, calculate <m>4^1</m>, which is equal to 4. 
                 Therefore, the solution to the equation is:
             </p>
             <p>
-                <m>\x - 2 = 4</m>
+                <m>x - 2 = 4</m>
             </p>
             <p>
                 Adding 2 to both sides gives:
@@ -302,7 +302,7 @@
             </statement>   
             <solution>
                 <p>
-                    <m>\x = 25</m>
+                    <m>x = 25</m>
                 </p>
             </solution>             
         </exercise>  
@@ -314,7 +314,7 @@
             </statement>   
             <solution>
                 <p>
-                    <m>\x = 7</m>
+                    <m>x = 7</m>
                 </p>
             </solution> 
         </exercise> 
@@ -326,7 +326,7 @@
             </statement>   
             <solution>
                 <p>
-                    <m>\x = 3</m>
+                    <m>x = 3</m>
                 </p>
             </solution>
         </exercise>   
