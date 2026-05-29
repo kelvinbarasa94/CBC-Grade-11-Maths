@@ -264,7 +264,10 @@
     <example>
         <statement>
          <p>
-              In <m>2010</m> , Haiti experienced an earthquake whose intensity was <m>10^7</m> times the reference intensity <m>I_0</m>. The Richter scale is defined by: <m>M = \log_{10}\left(\frac{I}{I_0}\right)</m>
+              In <m>2010</m>, Haiti experienced an earthquake whose intensity was <m>10^7</m> times the reference intensity <m>I_0</m>. The Richter scale is defined by:
+         </p>
+         <p>
+            <m> = \loMg_{10}\left(\frac{I}{I_0}\right)</m>
          </p>
          <p>
             Where:
