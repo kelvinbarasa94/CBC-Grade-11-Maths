@@ -295,7 +295,7 @@
             </p>
                <p>
                   <md>
-                     <intertext>Therefore substitute the given values into the formula:</intertext>
+                     <intertext>Therefore substwitute the given values into the formula you have:</intertext>
                      <mrow>M \amp= \log_{10}\left(10^7\right)</mrow>
                      <intertext>Use the law <m>\log_{10}(10^n)=n</m>:</intertext>
                      <mrow>M \amp= 7</mrow>
