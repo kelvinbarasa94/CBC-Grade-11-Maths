@@ -264,21 +264,22 @@
     <example>
         <statement>
          <p>
-            A bacterium population doubles every <m>3</m> hours. The initial population is <m>100</m>. How many hours will it take for the population to reach <m>3200</m>? Use logarithms to solve.
+            A bacterium population doubles every <m>3</m> hours, with the population at hour <m>t</m> given by <md>P(t) = 100 \times 2^{\frac{t}{3}}</md>
+         </p>
+         <p>
+            How many hours will it take for the population to reach <m>3200</m>? 
          </p>
         </statement>
         <solution>
             <p>
-                The growth model is <m>P(t) = 100 \times 2^{t/3}</m>. Setting <m>P(t) = 3200</m>:
+                Setting <m>P(t) = 3200</m>:
             </p>
             <md>
                 <mrow>3200 \amp= 100 \times 2^{t/3}</mrow>
-                <intertext>Divide both sides by 100:</intertext>
                 <mrow>32 \amp= 2^{t/3}</mrow>
                 <intertext>Take <m>\log_2</m> of both sides:</intertext>
                 <mrow>\log_2(32) \amp= \frac{t}{3}</mrow>
                 <mrow>5 \amp= \frac{t}{3}</mrow>
-                <intertext>Multiply both sides by 3:</intertext>
                 <mrow>t \amp= 15</mrow>
             </md>
             <p>
@@ -293,7 +294,7 @@
                 The intensity of a sound is measured in decibels (dB) and is given by the formula:
             </p>
             <p>
-                <m>I = 10 \times \log_{10}(P/P_0)</m>
+                <md>I = 10 \times \log_{10}(P/P_0)</md>
             </p>
             <p>
                 Where <m>I</m> is the intensity in decibels, <m>P</m> is the power of the sound, and <m>P_0</m> is the reference power (the threshold of hearing). If a sound has a power of <m>1</m> watt and the reference power is <m>10^{-12}</m> watts, what is the intensity of the sound in decibels?
@@ -318,24 +319,30 @@
     <example>
         <statement>
             <p>
-                A radioactive substance decays at a rate proportional to its current amount. If the half-life of the substance is <m>5</m> years, how long will it take for a sample of <m>100</m> grams to decay to <m>25</m> grams? Use logarithms to solve this problem.
+                A radioactive substance decays at a rate proportional to its current amount, with the amount <m>P(t)</m> of substance in grams at time <m>t</m> years give by:
+                <md>
+                    P(t) = P_0 \times 2^{-\frac{t}{5}}
+                </md>
+                where <m>P_0</m> is the initial mass (in grams).
+            </p>
+            <p>
+                How long will it take for a sample of <m>100</m> grams to decay to <m>25</m> grams?
             </p>
         </statement>
         <solution>
-            <p>
-                The decay model is <m>P(t) = P_0 \times (1/2)^{t/5}</m>. Substituting <m>P_0 = 100</m> and <m>P(t) = 25</m>:
+            <p> Substituting <m>P_0 = 100</m> and <m>P(t) = 25</m>:
             </p>
             <md>
-                <mrow>25 \amp= 100 \times \left(\frac{1}{2}\right)^{t/5}</mrow>
+                <mrow>25 \amp= 100 \times 2^{-\frac{t}{5}}</mrow>
                 <intertext>Divide both sides by 100:</intertext>
-                <mrow>0.25 \amp= \left(\frac{1}{2}\right)^{t/5}</mrow>
+                <mrow>0.25 \amp= 2^{-\frac{t}{5}}</mrow>
                 <intertext>Take <m>\log_2</m> of both sides. Since <m>\log_2(0.25) = \log_2(1/4) = -2</m>:</intertext>
-                <mrow>-2 \amp= \frac{t}{5}</mrow>
+                <mrow>-2 \amp= -\frac{t}{5}</mrow>
                 <intertext>Multiply both sides by 5:</intertext>
-                <mrow>t \amp= -10</mrow>
+                <mrow>t \amp= 10</mrow>
             </md>
             <p>
-                Since time cannot be negative, <m>t = 10</m>. Therefore, it will take <m>10</m> years for the sample to decay to <m>25</m> grams.
+                Therefore, it will take <m>10</m> years for the sample to decay to <m>25</m> grams.
             </p>
         </solution>
     </example>
@@ -377,37 +384,57 @@
             </solution>             
         </exercise> 
         <exercise>
-            <statement>   
+            <introduction>   
                 <p>
                     The pH of a solution is given by the formula:
                 </p>
                 <p>
-                    <m>pH = -\log_{10}([H^+])</m>
+                    <md>\text{pH} = -\log_{10}([H^+])</md>
                 </p>
                 <p>
-                    Where <m>[H^+]</m> is the concentration of hydrogen ions in moles per liter. If a solution has a pH of <m>3</m>, what is the concentration of hydrogen ions in the solution?
+                    Where <m>[H^+]</m> is the concentration of hydrogen ions in moles per liter
                 </p>
-            </statement>   
-            <solution>
-                <p>
-                    Substitute <m>pH = 3</m> into the formula and solve for <m>[H^+]</m>:
-                </p>
-                <md>
-                    <mrow>3 \amp= -\log_{10}([H^+])</mrow>
-                    <intertext>Multiply both sides by <m>-1</m>:</intertext>
-                    <mrow>\log_{10}([H^+]) \amp= -3</mrow>
-                    <intertext>Rewrite in exponential form:</intertext>
-                    <mrow>[H^+] \amp= 10^{-3} = 0.001</mrow>
-                </md>
-                <p>
-                    Therefore, the concentration of hydrogen ions is <m>0.001</m> moles per liter.
-                </p>
-            </solution> 
+            </introduction>  
+            <task>
+                <statement>
+                    <p>
+                        Is this formula equivalent to <md>\text{pH} = \log_{10}\left(\frac{1}{[H^+]}\right)</md>
+                        Why or why not?
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        Yes, the two formulas are equivalent. This is because of quotient law: 
+                        <md>\log_b\left(\frac{1}{x}\right) = \log_b\left(x^{-1}\right) = -\log_b(x)</md>
+                    </p>
+                </solution>
+            </task> 
+            <task>
+                <statement>
+                    <p>
+                        If a solution has a pH of <m>3</m>, what is the concentration of hydrogen ions in the solution?
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        Substitute <m>pH = 3</m> into the formula and solve for <m>[H^+]</m>:
+                    </p>
+                    <md>
+                        <mrow>3 \amp= -\log_{10}([H^+])</mrow>
+                        <mrow>\log_{10}([H^+]) \amp= -3</mrow>
+                        <intertext>Rewrite in exponential form:</intertext>
+                        <mrow>[H^+] \amp= 10^{-3} = 0.001</mrow>
+                    </md>
+                    <p>
+                        Therefore, the concentration of hydrogen ions is <m>0.001</m> moles per liter.
+                    </p>
+                </solution> 
+            </task>
         </exercise>
         <exercise>
             <statement>   
                 <p>
-                    A sound has an intensity of <m>80</m> decibels. If the reference power is <m>10^{-12}</m> watts, what is the power of the sound in watts? Use logarithms to solve this problem.
+                    A sound has an intensity of <m>I = 80</m> decibels. The relation between intensity and power is given by <md>I = 10 \times \log_{10}(P/P_0)</md> Where <m>P</m> is the power of the sound and <m>P_0</m> is the reference power. If the reference power is <m>10^{-12}</m> watts, what is the power of the sound in watts?
                 </p>
             </statement>   
             <solution>
