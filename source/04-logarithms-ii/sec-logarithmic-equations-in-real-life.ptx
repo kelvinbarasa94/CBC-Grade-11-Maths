@@ -285,15 +285,17 @@
         </statement>
         <solution>
             <p>
-                 Given <m>I/ I_0 = 10^7</m>:
+                 Given <m>\frac{I}{I_0} = 10^7</m>
             </p>
             <p>
-                and the formula for the Richter scale is <m>M = \log_{10}\left(\frac{I}{I_0}\right)</m>. You can substitute the given values into the formula to find the magnitude of the earthquake:
+                While the Richter scale formula is:
+            </p>
+            <p>
+                 <m>M = \log_{10}\left(\frac{I}{I_0}\right)</m>. 
             </p>
                <p>
                   <md>
-                     <mrow>M \amp= \log_{10}\left(\frac{I}{I_0}\right)</mrow>
-                     <intertext>Substitute the given values:</intertext>
+                     <intertext>Therefore substitute the given values into the formula:</intertext>
                      <mrow>M \amp= \log_{10}\left(10^7\right)</mrow>
                      <intertext>Use the law <m>\log_{10}(10^n)=n</m>:</intertext>
                      <mrow>M \amp= 7</mrow>
