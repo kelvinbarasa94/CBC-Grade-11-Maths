@@ -264,25 +264,40 @@
     <example>
         <statement>
          <p>
-            A bacterium population doubles every <m>3</m> hours. The initial population is <m>100</m>. How many hours will it take for the population to reach <m>3200</m>? Use logarithms to solve.
+              In <m>2010</m> , Haiti experienced an earthquake whose intensity was <m>10^7</m> times the reference intensity <m>I_0</m>. The Richter scale is defined by: <m>M = \log_{10}\left(\frac{I}{I_0}\right)</m>
          </p>
+         <p>
+            Where:
+         </p>
+            <p>
+            <ul>
+                <li><m>M</m> is the magnitude of the earthquake on the Richter scale.</li>
+                <li><m>I</m> is the intensity of the earthquake.</li>
+                <li><m>I_0</m> is the reference intensity, (the smallest intensity that can be detected by seismographs).</li>
+            </ul>
+            </p>
+            <p>
+                Determine the magnitude of the earthquake on the Richter scale.
+            </p>
         </statement>
         <solution>
             <p>
-                The growth model is <m>P(t) = 100 \times 2^{t/3}</m>. Setting <m>P(t) = 3200</m>:
+                 Given <m>I/ I_0 = 10^7</m>:
             </p>
-            <md>
-                <mrow>3200 \amp= 100 \times 2^{t/3}</mrow>
-                <intertext>Divide both sides by 100:</intertext>
-                <mrow>32 \amp= 2^{t/3}</mrow>
-                <intertext>Take <m>\log_2</m> of both sides:</intertext>
-                <mrow>\log_2(32) \amp= \frac{t}{3}</mrow>
-                <mrow>5 \amp= \frac{t}{3}</mrow>
-                <intertext>Multiply both sides by 3:</intertext>
-                <mrow>t \amp= 15</mrow>
-            </md>
             <p>
-                Therefore, the population will reach <m>3200</m> after <m>15</m> hours.
+                and the formula for the Richter scale is <m>M = \log_{10}\left(\frac{I}{I_0}\right)</m>. You can substitute the given values into the formula to find the magnitude of the earthquake:
+            </p>
+               <p>
+                  <md>
+                     <mrow>M \amp= \log_{10}\left(\frac{I}{I_0}\right)</mrow>
+                     <intertext>Substitute the given values:</intertext>
+                     <mrow>M \amp= \log_{10}\left(10^7\right)</mrow>
+                     <intertext>Use the law <m>\log_{10}(10^n)=n</m>:</intertext>
+                     <mrow>M \amp= 7</mrow>
+                  </md>
+               </p>
+            <p>
+                Therefore, the 
             </p>
         </solution>
     </example>
