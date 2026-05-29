@@ -44,33 +44,30 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        10 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To show how logarithmic equations can be applied to solve real-life problems, and to encourage students to think critically about the applications of logarithms in various contexts.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Let Learners explore different guessing methods, and only introduce the efficient method of halving the possibilities after they have had a chance to experiment. Guide them towards the connection between halving and powers of 2, and then to logarithms.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
+        </axiom> 
 
     <activity xml:id="act-number-guessing-log2">
         <introduction>
@@ -215,92 +212,75 @@
         </task>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    2 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To remind Learners of general strategies for solving logarithmic equations, and to provide a clear example of how to apply these strategies in a real-life context.
                 </p>
             </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    </axiom>
 
     <insight>
         <p>
             Logarithmic equations are powerful tools that can help us understand and solve a wide range of real-life problems, from population growth to sound intensity. By applying logarithmic properties and calculations, we can make sense of complex phenomena and make informed decisions based on data.
         </p>
+        <p>
+            Make sure you double check the units in your calculations, and that your final answer is reasonable given the context of the problem. Logarithmic equations can sometimes yield very large or very small numbers, so it's important to interpret your results in a meaningful way.
+        </p>
     </insight> 
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
-    <!-- Add at least 3 examples -->
 
     <example>
         <statement>
          <p>
-              In <m>2010</m>, Haiti experienced an earthquake whose intensity was <m>10^7</m> times the reference intensity <m>I_0</m>. The Richter scale is defined by:
+              The Richter scale is defined by:
          </p>
          <p>
             <m> M = \log_{10}\left(\frac{I}{I_0}\right)</m>
          </p>
          <p>
-            Where:
+            where:
          </p>
-            <p>
+        <p>
             <ul>
                 <li><m>M</m> is the magnitude of the earthquake on the Richter scale.</li>
                 <li><m>I</m> is the intensity of the earthquake.</li>
                 <li><m>I_0</m> is the reference intensity, (the smallest intensity that can be detected by seismographs).</li>
             </ul>
-            </p>
-            <p>
-                Determine the magnitude of the earthquake on the Richter scale.
-            </p>
+        </p>
+        <p> 
+            In <m>2010</m>, Haiti experienced an earthquake whose intensity was <m>10^7</m> times the reference intensity <m>I_0</m>. 
+        </p>
+        <p>
+            Determine the magnitude of the earthquake on the Richter scale.
+        </p>
         </statement>
         <solution>
             <p>
-                 Given <m>\frac{I}{I_0} = 10^7</m>
+                We are told <m>\frac{I}{I_0} = 10^7</m>. Substituting the given values into the formula:
             </p>
             <p>
-                While the Richter scale formula is:
+                <md>
+                    <mrow>M \amp= \log_{10}\left(10^7\right)</mrow>
+                    <intertext>By the power law, <m>\log_{10}(10^n)= n \log_{10}(10) = n </m>, so:</intertext>
+                    <mrow>M \amp= 7</mrow>
+                </md>
             </p>
-            <p>
-                 <m>M = \log_{10}\left(\frac{I}{I_0}\right)</m>. 
-            </p>
-               <p>
-                  <md>
-                     <intertext>Therefore substwitute the given values into the formula you have:</intertext>
-                     <mrow>M \amp= \log_{10}\left(10^7\right)</mrow>
-                     <intertext>Use the law <m>\log_{10}(10^n)=n</m>:</intertext>
-                     <mrow>M \amp= 7</mrow>
-                  </md>
-               </p>
             <p>
                 Therefore, the magnitude of the earthquake on the Richter scale is <m>7</m>.
             </p>
@@ -313,7 +293,7 @@
                 The intensity of a sound is measured in decibels (dB) and is given by the formula:
             </p>
             <p>
-                <md>I = 10 \times \log_{10}(P/P_0)</md>
+                <md>I = 10 \times \log_{10}\left(\frac{P}{P_0}\right)</md>
             </p>
             <p>
                 Where <m>I</m> is the intensity in decibels, <m>P</m> is the power of the sound, and <m>P_0</m> is the reference power (the threshold of hearing). If a sound has a power of <m>1</m> watt and the reference power is <m>10^{-12}</m> watts, what is the intensity of the sound in decibels?
@@ -473,6 +453,31 @@
                     Therefore, the power of the sound is <m>0.0001</m> watts.
                 </p>
             </solution> 
+        </exercise>
+        <exercise>
+            <statement>
+            <p>
+                A bacterium population doubles every <m>3</m> hours, with the population size given at time <m>t</m> hours by <md>P(t) = 100 \times 2^{t/3}</md> The initial population is <m>100</m>. How many hours will it take for the population to reach <m>3200</m>? Use logarithms to solve.
+            </p>
+            </statement>
+            <solution>
+                <p>
+                    Setting <m>P(t) = 3200</m>:
+                </p>
+                <md>
+                    <mrow>3200 \amp= 100 \times 2^{t/3}</mrow>
+                    <intertext>Divide both sides by 100:</intertext>
+                    <mrow>32 \amp= 2^{t/3}</mrow>
+                    <intertext>Take <m>\log_2</m> of both sides:</intertext>
+                    <mrow>\log_2(32) \amp= \frac{t}{3}</mrow>
+                    <mrow>5 \amp= \frac{t}{3}</mrow>
+                    <intertext>Multiply both sides by 3:</intertext>
+                    <mrow>t \amp= 15</mrow>
+                </md>
+                <p>
+                    Therefore, the population will reach <m>3200</m> after <m>15</m> hours.
+                </p>
+            </solution>
         </exercise>
 
     </exercises>
