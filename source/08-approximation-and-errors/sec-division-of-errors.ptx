@@ -72,7 +72,7 @@
                     <term>Work in Groups to:</term>
                 </p>
                 <p>
-                    Construct a triangle ABC with the length AB <m>= 6</m> cm, AC <m>= 8</m> cm, and BC <m>= 10</m> cm, assume the measurements are accurate to the nearest <m>0.1</m> cm (the smallest mark on your ruler).
+                    Construct a triangle ABC with the length AB <m>= 6</m> cm, AC <m>= 8</m> cm, and BC <m>= 10</m> cm.
                 </p>
                 <p>
                     <term>You are required to:</term>
@@ -81,64 +81,117 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Find the limits (Minimum and Maximum) for each side and record them below.
+                                Find the limits within which the length of AB, AC and BC lie and record the results in the table below.
                             </p>
                             <tabular left="medium" right="medium" top="medium" bottom="medium">
                                 <row header="yes">
                                     <cell>Side</cell>
                                     <cell>Minimum</cell>
-                                    <cell>working</cell>
+                                    <cell>Actual</cell>
                                     <cell>Maximum</cell>
                                 </row>
                                 <row>
                                     <cell>AB</cell>
                                     <cell>?</cell>
-                                    <cell>6</cell>
+                                    <cell>?</cell>
                                     <cell>?</cell>
                                 </row>
                                 <row>
                                     <cell>BC</cell>
                                     <cell>?</cell>
-                                    <cell>10</cell>
+                                    <cell>?</cell>
                                     <cell>?</cell>
                                 </row>
                                 <row>
-                                    <cell>AC</cell>
+                                    <cell>CA</cell>
                                     <cell>?</cell>
-                                    <cell>8</cell>
+                                    <cell>?</cell>
                                     <cell>?</cell>
                                 </row>
                             </tabular>
                         </li>
                         <li>
                             <p>
-                                Calculate the tangent of <m>\angle ABC</m> using the ratio <m>\frac{AC}{AB}</m>. To find the full range of possible errors, calculate the tangent for every combination of Minimum, Actual, and Maximum values for both sides.
+                                <term>Use trigonometric ratios to:</term> find the tangent of <m>\angle ABC</m>.
                             </p>
-                            <tabular left="medium" right="medium" top="medium" bottom="medium">
-                                <row header="yes">
-                                    <cell>Tangent <m>(\frac{AC}{AB})</m></cell>
-                                    <cell>Min AB</cell>
-                                    <cell>Working AB</cell>
-                                    <cell>Max AB</cell>
-                                </row>
-                                <row>
-                                    <cell>Min AC</cell>
-                                    <cell>?</cell><cell>?</cell><cell>?</cell>
-                                </row>
-                                <row>
-                                    <cell>Working AC</cell>
-                                    <cell>?</cell><cell>?</cell><cell>?</cell>
-                                </row>
-                                <row>
-                                    <cell>Max AC</cell>
-                                    <cell>?</cell><cell>?</cell><cell>?</cell>
-                                </row>
-                            </tabular>
+                            <p>
+                                <ol marker="(i)">
+                                    <li>
+                                        <p>
+                                            Use the minimum value of AC and record the result in the table below.
+                                        </p>
+                                        <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                            <row header="yes">
+                                                <cell>Minimum AC</cell>
+                                                <cell>Tangent</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Minimum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Actual AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Maximum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                        </tabular>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Use the actual value of AC and record the result in the table below.
+                                        </p>
+                                        <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                            <row header="yes">
+                                                <cell>Actual AC</cell>
+                                                <cell>Tangent</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Minimum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Actual AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Maximum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                        </tabular>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Use the maximum value of AC and record the result in the table below.
+                                        </p>
+                                        <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                            <row header="yes">
+                                                <cell>Maximum AC</cell>
+                                                <cell>Tangent</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Minimum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Actual AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                            <row>
+                                                <cell>Maximum AB</cell>
+                                                <cell>?</cell>
+                                            </row>
+                                        </tabular>
+                                    </li>
+                                </ol>
+                            </p>
                             
                         </li>
                         <li>
                             <p>
-                                From the table find the minimum, working, and maximum values of the tangent of <m>\angle ABC</m>. (<term>Hint</term> The working tangent are found using the working values of AB and AC).
+                                From the table find the minimum, actual, and maximum values of the tangent of <m>\angle ABC</m>. (<term>Hint</term> The actual tangent are found using the actual values of AB and AC).
                             </p>
                         </li>
                     </ol>
@@ -147,7 +200,7 @@
                     <term>Class Discussion</term>
                 </p>
                 <p>
-                    Use cosine to find the minimum, working, and maximum values of <m>\angle ACB</m>, hence find the limits within which <m>\angle ACB</m> lies.
+                    Use cosine to find the value minimum, actual, and maximum values of <m>\angle ACB</m>, hence find the limits within which <m>\angle ACB</m> lies.
                 </p>
                 <p>
                     Find the absolute error, relative error and percentage error in the tangent of <m>\angle ABC</m> and the cosine of angle <m>\angle ACB</m>.
@@ -193,15 +246,11 @@
     </p>
     <p>
         <md>
-            <mrow> \text{Absolute error} \; = \amp \; \text{Maximum value}\; - \;\text{Working value} or </mrow>
-            <mrow> \text{Absolute error} \; = \amp \; \text{Working value}\; - \;\text{Minimum value} </mrow>
-            <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute error}}{\text{Working value}} </mrow>
+            <mrow> \text{Absolute error} \; = \amp \; \text{Maximum value}\; - \;\text{Actual value} </mrow>
+            <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute error}}{\text{Actual value}} </mrow>
             <mrow> \text{Percentage error} \; = \amp \; \text{Relative error} \times 100\% </mrow>
         </md>
         
-    </p>
-    <p>
-        <term>Note:</term> The absolute error tells us the size of the mistake, while the percentage error tells us how significant that mistake is compared to the total size of the object.
     </p>
    </insight>
 
