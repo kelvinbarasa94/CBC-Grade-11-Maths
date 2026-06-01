@@ -121,9 +121,9 @@
                         <p>
                             You have two cell towers. Each tower has a circular coverage range of <m>5</m> km.
                         </p>
-                        <image width="40%">
+                        <image width="65%">
                             <latex-image label="Graphical representation of the telecom problem">
-                                \begin{tikzpicture}
+                                \begin{tikzpicture}[scale=0.7]
                                     \draw[help lines] (-6,-6) grid (6,6);
                                     \draw[thick,->] (-6,0) -- (6,0) node[anchor=north west] {x (km)};
                                     \draw[thick,->] (0,-6) -- (0,6) node[anchor=south east] {y (km)};
@@ -144,9 +144,9 @@
                         <p>
                             Draw the circles representing the coverage area for each tower.
                         </p>
-                        <image width="40%">
+                        <image width="65%">
                             <latex-image label="Graphical representation of the telecom problem with coverage circles">
-                                \begin{tikzpicture}
+                                \begin{tikzpicture}[scale=0.7]
                                     \draw[help lines] (-6,-6) grid (6,6);
                                     \draw[thick,->] (-6,0) -- (6,0) node[anchor=north west] {x (km)};
                                     \draw[thick,->] (0,-6) -- (0,6) node[anchor=south east] {y (km)};
@@ -381,9 +381,9 @@
         </statement>
         <solution>
             
-                <image width="40%">
+                <image width="65%">
                     <latex-image label="Graphical representation of the drug concentration over time">
-                        \begin{tikzpicture}[scale=0.85]
+                        \begin{tikzpicture}[scale=0.7]
 
                             % Grid
                             \draw[help lines, dashed] (0,0) grid (6,11);
@@ -463,9 +463,9 @@
                 </me>
             </p>
             
-            <image width="40%">
+            <image width="65%">
                 <latex-image label="Graphical representation of the pillar and brace">
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines] (-4,-1) grid (4,4);
                         \draw[thick,->] (-4,0) -- (4,0) node[anchor=north west] {x (cm)};
                         \draw[thick,->] (0,-1) -- (0,4) node[anchor=south east] {y (cm)};
@@ -521,7 +521,7 @@
                 <p>
                     (a)
                 </p>
-                <image width="40%">
+                <image width="65%">
                     <latex-image label="Graphical representation of the fertilizer and yield data">
                         \begin{tikzpicture}[x=0.12cm, y=0.8cm]
 
@@ -564,7 +564,7 @@
                 <p>
                     b) Extending the line to <m>F = 60</m>, the predicted yield is approximately <m>12.0</m> tons.
                 </p>
-                    <image width="40%">
+                    <image width="65%">
                         <latex-image label="Extended graphical representation of the fertilizer and yield data">
                             \begin{tikzpicture}[x=0.12cm, y=0.8cm]
 
@@ -632,7 +632,7 @@
                 <p>
                     (a)
                 </p>
-                <image width="40%">
+                <image width="65%">
                     <latex-image label="Graphical representation of the rocket's flight">
                         \begin{tikzpicture}[x=1.2cm, y=0.35cm]
 
@@ -726,7 +726,7 @@
                 <p>
                     a) 
                 </p>
-                    <image width="40%">
+                    <image width="65%">
                         <latex-image label="Graphical representation of the car's speed">
                             \begin{tikzpicture}[x=1.2cm, y=0.45cm]
 

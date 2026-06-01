@@ -303,9 +303,9 @@
             <p>
                 2. Plot both graphs on the same grid:
             </p>
-            <image width="60%">
+            <image width="65%">
                 <latex-image>
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (-2,-2) grid (6,9);
                         \draw[-&gt;] (-2,0) -- (6,0) node[right] {$x$};
                         \draw[-&gt;] (0,-2) -- (0,9) node[above] {$y$};
@@ -337,9 +337,9 @@
             <p>
                 By plotting <m>y = x^2 - 2</m> (a parabola) and <m>y = x</m> (a straight line), we observe that they cross at two points.
             </p>
-            <image width="50%">
+            <image width="65%">
                 <latex-image label="Graph of y = x^2 - 2 and y = x">
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (-2,-3) grid (3,3);
                         \draw[-&gt;] (-2,0) -- (3,0) node[right] {$x$};
                         \draw[-&gt;] (0,-3) -- (0,3) node[above] {$y$};
@@ -386,9 +386,9 @@
                     <li>When <m>x = 2, y = (2)^3 - 2 = 6</m></li>
                 </ul>
             </p>
-            <image width="50%">
+            <image width="65%">
                 <latex-image label="Graph of y = x^3 - x">
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (-2.5,-7) grid (2.5,7);
                         \draw[-&gt;] (-2.5,0) -- (2.5,0) node[right] {$x$};
                         \draw[-&gt;] (0,-7) -- (0,7) node[above] {$y$};

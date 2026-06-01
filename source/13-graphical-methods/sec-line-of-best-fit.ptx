@@ -244,9 +244,9 @@
                 <li><p>Use a ruler to draw a straight line that passes through the middle of the points, ensuring that there are roughly equal numbers of points above and below the line.</p></li>
             </ol>
         </p>
-        <image width="50%">
+        <image width="65%">
             <latex-image label="fig-line-of-best-fit">
-            \begin{tikzpicture}
+            \begin{tikzpicture}[scale=0.7]
                 \draw[help lines, color=gray!30, step=1] (0,0) grid (6,6);
                 \draw[->] (0,0) -- (6.5,0) node[right] {x};
                 \draw[->] (0,0) -- (0,6.5) node[above] {y};
@@ -294,9 +294,9 @@
                     <li><p>Use a ruler to draw a straight line that passes through the middle of the points. In this case, we can draw a line that passes exactly through (5, 12), (15, 30), and (25, 48).</p></li>
                 </ol>
             </p>
-            <image width="50%">
+            <image width="65%">
                 <latex-image label="fig-line-of-best-fit-example">
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (0,0) grid (6,6);
                         \draw[->] (0,0) -- (6.5,0) node[right] {Fertilizer (g)};
                         \draw[->] (0,0) -- (0,6.5) node[above] {Height (cm)};
@@ -330,9 +330,9 @@
             <p>
                 Find the equation of the line of best fit drawn for this data.
             </p>
-            <image width="50%">
+            <image width="65%">
                 <latex-image label="fig-line-of-best-fit-study-hours">
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (0,0) grid (6,10);
                         \draw[->] (0,0) -- (6.5,0) node[right] {Study Hours};
                         \draw[->] (0,0) -- (0,10.5) node[above] {Test Score};
@@ -406,9 +406,9 @@
                         <p>
                             Plot the points and draw the line <m>y = -2.5x + 23</m>. Note that this line passes exactly through <m>(2, 18)</m>, <m>(4, 13)</m>, and <m>(6, 8)</m>.
                         </p>
-                        <image width="50%">
+                        <image width="65%">
                             <latex-image label="fig-line-of-best-fit-car-value">
-                                \begin{tikzpicture}
+                                \begin{tikzpicture}[scale=0.7]
                                     \draw[help lines, color=gray!30, step=1] (0,0) grid (8,6);
                                     \draw[->] (0,0) -- (8.5,0) node[right] {Age (years)};
                                     \draw[->] (0,0) -- (0,6.5) node[above] {Value (000 KSh)};
@@ -482,9 +482,9 @@
                             <p>
                                 The line should have a negative slope, passing through through the points <m>(1, 80)</m>, <m>(5, 68)</m>, and <m>(9, 56)</m>.
                             </p>
-                            <image width="50%">
+                            <image width="65%">
                                 <latex-image label="heart-rate-exercisising">
-                                    \begin{tikzpicture}
+                                    \begin{tikzpicture}[scale=0.7]
                                         \draw[help lines, color=gray!30, step=1] (0,0) grid (10,10);
                                         \draw[->] (0,0) -- (10.5,0) node[right] {Exercise (h)};
                                         \draw[->] (0,0) -- (0,10.5) node[above] {Heart Rate (bpm)};
@@ -609,9 +609,9 @@
                 <p>
                     <ol>
                         <li>
-                            <image width="50%">
+                            <image width="65%">
                                 <latex-image label="gaming-sleeping-hours">
-                                    \begin{tikzpicture}
+                                    \begin{tikzpicture}[scale=0.7]
                                         \draw[help lines, color=gray!30, step=1] (0,0) grid (6,5);
                                         \draw[->] (0,0) -- (6.5,0) node[right] {Gaming Hours};
                                         \draw[->] (0,0) -- (0,5.5) node[above] {Sleeping Hours};

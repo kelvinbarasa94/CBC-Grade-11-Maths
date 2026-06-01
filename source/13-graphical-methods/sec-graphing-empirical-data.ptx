@@ -79,9 +79,9 @@
             <p>
                 The data collected was plotted on a graph to show how the temperature changed throughout the day and night.
             </p>
-            <image width="70%">
+            <image width="80%">
                 <latex-image label="temperature-graph">
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (0,0) grid (12,6);
                         \draw[->] (0,0) -- (12.5,0) node[right] {Time (hours)};
                         \draw[->] (0,0) -- (0,6.5) node[above] {Temp ($^\circ$C)};
@@ -203,9 +203,9 @@
                 </li>
             </ul>
         </p>
-        <image width="40%">
+        <image width="65%">
             <latex-image label="graphical-empirical-data">
-                \begin{tikzpicture}
+                \begin{tikzpicture}[scale=0.7]
                     \draw[help lines, color=gray!30, step=1] (0,0) grid (5,5);
                     \draw[->] (0,0) -- (5.5,0) node[right] {Independent Variable};
                     \draw[->] (0,0) -- (0,5.5) node[above] {Dependent Variable};
@@ -278,9 +278,9 @@
                         </p>
                     </li>
                     <li>
-                        <image xml:id="img-tree-growth" width="50%">
+                        <image xml:id="img-tree-growth" width="65%">
                             <latex-image label="tree-growth-graph">
-                                \begin{tikzpicture}
+                                \begin{tikzpicture}[scale=0.7]
                                     \draw[help lines, color=gray!30, step=1] (0,0) grid (6,7);
                                     \draw[->] (0,0) -- (6.5,0) node[right] {Diameter (in)};
                                     \draw[->] (0,0) -- (0,7.5) node[above] {Age (yr)};
@@ -314,9 +314,9 @@
             <p>
                 The scatter plot below shows the relationship between the number of hours students spent studying for a mathematics exam and their final scores.
             </p>
-            <image xml:id="img-scatter-study-ex" width="50%">
+            <image xml:id="img-scatter-study-ex" width="65%">
                 <latex-image>
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (0,0) grid (5,5);
                         \draw[->] (0,0) -- (5.5,0) node[right] {Hours};
                         \draw[->] (0,0) -- (0,5.5) node[above] {Score (\%)};
@@ -451,9 +451,9 @@
                 <p>
                     A science experiment measures the temperature of a cooling liquid over time.
                 </p>
-                <image width="40%">
+                <image width="65%">
                     <latex-image label="cooling-graph">
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[scale=0.7]
                             \draw[help lines, color=gray!30, step=1] (0,0) grid (5,5);
                             \draw[->] (0,0) -- (5.5,0) node[right] {Time (min)};
                             \draw[->] (0,0) -- (0,5.5) node[above] {Temp ($^\circ$C)};

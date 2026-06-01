@@ -212,9 +212,9 @@
                 </li>
             </ul>
         </p>
-        <image xml:id="img-tangent-illustration" width="40%">
+        <image xml:id="img-tangent-illustration" width="65%">
             <latex-image label="Tangent Line Illustration">
-                \begin{tikzpicture}[scale=0.8]
+                \begin{tikzpicture}[scale=0.7]
                     \draw[-&gt;] (-0.5,0) -- (5,0) node[right] {$x$};
                     \draw[-&gt;] (0,-0.5) -- (0,5) node[above] {$y$};
                     \draw[thick, blue, domain=0.5:4] plot (\x, {0.2*\x*\x + 1});
@@ -265,9 +265,9 @@
                     </li>
                 </ol>
             </p>
-            <image xml:id="img-example-tangent-inst" width="30%">
+            <image xml:id="img-example-tangent-inst" width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=0.6]
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (-1,0) grid (5,10);
                         \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
                         \draw[-&gt;] (0,-1) -- (0,10) node[above] {$y$};
@@ -319,7 +319,7 @@
                     </li>
                 </ol>
             </p>
-            <image xml:id="img-example-volume-inst" width="30%">
+            <image xml:id="img-example-volume-inst" width="65%">
                 <description>Graph of V = 100 - t^2 with a tangent line and gradient triangle at t=5.</description>
                 <latex-image>
                     \begin{tikzpicture}[x=0.5cm, y=0.05cm]
@@ -367,10 +367,10 @@
                     </li>
                 </ol>
             </p>
-            <image xml:id="img-example-cubic-tangent-inst" width="30%">
+            <image xml:id="img-example-cubic-tangent-inst" width="65%">
                 <description>Graph of y = x^3 with a tangent line and gradient triangle at x=1.</description>
                 <latex-image>
-                    \begin{tikzpicture}[scale=0.8]
+                    \begin{tikzpicture}[scale=0.7]
                         \draw[help lines, color=gray!30, step=1] (-2,-8) grid (2,8);
                         \draw[-&gt;] (-2.5,0) -- (2.5,0) node[right] {$x$};
                         \draw[-&gt;] (0,-8.5) -- (0,8.5) node[above] {$y$};
@@ -425,7 +425,7 @@
                     Plotting <m>h = 20t - 5t^2</m> and drawing a tangent at <m>(1, 15)</m>:
                     Estimated gradient should be around <m>10</m> m/s.
                 </p>
-                <image xml:id="img-ex-velocity-inst" width="30%">
+                <image xml:id="img-ex-velocity-inst" width="65%">
                     <latex-image label="Projectile Motion with Tangent Line">
                         \begin{tikzpicture}[scale=0.25]
                             \draw[help lines, color=gray!30, step=5, ystep=5, xstep=1] (-1,0) grid (5,25);
@@ -456,9 +456,9 @@
                     Picking points on the tangent like <m>(0, 5)</m> and <m>(2, 1)</m>:
                     <me>\text{Gradient} = \frac{1 - 5}{2 - 0} = \frac{-4}{2} = -2</me>
                 </p>
-                <image xml:id="img-ex-quad-neg-inst" width="50%">
+                <image xml:id="img-ex-quad-neg-inst" width="65%">
                     <latex-image label="Quadratic Function with Tangent Line">
-                        \begin{tikzpicture}[scale=0.4]
+                        \begin{tikzpicture}[scale=0.7]
                             \draw[help lines, color=gray!30, step=1] (-3,-5) grid (3,5);
                             \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
                             \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
@@ -487,7 +487,7 @@
                     Draw a tangent at <m>(3, 28)</m> and pick points like <m>(2, 16)</m> and <m>(4, 40)</m>.
                     <me>\text{Rate} = \frac{40 - 16}{4 - 2} = \frac{24}{2} = 12 \text{ bacteria/hour}</me>
                 </p>
-                <image xml:id="img-ex-bacteria-inst" width="30%">
+                <image xml:id="img-ex-bacteria-inst" width="65%">
                     <latex-image label="Bacterial Growth with Tangent Line">
                         \begin{tikzpicture}[scale=0.1]
                             \draw[help lines, color=gray!30, step=1, ystep=10, xstep=1] (0,0) grid (6,50);
@@ -518,9 +518,9 @@
                     Pick points on the tangent such as <m>(0, -2)</m> and <m>(-3, 4)</m>.
                     <me>\text{Gradient} = \frac{4 - (-2)}{-3 - 0} = \frac{6}{-3} = -2</me>
                 </p>
-                <image xml:id="img-ex-quad-neg-x-inst" width="30%">
+                <image xml:id="img-ex-quad-neg-x-inst" width="65%">
                     <latex-image label="Quadratic_Function_Tangent_Line">
-                        \begin{tikzpicture}[scale=0.4]
+                        \begin{tikzpicture}[scale=0.7]
                             \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,6);
                             \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
                             \draw[-&gt;] (0,-3) -- (0,6) node[above] {$y$};
