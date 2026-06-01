@@ -537,6 +537,214 @@
                 </image>
             </answer>
         </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    For <m>f(x) = x^2</m>, estimate the instantaneous rate of change at <m>x = 3</m> by computing the average rate of change over <m>[3,\ 3+h]</m> for decreasing values of <m>h</m>.
+                </p>
+                <p>
+                    <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                        <row header="yes">
+                            <cell><m>h</m></cell>
+                            <cell><m>f(3+h)</m></cell>
+                            <cell>AROC <m>= \dfrac{f(3+h)-f(3)}{h}</m></cell>
+                        </row>
+                        <row><cell><m>1</m></cell><cell></cell><cell></cell></row>
+                        <row><cell><m>0.5</m></cell><cell></cell><cell></cell></row>
+                        <row><cell><m>0.1</m></cell><cell></cell><cell></cell></row>
+                        <row><cell><m>0.01</m></cell><cell></cell><cell></cell></row>
+                    </tabular>
+                </p>
+                <p>What value does the AROC appear to approach? This is the instantaneous rate of change at <m>x = 3</m>.</p>
+            </statement>
+            <answer>
+                <p>
+                    <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                        <row header="yes">
+                            <cell><m>h</m></cell><cell><m>f(3+h)</m></cell><cell>AROC <m>= 6+h</m></cell>
+                        </row>
+                        <row><cell>1</cell><cell>16</cell><cell>7</cell></row>
+                        <row><cell>0.5</cell><cell>12.25</cell><cell>6.5</cell></row>
+                        <row><cell>0.1</cell><cell>9.61</cell><cell>6.1</cell></row>
+                        <row><cell>0.01</cell><cell>9.0601</cell><cell>6.01</cell></row>
+                    </tabular>
+                </p>
+                <p>The AROC approaches <m>6</m> as <m>h \to 0</m>. The instantaneous rate of change at <m>x = 3</m> is <m>6</m>.</p>
+            </answer>
+            <solution>
+                <p>
+                    Since <m>f(3+h) = (3+h)^2 = 9+6h+h^2</m> and <m>f(3)=9</m>:
+                    <md>
+                        <mrow>\text{AROC} = \frac{(9+6h+h^2)-9}{h} = \frac{6h+h^2}{h} = 6+h</mrow>
+                    </md>
+                </p>
+                <p>As <m>h \to 0</m>, AROC <m>\to 6</m>. The instantaneous rate of change at <m>x=3</m> is <m>6</m>. Compare to the graphical estimate from the tangent: they should agree.</p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The position of a matatu along Ngong Road (in km from Nairobi) is given by <m>d(t) = 5t^2 + t</m>, where <m>t</m> is time in hours. The table below shows recorded positions near <m>t = 2</m>.
+                </p>
+                <p>
+                    <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                        <row header="yes">
+                            <cell><m>t</m> (h)</cell>
+                            <cell>1.9</cell><cell>1.95</cell><cell>2.0</cell><cell>2.05</cell><cell>2.1</cell>
+                        </row>
+                        <row>
+                            <cell><m>d(t)</m> (km)</cell>
+                            <cell>19.95</cell><cell>20.9625</cell><cell>22</cell><cell>23.0625</cell><cell>24.15</cell>
+                        </row>
+                    </tabular>
+                </p>
+                <ol marker="(a)">
+                    <li><p>Compute the average speed over <m>[1.9,\ 2.1]</m> and over <m>[1.95,\ 2.05]</m>.</p></li>
+                    <li><p>What is your estimate for the instantaneous speed at exactly <m>t = 2</m>?</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p>Both equal 21 km/h.</p></li>
+                    <li><p>21 km/h.</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\frac{d(2.1)-d(1.9)}{2.1-1.9} \amp= \frac{24.15-19.95}{0.2} = \frac{4.2}{0.2} = 21 \text{ km/h}</mrow>
+                                <mrow>\frac{d(2.05)-d(1.95)}{2.05-1.95} \amp= \frac{23.0625-20.9625}{0.1} = \frac{2.1}{0.1} = 21 \text{ km/h}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Both symmetric intervals give 21 km/h, so the instantaneous speed at <m>t=2</m> is <m>21</m> km/h.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The graph of <m>f(x) = x^3 - 3x</m> is shown below.
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-3,-5) grid (3,5);
+                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
+                            \draw[blue, thick, domain=-2.2:2.2, smooth] plot (\x, {\x*\x*\x - 3*\x});
+                            \node[blue] at (2.5, 4) {$f(x)$};
+                            \filldraw (-1,2) circle (2pt) node[above left] {$(-1,2)$};
+                            \filldraw (1,-2) circle (2pt) node[below right] {$(1,-2)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li><p>At <m>x = -1</m> and <m>x = 1</m>, the tangent to the curve is horizontal. What is the instantaneous rate of change at these points?</p></li>
+                    <li><p>State whether the curve is rising or falling on each of the intervals <m>(-\infty,-1)</m>, <m>(-1,1)</m>, and <m>(1,\infty)</m>.</p></li>
+                    <li><p>Estimate the instantaneous rate of change at <m>x = 2</m> by drawing a tangent and reading its gradient.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p>Zero at both points (horizontal tangent).</p></li>
+                    <li><p>Rising on <m>(-\infty,-1)</m> and <m>(1,\infty)</m>; falling on <m>(-1,1)</m>.</p></li>
+                    <li><p>Approximately <m>9</m>.</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>A horizontal tangent has slope zero, so the instantaneous rate of change is <m>0</m> at both <m>x=-1</m> and <m>x=1</m>.</p>
+                    </li>
+                    <li>
+                        <p>
+                            <ul>
+                                <li><p>On <m>(-\infty,-1)</m>: the curve is <em>rising</em>.</p></li>
+                                <li><p>On <m>(-1,1)</m>: the curve is <em>falling</em>.</p></li>
+                                <li><p>On <m>(1,\infty)</m>: the curve is <em>rising</em> again.</p></li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>At <m>x=2</m>, <m>f(2)=8-6=2</m>. A tangent drawn at <m>(2,2)</m> gives a gradient of approximately <m>9</m>.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A cyclist's distance from home (in km) is <m>s(t) = 3t^2</m>, where <m>t</m> is time in hours.
+                </p>
+                <ol marker="(a)">
+                    <li><p>Plot the graph of <m>s(t)</m> for <m>0 \le t \le 3</m> and draw the tangent at <m>t = 2</m>.</p></li>
+                    <li><p>Estimate the cyclist's instantaneous speed at <m>t = 2</m> hours from your tangent.</p></li>
+                    <li><p>Is the cyclist speeding up or slowing down as time increases? How does the graph show this?</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p>Upward-opening parabola passing through <m>(0,0)</m>, <m>(1,3)</m>, <m>(2,12)</m>, <m>(3,27)</m>.</p></li>
+                    <li><p>Approximately <m>12</m> km/h.</p></li>
+                    <li><p>Speeding up; the tangent becomes steeper as <m>t</m> increases.</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>Key values: <m>s(0)=0</m>, <m>s(1)=3</m>, <m>s(2)=12</m>, <m>s(3)=27</m>.</p>
+                    </li>
+                    <li>
+                        <p>Drawing a tangent at <m>(2, 12)</m> and reading two points — for example <m>(1, 0)</m> and <m>(3, 24)</m> — gives gradient <m>\dfrac{24-0}{3-1} = 12</m> km/h.</p>
+                    </li>
+                    <li>
+                        <p>The cyclist is speeding up. The tangent lines get steeper as <m>t</m> increases, meaning the instantaneous rate of change is growing.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A population of bacteria in a petri dish (in thousands) grows according to <m>P(t) = t^2 + 2t</m>, where <m>t</m> is time in hours.
+                </p>
+                <ol marker="(a)">
+                    <li><p>Estimate the instantaneous rate of growth at <m>t = 1</m> by drawing a tangent to the graph of <m>P</m>.</p></li>
+                    <li><p>Estimate the instantaneous rate of growth at <m>t = 3</m> in the same way.</p></li>
+                    <li><p>At which time is the population growing faster? By how much?</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p>Approximately <m>4</m> thousand bacteria per hour.</p></li>
+                    <li><p>Approximately <m>8</m> thousand bacteria per hour.</p></li>
+                    <li><p>Faster at <m>t = 3</m>, by about <m>4</m> thousand bacteria per hour.</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>At <m>t=1</m>, <m>P(1)=3</m>. A tangent drawn at <m>(1,3)</m> passes through approximately <m>(0,-1)</m> and <m>(2,7)</m>, giving gradient <m>\dfrac{7-(-1)}{2-0}=4</m>.</p>
+                    </li>
+                    <li>
+                        <p>At <m>t=3</m>, <m>P(3)=15</m>. A tangent at <m>(3,15)</m> passes through approximately <m>(2,7)</m> and <m>(4,23)</m>, giving gradient <m>\dfrac{23-7}{4-2}=8</m>.</p>
+                    </li>
+                    <li>
+                        <p>The population is growing faster at <m>t=3</m> (approximately 8 vs. 4 thousand bacteria per hour), by about 4 thousand bacteria per hour.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->

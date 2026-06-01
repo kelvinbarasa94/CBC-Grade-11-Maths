@@ -481,6 +481,248 @@
                 </p>
             </answer>
         </exercise>
+
+        <exercise>
+            <statement>
+                <p>Find the average rate of change of <m>f(x) = x^2 - 2x</m> on the interval <m>[1, 4]</m>.</p>
+            </statement>
+            <answer>
+                <p><m>3</m></p>
+            </answer>
+            <solution>
+                <p>
+                    <md>
+                        <mrow>\text{AROC} \amp= \frac{f(4) - f(1)}{4 - 1} = \frac{(16-8)-(1-2)}{3} = \frac{8-(-1)}{3} = \frac{9}{3} = 3</mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A stone is dropped from a cliff and falls freely. Its distance below the cliff top (in metres) after <m>t</m> seconds is <m>s(t) = 5t^2</m>.
+                </p>
+                <ol marker="(a)">
+                    <li><p>Find the average speed over <m>2 \le t \le 4</m>.</p></li>
+                    <li><p>Find the average speed over <m>3 \le t \le 5</m>.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p>30 m/s</p></li>
+                    <li><p>40 m/s</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\frac{s(4)-s(2)}{4-2} = \frac{80-20}{2} = 30 \text{ m/s}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\frac{s(5)-s(3)}{5-3} = \frac{125-45}{2} = 40 \text{ m/s}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The temperature in Nairobi on a certain day (in °C) is modelled by
+                    <m>T(h) = -h^2 + 6h + 14</m>, where <m>h</m> is hours after 6 am.
+                </p>
+                <ol marker="(a)">
+                    <li><p>Find the average rate of change of temperature from <m>h = 1</m> to <m>h = 4</m>.</p></li>
+                    <li><p>Give the units and interpret the answer in context.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p><m>1</m> °C per hour</p></li>
+                    <li><p>The temperature rose, on average, by 1°C per hour between 7 am and 10 am.</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>T(4) \amp= -16+24+14 = 22, \quad T(1) = -1+6+14 = 19</mrow>
+                                <mrow>\text{AROC} \amp= \frac{T(4)-T(1)}{4-1} = \frac{22-19}{3} = 1 \text{ °C/h}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>The units are degrees Celsius per hour. The temperature was rising at an average rate of 1°C per hour between 7 am and 10 am.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    For <m>f(x) = x^2</m>, calculate the average rate of change over <m>[2,\ 2+h]</m> for each value of <m>h</m> in the table. Describe the pattern you observe as <m>h</m> gets smaller.
+                </p>
+                <p>
+                    <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                        <row header="yes">
+                            <cell><m>h</m></cell>
+                            <cell><m>f(2+h)</m></cell>
+                            <cell>AROC <m>= \dfrac{f(2+h)-f(2)}{h}</m></cell>
+                        </row>
+                        <row><cell><m>1</m></cell><cell></cell><cell></cell></row>
+                        <row><cell><m>0.5</m></cell><cell></cell><cell></cell></row>
+                        <row><cell><m>0.1</m></cell><cell></cell><cell></cell></row>
+                        <row><cell><m>0.01</m></cell><cell></cell><cell></cell></row>
+                    </tabular>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                        <row header="yes">
+                            <cell><m>h</m></cell><cell><m>f(2+h)</m></cell><cell>AROC</cell>
+                        </row>
+                        <row><cell>1</cell><cell>9</cell><cell>5</cell></row>
+                        <row><cell>0.5</cell><cell>6.25</cell><cell>4.5</cell></row>
+                        <row><cell>0.1</cell><cell>4.41</cell><cell>4.1</cell></row>
+                        <row><cell>0.01</cell><cell>4.0401</cell><cell>4.01</cell></row>
+                    </tabular>
+                </p>
+                <p>The AROC approaches <m>4</m> as <m>h \to 0</m>.</p>
+            </answer>
+            <solution>
+                <p>
+                    Expanding: <m>f(2+h) = (2+h)^2 = 4 + 4h + h^2</m>, so
+                    <md>
+                        <mrow>\text{AROC} = \frac{f(2+h)-f(2)}{h} = \frac{4h+h^2}{h} = 4+h.</mrow>
+                    </md>
+                </p>
+                <p>
+                    <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                        <row header="yes">
+                            <cell><m>h</m></cell><cell><m>f(2+h)</m></cell><cell>AROC <m>= 4+h</m></cell>
+                        </row>
+                        <row><cell>1</cell><cell>9</cell><cell>5</cell></row>
+                        <row><cell>0.5</cell><cell>6.25</cell><cell>4.5</cell></row>
+                        <row><cell>0.1</cell><cell>4.41</cell><cell>4.1</cell></row>
+                        <row><cell>0.01</cell><cell>4.0401</cell><cell>4.01</cell></row>
+                    </tabular>
+                </p>
+                <p>
+                    As <m>h \to 0</m>, AROC <m>\to 4</m>. This limiting value is the <em>instantaneous</em> rate of change of <m>f(x)=x^2</m> at <m>x=2</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A matatu departs Nairobi. Its distance from the city centre (km) after <m>t</m> hours is <m>d(t) = 4t^2 - t</m>.
+                </p>
+                <ol marker="(a)">
+                    <li><p>Find the average speed between <m>t = 1</m> h and <m>t = 3</m> h.</p></li>
+                    <li><p>Find the average speed between <m>t = 2</m> h and <m>t = 2.5</m> h.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p>15 km/h</p></li>
+                    <li><p>17 km/h</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>d(3) \amp= 36-3 = 33, \quad d(1) = 4-1 = 3</mrow>
+                                <mrow>\text{Average speed} \amp= \frac{33-3}{3-1} = \frac{30}{2} = 15 \text{ km/h}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>d(2.5) \amp= 4(6.25)-2.5 = 22.5, \quad d(2) = 16-2 = 14</mrow>
+                                <mrow>\text{Average speed} \amp= \frac{22.5-14}{2.5-2} = \frac{8.5}{0.5} = 17 \text{ km/h}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The function <m>f(x) = -x^2 + 4x</m> models the height (in metres) of a thrown ball above the ground at time <m>x</m> seconds.
+                </p>
+                <ol marker="(a)">
+                    <li><p>Find the average rate of change on <m>[1, 3]</m>.</p></li>
+                    <li><p>Find the average rate of change on <m>[3, 5]</m>.</p></li>
+                    <li><p>What does the sign of each answer tell you about the ball's motion?</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p><m>0</m> (same height at <m>x=1</m> and <m>x=3</m>)</p></li>
+                    <li><p><m>-4</m> m/s</p></li>
+                    <li><p>Zero means the ball returned to the same height; negative means it is falling on average.</p></li>
+                </ol>
+            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>f(1)=3</m> and <m>f(3)=-9+12=3</m>, so AROC <m>= \dfrac{3-3}{2} = 0</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>f(5) = -25+20 = -5, \quad f(3) = 3</mrow>
+                                <mrow>\text{AROC} = \frac{-5-3}{5-3} = \frac{-8}{2} = -4 \text{ m/s}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>A positive AROC means the ball is rising on average; zero means it returns to the same height; negative means it is falling on average over the interval.</p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    For <m>f(x) = x^2 + 3x</m>, find the value of <m>x</m> at which the average rate of change over the interval <m>[x,\ x+1]</m> equals <m>7</m>.
+                </p>
+            </statement>
+            <answer>
+                <p><m>x = 1.5</m></p>
+            </answer>
+            <solution>
+                <p>
+                    <md>
+                        <mrow>\text{AROC} \amp= \frac{f(x+1)-f(x)}{1}</mrow>
+                        <mrow>\amp= (x+1)^2+3(x+1) - x^2-3x</mrow>
+                        <mrow>\amp= x^2+2x+1+3x+3 - x^2-3x = 2x+4</mrow>
+                    </md>
+                    Setting <m>2x+4 = 7</m> gives <m>x = 1.5</m>.
+                </p>
+            </solution>
+        </exercise>
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->

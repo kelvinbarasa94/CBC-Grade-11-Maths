@@ -421,44 +421,294 @@
 
     <exercises>
         <exercise>
-            <statement>   
+            <statement>
                 <p>
                     Solve the equations <m>y = x^2 - x - 6</m> and <m>y = 0</m> graphically for <m>-4 \le x \le 4</m>.
                 </p>
-            </statement>   
+            </statement>
             <solution>
                 <p>
-                    The intersection points with the <m>x</m>-axis (<m>y = 0</m>) are <m>(-2, 0)</m> and <m>(3, 0)</m>.
+                    Plot <m>y = x^2 - x - 6</m> and read off where it crosses the <m>x</m>-axis.
                 </p>
-            </solution>             
-        </exercise>        
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-4,-8) grid (4,4);
+                            \draw[-&gt;] (-4,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-8) -- (0,4) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-2.7:3.7, smooth] plot (\x, {\x*\x - \x - 6});
+                            \node[blue, font=\small] at (3.5, 3) {$y=x^2-x-6$};
+                            \filldraw[black] (-2,0) circle (2pt) node[above left] {$(-2,0)$};
+                            \filldraw[black] (3,0) circle (2pt) node[above right] {$(3,0)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The parabola crosses the <m>x</m>-axis at <m>(-2, 0)</m> and <m>(3, 0)</m>.
+                    The solutions are <m>x = -2</m> and <m>x = 3</m>.
+                </p>
+            </solution>
+        </exercise>
+
         <exercise>
-            <statement>   
+            <statement>
                 <p>
                     On the same grid, plot the graphs of <m>y = x^2 - 2x + 1</m> and <m>y = x + 1</m>. Use your graph to find the coordinates of the intersection points.
                 </p>
-            </statement>   
+            </statement>
             <solution>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-1,-1) grid (5,6);
+                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-1) -- (0,6) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-0.3:3.3, smooth] plot (\x, {(\x-1)*(\x-1)});
+                            \node[blue, font=\small] at (4, 5.5) {$y=(x{-}1)^2$};
+                            \draw[red, thick, domain=-1:5] plot (\x, {\x + 1});
+                            \node[red, font=\small] at (4, 3.5) {$y=x+1$};
+                            \filldraw[black] (0,1) circle (2pt) node[left] {$(0,1)$};
+                            \filldraw[black] (3,4) circle (2pt) node[above left] {$(3,4)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
                 <p>
                     The intersection points are <m>(0, 1)</m> and <m>(3, 4)</m>.
                 </p>
-            </solution>             
-        </exercise>        
+            </solution>
+        </exercise>
+
         <exercise>
-            <statement>   
+            <statement>
                 <p>
                     A cubic function is given by <m>y = x^3 - 4x</m>. Find its intersection points with the line <m>y = -3x</m> by plotting both graphs.
                 </p>
-            </statement>   
+            </statement>
             <solution>
                 <p>
                     Setting <m>x^3 - 4x = -3x \Rightarrow x^3 - x = 0 \Rightarrow x(x-1)(x+1) = 0</m>.
                 </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-3,-7) grid (3,7);
+                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-7) -- (0,7) node[above] {$y$};
+                            \draw[blue, thick, domain=-2.2:2.2, smooth] plot (\x, {\x*\x*\x - 4*\x});
+                            \node[blue, font=\small] at (2.5, 4.5) {$y=x^3-4x$};
+                            \draw[red, thick, domain=-2.2:2.2] plot (\x, {-3*\x});
+                            \node[red, font=\small] at (-2, 5.5) {$y=-3x$};
+                            \filldraw[black] (-1,3) circle (2pt) node[above right] {$(-1,3)$};
+                            \filldraw[black] (0,0) circle (2pt) node[below right] {$(0,0)$};
+                            \filldraw[black] (1,-3) circle (2pt) node[below left] {$(1,-3)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
                 <p>
                     The intersection points are <m>(-1, 3)</m>, <m>(0, 0)</m>, and <m>(1, -3)</m>.
                 </p>
-            </solution>             
-        </exercise>        
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Solve the simultaneous equations <m>y = x^2</m> and <m>y = -x^2 + 8</m> graphically.
+                </p>
+            </statement>
+            <solution>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-3,-1) grid (3,9);
+                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-1) -- (0,9) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-3:3, smooth] plot (\x, {\x*\x});
+                            \node[blue, font=\small] at (2.5, 7.5) {$y=x^2$};
+                            \draw[red, thick, &lt;-&gt;, domain=-2.9:2.9, smooth] plot (\x, {-\x*\x + 8});
+                            \node[red, font=\small] at (-2.5, 7.5) {$y=-x^2+8$};
+                            \filldraw[black] (-2,4) circle (2pt) node[left] {$(-2,4)$};
+                            \filldraw[black] (2,4) circle (2pt) node[right] {$(2,4)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The graphs intersect at <m>(-2, 4)</m> and <m>(2, 4)</m>.
+                    The solutions are <m>x = -2, y = 4</m> and <m>x = 2, y = 4</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Plot the graphs of <m>y = x^2 - 4x + 5</m> and <m>y = 2x - 4</m> on the same axes. How many intersection points are there? State the solution(s).
+                </p>
+            </statement>
+            <solution>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-1,-5) grid (5,7);
+                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,7) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-0.5:4.5, smooth] plot (\x, {\x*\x - 4*\x + 5});
+                            \node[blue, font=\small] at (4.5, 6) {$y=x^2-4x+5$};
+                            \draw[red, thick, domain=-1:5.5] plot (\x, {2*\x - 4});
+                            \node[red, font=\small] at (4.5, 4) {$y=2x-4$};
+                            \filldraw[black] (3,2) circle (2pt) node[above left] {$(3,2)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The line touches the parabola at exactly <em>one</em> point: <m>(3, 2)</m>.
+                    The line is a <term>tangent</term> to the parabola.
+                </p>
+                <p>
+                    Algebraically: <m>x^2 - 4x + 5 = 2x - 4 \Rightarrow x^2 - 6x + 9 = 0 \Rightarrow (x - 3)^2 = 0</m>,
+                    confirming the single solution <m>x = 3</m>, <m>y = 2</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The graph of <m>y = x^3 - 4x^2</m> is drawn on the grid below.
+                    Draw the line <m>y = x - 4</m> on the same axes and use your graph to solve <m>x^3 - 4x^2 = x - 4</m>.
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.55]
+                            \draw[help lines, color=gray!30, step=1] (-2,-10) grid (6,8);
+                            \draw[-&gt;] (-2,0) -- (6,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-10) -- (0,8) node[above] {$y$};
+                            \begin{scope}
+                                \clip (-2,-10) rectangle (6,8);
+                                \draw[blue, thick, domain=-1.3:5.3, smooth] plot (\x, {\x*\x*\x - 4*\x*\x});
+                            \end{scope}
+                            \node[blue, font=\small] at (5.5, 6) {$y=x^3-4x^2$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </statement>
+            <solution>
+                <p>
+                    The line <m>y = x - 4</m> passes through <m>(0, -4)</m> and <m>(4, 0)</m>. Adding it to the grid:
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.55]
+                            \draw[help lines, color=gray!30, step=1] (-2,-10) grid (6,8);
+                            \draw[-&gt;] (-2,0) -- (6,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-10) -- (0,8) node[above] {$y$};
+                            \begin{scope}
+                                \clip (-2,-10) rectangle (6,8);
+                                \draw[blue, thick, domain=-1.3:5.3, smooth] plot (\x, {\x*\x*\x - 4*\x*\x});
+                                \draw[red, thick, domain=-2:6] plot (\x, {\x - 4});
+                            \end{scope}
+                            \node[blue, font=\small] at (5.5, 6) {$y=x^3-4x^2$};
+                            \node[red, font=\small] at (5.5, 0.5) {$y=x-4$};
+                            \filldraw[black] (-1,-5) circle (2.5pt) node[left] {$(-1,-5)$};
+                            \filldraw[black] (1,-3) circle (2.5pt) node[right] {$(1,-3)$};
+                            \filldraw[black] (4,0) circle (2.5pt) node[above right] {$(4,0)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The graphs intersect at <m>(-1, -5)</m>, <m>(1, -3)</m>, and <m>(4, 0)</m>.
+                    The solutions to <m>x^3 - 4x^2 = x - 4</m> are <m>x = -1</m>, <m>x = 1</m>, and <m>x = 4</m>.
+                </p>
+                <p>
+                    (Check: <m>x^3 - 4x^2 - x + 4 = x^2(x-4) - (x-4) = (x-4)(x^2-1) = (x-4)(x-1)(x+1) = 0</m>.)
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A stone is thrown upward from the ground. Its height above the ground is modelled by
+                    <m>h = -5t^2 + 25t</m> metres, where <m>t</m> is time in seconds.
+                    A window ledge is at a constant height of <m>30</m> metres.
+                </p>
+                <p>
+                    By drawing the graphs of <m>h = -5t^2 + 25t</m> and <m>h = 30</m> on the same axes,
+                    find the times at which the stone passes the level of the ledge.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The <m>h</m>-axis below is scaled so that each grid unit represents <m>5</m> m (i.e. the grid
+                    value <m>6</m> corresponds to <m>h = 30</m> m).
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (0,0) grid (6,7);
+                            \draw[-&gt;] (-0.3,0) -- (6,0) node[right] {$t$ (s)};
+                            \draw[-&gt;] (0,-0.3) -- (0,7) node[above] {$h$ (m)};
+                            \foreach \t in {1,2,3,4,5}
+                                \draw (\t, 0.08) -- (\t,-0.08) node[below] {\small $\t$};
+                            \foreach \h/\lab in {2/10, 4/20, 6/30}
+                                \draw (0.08,\h) -- (-0.08,\h) node[left] {\small $\lab$};
+                            \draw[blue, thick, domain=0:5, smooth] plot (\x, {-\x*\x + 5*\x});
+                            \node[blue, font=\small] at (5.5, 4) {$h=-5t^2+25t$};
+                            \draw[red, thick, domain=0:6] plot (\x, {6});
+                            \node[red, font=\small] at (5.5, 6.4) {$h=30$};
+                            \filldraw[black] (2,6) circle (2.5pt) node[above left] {\small $(2,\,30)$};
+                            \filldraw[black] (3,6) circle (2.5pt) node[above right] {\small $(3,\,30)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The graphs meet at <m>t = 2</m> s and <m>t = 3</m> s (both at <m>h = 30</m> m).
+                    The stone passes the window ledge at <m>t = 2</m> seconds on the way up,
+                    and again at <m>t = 3</m> seconds on the way down.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A trader sells a product for several days after launch. Her daily revenue is modelled by
+                    <m>S = -x^2 + 6x</m> thousand shillings (revenue rises then falls as the product loses popularity),
+                    where <m>x</m> is the number of days after launch.
+                    A competitor's revenue grows steadily, modelled by <m>S = 2x</m> thousand shillings.
+                </p>
+                <p>
+                    Draw both graphs and find the day(s) on which the two traders have equal daily revenue.
+                </p>
+            </statement>
+            <solution>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (0,0) grid (7,12);
+                            \draw[-&gt;] (-0.3,0) -- (7,0) node[right] {$x$ (days)};
+                            \draw[-&gt;] (0,-0.3) -- (0,12) node[above] {$S$ (Ksh 000s)};
+                            \foreach \x in {1,2,3,4,5,6}
+                                \draw (\x, 0.08) -- (\x,-0.08) node[below] {\small $\x$};
+                            \foreach \y in {2,4,6,8,10}
+                                \draw (0.08,\y) -- (-0.08,\y) node[left] {\small $\y$};
+                            \draw[blue, thick, domain=0:6, smooth] plot (\x, {-\x*\x + 6*\x});
+                            \node[blue, font=\small] at (4.5, 10.5) {$S=-x^2+6x$};
+                            \draw[red, thick, domain=0:6] plot (\x, {2*\x});
+                            \node[red, font=\small] at (5.7, 9.5) {$S=2x$};
+                            \filldraw[black] (0,0) circle (2.5pt) node[above right] {\small $(0,0)$};
+                            \filldraw[black] (4,8) circle (2.5pt) node[above left] {\small $(4,8)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <p>
+                    The graphs meet at <m>(0, 0)</m> and <m>(4, 8)</m>.
+                    The revenues are equal on <alert>day 0</alert> (launch day, both at zero) and on
+                    <alert>day 4</alert> (both at 8 thousand shillings).
+                </p>
+            </solution>
+        </exercise>
+
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
