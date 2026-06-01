@@ -134,8 +134,7 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-    <axiom component="lesson-plan">
+    <!-- Add insight / key takeaway directly related to activity / learner experience --><axiom component="lesson-plan">
       <title>Structured Instruction</title>
       <p>
         <dl>
@@ -174,6 +173,7 @@
     <!-- <insight>
     </insight> -->
 
+    <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
