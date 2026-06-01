@@ -70,14 +70,39 @@
             </dl>
         </axiom>
 
-    <activity>
+        <activity>
         <statement>
+            <p>
+                <alert>What you need</alert>
+                <ul>
+                    <li>
+                        <p>
+                            A piece of string (about <m>50</m> cm) and a pencil.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Two rulers / straight edges
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A tack or pin to fix the string at a point.
+                        </p>
+                    </li>
+                </ul>
+            </p>
             <p>
                 <alert>Work in groups</alert>
             </p>
             <p>
-                During a lesson, Grade 11 students explored how to visualize quadratic functions by using their bodies to represent different types of mathematical functions.
+                We will use a string and a pencil to draw a parabola, just as in <xref ref="fig-parabola-string-setup"/>
             </p>
+            <figure xml:id="fig-parabola-string-setup">
+                <caption>Drawing a Parabola with String</caption>
+                <image source="images/parabola-string.jpg" width="95%">
+                </image>
+            </figure>
             <p>
                 <alert>What to do</alert>
             </p>
@@ -85,46 +110,32 @@
                 <ol>
                     <li>
                         <p>
-                            Stand up and make sure you have enough space to move your arms.
+                            Place one ruler horizontally on your paper, and mark a point <m>O</m> above the line.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Linear Graphs:
-                            <ul>
-                                <li>
-                                    <p>
-                                        Represent <m>y = x</m>: Hold your right arm up and your left arm down in a straight diagonal line.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        Represent <m>y = -x</m>: Hold your left arm up and your right arm down in a straight diagonal line.
-                                    </p>
-                                </li>
-                            </ul>
+                            Fix one end of the string at the point <m>O</m> with a tack. Tie the other end of string to the top of another ruler, which is placed vertically on top of the initial ruler. 
                         </p>
                     </li>
                     <li>
                         <p>
-                            Quadratic Graphs (Parabolas):
-                            <ul>
-                                <li>
-                                    <p>
-                                        Represent <m>y = x^2</m>: Hold both arms up in a "U" shape. This is called concave up.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        Represent <m>y = -x^2</m>: Hold both arms down in an upside-down "U" shape. This is called concave down.
-                                    </p>
-                                </li>
-                            </ul>
+                            With a pencil, press on the string so that the pencil keeps the string tight while staying on the vertical ruler. The pencil point is <m>P</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Discuss: What happens to the "arms" of the graph when the number in front of <m>x^2</m> is positive versus when it is negative?
+                            Slide the vertical ruler along the line while keeping the string taut, tracing out a curve with the pencil.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Discuss: What shape does the curve have? How does the distance between the fixed tack <m>O</m> and the pencil compare to the distance betwen the pencil and the bottom ruler?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Challenge: Assume the fixed tack is at the origin. Try to find an equation for the curve in terms of the string length.
                         </p>
                     </li>
                 </ol>
@@ -132,7 +143,26 @@
         </statement>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
+    <exploration>
+        <title>Constructing a Parabola With String</title>
+        <figure xml:id="fig-parabola-string">
+            <caption>Drawing A Parabola With String</caption>
+            <interactive xml:id="interactive-parabola-string" platform="jsxgraph" width="90%" aspect="1:1" source="jsxgraph/parabola-string.js">
+                <slate xml:id="jsxgraph-parabola-string" surface="jsxboard" aspect="1:1" width="90%"/>
+                <instructions xml:id="parabola-string-instructions">
+                    <p>
+                        Drag the blue vertical line left and right to see how the point <m>P</m> traces out a parabola. Notice how the string segments <m>OP</m> and <m>PH</m> are always the same length.
+                    </p>
+                    <p>
+                        You can also change the length of the string with the slider, and move the focus point <m>O</m> to see how it affects the shape of the parabola.
+                    </p>
+                    <p>
+                        Can you find the equation of the parabola in terms of the string length <m>L</m>? You can assume the focus point is at the origin. 
+                    </p>
+                </instructions>
+            </interactive>
+        </figure>
+    </exploration>
 
     <axiom component="lesson-plan">
         <title>Structured Instruction</title>
@@ -157,7 +187,7 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Use the "People Graphs" activity to lead into the definition of a parabola. Explain that the sign of <m>a</m> determines whether it opens up or down.
+                        <alert>Connecting to Learner Work:</alert> Connect the visual exploration of a parabola from the learner experience to the algebraic form of a quadratic function. Emphasize how the shape of the graph relates to the coefficients in the equation.
                     </p>
                 </li>
                 <li>
@@ -169,7 +199,6 @@
         </paragraphs>
     </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
     <insight>
         <p>
@@ -189,7 +218,7 @@
                 </li>
                 <li>
                     <p>
-                        <term>Axis of Symmetry:</term> A vertical line that divides the parabola into two mirror images. Its equation is <me>x = -\frac{b}{2a}</me>
+                        <term>Axis of Symmetry:</term> A vertical line that divides the parabola into two mirror images. Its equation is <md>x = -\frac{b}{2a}</md>
                     </p>
                 </li>
                 <li>
@@ -200,6 +229,11 @@
                 <li>
                     <p>
                         <term>Roots (x-intercepts):</term> The points where the graph crosses the <m>x</m>-axis. These occur when <m>y = 0</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>y-intercept:</term> The point where the graph crosses the <m>y</m>-axis, which occurs when <m>x = 0</m>. The y-intercept is at <m>(0, c)</m>.
                     </p>
                 </li>
             </ul>
@@ -234,21 +268,28 @@
                     <li>
                         <p>
                             Axis of Symmetry:
-                            <me>x = -\frac{-4}{2(1)} = 2</me>
+                            <md>x = -\frac{b}{2a} = -\frac{-4}{2(1)} = 2</md>
                         </p>
                     </li>
                     <li>
                         <p>
                             Vertex: Substitute <m>x = 2</m> into the equation:
-                            <me>y = (2)^2 - 4(2) + 3 = 4 - 8 + 3 = -1</me>
+                            <md>y = (2)^2 - 4(2) + 3 = 4 - 8 + 3 = -1</md>
                             The vertex is <m>(2, -1)</m>.
                         </p>
                     </li>
                     <li>
                         <p>
                             Roots: Set <m>y = 0</m> and solve <m>x^2 - 4x + 3 = 0</m>:
-                            <me>(x - 1)(x - 3) = 0 \Rightarrow x = 1 \text{ or } x = 3</me>
+                            <md>(x - 1)(x - 3) = 0 \Rightarrow x = 1 \text{ or } x = 3</md>
                             The roots are <m>(1, 0)</m> and <m>(3, 0)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            y-intercept: Set <m>x = 0</m>:
+                            <md>y = 0^2 - 4(0) + 3 = 3</md>
+                            The y-intercept is <m>(0, 3)</m>.
                         </p>
                     </li>
                 </ol>
@@ -259,9 +300,10 @@
                             \draw[help lines, color=gray!30, step=1] (-1,-2) grid (5,6);
                             \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
                             \draw[-&gt;] (0,-2) -- (0,6) node[above] {$y$};
-                            \draw[blue, thick, domain=0.5:3.5, smooth] plot (\x, {\x*\x - 4*\x + 3});
+                            \draw[blue, thick, &lt;-&gt;, domain=-0.5:4.5, smooth] plot (\x, {\x*\x - 4*\x + 3});
                             \filldraw (2,-1) circle (2pt) node[below] {Vertex $(2,-1)$};
                             \filldraw (1,0) circle (1.5pt) node[above left] {$(1,0)$};
+                            \filldraw (0, 3) circle (1.5pt) node[right] {$(0,3)$};
                             \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
                             \draw[dashed, red] (2,-2) -- (2,6) node[above] {$x=2$};
                         \end{tikzpicture}
@@ -292,20 +334,20 @@
                     <li>
                         <p>
                             Axis of Symmetry:
-                            <me>x = -\frac{2}{2(-1)} = 1</me>
+                            <md>x = -\frac{b}{2a} = -\frac{2}{2(-1)} = 1</md>
                         </p>
                     </li>
                     <li>
                         <p>
                             Vertex: Substitute <m>x = 1</m>:
-                            <me>y = -(1)^2 + 2(1) + 8 = -1 + 2 + 8 = 9</me>
+                            <md>y = -(1)^2 + 2(1) + 8 = -1 + 2 + 8 = 9</md>
                             The vertex is <m>(1, 9)</m>.
                         </p>
                     </li>
                     <li>
                         <p>
                             Roots: Solve <m>-x^2 + 2x + 8 = 0</m>:
-                            <me>x^2 - 2x - 8 = 0 \Rightarrow (x - 4)(x + 2) = 0 \Rightarrow x = 4 \text{ or } x = -2</me>
+                            <md>x^2 - 2x - 8 = 0 \Rightarrow (x - 4)(x + 2) = 0 \Rightarrow x = 4 \text{ or } x = -2</md>
                             The roots are <m>(4, 0)</m> and <m>(-2, 0)</m>.
                         </p>
                     </li>
@@ -317,10 +359,11 @@
                             \draw[help lines, color=gray!30, step=1] (-3,-2) grid (5,10);
                             \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
                             \draw[-&gt;] (0,-2) -- (0,10) node[above] {$y$};
-                            \draw[blue, thick, domain=-2.2:4.2, smooth] plot (\x, {-\x*\x + 2*\x + 8});
+                            \draw[blue, thick, &lt;-&gt;, domain=-2.2:4.2, smooth] plot (\x, {-\x*\x + 2*\x + 8});
                             \filldraw (1,9) circle (2pt) node[above] {Vertex $(1,9)$};
                             \filldraw (4,0) circle (1.5pt) node[below right] {$(4,0)$};
                             \filldraw (-2,0) circle (1.5pt) node[below left] {$(-2,0)$};
+                            \filldraw (0,8) circle (1.5pt) node[right] {$(0,8)$};
                             \draw[dashed, red] (1,-2) -- (1,10) node[above] {$x=1$};
                         \end{tikzpicture}
                     </latex-image>
@@ -330,29 +373,37 @@
 
     <example>
         <statement>
-            <p>
-                Find the properties and sketch the graph of <m>y = 2x^2 + 4x</m>.
-            </p>
+            <p>Sketch the graph of <m>y = (x - 1)(x - 5)</m>. Label the roots, vertex, y-intercept, and axis of symmetry.</p>
         </statement>
         <solution>
             <p>
+                We first need to expand the equation to identify the coefficients:
+                <md>
+                    y = (x-1)(x-5) = x^2 - 5x - x + 5 = x^2 - 6x + 5
+                </md>
+                
+            </p>
+            <p>
                 <ul>
-                    <li><p>Concavity: Opens up (<m>a = 2 \gt 0</m>).</p></li>
-                    <li><p>Axis of Symmetry: <m>x = -\frac{4}{2(2)} = -1</m>.</p></li>
-                    <li><p>Vertex: <m>y = 2(-1)^2 + 4(-1) = 2 - 4 = -2</m>. Vertex is <m>(-1, -2)</m>.</p></li>
-                    <li><p>Roots: <m>2x^2 + 4x = 0 \Rightarrow 2x(x + 2) = 0 \Rightarrow x = 0 \text{ or } x = -2</m>.</p></li>
+                    <li><p><m>a = 1 \gt 0</m> — opens upwards.</p></li>
+                    <li><p>Roots: <m>(x-1)(x-5) = 0 \Rightarrow x = 1</m> or <m>x = 5</m>.</p></li>
+                    <li><p>Axis of symmetry: midpoint of roots, <m>x = \dfrac{1+5}{2} = 3</m>.</p></li>
+                    <li><p>Vertex: <m>y = (3-1)(3-5) = (2)(-2) = -4</m>, so vertex is <m>(3,-4)</m>.</p></li>
+                    <li><p>y-intercept: <m>y = (0-1)(0-5) = 5</m>, so <m>(0, 5)</m>.</p></li>
                 </ul>
             </p>
-            <image xml:id="img-quadratic-narrow" width="65%">
+            <image width="65%">
                 <latex-image>
                     \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,5);
-                        \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
-                        \draw[-&gt;] (0,-3) -- (0,5) node[above] {$y$};
-                        \draw[blue, thick, domain=-2.8:0.8, smooth] plot (\x, {2*\x*\x + 4*\x});
-                        \filldraw (-1,-2) circle (2pt) node[below] {$(-1,-2)$};
-                        \filldraw (0,0) circle (1.5pt) node[above right] {$(0,0)$};
-                        \filldraw (-2,0) circle (1.5pt) node[above left] {$(-2,0)$};
+                        \draw[help lines, color=gray!30, step=1] (-1,-5) grid (7,7);
+                        \draw[-&gt;] (-1,0) -- (7,0) node[right] {$x$};
+                        \draw[-&gt;] (0,-5) -- (0,7) node[above] {$y$};
+                        \draw[blue, thick, &lt;-&gt;, domain=-0.2:6.2, smooth] plot (\x, {(\x-1)*(\x-5)});
+                        \filldraw (3,-4) circle (2pt) node[below] {$(3,-4)$};
+                        \filldraw (1,0) circle (1.5pt) node[above right] {$(1,0)$};
+                        \filldraw (5,0) circle (1.5pt) node[above left] {$(5,0)$};
+                        \filldraw (0,5) circle (1.5pt) node[right] {$(0,5)$};
+                        \draw[dashed, red] (3,-5) -- (3,7) node[above] {$x=3$};
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -371,7 +422,7 @@
 
     <exercises>
         <exercise>
-            <statement>   
+            <statement>
                 <p>
                     For each of the following quadratic equations, state whether the parabola opens upwards or downwards and find the equation of the axis of symmetry:
                 </p>
@@ -380,15 +431,15 @@
                     <li><p><m>y = -2x^2 + 8x - 3</m></p></li>
                     <li><p><m>y = \frac{1}{2}x^2 - 4</m></p></li>
                 </ol>
-            </statement>   
+            </statement>
             <answer>
                 <ol>
-                    <li><p>Upwards; <m>x = -3</m></p></li>
-                    <li><p>Downwards; <m>x = 2</m></p></li>
-                    <li><p>Upwards; <m>x = 0</m></p></li>
+                    <li><p>Upwards; axis of symmetry <m>x = -3</m></p></li>
+                    <li><p>Downwards; axis of symmetry <m>x = 2</m></p></li>
+                    <li><p>Upwards; axis of symmetry <m>x = 0</m></p></li>
                 </ol>
-            </answer>             
-        </exercise>        
+            </answer>
+        </exercise>
 
         <exercise>
             <statement>
@@ -397,15 +448,19 @@
                 </p>
             </statement>
             <answer>
-                <p>Vertex: <m>(1, -4)</m>; Roots: <m>x = -1, x = 3</m>.</p>
+                <p>Vertex: <m>(1, -4)</m>; Roots: <m>x = -1</m>, <m>x = 3</m>; y-intercept: <m>(0, -3)</m>.</p>
                 <image width="65%">
                     <latex-image>
                         \begin{tikzpicture}[scale=0.7]
                             \draw[help lines, color=gray!30, step=1] (-2,-5) grid (4,2);
                             \draw[-&gt;] (-2,0) -- (4,0) node[right] {$x$};
                             \draw[-&gt;] (0,-5) -- (0,2) node[above] {$y$};
-                            \draw[blue, thick, domain=-1.2:3.2, smooth] plot (\x, {\x*\x - 2*\x - 3});
+                            \draw[blue, thick, &lt;-&gt;, domain=-1.3:3.3, smooth] plot (\x, {\x*\x - 2*\x - 3});
                             \filldraw (1,-4) circle (1.5pt) node[below] {$(1,-4)$};
+                            \filldraw (-1,0) circle (1.5pt) node[above left] {$(-1,0)$};
+                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
+                            \filldraw (0,-3) circle (1.5pt) node[left] {$(0,-3)$};
+                            \draw[dashed, red] (1,-5) -- (1,2) node[above] {$x=1$};
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -422,6 +477,284 @@
                 <p><m>x = 1</m> (The axis of symmetry is halfway between the roots: <m>\frac{-2+4}{2} = 1</m>).</p>
             </answer>
         </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find the properties and sketch the graph of <m>y = 2x^2 + 4x</m>.
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        <ul>
+                            <li><p>Concavity: Opens up (<m>a = 2 \gt 0</m>).</p></li>
+                            <li><p>Axis of Symmetry: <m>x = -\frac{4}{2(2)} = -1</m>.</p></li>
+                            <li><p>Vertex: <m>y = 2(-1)^2 + 4(-1) = 2 - 4 = -2</m>. Vertex is <m>(-1, -2)</m>.</p></li>
+                            <li><p>Roots: <m>2x^2 + 4x = 0 \Rightarrow 2x(x + 2) = 0 \Rightarrow x = 0 \text{ or } x = -2</m>.</p></li>
+                        </ul>
+                    </p>
+                    <image xml:id="img-quadratic-narrow" width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,5);
+                                \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
+                                \draw[-&gt;] (0,-3) -- (0,5) node[above] {$y$};
+                                \draw[blue, thick, &lt;-&gt;, domain=-2.8:0.8, smooth] plot (\x, {2*\x*\x + 4*\x});
+                                \filldraw (-1,-2) circle (2pt) node[below] {$(-1,-2)$};
+                                \filldraw (0,0) circle (1.5pt) node[above right] {$(0,0)$};
+                                \filldraw (-2,0) circle (1.5pt) node[above left] {$(-2,0)$};
+                                \draw[dashed, red] (-1,-3) -- (-1,5) node[above] {$x=-1$};
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </solution>
+            </exercise>
+
+        <exercise>
+            <statement>
+                <p>Sketch the graph of <m>y = -(x + 1)(x - 3)</m>. Label the roots, vertex, y-intercept, and axis of symmetry.</p>
+            </statement>
+            <answer>
+                <p>Roots: <m>x = -1</m> and <m>x = 3</m>; vertex <m>(1, 4)</m>; y-intercept <m>(0, 3)</m>; axis of symmetry <m>x = 1</m>.</p>
+            </answer>
+            <solution>
+                <p>
+                    <ul>
+                        <li><p>The leading coefficient is <m>-1 \lt 0</m>, so the parabola opens downwards.</p></li>
+                        <li><p>Roots: <m>-(x+1)(x-3) = 0 \Rightarrow x = -1</m> or <m>x = 3</m>.</p></li>
+                        <li><p>Axis of symmetry: <m>x = \dfrac{-1+3}{2} = 1</m>.</p></li>
+                        <li><p>Vertex: <m>y = -(1+1)(1-3) = -(2)(-2) = 4</m>, so vertex is <m>(1, 4)</m>.</p></li>
+                        <li><p>y-intercept: <m>y = -(0+1)(0-3) = 3</m>, so <m>(0, 3)</m>.</p></li>
+                    </ul>
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-3,-2) grid (5,5);
+                            \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-2) -- (0,5) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-1.4:3.4, smooth] plot (\x, {-(\x+1)*(\x-3)});
+                            \filldraw (1,4) circle (2pt) node[above] {$(1,4)$};
+                            \filldraw (-1,0) circle (1.5pt) node[below left] {$(-1,0)$};
+                            \filldraw (3,0) circle (1.5pt) node[below right] {$(3,0)$};
+                            \filldraw (0,3) circle (1.5pt) node[right] {$(0,3)$};
+                            \draw[dashed, red] (1,-2) -- (1,5) node[above] {$x=1$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Sketch the graph of <m>y = x^2 + 2x - 8</m>. Label the roots, vertex, y-intercept, and axis of symmetry.</p>
+            </statement>
+            <answer>
+                <p>Roots: <m>x = -4</m> and <m>x = 2</m>; vertex <m>(-1, -9)</m>; y-intercept <m>(0, -8)</m>; axis of symmetry <m>x = -1</m>.</p>
+            </answer>
+            <solution>
+                <p>
+                    <ul>
+                        <li><p>Since <m>a = 1 \gt 0</m>, the parabola opens upwards.</p></li>
+                        <li><p>Axis of symmetry: <m>x = -\dfrac{2}{2(1)} = -1</m>.</p></li>
+                        <li><p>Vertex: <m>y = (-1)^2 + 2(-1) - 8 = 1 - 2 - 8 = -9</m>, so vertex is <m>(-1, -9)</m>.</p></li>
+                        <li><p>Roots: <m>x^2 + 2x - 8 = (x+4)(x-2) = 0 \Rightarrow x = -4</m> or <m>x = 2</m>.</p></li>
+                        <li><p>y-intercept: <m>y = 0 + 0 - 8 = -8</m>, so <m>(0, -8)</m>.</p></li>
+                    </ul>
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.55]
+                            \draw[help lines, color=gray!30, step=1] (-6,-10) grid (4,3);
+                            \draw[-&gt;] (-6,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-10) -- (0,3) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-4.5:2.5, smooth] plot (\x, {\x*\x + 2*\x - 8});
+                            \filldraw (-1,-9) circle (2pt) node[below] {$(-1,-9)$};
+                            \filldraw (-4,0) circle (1.5pt) node[above left] {$(-4,0)$};
+                            \filldraw (2,0) circle (1.5pt) node[above right] {$(2,0)$};
+                            \filldraw (0,-8) circle (1.5pt) node[right] {$(0,-8)$};
+                            \draw[dashed, red] (-1,-10) -- (-1,3) node[above left] {$x=-1$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Sketch the graph of <m>y = 2(x - 1)(x - 3)</m>. Label the roots, vertex, y-intercept, and axis of symmetry.</p>
+            </statement>
+            <answer>
+                <p>Roots: <m>x = 1</m> and <m>x = 3</m>; vertex <m>(2, -2)</m>; y-intercept <m>(0, 6)</m>; axis of symmetry <m>x = 2</m>.</p>
+            </answer>
+            <solution>
+                <p>
+                    <ul>
+                        <li><p>Since <m>a = 2 \gt 0</m>, the parabola opens upwards.</p></li>
+                        <li><p>Roots: <m>2(x-1)(x-3) = 0 \Rightarrow x = 1</m> or <m>x = 3</m>.</p></li>
+                        <li><p>Axis of symmetry: midpoint of roots, <m>x = \dfrac{1+3}{2} = 2</m>.</p></li>
+                        <li><p>Vertex: <m>y = 2(2-1)(2-3) = 2(1)(-1) = -2</m>, so vertex is <m>(2, -2)</m>.</p></li>
+                        <li><p>y-intercept: <m>y = 2(0-1)(0-3) = 6</m>, so <m>(0, 6)</m>.</p></li>
+                    </ul>
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-1,-3) grid (5,8);
+                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-3) -- (0,8) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-0.2:4.2, smooth] plot (\x, {2*(\x-1)*(\x-3)});
+                            \filldraw (2,-2) circle (2pt) node[below] {$(2,-2)$};
+                            \filldraw (1,0) circle (1.5pt) node[above right] {$(1,0)$};
+                            \filldraw (3,0) circle (1.5pt) node[above left] {$(3,0)$};
+                            \filldraw (0,6) circle (1.5pt) node[right] {$(0,6)$};
+                            \draw[dashed, red] (2,-3) -- (2,8) node[above] {$x=2$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The graph of a quadratic function is shown below. Find its equation.
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-1,-5) grid (5,3);
+                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,3) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-0.6:4.6, smooth] plot (\x, {\x*\x - 4*\x});
+                            \filldraw (0,0) circle (1.5pt) node[above right] {$(0,0)$};
+                            \filldraw (4,0) circle (1.5pt) node[above left] {$(4,0)$};
+                            \filldraw (2,-4) circle (2pt) node[below right] {$(2,-4)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </statement>
+            <answer>
+                <p><m>y = x(x - 4) = x^2 - 4x</m></p>
+            </answer>
+            <solution>
+                <p>
+                    The roots are at <m>x = 0</m> and <m>x = 4</m>, so write <m>y = a \cdot x(x - 4)</m>.
+                    Substitute the vertex <m>(2, -4)</m> to find <m>a</m>:
+                    <md>
+                        <mrow>-4 \amp= a(2)(2 - 4) = -4a</mrow>
+                        <mrow>a \amp= 1</mrow>
+                    </md>
+                    The equation is <m>y = x(x - 4)</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The graph of a quadratic function is shown below. Find its equation.
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-5,-5) grid (3,4);
+                            \draw[-&gt;] (-5,0) -- (3,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,4) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-3.5:1.5, smooth] plot (\x, {(\x+3)*(\x-1)});
+                            \filldraw (-3,0) circle (1.5pt) node[above left] {$(-3,0)$};
+                            \filldraw (1,0) circle (1.5pt) node[above right] {$(1,0)$};
+                            \filldraw (0,-3) circle (1.5pt) node[right] {$(0,-3)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </statement>
+            <answer>
+                <p><m>y = (x + 3)(x - 1)</m></p>
+            </answer>
+            <solution>
+                <p>
+                    The roots are at <m>x = -3</m> and <m>x = 1</m>, so write <m>y = a(x + 3)(x - 1)</m>.
+                    Substitute the y-intercept <m>(0, -3)</m> to find <m>a</m>:
+                    <md>
+                        <mrow>-3 \amp= a(0 + 3)(0 - 1) = -3a</mrow>
+                        <mrow>a \amp= 1</mrow>
+                    </md>
+                    The equation is <m>y = (x + 3)(x - 1) = x^2 + 2x - 3</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The graph of a quadratic function is shown below. Find its equation.
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-6,-3) grid (4,10);
+                            \draw[-&gt;] (-6,0) -- (4,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-3) -- (0,10) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-4.3:2.3, smooth] plot (\x, {-(\x+4)*(\x-2)});
+                            \filldraw (-4,0) circle (1.5pt) node[above left] {$(-4,0)$};
+                            \filldraw (2,0) circle (1.5pt) node[above right] {$(2,0)$};
+                            \filldraw (0,8) circle (1.5pt) node[right] {$(0,8)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </statement>
+            <answer>
+                <p><m>y = -(x + 4)(x - 2)</m></p>
+            </answer>
+            <solution>
+                <p>
+                    The roots are at <m>x = -4</m> and <m>x = 2</m>, so write <m>y = a(x + 4)(x - 2)</m>.
+                    Substitute the y-intercept <m>(0, 8)</m> to find <m>a</m>:
+                    <md>
+                        <mrow>8 \amp= a(0 + 4)(0 - 2) = -8a</mrow>
+                        <mrow>a \amp= -1</mrow>
+                    </md>
+                    The equation is <m>y = -(x + 4)(x - 2)</m>.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The graph of a quadratic function is shown below. Find its equation.
+                </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+                            \draw[help lines, color=gray!30, step=1] (-3,-5) grid (5,10);
+                            \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
+                            \draw[-&gt;] (0,-5) -- (0,10) node[above] {$y$};
+                            \draw[blue, thick, &lt;-&gt;, domain=-1.2:3.2, smooth] plot (\x, {-2*(\x+1)*(\x-3)});
+                            \filldraw (-1,0) circle (1.5pt) node[above left] {$(-1,0)$};
+                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
+                            \filldraw (0,6) circle (1.5pt) node[right] {$(0,6)$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </statement>
+            <answer>
+                <p><m>y = -2(x + 1)(x - 3)</m></p>
+            </answer>
+            <solution>
+                <p>
+                    The roots are at <m>x = -1</m> and <m>x = 3</m>, so write <m>y = a(x + 1)(x - 3)</m>.
+                    Substitute the y-intercept <m>(0, 6)</m> to find <m>a</m>:
+                    <md>
+                        <mrow>6 \amp= a(0 + 1)(0 - 3) = -3a</mrow>
+                        <mrow>a \amp= -2</mrow>
+                    </md>
+                    The equation is <m>y = -2(x + 1)(x - 3)</m>.
+                </p>
+            </solution>
+        </exercise>
+
     </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
