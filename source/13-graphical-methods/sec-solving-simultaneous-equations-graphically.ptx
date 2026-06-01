@@ -103,6 +103,106 @@
                 </ol>
             </p>
         </statement>
+        <solution>
+            <p>
+                <alert>Step 1: Table of values</alert>
+            </p>
+            <p>
+                For <m>y = x + 2</m> and <m>y = x^2</m>, with <m>x</m> from <m>-2</m> to <m>3</m>:
+            </p>
+            <tabular bottom="minor" top="minor" left="minor" right="minor" halign="center">
+                <row header="yes" bottom="medium">
+                    <cell><m>x</m></cell>
+                    <cell><m>-2</m></cell>
+                    <cell><m>-1</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                </row>
+                <row>
+                    <cell><m>y = x + 2</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>5</m></cell>
+                </row>
+                <row>
+                    <cell><m>y = x^2</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>9</m></cell>
+                </row>
+            </tabular>
+            <p>
+                <alert>Step 2: Plot both graphs on the same axes</alert>
+            </p>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xlabel style={at={(axis description cs:1,0)}, anchor=west},
+                            ylabel style={at={(axis description cs:0,1)}, anchor=south},
+                            xmin=-3, xmax=4,
+                            ymin=-1, ymax=10,
+                            xtick={-2,-1,0,1,2,3},
+                            ytick={0,1,2,3,4,5,6,7,8,9},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            width=8cm, height=8cm,
+                            legend style={at={(0.05,0.95)}, anchor=north west, font=\small},
+                        ]
+                            \addplot[red, thick, domain=-2.5:3.5, samples=2] {x + 2};
+                            \addlegendentry{$y = x+2$}
+                            \addplot[blue, thick, domain=-2.5:3.2, samples=80] {x^2};
+                            \addlegendentry{$y = x^2$}
+                            \addplot[only marks, mark=*, mark size=2.5pt, black]
+                                coordinates {(-1,1) (2,4)};
+                            \node[above right, font=\small] at (axis cs:-1,1) {$(-1,\,1)$};
+                            \node[above left, font=\small] at (axis cs:2,4) {$(2,\,4)$};
+                        \end{axis}
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <p>
+                <alert>Step 3 and 4: Intersection points and verification</alert>
+            </p>
+            <p>
+                The road <m>y = x + 2</m> and the railway track <m>y = x^2</m> cross at two points:
+                <m>(-1,\, 1)</m> and <m>(2,\, 4)</m>.
+            </p>
+            <p>
+                These coordinates satisfy <em>both</em> equations at the same time:
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            At <m>(-1,\, 1)</m>: <m>y = (-1) + 2 = 1</m> <m>\checkmark</m> and <m>y = (-1)^2 = 1</m> <m>\checkmark</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            At <m>(2,\, 4)</m>: <m>y = 2 + 2 = 4</m> <m>\checkmark</m> and <m>y = 2^2 = 4</m> <m>\checkmark</m>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                The intersection points give the values of <m>x</m> and <m>y</m> that satisfy both equations
+                simultaneously. These are the <em>solutions</em> to the simultaneous equations
+                <m>y = x + 2</m> and <m>y = x^2</m>.
+            </p>
+        </solution>
     </activity>
 
     <!-- [LP] Add guidance on structured lesson plan-->

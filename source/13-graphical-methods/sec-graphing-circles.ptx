@@ -681,11 +681,6 @@
                             Find at least four points <m>(x, y)</m> that satisfy the equation and plot them on a coordinate plane.
                             What shape do they seem to lie on?
                         </p>
-                        <hint>
-                            <p>
-                                Try <m>x = 2</m> and solve for <m>y</m>. Then try <m>y = -3</m> and solve for <m>x</m>. Look for integer solutions to make it easier.
-                            </p>
-                        </hint>
                     </li>
                     <li>
                         <p>
@@ -695,6 +690,11 @@
                     </li>
                 </ol>
             </statement>
+            <hint>
+                <p>
+                    For (a), try <m>x = 2</m> and solve for <m>y</m>. Then try <m>y = -3</m> and solve for <m>x</m>. Look for integer solutions to make it easier.
+                </p>
+            </hint>
             <answer>
                 <ol marker="(a)">
                     <li>

@@ -487,6 +487,230 @@
                 <p>The number of new members doubles each month. This is an exponential pattern.</p>
             </answer>
         </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The table below shows the long-term average monthly rainfall (in mm) for Nairobi, Kenya. (Source: <url href="https://www.meteo.go.ke/">Kenya Meteorological Department</url> long-term normals.)
+                </p>
+                <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row>
+                        <cell>Month</cell>
+                        <cell>Jan</cell><cell>Feb</cell><cell>Mar</cell>
+                        <cell>Apr</cell><cell>May</cell><cell>Jun</cell>
+                    </row>
+                    <row>
+                        <cell>Rainfall (mm)</cell>
+                        <cell>38</cell><cell>64</cell><cell>126</cell>
+                        <cell>211</cell><cell>158</cell><cell>46</cell>
+                    </row>
+                    <row>
+                        <cell>Month</cell>
+                        <cell>Jul</cell><cell>Aug</cell><cell>Sep</cell>
+                        <cell>Oct</cell><cell>Nov</cell><cell>Dec</cell>
+                    </row>
+                    <row>
+                        <cell>Rainfall (mm)</cell>
+                        <cell>15</cell><cell>23</cell><cell>31</cell>
+                        <cell>61</cell><cell>150</cell><cell>86</cell>
+                    </row>
+                </tabular>
+                <ol marker="(a)">
+                    <li><p>Plot the monthly rainfall data on a graph, with months on the horizontal axis and rainfall (mm) on the vertical axis.</p></li>
+                    <li><p>Identify the two months with the highest rainfall.</p></li>
+                    <li><p>Kenya has two rainy seasons each year. Use your graph to describe the timing and relative intensity of each season.</p></li>
+                    <li><p>During which months is Nairobi driest?</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <image width="75%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.7]
+                                    \draw[help lines, color=gray!30, xstep=1, ystep=1] (0,0) grid (13,5);
+                                    \draw[-&gt;] (0,0) -- (13.5,0) node[right] {Month};
+                                    \draw[-&gt;] (0,0) -- (0,5.5) node[above] {Rainfall (mm)};
+                                    \foreach \x/\lab in {1/Jan,2/Feb,3/Mar,4/Apr,5/May,6/Jun,7/Jul,8/Aug,9/Sep,10/Oct,11/Nov,12/Dec}
+                                        \draw (\x,0.07) -- (\x,-0.07) node[below, rotate=45, anchor=east, font=\scriptsize] {\lab};
+                                    \foreach \y/\lab in {0/0, 1/50, 2/100, 3/150, 4/200}
+                                        \draw (0.1,\y) -- (-0.1,\y) node[left] {\small\lab};
+                                    \draw[blue, thick] plot coordinates {(1,0.76)(2,1.28)(3,2.52)(4,4.22)(5,3.16)(6,0.92)(7,0.30)(8,0.46)(9,0.62)(10,1.22)(11,3.00)(12,1.72)};
+                                    \foreach \x/\y in {1/0.76,2/1.28,3/2.52,4/4.22,5/3.16,6/0.92,7/0.30,8/0.46,9/0.62,10/1.22,11/3.00,12/1.72}
+                                        \filldraw[blue] (\x,\y) circle (2pt);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li><p>April (211 mm) and November (150 mm).</p></li>
+                    <li><p>The <em>long rains</em> (March–May, peak April) are heavier and more prolonged. The <em>short rains</em> (October–December, peak November) are shorter and less intense.</p></li>
+                    <li><p>June–September, with July the driest at 15 mm.</p></li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The table below shows Kenya's estimated population at five-year intervals. (Source: <url href="https://data.worldbank.org/indicator/SP.POP.TOTL?locations=KE">World Bank, Kenya population data</url>.)
+                </p>
+                <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row>
+                        <cell>Year</cell>
+                        <cell>2000</cell><cell>2005</cell><cell>2010</cell><cell>2015</cell><cell>2020</cell>
+                    </row>
+                    <row>
+                        <cell>Population (millions)</cell>
+                        <cell>31</cell><cell>36</cell><cell>41</cell><cell>49</cell><cell>54</cell>
+                    </row>
+                </tabular>
+                <ol marker="(a)">
+                    <li><p>Plot the data as a scatter graph with year on the horizontal axis and population on the vertical axis.</p></li>
+                    <li><p>Describe the overall trend.</p></li>
+                    <li><p>Is the rate of population growth constant? Justify your answer using the data.</p></li>
+                    <li><p>Use the graph to estimate Kenya's population in 2012.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <image width="65%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.7]
+                                    \draw[help lines, color=gray!30, step=1] (0,0) grid (7,7);
+                                    \draw[-&gt;] (-0.3,0) -- (7.5,0) node[right] {Year};
+                                    \draw[-&gt;] (0,-0.3) -- (0,7.5) node[above] {Population (millions)};
+                                    \foreach \x/\yr in {0/2000, 1.25/2005, 2.5/2010, 3.75/2015, 5/2020}
+                                        \draw (\x, 0.1) -- (\x,-0.1) node[below] {\small\yr};
+                                    \foreach \y/\lab in {1.2/30, 2.2/35, 3.2/40, 4.2/45, 5.2/50, 6.2/55}
+                                        \draw (0.1,\y) -- (-0.1,\y) node[left] {\small\lab};
+                                    \filldraw[red] (0,   1.2) circle (3pt);
+                                    \filldraw[red] (1.25,2.2) circle (3pt);
+                                    \filldraw[red] (2.5, 3.2) circle (3pt);
+                                    \filldraw[red] (3.75,4.8) circle (3pt);
+                                    \filldraw[red] (5,   5.8) circle (3pt);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li><p>Strong positive trend — Kenya's population increases steadily over time.</p></li>
+                    <li>
+                        <p>
+                            The increases per 5-year period are: 5, 5, 8, 5 million. The increase from 2010 to 2015 is larger, so the growth rate is not perfectly constant — it is slightly accelerating, suggesting a non-linear (close to exponential) trend over a longer scale.
+                        </p>
+                    </li>
+                    <li><p>Approximately 43–44 million (reading between the 2010 and 2015 points).</p></li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The table below shows how average temperature varies with altitude at several locations across Kenya, from the lowland coast to the highlands near Mount Kenya.
+                </p>
+                <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row>
+                        <cell>Altitude (m)</cell>
+                        <cell>500</cell><cell>1000</cell><cell>1500</cell><cell>2000</cell><cell>2500</cell><cell>3000</cell>
+                    </row>
+                    <row>
+                        <cell>Avg. Temperature (°C)</cell>
+                        <cell>27</cell><cell>24</cell><cell>20</cell><cell>17</cell><cell>13</cell><cell>10</cell>
+                    </row>
+                </tabular>
+                <ol marker="(a)">
+                    <li><p>Plot the data with altitude on the horizontal axis and temperature on the vertical axis.</p></li>
+                    <li><p>Describe the relationship between altitude and temperature.</p></li>
+                    <li><p>Is the relationship approximately linear? Justify with calculations.</p></li>
+                    <li><p>Nairobi sits at about 1700 m above sea level. Use your graph to estimate Nairobi's average temperature.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <image width="65%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.7]
+                                    \draw[help lines, color=gray!30, step=1] (0,0) grid (7,5);
+                                    \draw[-&gt;] (-0.3,0) -- (7.5,0) node[right] {Altitude (m)};
+                                    \draw[-&gt;] (0,-0.3) -- (0,5.5) node[above] {Temp ($^\circ$C)};
+                                    \foreach \x/\lab in {1/500,2/1000,3/1500,4/2000,5/2500,6/3000}
+                                        \draw (\x,0.1) -- (\x,-0.1) node[below] {\small\lab};
+                                    \foreach \y/\lab in {0.4/10,1.15/13,1.9/17,2.4/20,3.4/24,4.4/27}
+                                        \draw (0.1,\y) -- (-0.1,\y) node[left] {\small\lab};
+                                    \draw[blue, thick] plot coordinates {(1,4.4)(2,3.8)(3,3.0)(4,2.4)(5,1.6)(6,1.0)};
+                                    \foreach \x/\y in {1/4.4,2/3.8,3/3.0,4/2.4,5/1.6,6/1.0}
+                                        \filldraw[blue] (\x,\y) circle (2pt);
+                                    \draw[red, dashed] (3.4, 0) -- (3.4, 2.76) -- (0, 2.76);
+                                    \node[red] at (3.4,-0.3) {\small 1700 m};
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li><p>Strong <em>negative</em> relationship — as altitude increases, the average temperature decreases.</p></li>
+                    <li>
+                        <p>
+                            Temperature drop per 500 m: <m>27-24=3</m>, <m>24-20=4</m>, <m>20-17=3</m>, <m>17-13=4</m>, <m>13-10=3</m>. The drop is approximately 3–4 °C per 500 m (consistent with the standard atmospheric lapse rate of about 6–7 °C per 1000 m). The relationship is approximately linear.
+                        </p>
+                    </li>
+                    <li><p>Reading from the graph at 1700 m (between 1500 and 2000 m), the estimated temperature is approximately 18–19 °C — consistent with Nairobi's well-known mild climate.</p></li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    The table shows the estimated number of mobile phone subscribers in Kenya at two-year intervals. (Source: <url href="https://www.ca.go.ke/">Communications Authority of Kenya</url> annual reports.)
+                </p>
+                <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                    <row>
+                        <cell>Year</cell>
+                        <cell>2004</cell><cell>2006</cell><cell>2008</cell><cell>2010</cell><cell>2012</cell>
+                    </row>
+                    <row>
+                        <cell>Subscribers (millions)</cell>
+                        <cell>3.4</cell><cell>7.3</cell><cell>16.3</cell><cell>24.4</cell><cell>29.2</cell>
+                    </row>
+                </tabular>
+                <ol marker="(a)">
+                    <li><p>Plot the data with year on the horizontal axis and number of subscribers on the vertical axis.</p></li>
+                    <li><p>Calculate the increase in subscribers in each 2-year period. Is the growth linear?</p></li>
+                    <li><p>Describe the shape of the graph and suggest a reason why growth was fastest between 2006 and 2010.</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <image width="65%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.7]
+                                    \draw[help lines, color=gray!30, step=1] (0,0) grid (5,7);
+                                    \draw[-&gt;] (-0.3,0) -- (5.5,0) node[right] {Year};
+                                    \draw[-&gt;] (0,-0.3) -- (0,7.5) node[above] {Subscribers (millions)};
+                                    \foreach \x/\yr in {0/2004,1/2006,2/2008,3/2010,4/2012}
+                                        \draw (\x,0.1) -- (\x,-0.1) node[below] {\small\yr};
+                                    \foreach \y/\lab in {0/0,1/5,2/10,3/15,4/20,5/25,6/30}
+                                        \draw (0.1,\y) -- (-0.1,\y) node[left] {\small\lab};
+                                    \draw[blue, thick] plot coordinates {(0,0.68)(1,1.46)(2,3.26)(3,4.88)(4,5.84)};
+                                    \foreach \x/\y in {0/0.68,1/1.46,2/3.26,3/4.88,4/5.84}
+                                        \filldraw[blue] (\x,\y) circle (2pt);
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            Increases per 2-year period: <m>3.9</m>, <m>9.0</m>, <m>8.1</m>, <m>4.8</m> million. Growth is <em>not</em> linear — the increase per period is not constant. The graph is steepest (fastest growth) between 2006 and 2010.
+                        </p>
+                    </li>
+                    <li>
+                        <p>The graph is non-linear (roughly S-shaped), rising steeply in the middle and flattening toward 2012. The rapid growth between 2006 and 2010 coincided with the launch of M-Pesa in 2007, which made mobile phones essential for everyday financial transactions, and with falling handset prices increasing affordability across Kenya.</p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
     </exercises>
 
     <axiom component="lesson-plan">
