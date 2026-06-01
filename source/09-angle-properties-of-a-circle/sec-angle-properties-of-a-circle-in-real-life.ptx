@@ -68,45 +68,6 @@
         </axiom> -->
 
     <!-- Add Activity -->
-     <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>10 minutes</p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>To formalize real-world applications of circle geometry, linking structural design parameters to proven circle properties.</p>
-                </li>
-            </dl>
-        </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p><alert>Connecting Geometry to Reality:</alert> Security cameras use the angle-at-center theorem to maximize focal coverage. Roof truss designs rely on the fact that any angle subtended by a diameter is a rigid <m>90^\circ</m> right angle.</p>
-                </li>
-                <li>
-                    <p><alert>Geometric Efficiency:</alert> Using cyclic quadrilaterals allows industrial designers to distribute forces evenly across circular objects, like wheel rims, storage silos, and satellite dishes, ensuring components remain structurally sound under high pressure.</p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom>
-
-    <insight>
-        <title>Key Insight: The Blueprint of the Arc</title>
-        <p>Whenever you see a circular object in real life—whether it is a Ferris wheel, a pizza cutter, a suspension bridge arch, or a round window—the angles built into it obey fixed mathematical ratios. If an engineer knows the center angle of a rotation, they automatically know the edge tolerances. The circle is nature’s most stable shape because its angle properties preserve balance perfectly across every degree of arc.</p>
-        <figure xml:id="fig-real-life-circle-insight">
-            <caption>A circular layout demonstrating how a camera at the center covers twice the angular field of a lens positioned at the edge boundary.</caption>
-            <image source="images/real-life-circle-angles.png" width="80%">
-                <description>A circular stadium schematic showing a central camera rig connected to two stage points, and a spectator seat at the edge boundary connected to the same two stage points, demonstrating the 2-to-1 angle ratio.</description>
-            </image>
-        </figure>
-    </insight>
-
-    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- <activity>
         <statement>
