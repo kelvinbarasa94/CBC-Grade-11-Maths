@@ -110,7 +110,7 @@
             </tabular>
 
             <p>
-                <alert>Group Study</alert>
+                <alert>Case Study Analysis:</alert>
             </p>
 
             <p>
@@ -118,7 +118,7 @@
             </p>
 
             <p>
-                Solve in groups and present your findings to the class. Consider the following questions as you work through the problem.
+                In groups, you are required to:
             </p>
 
             <p>
@@ -138,6 +138,11 @@
                     
                 </ol>
             </p>
+
+            <p>
+                <alert>Higher Order Thinking Task:</alert>
+            </p>
+
             <p>
                 Suppose the repayment period is extended from 2 years to 3 years while keeping all other conditions constant.
             </p>
@@ -258,10 +263,7 @@
         </statement>
         <solution>
             <p>
-                The value of the initial deposit is Ksh <m>100,000</m>, so <m>a_{1}=100,000.</m>. A total of <m>120</m> monthly deposits are made in the <m>10</m> years, so <m>n=120</m>. 
-            </p>
-            <p>
-                To find <m>r</m>, divide the annual interest rate by <m>12</m> to find the monthly interest rate and add <m>1</m> to represent the new monthly deposit.
+                The value of the initial deposit is Ksh <m>100,000</m>, so <m>a_{1}=100,000.</m> A total of <m>120</m> monthly deposits are made in the <m>10</m> years, so <m>n=120.</m> To find <m>r,</m> divide the annual interest rate by <m>12</m> to find the monthly interest rate and add <m>1</m> to represent the new monthly deposit.
             </p>
             <p>
                 <me>r=1+\frac{0.09}{12}=1.0075</me>
@@ -386,7 +388,7 @@
         <exercise>
             <statement>
                 <p>
-                    A student bought a laptop on hire purchase. He paid a deposit of Ksh <m>12,000</m>, which was <m>15\%</m> of the total Hire purchase price. He then paid the remaining amount in <m>12</m> monthly installments. If the dealer charged a flat interest of Ksh <m>5,000</m> on the cash price balance, what was the original Cash Price of the laptop?
+                    A student bought a laptop on hire purchase. He paid a deposit of Ksh <m>12,000</m>, which was <m>15\%</m> of the total Hire Purchase Price. He then paid the remaining amount in <m>12</m> monthly installments. If the dealer charged a flat interest of Ksh <m>5,000</m> on the cash price balance, what was the original Cash Price of the laptop?
                 </p>
             </statement>
             <answer>
