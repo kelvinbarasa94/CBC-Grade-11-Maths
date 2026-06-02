@@ -221,7 +221,7 @@
                     ylabel={$y$},
                     xmin=0, xmax=4.5,
                     ymin=0, ymax=5,
-                    tick label style={font=\small},
+                    tick label style={font=\footnotesize},
                     grid=both,
                     grid style={line width=0.3pt, draw=gray!30},
                 ]
@@ -285,7 +285,7 @@
                         ymin=0, ymax=10,
                         xtick={-1,1,2,3,4},
                         ytick={2,4,6,8,10},
-                        tick label style={font=\small},
+                        tick label style={font=\footnotesize},
                         grid=both,
                         grid style={line width=0.3pt, draw=gray!30},
                     ]
@@ -352,7 +352,7 @@
                         ymin=0, ymax=105,
                         xtick={0,2,4,6,8,10},
                         ytick={0,20,40,60,80,100},
-                        tick label style={font=\small},
+                        tick label style={font=\footnotesize},
                         grid=both,
                         grid style={line width=0.3pt, draw=gray!30},
                     ]
@@ -410,7 +410,7 @@
                         ymin=-8, ymax=8,
                         xtick={-2,-1,1,2},
                         ytick={-6,-4,-2,2,4,6},
-                        tick label style={font=\small},
+                        tick label style={font=\footnotesize},
                         grid=both,
                         grid style={line width=0.3pt, draw=gray!30},
                     ]
@@ -477,7 +477,7 @@
                             ymin=0, ymax=25,
                             xtick={0,1,2,3,4},
                             ytick={0,5,10,15,20,25},
-                            tick label style={font=\small},
+                            tick label style={font=\footnotesize},
                             grid=both,
                             grid style={line width=0.3pt, draw=gray!30},
                         ]
@@ -517,7 +517,7 @@
                             ymin=-5, ymax=6,
                             xtick={-2,-1,1,2},
                             ytick={-4,-2,2,4,6},
-                            tick label style={font=\small},
+                            tick label style={font=\footnotesize},
                             grid=both,
                             grid style={line width=0.3pt, draw=gray!30},
                         ]
@@ -557,7 +557,7 @@
                             ymin=0, ymax=50,
                             xtick={0,1,2,3,4,5},
                             ytick={0,10,20,30,40,50},
-                            tick label style={font=\small},
+                            tick label style={font=\footnotesize},
                             grid=both,
                             grid style={line width=0.3pt, draw=gray!30},
                         ]
@@ -597,7 +597,7 @@
                             ymin=-3, ymax=6,
                             xtick={-3,-2,-1,1},
                             ytick={-2,2,4,6},
-                            tick label style={font=\small},
+                            tick label style={font=\footnotesize},
                             grid=both,
                             grid style={line width=0.3pt, draw=gray!30},
                         ]
@@ -721,7 +721,7 @@
                             ymin=-5, ymax=5,
                             xtick={-2,-1,1,2},
                             ytick={-4,-2,2,4},
-                            tick label style={font=\small},
+                            tick label style={font=\footnotesize},
                             grid=both,
                             grid style={line width=0.3pt, draw=gray!30},
                         ]
