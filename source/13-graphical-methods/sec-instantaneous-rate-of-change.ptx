@@ -214,14 +214,23 @@
         </p>
         <image xml:id="img-tangent-illustration" width="65%">
             <latex-image label="Tangent Line Illustration">
-                \begin{tikzpicture}[scale=0.7]
-                    \draw[-&gt;] (-0.5,0) -- (5,0) node[right] {$x$};
-                    \draw[-&gt;] (0,-0.5) -- (0,5) node[above] {$y$};
-                    \draw[thick, blue, domain=0.5:4] plot (\x, {0.2*\x*\x + 1});
-                    % Tangent
-                    \coordinate (C) at (2, 1.8);
-                    \draw[green!60!black, thick] (0.5, 0.6) -- (3.5, 3) node[right] {Tangent line};
-                    \filldraw (C) circle (1.5pt) node[below right] {Point of tangency};
+                \begin{tikzpicture}
+                \begin{axis}[
+                    axis lines=center,
+                    xlabel={$x$},
+                    ylabel={$y$},
+                    xmin=0, xmax=4.5,
+                    ymin=0, ymax=5,
+                    tick label style={font=\small},
+                    grid=both,
+                    grid style={line width=0.3pt, draw=gray!30},
+                ]
+                    \addplot[blue, thick, domain=0.5:4, samples=60, smooth] {0.2*x^2 + 1};
+                    \addplot[green!60!black, thick, domain=0.5:3.5, samples=2] {0.8*x + 0.2};
+                    \node[right, font=\small] at (axis cs:3.5,3) {Tangent line};
+                    \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(2,1.8)};
+                    \node[below right, font=\small] at (axis cs:2,1.8) {Point of tangency};
+                \end{axis}
                 \end{tikzpicture}
             </latex-image>
         </image>
@@ -267,18 +276,30 @@
             </p>
             <image xml:id="img-example-tangent-inst" width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (-1,0) grid (5,10);
-                        \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
-                        \draw[-&gt;] (0,-1) -- (0,10) node[above] {$y$};
-                        \draw[thick, blue, domain=0:3.1] plot (\x, {\x*\x});
-                        \draw[green!60!black, thick] (0.5, -2) -- (3.5, 10);
-                        \filldraw (2,4) circle (2pt) node[above left] {$(2, 4)$};
-                        \filldraw (1,0) circle (2pt) node[below left] {$(1, 0)$};
-                        \filldraw (3,8) circle (2pt) node[right] {$(3, 8)$};
-                        % Gradient triangle
-                        \draw[thick, black, dashed] (1,0) -- (3,0) node[midway, below] {$\Delta x = 2$};
-                        \draw[thick, black, dashed] (3,0) -- (3,8) node[midway, right] {$\Delta y = 8$};
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines=center,
+                        xlabel={$x$},
+                        ylabel={$y$},
+                        xmin=-1, xmax=5,
+                        ymin=0, ymax=10,
+                        xtick={-1,1,2,3,4},
+                        ytick={2,4,6,8,10},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                    ]
+                        \addplot[blue, thick, domain=0:3.1, samples=60, smooth] {x^2};
+                        \addplot[green!60!black, thick, domain=1:3, samples=2] {4*x - 4};
+                        \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,4) (1,0) (3,8)};
+                        \node[above left, font=\small] at (axis cs:2,4) {$(2,4)$};
+                        \node[below left, font=\small] at (axis cs:1,0) {$(1,0)$};
+                        \node[right, font=\small] at (axis cs:3,8) {$(3,8)$};
+                        \draw[dashed, black, thick] (axis cs:1,0) -- (axis cs:3,0)
+                            node[midway, below, font=\small] {$\Delta x = 2$};
+                        \draw[dashed, black, thick] (axis cs:3,0) -- (axis cs:3,8)
+                            node[midway, right, font=\small] {$\Delta y = 8$};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -322,18 +343,28 @@
             <image xml:id="img-example-volume-inst" width="65%">
                 <description>Graph of V = 100 - t^2 with a tangent line and gradient triangle at t=5.</description>
                 <latex-image>
-                    \begin{tikzpicture}[x=0.5cm, y=0.05cm]
-                        \draw[help lines, color=gray!30, ystep=10, xstep=1] (0,0) grid (10,100);
-                        \draw[-&gt;] (-1,0) -- (11,0) node[right] {$t$};
-                        \draw[-&gt;] (0,-10) -- (0,110) node[above] {$V$};
-                        \draw[thick, blue, domain=0:10] plot (\x, {100 - \x*\x});
-                        \draw[green!60!black, thick] (3, 95) -- (7, 55) node[right] {Tangent at $t=5$};
-                        \filldraw (5,75) circle (3pt) node[above right] {$(5, 75)$};
-                        % Gradient triangle
-                        \draw[thick, black, dashed] (4,85) -- (6,85);
-                        \draw[thick, black, dashed] (6,85) -- (6,65) node[midway, right] {$\Delta V = -20$};
-                        \filldraw (4,85) circle (2pt);
-                        \filldraw (6,65) circle (2pt);
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis x line=bottom, axis y line=left,
+                        xlabel={$t$},
+                        ylabel={$V$},
+                        xmin=0, xmax=10,
+                        ymin=0, ymax=105,
+                        xtick={0,2,4,6,8,10},
+                        ytick={0,20,40,60,80,100},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                    ]
+                        \addplot[blue, thick, domain=0:10, samples=80, smooth] {100 - x^2};
+                        \addplot[green!60!black, thick, domain=3:7, samples=2] {-10*x + 125};
+                        \node[right, font=\small] at (axis cs:7,55) {Tangent at $t=5$};
+                        \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(5,75) (4,85) (6,65)};
+                        \node[above right, font=\small] at (axis cs:5,75) {$(5,75)$};
+                        \draw[dashed, black, thick] (axis cs:4,85) -- (axis cs:6,85);
+                        \draw[dashed, black, thick] (axis cs:6,85) -- (axis cs:6,65)
+                            node[midway, right, font=\small] {$\Delta V = -20$};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -370,18 +401,28 @@
             <image xml:id="img-example-cubic-tangent-inst" width="65%">
                 <description>Graph of y = x^3 with a tangent line and gradient triangle at x=1.</description>
                 <latex-image>
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (-2,-8) grid (2,8);
-                        \draw[-&gt;] (-2.5,0) -- (2.5,0) node[right] {$x$};
-                        \draw[-&gt;] (0,-8.5) -- (0,8.5) node[above] {$y$};
-                        \draw[thick, blue, domain=-2.04:2.04] plot (\x, {\x*\x*\x});
-                        \draw[green!60!black, thick] (-1, -5) -- (2.5, 5.5);
-                        \filldraw (1,1) circle (2pt) node[right] {$(1, 1)$};
-                        % Gradient triangle
-                        \draw[thick, black, dashed] (0,-2) -- (2,-2) node[midway, below] {$\Delta x = 2$};
-                        \draw[thick, black, dashed] (2,-2) -- (2,4) node[midway, right] {$\Delta y = 6$};
-                        \filldraw (0,-2) circle (2pt);
-                        \filldraw (2,4) circle (2pt);
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines=center,
+                        xlabel={$x$},
+                        ylabel={$y$},
+                        xmin=-2.5, xmax=2.5,
+                        ymin=-8, ymax=8,
+                        xtick={-2,-1,1,2},
+                        ytick={-6,-4,-2,2,4,6},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                    ]
+                        \addplot[blue, thick, domain=-2.04:2.04, samples=60, smooth] {x^3};
+                        \addplot[green!60!black, thick, domain=-1:2.5, samples=2] {3*x - 2};
+                        \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,1) (0,-2) (2,4)};
+                        \node[right, font=\small] at (axis cs:1,1) {$(1,1)$};
+                        \draw[dashed, black, thick] (axis cs:0,-2) -- (axis cs:2,-2)
+                            node[midway, below, font=\small] {$\Delta x = 2$};
+                        \draw[dashed, black, thick] (axis cs:2,-2) -- (axis cs:2,4)
+                            node[midway, right, font=\small] {$\Delta y = 6$};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -427,18 +468,27 @@
                 </p>
                 <image xml:id="img-ex-velocity-inst" width="65%">
                     <latex-image label="Projectile Motion with Tangent Line">
-                        \begin{tikzpicture}[scale=0.25]
-                            \draw[help lines, color=gray!30, step=5, ystep=5, xstep=1] (-1,0) grid (5,25);
-                            \draw[-&gt;] (-0.5,0) -- (4.5,0) node[right] {$t$};
-                            \draw[-&gt;] (0,-2) -- (0,25) node[above] {$h$};
-                            \draw[thick, blue, domain=0:4] plot (\x, {20*\x - 5*\x*\x});
-                            \draw[green!60!black, thick] (0, 5) -- (2, 25) node[right] {Tangent at $t=1$};
-                            \filldraw (1,15) circle (2pt);
-                            % Gradient triangle
-                            \draw[thick, black, dashed] (0,5) -- (2,5);
-                            \draw[thick, black, dashed] (2,5) -- (2,25) node[midway, right] {$\Delta h = 20$};
-                            \filldraw (0,5) circle (2pt);
-                            \filldraw (2,25) circle (2pt);
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis x line=bottom, axis y line=left,
+                            xlabel={$t$},
+                            ylabel={$h$},
+                            xmin=0, xmax=4,
+                            ymin=0, ymax=25,
+                            xtick={0,1,2,3,4},
+                            ytick={0,5,10,15,20,25},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=0:4, samples=80, smooth] {20*x - 5*x^2};
+                            \addplot[green!60!black, thick, domain=0:2, samples=2] {10*x + 5};
+                            \node[right, font=\small] at (axis cs:2,25) {Tangent at $t=1$};
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,15) (0,5) (2,25)};
+                            \draw[dashed, black, thick] (axis cs:0,5) -- (axis cs:2,5);
+                            \draw[dashed, black, thick] (axis cs:2,5) -- (axis cs:2,25)
+                                node[midway, right, font=\small] {$\Delta h = 20$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -458,18 +508,27 @@
                 </p>
                 <image xml:id="img-ex-quad-neg-inst" width="65%">
                     <latex-image label="Quadratic Function with Tangent Line">
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-3,-5) grid (3,5);
-                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
-                            \draw[thick, blue, domain=-2.5:2.5] plot (\x, {4 - \x*\x});
-                            \draw[green!60!black, thick] (-0.5, 6) -- (2.5, 0);
-                            \filldraw (1,3) circle (2pt);
-                            % Gradient triangle
-                            \draw[thick, black, dashed] (0,5) -- (2,5);
-                            \draw[thick, black, dashed] (2,5) -- (2,1) node[midway, right] {$\Delta y = -4$};
-                            \filldraw (0,5) circle (2pt);
-                            \filldraw (2,1) circle (2pt);
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3, xmax=3,
+                            ymin=-5, ymax=6,
+                            xtick={-2,-1,1,2},
+                            ytick={-4,-2,2,4,6},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=-2.5:2.5, samples=60, smooth] {4 - x^2};
+                            \addplot[green!60!black, thick, domain=-0.5:2.5, samples=2] {-2*x + 5};
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,3) (0,5) (2,1)};
+                            \node[right, font=\small] at (axis cs:1,3) {$(1,3)$};
+                            \draw[dashed, black, thick] (axis cs:0,5) -- (axis cs:2,5);
+                            \draw[dashed, black, thick] (axis cs:2,5) -- (axis cs:2,1)
+                                node[midway, right, font=\small] {$\Delta y = -4$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -489,18 +548,27 @@
                 </p>
                 <image xml:id="img-ex-bacteria-inst" width="65%">
                     <latex-image label="Bacterial Growth with Tangent Line">
-                        \begin{tikzpicture}[scale=0.1]
-                            \draw[help lines, color=gray!30, step=1, ystep=10, xstep=1] (0,0) grid (6,50);
-                            \draw[-&gt;] (0,0) -- (6,0) node[right] {$t$};
-                            \draw[-&gt;] (0,0) -- (0,50) node[above] {$N$};
-                            \draw[thick, blue, domain=0:4.4] plot (\x, {2*\x*\x + 10});
-                            \draw[green!60!black, thick] (1, 4) -- (4.5, 46);
-                            \filldraw (3,28) circle (3pt);
-                            % Gradient triangle
-                            \draw[thick, black, dashed] (2,16) -- (4,16) node[midway, below] {$\Delta t = 2$};
-                            \draw[thick, black, dashed] (4,16) -- (4,40) node[midway, right] {$\Delta N = 24$};
-                            \filldraw (2,16) circle (2pt);
-                            \filldraw (4,40) circle (2pt);
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis x line=bottom, axis y line=left,
+                            xlabel={$t$},
+                            ylabel={$N$},
+                            xmin=0, xmax=5,
+                            ymin=0, ymax=50,
+                            xtick={0,1,2,3,4,5},
+                            ytick={0,10,20,30,40,50},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=0:4.4, samples=60, smooth] {2*x^2 + 10};
+                            \addplot[green!60!black, thick, domain=1:4.5, samples=2] {12*x - 8};
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(3,28) (2,16) (4,40)};
+                            \draw[dashed, black, thick] (axis cs:2,16) -- (axis cs:4,16)
+                                node[midway, below, font=\small] {$\Delta t = 2$};
+                            \draw[dashed, black, thick] (axis cs:4,16) -- (axis cs:4,40)
+                                node[midway, right, font=\small] {$\Delta N = 24$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -520,18 +588,27 @@
                 </p>
                 <image xml:id="img-ex-quad-neg-x-inst" width="65%">
                     <latex-image label="Quadratic_Function_Tangent_Line">
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,6);
-                            \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-3) -- (0,6) node[above] {$y$};
-                            \draw[thick, blue, domain=-3.4:2] plot (\x, {0.5*\x*\x});
-                            \draw[green!60!black, thick] (0.5, -3) -- (-3.5, 5);
-                            \filldraw (-2,2) circle (2pt);
-                            % Gradient triangle
-                            \draw[thick, black, dashed] (0,-2) -- (-3,-2) node[midway, below] {$\Delta x = -3$};
-                            \draw[thick, black, dashed] (-3,-2) -- (-3,4) node[midway, left] {$\Delta y = 6$};
-                            \filldraw (0,-2) circle (2pt);
-                            \filldraw (-3,4) circle (2pt);
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-4, xmax=2,
+                            ymin=-3, ymax=6,
+                            xtick={-3,-2,-1,1},
+                            ytick={-2,2,4,6},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=-3.4:2, samples=60, smooth] {0.5*x^2};
+                            \addplot[green!60!black, thick, domain=-3.5:0.5, samples=2] {-2*x - 2};
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-2,2) (0,-2) (-3,4)};
+                            \draw[dashed, black, thick] (axis cs:0,-2) -- (axis cs:-3,-2)
+                                node[midway, below, font=\small] {$\Delta x = -3$};
+                            \draw[dashed, black, thick] (axis cs:-3,-2) -- (axis cs:-3,4)
+                                node[midway, left, font=\small] {$\Delta y = 6$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -635,14 +712,25 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-3,-5) grid (3,5);
-                            \draw[-&gt;] (-3,0) -- (3,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
-                            \draw[blue, thick, domain=-2.2:2.2, smooth] plot (\x, {\x*\x*\x - 3*\x});
-                            \node[blue] at (2.5, 4) {$f(x)$};
-                            \filldraw (-1,2) circle (2pt) node[above left] {$(-1,2)$};
-                            \filldraw (1,-2) circle (2pt) node[below right] {$(1,-2)$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3, xmax=3,
+                            ymin=-5, ymax=5,
+                            xtick={-2,-1,1,2},
+                            ytick={-4,-2,2,4},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=-2.2:2.2, samples=60, smooth] {x^3 - 3*x};
+                            \node[blue, font=\small] at (axis cs:2.4,4) {$f(x)$};
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-1,2) (1,-2)};
+                            \node[above left, font=\small] at (axis cs:-1,2) {$(-1,2)$};
+                            \node[below right, font=\small] at (axis cs:1,-2) {$(1,-2)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>

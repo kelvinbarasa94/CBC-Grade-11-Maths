@@ -58,13 +58,13 @@
                 <li>
                     <title>Objective</title>
                     <p>
-                        To visualize the shape and behavior of quadratic functions compared to linear functions using physical movement.
+                        To show how a parabola can be constructed using a string, and to connect this visual representation to the algebraic properties of quadratics.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        Facilitate the "People Graphs" activity. Encourage learners to think about the direction of their arms and how it relates to the sign of the leading coefficient.
+                        Make sure Learners set up the string and rulers correctly, and encourage them to observe the properties of the curve they draw.
                     </p>
                 </li>
             </dl>
@@ -335,16 +335,27 @@
             </p>
                 <image xml:id="img-quadratic-up" width="65%">
                     <latex-image label="fig-quadratic-up">
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-1,-2) grid (5,6);
-                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-2) -- (0,6) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-0.5:4.5, smooth] plot (\x, {\x*\x - 4*\x + 3});
-                            \filldraw (2,-1) circle (2pt) node[below] {Vertex $(2,-1)$};
-                            \filldraw (1,0) circle (1.5pt) node[above left] {$(1,0)$};
-                            \filldraw (0, 3) circle (1.5pt) node[right] {$(0,3)$};
-                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
-                            \draw[dashed, red] (2,-2) -- (2,6) node[above] {$x=2$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-1, xmax=5,
+                            ymin=-2, ymax=6,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-0.5:4.5, samples=80, smooth] {x^2 - 4*x + 3};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(2,-1)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(1,0) (3,0) (0,3)};
+                            \node[below, font=\small] at (axis cs:2,-1) {Vertex $(2,-1)$};
+                            \node[above left, font=\small] at (axis cs:1,0) {$(1,0)$};
+                            \node[right, font=\small] at (axis cs:0,3) {$(0,3)$};
+                            \node[above right, font=\small] at (axis cs:3,0) {$(3,0)$};
+                            \draw[dashed, red] (axis cs:2,-2) -- (axis cs:2,6) node[above, font=\small] {$x=2$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -394,16 +405,27 @@
             </p>
                 <image xml:id="img-quadratic-down" width="65%">
                     <latex-image label="fig-quadratic-down">
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-3,-2) grid (5,10);
-                            \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-2) -- (0,10) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-2.2:4.2, smooth] plot (\x, {-\x*\x + 2*\x + 8});
-                            \filldraw (1,9) circle (2pt) node[above] {Vertex $(1,9)$};
-                            \filldraw (4,0) circle (1.5pt) node[below right] {$(4,0)$};
-                            \filldraw (-2,0) circle (1.5pt) node[below left] {$(-2,0)$};
-                            \filldraw (0,8) circle (1.5pt) node[right] {$(0,8)$};
-                            \draw[dashed, red] (1,-2) -- (1,10) node[above] {$x=1$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3, xmax=5,
+                            ymin=-2, ymax=10,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-2.2:4.2, samples=80, smooth] {-x^2 + 2*x + 8};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(1,9)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(4,0) (-2,0) (0,8)};
+                            \node[above, font=\small] at (axis cs:1,9) {Vertex $(1,9)$};
+                            \node[below right, font=\small] at (axis cs:4,0) {$(4,0)$};
+                            \node[below left, font=\small] at (axis cs:-2,0) {$(-2,0)$};
+                            \node[right, font=\small] at (axis cs:0,8) {$(0,8)$};
+                            \draw[dashed, red] (axis cs:1,-2) -- (axis cs:1,10) node[above, font=\small] {$x=1$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -427,16 +449,27 @@
             </p>
             <image width="90%" xml:id="factored-form">
                 <latex-image>
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (-1,-5) grid (7,7);
-                        \draw[-&gt;] (-1,0) -- (7,0) node[right] {$x$};
-                        \draw[-&gt;] (0,-5) -- (0,7) node[above] {$y$};
-                        \draw[blue, thick, &lt;-&gt;, domain=-0.2:6.2, smooth] plot (\x, {(\x-1)*(\x-5)});
-                        \filldraw (3,-4) circle (2pt) node[below] {$(3,-4)$};
-                        \filldraw (1,0) circle (1.5pt) node[above right] {$(1,0)$};
-                        \filldraw (5,0) circle (1.5pt) node[above left] {$(5,0)$};
-                        \filldraw (0,5) circle (1.5pt) node[right] {$(0,5)$};
-                        \draw[dashed, red] (3,-5) -- (3,7) node[above] {$x=3$};
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines=center,
+                        xlabel={$x$},
+                        ylabel={$y$},
+                        xmin=-1, xmax=7,
+                        ymin=-5, ymax=7,
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                        axis equal image,
+                    ]
+                        \addplot[blue, thick, domain=-0.2:6.2, samples=80, smooth] {(x-1)*(x-5)};
+                        \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(3,-4)};
+                        \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(1,0) (5,0) (0,5)};
+                        \node[below, font=\small] at (axis cs:3,-4) {$(3,-4)$};
+                        \node[above right, font=\small] at (axis cs:1,0) {$(1,0)$};
+                        \node[above left, font=\small] at (axis cs:5,0) {$(5,0)$};
+                        \node[right, font=\small] at (axis cs:0,5) {$(0,5)$};
+                        \draw[dashed, red] (axis cs:3,-5) -- (axis cs:3,7) node[above, font=\small] {$x=3$};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -484,16 +517,27 @@
                 <p>Vertex: <m>(1, -4)</m>; Roots: <m>x = -1</m>, <m>x = 3</m>; y-intercept: <m>(0, -3)</m>.</p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-2,-5) grid (4,2);
-                            \draw[-&gt;] (-2,0) -- (4,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,2) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-1.3:3.3, smooth] plot (\x, {\x*\x - 2*\x - 3});
-                            \filldraw (1,-4) circle (1.5pt) node[below] {$(1,-4)$};
-                            \filldraw (-1,0) circle (1.5pt) node[above left] {$(-1,0)$};
-                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
-                            \filldraw (0,-3) circle (1.5pt) node[left] {$(0,-3)$};
-                            \draw[dashed, red] (1,-5) -- (1,2) node[above] {$x=1$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-2, xmax=4,
+                            ymin=-5, ymax=2,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-1.3:3.3, samples=80, smooth] {x^2 - 2*x - 3};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(1,-4)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(-1,0) (3,0) (0,-3)};
+                            \node[below, font=\small] at (axis cs:1,-4) {$(1,-4)$};
+                            \node[above left, font=\small] at (axis cs:-1,0) {$(-1,0)$};
+                            \node[above right, font=\small] at (axis cs:3,0) {$(3,0)$};
+                            \node[left, font=\small] at (axis cs:0,-3) {$(0,-3)$};
+                            \draw[dashed, red] (axis cs:1,-5) -- (axis cs:1,2) node[above, font=\small] {$x=1$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -528,15 +572,26 @@
                     </p>
                     <image xml:id="img-quadratic-narrow" width="65%">
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.7]
-                                \draw[help lines, color=gray!30, step=1] (-4,-3) grid (2,5);
-                                \draw[-&gt;] (-4,0) -- (2,0) node[right] {$x$};
-                                \draw[-&gt;] (0,-3) -- (0,5) node[above] {$y$};
-                                \draw[blue, thick, &lt;-&gt;, domain=-2.8:0.8, smooth] plot (\x, {2*\x*\x + 4*\x});
-                                \filldraw (-1,-2) circle (2pt) node[below] {$(-1,-2)$};
-                                \filldraw (0,0) circle (1.5pt) node[above right] {$(0,0)$};
-                                \filldraw (-2,0) circle (1.5pt) node[above left] {$(-2,0)$};
-                                \draw[dashed, red] (-1,-3) -- (-1,5) node[above] {$x=-1$};
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=center,
+                                xlabel={$x$},
+                                ylabel={$y$},
+                                xmin=-4, xmax=2,
+                                ymin=-3, ymax=5,
+                                tick label style={font=\small},
+                                grid=both,
+                                grid style={line width=0.3pt, draw=gray!30},
+                                axis equal image,
+                            ]
+                                \addplot[blue, thick, domain=-2.8:0.8, samples=80, smooth] {2*x^2 + 4*x};
+                                \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(-1,-2)};
+                                \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(0,0) (-2,0)};
+                                \node[below, font=\small] at (axis cs:-1,-2) {$(-1,-2)$};
+                                \node[above right, font=\small] at (axis cs:0,0) {$(0,0)$};
+                                \node[above left, font=\small] at (axis cs:-2,0) {$(-2,0)$};
+                                \draw[dashed, red] (axis cs:-1,-3) -- (axis cs:-1,5) node[above, font=\small] {$x=-1$};
+                            \end{axis}
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -559,16 +614,27 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-3,-2) grid (5,5);
-                            \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-2) -- (0,5) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-1.4:3.4, smooth] plot (\x, {-(\x+1)*(\x-3)});
-                            \filldraw (1,4) circle (2pt) node[above] {$(1,4)$};
-                            \filldraw (-1,0) circle (1.5pt) node[below left] {$(-1,0)$};
-                            \filldraw (3,0) circle (1.5pt) node[below right] {$(3,0)$};
-                            \filldraw (0,3) circle (1.5pt) node[left] {$(0,3)$};
-                            \draw[dashed, red] (1,-2) -- (1,5) node[above] {$x=1$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3, xmax=5,
+                            ymin=-2, ymax=5,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-1.4:3.4, samples=80, smooth] {-(x+1)*(x-3)};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(1,4)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(-1,0) (3,0) (0,3)};
+                            \node[above, font=\small] at (axis cs:1,4) {$(1,4)$};
+                            \node[below left, font=\small] at (axis cs:-1,0) {$(-1,0)$};
+                            \node[below right, font=\small] at (axis cs:3,0) {$(3,0)$};
+                            \node[left, font=\small] at (axis cs:0,3) {$(0,3)$};
+                            \draw[dashed, red] (axis cs:1,-2) -- (axis cs:1,5) node[above, font=\small] {$x=1$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -591,16 +657,27 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.55]
-                            \draw[help lines, color=gray!30, step=1] (-6,-10) grid (4,3);
-                            \draw[-&gt;] (-6,0) -- (4,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-10) -- (0,3) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-4.5:2.5, smooth] plot (\x, {\x*\x + 2*\x - 8});
-                            \filldraw (-1,-9) circle (2pt) node[below] {$(-1,-9)$};
-                            \filldraw (-4,0) circle (1.5pt) node[above left] {$(-4,0)$};
-                            \filldraw (2,0) circle (1.5pt) node[above right] {$(2,0)$};
-                            \filldraw (0,-8) circle (1.5pt) node[right] {$(0,-8)$};
-                            \draw[dashed, red] (-1,-10) -- (-1,3) node[above left] {$x=-1$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-6, xmax=4,
+                            ymin=-10, ymax=3,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-4.5:2.5, samples=80, smooth] {x^2 + 2*x - 8};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(-1,-9)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(-4,0) (2,0) (0,-8)};
+                            \node[below, font=\small] at (axis cs:-1,-9) {$(-1,-9)$};
+                            \node[above left, font=\small] at (axis cs:-4,0) {$(-4,0)$};
+                            \node[above right, font=\small] at (axis cs:2,0) {$(2,0)$};
+                            \node[right, font=\small] at (axis cs:0,-8) {$(0,-8)$};
+                            \draw[dashed, red] (axis cs:-1,-10) -- (axis cs:-1,3) node[above left, font=\small] {$x=-1$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -623,16 +700,27 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-2,-3) grid (6,8);
-                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-3) -- (0,8) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-0.2:4.2, smooth] plot (\x, {2*(\x-1)*(\x-3)});
-                            \filldraw (2,-2) circle (2pt) node[below] {$(2,-2)$};
-                            \filldraw (1,0) circle (1.5pt) node[above left] {$(1,0)$};
-                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
-                            \filldraw (0,6) circle (1.5pt) node[right] {$(0,6)$};
-                            \draw[dashed, red] (2,-3) -- (2,8) node[above] {$x=2$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-1, xmax=5,
+                            ymin=-3, ymax=8,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-0.2:4.2, samples=80, smooth] {2*(x-1)*(x-3)};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(2,-2)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(1,0) (3,0) (0,6)};
+                            \node[below, font=\small] at (axis cs:2,-2) {$(2,-2)$};
+                            \node[above left, font=\small] at (axis cs:1,0) {$(1,0)$};
+                            \node[above right, font=\small] at (axis cs:3,0) {$(3,0)$};
+                            \node[right, font=\small] at (axis cs:0,6) {$(0,6)$};
+                            \draw[dashed, red] (axis cs:2,-3) -- (axis cs:2,8) node[above, font=\small] {$x=2$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -646,14 +734,25 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-1,-5) grid (5,3);
-                            \draw[-&gt;] (-1,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,3) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-0.6:4.6, smooth] plot (\x, {\x*\x - 4*\x});
-                            \filldraw (0,0) circle (1.5pt) node[above right] {$(0,0)$};
-                            \filldraw (4,0) circle (1.5pt) node[above left] {$(4,0)$};
-                            \filldraw (2,-4) circle (2pt) node[below right] {$(2,-4)$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-1, xmax=5,
+                            ymin=-5, ymax=3,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-0.6:4.6, samples=80, smooth] {x^2 - 4*x};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(0,0) (4,0)};
+                            \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(2,-4)};
+                            \node[above right, font=\small] at (axis cs:0,0) {$(0,0)$};
+                            \node[above left, font=\small] at (axis cs:4,0) {$(4,0)$};
+                            \node[below right, font=\small] at (axis cs:2,-4) {$(2,-4)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -681,14 +780,24 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-5,-5) grid (3,4);
-                            \draw[-&gt;] (-5,0) -- (3,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,4) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-3.5:1.5, smooth] plot (\x, {(\x+3)*(\x-1)});
-                            \filldraw (-3,0) circle (1.5pt) node[above left] {$(-3,0)$};
-                            \filldraw (1,0) circle (1.5pt) node[above right] {$(1,0)$};
-                            \filldraw (0,-3) circle (1.5pt) node[right] {$(0,-3)$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-5, xmax=3,
+                            ymin=-5, ymax=4,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-3.5:1.5, samples=80, smooth] {(x+3)*(x-1)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(-3,0) (1,0) (0,-3)};
+                            \node[above left, font=\small] at (axis cs:-3,0) {$(-3,0)$};
+                            \node[above right, font=\small] at (axis cs:1,0) {$(1,0)$};
+                            \node[right, font=\small] at (axis cs:0,-3) {$(0,-3)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -716,14 +825,24 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-6,-3) grid (4,10);
-                            \draw[-&gt;] (-6,0) -- (4,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-3) -- (0,10) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-4.3:2.3, smooth] plot (\x, {-(\x+4)*(\x-2)});
-                            \filldraw (-4,0) circle (1.5pt) node[above left] {$(-4,0)$};
-                            \filldraw (2,0) circle (1.5pt) node[above right] {$(2,0)$};
-                            \filldraw (0,8) circle (1.5pt) node[right] {$(0,8)$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-6, xmax=4,
+                            ymin=-3, ymax=10,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-4.3:2.3, samples=80, smooth] {-(x+4)*(x-2)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(-4,0) (2,0) (0,8)};
+                            \node[above left, font=\small] at (axis cs:-4,0) {$(-4,0)$};
+                            \node[above right, font=\small] at (axis cs:2,0) {$(2,0)$};
+                            \node[right, font=\small] at (axis cs:0,8) {$(0,8)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -751,14 +870,24 @@
                 </p>
                 <image width="65%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-3,-5) grid (5,10);
-                            \draw[-&gt;] (-3,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,10) node[above] {$y$};
-                            \draw[blue, thick, &lt;-&gt;, domain=-1.2:3.2, smooth] plot (\x, {-2*(\x+1)*(\x-3)});
-                            \filldraw (-1,0) circle (1.5pt) node[above left] {$(-1,0)$};
-                            \filldraw (3,0) circle (1.5pt) node[above right] {$(3,0)$};
-                            \filldraw (0,6) circle (1.5pt) node[right] {$(0,6)$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3, xmax=5,
+                            ymin=-5, ymax=10,
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=-1.2:3.2, samples=80, smooth] {-2*(x+1)*(x-3)};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(-1,0) (3,0) (0,6)};
+                            \node[above left, font=\small] at (axis cs:-1,0) {$(-1,0)$};
+                            \node[above right, font=\small] at (axis cs:3,0) {$(3,0)$};
+                            \node[right, font=\small] at (axis cs:0,6) {$(0,6)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -811,18 +940,30 @@
                         <p>
                             <image width="68%">
                                 <latex-image>
-                                    \begin{tikzpicture}[scale=0.8]
-                                        \draw[-&gt;, thick] (-0.5,0) -- (7,0) node[right] {$x$};
-                                        \draw[-&gt;, thick] (0,-3.5) -- (0,3.5) node[above] {$y$};
-                                        \draw[blue, &lt;-&gt;, very thick, domain=-0.3:6.3, smooth, samples=60]
-                                            plot (\x, {0.5*(\x-1)*(\x-5)});
-                                        \filldraw (1,0) circle (2.5pt) node[below=6pt] {$r$};
-                                        \filldraw (5,0) circle (2.5pt) node[below=6pt] {$s$};
-                                        \draw[thick] (3,0.1) -- (3,-0.1) node[below=6pt] {$m$};
-                                        \draw[&lt;-&gt;, thick, red!80!black] (1,0.7) -- (3,0.7)
-                                            node[midway, below] {$d$};
-                                        \draw[&lt;-&gt;, thick, red!80!black] (3,0.7) -- (5,0.7)
-                                            node[midway, below] {$d$};
+                                    \begin{tikzpicture}
+                                    \begin{axis}[
+                                        axis lines=center,
+                                        xlabel={$x$},
+                                        ylabel={$y$},
+                                        xmin=-0.5, xmax=6.5,
+                                        ymin=-3.5, ymax=3.5,
+                                        xticklabels={},
+                                        yticklabels={},
+                                        grid=both,
+                                        grid style={line width=0.3pt, draw=gray!30},
+                                        axis equal image,
+                                    ]
+                                        \addplot[blue, very thick, domain=-0.3:6.3, samples=60, smooth] {0.5*(x-1)*(x-5)};
+                                        \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(1,0) (5,0)};
+                                        \node[below=6pt, font=\small] at (axis cs:1,0) {$r$};
+                                        \node[below=6pt, font=\small] at (axis cs:5,0) {$s$};
+                                        \draw[thick] (axis cs:3,0.1) -- (axis cs:3,-0.1);
+                                        \node[below=6pt, font=\small] at (axis cs:3,0) {$m$};
+                                        \draw[&lt;-&gt;, thick, red!80!black] (axis cs:1,0.7) -- (axis cs:3,0.7)
+                                            node[midway, below, font=\small] {$d$};
+                                        \draw[&lt;-&gt;, thick, red!80!black] (axis cs:3,0.7) -- (axis cs:5,0.7)
+                                            node[midway, below, font=\small] {$d$};
+                                    \end{axis}
                                     \end{tikzpicture}
                                 </latex-image>
                             </image>
@@ -938,27 +1079,31 @@
                         </p>
                         <image width="78%">
                             <latex-image>
-                                \begin{tikzpicture}[scale=0.9]
-                                    \draw[help lines, color=gray!30, step=1] (-7,-3) grid (1,8);
-                                    \draw[-&gt;, thick] (-7,0) -- (1,0) node[right] {$x$};
-                                    \draw[-&gt;, thick] (0,-3) -- (0,8) node[above] {$y$};
-                                    \draw[blue, very thick, &lt;-&gt;, domain=-6.1:0.1, smooth, samples=80]
-                                        plot (\x, {\x*\x + 6*\x + 7});
-                                    \filldraw (-4.414,0) circle (2.5pt)
-                                        node[below left, xshift=-3pt, yshift=-4pt, fill=white, opacity=0.7, font=\small] {$r = -3-\sqrt{2}$};
-                                    \filldraw (-1.586,0) circle (2.5pt)
-                                        node[below right, xshift=3pt, yshift=-4pt, fill=white, opacity=0.7, font=\small] {$s = -3+\sqrt{2}$};
-                                    \filldraw (-3,-2) circle (2pt)
-                                        node[below left, font=\small] {$(-3,-2)$};
-                                    \filldraw (0,7) circle (2pt)
-                                        node[right=2pt, font=\small] {$(0,7)$};
-                                    \draw[dashed, thick, gray!80] (-3,-2.9) -- (-3,7.5);
-                                    \draw[thick] (-3,0.12) -- (-3,-0.12);
-                                    \node[below=4pt, font=\small] at (-3,0) {$m = -3$};
-                                    \draw[&lt;-&gt;, thick, red!80!black] (-4.414,0.5) -- (-3,0.5)
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-7, xmax=1,
+                                    ymin=-3, ymax=8,
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, very thick, domain=-6.1:0.1, samples=80, smooth] {x^2 + 6*x + 7};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(-4.414,0) (-1.586,0) (-3,-2) (0,7)};
+                                    \node[below left, xshift=-3pt, yshift=-4pt, fill=white, opacity=0.7, font=\small] at (axis cs:-4.414,0) {$r = -3-\sqrt{2}$};
+                                    \node[below right, xshift=3pt, yshift=-4pt, fill=white, opacity=0.7, font=\small] at (axis cs:-1.586,0) {$s = -3+\sqrt{2}$};
+                                    \node[below left, font=\small] at (axis cs:-3,-2) {$(-3,-2)$};
+                                    \node[right=2pt, font=\small] at (axis cs:0,7) {$(0,7)$};
+                                    \draw[dashed, thick, gray!80] (axis cs:-3,-3) -- (axis cs:-3,8);
+                                    \node[below=16pt, font=\small] at (axis cs:-3,0) {$m = -3$};
+                                    \draw[&lt;-&gt;, thick, red!80!black] (axis cs:-4.414,0.5) -- (axis cs:-3,0.5)
                                         node[midway, above, font=\small] {$d=\sqrt{2}$};
-                                    \draw[&lt;-&gt;, thick, red!80!black] (-3,0.5) -- (-1.586,0.5)
+                                    \draw[&lt;-&gt;, thick, red!80!black] (axis cs:-3,0.5) -- (axis cs:-1.586,0.5)
                                         node[midway, above, font=\small] {$d=\sqrt{2}$};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>

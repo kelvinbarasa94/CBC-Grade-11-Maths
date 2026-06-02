@@ -112,13 +112,24 @@
                         <solution component="lesson-plan">
                             <image width="95%">
                             <latex-image label="fig-activity-center">
-                                \begin{tikzpicture}[scale=0.7]
-                                    \draw[color=gray!50, step=1] (-5,-4) grid (9,10);
-                                    \draw[-&gt;] (-5,0) -- (9,0) node[right] {$x$};
-                                    \draw[-&gt;] (0,-4) -- (0,10) node[above] {$y$};
-                                    \foreach \x in {-4,-2,2,4,6,8} \draw (\x,2pt) -- (\x,-2pt) node[below] {$\x$};
-                                    \foreach \y in {-2,2,4,6,8} \draw (2pt,\y) -- (-2pt,\y) node[left] {$\y$};
-                                    \filldraw (2,3) circle (2pt) node[above right] {$C(2,3)$};
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-5, xmax=9,
+                                    ymin=-4, ymax=10,
+                                    xtick={-4,-2,2,4,6,8},
+                                    ytick={-2,2,4,6,8},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                    minor tick num=1,
+                                ]
+                                    \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(2,3)};
+                                    \node[above right, font=\small] at (axis cs:2,3) {$C(2,3)$};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>      
                         </image>
@@ -131,15 +142,26 @@
                         <solution component="lesson-plan">
                         <image width="95%">
                             <latex-image label="fig-activity-points">
-                                \begin{tikzpicture}[scale=0.7]
-                                    \draw[color=gray!50, step=1] (-5,-4) grid (9,10);
-                                    \draw[-&gt;] (-5,0) -- (9,0) node[right] {$x$};
-                                    \draw[-&gt;] (0,-4) -- (0,10) node[above] {$y$};
-                                    \foreach \x in {-4,-2,2,4,6,8} \draw (\x,2pt) -- (\x,-2pt) node[below] {$\x$};
-                                    \foreach \y in {-2,2,4,6,8} \draw (2pt,\y) -- (-2pt,\y) node[left] {$\y$};
-                                    \filldraw (2,3) circle (3pt) node[above right] {$C(2,3)$};
-                                    \foreach \p in {(7,3), (-3,3), (2,8), (2,-2), (5,7), (-1,7), (5,-1), (-1,-1)}
-                                        \filldraw \p circle (2.5pt);
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-5, xmax=9,
+                                    ymin=-4, ymax=10,
+                                    xtick={-4,-2,2,4,6,8},
+                                    ytick={-2,2,4,6,8},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    minor tick num=1,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,3)};
+                                    \node[above right, font=\small] at (axis cs:2,3) {$C(2,3)$};
+                                    \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
+                                        (7,3) (-3,3) (2,8) (2,-2) (5,7) (-1,7) (5,-1) (-1,-1)};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>   
                         </image>
@@ -152,16 +174,28 @@
                         <solution component="lesson-plan">
                         <image width="95%">
                             <latex-image label="fig-activity-circle">
-                                \begin{tikzpicture}[scale=0.7]
-                                    \draw[color=gray!50, step=1] (-5,-4) grid (9,10);
-                                    \draw[-&gt;] (-5,0) -- (9,0) node[right] {$x$};
-                                    \draw[-&gt;] (0,-4) -- (0,10) node[above] {$y$};
-                                    \foreach \x in {-4,-2,2,4,6,8} \draw (\x,2pt) -- (\x,-2pt) node[below] {$\x$};
-                                    \foreach \y in {-2,2,4,6,8} \draw (2pt,\y) -- (-2pt,\y) node[left] {$\y$};
-                                    \filldraw (2,3) circle (3pt) node[above right] {$C(2,3)$};
-                                    \draw[blue, thick] (2,3) circle (5);
-                                    \foreach \p in {(7,3), (-3,3), (2,8), (2,-2), (5,7), (-1,7), (5,-1), (-1,-1)}
-                                        \filldraw \p circle (2.5pt);
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-5, xmax=9,
+                                    ymin=-4, ymax=10,
+                                    xtick={-4,-2,2,4,6,8},
+                                    ytick={-2,2,4,6,8},
+                                    tick label style={font=\small},
+                                    minor tick num=1,
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({2 + 5*cos(\x)}, {3 + 5*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,3)};
+                                    \node[above right, font=\small] at (axis cs:2,3) {$C(2,3)$};
+                                    \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
+                                        (7,3) (-3,3) (2,8) (2,-2) (5,7) (-1,7) (5,-1) (-1,-1)};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -326,16 +360,31 @@
             </p>
                 <image xml:id="img-example-origin" width="95%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[color=gray!30, step=1] (-5,-5) grid (5,5);
-                            \draw[-&gt;] (-5,0) -- (5,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-5) -- (0,5) node[above] {$y$};
-                            \filldraw (0,0) circle (2pt) node[above right] {$(0,0)$};
-                            \draw[blue, thick] (0,0) circle (4);
-                            \filldraw (4,0) circle (1.5pt) node[below right] {$(4,0)$};
-                            \filldraw (-4,0) circle (1.5pt) node[below left] {$(-4,0)$};
-                            \filldraw (0,4) circle (1.5pt) node[above left] {$(0,4)$};
-                            \filldraw (0,-4) circle (1.5pt) node[below left] {$(0,-4)$};
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-6, xmax=6,
+                            ymin=-6, ymax=6,
+                            xtick={-4,-2,2,4},
+                            ytick={-4,-2,2,4},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.2pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                ({4*cos(\x)}, {4*sin(\x)});
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,0)};
+                            \node[above left, font=\small] at (axis cs:0,0) {$(0,0)$};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
+                                (4,0) (-4,0) (0,4) (0,-4)};
+                            \node[above left, font=\small] at (axis cs:4,0) {$(4,0)$};
+                            \node[above left, font=\small] at (axis cs:-4,0) {$(-4,0)$};
+                            \node[above left, font=\small] at (axis cs:0,4) {$(0,4)$};
+                            \node[below right, font=\small] at (axis cs:0,-4) {$(0,-4)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -395,16 +444,28 @@
             </p>
                 <image xml:id="img-example-h-k" width="95%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.7]
-                            \draw[help lines, color=gray!30, step=1] (-3,-10) grid (9,2);
-                            \draw[-&gt;] (-3,0) -- (9,0) node[right] {$x$};
-                            \draw[-&gt;] (0,-10) -- (0,2) node[above] {$y$};
-                            \filldraw (3,-4) circle (2pt) node[above right] {$(3,-4)$};
-                            \draw[blue, thick] (3,-4) circle (5);
-                            \filldraw (8,-4) circle (1.5pt);
-                            \filldraw (-2,-4) circle (1.5pt);
-                            \filldraw (3,1) circle (1.5pt);
-                            \filldraw (3,-9) circle (1.5pt);
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-3, xmax=9,
+                            ymin=-10, ymax=2,
+                            xtick={-2,0,2,4,6,8},
+                            ytick={-8,-6,-4,-2,0,2},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.2pt, draw=gray!30},
+                            axis equal image,
+                            minor tick num=1
+                        ]
+                            \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                ({3 + 5*cos(\x)}, {-4 + 5*sin(\x)});
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(3,-4)};
+                            \node[above right, font=\small] at (axis cs:3,-4) {$(3,-4)$};
+                            \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
+                                (8,-4) (-2,-4) (3,1) (3,-9)};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -437,16 +498,28 @@
             </p>
             <image width="95%">
                 <latex-image label="fig-example-multiple-choice">
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (-5,-10) grid (7,4);
-                        \draw[-&gt;] (-5,0) -- (7,0) node[right] {$x$};
-                        \draw[-&gt;] (0,-10) -- (0,4) node[above] {$y$};
-                        \filldraw (1,-2) circle (2pt) node[above right] {$(1,-2)$};
-                        \draw[blue, thick] (1,-2) circle (6);
-                        \filldraw (7,-2) circle (1.5pt);
-                        \filldraw (-5,-2) circle (1.5pt);
-                        \filldraw (1,4) circle (1.5pt);
-                        \filldraw (1,-8) circle (1.5pt);
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines=center,
+                        xlabel={$x$},
+                        ylabel={$y$},
+                        xmin=-6, xmax=8,
+                        ymin=-10, ymax=5,
+                        xtick={-4,-2,0,2,4,6},
+                        ytick={-8,-6,-4,-2,0,2,4},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.2pt, draw=gray!30},
+                        axis equal image,
+                        minor tick num=1
+                    ]
+                        \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                            ({1 + 6*cos(\x)}, {-2 + 6*sin(\x)});
+                        \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,-2)};
+                        \node[below right, font=\small] at (axis cs:1,-2) {$(1,-2)$};
+                        \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
+                            (7,-2) (-5,-2) (1,4) (1,-8)};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
                 
@@ -634,16 +707,28 @@
                 </p>
                     <image xml:id="img-exercise-sketch" width="95%">
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.7]
-                                \draw[color=gray!30, step=1] (-6,-3) grid (2,3);
-                                \draw[-&gt;] (-6,0) -- (2,0) node[right] {$x$};
-                                \draw[-&gt;] (0,-3) -- (0,3) node[above] {$y$};
-                                \filldraw (-2,0) circle (2pt) node[below] {$(-2,0)$};
-                                \draw[blue, thick] (-2,0) circle (2);
-                                \filldraw (0,0) circle (1.5pt);
-                                \filldraw (-4,0) circle (1.5pt);
-                                \filldraw (-2,2) circle (1.5pt);
-                                \filldraw (-2,-2) circle (1.5pt);
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=center,
+                                xlabel={$x$},
+                                ylabel={$y$},
+                                xmin=-5, xmax=2,
+                                ymin=-3, ymax=3,
+                                xtick={-4,-2,0,2},
+                                ytick={-2,0,2},
+                                tick label style={font=\small},
+                                grid=both,
+                                grid style={line width=0.2pt, draw=gray!30},
+                                axis equal image,
+                                minor tick num=1
+                            ]
+                                \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                    ({-2 + 2*cos(\x)}, {2*sin(\x)});
+                                \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-2,0)};
+                                \node[above, font=\small] at (axis cs:-2,0) {$(-2,0)$};
+                                \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
+                                    (0,0) (-4,0) (-2,2) (-2,-2)};
+                            \end{axis}
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -733,20 +818,31 @@
                     </p>
                     <image width="65%">
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.6]
-                                \draw[color=gray!30, step=1] (-4,-9) grid (8,3);
-                                \draw[-&gt;, thick] (-4,0) -- (8,0) node[right] {$x$};
-                                \draw[-&gt;, thick] (0,-9) -- (0,3) node[above] {$y$};
-                                \foreach \x in {-3,-2,-1,1,2,3,4,5,6,7}
-                                    \draw (\x,0.08)--(\x,-0.08) node[below,font=\tiny] {$\x$};
-                                \foreach \y in {-8,-7,-6,-5,-4,-3,-2,-1,1,2}
-                                    \draw (0.08,\y)--(-0.08,\y) node[left,font=\tiny] {$\y$};
-                                \draw[blue, thick] (2,-3) circle (4);
-                                \filldraw[red] (2,1)   circle (3pt) node[above right] {$(2,1)$};
-                                \filldraw[red] (2,-7)  circle (3pt) node[below right] {$(2,-7)$};
-                                \filldraw[red] (6,-3)  circle (3pt) node[right]       {$(6,-3)$};
-                                \filldraw[red] (-2,-3) circle (3pt) node[left]        {$(-2,-3)$};
-                                \filldraw (2,-3) circle (2pt) node[below right, font=\small] {$(2,-3)$};
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=center,
+                                xlabel={$x$},
+                                ylabel={$y$},
+                                xmin=-5, xmax=9,
+                                ymin=-9, ymax=3,
+                                xtick={-2,0,2,4,6},
+                                ytick={-8,-6,-4,-2,0,2},
+                                tick label style={font=\small},
+                                grid=both,
+                                grid style={line width=0.2pt, draw=gray!30},
+                                axis equal image,
+                            ]
+                                \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                    ({2 + 4*cos(\x)}, {-3 + 4*sin(\x)});
+                                \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
+                                    (2,1) (2,-7) (6,-3) (-2,-3)};
+                                \node[above right, font=\small] at (axis cs:2,1) {$(2,1)$};
+                                \node[below right, font=\small] at (axis cs:2,-7) {$(2,-7)$};
+                                \node[right, font=\small] at (axis cs:6,-3) {$(6,-3)$};
+                                \node[left, font=\small] at (axis cs:-2,-3) {$(-2,-3)$};
+                                \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,-3)};
+                                \node[below right, font=\small] at (axis cs:2,-3) {$(2,-3)$};
+                            \end{axis}
                             \end{tikzpicture}
                         </latex-image>
                     </image>

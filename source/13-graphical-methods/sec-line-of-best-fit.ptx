@@ -246,24 +246,23 @@
         </p>
         <image width="65%">
             <latex-image label="fig-line-of-best-fit">
-            \begin{tikzpicture}[scale=0.7]
-                \draw[help lines, color=gray!30, step=1] (0,0) grid (6,6);
-                \draw[->] (0,0) -- (6.5,0) node[right] {x};
-                \draw[->] (0,0) -- (0,6.5) node[above] {y};
-                \foreach \x in {0,1,...,5}
-                \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
-                \foreach \y in {0,1,...,5}
-                \draw (2pt, \y) -- (-2pt, \y) node[left] {\y};
-                
-                \filldraw[blue] (1, 1.2) circle (2pt);
-                \filldraw[blue] (2, 2.8) circle (2pt);
-                \filldraw[blue] (2.5, 2.1) circle (2pt);
-                \filldraw[blue] (3, 3.6) circle (2pt);
-                \filldraw[blue] (4, 3.9) circle (2pt);
-                \filldraw[blue] (4.5, 5.2) circle (2pt);
-                \filldraw[blue] (5, 5.1) circle (2pt);
-                
-                \draw[red, thick] (0.5, 1) -- (5.5, 6);
+            \begin{tikzpicture}
+            \begin{axis}[
+                axis x line=bottom, axis y line=left,
+                xlabel={$x$},
+                ylabel={$y$},
+                xmin=0, xmax=6,
+                ymin=0, ymax=6,
+                xtick={0,1,2,3,4,5},
+                ytick={0,1,2,3,4,5},
+                tick label style={font=\small},
+                grid=both,
+                grid style={line width=0.3pt, draw=gray!30},
+            ]
+                \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                    (1,1.2) (2,2.8) (2.5,2.1) (3,3.6) (4,3.9) (4.5,5.2) (5,5.1)};
+                \addplot[red, thick, domain=0.5:5.5, samples=2] {x + 0.5};
+            \end{axis}
             \end{tikzpicture}
             </latex-image>
         </image>
@@ -296,22 +295,23 @@
             </p>
             <image width="65%">
                 <latex-image label="fig-line-of-best-fit-example">
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (0,0) grid (6,6);
-                        \draw[->] (0,0) -- (6.5,0) node[right] {Fertilizer (g)};
-                        \draw[->] (0,0) -- (0,6.5) node[above] {Height (cm)};
-                        \foreach \x in {0,5,10,15,20,25}
-                            \draw (\x/5, 2pt) -- (\x/5, -2pt) node[below] {\x};
-                        \foreach \y in {0,10,20,30,40,50}
-                            \draw (2pt, \y/10) -- (-2pt, \y/10) node[left] {\y};
-                        
-                        \filldraw[blue] (1, 1.2) circle (2pt);
-                        \filldraw[blue] (2, 2.2) circle (2pt);
-                        \filldraw[blue] (3, 3.0) circle (2pt);
-                        \filldraw[blue] (4, 4.1) circle (2pt);
-                        \filldraw[blue] (5, 4.8) circle (2pt);
-                        
-                        \draw[red, thick] (0, 0.3) -- (6, 5.7);
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis x line=bottom, axis y line=left,
+                        xlabel={Fertilizer (g)},
+                        ylabel={Height (cm)},
+                        xmin=0, xmax=30,
+                        ymin=0, ymax=55,
+                        xtick={0,5,10,15,20,25},
+                        ytick={0,10,20,30,40,50},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                    ]
+                        \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                            (5,12) (10,22) (15,30) (20,41) (25,48)};
+                        \addplot[red, thick, domain=0:28, samples=2] {1.8*x + 3};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -332,22 +332,23 @@
             </p>
             <image width="65%">
                 <latex-image label="fig-line-of-best-fit-study-hours">
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines, color=gray!30, step=1] (0,0) grid (6,10);
-                        \draw[->] (0,0) -- (6.5,0) node[right] {Study Hours};
-                        \draw[->] (0,0) -- (0,10.5) node[above] {Test Score};
-                        \foreach \x in {0,2,4,6,8,10,12}
-                            \draw (\x/2, 2pt) -- (\x/2, -2pt) node[below] {\x};
-                        \foreach \y in {0,10,20,30,40,50,60,70,80,90,100}
-                            \draw (2pt, \y/10) -- (-2pt, \y/10) node[left] {\y};
-                        
-                        \filldraw[blue] (1, 4.5) circle (2pt);
-                        \filldraw[blue] (2, 5.5) circle (2pt);
-                        \filldraw[blue] (3, 6.8) circle (2pt);
-                        \filldraw[blue] (4, 7.5) circle (2pt);
-                        \filldraw[blue] (5, 8.8) circle (2pt);
-                        
-                        \draw[red, thick] (0, 3.5) -- (6, 9.5);
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis x line=bottom, axis y line=left,
+                        xlabel={Study Hours},
+                        ylabel={Test Score},
+                        xmin=0, xmax=12,
+                        ymin=0, ymax=100,
+                        xtick={0,2,4,6,8,10,12},
+                        ytick={0,20,40,60,80,100},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                    ]
+                        \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                            (2,45) (4,55) (6,68) (8,75) (10,88)};
+                        \addplot[red, thick, domain=0:11, samples=2] {5*x + 35};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -408,23 +409,23 @@
                         </p>
                         <image width="65%">
                             <latex-image label="fig-line-of-best-fit-car-value">
-                                \begin{tikzpicture}[scale=0.7]
-                                    \draw[help lines, color=gray!30, step=1] (0,0) grid (8,6);
-                                    \draw[->] (0,0) -- (8.5,0) node[right] {Age (years)};
-                                    \draw[->] (0,0) -- (0,6.5) node[above] {Value (000 KSh)};
-                                    \foreach \x in {0,1,...,8}
-                                        \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
-                                    \foreach \y in {0,5,10,15,20,25}
-                                        \draw (2pt, \y/4) -- (-2pt, \y/4) node[left] {\y};
-                                    
-                                    \filldraw[blue] (1, 5) circle (2pt);
-                                    \filldraw[blue] (2, 4.5) circle (2pt);
-                                    \filldraw[blue] (3, 3.75) circle (2pt);
-                                    \filldraw[blue] (4, 3.25) circle (2pt);
-                                    \filldraw[blue] (5, 2.5) circle (2pt);
-                                    \filldraw[blue] (6, 2) circle (2pt);
-                                    
-                                    \draw[red, thick] (0, 5.75) -- (8, 0.75);
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={Age (years)},
+                                    ylabel={Value (000 KSh)},
+                                    xmin=0, xmax=8,
+                                    ymin=0, ymax=26,
+                                    xtick={0,1,2,3,4,5,6,7,8},
+                                    ytick={0,5,10,15,20,25},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (1,20) (2,18) (3,15) (4,13) (5,10) (6,8)};
+                                    \addplot[red, thick, domain=0:8, samples=2] {-2.5*x + 23};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -484,22 +485,23 @@
                             </p>
                             <image width="65%">
                                 <latex-image label="heart-rate-exercisising">
-                                    \begin{tikzpicture}[scale=0.7]
-                                        \draw[help lines, color=gray!30, step=1] (0,0) grid (10,10);
-                                        \draw[->] (0,0) -- (10.5,0) node[right] {Exercise (h)};
-                                        \draw[->] (0,0) -- (0,10.5) node[above] {Heart Rate (bpm)};
-                                        \foreach \x in {0,1,2,3,4,5,6,7,8,9,10}
-                                            \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
-                                        \foreach \y/\pos in {50/0,60/2,70/4,80/6,90/8,100/10}
-                                            \draw (2pt, \pos) -- (-2pt, \pos) node[left] {\y};
-                                        
-                                        \filldraw[blue] (1, 6) circle (2pt); % (1, 80)
-                                        \filldraw[blue] (3, 5) circle (2pt); % (3, 75)
-                                        \filldraw[blue] (5, 3.6) circle (2pt); % (5, 68)
-                                        \filldraw[blue] (7, 2.6) circle (2pt); % (7, 63)
-                                        \filldraw[blue] (9, 1.2) circle (2pt); % (9, 56)
-                                        
-                                        \draw[red, thick] (0, 6.6) -- (10, 0.6);
+                                    \begin{tikzpicture}
+                                    \begin{axis}[
+                                        axis x line=bottom, axis y line=left,
+                                        xlabel={Exercise (h)},
+                                        ylabel={Heart Rate (bpm)},
+                                        xmin=0, xmax=10,
+                                        ymin=50, ymax=90,
+                                        xtick={0,1,2,3,4,5,6,7,8,9,10},
+                                        ytick={50,60,70,80,90},
+                                        tick label style={font=\small},
+                                        grid=both,
+                                        grid style={line width=0.3pt, draw=gray!30},
+                                    ]
+                                        \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                            (1,80) (3,75) (5,68) (7,63) (9,56)};
+                                        \addplot[red, thick, domain=0:10, samples=2] {-3*x + 83};
+                                    \end{axis}
                                     \end{tikzpicture}
                                 </latex-image>
                             </image>
@@ -611,22 +613,23 @@
                         <li>
                             <image width="65%">
                                 <latex-image label="gaming-sleeping-hours">
-                                    \begin{tikzpicture}[scale=0.7]
-                                        \draw[help lines, color=gray!30, step=1] (0,0) grid (6,5);
-                                        \draw[->] (0,0) -- (6.5,0) node[right] {Gaming Hours};
-                                        \draw[->] (0,0) -- (0,5.5) node[above] {Sleeping Hours};
-                                        \foreach \x in {0,1,...,6}
-                                            \draw (\x, 2pt) -- (\x, -2pt) node[below] {\x};
-                                        \foreach \y in {0,2,...,10}
-                                            \draw (2pt, \y/2) -- (-2pt, \y/2) node[left] {\y};
-
-                                        \filldraw[blue] (1, 4) circle (2pt); % (1, 8)
-                                        \filldraw[blue] (2, 3.5) circle (2pt); % (2, 7)
-                                        \filldraw[blue] (3, 3.0) circle (2pt); % (3, 6)
-                                        \filldraw[blue] (4, 2.5) circle (2pt); % (4, 5)
-                                        \filldraw[blue] (5, 2.0) circle (2pt); % (5, 4)
-
-                                        \draw[red, thick] (0.5, 4.5) -- (5.5, 1.5); % y = -0.75x + 8.75 in local coords
+                                    \begin{tikzpicture}
+                                    \begin{axis}[
+                                        axis x line=bottom, axis y line=left,
+                                        xlabel={Gaming Hours},
+                                        ylabel={Sleeping Hours},
+                                        xmin=0, xmax=6,
+                                        ymin=0, ymax=10,
+                                        xtick={0,1,2,3,4,5,6},
+                                        ytick={0,2,4,6,8,10},
+                                        tick label style={font=\small},
+                                        grid=both,
+                                        grid style={line width=0.3pt, draw=gray!30},
+                                    ]
+                                        \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                            (1,8) (2,7) (3,6) (4,5) (5,4)};
+                                        \addplot[red, thick, domain=0:6, samples=2] {-x + 9};
+                                    \end{axis}
                                     \end{tikzpicture}
                                 </latex-image>
                             </image>

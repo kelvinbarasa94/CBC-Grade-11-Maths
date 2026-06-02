@@ -123,13 +123,27 @@
                         </p>
                         <image width="65%">
                             <latex-image label="Graphical representation of the telecom problem">
-                                \begin{tikzpicture}[scale=0.7]
-                                    \draw[help lines] (-6,-6) grid (6,6);
-                                    \draw[thick,->] (-6,0) -- (6,0) node[anchor=north west] {x (km)};
-                                    \draw[thick,->] (0,-6) -- (0,6) node[anchor=south east] {y (km)};
-                                    \filldraw[red] (3,4) circle (2pt) node[anchor=south west] {Zone A};
-                                    \filldraw[blue] (-4,-3) circle (2pt) node[anchor=north east] {Zone B};
-                                    \filldraw[green] (0,-5) circle (2pt) node[anchor=north] {Zone C};
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$ (km)},
+                                    ylabel={$y$ (km)},
+                                    xmin=-6, xmax=6,
+                                    ymin=-6, ymax=6,
+                                    xtick={-4,-2,2,4},
+                                    ytick={-4,-2,2,4},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(3,4)};
+                                    \node[above right, font=\small, red] at (axis cs:3,4) {Zone A};
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(-4,-3)};
+                                    \node[below left, font=\small, blue] at (axis cs:-4,-3) {Zone B};
+                                    \addplot[only marks, mark=*, mark size=2pt, green!60!black] coordinates {(0,-5)};
+                                    \node[below, font=\small, green!60!black] at (axis cs:0,-5) {Zone C};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                             
@@ -146,15 +160,31 @@
                         </p>
                         <image width="65%">
                             <latex-image label="Graphical representation of the telecom problem with coverage circles">
-                                \begin{tikzpicture}[scale=0.7]
-                                    \draw[help lines] (-6,-6) grid (6,6);
-                                    \draw[thick,->] (-6,0) -- (6,0) node[anchor=north west] {x (km)};
-                                    \draw[thick,->] (0,-6) -- (0,6) node[anchor=south east] {y (km)};
-                                    \filldraw[red] (3,4) circle (2pt) node[anchor=south west] {Zone A};
-                                    \filldraw[blue] (-4,-3) circle (2pt) node[anchor=north east] {Zone B};
-                                    \filldraw[green] (0,-5) circle (2pt) node[anchor=north] {Zone C};
-                                    \draw[thick, dashed] (1,1) circle (5);
-                                    \draw[thick, dashed] (-2,-2) circle (5);
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$ (km)},
+                                    ylabel={$y$ (km)},
+                                    xmin=-8, xmax=8,
+                                    ymin=-8, ymax=8,
+                                    xtick={-6,-4,-2,2,4,6},
+                                    ytick={-6,-4,-2,2,4,6},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[thick, dashed, domain=0:360, samples=100, smooth]
+                                        ({1 + 5*cos(\x)}, {1 + 5*sin(\x)});
+                                    \addplot[thick, dashed, domain=0:360, samples=100, smooth]
+                                        ({-2 + 5*cos(\x)}, {-2 + 5*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(3,4)};
+                                    \node[above right, font=\small, red] at (axis cs:3,4) {Zone A};
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(-4,-3)};
+                                    \node[below left, font=\small, blue] at (axis cs:-4,-3) {Zone B};
+                                    \addplot[only marks, mark=*, mark size=2pt, green!60!black] coordinates {(0,-5)};
+                                    \node[below, font=\small, green!60!black] at (axis cs:0,-5) {Zone C};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -266,97 +296,26 @@
           
             <image width="70%">                   
                 <latex-image label="Cost and Revenue Functions">
-                    \begin{tikzpicture}[scale=0.09]
-
-                        % Grid
-                        \draw[help lines, dashed, step=20] (0,0) grid (120,60);
-
-                    % Axes
-                    \draw[thick,->] (0,0) -- (125,0)
-                        node[anchor=north, xshift=-30pt, yshift=-18pt] {Number of bags $x$};
-
-                    \draw[thick,->] (0,0) -- (0,64);
-                    \node[rotate=90, anchor=south, xshift=32pt, yshift=-38pt] at (-20,32)
-                        {Cost / Revenue (KSh $\times 1000$)};
-
-                        % Title
-                        \node[font=\bfseries] at (60,68)
-                        {Graphical Representation of the Cost and Revenue Functions};
-
-                        % X-axis tick marks and labels
-                        \foreach \x/\xval in {20/20, 40/40, 60/60, 80/80, 100/100, 120/120} {
-                            \draw[thick] (\x, 1) -- (\x, -1);
-                            \node[anchor=north, yshift=-4pt, font=\small] at (\x, 0) {\xval};
-                        }
-                        \node[anchor=north, yshift=-4pt, font=\small] at (0, 0) {0};
-
-                        % Y-axis tick marks and labels (graph units 10–60 = KSh 10000–60000)
-                        \foreach \y/\yval in {10/10, 20/20, 30/30, 40/40, 50/50, 60/60} {
-                            \draw[thick] (1, \y) -- (-1, \y);
-                            \node[anchor=east, xshift=-4pt, font=\small] at (0, \y) {\yval};
-                        }
-
-                        % Cost function
-                        \draw[blue, thick, dashed]
-                            plot coordinates {
-                                (0,10)
-                                (20,14)
-                                (40,18)
-                                (60,22)
-                                (80,26)
-                                (100,30)
-                                (120,34)
-                            };
-
-                        % Revenue function
-                        \draw[red, thick]
-                            plot coordinates {
-                                (0,0)
-                                (20,9)
-                                (40,18)
-                                (60,27)
-                                (80,36)
-                                (100,45)
-                                (120,54)
-                            };
-
-                        % Labels boxes
-                        \node[draw=blue, rounded corners, text=blue]
-                            at (28,53)
-                            {$C = 200x + 10000$};
-
-                        \node[draw=red, rounded corners, text=red]
-                            at (24,47)
-                            {$R = 450x$};
-
-                        % Cost points
-                        \filldraw[blue] (20,14) circle (1.5pt);
-                        \filldraw[blue] (40,18) circle (1.5pt);
-                        \filldraw[blue] (60,22) circle (1.5pt);
-                        \filldraw[blue] (80,26) circle (1.5pt);
-                        \filldraw[blue] (100,30) circle (1.5pt);
-
-                        % Revenue points
-                        \filldraw[red] (20,9) circle (1.5pt);
-                        \filldraw[red] (40,18) circle (1.5pt);
-                        \filldraw[red] (60,27) circle (1.5pt);
-                        \filldraw[red] (80,36) circle (1.5pt);
-                        \filldraw[red] (100,45) circle (1.5pt);
-
-                        % Blue coordinate labels
-                        \node[blue] at (20,17) {$\left(20,14000\right)$};
-                        \node[blue] at (44,15) {$\left(40,18000\right)$};
-                        \node[blue] at (66,19) {$\left(60,22000\right)$};
-                        \node[blue] at (82,29) {$\left(80,26000\right)$};
-                        \node[blue] at (102,33) {$\left(100,30000\right)$};
-
-                        % Red coordinate labels
-                        \node[red] at (24,6) {$\left(20,9000\right)$};
-                        \node[red] at (40,21) {$\left(40,18000\right)$};
-                        \node[red] at (60,30) {$\left(60,27000\right)$};
-                        \node[red] at (82,39) {$\left(80,36000\right)$};
-                        \node[red] at (104,48) {$\left(100,45000\right)$};
-
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis x line=bottom, axis y line=left,
+                        xlabel={Number of bags $x$},
+                        ylabel={Cost / Revenue (KSh '000)},
+                        xmin=0, xmax=120,
+                        ymin=0, ymax=60,
+                        xtick={0,20,40,60,80,100,120},
+                        ytick={10,20,30,40,50,60},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                    ]
+                        \addplot[blue, thick, dashed, domain=0:120, samples=2] {0.2*x + 10};
+                        \node[blue, font=\small] at (axis cs:30,55) {$C = 200x + 10\,000$};
+                        \addplot[red, thick, domain=0:120, samples=2] {0.45*x};
+                        \node[red, right, font=\small] at (axis cs:90,42) {$R = 450x$};
+                        \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(40,18)};
+                        \node[right, font=\small] at (axis cs:40,18) {$(40,\ 18\,000)$};
+                    \end{axis}
                     \end{tikzpicture}
                  </latex-image>
             </image>
@@ -383,45 +342,25 @@
             
                 <image width="65%">
                     <latex-image label="Graphical representation of the drug concentration over time">
-                        \begin{tikzpicture}[scale=0.7]
-
-                            % Grid
-                            \draw[help lines, dashed] (0,0) grid (6,11);
-
-                            % Axes
-                            \draw[thick,->] (0,0) -- (6.8,0);
-                            \node[anchor=north] at (3.4,-0.6) {Time $t$ (hours)};
-
-                            \draw[thick,->] (0,0) -- (0,11.8);
-                            \node[rotate=90, anchor=south] at (-0.9,5.9) {Concentration $K$ (mg/L)};
-
-                            % X-axis ticks and labels
-                            \foreach \x in {1,2,3,4,5,6} {
-                                \draw[thick] (\x, 0.08) -- (\x, -0.08);
-                                \node[anchor=north, yshift=-2pt] at (\x, 0) {\x};
-                            }
-                            \node[anchor=north east, yshift=-2pt] at (0,0) {0};
-
-                            % Y-axis ticks and labels
-                            \foreach \y in {1,2,3,4,5,6,7,8,9,10,11} {
-                                \draw[thick] (0.08, \y) -- (-0.08, \y);
-                                \node[anchor=east, xshift=-2pt] at (0, \y) {\y};
-                            }
-
-                            % Drug concentration curve
-                            \draw[thick, blue]
-                                plot[smooth] coordinates {(0,2) (1,7) (2,10) (3,11) (4,10) (5,7) (6,2)};
-
-                            % Tangent line at (2,10): y = 2x + 6, from x=0 to x=2.5
-                            \draw[red, thick] (0, 6) -- (2.5, 11);
-
-                            % Point of tangency
-                            \filldraw[blue] (2,10) circle (2pt);
-                            \node[anchor=south west] at (2,10) {$(2,10)$};
-
-                            % Tangent label
-                            \node[red, anchor=west] at (0.1, 6.8) {\small tangent at $(2,10)$};
-
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis x line=bottom, axis y line=left,
+                            xlabel={Time $t$ (hours)},
+                            ylabel={Concentration $K$ (mg/L)},
+                            xmin=0, xmax=7,
+                            ymin=0, ymax=12,
+                            xtick={0,1,2,3,4,5,6},
+                            ytick={0,2,4,6,8,10,12},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=0:6, samples=80, smooth] {-x^2 + 6*x + 2};
+                            \addplot[red, thick, domain=0:2.5, samples=2] {2*x + 6};
+                            \node[red, right, font=\small] at (axis cs:0.2,7) {tangent at $(2,10)$};
+                            \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(2,10)};
+                            \node[above right, font=\small] at (axis cs:2,10) {$(2,10)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -465,12 +404,25 @@
             
             <image width="65%">
                 <latex-image label="Graphical representation of the pillar and brace">
-                    \begin{tikzpicture}[scale=0.7]
-                        \draw[help lines] (-4,-1) grid (4,4);
-                        \draw[thick,->] (-4,0) -- (4,0) node[anchor=north west] {x (cm)};
-                        \draw[thick,->] (0,-1) -- (0,4) node[anchor=south east] {y (cm)};
-                        \draw[thick, dashed] (0,0) circle (3);
-                        \draw[thick, dashed] plot[smooth] coordinates {(-3,0) (0,3)};
+                    \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines=center,
+                        xlabel={$x$ (cm)},
+                        ylabel={$y$ (cm)},
+                        xmin=-4, xmax=4,
+                        ymin=-1, ymax=4,
+                        xtick={-3,-2,-1,1,2,3},
+                        ytick={-1,1,2,3,4},
+                        tick label style={font=\small},
+                        grid=both,
+                        grid style={line width=0.3pt, draw=gray!30},
+                        axis equal image,
+                    ]
+                        \addplot[thick, dashed, domain=0:360, samples=100, smooth]
+                            ({3*cos(\x)}, {3*sin(\x)});
+                        \addplot[thick, dashed, domain=-4:1, samples=2] {x + 3};
+                        \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,3) (-3,0)};
+                    \end{axis}
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -523,41 +475,23 @@
                 </p>
                 <image width="65%">
                     <latex-image label="Graphical representation of the fertilizer and yield data">
-                        \begin{tikzpicture}[x=0.12cm, y=0.8cm]
-
-                            % Grid
-                            \draw[help lines, dashed] (0,0) grid[xstep=10, ystep=1] (60,10);
-
-                            % Axes
-                            \draw[thick,->] (0,0) -- (65,0);
-                            \node[anchor=north] at (32,-0.9) {Fertilizer $F$ (kg)};
-
-                            \draw[thick,->] (0,0) -- (0,11);
-                            \node[rotate=90, anchor=south] at (-7,5) {Yield $Y$ (tons)};
-
-                            % X-axis ticks and labels
-                            \foreach \x in {10,20,30,40,50,60} {
-                                \draw[thick] (\x, 0.06) -- (\x, -0.06);
-                                \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
-                            }
-                            \node[anchor=north east, yshift=-3pt] at (0,0) {0};
-
-                            % Y-axis ticks and labels
-                            \foreach \y in {1,2,3,4,5,6,7,8,9,10} {
-                                \draw[thick] (0.6, \y) -- (-0.6, \y);
-                                \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
-                            }
-
-                            % Data points
-                            \filldraw[red] (10,2.1) circle (2pt);
-                            \filldraw[red] (20,3.9) circle (2pt);
-                            \filldraw[red] (30,6.2) circle (2pt);
-                            \filldraw[red] (40,8.1) circle (2pt);
-                            \filldraw[red] (50,9.8) circle (2pt);
-
-                            % Line of best fit
-                            \draw[blue, thick, dashed] (0,0.2) -- (50,10);
-
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis x line=bottom, axis y line=left,
+                            xlabel={Fertilizer $F$ (kg)},
+                            ylabel={Yield $Y$ (tons)},
+                            xmin=0, xmax=60,
+                            ymin=0, ymax=11,
+                            xtick={0,10,20,30,40,50,60},
+                            ytick={0,2,4,6,8,10},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
+                                (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
+                            \addplot[blue, thick, dashed, domain=0:50, samples=2] {0.196*x + 0.2};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -566,51 +500,27 @@
                 </p>
                     <image width="65%">
                         <latex-image label="Extended graphical representation of the fertilizer and yield data">
-                            \begin{tikzpicture}[x=0.12cm, y=0.8cm]
-
-                                % Grid
-                                \draw[help lines, dashed] (0,0) grid[xstep=10, ystep=1] (60,12);
-
-                                % Axes
-                                \draw[thick,->] (0,0) -- (65,0);
-                                \node[anchor=north] at (32,-0.9) {Fertilizer $F$ (kg)};
-
-                                \draw[thick,->] (0,0) -- (0,13);
-                                \node[rotate=90, anchor=south] at (-7,6) {Yield $Y$ (tons)};
-
-                                % X-axis ticks and labels
-                                \foreach \x in {10,20,30,40,50,60} {
-                                    \draw[thick] (\x, 0.06) -- (\x, -0.06);
-                                    \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
-                                }
-                                \node[anchor=mid east, yshift=0pt] at (0,0) {0};
-
-                                % Y-axis ticks and labels
-                                \foreach \y in {1,2,3,4,5,6,7,8,9,10,11,12} {
-                                    \draw[thick] (0.6, \y) -- (-0.6, \y);
-                                    \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
-                                }
-
-                                % Data points
-                                \filldraw[red] (10,2.1) circle (2pt);
-                                \filldraw[red] (20,3.9) circle (2pt);
-                                \filldraw[red] (30,6.2) circle (2pt);
-                                \filldraw[red] (40,8.1) circle (2pt);
-                                \filldraw[red] (50,9.8) circle (2pt);
-
-                                % Line of best fit extended to x=60
-                                % Original line: y = 0.196x + 0.2, extended to (60, 11.96)
-                                \draw[blue, thick, dashed] (0,0.2) -- (60,12);
-
-                                % Predicted point at x=60
-                                \filldraw[green!60!black] (60,12) circle (2.5pt);
-                                \node[anchor=west, xshift=3pt, text=green!60!black] at (60,12)
-                                    {$(60,\ 12)$ tons};
-
-                                % Dotted reading lines for the prediction
-                                \draw[gray, dotted, thick] (60,0) -- (60,12);
-                                \draw[gray, dotted, thick] (0,12) -- (60,12);
-
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis x line=bottom, axis y line=left,
+                                xlabel={Fertilizer $F$ (kg)},
+                                ylabel={Yield $Y$ (tons)},
+                                xmin=0, xmax=65,
+                                ymin=0, ymax=13,
+                                xtick={0,10,20,30,40,50,60},
+                                ytick={0,2,4,6,8,10,12},
+                                tick label style={font=\small},
+                                grid=both,
+                                grid style={line width=0.3pt, draw=gray!30},
+                            ]
+                                \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
+                                    (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
+                                \addplot[blue, thick, dashed, domain=0:60, samples=2] {0.196*x + 0.2};
+                                \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(60,12)};
+                                \node[right, font=\small, green!60!black] at (axis cs:60,12) {$(60,\ 12)$ tons};
+                                \draw[gray, dotted, thick] (axis cs:60,0) -- (axis cs:60,12);
+                                \draw[gray, dotted, thick] (axis cs:0,12) -- (axis cs:60,12);
+                            \end{axis}
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -634,40 +544,23 @@
                 </p>
                 <image width="65%">
                     <latex-image label="Graphical representation of the rocket's flight">
-                        \begin{tikzpicture}[x=1.2cm, y=0.35cm]
-
-                            % Grid
-                            \draw[help lines, dashed] (0,0) grid[xstep=1, ystep=2] (4,20);
-
-                            % Axes
-                            \draw[thick,->] (0,0) -- (4.8,0);
-                            \node[anchor=north] at (2.4,-1.2) {Time $t$ (seconds)};
-
-                            \draw[thick,->] (0,0) -- (0,22);
-                            \node[rotate=90, anchor=south] at (-0.9,11) {Height $h$ (metres)};
-
-                            % X-axis ticks and labels
-                            \foreach \x in {1,2,3,4} {
-                                \draw[thick] (\x, 0.3) -- (\x, -0.3);
-                                \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
-                            }
-                            \node[anchor=mid east, yshift=0pt] at (0,0) {0};
-
-                            % Y-axis ticks and labels
-                            \foreach \y in {2,4,6,8,10,12,14,16,18,20} {
-                                \draw[thick] (0.07, \y) -- (-0.07, \y);
-                                \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
-                            }
-
-                            % Parabola: h = -5t^2 + 20t
-                            \draw[blue, thick]
-                                plot[smooth, samples=100, domain=0:4]
-                                (\x, {-5*\x*\x + 20*\x});
-
-                            % Vertex point
-                            \filldraw[red] (2,20) circle (2.5pt);
-                            \node[anchor=south west, text=red] at (2,20) {$(2,\ 20)$};
-
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis x line=bottom, axis y line=left,
+                            xlabel={Time $t$ (seconds)},
+                            ylabel={Height $h$ (metres)},
+                            xmin=0, xmax=4.5,
+                            ymin=0, ymax=22,
+                            xtick={0,1,2,3,4},
+                            ytick={0,2,4,6,8,10,12,14,16,18,20},
+                            tick label style={font=\small},
+                            grid=both,
+                            grid style={line width=0.3pt, draw=gray!30},
+                        ]
+                            \addplot[blue, thick, domain=0:4, samples=60, smooth] {-5*x^2 + 20*x};
+                            \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(2,20)};
+                            \node[below right, font=\small, red] at (axis cs:2,20) {$(2,\ 20)$};
+                        \end{axis}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -728,46 +621,28 @@
                 </p>
                     <image width="65%">
                         <latex-image label="Graphical representation of the car's speed">
-                            \begin{tikzpicture}[x=1.2cm, y=0.45cm]
-
-                                % Grid
-                                \draw[help lines, dashed] (0,-5) grid[xstep=1, ystep=1] (4,10);
-
-                                % Axes
-                                \draw[thick,->] (0,0) -- (4.8,0);
-                                \node[anchor=north] at (2.4,-0.8) {Time $t$ (seconds)};
-
-                                \draw[thick,->] (0,-5) -- (0,11.5);
-                                \node[rotate=90, anchor=south] at (-0.9,3) {Speed $v$ (km/h)};
-
-                                % X-axis ticks and labels
-                                \foreach \x in {1,2,3,4} {
-                                    \draw[thick] (\x, 0.2) -- (\x, -0.2);
-                                    \node[anchor=north, yshift=-3pt] at (\x, 0) {\x};
-                                }
-                                \node[anchor=mid east, yshift=0pt] at (0,0) {0};
-
-                                % Y-axis ticks and labels (negative and positive)
-                                \foreach \y in {-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10} {
-                                    \draw[thick] (0.07, \y) -- (-0.07, \y);
-                                    \node[anchor=east, xshift=-3pt] at (0, \y) {\y};
-                                }
-
-                                % Parabola: v = 3t^2 - 12t + 9
-                                \draw[blue, thick]
-                                    plot[smooth, samples=100, domain=0:4]
-                                    (\x, {3*\x*\x - 12*\x + 9});
-
-                                % Vertex point at (2, -3)
-                                \filldraw[red] (2,-3) circle (2.5pt);
-                                \node[anchor=north west, text=red] at (2,-3) {$(2,\ -3)$};
-
-                                % x-intercepts at t=1 and t=3
-                                \filldraw[green!60!black] (1,0) circle (2.5pt);
-                                \node[anchor=south west, text=green!60!black] at (1,0) {$(1,\ 0)$};
-                                \filldraw[green!60!black] (3,0) circle (2.5pt);
-                                \node[anchor=south east, text=green!60!black] at (3,0) {$(3,\ 0)$};
-
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=center,
+                                xlabel={Time $t$ (seconds)},
+                                ylabel={Speed $v$ (km/h)},
+                                xlabel style={at={(axis description cs:1,0)}, anchor=north},
+                                ylabel style={at={(axis description cs:0,1)}, anchor=east},
+                                xmin=0, xmax=4.5,
+                                ymin=-4, ymax=10,
+                                xtick={1,2,3,4},
+                                ytick={-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10},
+                                tick label style={font=\small},
+                                grid=both,
+                                grid style={line width=0.3pt, draw=gray!30},
+                            ]
+                                \addplot[blue, thick, domain=0:4, samples=60, smooth] {3*x^2 - 12*x + 9};
+                                \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(2,-3)};
+                                \node[right, font=\small, red] at (axis cs:2,-3) {$(2,\ -3)$};
+                                \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(1,0) (3,0)};
+                                \node[above right, font=\small, green!60!black] at (axis cs:1,0) {$(1,\ 0)$};
+                                \node[above left, font=\small, green!60!black] at (axis cs:3,0) {$(3,\ 0)$};
+                            \end{axis}
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -810,23 +685,26 @@
                         </tabular>
                         <image width="70%">
                             <latex-image>
-                                \begin{tikzpicture}[x=0.1cm, y=0.006cm]
-                                    \draw[help lines, dashed, xstep=20, ystep=200] (0,0) grid (80,1600);
-                                    \draw[thick,->] (0,-50) -- (0,1680) node[above] {KSh};
-                                    \draw[thick,->] (-3,0) -- (85,0) node[right] {Chapatis $x$};
-                                    \foreach \x in {20,40,60,80} {
-                                        \draw[thick] (\x,33) -- (\x,-33) node[below] {\small\x};
-                                    }
-                                    \foreach \y in {400,800,1200,1600} {
-                                        \draw[thick] (2,\y) -- (-2,\y) node[left] {\small\y};
-                                    }
-                                    \node[anchor=north east] at (0,0) {\small 0};
-                                    \draw[blue, thick, dashed] (0,480) -- (80,1120);
-                                    \node[blue, above] at (16,680) {\small $C = 8x+480$};
-                                    \draw[red, thick] (0,0) -- (80,1600);
-                                    \node[red, right] at (48,1150) {\small $R = 20x$};
-                                    \filldraw[black] (40,800) circle (3pt);
-                                    \node[right] at (40,800) {\small $(40,\ 800)$};
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={Chapatis $x$},
+                                    ylabel={KSh},
+                                    xmin=0, xmax=85,
+                                    ymin=0, ymax=1700,
+                                    xtick={0,20,40,60,80},
+                                    ytick={0,400,800,1200,1600},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[blue, thick, dashed, domain=0:80, samples=2] {8*x + 480};
+                                    \node[blue, above, font=\small] at (axis cs:20,680) {$C = 8x+480$};
+                                    \addplot[red, thick, domain=0:80, samples=2] {20*x};
+                                    \node[red, right, font=\small] at (axis cs:50,1100) {$R = 20x$};
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(40,800)};
+                                    \node[right, font=\small] at (axis cs:40,800) {$(40,\ 800)$};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -878,23 +756,26 @@
                         </tabular>
                         <image width="65%">
                             <latex-image>
-                                \begin{tikzpicture}[x=0.28cm, y=0.08cm]
-                                    \draw[help lines, dashed, xstep=5, ystep=10] (0,0) grid (30,100);
-                                    \draw[thick,->] (-1,0) -- (33,0) node[right] {$Q$ (hundreds of kg)};
-                                    \draw[thick,->] (0,-1) -- (0,108) node[above] {Price $P$ (KSh/kg)};
-                                    \foreach \x in {5,10,15,20,25,30} {
-                                        \draw[thick] (\x,2.5) -- (\x,-2.5) node[below] {\small\x};
-                                    }
-                                    \foreach \y in {20,40,60,80,100} {
-                                        \draw[thick] (0.7,\y) -- (-0.7,\y) node[left] {\small\y};
-                                    }
-                                    \node[anchor=north east] at (0,0) {\small 0};
-                                    \draw[blue, thick] (0,10) -- (30,100);
-                                    \node[blue, above left] at (22,90) {\small Supply};
-                                    \draw[red, thick] (0,90) -- (30,60);
-                                    \node[red, below right] at (18,73) {\small Demand};
-                                    \filldraw[black] (20,70) circle (3pt);
-                                    \node[above right] at (20,70) {\small $(20,\ 70)$};
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$Q$ (hundreds of kg)},
+                                    ylabel={Price $P$ (KSh/kg)},
+                                    xmin=0, xmax=32,
+                                    ymin=0, ymax=105,
+                                    xtick={0,5,10,15,20,25,30},
+                                    ytick={0,20,40,60,80,100},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[blue, thick, domain=0:30, samples=2] {3*x + 10};
+                                    \node[blue, above left, font=\small] at (axis cs:25,90) {Supply};
+                                    \addplot[red, thick, domain=0:30, samples=2] {-x + 90};
+                                    \node[red, below right, font=\small] at (axis cs:18,73) {Demand};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(20,70)};
+                                    \node[above right, font=\small] at (axis cs:20,70) {$(20,\ 70)$};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -946,23 +827,27 @@
                         </tabular>
                         <image width="60%">
                             <latex-image>
-                                \begin{tikzpicture}[x=1.4cm, y=0.15cm]
-                                    \draw[help lines, dashed] (0,0) grid[xstep=1, ystep=5] (4,50);
-                                    \draw[thick,->] (0,0) -- (4.6,0) node[right] {Time $t$ (s)};
-                                    \draw[thick,->] (0,-1) -- (0,53) node[above] {Height $h$ (m)};
-                                    \foreach \x in {1,2,3,4} {
-                                        \draw[thick] (\x,7) -- (\x,-7) node[below] {\small\x};
-                                    }
-                                    \foreach \y in {10,20,30,40,50} {
-                                        \draw[thick] (0.07,\y) -- (-0.07,\y) node[left] {\small\y};
-                                    }
-                                    \node[anchor=north east] at (0,0) {\small 0};
-                                    \draw[blue, thick, domain=0:4, smooth, samples=60]
-                                        plot (\x, {-5*\x*\x + 10*\x + 40});
-                                    \filldraw[red] (1,45) circle (3pt) node[right, red] {\small $(1,\ 45)$};
-                                    \filldraw[green!60!black] (4,0) circle (3pt)
-                                        node[above right, green!60!black] {\small $(4,\ 0)$};
-                                    \filldraw[blue] (0,40) circle (2pt) node[left, blue] {\small $40$};
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={Time $t$ (s)},
+                                    ylabel={Height $h$ (m)},
+                                    xmin=0, xmax=4.5,
+                                    ymin=0, ymax=52,
+                                    xtick={0,1,2,3,4},
+                                    ytick={0,10,20,30,40,50},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[blue, thick, domain=0:4, samples=60, smooth] {-5*x^2 + 10*x + 40};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(1,45)};
+                                    \node[right, font=\small, red] at (axis cs:1,45) {$(1,\ 45)$};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(4,0)};
+                                    \node[above right, font=\small, green!60!black] at (axis cs:4,0) {$(4,\ 0)$};
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(0,40)};
+                                    \node[right, font=\small, blue] at (axis cs:0,40) {$40$};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -1156,25 +1041,28 @@
                         </tabular>
                         <image width="65%">
                             <latex-image>
-                                \begin{tikzpicture}[x=0.18cm, y=0.01cm]
-                                    \draw[help lines, dashed, xstep=10, ystep=100] (0,-600) grid (50,250);
-                                    \draw[thick,->] (0,-640) -- (0,270) node[above] {$P$ (KSh '000)};
-                                    \draw[thick,->] (-2,0) -- (54,0) node[right] {Pumps $x$};
-                                    \foreach \x in {10,20,30,40,50} {
-                                        \draw[thick] (\x,20) -- (\x,-20) node[below] {\small\x};
-                                    }
-                                    \foreach \y in {-600,-400,-200,100,200} {
-                                        \draw[thick] (1.5,\y) -- (-1.5,\y) node[left] {\small\y};
-                                    }
-                                    \node[anchor=north east] at (0,0) {\small 0};
-                                    \draw[blue, thick, domain=0:48, smooth, samples=60]
-                                        plot (\x, {-2*\x*\x + 80*\x - 600});
-                                    \filldraw[green!60!black] (10,0) circle (3pt)
-                                        node[above, green!60!black] {\small $10$};
-                                    \filldraw[green!60!black] (30,0) circle (3pt)
-                                        node[above, green!60!black] {\small $30$};
-                                    \filldraw[red] (20,200) circle (3pt)
-                                        node[above right, red] {\small $(20,\ 200)$};
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={Pumps $x$},
+                                    ylabel={$P$ (KSh '000)},
+                                    xlabel style={at={(axis description cs:1,0)}, anchor=north},
+                                    ylabel style={at={(axis description cs:0,1)}, anchor=east},
+                                    xmin=0, xmax=52,
+                                    ymin=-650, ymax=260,
+                                    xtick={10,20,30,40,50},
+                                    ytick={-600,-400,-200,100,200},
+                                    tick label style={font=\small},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[blue, thick, domain=0:50, samples=60, smooth] {-2*x^2 + 80*x - 600};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(10,0) (30,0)};
+                                    \node[above, font=\small, green!60!black] at (axis cs:10,0) {$10$};
+                                    \node[above, font=\small, green!60!black] at (axis cs:30,0) {$30$};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(20,200)};
+                                    \node[above right, font=\small, red] at (axis cs:20,200) {$(20,\ 200)$};
+                                \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
