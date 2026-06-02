@@ -141,14 +141,14 @@
             <ul>
                 <li>
                     <p>
-                        For <m>y = ax^n \implies \lg y = n\lg x + \lg a</m>:
+                        For <m>y = ax^n \implies \log_{10} y = n\log_{10} x + \log_{10} a</m>:
                         <me>n = \text{gradient}</me>
                         <me>a = 10^{\text{intercept}}</me>
                     </p>
                 </li>
                 <li>
                     <p>
-                        For <m>y = ab^x \implies \lg y = (\lg b)x + \lg a</m>:
+                        For <m>y = ab^x \implies \log_{10} y = (\log_{10} b)x + \log_{10} a</m>:
                         <me>b = 10^{\text{gradient}}</me>
                         <me>a = 10^{\text{intercept}}</me>
                     </p>

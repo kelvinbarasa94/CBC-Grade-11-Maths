@@ -491,8 +491,10 @@
         <exercise>
             <statement>
                 <p>
-                    The table below shows the long-term average monthly rainfall (in mm) for Nairobi, Kenya. (Source: <url href="https://www.meteo.go.ke/">Kenya Meteorological Department</url> long-term normals.)
+                    <xref ref="nairobi-rain"/> shows the long-term average monthly rainfall (in mm) for Nairobi, Kenya.
                 </p>
+                <table xml:id="nairobi-rain">
+                    <title>Nairobi Average Monthly Rainfall</title>
                 <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
                     <row>
                         <cell>Month</cell>
@@ -515,6 +517,8 @@
                         <cell>61</cell><cell>150</cell><cell>86</cell>
                     </row>
                 </tabular>
+                </table>
+                <p> Source: <url href="https://www.meteo.go.ke/">Kenya Meteorological Department</url></p>
                 <ol marker="(a)">
                     <li><p>Plot the monthly rainfall data on a graph, with months on the horizontal axis and rainfall (mm) on the vertical axis.</p></li>
                     <li><p>Identify the two months with the highest rainfall.</p></li>
@@ -552,7 +556,7 @@
         <exercise>
             <statement>
                 <p>
-                    The table below shows Kenya's estimated population at five-year intervals. (Source: <url href="https://data.worldbank.org/indicator/SP.POP.TOTL?locations=KE">World Bank, Kenya population data</url>.)
+                    The table below shows Kenya's estimated population at five-year intervals.
                 </p>
                 <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
                     <row>
@@ -564,6 +568,9 @@
                         <cell>31</cell><cell>36</cell><cell>41</cell><cell>49</cell><cell>54</cell>
                     </row>
                 </tabular>
+                <p>
+                    Source: <url href="https://data.worldbank.org/indicator/SP.POP.TOTL?locations=KE">World Bank, Kenya population data</url>.
+                </p>
                 <ol marker="(a)">
                     <li><p>Plot the data as a scatter graph with year on the horizontal axis and population on the vertical axis.</p></li>
                     <li><p>Describe the overall trend.</p></li>
@@ -662,7 +669,7 @@
         <exercise>
             <statement>
                 <p>
-                    The table shows the estimated number of mobile phone subscribers in Kenya at two-year intervals. (Source: <url href="https://www.ca.go.ke/">Communications Authority of Kenya</url> annual reports.)
+                    The table shows the estimated number of mobile phone subscribers in Kenya at two-year intervals.
                 </p>
                 <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
                     <row>
@@ -674,6 +681,9 @@
                         <cell>3.4</cell><cell>7.3</cell><cell>16.3</cell><cell>24.4</cell><cell>29.2</cell>
                     </row>
                 </tabular>
+                <p>
+                    Source: <url href="https://www.ca.go.ke/">Communications Authority of Kenya</url> annual reports.
+                </p>
                 <ol marker="(a)">
                     <li><p>Plot the data with year on the horizontal axis and number of subscribers on the vertical axis.</p></li>
                     <li><p>Calculate the increase in subscribers in each 2-year period. Is the growth linear?</p></li>
