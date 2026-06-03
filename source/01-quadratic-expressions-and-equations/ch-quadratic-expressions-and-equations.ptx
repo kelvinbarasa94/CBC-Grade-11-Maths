@@ -23,7 +23,7 @@
         <m>x</m>: This is the variable.
     </p>
     <p>
-       <m>a</m> cannot be zero, if it were, the <m>x^2</m> term would disappear, and the expression would just be a linear expression.
+       <m>a</m> cannot be zero. If it were, the <m>x^2</m> term would disappear, and the expression would just be a linear expression.
     </p>
       </statement>
     </definition>
