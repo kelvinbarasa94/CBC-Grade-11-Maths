@@ -245,7 +245,9 @@
                 Solve the following inequality:
             </p>
             <p>
-                <me>3x - 9 \lt 6 + x</me>
+                <md>
+                    <mrow>3x - 9 \amp \lt 6 + x</mrow>
+                </md>
             </p>
         </statement>
         <solution>
@@ -273,7 +275,7 @@
     <example>
         <statement>
             <p>
-                <em>Shireri</em> primary school has a handwashing water tank that currently holds <m>80</m> litres of water. The tap has a slight leak and loses water at a rate of <m>4</m> litres every hour. The school security guard wants to ensure there are always strictly more than <m>20</m> litres left in the tank for the afternoon classes.
+                <em>Shireri</em> Primary School has a handwashing water tank that currently holds <m>80</m> litres of water. The tap has a slight leak and loses water at a rate of <m>4</m> litres every hour. The school security guard wants to ensure there are always strictly more than <m>20</m> litres left in the tank for the afternoon classes.
             </p>
             <p>
                 If <m>h</m> represents the number of hours the tank has been leaking, write an inequality for this situation and solve for <m>h</m> to find out how many hours the water will remain above the <m>20</m>-litre mark.

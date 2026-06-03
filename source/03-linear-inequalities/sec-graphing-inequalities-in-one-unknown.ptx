@@ -67,13 +67,6 @@
             </dl>
         </axiom> -->
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
     <!-- [LP] Add guidance on structured lesson plan-->
 
     <!-- <axiom component="lesson-plan">
@@ -111,32 +104,208 @@
     <!-- <insight>
     </insight> -->
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <!-- [LP] Add guidance on activity -->
+
+    <activity>
+        <statement>
+            <p>
+                <term>Work in groups:</term> Form groups of <m>3</m> or <m>4</m> learners
+            </p>
+            <p>
+                <term>Materials needed:</term>
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            A <m>15</m> or <m>30</m> cm ruler
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A small stone or a piece of paper rolled into a tight ball
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A small, hollow object (like a key ring or a circular slice cut from a plastic pen cap)
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <term>Instructions:</term>
+            </p>
+            <p>
+                In your groups:
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Place your ruler flat on the desk. This will be your number line.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Place the small stone/rolled paper ball at the point representing <m>0</m> on your ruler (the number line).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Place the hollow object at the point representing <m>3</m> on your ruler (the number line).
+                        </p>
+                    </li>
+                     <li>
+                        <p>
+                            Move the stone/rolled paper ball to represent all the numbers that satisfy the inequality <m>x \gt 3</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Move the stone/rolled paper ball to represent all the numbers that satisfy the inequality <m>x \le -2</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Move the stone/rolled paper ball to represent all the numbers that satisfy the inequality <m>2x + 3 \lt 7</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Discuss how you represented the solution to each inequality on your number line.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Share your representations and descriptions with the class.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <hint>
+            <p>
+                For <m>x \gt 3</m>, place the hollow object at <m>3</m> and move the stone/rolled paper ball to the right of it to represent all numbers greater than <m>3</m>.
+            </p>
+            <p>
+                For <m>x \le -2</m>, place the hollow object at <m>-2</m> and move the stone/rolled paper ball to the left of it to represent all numbers less than or equal to <m>-2</m>.
+            </p>
+            <p>
+                For <m>2x + 3 \lt 7</m>, first solve the inequality to find that <m>x \lt 2</m>. Then place the hollow object at <m>2</m> and move the stone/rolled paper ball to the left of it to represent all numbers less than <m>2</m>.
+            </p>
+        </hint>
+    </activity>
+
+    <insight>
+        <p>
+            Graphing an inequality in one unknown means representing every number that satisfies the inequality on a number line.
+        </p>
+        <p>
+            A strict inequality, such as <m>x \gt 3</m>, uses an open circle at <m>3</m> and shades(bolds) the number line to the right. An inclusive inequality, such as <m>x \le -2</m>, uses a closed circle at <m>-2</m> and shades to the left.
+        </p>
+        <p>
+            To graph an inequality like <m>2x + 3 \lt 7</m>, first solve the inequality to find the boundary point (in this case, <m>x \lt 2</m>), then graph it using the appropriate circle and shading.
+        </p>
+        <p>
+            Graphing inequalities helps us visualize the set of solutions and understand the relationships between different inequalities.
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Graph <m>x \gt 6</m> on a number line.
+            </p>
         </statement>
         <solution>
+            <p>
+                <image xml:id="img-inequality-x-greater-6" width="70%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % 1. Draw the main number line axis with arrows on both ends
+                            \draw[&lt;-&gt;, thick] (2,0) -- (10,0);
+                            % 2. Draw the tick marks and the numbers below them
+                            \foreach \x in {3, 4, 5, 6, 7, 8, 9} {
+                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                            }
+
+                            % 3. Draw the thick line for the inequality pointing to the right
+                            \draw[->, ultra thick] (6.1,0) -- (9.5,0);
+
+                            % 4. Draw the OPEN circle at x = 6
+                            \filldraw[fill=white, draw=black, thick] (6,0) circle (3pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Graph <m>x \le -3</m> on a number line.
+            </p>
         </statement>
         <solution>
+            <p>
+                <image xml:id="img-inequality-x-less-equal-negative-3" width="70%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % 1. Draw the main number line axis with arrows on both ends
+                            \draw[&lt;-&gt;, thick] (-10,0) -- (2,0);
+                            % 2. Draw the tick marks and the numbers below them
+                            \foreach \x in {-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1} {
+                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                            }
+
+                            % 3. Draw the thick line for the inequality pointing to the left
+                            \draw[->, ultra thick] (-9.5,0) -- (-3.1,0);
+
+                            % 4. Draw the CLOSED circle at x = -3
+                            \filldraw[fill=black, draw=black, thick] (-3,0) circle (3pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Solve the following inequality and represent the solution on a graph:
+            </p>
+            <p>
+                <md>
+                    <mrow>2x + 3 \amp \lt 7</mrow>
+                </md>
+                
+            </p>
         </statement>
         <solution>
+            <p>
+                We start by solving the inequality:
+            </p>
+            <p>
+                <md>
+                    <mrow>2x + 3 \amp \lt 7</mrow>
+                    <mrow>2x \amp \lt 4</mrow>
+                    <mrow>x \amp \lt 2</mrow>
+                </md>
+            </p>
+            <p>
+                <image xml:id="img-inequality-2x-plus-3-less-7" width="70%">
+                    <latex-image>
+                        
+                    </latex-image>
+                </image>
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -144,20 +313,44 @@
 
     <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
 
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
+            <statement>
+                <p>
+                    Graph the inequality <m>x \ge 1</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
