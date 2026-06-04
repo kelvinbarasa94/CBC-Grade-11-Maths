@@ -252,24 +252,7 @@
         </statement>
         <solution>
             <p>
-                <image xml:id="img-inequality-x-less-equal-negative-3" width="70%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % 1. Draw the main number line axis with arrows on both ends
-                            \draw[&lt;-&gt;, thick] (-10,0) -- (2,0);
-                            % 2. Draw the tick marks and the numbers below them
-                            \foreach \x in {-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1} {
-                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
-                            }
-
-                            % 3. Draw the thick line for the inequality pointing to the left
-                            \draw[->, ultra thick] (-9.5,0) -- (-3.1,0);
-
-                            % 4. Draw the CLOSED circle at x = -3
-                            \filldraw[fill=black, draw=black, thick] (-3,0) circle (3pt);
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
+                
             </p>
         </solution>
     </example>
@@ -298,11 +281,7 @@
                 </md>
             </p>
             <p>
-                <image xml:id="img-inequality-2x-plus-3-less-7" width="70%">
-                    <latex-image>
-                        
-                    </latex-image>
-                </image>
+                
             </p>
         </solution>
     </example>
