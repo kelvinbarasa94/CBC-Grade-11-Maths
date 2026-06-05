@@ -282,20 +282,16 @@
             <p>
                 A small business produces eco-friendly bags. The total monthly cost <m>C</m> (in KSh) is given by <m>C = 200x + 10000</m>, where <m>x</m> is the number of bags produced. The revenue <m>R</m> from selling the bags is <m>R = 450x</m>.
             </p>
-            <p>
-                a) Plot both graphs on the same axes for <m>0 \le x \le 100</m>.
-            </p>
-            <p>
-                b) Use the graph to find the "Break-Even Point" (where <m>R = C</m>).
-            </p>
+            <ol marker="(a)">
+                <li><p>Plot both graphs on the same axes for <m>0 \le x \le 100</m>.</p></li>
+                <li><p>Use the graph to find the "Break-Even Point" (where <m>R = C</m>).</p></li>
+            </ol>
         </statement>
         <solution>
-            <p>
-                (a)
-            </p>
-          
-            <image width="70%">                   
-                <latex-image label="Cost and Revenue Functions">
+            <ol marker="(a)">
+                <li>
+                    <image width="70%">
+                        <latex-image label="Cost and Revenue Functions">
                     \begin{tikzpicture}
                     \begin{axis}[
                         axis x line=bottom, axis y line=left,
@@ -317,15 +313,18 @@
                         \node[right, font=\footnotesize] at (axis cs:40,18) {$(40,\ 18\,000)$};
                     \end{axis}
                     \end{tikzpicture}
-                 </latex-image>
-            </image>
-   
-            <p>
-                (b). The intersection point is where <m>450x = 200x + 10000 \implies 250x = 10000 \implies x = 40</m>.
-            </p>
-            <p>
-                The break-even point is <m>40</m> bags. Selling more than <m>40</m> bags results in profit.
-            </p>
+                        </latex-image>
+                    </image>
+                </li>
+                <li>
+                    <p>
+                        The intersection point is where <m>450x = 200x + 10000 \implies 250x = 10000 \implies x = 40</m>.
+                    </p>
+                    <p>
+                        The break-even point is <m>40</m> bags. Selling more than <m>40</m> bags results in profit.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
@@ -359,7 +358,7 @@
                             \addplot[red, thick, domain=0:2.5, samples=2] {2*x + 6};
                             \node[red, right, font=\footnotesize] at (axis cs:0.2,7) {tangent at $(2,10)$};
                             \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(2,10)};
-                            \node[above right, font=\footnotesize] at (axis cs:2,10) {$(2,10)$};
+                            \node[above left, font=\footnotesize] at (axis cs:2,10) {$(2,10)$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -386,20 +385,20 @@
         <solution>
             <p>
                 To find the intersection points, we can substitute <m>y = x + 3</m> into the circle equation:
-                <me>
-                    x^2 + (x + 3)^2 = 9 \\
-                    x^2 + x^2 + 6x + 9 = 9 \\
-                    2x^2 + 6x = 0 \\
-                    2x(x + 3) = 0
-                </me>
+                <md>
+                    <mrow> x^2 + (x + 3)^2 \amp = 9  </mrow>
+                    <mrow> x^2 + x^2 + 6x + 9 \amp = 9  </mrow>
+                    <mrow> 2x^2 + 6x \amp = 0  </mrow>
+                    <mrow> 2x(x + 3) \amp = 0 </mrow>
+                </md>
                 This gives us two solutions: <m>x = 0</m> and <m>x = -3</m>.
             </p>
             <p>
                 Corresponding <m>y</m> values are:
-                <me>
-                    y = 0 + 3 = 3 \\
-                    y = -3 + 3 = 0
-                </me>
+                <md>
+                    <mrow> y = 0 + 3 = 3 </mrow>
+                    <mrow> y = -3 + 3 = 0 </mrow>
+                </md>
             </p>
             
             <image width="65%">
@@ -410,17 +409,17 @@
                         xlabel={$x$ (cm)},
                         ylabel={$y$ (cm)},
                         xmin=-4, xmax=4,
-                        ymin=-1, ymax=4,
+                        ymin=-4, ymax=4,
                         xtick={-3,-2,-1,1,2,3},
-                        ytick={-1,1,2,3,4},
+                        ytick={-3,-2,-1,1,2,3,4},
                         tick label style={font=\footnotesize},
                         grid=both,
                         grid style={line width=0.3pt, draw=gray!30},
                         axis equal image,
                     ]
-                        \addplot[thick, dashed, domain=0:360, samples=100, smooth]
+                        \addplot[thick, red, domain=0:360, samples=100, smooth]
                             ({3*cos(\x)}, {3*sin(\x)});
-                        \addplot[thick, dashed, domain=-4:1, samples=2] {x + 3};
+                        \addplot[thick, blue, domain=-4:1, samples=2] {x + 3};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,3) (-3,0)};
                     \end{axis}
                     \end{tikzpicture}
@@ -462,87 +461,92 @@
                     <row><cell>Fertilizer <m>F</m></cell><cell>10</cell><cell>20</cell><cell>30</cell><cell>40</cell><cell>50</cell></row>
                     <row><cell>Yield <m>Y</m></cell><cell>2.1</cell><cell>3.9</cell><cell>6.2</cell><cell>8.1</cell><cell>9.8</cell></row>
                 </tabular>
-                <p>
-                    a) Plot the empirical data and draw a line of best fit.
-                </p>
-                <p>
-                    b) Use your line to predict the yield if 60 kg of fertilizer is used.
-                </p>
+                <ol marker="(a)">
+                    <li><p>Plot the empirical data and draw a line of best fit.</p></li>
+                    <li><p>Use your line to predict the yield if 60 kg of fertilizer is used.</p></li>
+                </ol>
             </statement>   
             <answer>
-                <p>
-                    (a)
-                </p>
-                <image width="65%">
-                    <latex-image label="Graphical representation of the fertilizer and yield data">
-                        \begin{tikzpicture}
-                        \begin{axis}[
-                            axis x line=bottom, axis y line=left,
-                            xlabel={Fertilizer $F$ (kg)},
-                            ylabel={Yield $Y$ (tons)},
-                            xmin=0, xmax=60,
-                            ymin=0, ymax=11,
-                            xtick={0,10,20,30,40,50,60},
-                            ytick={0,2,4,6,8,10},
-                            tick label style={font=\footnotesize},
-                            grid=both,
-                            grid style={line width=0.3pt, draw=gray!30},
-                        ]
-                            \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
-                                (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
-                            \addplot[blue, thick, dashed, domain=0:50, samples=2] {0.196*x + 0.2};
-                        \end{axis}
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
-                <p>
-                    b) Extending the line to <m>F = 60</m>, the predicted yield is approximately <m>12.0</m> tons.
-                </p>
-                    <image width="65%">
-                        <latex-image label="Extended graphical representation of the fertilizer and yield data">
-                            \begin{tikzpicture}
-                            \begin{axis}[
-                                axis x line=bottom, axis y line=left,
-                                xlabel={Fertilizer $F$ (kg)},
-                                ylabel={Yield $Y$ (tons)},
-                                xmin=0, xmax=65,
-                                ymin=0, ymax=13,
-                                xtick={0,10,20,30,40,50,60},
-                                ytick={0,2,4,6,8,10,12},
-                                tick label style={font=\footnotesize},
-                                grid=both,
-                                grid style={line width=0.3pt, draw=gray!30},
-                            ]
-                                \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
-                                    (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
-                                \addplot[blue, thick, dashed, domain=0:60, samples=2] {0.196*x + 0.2};
-                                \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(60,12)};
-                                \node[right, font=\footnotesize, green!60!black] at (axis cs:60,12) {$(60,\ 12)$ tons};
-                                \draw[gray, dotted, thick] (axis cs:60,0) -- (axis cs:60,12);
-                                \draw[gray, dotted, thick] (axis cs:0,12) -- (axis cs:60,12);
-                            \end{axis}
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
+                <ol marker="(a)">
+                    <li>
+                        <image width="65%">
+                            <latex-image label="Graphical representation of the fertilizer and yield data">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={Fertilizer $F$ (kg)},
+                                    ylabel={Yield $Y$ (tons)},
+                                    xmin=0, xmax=60,
+                                    ymin=0, ymax=11,
+                                    xtick={0,10,20,30,40,50,60},
+                                    ytick={0,2,4,6,8,10},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
+                                        (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
+                                    \addplot[blue, thick, dashed, domain=0:50, samples=2] {0.196*x + 0.2};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>Extending the line to <m>F = 60</m>, the predicted yield is approximately <m>12.0</m> tons.</p>
+                        <image width="65%">
+                            <latex-image label="Extended graphical representation of the fertilizer and yield data">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={Fertilizer $F$ (kg)},
+                                    ylabel={Yield $Y$ (tons)},
+                                    xmin=0, xmax=65,
+                                    ymin=0, ymax=13,
+                                    xtick={0,10,20,30,40,50,60},
+                                    ytick={0,2,4,6,8,10,12},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
+                                        (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
+                                    \addplot[blue, thick, dashed, domain=0:60, samples=2] {0.196*x + 0.2};
+                                    \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(60,12)};
+                                    \node[right, font=\footnotesize, green!60!black] at (axis cs:60,12) {$(60,\ 12)$ tons};
+                                    \draw[gray, dotted, thick] (axis cs:60,0) -- (axis cs:60,12);
+                                    \draw[gray, dotted, thick] (axis cs:0,12) -- (axis cs:60,12);
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                </ol>
             </answer>             
         </exercise>        
         <exercise>
             <statement>
                 <p>
-                  A toy rocket is launched. Its height <m>h</m> (meters) after <m>t</m> seconds is <m>h = -5t^2 + 20t</m>.
+                  A toy rocket is launched. Its height <m>h</m> (meters) after <m>t</m> seconds is <md>h = -5t^2 + 20t</md>
                 </p>
-                <p>
-                    a) Plot the graph for <m>0 \le t \le 4</m>.
-                </p>
-                <p>
-                    b) Use the graph to find the roots of the equation. What do these roots represent in terms of the rocket's flight?
-                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Plot the graph for <m>0 \le t \le 4</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Use the graph to find the roots of the equation. What do these roots represent in terms of the rocket's flight?
+                        </p>
+                    </li>
+                </ol>
             </statement>
             <answer>
-                <p>
-                    (a)
-                </p>
-                <image width="65%">
+                <ol marker="(a)">
+                    <li>
+                        <p> The graph is as follows:
+                            <image width="65%">
                     <latex-image label="Graphical representation of the rocket's flight">
                         \begin{tikzpicture}
                         \begin{axis}[
@@ -563,13 +567,18 @@
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
-                </image>
-                <p>
-                    b) The roots (where <m>h = 0</m>) are <m>t = 0</m> and <m>t = 4</m>.
-                </p>
-                <p>
-                    The roots represent the time of launch (<m>t=0</m>) and the time the rocket hits the ground (<m>t=4</m>).
-                </p>
+                    </image>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The roots (where <m>h = 0</m>) are <m>t = 0</m> and <m>t = 4</m>.
+                        </p>
+                        <p>
+                            The roots represent the time of launch (<m>t=0</m>) and the time the rocket hits the ground (<m>t=4</m>).
+                        </p>
+                    </li>
+                </ol>
             </answer>
         </exercise>
         <exercise>
@@ -607,20 +616,23 @@
                 <p>
                     A car's velocity <m>v</m> (km/h) over time <m>t</m> (seconds) is given by <m>v = 3t^2 - 12t + 9</m>.
                 </p>
-                <p>
-                    a) Plot the velocity-time graph for <m>0 \le t \le 4</m>.
-                </p>
-                <p>
-                    b) Use the graph to find: (i) the times when the car is at rest; (ii) the time of minimum velocity and its value; (iii) the maximum speed on the interval.
-                </p>
-
+                <ol marker="(a)">
+                    <li><p>Plot the velocity-time graph for <m>0 \le t \le 4</m>.</p></li>
+                    <li>
+                        <p>Use the graph to find:</p>
+                        <ol marker="(i)">
+                            <li><p>the times when the car is at rest;</p></li>
+                            <li><p>the time of minimum velocity and its value;</p></li>
+                            <li><p>the maximum speed on the interval.</p></li>
+                        </ol>
+                    </li>
+                </ol>
             </statement>
             <answer>
-                <p>
-                    a) 
-                </p>
-                    <image width="65%">
-                        <latex-image label="Graphical representation of the car's speed">
+                <ol marker="(a)">
+                    <li>
+                        <image width="85%">
+                            <latex-image label="Graphical representation of the car's speed">
                             \begin{tikzpicture}
                             \begin{axis}[
                                 axis lines=center,
@@ -645,19 +657,25 @@
                             \end{axis}
                             \end{tikzpicture}
                         </latex-image>
-                    </image>
-                <p>
-                    b) (i) The car is at rest when <m>v = 0</m>, which occurs at <m>t = 1</m> s and <m>t = 3</m> s.
-                </p>
-                <p>
-                    (ii) Since <m>a = 3 \gt 0</m> the parabola opens upward, so the vertex is a <em>minimum</em>.
-                    The minimum velocity occurs at <m>t = -\dfrac{-12}{2(3)} = 2</m> s, giving
-                    <m>v = 3(4) - 12(2) + 9 = -3</m> km/h (the car's peak backward velocity).
-                </p>
-                <p>
-                    (iii) On the interval <m>0 \le t \le 4</m>, <m>v(0) = 9</m> and <m>v(4) = 9</m>.
-                    The maximum speed is <m>9</m> km/h, occurring at <m>t = 0</m> and <m>t = 4</m>.
-                </p>
+                        </image>
+                    </li>
+                    <li>
+                        <ol marker="(i)">
+                            <li>
+                                <p>The car is at rest when <m>v = 0</m>, which occurs at <m>t = 1</m> s and <m>t = 3</m> s.</p>
+                            </li>
+                            <li>
+                                <p>Since <m>a = 3 \gt 0</m> the parabola opens upward, so the vertex is a <em>minimum</em>.
+                                The minimum velocity occurs at <m>t = -\dfrac{-12}{2(3)} = 2</m> s, giving
+                                <m>v = 3(4) - 12(2) + 9 = -3</m> km/h (the car's peak backward velocity).</p>
+                            </li>
+                            <li>
+                                <p>On the interval <m>0 \le t \le 4</m>, <m>v(0) = 9</m> and <m>v(4) = 9</m>.
+                                The maximum speed is <m>9</m> km/h, occurring at <m>t = 0</m> and <m>t = 4</m>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
             </answer>
         </exercise>
 
@@ -707,9 +725,9 @@
                                     \addplot[blue, thick, dashed, domain=0:80, samples=2] {8*x + 480};
                                     \node[blue, above, font=\footnotesize] at (axis cs:20,680) {$C = 8x+480$};
                                     \addplot[red, thick, domain=0:80, samples=2] {20*x};
-                                    \node[red, right, font=\footnotesize] at (axis cs:50,1100) {$R = 20x$};
+                                    \node[red, right, font=\footnotesize] at (axis cs:41,1150) {$R = 20x$};
                                     \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(40,800)};
-                                    \node[right, font=\footnotesize] at (axis cs:40,800) {$(40,\ 800)$};
+                                    \node[below right, font=\footnotesize] at (axis cs:40,800) {$(40,\ 800)$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -778,9 +796,9 @@
                                     \addplot[blue, thick, domain=0:30, samples=2] {3*x + 10};
                                     \node[blue, above left, font=\footnotesize] at (axis cs:25,90) {Supply};
                                     \addplot[red, thick, domain=0:30, samples=2] {-x + 90};
-                                    \node[red, below right, font=\footnotesize] at (axis cs:18,73) {Demand};
+                                    \node[red, font=\footnotesize] at (axis cs:10,90) {Demand};
                                     \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(20,70)};
-                                    \node[above right, font=\footnotesize] at (axis cs:20,70) {$(20,\ 70)$};
+                                    \node[below, font=\footnotesize] at (axis cs:20,70) {$(20,\ 70)$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -848,9 +866,9 @@
                                 ]
                                     \addplot[blue, thick, domain=0:4, samples=60, smooth] {-5*x^2 + 10*x + 40};
                                     \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(1,45)};
-                                    \node[right, font=\footnotesize, red] at (axis cs:1,45) {$(1,\ 45)$};
+                                    \node[above, font=\footnotesize, red] at (axis cs:1,45) {$(1,\ 45)$};
                                     \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(4,0)};
-                                    \node[above right, font=\footnotesize, green!60!black] at (axis cs:4,0) {$(4,\ 0)$};
+                                    \node[above, font=\footnotesize, green!60!black] at (axis cs:4,0) {$(4, 0)$};
                                     \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(0,40)};
                                     \node[right, font=\footnotesize, blue] at (axis cs:0,40) {$40$};
                                 \end{axis}
@@ -1045,7 +1063,7 @@
                             <row><cell><m>x</m></cell><cell>0</cell><cell>10</cell><cell>20</cell><cell>30</cell><cell>40</cell></row>
                             <row><cell><m>P</m> (KSh '000)</cell><cell><m>-600</m></cell><cell>0</cell><cell>200</cell><cell>0</cell><cell><m>-600</m></cell></row>
                         </tabular>
-                        <image width="65%">
+                        <image width="85%">
                             <latex-image>
                                 \begin{tikzpicture}
                                 \begin{axis}[
@@ -1057,7 +1075,7 @@
                                     xmin=0, xmax=52,
                                     ymin=-650, ymax=260,
                                     xtick={10,20,30,40,50},
-                                    ytick={-600,-400,-200,100,200},
+                                    ytick={-600,-400,-200,200},
                                     tick label style={font=\footnotesize},
                                     grid=both,
                                     grid style={line width=0.3pt, draw=gray!30},

@@ -61,7 +61,7 @@
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Facilitate the "Cracking the Code" activity. Provide groups with "straightened" graphs and challenge them to find the original constants. Encourage them to verify their found values by testing a point from the original data.
+                    Guide students through the process of identifying the gradient and y-intercept from the straightened graph, and then using these values to determine the constants in the original non-linear equation.
                 </p>
             </li>
         </dl>
@@ -77,8 +77,38 @@
                 They plotted a graph of <m>\log P</m> against <m>\log V</m> to "straighten" the data.
             </p>
             <p>
-                The resulting straight line passes through the points <m>(1, 2.3)</m> and <m>(2, 0.9)</m>.
+                The resulting straight line passes through the points <m>(1, 2.3)</m> and <m>(2, 0.9)</m>, as shown below.
             </p>
+            <figure xml:id="fig-activity-log-pv">
+                <caption>Graph of <m>\log_{10} P</m> against <m>\log_{10} V</m> obtained by the engineers.</caption>
+                <image width="85%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                        grid=both,
+                        minor grid style={draw=gray!15, line width=0.2pt},
+                        major grid style={draw=gray!40, line width=0.4pt},
+                        minor tick num=1,
+                        axis lines=left,
+                        xlabel={$\log_{10} V$},
+                        ylabel={$\log_{10} P$},
+                        xmin=0, xmax=3, ymin=0, ymax=4.0,
+                        xtick={0,0.5,1.0,1.5,2.0,2.5, 3.0},
+                        ytick={0,0.5,1.0,1.5,2.0,2.5, 3.0, 3.5, 4.0},
+                        axis equal image,
+                        tick label style={font=\small},
+                        label style={font=\small}
+                        ]
+                        \addplot[blue, very thick] coordinates {(0, 3.7) (2.65, 0)};
+                        \addplot[only marks, mark=*, blue, mark size=2pt]
+                        coordinates {(1,2.3) (2,0.9)};
+                        \node[right, font=\small] at (axis cs:1,2.3) {$(1,\ 2.3)$};
+                        \node[right, font=\small] at (axis cs:2,0.9) {$(2,\ 0.9)$};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
             <p>
                 <alert>What to do:</alert>
                 <ol>
@@ -228,6 +258,40 @@
                 </ol>
                 The values are <m>n = 2</m> and <m>k = 2</m>.
             </p>
+            <figure xml:id="fig-example-log-log-kxn">
+                <caption>Graph of <m>\log_{10} y</m> against <m>\log_{10} x</m> with gradient triangle showing <m>n = 2</m> and y-intercept giving <m>\log_{10} k = 0.3</m>.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                        grid=both,
+                        minor grid style={draw=gray!15, line width=0.2pt},
+                        major grid style={draw=gray!40, line width=0.4pt},
+                        minor tick num=1,
+                        axis lines=left,
+                        xlabel={$\log_{10} x$},
+                        ylabel={$\log_{10} y$},
+                        xmin=0, xmax=0.65, ymin=0, ymax=1.55,
+                        xtick={0,0.1,0.2,0.3,0.4,0.5,0.6},
+                        ytick={0,0.3,0.6,0.9,1.2,1.5},
+                        width=7cm, height=7.5cm,
+                        tick label style={font=\small},
+                        label style={font=\small}
+                        ]
+                        \addplot[blue, very thick] coordinates {(0,0.3) (0.6,1.5)};
+                        \draw[dashed, gray, thick] (axis cs:0.2,0.7) -- (axis cs:0.5,0.7) -- (axis cs:0.5,1.3);
+                        \node[below, font=\small] at (axis cs:0.35,0.67) {$\Delta\log x = 0.3$};
+                        \node[right, font=\small] at (axis cs:0.51,1.0) {$\Delta\log y = 0.6$};
+                        \addplot[only marks, mark=*, blue, mark size=2pt]
+                        coordinates {(0.2,0.7) (0.5,1.3)};
+                        \addplot[only marks, mark=*, red, mark size=2.5pt]
+                        coordinates {(0,0.3)};
+                        \node[above right, font=\small] at (axis cs:0.01,0.3) {intercept $= 0.3 = \log_{10} k$};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
@@ -274,6 +338,42 @@
             </ol>
             The values are <m>A = 100000</m> and <m>k = 0.316</m>.
             </p>
+            <figure xml:id="fig-example-log-y-vs-x-decay">
+                <caption>Graph of <m>\log_{10} y</m> against <m>x</m> with gradient <m>-0.5</m> and y-intercept <m>5</m>, giving <m>k = 10^{-0.5}</m> and <m>A = 10^5</m>.</caption>
+                <image width="90%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                        grid=both,
+                        minor grid style={draw=gray!15, line width=0.2pt},
+                        major grid style={draw=gray!40, line width=0.4pt},
+                        minor tick num=1,
+                        axis lines=left,
+                        xlabel={$x$},
+                        ylabel={$\log_{10} y$},
+                        xmin=0, xmax=11, ymin=0, ymax=5.5,
+                        xtick={0,2,4,6,8,10},
+                        ytick={0,1,2,3,4,5},
+                        width=7.5cm, height=7.5cm,
+                        tick label style={font=\small},
+                        axis equal image,
+                        label style={font=\small}
+                        ]
+                        \addplot[blue, very thick] coordinates {(0,5) (10,0)};
+                        \draw[dashed, gray, thick] (axis cs:2,4) -- (axis cs:4,4) -- (axis cs:4,3);
+                        \node[above, font=\small] at (axis cs:3,4.05) {run $= 2$};
+                        \node[right, font=\small] at (axis cs:4.1,3.5) {fall $= 1$};
+                        \addplot[only marks, mark=*, blue, mark size=2pt]
+                        coordinates {(2,4)};
+                        \addplot[only marks, mark=*, red, mark size=2.5pt]
+                        coordinates {(0,5)};
+                        \node[above right, font=\small] at (axis cs:0.2,5.0) {$\log_{10} A = 5$};
+                        \node[below left, font=\small] at (axis cs:2.1,4.0) {$(2,\ 4)$};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
@@ -551,47 +651,6 @@
                 </ol>
             </solution>
         </exercise>
-
-        <exercise>
-            <statement>
-                <p>
-                    Variables <m>s</m> and <m>t</m> are related by <m>s = ut + \tfrac{1}{2}at^2</m>. Dividing through by <m>t</m> gives
-                    <md>\frac{s}{t} = u + \tfrac{1}{2}at</md>
-                    so a plot of <m>\dfrac{s}{t}</m> against <m>t</m> is a straight line.
-                </p>
-                <tabular bottom="minor" top="minor" left="minor" right="minor">
-                    <row><cell><m>t</m> (s)</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell></row>
-                    <row><cell><m>s</m> (m)</cell><cell>12</cell><cell>28</cell><cell>48</cell><cell>72</cell></row>
-                </tabular>
-                <ol>
-                    <li><p>Complete a table of <m>s/t</m> against <m>t</m>.</p></li>
-                    <li><p>Plot <m>s/t</m> against <m>t</m> and draw the best straight line.</p></li>
-                    <li><p>Find <m>u</m> (the y-intercept) and <m>a</m> (twice the gradient) from your graph.</p></li>
-                </ol>
-            </statement>
-            <solution>
-                <ol>
-                    <li>
-                        <p>
-                            <tabular bottom="minor" top="minor" left="minor" right="minor">
-                                <row><cell><m>t</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell></row>
-                                <row><cell><m>s/t</m></cell><cell>12</cell><cell>14</cell><cell>16</cell><cell>18</cell></row>
-                            </tabular>
-                        </p>
-                    </li>
-                    <li><p>The points are collinear.</p></li>
-                    <li>
-                        <p>
-                            Gradient <m>= \dfrac{18 - 12}{4 - 1} = 2 = \tfrac{1}{2}a</m>, so <m>a = 4 \text{ m/s}^2</m>.
-                        </p>
-                        <p>
-                            y-intercept: using point <m>(1, 12)</m>: <m>12 = u + 2(1) \implies u = 10 \text{ m/s}</m>.
-                        </p>
-                    </li>
-                </ol>
-            </solution>
-        </exercise>
-
     </exercises>
 
     <axiom component="lesson-plan">
