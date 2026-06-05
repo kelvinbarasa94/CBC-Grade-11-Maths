@@ -814,6 +814,281 @@
             </solution>
         </exercise>
 
+        <exercise>
+            <statement>
+                <p>
+                    In 1973, the statistician Francis Anscombe created four datasets to demonstrate an important warning about statistics.<fn>Anscombe, F. J. (1973). Graphs in statistical analysis. <em>The American Statistician</em>, <em>27</em>(1), 17–21.</fn>
+                    The four datasets, known as <term>Anscombe's Quartet</term>, each contain 11 data points.
+                    Despite looking very different when plotted, they all share the same basic statistical summaries:
+                    the mean of <m>x</m> is 9, the mean of <m>y</m> is approximately 7.5, and they all have the same line of best fit.
+                </p>
+                <p>
+                    Datasets I, II, and III share the same <m>x</m>-values.
+                </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row>
+                        <cell></cell><cell><m>x</m></cell>
+                        <cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                        <cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell><cell>14</cell>
+                    </row>
+                    <row>
+                        <cell>I</cell><cell><m>y</m></cell>
+                        <cell>4.26</cell><cell>5.68</cell><cell>7.24</cell><cell>4.82</cell><cell>6.95</cell><cell>8.81</cell>
+                        <cell>8.04</cell><cell>8.33</cell><cell>10.84</cell><cell>7.58</cell><cell>9.96</cell>
+                    </row>
+                    <row>
+                        <cell>II</cell><cell><m>y</m></cell>
+                        <cell>3.10</cell><cell>4.74</cell><cell>6.13</cell><cell>7.26</cell><cell>8.14</cell><cell>8.77</cell>
+                        <cell>9.14</cell><cell>9.26</cell><cell>9.13</cell><cell>8.74</cell><cell>8.10</cell>
+                    </row>
+                    <row>
+                        <cell>III</cell><cell><m>y</m></cell>
+                        <cell>5.39</cell><cell>5.73</cell><cell>6.08</cell><cell>6.42</cell><cell>6.77</cell><cell>7.11</cell>
+                        <cell>7.46</cell><cell>7.81</cell><cell>8.15</cell><cell>12.74</cell><cell>8.84</cell>
+                    </row>
+                </tabular>
+                <p>
+                    Dataset IV has a different structure.
+                </p>
+                <tabular bottom="minor" top="minor" left="minor" right="minor">
+                    <row>
+                        <cell>IV</cell><cell><m>x</m></cell>
+                        <cell>8</cell><cell>8</cell><cell>8</cell><cell>8</cell><cell>8</cell><cell>8</cell>
+                        <cell>8</cell><cell>8</cell><cell>8</cell><cell>8</cell><cell>19</cell>
+                    </row>
+                    <row>
+                        <cell></cell><cell><m>y</m></cell>
+                        <cell>6.58</cell><cell>5.76</cell><cell>7.71</cell><cell>8.84</cell><cell>8.47</cell><cell>7.04</cell>
+                        <cell>5.25</cell><cell>12.50</cell><cell>5.56</cell><cell>7.91</cell><cell>6.89</cell>
+                    </row>
+                </tabular>
+                <p>
+                    The four scatter plots are shown below.
+                    Draw a line of best fit on each one.
+                </p>
+                <sidebyside widths="48% 48%" margins="auto">
+                    <figure xml:id="fig-anscombe-quartet-I">
+                        <caption>Dataset I</caption>
+                        <image>
+                            <latex-image label="anscombe-I">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=20, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (4,4.26)(5,5.68)(6,7.24)(7,4.82)(8,6.95)(9,8.81)
+                                        (10,8.04)(11,8.33)(12,10.84)(13,7.58)(14,9.96)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    <figure xml:id="fig-anscombe-quartet-II">
+                        <caption>Dataset II</caption>
+                        <image>
+                            <latex-image label="anscombe-II">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=20, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (4,3.10)(5,4.74)(6,6.13)(7,7.26)(8,8.14)(9,8.77)
+                                        (10,9.14)(11,9.26)(12,9.13)(13,8.74)(14,8.10)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <sidebyside widths="48% 48%" margins="auto">
+                    <figure xml:id="fig-anscombe-quartet-III">
+                        <caption>Dataset III</caption>
+                        <image>
+                            <latex-image label="anscombe-III">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=20, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (4,5.39)(5,5.73)(6,6.08)(7,6.42)(8,6.77)(9,7.11)
+                                        (10,7.46)(11,7.81)(12,8.15)(13,12.74)(14,8.84)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    <figure xml:id="fig-anscombe-quartet-IV">
+                        <caption>Dataset IV</caption>
+                        <image>
+                            <latex-image label="anscombe-IV">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=22, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (8,6.58)(8,5.76)(8,7.71)(8,8.84)(8,8.47)(8,7.04)
+                                        (8,5.25)(19,12.50)(8,5.56)(8,7.91)(8,6.89)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <ol>
+                    <li><p>What equation do you get for each of your four lines of best fit?</p></li>
+                    <li><p>Even though the four lines have the same equation, the scatter plots look very different. Describe what you notice about each dataset.</p></li>
+                    <li><p>What does Anscombe's Quartet teach us about using a line of best fit without first drawing a scatter plot?</p></li>
+                </ol>
+            </statement>
+            <answer>
+                <p>
+                    The line of best fit for all four datasets is approximately <m>y = 0.5x + 3</m>.
+                </p>
+                <sidebyside widths="48% 48%" margins="auto">
+                    <figure xml:id="fig-anscombe-quartet-ans-I">
+                        <caption>Dataset I: linear scatter — the line fits well.</caption>
+                        <image>
+                            <latex-image label="anscombe-ans-I">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=20, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (4,4.26)(5,5.68)(6,7.24)(7,4.82)(8,6.95)(9,8.81)
+                                        (10,8.04)(11,8.33)(12,10.84)(13,7.58)(14,9.96)};
+                                    \addplot[red, thick, domain=0:20, samples=2] {0.5*x + 3};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    <figure xml:id="fig-anscombe-quartet-ans-II">
+                        <caption>Dataset II: a curved pattern — a straight line is not the right model.</caption>
+                        <image>
+                            <latex-image label="anscombe-ans-II">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=20, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (4,3.10)(5,4.74)(6,6.13)(7,7.26)(8,8.14)(9,8.77)
+                                        (10,9.14)(11,9.26)(12,9.13)(13,8.74)(14,8.10)};
+                                    \addplot[red, thick, domain=0:20, samples=2] {0.5*x + 3};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <sidebyside widths="48% 48%" margins="auto">
+                    <figure xml:id="fig-anscombe-quartet-ans-III">
+                        <caption>Dataset III: near-perfect line but one outlier at <m>(13,\ 12.74)</m> pulls the line away.</caption>
+                        <image>
+                            <latex-image label="anscombe-ans-III">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=20, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (4,5.39)(5,5.73)(6,6.08)(7,6.42)(8,6.77)(9,7.11)
+                                        (10,7.46)(11,7.81)(12,8.15)(13,12.74)(14,8.84)};
+                                    \addplot[red, thick, domain=0:20, samples=2] {0.5*x + 3};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    <figure xml:id="fig-anscombe-quartet-ans-IV">
+                        <caption>Dataset IV: the single point <m>(19,\ 12.5)</m> alone determines the slope.</caption>
+                        <image>
+                            <latex-image label="anscombe-ans-IV">
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis x line=bottom, axis y line=left,
+                                    xlabel={$x$}, ylabel={$y$},
+                                    xmin=0, xmax=22, ymin=0, ymax=14,
+                                    xtick={0,4,8,12,16,20},
+                                    ytick={0,2,4,6,8,10,12,14},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.3pt, draw=gray!30},
+                                ]
+                                    \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
+                                        (8,6.58)(8,5.76)(8,7.71)(8,8.84)(8,8.47)(8,7.04)
+                                        (8,5.25)(19,12.50)(8,5.56)(8,7.91)(8,6.89)};
+                                    \addplot[red, thick, domain=0:22, samples=2] {0.5*x + 3};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <ol>
+                    <li><p>All four lines are approximately <m>y = 0.5x + 3</m>.</p></li>
+                    <li>
+                        <p>
+                            <ul>
+                                <li><p><alert>Dataset I:</alert> A typical linear scatter. The line of best fit is a reasonable model.</p></li>
+                                <li><p><alert>Dataset II:</alert> The data follows a smooth curve (a parabola). The relationship is not linear, so a straight line is a poor model — even though the equation matches.</p></li>
+                                <li><p><alert>Dataset III:</alert> Ten points lie almost exactly on a line, but a single outlier at <m>(13, 12.74)</m> pulls the line away from the other ten. If the outlier is removed, the remaining data follow a much steeper line.</p></li>
+                                <li><p><alert>Dataset IV:</alert> Ten of the eleven points all have <m>x = 8</m>, forming a vertical cluster. The single distant point at <m>(19, 12.5)</m> is a <term>leverage point</term> — it alone determines the slope of the line.</p></li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li><p>Anscombe's Quartet shows that the same line of best fit — and the same statistical summaries — can describe very different datasets. <alert>Always draw a scatter plot before using or interpreting a line of best fit.</alert> The equation alone does not tell you whether a linear model is appropriate.</p></li>
+                </ol>
+            </answer>
+        </exercise>
+
     </exercises>
 
     <axiom component="lesson-plan">
