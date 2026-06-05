@@ -69,68 +69,90 @@
 
     <activity>
         <statement>
-            <p>
-                <alert>Work in Groups</alert>
-            </p>
-            <p>
-                Imagine you are a mathematical detective tasked with finding the "hidden" solutions to equations. Your most powerful tool is the graph.
-            </p>
-            <p>
-                <alert>What to do</alert>
-            </p>
-            <p>
-                <ol>
-                    <li>
+        <p>
+            <alert>Work in Groups</alert>
+        </p>
+        <p>
+            Imagine you are a mathematical detective tasked with finding the "hidden" solutions to equations. Your most powerful tool is the graph.
+        </p>
+        <p>
+            <alert>What to do</alert>
+        </p>
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        Solve the equation <m>x^2 - 4 = 0</m>. What values of <m>x</m> make this true?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Look at the graph of <m>y = x^2 - 4</m> below.
+                    </p>
+                    <image width="65%">
+                        <latex-image label="Graph_activity-quadratic-detective">
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=center,
+                                axis equal image,
+                                xlabel={$x$}, ylabel={$y$},
+                                xmin=-3, xmax=3, ymin=-5, ymax=3,
+                                tick style={black},
+                                grid=both,
+                                major grid style={gray!80},
+                                minor grid style={gray!20},
+                                minor tick num=3
+                            ]
+                                \addplot[blue, thick, domain=-2.5:2.5, samples=60] {x^2 - 4};
+                                \addplot[only marks, mark=*, mark size=2pt, color=black] coordinates {(0,-4)};
+                                \node[below right] at (axis cs:0,-4) {$(0,-4)$};
+                                \addplot[only marks, mark=*, mark size=2pt, color=red] coordinates {(-2,0) (2,0)};
+                                \node[above right] at (axis cs:-2,0) {?};
+                                \node[above left] at (axis cs:2,0) {?};
+                            \end{axis}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                    <p>
+                    <ul>
+                        <li><p>At what coordinates do the red "clue markers" sit?</p></li>
+                        <li><p>What is the value of <m>y</m> at these points?</p></li>
+                        <li><p>How do the <m>x</m>-coordinates of these points compare to your algebraic solutions from Step 1?</p></li>
+                    </ul>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                            Based on your investigation, if you wanted to find the roots of a complex cubic equation like <m>x^3 - x^2 - 2x = 0</m>, how could you use a graph of <m>y = x^3 - x^2 - 2x</m> to find them without doing any hard algebra?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use the following graph of <m>y = x^3 - x^2 - 2x</m> to find the solutions to <m>x^3 - x^2 - 2x = 0</m>. 
+                    <image width="65%">
+                        <latex-image label="Graph_activity-cubic">
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                axis lines=center,
+                                axis equal image,
+                                xlabel={$x$}, ylabel={$y$},
+                                xmin=-3, xmax=3, ymin=-3, ymax=3,
+                                tick style={black},
+                                grid=both,
+                                major grid style={gray!80},
+                                minor grid style={gray!20},
+                                minor tick num=3
+                            ]
+                                \addplot[red, thick, &lt;-&gt;, domain=-1.5:2.3, samples=60] {x^3 - x^2 - 2*x};
+                            \end{axis}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                    </p>
+                    <solution component="lesson-plan">
                         <p>
-                            Solve the equation <m>x^2 - 4 = 0</m>. What values of <m>x</m> make this true?
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Look at the graph of <m>y = x^2 - 4</m> below.
-                        </p>
                         <image width="65%">
-                            <latex-image label="Graph_activity-quadratic-detective">
-                                \begin{tikzpicture}
-                                \begin{axis}[
-                                    axis lines=center,
-                                    axis equal image,
-                                    xlabel={$x$}, ylabel={$y$},
-                                    xmin=-3, xmax=3, ymin=-5, ymax=3,
-                                    tick style={black},
-                                    grid=both,
-                                    major grid style={gray!80},
-                                    minor grid style={gray!20},
-                                    minor tick num=3
-                                ]
-                                    \addplot[blue, thick, domain=-2.5:2.5, samples=60] {x^2 - 4};
-                                    \addplot[only marks, mark=*, mark size=2pt, color=black] coordinates {(0,-4)};
-                                    \node[below right] at (axis cs:0,-4) {$(0,-4)$};
-                                    \addplot[only marks, mark=*, mark size=2pt, color=red] coordinates {(-2,0) (2,0)};
-                                    \node[above right] at (axis cs:-2,0) {?};
-                                    \node[above left] at (axis cs:2,0) {?};
-                                \end{axis}
-                                \end{tikzpicture}
-                            </latex-image>
-                        </image>
-                        <p>
-                        <ul>
-                            <li><p>At what coordinates do the red "clue markers" sit?</p></li>
-                            <li><p>What is the value of <m>y</m> at these points?</p></li>
-                            <li><p>How do the <m>x</m>-coordinates of these points compare to your algebraic solutions from Step 1?</p></li>
-                        </ul>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                             Based on your investigation, if you wanted to find the roots of a complex cubic equation like <m>x^3 - x^2 - 2x = 0</m>, how could you use a graph of <m>y = x^3 - x^2 - 2x</m> to find them without doing any hard algebra?
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Use the following graph of <m>y = x^3 - x^2 - 2x</m> to find the solutions to <m>x^3 - x^2 - 2x = 0</m>. 
-                        <image width="65%">
-                            <latex-image label="Graph_activity-cubic">
+                            <latex-image label="Graph_activity-cubic-solution">
                                 \begin{tikzpicture}
                                 \begin{axis}[
                                     axis lines=center,
@@ -144,42 +166,20 @@
                                     minor tick num=3
                                 ]
                                     \addplot[red, thick, &lt;-&gt;, domain=-1.5:2.3, samples=60] {x^3 - x^2 - 2*x};
+                                    \addplot[only marks, mark=*, mark size=1pt, color=blue] coordinates {(-1,0) (0,0) (2,0)};
+                                    \node[above left] at (axis cs:-1,0) {$x=-1$};
+                                    \node[above right] at (axis cs:0,0) {$x=0$};
+                                    \node[below right] at (axis cs:2,0) {$x=2$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
+                        The graph intersects the <m>x</m>-axis at three points: <m>x=-1</m>, <m>x=0</m>, and <m>x=2</m>. These are the roots of the equation <m>x^3 - x^2 - 2x = 0</m>.
                         </p>
-                        <solution>
-                            <p>
-                            <image width="65%">
-                                <latex-image label="Graph_activity-cubic-solution">
-                                    \begin{tikzpicture}
-                                    \begin{axis}[
-                                        axis lines=center,
-                                        axis equal image,
-                                        xlabel={$x$}, ylabel={$y$},
-                                        xmin=-3, xmax=3, ymin=-3, ymax=3,
-                                        tick style={black},
-                                        grid=both,
-                                        major grid style={gray!80},
-                                        minor grid style={gray!20},
-                                        minor tick num=3
-                                    ]
-                                        \addplot[red, thick, &lt;-&gt;, domain=-1.5:2.3, samples=60] {x^3 - x^2 - 2*x};
-                                        \addplot[only marks, mark=*, mark size=1pt, color=blue] coordinates {(-1,0) (0,0) (2,0)};
-                                        \node[above left] at (axis cs:-1,0) {$x=-1$};
-                                        \node[above right] at (axis cs:0,0) {$x=0$};
-                                        \node[below right] at (axis cs:2,0) {$x=2$};
-                                    \end{axis}
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                            The graph intersects the <m>x</m>-axis at three points: <m>x=-1</m>, <m>x=0</m>, and <m>x=2</m>. These are the roots of the equation <m>x^3 - x^2 - 2x = 0</m>.
-                            </p>
-                        </solution>
-                    </li>
-                </ol>
-            </p>
+                    </solution>
+                </li>
+            </ol>
+        </p>
         </statement>
     </activity>
 
