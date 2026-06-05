@@ -604,7 +604,7 @@
                             <p>
                                 To solve <m>x^3 - 6x^2 + 11x - 6 = 1</m>, we can rearrange it to <m>x^3 - 6x^2 + 11x - 7 = 0</m>.
                                 This means we need to find where the graph of <m>y = x^3 - 6x^2 + 11x - 7</m> intersects the x-axis.
-                                Drawing the horizontal line <m>y = 1</m> on the graph, we can see that it intersects the curve at approximately <m>x = 1.5</m>.
+                                Drawing the horizontal line <m>y = 1</m> on the graph, we can see that it intersects the curve at approximately <m>x = 3.3</m>.
                             </p>
                             <image width="65%">
                             <latex-image label="Graph_exercise-cubic-roots-2-soln">

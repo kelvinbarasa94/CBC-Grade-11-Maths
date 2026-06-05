@@ -138,11 +138,11 @@
                                     axis equal image,
                                 ]
                                     \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(3,4)};
-                                    \node[above right, font=\small, red] at (axis cs:3,4) {Zone A};
+                                    \node[above right, font=\footnotesize, red] at (axis cs:3,4) {Zone A};
                                     \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(-4,-3)};
-                                    \node[below left, font=\small, blue] at (axis cs:-4,-3) {Zone B};
+                                    \node[below left, font=\footnotesize, blue] at (axis cs:-4,-3) {Zone B};
                                     \addplot[only marks, mark=*, mark size=2pt, green!60!black] coordinates {(0,-5)};
-                                    \node[below, font=\small, green!60!black] at (axis cs:0,-5) {Zone C};
+                                    \node[below, font=\footnotesize, green!60!black] at (axis cs:0,-5) {Zone C};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -179,11 +179,11 @@
                                     \addplot[thick, dashed, domain=0:360, samples=100, smooth]
                                         ({-2 + 5*cos(\x)}, {-2 + 5*sin(\x)});
                                     \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(3,4)};
-                                    \node[above right, font=\small, red] at (axis cs:3,4) {Zone A};
+                                    \node[above right, font=\footnotesize, red] at (axis cs:3,4) {Zone A};
                                     \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(-4,-3)};
-                                    \node[below left, font=\small, blue] at (axis cs:-4,-3) {Zone B};
+                                    \node[below left, font=\footnotesize, blue] at (axis cs:-4,-3) {Zone B};
                                     \addplot[only marks, mark=*, mark size=2pt, green!60!black] coordinates {(0,-5)};
-                                    \node[below, font=\small, green!60!black] at (axis cs:0,-5) {Zone C};
+                                    \node[below, font=\footnotesize, green!60!black] at (axis cs:0,-5) {Zone C};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -310,11 +310,11 @@
                         grid style={line width=0.3pt, draw=gray!30},
                     ]
                         \addplot[blue, thick, dashed, domain=0:120, samples=2] {0.2*x + 10};
-                        \node[blue, font=\small] at (axis cs:30,55) {$C = 200x + 10\,000$};
+                        \node[blue, font=\footnotesize] at (axis cs:30,55) {$C = 200x + 10\,000$};
                         \addplot[red, thick, domain=0:120, samples=2] {0.45*x};
-                        \node[red, right, font=\small] at (axis cs:90,42) {$R = 450x$};
+                        \node[red, right, font=\footnotesize] at (axis cs:90,42) {$R = 450x$};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(40,18)};
-                        \node[right, font=\small] at (axis cs:40,18) {$(40,\ 18\,000)$};
+                        \node[right, font=\footnotesize] at (axis cs:40,18) {$(40,\ 18\,000)$};
                     \end{axis}
                     \end{tikzpicture}
                  </latex-image>
@@ -357,9 +357,9 @@
                         ]
                             \addplot[blue, thick, domain=0:6, samples=80, smooth] {-x^2 + 6*x + 2};
                             \addplot[red, thick, domain=0:2.5, samples=2] {2*x + 6};
-                            \node[red, right, font=\small] at (axis cs:0.2,7) {tangent at $(2,10)$};
+                            \node[red, right, font=\footnotesize] at (axis cs:0.2,7) {tangent at $(2,10)$};
                             \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(2,10)};
-                            \node[above right, font=\small] at (axis cs:2,10) {$(2,10)$};
+                            \node[above right, font=\footnotesize] at (axis cs:2,10) {$(2,10)$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -517,7 +517,7 @@
                                     (10,2.1) (20,3.9) (30,6.2) (40,8.1) (50,9.8)};
                                 \addplot[blue, thick, dashed, domain=0:60, samples=2] {0.196*x + 0.2};
                                 \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(60,12)};
-                                \node[right, font=\small, green!60!black] at (axis cs:60,12) {$(60,\ 12)$ tons};
+                                \node[right, font=\footnotesize, green!60!black] at (axis cs:60,12) {$(60,\ 12)$ tons};
                                 \draw[gray, dotted, thick] (axis cs:60,0) -- (axis cs:60,12);
                                 \draw[gray, dotted, thick] (axis cs:0,12) -- (axis cs:60,12);
                             \end{axis}
@@ -559,7 +559,7 @@
                         ]
                             \addplot[blue, thick, domain=0:4, samples=60, smooth] {-5*x^2 + 20*x};
                             \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(2,20)};
-                            \node[below right, font=\small, red] at (axis cs:2,20) {$(2,\ 20)$};
+                            \node[below right, font=\footnotesize, red] at (axis cs:2,20) {$(2,\ 20)$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -605,13 +605,13 @@
         <exercise>
             <statement>
                 <p>
-                    A car's speed <m>v</m> (km/h) over time <m>t</m> (seconds) is given by <m>v = 3t^2 - 12t + 9</m>.
+                    A car's velocity <m>v</m> (km/h) over time <m>t</m> (seconds) is given by <m>v = 3t^2 - 12t + 9</m>.
                 </p>
                 <p>
-                    a) Plot the speed-time graph for <m>0 \le t \le 4</m>.
+                    a) Plot the velocity-time graph for <m>0 \le t \le 4</m>.
                 </p>
                 <p>
-                    b) Use the graph to find the time when the car is at rest and when it reaches its maximum speed.
+                    b) Use the graph to find: (i) the times when the car is at rest; (ii) the time of minimum velocity and its value; (iii) the maximum speed on the interval.
                 </p>
 
             </statement>
@@ -625,7 +625,7 @@
                             \begin{axis}[
                                 axis lines=center,
                                 xlabel={Time $t$ (seconds)},
-                                ylabel={Speed $v$ (km/h)},
+                                ylabel={Velocity $v$ (km/h)},
                                 xlabel style={at={(axis description cs:1,0)}, anchor=north},
                                 ylabel style={at={(axis description cs:0,1)}, anchor=east},
                                 xmin=0, xmax=4.5,
@@ -638,19 +638,25 @@
                             ]
                                 \addplot[blue, thick, domain=0:4, samples=60, smooth] {3*x^2 - 12*x + 9};
                                 \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(2,-3)};
-                                \node[right, font=\small, red] at (axis cs:2,-3) {$(2,\ -3)$};
+                                \node[right, font=\footnotesize, red] at (axis cs:2,-3) {$(2,\ -3)$};
                                 \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(1,0) (3,0)};
-                                \node[above right, font=\small, green!60!black] at (axis cs:1,0) {$(1,\ 0)$};
-                                \node[above left, font=\small, green!60!black] at (axis cs:3,0) {$(3,\ 0)$};
+                                \node[above right, font=\footnotesize, green!60!black] at (axis cs:1,0) {$(1,\ 0)$};
+                                \node[above left, font=\footnotesize, green!60!black] at (axis cs:3,0) {$(3,\ 0)$};
                             \end{axis}
                             \end{tikzpicture}
                         </latex-image>
                     </image>
                 <p>
-                    b) The car is at rest when <m>v = 0</m>, which occurs at <m>t = 1</m> and <m>t = 3</m>. The maximum speed occurs at the vertex of the parabola, which is at <m>t = 2</m>.
+                    b) (i) The car is at rest when <m>v = 0</m>, which occurs at <m>t = 1</m> s and <m>t = 3</m> s.
                 </p>
                 <p>
-                    At <m>t = 2</m>, the speed is <m>v = -3</m> km/h, which indicates the car is moving backward at its maximum speed.      
+                    (ii) Since <m>a = 3 \gt 0</m> the parabola opens upward, so the vertex is a <em>minimum</em>.
+                    The minimum velocity occurs at <m>t = -\dfrac{-12}{2(3)} = 2</m> s, giving
+                    <m>v = 3(4) - 12(2) + 9 = -3</m> km/h (the car's peak backward velocity).
+                </p>
+                <p>
+                    (iii) On the interval <m>0 \le t \le 4</m>, <m>v(0) = 9</m> and <m>v(4) = 9</m>.
+                    The maximum speed is <m>9</m> km/h, occurring at <m>t = 0</m> and <m>t = 4</m>.
                 </p>
             </answer>
         </exercise>
@@ -699,11 +705,11 @@
                                     grid style={line width=0.3pt, draw=gray!30},
                                 ]
                                     \addplot[blue, thick, dashed, domain=0:80, samples=2] {8*x + 480};
-                                    \node[blue, above, font=\small] at (axis cs:20,680) {$C = 8x+480$};
+                                    \node[blue, above, font=\footnotesize] at (axis cs:20,680) {$C = 8x+480$};
                                     \addplot[red, thick, domain=0:80, samples=2] {20*x};
-                                    \node[red, right, font=\small] at (axis cs:50,1100) {$R = 20x$};
+                                    \node[red, right, font=\footnotesize] at (axis cs:50,1100) {$R = 20x$};
                                     \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(40,800)};
-                                    \node[right, font=\small] at (axis cs:40,800) {$(40,\ 800)$};
+                                    \node[right, font=\footnotesize] at (axis cs:40,800) {$(40,\ 800)$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -770,11 +776,11 @@
                                     grid style={line width=0.3pt, draw=gray!30},
                                 ]
                                     \addplot[blue, thick, domain=0:30, samples=2] {3*x + 10};
-                                    \node[blue, above left, font=\small] at (axis cs:25,90) {Supply};
+                                    \node[blue, above left, font=\footnotesize] at (axis cs:25,90) {Supply};
                                     \addplot[red, thick, domain=0:30, samples=2] {-x + 90};
-                                    \node[red, below right, font=\small] at (axis cs:18,73) {Demand};
+                                    \node[red, below right, font=\footnotesize] at (axis cs:18,73) {Demand};
                                     \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(20,70)};
-                                    \node[above right, font=\small] at (axis cs:20,70) {$(20,\ 70)$};
+                                    \node[above right, font=\footnotesize] at (axis cs:20,70) {$(20,\ 70)$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -842,11 +848,11 @@
                                 ]
                                     \addplot[blue, thick, domain=0:4, samples=60, smooth] {-5*x^2 + 10*x + 40};
                                     \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(1,45)};
-                                    \node[right, font=\small, red] at (axis cs:1,45) {$(1,\ 45)$};
+                                    \node[right, font=\footnotesize, red] at (axis cs:1,45) {$(1,\ 45)$};
                                     \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(4,0)};
-                                    \node[above right, font=\small, green!60!black] at (axis cs:4,0) {$(4,\ 0)$};
+                                    \node[above right, font=\footnotesize, green!60!black] at (axis cs:4,0) {$(4,\ 0)$};
                                     \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(0,40)};
-                                    \node[right, font=\small, blue] at (axis cs:0,40) {$40$};
+                                    \node[right, font=\footnotesize, blue] at (axis cs:0,40) {$40$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -1058,10 +1064,10 @@
                                 ]
                                     \addplot[blue, thick, domain=0:50, samples=60, smooth] {-2*x^2 + 80*x - 600};
                                     \addplot[only marks, mark=*, mark size=2.5pt, green!60!black] coordinates {(10,0) (30,0)};
-                                    \node[above, font=\small, green!60!black] at (axis cs:10,0) {$10$};
-                                    \node[above, font=\small, green!60!black] at (axis cs:30,0) {$30$};
+                                    \node[above, font=\footnotesize, green!60!black] at (axis cs:10,0) {$10$};
+                                    \node[above, font=\footnotesize, green!60!black] at (axis cs:30,0) {$30$};
                                     \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(20,200)};
-                                    \node[above right, font=\small, red] at (axis cs:20,200) {$(20,\ 200)$};
+                                    \node[above right, font=\footnotesize, red] at (axis cs:20,200) {$(20,\ 200)$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>

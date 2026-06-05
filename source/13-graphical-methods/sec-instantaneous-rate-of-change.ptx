@@ -227,9 +227,9 @@
                 ]
                     \addplot[blue, thick, domain=0.5:4, samples=60, smooth] {0.2*x^2 + 1};
                     \addplot[green!60!black, thick, domain=0.5:3.5, samples=2] {0.8*x + 0.2};
-                    \node[right, font=\small] at (axis cs:3.5,3) {Tangent line};
+                    \node[right, font=\footnotesize] at (axis cs:3.5,3) {Tangent line};
                     \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(2,1.8)};
-                    \node[below right, font=\small] at (axis cs:2,1.8) {Point of tangency};
+                    \node[below right, font=\footnotesize] at (axis cs:2,1.8) {Point of tangency};
                 \end{axis}
                 \end{tikzpicture}
             </latex-image>
@@ -292,13 +292,13 @@
                         \addplot[blue, thick, domain=0:3.1, samples=60, smooth] {x^2};
                         \addplot[green!60!black, thick, domain=1:3, samples=2] {4*x - 4};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,4) (1,0) (3,8)};
-                        \node[above left, font=\small] at (axis cs:2,4) {$(2,4)$};
-                        \node[below left, font=\small] at (axis cs:1,0) {$(1,0)$};
-                        \node[right, font=\small] at (axis cs:3,8) {$(3,8)$};
+                        \node[above left, font=\footnotesize] at (axis cs:2,4) {$(2,4)$};
+                        \node[below left, font=\footnotesize] at (axis cs:1,0) {$(1,0)$};
+                        \node[right, font=\footnotesize] at (axis cs:3,8) {$(3,8)$};
                         \draw[dashed, black, thick] (axis cs:1,0) -- (axis cs:3,0)
-                            node[midway, below, font=\small] {$\Delta x = 2$};
+                            node[midway, below, font=\footnotesize] {$\Delta x = 2$};
                         \draw[dashed, black, thick] (axis cs:3,0) -- (axis cs:3,8)
-                            node[midway, right, font=\small] {$\Delta y = 8$};
+                            node[midway, right, font=\footnotesize] {$\Delta y = 8$};
                     \end{axis}
                     \end{tikzpicture}
                 </latex-image>
@@ -358,12 +358,12 @@
                     ]
                         \addplot[blue, thick, domain=0:10, samples=80, smooth] {100 - x^2};
                         \addplot[green!60!black, thick, domain=3:7, samples=2] {-10*x + 125};
-                        \node[right, font=\small] at (axis cs:7,55) {Tangent at $t=5$};
+                        \node[right, font=\footnotesize] at (axis cs:7,55) {Tangent at $t=5$};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(5,75) (4,85) (6,65)};
-                        \node[above right, font=\small] at (axis cs:5,75) {$(5,75)$};
+                        \node[above right, font=\footnotesize] at (axis cs:5,75) {$(5,75)$};
                         \draw[dashed, black, thick] (axis cs:4,85) -- (axis cs:6,85);
                         \draw[dashed, black, thick] (axis cs:6,85) -- (axis cs:6,65)
-                            node[midway, right, font=\small] {$\Delta V = -20$};
+                            node[midway, right, font=\footnotesize] {$\Delta V = -20$};
                     \end{axis}
                     \end{tikzpicture}
                 </latex-image>
@@ -417,11 +417,11 @@
                         \addplot[blue, thick, domain=-2.04:2.04, samples=60, smooth] {x^3};
                         \addplot[green!60!black, thick, domain=-1:2.5, samples=2] {3*x - 2};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,1) (0,-2) (2,4)};
-                        \node[right, font=\small] at (axis cs:1,1) {$(1,1)$};
+                        \node[right, font=\footnotesize] at (axis cs:1,1) {$(1,1)$};
                         \draw[dashed, black, thick] (axis cs:0,-2) -- (axis cs:2,-2)
-                            node[midway, below, font=\small] {$\Delta x = 2$};
+                            node[midway, below, font=\footnotesize] {$\Delta x = 2$};
                         \draw[dashed, black, thick] (axis cs:2,-2) -- (axis cs:2,4)
-                            node[midway, right, font=\small] {$\Delta y = 6$};
+                            node[midway, right, font=\footnotesize] {$\Delta y = 6$};
                     \end{axis}
                     \end{tikzpicture}
                 </latex-image>
@@ -483,11 +483,11 @@
                         ]
                             \addplot[blue, thick, domain=0:4, samples=80, smooth] {20*x - 5*x^2};
                             \addplot[green!60!black, thick, domain=0:2, samples=2] {10*x + 5};
-                            \node[right, font=\small] at (axis cs:2,25) {Tangent at $t=1$};
+                            \node[right, font=\footnotesize] at (axis cs:2,25) {Tangent at $t=1$};
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,15) (0,5) (2,25)};
                             \draw[dashed, black, thick] (axis cs:0,5) -- (axis cs:2,5);
                             \draw[dashed, black, thick] (axis cs:2,5) -- (axis cs:2,25)
-                                node[midway, right, font=\small] {$\Delta h = 20$};
+                                node[midway, right, font=\footnotesize] {$\Delta h = 20$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -524,10 +524,10 @@
                             \addplot[blue, thick, domain=-2.5:2.5, samples=60, smooth] {4 - x^2};
                             \addplot[green!60!black, thick, domain=-0.5:2.5, samples=2] {-2*x + 5};
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,3) (0,5) (2,1)};
-                            \node[right, font=\small] at (axis cs:1,3) {$(1,3)$};
+                            \node[right, font=\footnotesize] at (axis cs:1,3) {$(1,3)$};
                             \draw[dashed, black, thick] (axis cs:0,5) -- (axis cs:2,5);
                             \draw[dashed, black, thick] (axis cs:2,5) -- (axis cs:2,1)
-                                node[midway, right, font=\small] {$\Delta y = -4$};
+                                node[midway, right, font=\footnotesize] {$\Delta y = -4$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -565,9 +565,9 @@
                             \addplot[green!60!black, thick, domain=1:4.5, samples=2] {12*x - 8};
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(3,28) (2,16) (4,40)};
                             \draw[dashed, black, thick] (axis cs:2,16) -- (axis cs:4,16)
-                                node[midway, below, font=\small] {$\Delta t = 2$};
+                                node[midway, below, font=\footnotesize] {$\Delta t = 2$};
                             \draw[dashed, black, thick] (axis cs:4,16) -- (axis cs:4,40)
-                                node[midway, right, font=\small] {$\Delta N = 24$};
+                                node[midway, right, font=\footnotesize] {$\Delta N = 24$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -605,9 +605,9 @@
                             \addplot[green!60!black, thick, domain=-3.5:0.5, samples=2] {-2*x - 2};
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-2,2) (0,-2) (-3,4)};
                             \draw[dashed, black, thick] (axis cs:0,-2) -- (axis cs:-3,-2)
-                                node[midway, below, font=\small] {$\Delta x = -3$};
+                                node[midway, below, font=\footnotesize] {$\Delta x = -3$};
                             \draw[dashed, black, thick] (axis cs:-3,-2) -- (axis cs:-3,4)
-                                node[midway, left, font=\small] {$\Delta y = 6$};
+                                node[midway, left, font=\footnotesize] {$\Delta y = 6$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -726,10 +726,10 @@
                             grid style={line width=0.3pt, draw=gray!30},
                         ]
                             \addplot[blue, thick, domain=-2.2:2.2, samples=60, smooth] {x^3 - 3*x};
-                            \node[blue, font=\small] at (axis cs:2.4,4) {$f(x)$};
+                            \node[blue, font=\footnotesize] at (axis cs:2.4,4) {$f(x)$};
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-1,2) (1,-2)};
-                            \node[above left, font=\small] at (axis cs:-1,2) {$(-1,2)$};
-                            \node[below right, font=\small] at (axis cs:1,-2) {$(1,-2)$};
+                            \node[above left, font=\footnotesize] at (axis cs:-1,2) {$(-1,2)$};
+                            \node[below right, font=\footnotesize] at (axis cs:1,-2) {$(1,-2)$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>

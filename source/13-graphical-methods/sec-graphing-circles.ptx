@@ -111,7 +111,7 @@
                         </p>
                         <solution component="lesson-plan">
                             <image width="95%">
-                            <latex-image label="fig-activity-center">
+                            <latex-image label="fig-activity-center-redo">
                                 \begin{tikzpicture}
                                 \begin{axis}[
                                     axis lines=center,
@@ -125,10 +125,10 @@
                                     grid=both,
                                     grid style={line width=0.2pt, draw=gray!30},
                                     axis equal image,
-                                    minor tick num=1,
+                                    minor tick num=1
                                 ]
                                     \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(2,3)};
-                                    \node[above right, font=\small] at (axis cs:2,3) {$C(2,3)$};
+                                    \node[above right, font=\footnotesize] at (axis cs:2,3) {$C(2,3)$};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>      
@@ -158,7 +158,7 @@
                                     axis equal image,
                                 ]
                                     \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,3)};
-                                    \node[above right, font=\small] at (axis cs:2,3) {$C(2,3)$};
+                                    \node[above right, font=\footnotesize] at (axis cs:2,3) {$C(2,3)$};
                                     \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
                                         (7,3) (-3,3) (2,8) (2,-2) (5,7) (-1,7) (5,-1) (-1,-1)};
                                 \end{axis}
@@ -192,7 +192,7 @@
                                     \addplot[blue, thick, domain=0:360, samples=100, smooth]
                                         ({2 + 5*cos(\x)}, {3 + 5*sin(\x)});
                                     \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,3)};
-                                    \node[above right, font=\small] at (axis cs:2,3) {$C(2,3)$};
+                                    \node[above right, font=\footnotesize] at (axis cs:2,3) {$C(2,3)$};
                                     \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
                                         (7,3) (-3,3) (2,8) (2,-2) (5,7) (-1,7) (5,-1) (-1,-1)};
                                 \end{axis}
@@ -377,13 +377,13 @@
                             \addplot[blue, thick, domain=0:360, samples=100, smooth]
                                 ({4*cos(\x)}, {4*sin(\x)});
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,0)};
-                            \node[above left, font=\small] at (axis cs:0,0) {$(0,0)$};
+                            \node[above left, font=\footnotesize] at (axis cs:0,0) {$(0,0)$};
                             \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
                                 (4,0) (-4,0) (0,4) (0,-4)};
-                            \node[above left, font=\small] at (axis cs:4,0) {$(4,0)$};
-                            \node[above left, font=\small] at (axis cs:-4,0) {$(-4,0)$};
-                            \node[above left, font=\small] at (axis cs:0,4) {$(0,4)$};
-                            \node[below right, font=\small] at (axis cs:0,-4) {$(0,-4)$};
+                            \node[above left, font=\footnotesize] at (axis cs:4,0) {$(4,0)$};
+                            \node[above left, xshift=2pt, font=\footnotesize] at (axis cs:-4,0) {$(-4,0)$};
+                            \node[above left, font=\footnotesize] at (axis cs:0,4) {$(0,4)$};
+                            \node[below right, font=\footnotesize] at (axis cs:0,-4) {$(0,-4)$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>
@@ -462,7 +462,7 @@
                             \addplot[blue, thick, domain=0:360, samples=100, smooth]
                                 ({3 + 5*cos(\x)}, {-4 + 5*sin(\x)});
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(3,-4)};
-                            \node[above right, font=\small] at (axis cs:3,-4) {$(3,-4)$};
+                            \node[above right, font=\footnotesize] at (axis cs:3,-4) {$(3,-4)$};
                             \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
                                 (8,-4) (-2,-4) (3,1) (3,-9)};
                         \end{axis}
@@ -516,7 +516,7 @@
                         \addplot[blue, thick, domain=0:360, samples=100, smooth]
                             ({1 + 6*cos(\x)}, {-2 + 6*sin(\x)});
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,-2)};
-                        \node[below right, font=\small] at (axis cs:1,-2) {$(1,-2)$};
+                        \node[below right, font=\footnotesize] at (axis cs:1,-2) {$(1,-2)$};
                         \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
                             (7,-2) (-5,-2) (1,4) (1,-8)};
                     \end{axis}
@@ -615,18 +615,27 @@
             <solution>
                 <ol>
                     <li>
-                        <p>
-                            <m>x^2 + y^2 = 7^2 \Rightarrow x^2 + y^2 = 49</m>
+                        <p> We have:
+                            <md>
+                                <mrow> x^2 + y^2 \amp = 7^2 </mrow>
+                                <mrow> x^2 + y^2  \amp = 49</mrow>
+                            </md>
                         </p>
                     </li>
                     <li>
-                        <p>
-                            <m>(x - 1)^2 + (y - (-2))^2 = 6^2 \Rightarrow (x - 1)^2 + (y + 2)^2 = 36</m>
+                        <p> We have:
+                            <md>
+                                <mrow> (x - 1)^2 + (y - (-2))^2 \amp = 6^2 </mrow>
+                                <mrow> (x - 1)^2 + (y + 2)^2 \amp = 36 </mrow>
+                            </md>
                         </p>
                     </li>
                     <li>
-                        <p>
-                            <m>(x - (-3))^2 + (y - (-5))^2 = (\sqrt{10})^2 \Rightarrow (x + 3)^2 + (y + 5)^2 = 10</m>
+                        <p> We have:
+                            <md>
+                                <mrow> (x - (-3))^2 + (y - (-5))^2 \amp = (\sqrt{10})^2 </mrow>
+                                <mrow> (x + 3)^2 + (y + 5)^2 \amp = 10 </mrow>
+                            </md>
                         </p>
                     </li>
                 </ol>
@@ -725,7 +734,7 @@
                                 \addplot[blue, thick, domain=0:360, samples=100, smooth]
                                     ({-2 + 2*cos(\x)}, {2*sin(\x)});
                                 \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-2,0)};
-                                \node[above, font=\small] at (axis cs:-2,0) {$(-2,0)$};
+                                \node[above, font=\footnotesize] at (axis cs:-2,0) {$(-2,0)$};
                                 \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {
                                     (0,0) (-4,0) (-2,2) (-2,-2)};
                             \end{axis}
@@ -836,12 +845,12 @@
                                     ({2 + 4*cos(\x)}, {-3 + 4*sin(\x)});
                                 \addplot[only marks, mark=*, mark size=2pt, red] coordinates {
                                     (2,1) (2,-7) (6,-3) (-2,-3)};
-                                \node[above right, font=\small] at (axis cs:2,1) {$(2,1)$};
-                                \node[below right, font=\small] at (axis cs:2,-7) {$(2,-7)$};
-                                \node[right, font=\small] at (axis cs:6,-3) {$(6,-3)$};
-                                \node[left, font=\small] at (axis cs:-2,-3) {$(-2,-3)$};
+                                \node[above right, font=\footnotesize] at (axis cs:2,1) {$(2,1)$};
+                                \node[below right, font=\footnotesize] at (axis cs:2,-7) {$(2,-7)$};
+                                \node[right, font=\footnotesize] at (axis cs:6,-3) {$(6,-3)$};
+                                \node[left, font=\footnotesize] at (axis cs:-2,-3) {$(-2,-3)$};
                                 \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,-3)};
-                                \node[below right, font=\small] at (axis cs:2,-3) {$(2,-3)$};
+                                \node[below right, font=\footnotesize] at (axis cs:2,-3) {$(2,-3)$};
                             \end{axis}
                             \end{tikzpicture}
                         </latex-image>

@@ -206,10 +206,10 @@
                 ]
                     \addplot[thick, blue, domain=0.5:4, samples=60, smooth] {0.2*x^2 + 1};
                     \addplot[red, dashed, domain=0.5:4, samples=2] {0.7*x + 0.5};
-                    \node[right, font=\small] at (axis cs:4,3.3) {Secant line};
+                    \node[right, font=\footnotesize] at (axis cs:4,3.3) {Secant line};
                     \addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {(1,1.2) (3.5,3.45)};
-                    \node[below right, font=\small] at (axis cs:1,1.2) {$(x_1, y_1)$};
-                    \node[above left, font=\small] at (axis cs:3.5,3.45) {$(x_2, y_2)$};
+                    \node[below right, font=\footnotesize] at (axis cs:1,1.2) {$(x_1, y_1)$};
+                    \node[above left, font=\footnotesize] at (axis cs:3.5,3.45) {$(x_2, y_2)$};
                 \end{axis}
                 \end{tikzpicture}
             </latex-image>
@@ -266,12 +266,12 @@
                         \addplot[thick, blue, domain=0:3.4, samples=80, smooth] {x^2 + 2*x};
                         \addplot[red, dashed, domain=0.5:3.5, samples=2] {6*x - 3};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,3) (3,15)};
-                        \node[left, font=\small] at (axis cs:1,3) {$(1,3)$};
-                        \node[right, font=\small] at (axis cs:3,15) {$(3,15)$};
+                        \node[left, font=\footnotesize] at (axis cs:1,3) {$(1,3)$};
+                        \node[right, font=\footnotesize] at (axis cs:3,15) {$(3,15)$};
                         \draw[thick, black, dashed] (axis cs:1,3) -- (axis cs:3,3)
-                            node[midway, below, font=\small] {$\Delta x = 2$};
+                            node[midway, below, font=\footnotesize] {$\Delta x = 2$};
                         \draw[thick, black, dashed] (axis cs:3,3) -- (axis cs:3,15)
-                            node[midway, right, font=\small] {$\Delta y = 12$};
+                            node[midway, right, font=\footnotesize] {$\Delta y = 12$};
                     \end{axis}
                     \end{tikzpicture}
                 </latex-image>
@@ -329,12 +329,12 @@
                         \addplot[thick, blue, domain=-2.1:2.3, samples=60, smooth] {x^3 - 4*x};
                         \addplot[red, dashed, domain=-1.5:2.5, samples=2] {-x + 2};
                         \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-1,3) (2,0)};
-                        \node[above left, font=\small] at (axis cs:-1,3) {$(-1,3)$};
-                        \node[below left, font=\small] at (axis cs:2,0) {$(2,0)$};
+                        \node[above left, font=\footnotesize] at (axis cs:-1,3) {$(-1,3)$};
+                        \node[below left, font=\footnotesize] at (axis cs:2,0) {$(2,0)$};
                         \draw[thick, black, dashed] (axis cs:-1,3) -- (axis cs:2,3)
-                            node[midway, above, font=\small] {$\Delta x = 3$};
+                            node[midway, above, font=\footnotesize] {$\Delta x = 3$};
                         \draw[thick, black, dashed] (axis cs:2,3) -- (axis cs:2,0)
-                            node[midway, right, font=\small] {$\Delta y = -3$};
+                            node[midway, right, font=\footnotesize] {$\Delta y = -3$};
                     \end{axis}
                     \end{tikzpicture}
                 </latex-image>
@@ -389,9 +389,9 @@
                         \addplot[red, dashed, domain=1:6, samples=2] {4 + 0.7*x};
                         \addplot[only marks, mark=*, mark size=2.5pt, black] coordinates {(2,5.4) (5,7.5)};
                         \draw[thick, black, dashed] (axis cs:2,5.4) -- (axis cs:5,5.4)
-                            node[midway, below, font=\small] {$\Delta t = 3$};
+                            node[midway, below, font=\footnotesize] {$\Delta t = 3$};
                         \draw[thick, black, dashed] (axis cs:5,5.4) -- (axis cs:5,7.5)
-                            node[midway, right, font=\small] {$\Delta P = 2.1$};
+                            node[midway, right, font=\footnotesize] {$\Delta P = 2.1$};
                     \end{axis}
                     \end{tikzpicture}
                 </latex-image>
@@ -443,9 +443,9 @@
                             \addplot[red, dashed, domain=-0.3:2.3, samples=2] {6*x - 5};
                             \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,-5) (2,7)};
                             \draw[thick, black, dashed] (axis cs:0,-5) -- (axis cs:2,-5)
-                                node[midway, below, font=\small] {$\Delta x = 2$};
+                                node[midway, below, font=\footnotesize] {$\Delta x = 2$};
                             \draw[thick, black, dashed] (axis cs:2,-5) -- (axis cs:2,7)
-                                node[midway, right, font=\small] {$\Delta y = 12$};
+                                node[midway, right, font=\footnotesize] {$\Delta y = 12$};
                         \end{axis}
                         \end{tikzpicture}
                     </latex-image>

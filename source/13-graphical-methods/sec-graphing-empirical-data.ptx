@@ -90,7 +90,7 @@
                         ymin=0, ymax=32,
                         xtick={0,4,8,12,16,20,24},
                         xticklabels={{0:00},{4:00},{8:00},{12:00},{16:00},{20:00},{24:00}},
-                        x tick label style={rotate=45, anchor=east, font=\small},
+                        x tick label style={rotate=45, anchor=east, font=\footnotesize},
                         ytick={0,10,20,30},
                         tick label style={font=\footnotesize},
                         grid=both,
@@ -353,8 +353,7 @@
                     </li>
                     <li>
                         <p>
-                            For 7 hours of study (x = 3.5 on the graph), the points are clustered around the 80% mark (y = 4.0). 
-                            Therefore, we would expect a score of approximately 80%.
+                            For 7 hours of study, we look at x = 7 on the graph. The data point at (7, 85) and the overall upward trend suggest a score of approximately <m>85\%</m>.
                         </p>
                     </li>
                 </ol>
@@ -564,7 +563,7 @@
                             </latex-image>
                         </image>
                     </li>
-                    <li><p>April (211 mm) and November (150 mm).</p></li>
+                    <li><p>April (211 mm) and May (158 mm).</p></li>
                     <li><p>The <em>long rains</em> (March–May, peak April) are heavier and more prolonged. The <em>short rains</em> (October–December, peak November) are shorter and less intense.</p></li>
                     <li><p>June–September, with July the driest at 15 mm.</p></li>
                 </ol>
@@ -609,7 +608,7 @@
                                     xmin=1998, xmax=2022,
                                     ymin=28, ymax=58,
                                     xtick={2000,2005,2010,2015,2020},
-                                    x tick label style={rotate=45, anchor=east, font=\small},
+                                    x tick label style={rotate=45, anchor=east, font=\footnotesize},
                                     ytick={30,35,40,45,50,55},
                                     tick label style={font=\footnotesize},
                                     grid=both,
@@ -678,7 +677,7 @@
                                     \addplot[only marks, mark=*, mark size=2pt, blue] coordinates {
                                         (500,27)(1000,24)(1500,20)(2000,17)(2500,13)(3000,10)};
                                     \draw[dashed, red] (axis cs:1700,8) -- (axis cs:1700,18.8) -- (axis cs:0,18.8);
-                                    \node[below, red, font=\small] at (axis cs:1700,8) {$1700$ m};
+                                    \node[below, red, font=\footnotesize] at (axis cs:1700,8) {$1700$ m};
                                 \end{axis}
                                 \end{tikzpicture}
                             </latex-image>
@@ -732,7 +731,7 @@
                                     xmin=2003, xmax=2013,
                                     ymin=0, ymax=32,
                                     xtick={2004,2006,2008,2010,2012},
-                                    x tick label style={rotate=45, anchor=east, font=\small},
+                                    x tick label style={rotate=45, anchor=east, font=\footnotesize},
                                     ytick={0,5,10,15,20,25,30},
                                     tick label style={font=\footnotesize},
                                     grid=both,
