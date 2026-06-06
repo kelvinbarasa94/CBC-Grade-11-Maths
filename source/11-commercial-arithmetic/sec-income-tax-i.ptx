@@ -71,7 +71,7 @@
         <statement>
 
             <p>
-                <term>Work in Groups to:</term>
+                <term>Work in Groups</term>
             </p>
 
             <p>
@@ -110,11 +110,11 @@
             </p>
 
             <p>
-                Mr. Barasa earns a monthly salary of Ksh <m>48,000</m>.
+                Mr. Barasa manages a local sustainable dairy farm and earns a monthly salary of Ksh <m>48,000</m>.
             </p>
 
             <p>
-                In groups, determine his annual income and convert it into Kenya Pounds (K£) given that 1 K£ = Ksh 20.
+                In groups, determine his annual income and convert it into Kenya Pounds (K£) given that <m>1 \text{ K£} = \text{Ksh } 20</m>.
             </p>
 
             <p>
@@ -122,11 +122,11 @@
             </p>
 
             <p>
-                A teacher earns a basic salary of Ksh <m>35,000</m>, house allowance of Ksh <m>12,000</m>, and medical allowance of Ksh <m>3,000</m>. She contributes Ksh <m>200</m> to NSSF.
+                Teacher Wanjiku is reviewing her monthly employment contract. It lists a basic salary of Ksh <m>35,000</m>, a house allowance of Ksh <m>12,000</m>, and a medical allowance of Ksh <m>3,000</m>. Before she is taxed, she must contribute Ksh <m>200</m> to the National Social Security Fund (NSSF).
             </p>
 
             <p>
-                Learners are required to determine her monthly taxable income.
+                Work in Groups to determine her monthly taxable income.
             </p>
 
             <p>
@@ -146,7 +146,7 @@
             </p>
 
             <p>
-                After calculating tax, a worker finds that the gross tax is Ksh <m>4,500</m>. If a personal relief of Ksh <m>2,400</m> is applied, determine the net tax (PAYE).
+                 A worker calculates their gross tax and finds it comes to Ksh <m>4,500</m>. However, the government grants every Kenyan worker a financial discount called Personal Relief of Ksh <m>2,400</m> to ease the cost of living. Determine the actual Net Tax (PAYE) that will be deducted from the worker's payslip.
             </p>
 
             <p>
@@ -212,7 +212,7 @@
         </p>
 
         <p>
-            A worker's income is built from:
+            A worker's net income is built from:
         </p>
 
         <p>
@@ -221,6 +221,7 @@
                 <mrow> \text{Taxable Income} = \amp \; \text{Gross Income} - \text{Allowable Deductions} </mrow>
                 <mrow> \text{Gross Tax} = \amp \; \text{Taxable Income} \times \text{Tax Rate} </mrow>
                 <mrow> \text{Net Tax (PAYE)} = \amp \; \text{Gross Tax} - \text{Personal Relief} </mrow>
+                <mrow> \text{Net Income} = \amp \; \text{Gross Income} - \text{PAYE} </mrow>
             </md>
         </p>
 

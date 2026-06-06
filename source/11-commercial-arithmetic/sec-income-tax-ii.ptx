@@ -105,15 +105,15 @@
                 </tabular>
 
                 <p>
-                    <alert>Case Study:</alert>
+                    <alert>Case Study 1:</alert>
                 </p>
 
                 <p>
-                    A worker earns a taxable income of Ksh <m>10,000</m>. The income falls within the tax band Ksh <m>1 – 12,298</m> which is taxed at <m>10\%</m>.
+                    A worker earns a taxable income of Ksh <m>10,000</m>. The income falls within the tax band Ksh <m>1 - 12,298</m> which is taxed at <m>10\%</m>.
                 </p>
 
                 <p>
-                    In groups, learners are required to:
+                    <term>In groups</term>
                 </p>
 
                 <p>
@@ -218,10 +218,6 @@
 
         <p>
             In a progressive system, only portions of income fall into higher tax bands, meaning tax increases with income but not uniformly.
-        </p>
-
-        <p>
-            The key idea is that:
         </p>
 
         <p>
