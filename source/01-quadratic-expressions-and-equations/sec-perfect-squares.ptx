@@ -213,7 +213,7 @@
             Perfect squares arise naturally in area problems and algebraic expressions.
         </p>
         <p>
-            <term>Identities of Perfect Squares</term>
+            <term> Perfect Square identities</term>
         </p>
         <p>
             <md>
@@ -222,7 +222,7 @@
             </md>  
         </p>
         <p>
-            Perfect squares helps in simplifying expressions, solving equations, and factorisation.
+            Perfect squares are used in simplifying expressions, factorising quadratic expressions, and solving quadratic equations.
         </p>
     </insight> 
 
@@ -325,6 +325,42 @@
             </p>
         </solution>
     </example> 
+    <example>
+        <statement>
+            <p>
+                Solve the equation <m>x^2 + 10x + 16 = 0</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                To solve the equation <m>x^2 + 10x + 16 = 0</m>, we can factor the left-hand side.
+            </p>
+            <p>
+                <m>x^2 + 10x + 16 = (x + 2)(x + 8) = 0</m>
+            </p>
+            <p>
+                Therefore, <m>x = -2</m> or <m>x = -8</m>.
+            </p>
+        </solution>
+    </example>
+    <example>
+        <statement>
+            <p>
+                Solve the equation <m>x^2 + 6x + 8 = 0</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                To solve the equation <m>x^2 + 6x + 8 = 0</m>, we can factor the left-hand side.
+            </p>
+            <p>
+                <m>x^2 + 6x + 8 = (x + 2)(x + 4) = 0</m>
+            </p>
+            <p>
+                Therefore, <m>x = -2</m> or <m>x = -4</m>.
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 

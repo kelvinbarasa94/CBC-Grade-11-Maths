@@ -90,10 +90,10 @@
             <statement>
                 <p>
                      For one of the foundation designs, the relationship between the measurements leads to the equation:
-                     <m>3x^2 + 6x + 9 = 0</m>.
+                     <m>2x^2 + 7x + 3 = 0</m>.
                 </p>
                 <p>
-                    Solve <m>3x^2 + 6x + 9 = 0</m> by completing the square, clearly  showing your steps.
+                    Solve <m>2x^2 + 7x + 3 = 0</m> by completing the square, clearly  showing your steps.
                 </p>
                 
             </statement>
@@ -104,7 +104,7 @@
                     Now, you need to derive a formula that will work for any rectangular foundation. 
                 </p>
                 <p>
-                    Replace the specific numbers in the equation abovewith variables <m>a, b,</m> and <m>c</m> respectively.
+                    Replace the specific numbers in the equation above with variables <m>a, b,</m> and <m>c</m> respectively so that you have <m>ax^2 + bx + c = 0</m>.
                 </p>
                 <p>
                     Derive a formula for <m>x</m> in terms of <m>a, b,</m> and <m>c</m>.
