@@ -225,17 +225,15 @@
                 <image xml:id="img-inequality-x-greater-6" width="70%">
                     <latex-image>
                         \begin{tikzpicture}
-                            % 1. Draw the main number line axis with arrows on both ends
-                            \draw[&lt;-&gt;, thick] (2,0) -- (10,0);
+                            % 1. Draw the main number line axis with arrows on both ends and label it 'x' at the right
+                            \draw[&lt;-&gt;, thick] (2,0) -- (10,0) node[right] {$x$};
                             % 2. Draw the tick marks and the numbers below them
                             \foreach \x in {3, 4, 5, 6, 7, 8, 9} {
                                 \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
                             }
-
-                            % 3. Draw the thick line for the inequality pointing to the right
-                            \draw[->, ultra thick] (6.1,0) -- (9.5,0);
-
-                            % 4. Draw the OPEN circle at x = 6
+                            % 3. Draw the thick line starting exactly at 6
+                            \draw[-&gt;, ultra thick] (6,0) -- (9.5,0);
+                            % 4. Draw the OPEN circle at x = 6 (covers the start of the thick line)
                             \filldraw[fill=white, draw=black, thick] (6,0) circle (3pt);
                         \end{tikzpicture}
                     </latex-image>
@@ -252,7 +250,25 @@
         </statement>
         <solution>
             <p>
-                
+                <image>
+                    <latex-image xml:id="img-inequality-x-less-equal-negative-3" width="50%">
+                        \begin{tikzpicture}
+                            % 1. Draw the main number line axis with 'x' label on the right
+                            \draw[&lt;-&gt;, thick] (-7,0) -- (-1,0) node[right] {$x$};
+                            
+                            % 2. Draw the tick marks and numbers centered around -3
+                            \foreach \x in {-6, -5, -4, -3, -2} {
+                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                            }
+
+                            % 3. Draw the thick line pointing to the left, starting at -3
+                            \draw[-&gt;, ultra thick] (-3,0) -- (-6.5,0);
+
+                            % 4. Draw the CLOSED (solid black) circle at x = -3
+                            \fill[draw=black, fill=black] (-3,0) circle (3pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             </p>
         </solution>
     </example>
@@ -281,7 +297,28 @@
                 </md>
             </p>
             <p>
-                
+                Now the graphical representation is;
+            </p>
+            <p>
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % 1. Draw the main number line axis centered around 2
+                            \draw[&lt;-&gt;, thick] (-3,0) -- (5,0) node[right] {$x$};
+                            
+                            % 2. Draw the tick marks and numbers
+                            \foreach \x in {-2, -1, 0, 1, 2, 3, 4} {
+                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                            }
+
+                            % 3. Draw the thick line pointing left, starting exactly at 2
+                            \draw[-&gt;, ultra thick] (2,0) -- (-2.5,0);
+
+                            % 4. Draw the OPEN circle at x = 2 (covers the start of the thick line)
+                            \filldraw[fill=white, draw=black, thick] (2,0) circle (3pt);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             </p>
         </solution>
     </example>
@@ -301,6 +338,206 @@
             </statement>
             <answer>
                 <p>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                % 1. Draw the main number line axis centered around 1
+                                \draw[&lt;-&gt;, thick] (-3,0) -- (5,0) node[right] {$x$};
+                                
+                                % 2. Draw the tick marks and numbers
+                                \foreach \x in {-2, -1, 0, 1, 2, 3, 4} {
+                                    \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                }
+
+                                % 3. Draw the thick line pointing right, starting exactly at 1
+                                \draw[-&gt;, ultra thick] (1,0) -- (4.5,0);
+
+                                % 4. Draw the CLOSED circle at x = 1 (covers the start of the thick line)
+                                \fill[draw=black, fill=black] (1,0) circle (3pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Solve the following inequality and represent the solution set on a clearly labeled number line:
+                </p>
+                <p>
+                    <md>
+                        <mrow>3x - 5 \lt 7</mrow>
+                    </md>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>x \lt 4</m>
+                </p>
+                <p>
+                    Graphical representation;
+                </p>
+                <p>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                % 1. Draw the main number line axis centered around 4
+                                \draw[&lt;-&gt;, thick] (-2,0) -- (6,0) node[right] {$x$};
+                                
+                                % 2. Draw the tick marks and numbers
+                                \foreach \x in {-1, 0, 1, 2, 3, 4, 5} {
+                                    \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                }
+
+                                % 3. Draw the thick line pointing left, starting exactly at 4
+                                \draw[-&gt;, ultra thick] (4,0) -- (-1.5,0);
+
+                                % 4. Draw the OPEN circle at x = 4 (covers the start of the thick line)
+                                \filldraw[fill=white, draw=black, thick] (4,0) circle (3pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Solve <m>4 - 3x \le 13</m> and represent the solution graphically on a number line.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>x \ge -3</m>
+                </p>
+                <p>
+                    Graphical representation;
+                </p>
+                <p>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                % 1. Draw the main number line axis centered around -3
+                                \draw[&lt;-&gt;, thick] (-6,0) -- (2,0) node[right] {$x$};
+                                
+                                % 2. Draw the tick marks and numbers
+                                \foreach \x in {-5, -4, -3, -2, -1, 0, 1} {
+                                    \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                }
+
+                                % 3. Draw the thick line pointing right, starting exactly at -3
+                                \draw[-&gt;, ultra thick] (-3,0) -- (1.5,0);
+
+                                % 4. Draw the CLOSED circle at x = -3 (covers the start of the thick line)
+                                \fill[draw=black, fill=black] (-3,0) circle (3pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A farmer in <em>Narurui</em> wants to plant maize on a piece of land. The cost of preparing the land is KSh <m>5,000</m>, and each bag of seed planting fertilizer costs KSh <m>2,500</m>. The farmer has a maximum budget of KSh <m>20,000</m> for all these farm activities.
+                </p>
+                <p>
+                    <ol marker="a)">
+                        <li>
+                            <p>
+                                Write an inequality to represent the number of bags of seed planting fertilizer the farmer can buy without exceeding the budget.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Solve the inequality to find the permissible range of bags.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Graph the solution on a number line, clearly showing the number of bags the farmer can purchase.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="a)">
+                        <li>
+                            <p>
+                                Let <m>x</m> be the number of bags of seed planting fertilizer the farmer can buy.
+                            </p>
+                            <p>
+                                The inequality representing the budget is:
+                            </p>
+                            <p>
+                                <m>5000 + 2500x \le 20000</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Solving the inequality;
+                            </p>
+                            <p>
+                                <m>5000 + 2500x  \le 20000 \Rightarrow 2500x \le 15000 \Rightarrow x \le 6</m>.
+                            </p>
+                            <p>
+                                The farmer can buy at most <m>6</m> bags of seed planting fertilizer without exceeding the budget.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Since bags cannot be negative, the realistic domain on the number line is a bounded segment from <m>0</m> to <m>6</m> <m>(0 \le x \le 6)</m>.
+                            </p>
+                            <p>
+                                <image>
+                                    <latex-image>
+                                        \begin{tikzpicture}
+                                            % 1. Main axis
+                                            \draw[&lt;-&gt;, thick] (-1,0) -- (8,0) node[right] {$x$};
+                                            
+                                            % 2. Ticks
+                                            \foreach \x in {0, 1, 2, 3, 4, 5, 6, 7} {
+                                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                            }
+
+                                            % 3. Thick line segment from 0 to 6 (No arrowheads, bounded context)
+                                            \draw[ultra thick] (0,0) -- (6,0);
+
+                                            % 4. Closed circles at both boundary conditions
+                                            \fill[draw=black, fill=black] (0,0) circle (3pt);
+                                            \fill[draw=black, fill=black] (6,0) circle (3pt);
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A student has a maximum of <m>10</m> hours per week to dedicate to studying for their Mathematics course. If they spend <m>2</m> hours on homework and need at least <m>3</m> hours for revision, write an inequality to represent the number of hours they can spend on practice problems each week. Then solve the inequality and graph the solution on a number line.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Let <m>h</m> represent the number of hours the student can spend on practice problems each week.
+                </p>
+                <p>
+                    <m>2 + 3 + h \le 10 \Rightarrow h \le 5</m>.
+                </p>
+                <p>
+                    This means the student can spend at most <m>5</m> hours on practice problems each week.
+                </p>
+                <p>
+                    The graph of the solution on a number line would show a closed circle at <m>5</m> and shading to the left, indicating all values of <m>h</m> that are less than or equal to <m>5</m>.
+                </p>
+                <p>
                     
                 </p>
             </answer>
@@ -308,7 +545,26 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    Due to a dry spell experienced across the country, a school in <em>Muthiga</em> needs to keep its main borehole water consumption strict. The storage tank starts the week with <m>1,200\text{ litres}</m> of water. The school uses a minimum average of <m>150\text{ litres}</m> per day for basic sanitation.
+                </p>
+                <p>
+                    <ol marker="a)">
+                        <li>
+                            <p>
+                                Write down an inequality representing the amount of water remaining in the tank after <m>d</m> days.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If the school needs to ensure that at least <m>450 \text{ litres}</m> remains in the tank for emergency reserves, find the maximum number of days <m>d</m> they can safely run the borehole before refilling.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Graph the values of <m>d</m> on a number line, clearly indicating the number of days the school can continue using water at this rate.
+                            </p>
+                        </li>
+                    </ol>
                 </p>
             </statement>
             <answer>
@@ -320,12 +576,73 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    A local bakery in <em>Githunguri</em> has a daily production capacity of <m>200\text{ loaves}</m> of bread. The bakery has received an order for <m>150\text{ loaves}</m> to be delivered within the next 3 days. If the bakery can produce a maximum of <m>50\text{ loaves}</m> per day, write an inequality to represent the number of loaves they can produce each day to meet the order without exceeding their daily production capacity. Then solve the inequality and graph the solution on a number line.
                 </p>
             </statement>
             <answer>
                 <p>
                     
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    During an external test, a Grade <m>11</m> student presented the following graphic representation as his answer to the inequality <m>x \le 5</m>:
+                </p>
+                <p>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                % 1. Main axis
+                                \draw[&lt;-&gt;, thick] (-1,0) -- (7,0) node[right] {$x$};
+                                
+                                % 2. Ticks
+                                \foreach \x in {0, 1, 2, 3, 4, 5, 6} {
+                                    \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                }
+
+                                % 3. Thick line segment from 0 to 5
+                                \draw[ultra thick] (0,0) -- (5,0);
+
+                                % 4. Closed circles at both boundaries
+                                \fill[draw=black, fill=black] (0,0) circle (3pt);
+                                \fill[draw=black, fill=black] (5,0) circle (3pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </p>
+                <p>
+                    Critically analyze the student's graphic representation. Does it accurately represent the solution set of the inequality <m>x \le 5</m>? If not, explain the discrepancies and provide a corrected version of the graph.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    The student's graphic representation does not accurately represent the solution set of the inequality <m>x \le 5</m>. The graph shows a thick line segment from <m>0</m> to <m>5</m>, which suggests that the solution set includes all values of <m>x</m> between <m>0</m> and <m>5</m>. However, the inequality <m>x \le 5</m> actually includes all values of <m>x</m> that are less than or equal to <m>5</m>, which means it should include all values from negative infinity up to and including <m>5</m>.
+                </p>
+                <p>
+                    The correct graph should show a thick line extending from negative infinity to <m>5</m>, with a closed circle at <m>5</m> to indicate that <m>5</m> is included in the solution set. The portion of the graph from <m>0</m> to <m>5</m> is only a subset of the entire solution set, and the graph should reflect that by extending the line to the left indefinitely.
+                </p>
+                <p>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                % 1. Main axis
+                                \draw[&lt;-&gt;, thick] (-5,0) -- (7,0) node[right] {$x$};
+
+                                % 2. Ticks
+                                \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} {
+                                    \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                }
+
+                                % 3. Thick line segment from negative infinity to 5
+                                \draw[ultra thick] (-5,0) -- (5,0);
+
+                                % 4. Closed circle at 5
+                                \fill[draw=black, fill=black] (5,0) circle (3pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
                 </p>
             </answer>
         </exercise>
