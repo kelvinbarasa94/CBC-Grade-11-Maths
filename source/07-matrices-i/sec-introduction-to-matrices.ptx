@@ -62,7 +62,7 @@
         </dl>
     </axiom>
 
-    <activity>
+    <activity xml:id="fun-square">
         <statement>
             <p>
                 <ol marker="(a)">
@@ -89,7 +89,7 @@
                             <me>
                                 \begin{bmatrix} 
                                 2 &amp; 5 &amp; 0 &amp; 1 \\ 
-                                \xcancel{8} &amp; ⑪ &amp; \xcancel{6} &amp; \xcancel{7} \\ 
+                                \xcancel{8} &amp; &#9322; &amp; \xcancel{6} &amp; \xcancel{7} \\ 
                                 4 &amp; 7 &amp; 2 &amp; 3 \\ 
                                 6 &amp; 9 &amp; 4 &amp; 5 
                                 \end{bmatrix}
@@ -110,7 +110,7 @@
                             <me>
                                 \begin{bmatrix} 
                                 2 &amp; \xcancel{5} &amp; 0 &amp; 1 \\ 
-                                \xcancel{8} &amp; ⑪ &amp; \xcancel{6} &amp; \xcancel{7} \\ 
+                                \xcancel{8} &amp; &#9322; &amp; \xcancel{6} &amp; \xcancel{7} \\ 
                                 4 &amp; \xcancel{7} &amp; 2 &amp; 3 \\ 
                                 6 &amp; \xcancel{9} &amp; 4 &amp; 5 
                                 \end{bmatrix}
@@ -132,10 +132,10 @@
                                 One possible result is:
                                 <me>
                                 \begin{bmatrix} 
-                                \xcancel{2} &amp; \xcancel{5} &amp; \xcancel{0} &amp; ① \\ 
-                                \xcancel{8} &amp; ⑪ &amp; \xcancel{6} &amp; \xcancel{7} \\ 
-                                \xcancel{4} &amp; \xcancel{7} &amp; ② &amp; \xcancel{3} \\ 
-                                ⑥ &amp; \xcancel{9} &amp; \xcancel{4} &amp; \xcancel{5} 
+                                \xcancel{2} &amp; \xcancel{5} &amp; \xcancel{0} &amp; &#9312; \\ 
+                                \xcancel{8} &amp; &#9322; &amp; \xcancel{6} &amp; \xcancel{7} \\ 
+                                \xcancel{4} &amp; \xcancel{7} &amp; &#9313; &amp; \xcancel{3} \\ 
+                                &#9317; &amp; \xcancel{9} &amp; \xcancel{4} &amp; \xcancel{5} 
                                 \end{bmatrix}
                                 </me>
                             </p>
@@ -143,7 +143,7 @@
                     </li>
                     <li>
                         <p>
-                            Add your circled numbers together, and compare your answer with other groups. What do you notice? How did this happen!
+                            Add your circled numbers together, and compare your answer with other groups. What do you notice? Why do you think this happens?
                         </p>
                         <solution component="lesson-plan">
                             <p>
@@ -164,7 +164,7 @@
                     </li>
                     <li>
                         <p>
-                            Can you try make your own matrix which has the same property? Try a small matrix (with 2 rows and 2 columns) first to make it easier.
+                            Can you try to make your own matrix which has the same property? Try a small matrix (with 2 rows and 2 columns) first to make it easier.
                         </p>
                         <note component="lesson-plan">
                             <p>
@@ -182,14 +182,14 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
@@ -200,19 +200,20 @@
             </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+        <ul>
+            <li>
+                <p>
+                    Use the matrix from the Learner Experience to introduce the terms <term>matrix</term>, <term>row</term>, and <term>column</term>. Make sure to emphasise the difference between rows and columns, as this is a common point of confusion for learners.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Make sure Learners can distinguish between the different types of matrices mentioned here.
+                </p>
+            </li>
+        </ul>
+        
+    </axiom>
 
     <insight>
         <p>
@@ -229,23 +230,159 @@
                 </li>
                 <li>
                     <p>
-                        If a matrix has an equal number of rows and columns, like our example above, we call it a <term>square matrix</term>, since it looks like a square!
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        The <term>order</term> (or <term>size/dimension</term>) of a matrix is the number of rows and columns it has. In our example, the order of the matrix was <m>4 \times 4</m>. We always list the number of rows first, then the number of columns.
+                        The <term>order</term> (or <term>size/dimension</term>) of a matrix is the number of rows and columns it has. In our Learner Experience, the order of the matrix was <m>4 \times 4</m>. <em> We always list the number of rows first, then the number of columns. </em>
                     </p>
                 </li>
             </ul>
         </p>
+        <paragraphs>
+            <title>Types of Matrices</title>
+                <dl>
+                    <li>
+                        <title>Square Matrix</title>
+                        <p>
+                            A <term>Square Matrix</term> has an equal number of rows and columns, like our grid in the Learner Experience. We call it a <term>square matrix</term> because it looks like a square!
+                        </p>
+                    </li>
+                    <li>
+                        <title>Rectangular Matrix</title>
+                        <p>
+                            A <term>Rectangular matrix</term> is any matrix where the number of rows and columns are not equal, such as <m>M = \begin{bmatrix}1 \amp 2 \amp 3 \\ -1 \amp 0 \amp 4\end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <title>Row Matrix</title>
+                        <p>
+                            A <term>Row Matrix</term> has only one row, such as <m>R = \begin{bmatrix}1 &amp; 2 &amp; 3\end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <title>Column Matrix</title>
+                        <p>
+                            A <term>Column Matrix</term> has only one column, such as <m>C = \begin{bmatrix}4 \\ -1 \end{bmatrix}</m>. It is also called a <term>Vector</term>.
+                        </p>
+                    </li>
+                    <li>
+                        <title>Identity Matrix</title>
+                        <p>
+                            An <term>Identity Matrix</term> is a square matrix with 1s on the diagonal and 0s everywhere else, such as <m>I = \begin{bmatrix}1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix}</m>. It can come in any size. In <xref ref="multiplicative-identity"/>, we'll explore why it is called the identity matrix.
+                        </p>
+                    </li>
+                    <li>
+                        <title>Null Matrix</title>
+                        <p>
+                            A <term>Null Matrix</term> is a matrix where all entries are zero, such as <m>W = \begin{bmatrix}0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                </dl>
+        </paragraphs>
     </insight>
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
+    <example>
+        <statement>
+            <p>
+                Suppose <md>M = \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \amp 0 \end{bmatrix}</md> What type(s) of matrix is <m>M</m>?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The matrix <m>M</m> is not a square matrix, as it has 3 rows and 4 columns, thus it is a rectangular matrix. It is not a row matrix, as it has more than one row, and it is not a column matrix, as it has more than one column. It is not a null matrix, as it has some non-zero entries.
+            </p>
+            <p>
+                It is not an identity matrix: while it does have 1s on the diagonal, identity matrices must be <em>square</em>, which <m>M</m> is not.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Can you construct a matrix of the following types? If so, give an example. If not, explain why this is not possible. (Do not include 1 by 1 matrices.)
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            Square <em>and</em> null matrix
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Identity <em>and</em> column matrix
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Rectangular <em>and</em> row matrix
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Column <em>and</em> row matrix
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            Yes: <m>\begin{bmatrix}0 \amp 0 \\ 0 \amp 0\end{bmatrix}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            No: identity matrices must be square, while column matrices are rectangular (excluding 1 by 1 matrices).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Yes: <m>\begin{bmatrix}1 \amp 2\end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            No: excluding 1 by 1 matrices, row matrices have only 1 row, while column matrices have multiple rows.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </example>
+
+    <!-- Borrowed from PRECALC fs-id1165132938226: Describing Matrices -->
+    <paragraphs>
+        <title>Locating Entries of Matrices</title> 
+    </paragraphs>
+    <p>A matrix is often referred to by its size or dimensions: <m>m \times n</m> indicating <m>m</m> rows and <m>n</m> columns. Matrix entries are defined first by row and then by column. For example, to locate the entry in matrix <m>A</m> identified as <m>a_{ij},</m> we look for the entry in row <m>i,</m> column <m>j.</m> In matrix <m>A</m>, shown below, the entry in row 2, column 3 is <m>\color{blue}{a_{23}}.</m>
+    </p>
+    <p>
+      <md>A=\begin{bmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; \color{blue}{a_{23}} \\ a_{31} &amp; a_{32} &amp; a_{33} \end{bmatrix}</md>
+    </p>
+
     <!-- Add at least 3 examples -->
+
+    <example xml:id="PRECALC-93DCuqGnJd" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
+      <title>Locating Entries</title>
+      <statement>
+        <p>Let <m>A = \begin{bmatrix}2 &amp; 1 &amp; 0 &amp; 2 \\ 4 &amp; 7 &amp;3 &amp; 1 \end{bmatrix}</m>
+        </p>
+        <ol marker="(a)">
+          <li><p> What are the dimensions of matrix <m>A?</m></p>
+          </li>
+          <li><p>What are the entries at <m>a_{21}</m> and <m>a_{22}?</m></p>
+            </li>
+        </ol>
+      </statement>
+      <solution>
+        <ol marker="(a)">
+          <li>The dimensions are <m>2 \times 4</m> because there are two rows and four columns.</li>
+          <li>Entry <m>a_{21}</m> is the number at row 2, column 1, which is 4. The entry <m>a_{22}</m> is the number at row 2, column 2, which is 7. Remember, the row comes first, then the column.</li>
+        </ol>
+      </solution>
+    </example>
 
     <!-- <example>
         <statement>
@@ -278,16 +415,235 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
+        <exercise xml:id="matrix-types">
+            <statement>
+                <p>
+                    Consider the following matrices:
+                </p>
+                <p>
+                    <md>
+                        A = \begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix},
+                        \quad B = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix},
+                        \quad C = \begin{bmatrix} 3 &amp; -1 &amp; 4 \end{bmatrix}
+                    </md>
+                </p>
+                <p>
+                    <md>
+                        D = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix},
+                        \quad E = \begin{bmatrix} 7 &amp; 2 \\ -3 &amp; 1 \\ 4 &amp; 0 \end{bmatrix},
+                        \quad F = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}
+                    </md>
+                </p>
+                <ol marker="(a)">
+                    <li>
+                    <p>
+                    Which matrices are:
+                        <ol marker="(i)" cols="2">
+                            <li>
+                                <p><em>null</em> matrices?</p>
+                            </li>
+                            <li>
+                                <p><em>square</em> matrices?</p>
+                            </li>
+                            <li>
+                                <p><em>rectangular</em> matrices?</p>
+                            </li>
+                            <li>
+                                <p><em>identity</em> matrices?</p>
+                            </li>
+                            <li>
+                                <p><em>row</em> matrices?</p>
+                            </li>
+                            <li>
+                                <p><em>column</em> matrices?</p>
+                            </li>
+                        </ol>
+                    </p>
+                    </li>
+                    <li>
+                        <p>
+                            Write down the order of each of the matrices.
+                        </p>
+                    </li>
+                </ol>
+            
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                         <ol marker="(i)" cols="2">
+                            <li>
+                                <p>Null: <m>A, D</m>.</p>
+                            </li>
+                            <li>
+                                <p>Square: <m>B, F</m>.</p>
+                            </li>
+                            <li>
+                                <p>Rectangular: <m>A, C, D, E</m>.</p>
+                            </li>
+                            <li>
+                                <p>Identity: <m>B</m>.</p>
+                            </li>
+                            <li>
+                                <p>Row: <m>C</m>.</p>
+                            </li>
+                            <li>
+                                <p>Column: <m>D</m>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <ol marker="(i)" cols="2">
+                            <li>
+                                <p>
+                                    <m>A: 2 \times 3</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>B: 3 \times 3</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>C: 1 \times 3</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>D: 3 \times 1</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>E: 3 \times 2</m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>F: 2 \times 2</m>
+                                </p>
+                            </li>     
+                        </ol>
+                    </li>
+                </ol>
+               
+            </answer>
+        </exercise>
         <exercise>
-            <statement>   
-
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
+            <statement>
+                <p>
+                    Consider the matrix <m>B = \begin{bmatrix} 2 &amp; -1 &amp; 0 &amp; 5 \\ 3 &amp; 4 &amp; -2 &amp; 1 \\ 7 &amp; 0 &amp; 6 &amp; -3 \end{bmatrix}</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Find <m>b_{34}</m>.</p>
+                    </li>
+                    <li>
+                        <p>Find the entry in row 2, column 3.</p>
+                    </li>
+                    <li>
+                        <p>Extract the third column of matrix <m>B</m> and write it as its own column matrix.</p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p><m>b_{34} = -3</m>.</p>
+                        </li>
+                        <li>
+                            <p>The entry is <m>-2</m>.</p>
+                        </li>
+                        <li>
+                            <p><m>\begin{bmatrix} 0 \\ -2 \\ 6 \end{bmatrix}</m>.</p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+        <exercise xml:id="magic-square-intro">
+            <title>Magic Squares</title>
+            <statement>
+                <p>
+                    The matrix in <xref ref="fig-sidebyside-melencolia-magic-square"/> is part of a 1514 engraving by the German artist Albrecht Dürer called "Melencolia I".
+                </p>
+                <figure xml:id="fig-sidebyside-melencolia-magic-square">
+                    <caption>Melencolia I, 1514 (Public Domain)</caption>
+                    <sidebyside widths="50% 40%">
+                        <figure xml:id="fig-sidebyside-subfigure">
+                            <caption>Albrecht Dürer's engraving</caption>
+                            <image source="images/Melencolia_I.jpg">
+                                <shortdescription>The 1514 engraving Melencolia I by Albrecht Dürer</shortdescription>
+                            </image>
+                        </figure>
+                        <figure>
+                            <caption>Detail on the Magic Square</caption>
+                            <image source="images/magic_square_Melencolia_I.jpg"/>
+                        </figure>
+                    </sidebyside>
+                </figure>
+                <p>
+                    To help you transcribe the matrix, here it is written out:
+                    <md>
+                        \begin{bmatrix}16 \amp 3 \amp 2 \amp 13 \\ 5 \amp 10 \amp 11 \amp 8 \\ 9 \amp 6 \amp 7 \amp 12 \\ 4 \amp 15 \amp 14 \amp 1 \end{bmatrix}
+                    </md>
+                </p>
+                <ol markers="(a)">
+                    <li>
+                        <p>
+                            For each row, find the sum of its entries
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For each column, find the sum of its entries.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We can draw two diagonals through the square: one from the top left to the bottom right, and another from the top right to the bottom left. Find the sum of the entries in each diagonal.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            State what you observe about these sums, and define the characteristic property of a magic square based on your findings.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Construct your own <m>3 \times 3</m> magic square.
+                        </p>
+                    </li>
+                </ol>
+            <p>
+                We call matrices with this property <term>magic squares</term>. Magic squares have been found in writings from Ancient China, Japan, India, the Middle East, and Europe, and have been studied for thousands of years. See <url href="https://en.wikipedia.org/wiki/Magic_square">this Wikipedia page</url> for more information on magic squares.
+            </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>Each row sums to 34.</p>
+                        </li>
+                        <li>
+                            <p>Each column sums to 34.</p>
+                        </li>
+                        <li>
+                            <p>Each diagonal sums to 34.</p>
+                        </li>
+                        <li>
+                            <p>
+                                The sum of the entries in each row, column, and diagonal is the same. This is what makes it a magic square.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
@@ -330,4 +686,8 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+    <convention>
+        <p>This section <xref ref="sec-introduction-to-matrices" text="title"/> is adapted from "<url href="https://github.com/openstax/osbooks-college-algebra-bundle/tree/e10e6b91143fe884c7c60dc0ad82ef23e1be0aa5/modules/m49433/index.cnxml">Describing Matrices</url>" in Open STAX Precalculus 2e, used under <url href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY-4.0</url>.</p>
+    </convention>
 </section>

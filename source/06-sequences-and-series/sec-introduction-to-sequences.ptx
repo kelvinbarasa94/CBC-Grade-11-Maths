@@ -288,8 +288,10 @@
                 <row header="yes">
                     <cell>Position</cell>
                     <cell><m>1</m></cell>
+                    <cell><m>2</m></cell>
                     <cell><m>3</m></cell>
                     <cell><m>4</m></cell>
+                    <cell><m>5</m></cell>
                 </row>
                 <row>
                     <cell>Term</cell>
@@ -297,6 +299,7 @@
                     <cell><m>5</m></cell>
                     <cell><m>8</m></cell>
                     <cell><m>11</m></cell>
+                    <cell><m>?</m></cell>
                 </row>
             </tabular>
             <p>

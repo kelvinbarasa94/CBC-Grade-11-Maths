@@ -200,4 +200,501 @@
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
+
+    <p>
+        
+    </p>
+    <p>
+        When studying functions, we often look for symmetrical patterns along the coordinate axes. A function is classified as <term>even</term> if its graph is symmetric with respect to the <m>y</m>-axis, and <term>odd</term> if it is symmetric with respect to the origin. In general, all functions can be categorized as even, odd, or neither.
+    </p>
+    <exploration>
+        <title>Even and Odd Functions</title>
+        <interactive xml:id="interactive-even-odd" platform="jsxgraph" width="90%" aspect="1:1" source="jsxgraph/even-odd-functions.js">
+            <slate xml:id="jsxgraph-even-odd" surface="jsxboard" aspect="1:1"/>
+            <instructions>
+                <p>
+                    <ul>
+                        <li>
+                            <p>
+                                Drag point <m>P</m> along the blue curve. Observe the coordinates of point <m>P(x, f(x))</m> and its counterpart <m>Q(-x, f(-x))</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                With an <alert>Even Function</alert> selected, notice how the dashed line connecting <m>P</m> and <m>Q</m> is always strictly horizontal. What does this tell you about their <m>y</m>-values? Look at the live calculation in the top left corner to verify.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Click the buttons at the bottom of the graph to switch to an <alert>Odd Function</alert>. Drag point <m>P</m> again.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How does the dashed line change for an odd function? Notice that it always passes directly through the origin <m>(0,0)</m>. Verify the algebraic relationship <m>f(-x) = -f(x)</m> in the live calculation.
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </instructions>
+        </interactive>
+    </exploration>
+    <paragraphs>
+        <title>Even functions</title>
+
+        <!--  -->
+        <p>
+            From an algebraic perspective, we classify a function as <term>even</term> if substituting a negative input yields the exact same output as its positive counterpart. In formal terms, for any function <m>f</m> with a given domain, the function is even if every value of <m>x</m> satisfies the following rule:
+        </p>
+        <p>
+            <me>
+                f(-x) = f(x)
+            </me>
+        </p>
+        <figure xml:id="fig-absolute-value-even">
+            <caption>Graph of the even function <m>y = |x|</m></caption>
+            <image xml:id="tikz-absolute-value-even" width="60%">
+                <shortdescription>A V-shaped absolute value graph plotted on a Cartesian coordinate system, demonstrating perfect mirror symmetry across the y-axis.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1]
+                        % Axes
+                        \draw[-&gt;] (-4,0) -- (4,0) node[below] {x};
+                        \draw[-&gt;] (0,-0.5) -- (0,4.5) node[left] {y};
+
+                        % The Absolute Value V-shape
+                        \draw[thick] (-3,3) -- (0,0) -- (3,3);
+                        \node[below right] at (2, 2) {$f(x)=|x|$};
+
+                        % Annotation Text and Pointer
+                        \node[align=left, text width=4cm, color=gray, font=\small] at (-2.5, 3.5) {The function $f(x) = |x|$ is evenly balanced, forming a perfect mirror reflection across the vertical y-axis.};
+                        \draw[gray] (-1.5, 2.5) -- (-1.5, 1.6);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p>
+            Geometrically, this algebraic rule means the graph will fold perfectly in half along the <m>y</m>-axis. The figure above illustrates this with the absolute value function, <m>f(x) = |x|</m>. Because the distance from zero is identical whether you move in the positive or negative direction, the resulting graph is perfectly symmetrical.
+        </p>
+
+        <p>
+            Polynomials can also be even functions, provided that every term in the expression contains an even exponent. Constants (which can be thought of as having an <m>x^0</m> term) also preserve this symmetry. 
+        </p>
+
+    <figure xml:id="fig-transformed-parabola-even">
+        <caption>Graph of the even function <m>f(x) = 4 - x^2</m></caption>
+        <image xml:id="tikz-transformed-parabola-even" width="65%">
+            <shortdescription>A downward-opening parabola plotted on a Cartesian coordinate system with its vertex at the y-intercept.</shortdescription>
+            <latex-image>
+                \begin{tikzpicture}[scale=1]
+                    % Axes
+                    \draw[-&gt;] (-4,0) -- (4,0) node[below] {x};
+                    \draw[-&gt;] (0,-1.5) -- (0,5.5) node[left] {y};
+
+                    % Ticks
+                    \draw (-2, 0.1) -- (-2, -0.1) node[below left] {-2};
+                    \draw (2, 0.1) -- (2, -0.1) node[below right] {2};
+                    \draw (0.1, 4) -- (-0.1, 4) node[above right] {4};
+
+                    % The Downward Parabola
+                    \draw[thick, domain=-2.3:2.3, samples=100] plot (\x, {4 - \x*\x});
+                    
+                    % Points on the curve
+                    \filldraw[fill=white, draw=black, thick] (0, 4) circle (1.5pt) node[above left] {Vertex};
+                    \filldraw[fill=white, draw=black, thick] (2, 0) circle (1.5pt);
+                    \filldraw[fill=white, draw=black, thick] (-2, 0) circle (1.5pt);
+
+                    % Annotation Text and Pointer
+                    \node[align=left, text width=4cm, color=gray, font=\small] at (3, 4.5) {Adding a constant shifts the graph, but $f(x) = 4 - x^2$ remains an even function because the y-axis remains the line of symmetry.};
+                    \draw[gray] (1.8, 3.8) -- (1.2, 2.7);
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+    </paragraphs>
+
+    <paragraphs>
+        <title>Odd functions</title>
+        <p>
+            In contrast to even functions, an <term>odd function</term> behaves differently when the sign of the input is reversed. Algebraically, substituting a negative input into an odd function results in the exact opposite (or negative) of the original output. A function <m>f</m> is classified as odd if it satisfies the following condition for every <m>x</m> in its domain:
+        </p>
+        <p>
+            <me>
+                f(-x) = -f(x)
+            </me>
+        </p>
+
+        <figure xml:id="fig-cubic-odd">
+            <caption>Graph of the odd function <m>f(x) = x^3</m></caption>
+            <image xml:id="tikz-cubic-odd" width="60%">
+                <shortdescription>A cubic curve passing through the origin, demonstrating 180-degree rotational symmetry.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Axes
+                        \draw[-&gt;] (-3,0) -- (3,0) node[below] {x};
+                        \draw[-&gt;] (0,-3) -- (0,3) node[left] {y};
+
+                        % The Cubic Curve
+                        \draw[thick, domain=-1.4:1.4, samples=100] plot (\x, {\x*\x*\x});
+                        
+                        % Points to show symmetry
+                        \filldraw[fill=white, draw=black, thick] (1, 1) circle (1.5pt) node[right] {$(1, 1)$};
+                        \filldraw[fill=white, draw=black, thick] (-1, -1) circle (1.5pt) node[left] {$(-1, -1)$};
+                        \draw[dashed, gray] (1,0) -- (1,1) -- (0,1);
+                        \draw[dashed, gray] (-1,0) -- (-1,-1) -- (0,-1);
+
+                        % Annotation Text and Pointer
+                        \node[align=left, text width=4cm, color=gray, font=\small] at (2.5, -1.5) {The function $f(x) = x^3$ is odd. Notice how the point $(1,1)$ corresponds perfectly to $(-1,-1)$.};
+                        \draw[gray] (1.3, -1.2) -- (0.5, -0.5);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+
+        <p>
+            From a geometric standpoint, odd functions do not fold across an axis. Instead, they exhibit <term>point symmetry</term> (or rotational symmetry) about the origin, <m>(0,0)</m>. If you were to take the graph of an odd function and rotate it exactly 180 degrees around the origin, the resulting curve would perfectly overlap the original graph. 
+        </p>
+
+        <p>
+            Polynomials consisting exclusively of terms with odd exponents (like <m>x^1, x^3, x^5</m>) are classic examples. However, rotational symmetry also appears in entirely different families of functions, such as rational functions.
+        </p>
+
+        <figure xml:id="fig-rational-odd">
+            <caption>Graph of the odd rational function <m>f(x) = \frac{1}{x}</m></caption>
+            <image xml:id="tikz-rational-odd" width="65%">
+                <shortdescription>A hyperbola split into the first and third quadrants, showing origin symmetry.</shortdescription>
+                <latex-image>
+                    \begin{tikzpicture}[scale=0.8]
+                        % Axes
+                        \draw[-&gt;] (-5,0) -- (5,0) node[below] {x};
+                        \draw[-&gt;] (0,-5) -- (0,5) node[left] {y};
+
+                        % The Hyperbola (split to avoid dividing by zero)
+                        \draw[thick, domain=0.2:4.5, samples=100] plot (\x, {1/\x});
+                        \draw[thick, domain=-4.5:-0.2, samples=100] plot (\x, {1/\x});
+
+                        % Points to show symmetry
+                        \filldraw[fill=white, draw=black, thick] (2, 0.5) circle (2pt) node[above right] {$(2, 0.5)$};
+                        \filldraw[fill=white, draw=black, thick] (-2, -0.5) circle (2pt) node[below left] {$(-2, -0.5)$};
+                        
+                        % Connecting line through origin
+                        \draw[dashed, blue] (2, 0.5) -- (-2, -0.5);
+                        \filldraw[fill=blue, draw=blue] (0,0) circle (1.5pt) node[above left, text=black] {Origin};
+
+                        % Annotation Text
+                        \node[align=left, text width=4.5cm, color=gray, font=\small] at (3.5, 3.5) {The reciprocal function $f(x) = \frac{1}{x}$ is odd. Any point $(x, y)$ on the curve has a matching point $(-x, -y)$ directly across the origin.};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </paragraphs>
+    <paragraphs>
+        <title>Properties of Even and Odd Functions</title>
+        <p>
+            <ol marker="(a)">
+                <li>
+                    <p>Even function <m>+</m> even function is even.</p>
+                </li>
+                <li>
+                    <p>Odd function <m>+</m> odd function is odd.</p>
+                </li>
+                <li>
+                    <p>Even function <m>-</m> even function is even.</p>
+                </li>
+                <li>
+                    <p>Odd function <m>-</m> odd function is odd.</p>
+                </li>
+                <li>
+                    <p>The sum of an even and an odd function is usually neither even nor odd unless one of the functions is the zero function.</p>
+                </li>
+                <li>
+                    <p>Even function <m>\times</m> even function is even.</p>
+                </li>
+                <li>
+                    <p>Odd function <m>\times</m> odd function is even.</p>
+                </li>
+                <li>
+                    <p>Even function <m>\times</m> odd function is odd.</p>
+                </li>
+                <li>
+                    <p>Even function <m>\div</m> even function is even.</p>
+                </li>
+                <li>
+                    <p>Odd function <m>\div</m> odd function is even.</p>
+                </li>
+                <li>
+                    <p>Even function <m>\div</m> odd function is odd.</p>
+                </li>
+                <li>
+                    <p>The composition of two even functions is even.</p>
+                </li>
+                <li>
+                    <p>The composition of two odd functions is odd.</p>
+                </li>
+                <li>
+                    <p>If an even function is composed with an odd function (with the even function outside), the result is even.</p>
+                </li>
+            </ol>
+        </p>
+    </paragraphs>
+
+    <example>
+        <statement>
+            <p>
+                Determine whether the function <m>f(x) = -4x^2 + 7</m> is even, odd, or neither.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                To classify the function, we evaluate <m>f(-x)</m> and compare it to the original function <m>f(x)</m>. We substitute <m>-x</m> into the equation:
+            </p>
+            <p>
+                <me>f(-x) = -4(-x)^2 + 7</me>
+            </p>
+            <p>
+                Squaring a negative value results in a positive value, so <m>(-x)^2 = x^2</m>. Substituting this back into the expression yields:
+            </p>
+            <p>
+                <me>f(-x) = -4x^2 + 7</me>
+            </p>
+            <p>
+                Because the resulting expression is identical to our original function, we have shown that <m>f(-x) = f(x)</m>. Therefore, the function is even.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Classify the rational function <m>g(x) = \frac{3}{x^2 + 2}</m> as even, odd, or neither.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We test for symmetry by substituting <m>-x</m> into the function:
+            </p>
+            <p>
+                <me>g(-x) = \frac{3}{(-x)^2 + 2}</me>
+            </p>
+            <p>
+                Applying the even exponent rule to the denominator, we know that <m>(-x)^2 = x^2</m>. The expression simplifies to:
+            </p>
+            <p>
+                <me>g(-x) = \frac{3}{x^2 + 2}</me>
+            </p>
+            <p>
+                Since <m>g(-x) = g(x)</m>, the function is even.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Determine algebraically whether the polynomial function <m>h(x) = x^3 - 5x</m> is even, odd, or neither.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                To test if a function is odd, we evaluate <m>h(-x)</m> and check if it equals <m>-h(x)</m>. First, substitute <m>-x</m> into the function:
+            </p>
+            <p>
+                <me>h(-x) = (-x)^3 - 5(-x)</me>
+            </p>
+            <p>
+                A negative value raised to an odd power remains negative, so <m>(-x)^3 = -x^3</m>. Distributing the negative signs gives:
+            </p>
+            <p>
+                <me>h(-x) = -x^3 + 5x</me>
+            </p>
+            <p>
+                Next, we factor out a <m>-1</m> from the entire expression to compare it to our original function:
+            </p>
+            <p>
+                <me>h(-x) = -(x^3 - 5x)</me>
+            </p>
+            <p>
+                The expression inside the parentheses is the original function <m>h(x)</m>. Because <m>h(-x) = -h(x)</m>, the function is odd.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Show whether the rational function <m>k(x) = \frac{x^3}{2x^2 + 1}</m> is even, odd, or neither.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We begin by substituting <m>-x</m> for every instance of <m>x</m> in the function:
+            </p>
+            <p>
+                <me>k(-x) = \frac{(-x)^3}{2(-x)^2 + 1}</me>
+            </p>
+            <p>
+                Simplify the numerator using the odd exponent rule (<m>(-x)^3 = -x^3</m>) and the denominator using the even exponent rule (<m>(-x)^2 = x^2</m>):
+            </p>
+            <p>
+                <me>k(-x) = \frac{-x^3}{2x^2 + 1}</me>
+            </p>
+            <p>
+                We can factor the negative sign out to the front of the fraction:
+            </p>
+            <p>
+                <me>k(-x) = -\left(\frac{x^3}{2x^2 + 1}\right)</me>
+            </p>
+            <p>
+                Since this matches the definition <m>k(-x) = -k(x)</m>, the function is odd.
+            </p>
+        </solution>
+    </example>
+
+    <!-- Static Exercises -->
+    <exercises xml:id="exercises-even-odd-functions">
+        <exercise>
+            <statement>
+                <p>
+                    Determine whether the following functions are even, odd, or neither.
+                </p>
+                <p>
+                    <ol marker="(a)" cols="3">
+                        <li>
+                            <p>
+                                <m>f(x) = x^4 - 3x^2 + 2</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>g(x) = 2x^5 - 7x</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>h(x) = x^3 + x^2</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>k(x) = \frac{x}{x^2 + 1}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>p(x) = 5\cos(x) + x^2</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>q(x) = 4x^3 - x + 1</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>r(x) = \frac{x^2 - 9}{2x^4 + 3}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>s(x) = x^7 + 3x^3 - x</m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)" cols="3">
+                        <li>
+                            <p>Even</p>
+                        </li>
+                        <li>
+                            <p>Odd</p>
+                        </li>
+                        <li>
+                            <p>Neither</p>
+                        </li>
+                        <li>
+                            <p>Odd</p>
+                        </li>
+                        <li>
+                            <p>Even</p>
+                        </li>
+                        <li>
+                            <p>Neither</p>
+                        </li>
+                        <li>
+                            <p>Even</p>
+                        </li>
+                        <li>
+                            <p>Odd</p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Study the graphs below. For each graph, identify whether the function it represents is even, odd, or neither.
+                </p>
+                <p>
+                    <ol marker="(a)" cols="3">
+                        <li>
+                            <image xml:id="graph-exercise-even" width="100%">
+                                <shortdescription>A parabola opening upwards, symmetric about the y-axis.</shortdescription>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \draw[-&gt;, thick] (-3,0) -- (3,0) node[below] {$x$};
+                                        \draw[-&gt;, thick] (0,-2) -- (0,4) node[left] {$y$};
+                                        \draw[thick, blue, domain=-2.2:2.2, samples=50] plot (\x, {\x*\x - 1});
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                        <li>
+                            <image xml:id="graph-exercise-odd" width="100%">
+                                <shortdescription>A cubic curve passing through the origin, symmetric about the origin.</shortdescription>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \draw[-&gt;, thick] (-3,0) -- (3,0) node[below] {$x$};
+                                        \draw[-&gt;, thick] (0,-3) -- (0,3) node[left] {$y$};
+                                        \draw[thick, red, domain=-1.4:1.4, samples=50] plot (\x, {\x*\x*\x});
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                        <li>
+                            <image xml:id="graph-exercise-neither" width="100%">
+                                <shortdescription>A parabola opening upwards but shifted to the right, showing no symmetry with the y-axis or origin.</shortdescription>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \draw[-&gt;, thick] (-2,0) -- (4,0) node[below] {$x$};
+                                        \draw[-&gt;, thick] (0,-1) -- (0,4) node[left] {$y$};
+                                        \draw[thick, green!70!black, domain=-0.5:3.5, samples=50] plot (\x, {(\x-1.5)*(\x-1.5)});
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)" cols="3">
+                        <li>
+                            <p>Even</p>
+                        </li>
+                        <li>
+                            <p>Odd</p>
+                        </li>
+                        <li>
+                            <p>Neither</p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 </section>

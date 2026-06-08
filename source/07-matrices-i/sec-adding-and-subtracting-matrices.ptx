@@ -53,7 +53,7 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To motivate adding and substracting matrices with a real-world example. To explain why matrices need to be the same size for us to add and subtract them
+                   To motivate adding and subtracting matrices with a real-world example. To explain why matrices need to be the same size for us to add and subtract them.
                 </p>
             </li>
         </dl>
@@ -61,22 +61,22 @@
 
     <activity xml:id="mango-shopping">
         <statement>
-            <p> Kelvin and Esther are buying mangoes, oranges, and bananas from a store in Soy. Kevin buys 5 mangoes, 2 oranges, and 1 banana, while Esther buys 6 mangoes, 1 orange, and 3 bananas.
+            <p> Kelvin and Esther are buying mangoes, oranges, and bananas from a store in Soy. Kelvin buys 5 mangoes, 2 oranges, and 1 banana, while Esther buys 6 mangoes, 1 orange, and 3 bananas.
                 <ol marker="(a)">
                     <li>
                         <p>
                             We can represent Kelvin's purchases in a <term>matrix</term>: <me>
-                                \mathbf{K} = \begin{bmatrix} 5 &amp; 2 &amp; 1\end{bmatrix}
+                                \mathbf{K} = \begin{bmatrix} 5 \amp 2 \amp 1\end{bmatrix}
                             </me>
-                            What does the second item represent?
+                            What does the second column represent?
                         </p>
                         <solution component="lesson-plan">
                             <p>
-                                The second item represents the number of oranges Kelvin bought.
+                                The second column represents the number of oranges Kelvin bought.
                             </p>
                         </solution>
                         <note component="lesson-plan">
-                            <p> Gently guide Leaners if they struggle associating the items in a matrix with the fruits.</p>
+                            <p> Gently guide Learners if they struggle associating the items in a matrix with the fruits.</p>
                         </note>
                     </li>
                     <li>
@@ -86,7 +86,7 @@
                         <solution component="lesson-plan">
                             <p>
                                 <me>
-                                    \mathbf{E} = \begin{bmatrix} 6 &amp; 1 &amp; 3 \end{bmatrix}
+                                    \mathbf{E} = \begin{bmatrix} 6 \amp 1 \amp 3 \end{bmatrix}
                                 </me>
                             </p>
                         </solution>
@@ -95,7 +95,7 @@
                         <p>
                             We can represent both Kelvin and Esther's purchases in one matrix <m>\mathbf{S}</m>:
                             <me>
-                                \mathbf{S} = \begin{bmatrix}  5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix}
+                                \mathbf{S} = \begin{bmatrix}  5 \amp 2 \amp 1 \\ 6 \amp 1 \amp 3 \end{bmatrix}
                             </me>
                             What does the third column (the last vertical strip) represent?
                         </p>
@@ -125,7 +125,7 @@
                 <p>
                     Let's say the shop in Soy didn't have all the fruits Kelvin and Esther wanted, so they travelled to Webuye. They told us their purchases in this matrix <m>\mathbf{W}</m>:
                     <me>
-                        \mathbf{W} = \begin{bmatrix} 0 &amp; 0 &amp; 5 \\ 2 &amp; 3 &amp; 0 \end{bmatrix}
+                        \mathbf{W} = \begin{bmatrix} 0 \amp 0 \amp 5 \\ 2 \amp 3 \amp 0 \end{bmatrix}
                     </me>
                     <ol marker="(a)">
                         <li>
@@ -134,7 +134,7 @@
                             </p>
                             <solution component="lesson-plan">
                                 <p>
-                                    Kelvin bought 5 bananas, while Esther bought 2 mangoes and 3 oranges
+                                    Kelvin bought 5 bananas, while Esther bought 2 mangoes and 3 oranges.
                                 </p>
                             </solution>
                         </li>
@@ -146,7 +146,7 @@
                                 <p>
                                     Kelvin bought 5 mangoes, 2 oranges, and 6 bananas, while Esther bought 8 mangoes, 4 oranges, and 3 bananas. We can represent this in the matrix:
                                     <me>
-                                        \mathbf{S} + \mathbf{W} = \begin{bmatrix} 5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix} + \begin{bmatrix} 0 &amp; 0 &amp; 5 \\ 2 &amp; 3 &amp; 0 \end{bmatrix} = \begin{bmatrix} 5 &amp; 2 &amp; 6 \\ 8 &amp; 4 &amp; 3 \end{bmatrix}
+                                        \mathbf{S} + \mathbf{W} = \begin{bmatrix} 5 \amp 2 \amp 1 \\ 6 \amp 1 \amp 3 \end{bmatrix} + \begin{bmatrix} 0 \amp 0 \amp 5 \\ 2 \amp 3 \amp 0 \end{bmatrix} = \begin{bmatrix} 5 \amp 2 \amp 6 \\ 8 \amp 4 \amp 3 \end{bmatrix}
                                     </me>
                                 </p>
                             </solution>
@@ -158,19 +158,20 @@
                         </li>
                         <li>
                             <p>
-                                What might <m>\mathbf{K} - \mathbf{S}</m> represent? How would you compute it?
+                                What does <m>\mathbf{S} - \mathbf{W}</m> represent in this context? How would you compute it?
                             </p>
                             <solution component="lesson-plan">
                                 <p>
-                                    <m>\mathbf{K} - \mathbf{S}</m> represents the difference between Kelvin's purchases in Soy and the total purchases in Soy. We can compute it by subtracting corresponding entries of the two matrices:
-                                    <me>
-                                        \mathbf{K} - \mathbf{S} = \begin{bmatrix} 5 &amp; 2 &amp; 1 \end{bmatrix} - \begin{bmatrix} 5 &amp; 2 &amp; 1 \\ 6 &amp; 1 &amp; 3 \end{bmatrix} = \begin{bmatrix} 0 &amp; 0 &amp; 0 \\ -1 &amp; -1 &amp; -2 \end{bmatrix}
-                                    </me>
+                                    <m>\mathbf{S} - \mathbf{W}</m> represents the difference between Kelvin and Esther's purchases in Soy and their purchases in Webuye. In other words, how much more they bought in Soy. We can compute it by subtracting corresponding entries of the two matrices:
+                                    <md>
+                                        \mathbf{S} - \mathbf{W} =\begin{bmatrix} 5 \amp 2 \amp 1 \\ 6 \amp 1 \amp 3 \end{bmatrix} - \begin{bmatrix} 0 \amp 0 \amp 5 \\ 2 \amp 3 \amp 0 \end{bmatrix} = \begin{bmatrix} 5 \amp 2 \amp -4 \\ 4 \amp -2 \amp 3 \end{bmatrix}
+                                    </md>
+                                    For example, the entry in the bottom left means that Esther bought 4 more mangoes in Soy than Webuye, and the entry in the top right means that Kelvin bought 4 <em>less</em> bananas in Soy than Webuye.
                                 </p>
                             </solution>
                             <note component="lesson-plan">
                                 <p>
-                                    Ask Learners what negative entries in <m>\mathbf{K} - \mathbf{S}</m> mean.
+                                    Ask Learners what negative entries in <m>\mathbf{S} - \mathbf{W}</m> mean.
                                 </p>
                             </note>
                         </li>
@@ -188,17 +189,17 @@
                 </p>
                 <solution component="lesson-plan">
                     <p>
-                        Murunga is not right. We cannot add <m>\mathbf{M}</m> to <m>\mathbf{S} + \mathbf{W}</m> because the entries in these matrices do not correspond. The first column of <m>\mathbf{S} + \mathbf{W}</m> represents mangoes, while the only column of <m>\mathbf{M}</m> represents apples. Adding these doesn't tell us how much of each fruit Kelvin and Esther bought.
+                        Murunga is not right. We cannot add <m>\mathbf{M}</m> to <m>\mathbf{S} + \mathbf{W}</m> because the entries in these matrices do not correspond, and the matrices have different dimensions. The first column of <m>\mathbf{S} + \mathbf{W}</m> represents mangoes, while the only column of <m>\mathbf{M}</m> represents apples. Adding these doesn't tell us how much of each fruit Kelvin and Esther bought.
                     </p>
                 </solution>
                 <note component="lesson-plan">
                     <p>
-                        If students add the column vector to the first column of <m>\mathbf{S} + \mathbf{W}</m>, ask them what these columns represent. In <m>\mathbf{M}</m> it represents apples, but in <m>\mathbf{S}</m> and <m>\mathbf{W}</m> it represents mangoes. Adding these doesn't tell us how much of each fruit Kelvin and Esther bought.
+                        If learners add the column vector to the first column of <m>\mathbf{S} + \mathbf{W}</m>, ask them what these columns represent. In <m>\mathbf{M}</m> it represents apples, but in <m>\mathbf{S}</m> and <m>\mathbf{W}</m> it represents mangoes. Adding these doesn't tell us how much of each fruit Kelvin and Esther bought.
                     </p>
                     <p>
-                        Students might add the column vector as a 4th column. This is good, but encourage them to see how they've created the new matrix 
+                        Learners might add the column vector as a 4th column. This is good, but encourage them to see how they've created the new matrix 
                         <me>
-                            \mathbf{M'} = \begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 2 \\ 0 &amp; 0 &amp; 0 &amp;5 \end{bmatrix}
+                            \mathbf{M'} = \begin{bmatrix} 0 \amp 0 \amp 0 \amp 2 \\ 0 \amp 0 \amp 0 \amp5 \end{bmatrix}
                         </me>
                         and then computed <m>\mathbf{S'} + \mathbf{W'} + \mathbf{M'}</m> (where <m>\mathbf{S'}</m> and <m>\mathbf{W'}</m> have an extra column of zeroes).
                     </p>
@@ -227,7 +228,7 @@
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
                         Connect the exploration from the third shop to ideas that matrices must be the same size to be added or subtracted.
@@ -235,22 +236,42 @@
                 </li>
                 <li>
                     <p>
-                        Build on how students added matrices from the first two shops to present the general rule for adding and subtracting matrices.
+                        Build on how learners added matrices from the first two shops to present the general rule for adding and subtracting matrices.
                     </p>
                 </li>
-            </ol>
+            </ul>
         </paragraphs>
     </axiom>
 
-    <insight  original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
-        <p>We use matrices to list data or to represent systems. Because the entries are numbers, we can perform operations on matrices. We add or subtract matrices by adding or subtracting corresponding entries.</p>
-  
-        <p>In order to do this, the entries must correspond. Therefore, <em>addition and subtraction of matrices is only possible when the matrices have the same dimensions</em>. We can add or subtract a <m>3 \times 3</m> matrix and another <m>3 \times 3</m> matrix, but we cannot add or subtract a <m>2 \times 3</m> matrix and a <m>3 \times 3</m> matrix because some entries in one matrix will not have a corresponding entry in the other matrix.</p>
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        We can only add or subtract matrices of the same size (with the same number of rows <em>and</em> columns)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        To add matrices, add the corresponding entries.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        To subtract matrices, subtract the corresponding entries.
+                    </p>
+                </li>
+            </ul>
+            For example, addition works like so:
+            <md>
+                <mrow> \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \\ \color{blue}{c} \amp \color{blue}{d} \\ \color{blue}{e} \amp \color{blue}{f}\end{bmatrix} + \begin{bmatrix}\color{orange}{u} \amp \color{orange}{v} \\ \color{orange}{w} \amp \color{orange}{x} \\ \color{orange}{y} \amp \color{orange}{z}\end{bmatrix} \amp = \begin{bmatrix}\color{blue}{a}\,\color{black}{+}\,\color{orange}{u} \amp \color{blue}{b}\,\color{black}{+}\,\color{orange}{v} \\ \color{blue}{c}\,\color{black}{+}\,\color{orange}{w} \amp \color{blue}{d}\,\color{black}{+}\,\color{orange}{x} \\ \color{blue}{e}\,\color{black}{+}\,\color{orange}{y} \amp \color{blue}{f}\,\color{black}{+}\,\color{orange}{z} \end{bmatrix} </mrow>
+            </md>
+            And for subtraction:
+            <md>
+                <mrow> \begin{bmatrix}\color{blue}{a} \amp \color{blue}{b} \\ \color{blue}{c} \amp \color{blue}{d} \\ \color{blue}{e} \amp \color{blue}{f}\end{bmatrix} - \begin{bmatrix}\color{orange}{u} \amp \color{orange}{v} \\ \color{orange}{w} \amp \color{orange}{x} \\ \color{orange}{y} \amp \color{orange}{z}\end{bmatrix} \amp = \begin{bmatrix}\color{blue}{a}\,\color{black}{-}\,\color{orange}{u} \amp \color{blue}{b}\,\color{black}{-}\,\color{orange}{v} \\ \color{blue}{c}\,\color{black}{-}\,\color{orange}{w} \amp \color{blue}{d}\,\color{black}{-}\,\color{orange}{x} \\ \color{blue}{e}\,\color{black}{-}\,\color{orange}{y} \amp \color{blue}{f}\,\color{black}{-}\,\color{orange}{z} \end{bmatrix} </mrow>
+            </md>
+        </p>
     </insight>
-
-    <p>
-        If two matrices have the same size, adding and subtracting them is just like adding and subtracting real numbers!
-    </p>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -264,13 +285,13 @@
         <p>Find the sum of <m>A</m> and <m>B.</m>
         </p>
         <p>
-          <me>A=\begin{bmatrix} 4 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}\text{ and }B=\begin{bmatrix} 5 &amp; 9 \\ 0 &amp; 7 \end{bmatrix}</me>
+          <me>A=\begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}\text{ and }B=\begin{bmatrix} 5 \amp 9 \\ 0 \amp 7 \end{bmatrix}</me>
         </p>
       </statement>
       <solution>
         <p>Add corresponding entries. Add the entry in row 1, column 1, <m>a_{11},</m> of matrix <m>A</m> to the entry in row 1, column 1, <m>b_{11},</m> of <m>B.</m> Continue the pattern until all entries have been added.</p>
         <p>
-          <me>A+B=\begin{bmatrix} 4 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}+\begin{bmatrix} 5 &amp; 9 \\ 0 &amp; 7 \end{bmatrix} \\ =\begin{bmatrix} 4+5 &amp; 1+9 \\ 3+0 &amp; 2+7 \end{bmatrix} \\ =\begin{bmatrix} 9 &amp; 10 \\ 3 &amp; 9 \end{bmatrix}</me>
+          <me>A+B=\begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}+\begin{bmatrix} 5 \amp 9 \\ 0 \amp 7 \end{bmatrix} \\ =\begin{bmatrix} 4+5 \amp 1+9 \\ 3+0 \amp 2+7 \end{bmatrix} \\ =\begin{bmatrix} 9 \amp 10 \\ 3 \amp 9 \end{bmatrix}</me>
         </p>
       </solution>
     </example>
@@ -281,13 +302,13 @@
         <p>Find the difference of <m>A</m> and <m>B.</m>
         </p>
         <p>
-          <me>A=\begin{bmatrix} −2 &amp; 3 \\ 0 &amp; 1 \end{bmatrix}\text{ and }B=\begin{bmatrix} 8 &amp; 1 \\ 5 &amp; 4 \end{bmatrix}</me>
+          <me>A=\begin{bmatrix} −2 \amp 3 \\ 0 \amp 1 \end{bmatrix}\text{ and }B=\begin{bmatrix} 8 \amp 1 \\ 5 \amp 4 \end{bmatrix}</me>
         </p>
       </statement>
       <solution>
         <p>We subtract the corresponding entries of each matrix.</p>
         <p>
-          <me>A-B=\begin{bmatrix} -2 &amp; 3 \\ 0 &amp; 1 \end{bmatrix}-\begin{bmatrix} 8 &amp; 1 \\ 5 &amp; 4 \end{bmatrix} \\ =\begin{bmatrix} -2-8 &amp; 3-1 \\ 0-5 &amp; 1-4 \end{bmatrix} \\ =\begin{bmatrix} -10 &amp; 2 \\ -5 &amp; -3 \end{bmatrix}</me>
+          <me>A-B=\begin{bmatrix} -2 \amp 3 \\ 0 \amp 1 \end{bmatrix}-\begin{bmatrix} 8 \amp 1 \\ 5 \amp 4 \end{bmatrix} \\ =\begin{bmatrix} -2-8 \amp 3-1 \\ 0-5 \amp 1-4 \end{bmatrix} \\ =\begin{bmatrix} -10 \amp 2 \\ -5 \amp -3 \end{bmatrix}</me>
         </p>
       </solution>
     </example>
@@ -295,32 +316,30 @@
     <example xml:id="PRECALC-7sOLc5Uao6" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
       <title>Finding the Sum and Difference of Two 3 x 3 Matrices</title>
       <statement>
-        <p>Given <m>A</m> and <m>B:</m>
+        <p>Given <m>A</m> and <m>B</m>:
+          <md>A=\begin{bmatrix} 2 \amp −10 \amp −2 \\ 14 \amp 12 \amp 10 \\ 4 \amp −2 \amp 2 \end{bmatrix}\text{ and }B=\begin{bmatrix} 6 \amp 10 \amp −2 \\ 0 \amp −12 \amp −4 \\ −5 \amp 2 \amp −2 \end{bmatrix}</md>
         </p>
         <ol marker="(a)">
           <li>Find the sum.</li>
           <li>Find the difference.</li>
         </ol>
-        <p>
-          <me>A=\begin{bmatrix} 2 &amp; −10 &amp; −2 \\ 14 &amp; 12 &amp; 10 \\ 4 &amp; −2 &amp; 2 \end{bmatrix}\text{ and }B=\begin{bmatrix} 6 &amp; 10 &amp; −2 \\ 0 &amp; −12 &amp; −4 \\ −5 &amp; 2 &amp; −2 \end{bmatrix}</me>
-        </p>
       </statement>
       <solution>
                 <ol marker="(a)">
                     <li>
                         <p> Adding the matrices term by term: </p>
                         <md>
-                            <mrow> A+B &amp; =\begin{bmatrix} 2 &amp; −10 &amp; −2 \\ 14 &amp; 12 &amp; 10 \\ 4 &amp; −2 &amp; 2 \end{bmatrix} + \begin{bmatrix} 6 &amp; 10 &amp; −2 \\ 0 &amp; −12 &amp; −4 \\ −5 &amp; 2 &amp; −2 \end{bmatrix} </mrow>
-                            <mrow> &amp; = \begin{bmatrix} 2+6 &amp; −10+10 &amp; −2−2 \\ 14+0 &amp; 12−12 &amp; 10−4 \\ 4−5 &amp; −2+2 &amp; 2−2 \end{bmatrix} </mrow>
-                            <mrow> &amp; = \begin{bmatrix} 8 &amp; 0 &amp; −4 \\ 14 &amp; 0 &amp; 6 \\ −1 &amp; 0 &amp; 0 \end{bmatrix} </mrow>
+                            <mrow> A+B \amp =\begin{bmatrix} 2 \amp −10 \amp −2 \\ 14 \amp 12 \amp 10 \\ 4 \amp −2 \amp 2 \end{bmatrix} + \begin{bmatrix} 6 \amp 10 \amp −2 \\ 0 \amp −12 \amp −4 \\ −5 \amp 2 \amp −2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} 2+6 \amp −10+10 \amp −2−2 \\ 14+0 \amp 12−12 \amp 10−4 \\ 4−5 \amp −2+2 \amp 2−2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} 8 \amp 0 \amp −4 \\ 14 \amp 0 \amp 6 \\ −1 \amp 0 \amp 0 \end{bmatrix} </mrow>
                         </md>
                     </li>
                     <li>
                         <p> Subtracting the matrices term by term: </p>
                         <md>
-                            <mrow> A−B &amp; = \begin{bmatrix} 2 &amp; −10 &amp; −2 \\ 14 &amp; 12 &amp; 10 \\ 4 &amp; −2 &amp; 2 \end{bmatrix} - \begin{bmatrix} 6 &amp; 10 &amp; −2 \\ 0 &amp; −12 &amp; −4 \\ −5 &amp; 2 &amp; −2 \end{bmatrix} </mrow>
-                            <mrow> &amp; = \begin{bmatrix} 2−6 &amp; −10−10 &amp; −2+2 \\ 14−0 &amp; 12+12 &amp; 10+4 \\ 4+5 &amp; −2−2 &amp; 2+2 \end{bmatrix} </mrow>
-                            <mrow> &amp; = \begin{bmatrix} −4 &amp; −20 &amp; 0 \\ 14 &amp; 24 &amp; 14 \\ 9 &amp; −4 &amp; 4 \end{bmatrix} </mrow>
+                            <mrow> A−B \amp = \begin{bmatrix} 2 \amp −10 \amp −2 \\ 14 \amp 12 \amp 10 \\ 4 \amp −2 \amp 2 \end{bmatrix} - \begin{bmatrix} 6 \amp 10 \amp −2 \\ 0 \amp −12 \amp −4 \\ −5 \amp 2 \amp −2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} 2−6 \amp −10−10 \amp −2+2 \\ 14−0 \amp 12+12 \amp 10+4 \\ 4+5 \amp −2−2 \amp 2+2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} −4 \amp −20 \amp 0 \\ 14 \amp 24 \amp 14 \\ 9 \amp −4 \amp 4 \end{bmatrix} </mrow>
                         </md>
                     </li>
                 </ol>
@@ -345,34 +364,26 @@
                 <p>Add matrix <m>A</m> and matrix <m>B.</m>
                 </p>
                 <p>
-                    <me>A=\begin{bmatrix} 2 &amp; 6 \\ 1 &amp; 0 \\ 1 &amp; −3 \end{bmatrix}\text{ and }B=\begin{bmatrix} 3 &amp; −2 \\ 1 &amp; 5 \\ −4 &amp; 3 \end{bmatrix}</me>
+                    <me>A=\begin{bmatrix} 2 \amp 6 \\ 1 \amp 0 \\ 1 \amp −3 \end{bmatrix}\text{ and }B=\begin{bmatrix} 3 \amp −2 \\ 1 \amp 5 \\ −4 \amp 3 \end{bmatrix}</me>
                 </p>
             </statement>
             <solution>
                 <p>
                     <md>
-                        <mrow> A+B &amp; = \begin{bmatrix} 2 &amp; 6 \\ 1 &amp; 0 \\ 1 &amp; −3 \end{bmatrix} + \begin{bmatrix} 3 &amp; −2 \\ 1 &amp; 5 \\ −4 &amp; 3 \end{bmatrix} </mrow>
-                        <mrow> &amp; = \begin{bmatrix} 2+3 &amp; 6+(−2) \\ 1+1 &amp; 0+5 \\ 1+(−4) &amp; −3+3 \end{bmatrix} </mrow>
-                        <mrow> &amp; = \begin{bmatrix} 5 &amp; 4 \\ 2 &amp; 5 \\ −3 &amp; 0 \end{bmatrix} </mrow>
+                        <mrow> A+B \amp = \begin{bmatrix} 2 \amp 6 \\ 1 \amp 0 \\ 1 \amp −3 \end{bmatrix} + \begin{bmatrix} 3 \amp −2 \\ 1 \amp 5 \\ −4 \amp 3 \end{bmatrix} </mrow>
+                        <mrow> \amp = \begin{bmatrix} 2+3 \amp 6+(−2) \\ 1+1 \amp 0+5 \\ 1+(−4) \amp −3+3 \end{bmatrix} </mrow>
+                        <mrow> \amp = \begin{bmatrix} 5 \amp 4 \\ 2 \amp 5 \\ −3 \amp 0 \end{bmatrix} </mrow>
                     </md>
                 </p>
             </solution>
         </exercise>
      <exercise xml:id="PRECALC-TQUChsY7ZQ" original="PRECALC/modules/m49433/index.cnxml" license="CC-BY-4.0">
       <statement>
-        <p>Given matrix <m>B,</m> find <m>2B</m> where</p>
-        <p>
-          <me>B=\begin{bmatrix} 4 &amp; 1 \\ 3 &amp; 2 \end{bmatrix}</me>
-        </p>
+        <p>Given matrix <m>B = \begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}</m> find <m>B + B</m>.</p>
       </statement>
-      <hint>
-        <p>
-            Think of <m>2B</m> as <m>B + B</m>
-        </p>
-      </hint>
       <solution>
         <p>
-          <m>2B=\begin{bmatrix} 8 &amp; 2 \\ 6 &amp; 4 \end{bmatrix}</m>
+          <m>B+ B = \begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix} +  \begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix} = \begin{bmatrix} 8 \amp 2 \\ 6 \amp 4 \end{bmatrix}</m>
         </p>
       </solution>
         </exercise>
@@ -380,12 +391,12 @@
             <statement>
                 <p>Given the matrices</p>
                 <p>
-                    <me>
-                        X=\begin{bmatrix} 2 &amp; -1 &amp; 4 \\ 0 &amp; 3 &amp; 5 \end{bmatrix},\quad
-                        Y=\begin{bmatrix} 1 &amp; 6 \\ -2 &amp; 0 \\ 4 &amp; 3 \end{bmatrix},\quad
-                        W=\begin{bmatrix} 7 &amp; 2 &amp; -1 \\ -3 &amp; 5 &amp; 0 \end{bmatrix},\quad
-                        Z=\begin{bmatrix} -4 &amp; 1 \\ 5 &amp; -2 \\ 0 &amp; 8 \end{bmatrix}
-                    </me>
+                    <md>
+                        <mrow> X=\begin{bmatrix} 2 \amp -1 \amp 4 \\ 0 \amp 3 \amp 5 \end{bmatrix},\quad
+                        Y=\begin{bmatrix} 1 \amp 6 \\ -2 \amp 0 \\ 4 \amp 3 \end{bmatrix}</mrow>
+                        <mrow> W=\begin{bmatrix} 7 \amp 2 \amp -1 \\ -3 \amp 5 \amp 0 \end{bmatrix},\quad
+                        Z=\begin{bmatrix} -4 \amp 1 \\ 5 \amp -2 \\ 0 \amp 8  \end{bmatrix}</mrow>
+                    </md>
                 </p>
                 <p>Compute each expression, or state that it is not defined.</p>
                 <ol marker="(a)">
@@ -402,8 +413,8 @@
                             <p><m>X</m> and <m>W</m> are both <m>2\times 3</m>, so the sum is defined.</p>
                             <p>
                                 <me>
-                                    X+W=\begin{bmatrix} 2+7 &amp; -1+2 &amp; 4+(-1) \\ 0+(-3) &amp; 3+5 &amp; 5+0 \end{bmatrix}
-                                    =\begin{bmatrix} 9 &amp; 1 &amp; 3 \\ -3 &amp; 8 &amp; 5 \end{bmatrix}
+                                    X+W=\begin{bmatrix} 2+7 \amp -1+2 \amp 4+(-1) \\ 0+(-3) \amp 3+5 \amp 5+0 \end{bmatrix}
+                                    =\begin{bmatrix} 9 \amp 1 \amp 3 \\ -3 \amp 8 \amp 5 \end{bmatrix}
                                 </me>
                             </p>
                         </li>
@@ -414,13 +425,75 @@
                             <p><m>Y</m> and <m>Z</m> are both <m>3\times 2</m>, so the difference is defined.</p>
                             <p>
                                 <me>
-                                    Y-Z=\begin{bmatrix} 1-(-4) &amp; 6-1 \\ -2-5 &amp; 0-(-2) \\ 4-0 &amp; 3-8 \end{bmatrix}
-                                    =\begin{bmatrix} 5 &amp; 5 \\ -7 &amp; 2 \\ 4 &amp; -5 \end{bmatrix}
+                                    Y-Z=\begin{bmatrix} 1-(-4) \amp 6-1 \\ -2-5 \amp 0-(-2) \\ 4-0 \amp 3-8 \end{bmatrix}
+                                    =\begin{bmatrix} 5 \amp 5 \\ -7 \amp 2 \\ 4 \amp -5 \end{bmatrix}
                                 </me>
                             </p>
                         </li>
                         <li>
                             <p>Not defined, because <m>X</m> is <m>2\times 3</m> and <m>Y</m> is <m>3\times 2</m>.</p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <title>Adding and Subtracting Magic Squares</title>
+            <statement>
+                <p>
+                    The two matrices below are magic squares, as introduced in <xref ref="magic-square-intro"/>. That means, for each matrix, their rows, columns, and diagonals all add to the same number.
+                    <md>
+                        M = \begin{bmatrix}16 \amp 3 \amp 2 \amp 13\\ 5 \amp 10 \amp 11 \amp 8 \\ 9 \amp 6 \amp 7 \amp 12 \\ 4 \amp 15 \amp 14 \amp 1\end{bmatrix}\,\quad R = \begin{bmatrix} 16 \amp 10 \amp 20 \amp 3 \\3 \amp 19 \amp 7 \amp 19\\8 \amp 18 \amp 4 \amp 18\\ 21 \amp 1 \amp 17 \amp 9\end{bmatrix}
+                    </md>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Is <m>M + R</m> also a magic square?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What about <m>M - R</m>?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Can you explain why or why not?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Calculating <m>M + R</m>:
+                                <md>
+                                    <mrow> M + R \amp = \begin{bmatrix}16 \amp 3 \amp 2 \amp 13\\ 5 \amp 10 \amp 11 \amp 8 \\ 9 \amp 6 \amp 7 \amp 12 \\ 4 \amp 15 \amp 14 \amp 1\end{bmatrix} + \begin{bmatrix} 16 \amp 10 \amp 20 \amp 2 \\3 \amp 19 \amp 7 \amp 19\\8 \amp 18 \amp 4 \amp 18\\ 21 \amp 1 \amp 17 \amp 9\end{bmatrix}</mrow>
+                                    <mrow> \amp = \begin{bmatrix}32 \amp 13 \amp 22 \amp 15 \\ 8 \amp 29 \amp 18 \amp 27 \\17 \amp 24 \amp 11 \amp 30 \\ 25 \amp 16 \amp 31 \amp 10\end{bmatrix} </mrow>
+                                </md>
+                                Checking all the rows and columns and diagonals, they each add up to 82, and thus <m>M + R</m> is a magic square.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Calculating <m>M - R</m>:
+                                <md>
+                                    <mrow> M - R \amp = \begin{bmatrix}16 \amp 3 \amp 2 \amp 13\\ 5 \amp 10 \amp 11 \amp 8 \\ 9 \amp 6 \amp 7 \amp 12 \\ 4 \amp 15 \amp 14 \amp 1\end{bmatrix} - \begin{bmatrix} 16 \amp 10 \amp 20 \amp 2 \\3 \amp 19 \amp 7 \amp 19\\8 \amp 18 \amp 4 \amp 18\\ 21 \amp 1 \amp 17 \amp 9\end{bmatrix}</mrow>
+                                    <mrow> \amp = \begin{bmatrix}0 \amp -7 \amp -18 \amp 11 \\ 2 \amp -9 \amp 4 \amp -11 \\1 \amp -12 \amp 3 \amp -6 \\ -17 \amp 14 \amp -3 \amp -8\end{bmatrix} </mrow>
+                                </md>
+                                Checking all the rows and columns and diagonals, they each add up to <m>-14</m>, and thus <m>M - R</m> is a magic square.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Consider the first row in <m>M + R</m>. The sum of the entries is the sum of the entries in the first row of <m>M</m> (34) and the sum of the entries in the first row of <m>R</m> (48), which will give <m>34+48 = 82</m>. This will be true for every other row (and column and diagonal), since <m>M</m> and <m>R</m> are magic.
+                            </p>
+                            <p>
+                                The same logic applies to <m>M - R</m>.
+                            </p>
                         </li>
                     </ol>
                 </p>
@@ -438,7 +511,7 @@
             <tabular halign="left">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
+                    <cell>Strategy \amp Learning Experience</cell>
                     <cell></cell>
                 </row>
                 <row>

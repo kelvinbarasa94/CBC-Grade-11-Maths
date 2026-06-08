@@ -41,55 +41,68 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    20 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To discover that non-linear relationships can be transformed into straight lines by changing the variables on the axes.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Provide students with a set of data that follows a power law (e.g., $y = ax^2$). Guide them to plot $y$ against $x$ first, then $y$ against $x^2$. Ask them to compare the two graphs.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <p>
+                <alert>Work in Groups</alert>
+            </p>
+            <p>
+                A physics student measured the distance, <m>d</m> (in meters), a ball dropped from rest traveled over time, <m>t</m> (in seconds). The data is shown below:
+            </p>
+            <tabular bottom="minor" top="minor" left="minor" right="minor">
+                <row><cell>Time <m>t</m> (s)</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row>
+                <row><cell>Distance <m>d</m> (m)</cell><cell>4.9</cell><cell>19.6</cell><cell>44.1</cell><cell>78.4</cell><cell>122.5</cell></row>
+            </tabular>
+            <p>
+                <alert>What to do:</alert>
+                <ol>
+                    <li><p>Plot a graph of <m>d</m> against <m>t</m>. Describe the shape of the graph.</p></li>
+                    <li><p>Create a third row in the table for <m>t^2</m>. Calculate the values.</p></li>
+                    <li><p>Plot a graph of <m>d</m> against <m>t^2</m>. What do you notice about this graph?</p></li>
+                    <li><p>Draw a line of best fit for the second graph and find its gradient. What does this gradient represent if the relationship is <m>d = \frac{1}{2}gt^2</m>?</p></li>
+                </ol>
+            </p>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the methods of using logarithms and algebraic manipulation to linearize equations.
                 </p>
             </li>
             </dl>
@@ -99,69 +112,348 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> In the activity, students saw that plotting <m>d</m> against <m>t^2</m> turned a curve into a straight line. This is the essence of linearization: finding variables <m>Y</m> and <m>X</m> such that <m>Y = mX + c</m>.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <insight>
+        <p>
+            To convert a non-linear equation into the linear form <m>Y = mX + c</m>, we use two main techniques:
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <alert>Algebraic Manipulation:</alert> Rearranging the equation so that it matches the form <m>Y = mX + c</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Logarithmic Transformation:</alert> Applying <m>\log</m> to both sides of equations like <m>y = ax^n</m> or <m>y = ab^x</m>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+            <row>
+                <cell>Non-linear Equation</cell>
+                <cell>Transformed Linear Equation</cell>
+                <cell>Y-axis (<m>Y</m>)</cell>
+                <cell>X-axis (<m>X</m>)</cell>
+                <cell>Gradient (m)</cell>
+                <cell>Intercept (c)</cell>
+            </row>
+            <row>
+                <cell><m>y = ax^2+b</m></cell>
+                <cell><m>Y = mX + c</m></cell>
+                <cell><m>y</m> </cell>
+                <cell><m>x^2</m></cell>
+                <cell><m>a</m></cell>
+                <cell><m>b</m></cell>
+            </row>
+            <row>
+                <cell><m>y = ab^x</m></cell>
+                <cell><m>\log y = (\log b)x + \log a</m></cell>
+                <cell><m>\log y</m></cell>
+                <cell><m>x</m></cell>
+                <cell><m>\log b</m></cell>
+                <cell><m>\log a</m></cell>
+            </row>
+            <row>
+                <cell><m>y = ax^n</m></cell>
+                <cell><m>\log y = n\log x + \log a</m></cell>
+                <cell><m>\log y</m></cell>
+                <cell><m>\log x</m></cell>
+                <cell><m>n</m></cell>
+                <cell><m>\log a</m></cell>
+            </row>
+            <row>
+                <cell><m>y = \frac{a}{x} + bx</m></cell>
+                <cell><m>xy = a + bx^2</m></cell>
+                <cell><m>xy</m></cell>
+                <cell><m>x^2</m></cell>
+                <cell><m>b</m></cell>
+                <cell><m>a</m></cell>
+            </row>
+            <row>
+                    <cell><m>y = ax + \frac{b}{x}</m></cell>
+                    <cell><m>xy = ax^2 + b</m></cell>
+                    <cell><m>xy</m></cell>
+                    <cell><m>x^2</m></cell>
+                    <cell><m>a</m></cell>
+                    <cell><m>b</m></cell>
+                </row>
+                <row>
+                    <cell><m>\frac{1}{y} = ax + b</m></cell>
+                    <cell><m>\frac{1}{y} = a(x) + b</m></cell>
+                    <cell><m>\frac{1}{y}</m></cell>
+                    <cell><m>x</m></cell>
+                    <cell><m>a</m></cell>
+                    <cell><m>b</m></cell>
+                </row>
+        </tabular>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                The variables <m>x</m> and <m>y</m> are related by the equation <m>y = ax^n</m>. 
+                <ol>
+                    <li><p>Express the equation in the linear form <m>Y = mX + c</m>.</p></li>
+                    <li><p>A graph of <m>\lg y</m> against <m>\lg x</m> is a straight line with a gradient of 2 and a vertical intercept of 0.602. Calculate the values of <m>a</m> and <m>n</m>.</p></li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Take logs on both sides: <me>\lg y = \lg(ax^n) \implies \lg y = n\lg x + \lg a</me>
+                            This is in the form <m>Y = mX + c</m> where <m>Y = \lg y</m>, <m>X = \lg x</m>, <m>m = n</m>, and <m>c = \lg a</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            From the graph:
+                            <ul>
+                                <li><p>Gradient <m>m = n = 2</m>.</p></li>
+                                <li><p>Intercept <m>c = \lg a = 0.602</m>.</p></li>
+                            </ul>
+                            To find <m>a</m>, take the antilog:
+                            <me>a = 10^{0.602} \approx 4</me>
+                            Therefore, <m>n = 2</m> and <m>a = 4</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                The population <m>P</m> of a certain bacteria culture after <m>t</m> hours is modeled by <m>P = Ab^t</m>. 
+                A biologist plots <m>\ln P</m> against <m>t</m> and obtains a straight line passing through the points <m>(0, 4.605)</m> and <m>(5, 6.105)</m>. 
+                Determine the values of <m>A</m> and <m>b</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                Linearize the equation:
+                <me>\ln P = \ln(Ab^t) \implies \ln P = t\ln b + \ln A</me>
+                This is a line with <m>Y = \ln P</m>, <m>X = t</m>, gradient <m>m = \ln b</m>, and intercept <m>c = \ln A</m>.
+                <ol>
+                    <li>
+                        <p>
+                            Find the intercept <m>c</m>: From the point <m>(0, 4.605)</m>, <m>c = \ln A = 4.605</m>.
+                            <me>A = e^{4.605} \approx 100</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the gradient <m>m</m>:
+                            <me>m = \frac{6.105 - 4.605}{5 - 0} = \frac{1.5}{5} = 0.3</me>
+                            Since <m>m = \ln b = 0.3</m>:
+                            <me>b = e^{0.3} \approx 1.35</me>
+                        </p>
+                    </li>
+                </ol>
+                The constants are <m>A = 100</m> and <m>b = 1.35</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Transform the equation <m>y = \frac{x}{ax + b}</m> into a linear form. State the variables to be plotted on the axes and what the gradient and intercept represent.
+            </p>
         </statement>
         <solution>
+            <p>
+                The equation is <m>y = \frac{x}{ax + b}</m>. Take the reciprocal of both sides:
+                <me>\frac{1}{y} = \frac{ax + b}{x}</me>
+                Simplify the fraction:
+                <me>\frac{1}{y} = \frac{ax}{x} + \frac{b}{x}</me>
+                <me>\frac{1}{y} = b\left(\frac{1}{x}\right) + a</me>
+                This is in the form <m>Y = mX + c</m>:
+                <ul>
+                    <li><p>Plot <m>\frac{1}{y}</m> on the Y-axis.</p></li>
+                    <li><p>Plot <m>\frac{1}{x}</m> on the X-axis.</p></li>
+                    <li><p>The gradient <m>m</m> is <m>b</m>.</p></li>
+                    <li><p>The y-intercept <m>c</m> is <m>a</m>.</p></li>
+                </ul>
+            </p>
         </solution>
-    </example> -->
+    </example>
+    <example>
+        <statement>
+            <p>
+                The variables <m>x</m> and <m>y</m> are related by
+            </p>
+            <p>
+                <me>y = 3x^2 + 2</me>.
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Show how the equation can be written in a linear form
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            State clearly which variables should be plotted to obtain a straight-line graph
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            State the gradient and intercept of the line in terms of the constants in the equation.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The equation is already in the form <m>y = mx + c</m>, but it is not linear because of the <m>x^2</m> term. 
+                            To linearize it, we can let <m>X = x^2</m>. 
+                            Then the equation becomes <me>Y = 3X + 2</me>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            To obtain a straight-line graph, plot <m>y</m> on the Y-axis and <m>x^2</m> on the X-axis.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The gradient of the line is 3, and the intercept is 2.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
+            <statement>
+                <p>
+                    For each of the following equations, state the variables that should be plotted to obtain a straight line, and express the gradient and intercept in terms of the constants:
+                    <ol>
+                        <li><m>y = ax^2 + bx</m></li>
+                        <li><m>y = p\sqrt{x} + q</m></li>
+                        <li><m>xy = a^x + b</m> (Assume <m>b</m> is known)</li>
+                        <li><m>y = \frac{a}{x^2} + b</m></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol>
+                        <li><p>Divide by <m>x</m>: <m>\frac{y}{x} = ax + b</m>. Plot <m>\frac{y}{x}</m> vs <m>x</m>. <m>m=a, c=b</m>.</p></li>
+                        <li><p>Plot <m>y</m> vs <m>\sqrt{x}</m>. <m>m=p, c=q</m>.</p></li>
+                        <li><p><m>\lg(xy - b) = x \lg a</m>. Plot <m>\lg(xy - b)</m> vs <m>x</m>. <m>m=\lg a, c=0</m>.</p></li>
+                        <li><p>Plot <m>y</m> vs <m>\frac{1}{x^2}</m>. <m>m=a, c=b</m>.</p></li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A graph of <m>y/x</m> against <m>x</m> is a straight line passing through <m>(2, 5)</m> and <m>(6, 13)</m>. 
+                    <ol>
+                        <li><p>Find the equation of the line in terms of <m>y</m> and <m>x</m>.</p></li>
+                        <li><p>Express <m>y</m> explicitly in terms of <m>x</m>.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <ol>
+                    <li>
+                        <p>
+                            Gradient <m>m = \frac{13 - 5}{6 - 2} = \frac{8}{4} = 2</m>.
+                            Intercept: <m>5 = 2(2) + c \implies c = 1</m>.
+                            Equation: <m>\frac{y}{x} = 2x + 1</m>.
+                        </p>
+                    </li>
+                    <li><p><m>y = 2x^2 + x</m>.</p></li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Experimental data follows the law <m>y = \frac{k}{x+a}</m>. 
+                    Describe how a straight line can be obtained and how the constants <m>k</m> and <m>a</m> can be found from the graph.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Take the reciprocal: <m>\frac{1}{y} = \frac{x+a}{k} = \frac{1}{k}x + \frac{a}{k}</m>. 
+                    Plot <m>\frac{1}{y}</m> against <m>x</m>. 
+                    The gradient is <m>1/k</m>, so <m>k = 1/\text{gradient}</m>. 
+                    The intercept is <m>a/k</m>, so <m>a = \text{intercept} \times k</m>.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The relationship between two variables is given by
+                </p>
+                <p>
+                    <me>y = \frac{2}{x} + 1</me>.
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Transform the equation into a linear form
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                State clearly the graph that should be drawn to obtain a straight line
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Identify the gradient and y‑intercept of the straight‑line graph
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Take the reciprocal of both sides: <m>\frac{1}{y} = \frac{x}{2} + \frac{1}{2}</m>.
+                        </p>
+                    </li>
+                    <li><p>Plot <m>\frac{1}{y}</m> against <m>x</m>.</p></li>
+                    <li><p>Gradient: <m>\frac{1}{2}</m>; y‑intercept: <m>\frac{1}{2}</m>.</p></li>
+                </ol>
+            </answer>
+        </exercise>
+    </exercises>
 
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
-
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -170,32 +462,28 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Focus on algebraic transformations where logs are not required first (e.g., <m>y = ax^2 + b</m>). Provide a template table for <m>Y</m> and <m>X</m>.
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities, moving from discovery to formal log-based transformations.</line>
                     </cell>
-                    <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Provide complex forms like <m>y = \frac{x}{ax + b}</m> and ask them to determine the linearizing variables (e.g., <m>\frac{1}{y} = a + \frac{b}{x}</m>).
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

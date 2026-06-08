@@ -279,7 +279,7 @@
     <example>
         <statement>
             <p>
-                Find the equation of a circle with center <m>(0, 0)</m> and radius <m>4</m> units.
+                Find the equation of a circle with center <m>(0, 0)</m> and radius <m>4</m> units. Sketch its graph.
             </p>
         </statement>
         <solution>
@@ -291,9 +291,7 @@
                 <me>x^2 + y^2 = 4^2</me>
                 <me>x^2 + y^2 = 16</me>
             </p>
-            <figure xml:id="fig-example-origin">
-                <caption>Circle <m>x^2 + y^2 = 16</m></caption>
-                <image xml:id="img-example-origin">
+                <image xml:id="img-example-origin" width="40%">
                     <latex-image>
                         \begin{tikzpicture}
                             \draw[help lines, color=gray!30, step=1] (-5,-5) grid (5,5);
@@ -308,7 +306,6 @@
                         \end{tikzpicture}
                     </latex-image>
                 </image>
-            </figure>
         </solution>
     </example>
 
@@ -422,7 +419,7 @@
                 
             </image>
             <p>
-                <ol marker="(a)" cols="4">
+                <ol marker="(a)" cols="2">
                     <li>
                         <p>
                             <m> y^2 = x^2 + 6^2 </m>
