@@ -42,31 +42,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To conceptualize the real-world meaning of asset appreciation and discover how to calculate percentage increase based on an initial principal value.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Organize learners into diverse groups of <m>2-4</m>. Circulate around the room to ensure groups differentiate between assets that grow in value (like land) and those that lose value (like vehicles). Guide them gently through the percentage calculations without explicitly revealing the compound appreciation formula.
+                </p>
+            </li>
+        </dl>
+    </axiom>
         <activity>
             <statement>
                 <p>
@@ -153,22 +151,20 @@
             </statement>
         </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize group findings into the generalized multi-year appreciation formula, making connections to compound interest structures.
                 </p>
             </li>
             </dl>
@@ -178,12 +174,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Highlight the Kisumu vs. Nairobi land problem. Show learners that while both plots grew by an absolute value of Ksh <m>600,000</m>, the Kisumu plot had a higher percentage rate of appreciation (<m>30\%</m> vs <m>10\%</m>). This demonstrates why percentages are used to compare financial growth equitably.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Algebraic Transition:</alert> Lead the class through factoring out the principal <m>P</m> to move from <m>P + \frac{R}{100}P</m> to the factored form <m>P\left(1 + \frac{R}{100}\right)</m>, then logically extend this exponentiation to year <m>T</m>.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
     <insight>
         <p>
             The increase in value of an asset over time is referred to as <term>Appreciation</term>.
@@ -256,51 +257,75 @@
         </solution>
     </example>
     <example>
+        <title>Finding the Original Value (Principal)</title>
         <statement>
             <p>
-                A company's currently valued is <m>4,200,000</m> Shillings. It has been appreciating at a rate of <m>8 \%</m> per year for the last <m>5</m> years. How much was the original value?
+                A company's current value is <m>4,200,000</m> Shillings. It has been appreciating at a rate of <m>8\%</m> per year for the last <m>5</m> years. How much was the original value?
             </p>
         </statement>
         <solution>
             <p>
+                <alert>Identify the given values:</alert>
                 <md>
-                    <mrow> A \amp =\; 4,200,000 \;\ text{shillings} </mrow>
-                    <mrow> R \amp = \; 8 \% \;\text{P.A}</mrow>
-                    <mrow> T \amp = \;  5\;\text{years}</mrow>
-                    <mrow> P \amp = \; ?</mrow>
+                    <mrow> A \amp =\; 4,200,000 \text{ Shillings} </mrow>
+                    <mrow> R \amp = \; 8\% \text{ p.a.} </mrow>
+                    <mrow> T \amp = \; 5 \text{ years} </mrow>
+                    <mrow> P \amp = \; ? </mrow>
                 </md>
-                
             </p>
             <p>
-                Making <m>P</m> the subject in the appreciation formula, <m> P = \frac{A}{1 + \frac{R}{100}^T}</m> 
+                Make <m>P</m> the subject in the appreciation formula: 
+                <me>P = \frac{A}{\left(1 + \frac{R}{100}\right)^T}</me>
             </p>
             <p>
+                Substitute the values into the adjusted formula:
                 <md>
-                    <mrow> P \amp = \; 4,200,000</mrow>
+                    <mrow> P \amp = \; \frac{4,200,000}{\left(1 + \frac{8}{100}\right)^5} </mrow>
+                    <mrow> \amp = \; \frac{4,200,000}{(1.08)^5} </mrow>
+                    <mrow> \amp = \; \frac{4,200,000}{1.46933} </mrow>
+                    <mrow> \amp \approx \; 2,858,448 \text{ Shillings} </mrow>
                 </md>
-                
+                The original value of the company 5 years ago was approximately <m>2,858,448</m> Shillings.
             </p>
         </solution>
     </example>
+
     <example>
+        <title>Calculating the Annual Appreciation Rate</title>
         <statement>
             <p>
                 A house was bought for <m>120,000</m> Shillings and sold <m>10</m> years later for <m>311,200</m> Shillings. At what annual rate did the house appreciate?
             </p>
         </statement>
-        <answer>
+        <solution>
             <p>
-                From the appreciation formula 
-            </p>
-            <p>
+                <alert>Identify the given values:</alert>
                 <md>
-                    <mrow> R \amp = \; 100 \times \left( \sqrt[T]{\frac{A}{P}} - 1\right)</mrow>
-                    <mrow> \amp = \; 100 \times \left(\sqrt[10]{\frac{311,200}{120,000}} - 1\right)</mrow>
-                    <mrow> \amp = \; 10 \% </mrow>
+                    <mrow> P \amp =\; 120,000 \text{ Shillings} </mrow>
+                    <mrow> A \amp = \; 311,200 \text{ Shillings} </mrow>
+                    <mrow> T \amp = \; 10 \text{ years} </mrow>
+                    <mrow> R \amp = \; ? </mrow>
                 </md>
-                
             </p>
-        </answer>
+            <p>
+                Rearrange the appreciation formula to solve for <m>R</m>:
+                <md>
+                    <mrow> \frac{A}{P} \amp = \; \left(1 + \frac{R}{100}\right)^T </mrow>
+                    <mrow> \sqrt[T]{\frac{A}{P}} \amp = \; 1 + \frac{R}{100} </mrow>
+                    <mrow> R \amp = \; 100 \times \left( \sqrt[T]{\frac{A}{P}} - 1\right) </mrow>
+                </md>
+            </p>
+            <p>
+                Substitute the given values into your derived equation:
+                <md>
+                    <mrow> R \amp = \; 100 \times \left(\sqrt[10]{\frac{311,200}{120,000}} - 1\right)</mrow>
+                    <mrow> \amp = \; 100 \times \left(\sqrt[10]{2.59333} - 1\right)</mrow>
+                    <mrow> \amp = \; 100 \times ((1.1000) - 1)</mrow>
+                    <mrow> \amp = \; 10\% \text{ per annum}</mrow>
+                </md>
+                The house appreciated at an annual rate of <m>10\%</m>.
+            </p>
+        </solution>
     </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
@@ -377,7 +402,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -388,31 +413,34 @@
                     <cell>Strategy &amp; Learning Experience</cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide concrete numerical examples using familiar contexts (e.g. land, phones, livestock). Guide learners step-by-step through identifying original value, new value, and increase before introducing percentage change. Emphasise the meaning of “increase” as a difference between two values rather than a formula.
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        Learners work in groups to compute appreciation using real data from the activity, calculate percentage increase, and interpret results in context. Encourage them to express appreciation as <m>A = P\left(1 + \frac{R}{100}\right)</m> and explain each component.
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Extend learning by comparing appreciation and depreciation models across multiple years, and exploring how repeated appreciation leads to exponential growth. Challenge learners to generalize the model to multi-year prediction and compare different rates of appreciation across assets.
                     </cell>
                     <cell></cell>
                 </row>
+
             </tabular>
         </table>
-    </axiom> -->
-
+    </axiom>
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>

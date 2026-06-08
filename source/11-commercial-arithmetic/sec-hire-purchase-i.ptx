@@ -42,31 +42,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To understand the operational mechanics of consumer credit hire-purchase plans, calculate total costs over time, and discover the hidden carrying charges.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Group learners into balanced teams of <m>3</m> or <m>4</m>. Guide them through expanding the local asset environment table (e.g., boda-boda motorcycles, solar power kits, smartphones). In the television scenario, ensure learners do not mistake the cash price as part of the operational tracking accumulation; emphasize that the hire purchase price is strictly built by compiling the initial deposit and all monthly installments together.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
     <activity>
         <statement>
@@ -148,22 +146,20 @@
         </statement>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize algebraic operational structures for cash price comparisons, determine interest carrying charges, and evaluate financial rates of interest over fractional terms.
                 </p>
             </li>
             </dl>
@@ -173,14 +169,22 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Use the television scenario to clarify terms. Show that while the cash price is Ksh <m>40,000</m>, buying via hire purchase sets the cost to Ksh <m>10,000 + (2,500 \times 14) = 45,000</m>. This reveals an extra cost of Ksh <m>5,000</m>, which functions as the carrying charge or hidden interest fee for the convenience of deferred payments.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Formula Formulation:</alert> Transition learners from raw descriptive terms into clean algebraic shorthand parameters. Define the fundamental mathematical relationship: Hire Purchase Price equals Deposit plus total installments (<m>H = D + xn</m>). Define carrying charges as the difference between credit and spot pricing (<m>I = H - P</m>).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Financial Awareness:</alert> Frame this mathematical foundation within realistic socio-economic behaviors. Emphasize that long repayment horizons reduce individual monthly impacts but dramatically expand the overall carrying charge percentage paid to retailers.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    </axiom>
 
     <insight>
         <p>
@@ -355,41 +359,36 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
-
         <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
+            <title>Differentiation Strategies for Hire Purchase</title>
+            <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
+                </row>
+                <row bottom="minor">
+                    <cell><alert>Support (Struggling)</alert></cell>
+                    <cell>
+                        Provide explicit scaffolded structural equations: <m>H = D + (x \times n)</m>. Guide learners through step-by-step extraction where they write down the values of deposit, installment size, and duration before starting computations.
+                    </cell>
+                </row>
+                <row bottom="minor">
+                    <cell><alert>Core (On-Level)</alert></cell>
+                    <cell>
+                        Task learners with computing compound hire purchase equations, evaluating carrying charges, and solving dynamic multi-step word problems involving real-world asset items like household electronics and appliances.
+                    </cell>
                 </row>
                 <row>
-                    <cell>Struggling Learners (Support)</cell>
+                    <cell><alert>Challenge (Advanced)</alert></cell>
                     <cell>
-                        XXXX
+                        Introduce alternative reverse calculation tasks. Challenge learners to derive initial deposit boundaries, individual installment sizes, or term durations when given total hire purchase cost thresholds or comparative market parameters.
                     </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
