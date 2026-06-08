@@ -403,7 +403,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -414,31 +414,45 @@
                     <cell>Strategy &amp; Learning Experience</cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        <line>Provide highly guided instruction using step-by-step breakdown of hire purchase concepts (deposit, balance, total cost).</line>
+                        <line>Use simplified numbers and familiar real-life items such as smartphones, bicycles, or radios to build understanding.</line>
+                        <line>Teacher models each step before learners attempt similar questions.</line>
+                        <line>Provide structured worksheets with hints and partially completed solutions.</line>
+                        <line>Allow use of calculators and peer support to reduce cognitive load.</line>
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>Learners independently apply formulas such as <m>H = D + x \times n</m> and interest-based examples to solve hire purchase problems.</line>
+                        <line>Work through structured group activities involving calculation of total cost, interest, and comparison with cash price.</line>
+                        <line>Interpret word problems and translate them into mathematical expressions.</line>
+                        <line>Engage in discussion to justify answers and compare different repayment options.</line>
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        <line>Solve extended problems involving compound interest, reducing balance methods, and mixed financial examples.</line>
+                        <line>Analyze and compare different credit systems (hire purchase vs saving vs bank loan).</line>
+                        <line>Investigate how changes in interest rate or repayment period affect total cost using mathematical reasoning.</line>
+                        <line>Justify the most economical purchasing method using calculations and real-life financial reasoning.</line>
+                        <line>Extend learning by creating their own hire purchase scenarios for peers to solve.</line>
                     </cell>
                     <cell></cell>
                 </row>
+
             </tabular>
         </table>
-    </axiom> -->
-
+    </axiom>
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>

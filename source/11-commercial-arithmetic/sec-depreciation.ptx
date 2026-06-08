@@ -320,7 +320,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -331,30 +331,34 @@
                     <cell>Strategy &amp; Learning Experience</cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Support learners by using tangible examples of value loss (e.g. motorbikes, phones, school vans). Guide them step-by-step through finding the decrease first, then expressing it as a fraction of the original value before introducing percentage decrease. Emphasise understanding “loss of value” as a difference between two quantities.
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        Learners work with real depreciation scenarios from the activity, calculate yearly value reduction, and express depreciation using <m>A = P\left(1 - \frac{R}{100}\right)^T</m>. Encourage interpretation of each step as repeated percentage reduction over time.
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Extend learning by comparing depreciation across different time intervals (monthly vs yearly) and analyzing how compounding loss accelerates value reduction. Challenge learners to compare depreciation and appreciation models and explain their symmetry and differences in exponential form.
                     </cell>
                     <cell></cell>
                 </row>
+
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

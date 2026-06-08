@@ -149,35 +149,50 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
-            </li>
-            </dl>
-        </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Differentiation</title>
+
+        <table>
+            <title>Differentiation</title>
+            <tabular halign="left">
+                <row header="yes" bottom="minor">
+                    <cell>Learner Group</cell>
+                    <cell>Strategy &amp; Learning Experience</cell>
+                </row>
+
+                <row>
+                    <cell>Struggling Learners (Support)</cell>
+                    <cell>
+                        Use guided step-by-step computation of total instalments and deposit.
+                        Provide structured templates:
+                        H = Deposit <m>+</m> (Instalment <m>\times</m> Number of months).
+                        Focus on identifying values from the question before calculation.
+                        Use simple numbers first.
+                    </cell>
+                </row>
+
+                <row>
+                    <cell>On-Level Learners (Core)</cell>
+                    <cell>
+                        Work through full hire purchase problems including carrying charge and percentage increase.
+                        Compare cash price vs hire purchase price.
+                        Solve multi-step word problems from real-life contexts (TVs, phones, appliances).
+                    </cell>
+                </row>
+
+                <row>
+                    <cell>Advanced Learners (Challenge)</cell>
+                    <cell>
+                        Extend to reverse problems:
+                        find deposit, monthly instalment, or number of months given total cost.
+                        Analyse financial implication of hire purchase vs cash purchase.
+                        Compare different HP plans and determine the most economical option.
+                    </cell>
+                </row>
+
+            </tabular>
+        </table>
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 

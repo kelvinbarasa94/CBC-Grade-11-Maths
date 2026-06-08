@@ -178,11 +178,7 @@
         </statement>
      </activity>
 
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
+    
     <!-- [LP] Add guidance on structured lesson plan-->
 
     <!-- <axiom component="lesson-plan">
@@ -215,10 +211,7 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
+    
     <insight>
         <p>
             From the learner experience we can get the amount by 
@@ -546,54 +539,88 @@
         </exercise>
     </exercises>
 
-    <!-- <exercises>
-        <exercise>
-            <statement>   
+    <axiom component="lesson-plan">
+        <title>Structured Instruction</title>
+        <p>
+            <dl>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>
+                        10 minutes
+                    </p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To formalize the transition from simple interest to compound interest and connect repeated growth to exponential form.
+                    </p>
+                </li>
+            </dl>
+        </p>
 
-            </statement>   
-            <solution>
+        <paragraphs>
+            <title>Key Takeaways &amp; Teacher Connection</title>
+            <ul>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+                <li>
+                    <p>
+                        Begin by referring to the group activity: learners compared Option A (simple interest) and Option B (interest-on-interest).
+                        Emphasise that both start with the same principal and rate, but differ in how interest is treated over time.
+                    </p>
+                </li>
 
-    <!-- [LP] Add information on how to differentiate  -->
+                <li>
+                    <p>
+                        Highlight the key observation from Option A: interest is calculated on the same original amount each year.
+                        This produces a constant yearly increase, forming a linear pattern.
+                    </p>
+                </li>
 
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+                <li>
+                    <p>
+                        Contrast this with Option B: after each year, the principal changes because interest is added to it.
+                        This means the base for the next calculation is always increasing.
+                    </p>
+                </li>
 
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+                <li>
+                    <p>
+                        Guide learners to express this repeated growth step-by-step:
+                        after year 1 the amount becomes <m>P(1+r)</m>, after year 2 it becomes <m>P(1+r)(1+r)</m>, and so on.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Emphasise the emerging pattern: multiplication by <m>(1+r)</m> repeats each year, leading to a power structure:
+                        <m>P(1+r)^T</m>.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Without formal derivation pressure, help learners interpret the expression:
+                        each factor of <m>(1+r)</m> represents one full growth cycle of “adding interest then reinvesting it”.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Connect back to the real context (investment decision in Kisumu youth group):
+                        compound interest grows faster over time because each year builds on a larger base.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Teacher emphasis: ensure learners can explain *why* the exponent appears before introducing the general formula formally.
+                        Focus on pattern recognition, not memorisation.
+                    </p>
+                </li>
+
+            </ul>
+        </paragraphs>
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

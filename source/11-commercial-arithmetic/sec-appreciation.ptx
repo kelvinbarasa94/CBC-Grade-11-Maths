@@ -376,7 +376,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -387,31 +387,34 @@
                     <cell>Strategy &amp; Learning Experience</cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide concrete numerical examples using familiar contexts (e.g. land, phones, livestock). Guide learners step-by-step through identifying original value, new value, and increase before introducing percentage change. Emphasise the meaning of “increase” as a difference between two values rather than a formula.
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        Learners work in groups to compute appreciation using real data from the activity, calculate percentage increase, and interpret results in context. Encourage them to express appreciation as <m>A = P\left(1 + \frac{R}{100}\right)</m> and explain each component.
                     </cell>
                     <cell></cell>
                 </row>
+
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Extend learning by comparing appreciation and depreciation models across multiple years, and exploring how repeated appreciation leads to exponential growth. Challenge learners to generalize the model to multi-year prediction and compare different rates of appreciation across assets.
                     </cell>
                     <cell></cell>
                 </row>
+
             </tabular>
         </table>
-    </axiom> -->
-
+    </axiom>
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>
