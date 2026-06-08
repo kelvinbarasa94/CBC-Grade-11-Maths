@@ -41,31 +41,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <ol>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To discover the mechanism of a progressive tax structure, explore why tax burdens change across various income thresholds, and examine the purpose of post-tax relief mechanisms.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Organize learners into small collaborative task groups. Guide them to discuss and fill in the missing entries in the introductory <em>Income Level vs. Tax Effect</em> table. Circulate to ensure learners understand that under a progressive taxation model, higher incomes do not just pay more tax overall, but are subject to increasing marginal tax percentages. Prompt deep evaluation during the <em>Higher Order Thinking Task</em> regarding why personal relief is deducted from gross tax rather than being subtracted directly from gross earnings.
+                </p>
+            </li>
+        </ol>
+    </axiom>
         <activity>
             <statement>
 
@@ -168,22 +166,20 @@
 
     
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize multi-tiered statutory slab partitions and anchor the operational sequence for calculating progressive PAYE balances.
                 </p>
             </li>
             </dl>
@@ -193,13 +189,23 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Review the exploratory table from the anchor task. Explicitly demonstrate that in progressive systems, tax calculations do not apply a single high rate to an individual's entire salary pool. Instead, the total income is sectioned into separate layers or "slabs," and each layer is taxed at its own corresponding rate.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>The Mechanism of the "Excess" Band:</alert> Walk learners through what happens when an income overflows a given tax bracket. Show that you must tax the maximum width of the fully saturated lower slabs first, and then apply the subsequent higher percentage rate strictly to the remaining portion (the excess balance) that falls into the next band.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Consolidating Reductions and Reliefs:</alert> Standardize the terminal computation process on the chalkboard: <m>\text{Net PAYE}\; = \;\text{Sum of Bracket Taxes}\; - \;(\text{Personal Relief} \;+\; \text{Insurance Relief})</m>. Emphasize that net pay can then be determined by subtracting this final Net PAYE alongside any other non-tax deductions (such as SHA, WCPS, or SACCO loans) from the individual's original gross salary.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
-
+    </axiom>
+"
     <insight>
         <p>
             Income tax is calculated using a progressive system where different portions of income are taxed at different rates depending on income level.
@@ -716,43 +722,74 @@
         </exercise>  
     </exercises>
 
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+    <axiom component="lesson-plan">
+        <title>Differentiation Strategies</title>
 
         <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
+            <title>Differentiation Matrix for Progressive Income Tax</title>
+            <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
+
+                <row bottom="minor">
+                    <cell><alert>Struggling Learners (Support)</alert></cell>
                     <cell>
-                        XXXX
+                        <p>
+                            Provide targeted assistance isolating basic single-band tax exercises before jumping into multi-layered progressive structures. Use pre-rendered visual flowcharts tracking gross earnings down to net income.
+                        </p>
+                        <p>
+                            Worksheets include clear structural boundaries for tax calculations. Provide scaffolds showing how to partition money within the first active band boundary (e.g., matching the initial threshold limit) before checking higher brackets.
+                        </p>
                     </cell>
-                    <cell></cell>
                 </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
+
+                <row bottom="minor">
+                    <cell><alert>On-Level Learners (Core)</alert></cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <p>
+                            Learners practice breaking salaries into sequential portions, reading complex data matrices, mapping currencies, and using multiple compound slabs to execute PAYE scenarios.
+                        </p>
+                        
                     </cell>
-                    <cell></cell>
                 </row>
+
                 <row>
-                    <cell>Advanced Learners (Challenge)</cell>
+                    <cell><alert>Advanced Learners (Challenge)</alert></cell>
                     <cell>
-                        XXXX
+                        <p>
+                            Extend problems to complex backward calculations, where learners determine original basic salaries or total gross pay starting from a given net take-home pay and tax framework.
+                        </p>
+                        <p>
+                            Learners explore and analyze how sudden modifications to state tax brackets or relief limits impact distinct economic demographics. They construct contextual commercial application tasks, design progressive tax matrices, and lead peer troubleshooting workshops.
+                        </p>
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+
+        <paragraphs>
+            <title>Teacher Execution Guidance</title>
+            <ol>
+                <li>
+                    <p>
+                        <alert>Classroom Layout:</alert> Seat struggling learners together near the front of the room. This allows you to check their first-band calculations quickly while core and advanced groups work independently on multi-slab calculations and backward-mapping challenges.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Strategic Peer Mentoring:</alert> Pair on-level learners who finish early with support groups as peer consultants. Having them explain how to calculate tax on an overflow balance helps solidify their own mathematical reasoning.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Extension Prompts:</alert> Challenge advanced learners by asking: <em>"If a worker receives an extra Ksh 5,000 bonus that pushes them into the highest tax bracket, how does their net bonus compare to a worker whose bonus stays in a lower bracket?"</em> This helps connect algebraic computations to real-world economic logic.
+                    </p>
+                </li>
+            </ol>
+        </paragraphs>
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

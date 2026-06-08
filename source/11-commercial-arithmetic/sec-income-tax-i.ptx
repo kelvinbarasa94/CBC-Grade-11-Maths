@@ -43,29 +43,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To break down real-world compensation profiles into algebraic sub-components (basic salary, allowances, tax exemptions) and discover how statutory baseline deductions shape taxable income.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Organize learners into small collaborative teams. Direct them to work through the four introductory Case Studies sequentially. Ensure groups understand that currency translation between Kenyan Shillings and Kenya Pounds (<m>1 \;\text{K£} \; = \;\text{Ksh}\; 20</m>) requires dividing the Shilling total by <m>20</m>. When discussing Case Study <m>2</m>, guide learners to observe that the NSSF contribution acts as an allowable deduction, which physically shrinks the final taxable base. Emphasize that personal relief in Case Study <m>4</m> is a straight reduction applied to the gross tax liability, not to the income base itself.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
     <activity>
         <statement>
@@ -173,22 +173,20 @@
         </statement>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize sequential equations for individual income tax calculations and distinguish cleanly between pre-tax deductions and post-tax financial relief.
                 </p>
             </li>
             </dl>
@@ -198,12 +196,22 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Use the results from Case Studies 1 through 4 to build a unified salary-to-tax workflow on the board. Show explicitly that allowances expand an individual's gross pay, whereas non-taxable statutory contributions like NSSF pull that value back down to produce the true taxable principal.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>The Pre-Tax vs. Post-Tax Distinction:</alert> Address a common point of confusion directly: point out that deductions (like NSSF) are subtracted from <em>gross income before</em> tax is calculated, whereas reliefs (like Personal Relief) are subtracted from the <em>gross tax amount after</em> the percentage rate is applied.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Currency Standardization:</alert> Reinforce that tax reference lookup tables are historically structured in Kenya Pounds (<m>\text{K£}</m>) either monthly or annually. Drill the conversion mechanism so that shifting between Ksh and K£ becomes an intuitive operational step before matching tax brackets.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
      <insight>
@@ -370,44 +378,76 @@
         </exercise>
     </exercises>
 
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+    <axiom component="lesson-plan">
+        <title>Differentiation Strategies</title>
 
         <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
+            <title>Differentiation Matrix for Income Tax Calculations</title>
+            <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
                 </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
+
+                <row bottom="minor">
+                    <cell><alert>Struggling Learners (Support)</alert></cell>
                     <cell>
-                        XXXX
+                        <p>
+                            Provide highly guided instruction using structural templates that isolate one operation at a time: Gross Income <m>=</m> Basic Pay <m>+</m> Allowances. Use integer numbers to practice the <m>\div 20</m> currency transformation step on its own.
+                        </p>
+                        <p>
+                            The teacher models individual extraction steps on the board. Provide worksheets with pre-labeled categories (Basic, Allowances, Deductions) so learners can easily organize numerical data from word problems before calculating.
+                        </p>
                     </cell>
-                    <cell></cell>
                 </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
+
+                <row bottom="minor">
+                    <cell><alert>On-Level Learners (Core)</alert></cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <p>
+                            Learners independently extract income variables, handle currency conversions, and apply sequential formulas to determine taxable income and Net PAYE.
+                        </p>
+                        <p>
+                            They analyze realistic corporate and civil service salary scenarios, compute percentage-based gross tax rates within basic brackets, and apply monthly personal reliefs. Practice translating text-dense multi-tiered employment benefits into step-by-step arithmetic strings.
+                        </p>
                     </cell>
-                    <cell></cell>
                 </row>
+
                 <row>
-                    <cell>Advanced Learners (Challenge)</cell>
+                    <cell><alert>Advanced Learners (Challenge)</alert></cell>
                     <cell>
-                        XXXX
+                        <p>
+                            Extend problems to include reverse calculations, such as determining an employee's basic salary or gross income when given only their final net take-home pay and tax parameters.
+                        </p>
+                        <p>
+                            Task learners with analyzing the economic implications of progressive tax rates versus flat tax rates. Have them investigate how moving up an income bracket affects an individual's net marginal return, and ask them to construct original contextual payslip scenarios for their peers to decode.
+                        </p>
                     </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
 
+        <paragraphs>
+            <title>Teacher Execution Guidance</title>
+            <ol>
+                <li>
+                    <p>
+                        <alert>Classroom Architecture:</alert> Cluster your struggling learners together near the front of the room. This layout allows you to verify their currency conversion steps (<m>\text{Ksh} \div 20</m>) quickly before they attempt bracket tax rates, while core and advanced groups work independently on the multi-tiered calculations.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Strategic Peer Modeling:</alert> If a core learner completes the exercises early, pair them with a support group as a consultant. Having them explain the difference between a pre-tax deduction and a post-tax relief to a peer strengthens their own mastery of commercial vocabulary.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>The "What If" Lever:</alert> When evaluating advanced groups, deepen their reasoning with a single question: <em>"If the government increases personal relief by Ksh <m>1,000</m>, does a low-income worker or a high-income worker see a larger percentage increase in their net take-home pay?"</em> This prompts immediate mathematical analysis of progressive tax systems.
+                    </p>
+                </li>
+            </ol>
+        </paragraphs>
+    </axiom>
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
     <xi:include href="../lesson-plan-templates/reflection.ptx"/>

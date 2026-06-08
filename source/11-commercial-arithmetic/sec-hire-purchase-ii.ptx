@@ -41,31 +41,38 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
+    <objectives component="outcomes">
+        <introduction>
+            <p>
             <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+                </dl>
+            </p>
+        </introduction>
+
+        <axiom component="lesson-plan">
+            <p>
+                By the end of this lesson, the learner should be able to break down a compound credit purchase into its constituent parts (deposit, principal balance, and flat or compound interest charges) and analyze how varying repayment timelines impact the total carrying charge.
+            </p>
+            <p>
+                <alert>Core Competencies Developed:</alert>
+                <ul>
+                    <li>
+                        <p>
+                            <term>Critical Thinking and Problem Solving:</term> Developed as learners evaluate real-world case studies to weigh the immediate utility of an asset against its long-term cost of credit.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <term>Financial Literacy &amp; Citizenship:</term> Enhanced as learners investigate credit options within their local community and practice making prudent consumer decisions.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <alert>Values Infused:</alert> Responsibility and integrity in personal financial management, and cooperation during collaborative group computations.
+            </p>
+        </axiom>
+    </objectives>
 
     <activity>
         <statement>
@@ -178,24 +185,22 @@
         </statement>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
-            </li>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>
+                        10 minutes
+                    </p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To formalize how interest models (flat rate simple interest versus compound reducing balance interest) are mathematically layered onto outstanding credit balances.
+                    </p>
+                </li>
             </dl>
         </p>
         <paragraphs>
@@ -203,15 +208,22 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Walk the class through the case study of the Ksh 120,000 motorbike. Point out that after paying a 25% deposit (Ksh 30,000), the interest is <em>not</em> calculated on the original price. It is calculated strictly on the outstanding balance of Ksh 90,000, revealing how merchants use simple interest (<m>I = \frac{PRT}{100}</m>) to determine carrying costs.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Critical Thinking Debriefing:</alert> Lead a discussion based on the Higher Order Thinking Task. Show that extending a repayment period reduces individual monthly payments but increases total interest accrued over time. This helps learners understand that minimizing monthly payments often results in a higher total cost of ownership.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Socio-Economic Competency:</alert> Guide learners through the Decision-Making Task. Emphasize that choosing between hire purchase and delayed cash purchase is a trade-off between immediate utility (gaining access to a motorbike for an enterprise right away) and absolute financial efficiency (avoiding interest fees).
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
+    </axiom>
     <insight>
         <p>
             Hire purchase is a credit-based purchasing system where a buyer acquires goods immediately by paying a deposit and settles the remaining balance over time with interest.
@@ -256,25 +268,39 @@
     <!-- Add at least 3 examples -->
 
     <example>
+        <title>Calculating Hire Purchase Price with Simple Interest on Balance</title>
         <statement>
             <p>
-                A deposit of Ksh <m>100,000</m> is placed into a college fund at the beginning of every month for <m>10</m> years. The fund earns <m>9 \%</m> annual interest, compounded monthly, and paid at the end of the month. How much is in the account right after the last deposit?
+                An agricultural water pump is sold at a cash price of Ksh <m>80,000</m>. A farmer opts for a hire purchase plan by paying a <m>30\%</m> deposit, with the remaining balance attracting simple interest at a flat rate of <m>10\%</m> per annum over a repayment period of <m>1.5</m> years. Determine the total hire purchase price and the monthly installment amount.
             </p>
         </statement>
         <solution>
             <p>
-                The value of the initial deposit is Ksh <m>100,000</m>, so <m>a_{1}=100,000.</m> A total of <m>120</m> monthly deposits are made in the <m>10</m> years, so <m>n=120.</m> To find <m>r,</m> divide the annual interest rate by <m>12</m> to find the monthly interest rate and add <m>1</m> to represent the new monthly deposit.
+                <alert>Step 1: Calculate the deposit and outstanding balance.</alert>
+                <md>
+                    <mrow> \text{Deposit (D)} \amp = \; \frac{30}{100} \times 80,000 = \text{Ksh } 24,000 </mrow>
+                    <mrow> \text{Principal Balance (P)} \amp = \; 80,000 - 24,000 = \text{Ksh } 56,000 </mrow>
+                </md>
             </p>
             <p>
-                <me>r=1+\frac{0.09}{12}=1.0075</me>
+                <alert>Step 2: Compute the simple interest charged on the balance.</alert>
+                <md>
+                    <mrow> \text{Interest (I)} \amp = \; \frac{P \times R \times T}{100} </mrow>
+                    <mrow> \amp = \; \frac{56,000 \times 10 \times 1.5}{100} </mrow>
+                    <mrow> \amp = \; 560 \times 15 = \text{Ksh } 8,400 </mrow>
+                </md>
             </p>
             <p>
-                Substitute <m>a_{1}=100,000\text{ , }r=1.0075\text{ , }\text{ and }n=120</m> into the formula for the sum of the first <m>n</m> terms of a geometric series, and simplify to find the value of the annuity.</p>
-            <p>
-                <me>S_{120}=\frac{100,000(1-1.0075^{120})}{1-1.0075}≈19\text{ , }351,430</me>
+                <alert>Step 3: Determine the total hire purchase price and installments.</alert>
+                <md>
+                    <mrow> \text{Total Accrued Balance} \amp = \; \text{Balance} + \text{Interest} = 56,000 + 8,400 = \text{Ksh } 64,400 </mrow>
+                    <mrow> \text{Hire Purchase Price (H)} \amp = \; \text{Deposit} + \text{Total Accrued Balance} </mrow>
+                    <mrow> \amp = \; 24,000 + 64,400 = \text{Ksh } 88,400 </mrow>
+                </md>
             </p>
             <p>
-                So the account has Ksh <m>19,351,430</m> after the last deposit is made.
+                The total number of months is <m>1.5 \times 12 = 18</m> months. Therefore, the monthly installment amount is:
+                <m>\text{Monthly Installment} = \frac{64,400}{18} \approx \text{Ksh } 3,577.78</m>
             </p>
         </solution>
     </example>
@@ -404,52 +430,51 @@
     <!-- [LP] Add information on how to differentiate  -->
 
     <axiom component="lesson-plan">
-        <title>Differentiation</title>
+        <title>Differentiation Strategies</title>
 
         <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
+            <title>Differentiation Matrix for Advanced Hire Purchase</title>
+            <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
+                </row>
+
+                <row bottom="minor">
+                    <cell><alert>Struggling Learners (Support)</alert></cell>
+                    <cell>
+                        <p>
+                            Provide highly guided instruction using a step-by-step breakdown of hire purchase concepts (deposit, balance, total cost). Use simplified numbers and familiar real-life items such as smartphones or bicycles to build baseline understanding.
+                        </p>
+                        <p>
+                            The teacher models each calculation sequence before learners attempt similar practice problems. Provide structured worksheets with visual hints and partially completed execution lines, and allow strategic use of calculators and peer support to manage cognitive load.
+                        </p>
+                    </cell>
+                </row>
+
+                <row bottom="minor">
+                    <cell><alert>On-Level Learners (Core)</alert></cell>
+                    <cell>
+                        <p>
+                            Learners independently extract problem variables to apply formulas such as <m>H = D + xn</m> alongside base interest equations to solve real-world hire purchase scenarios.
+                        </p>
+                        <p>
+                            They work through structured group activities involving the calculation of complete carrying charges, percentage increases, and spot-cash alternatives. Practice translating complex multi-sentence word problems into clean mathematical expressions, engaging in class discussions to justify mathematical choices.
+                        </p>
+                    </cell>
                 </row>
 
                 <row>
-                    <cell>Struggling Learners (Support)</cell>
+                    <cell><alert>Advanced Learners (Challenge)</alert></cell>
                     <cell>
-                        <line>Provide highly guided instruction using step-by-step breakdown of hire purchase concepts (deposit, balance, total cost).</line>
-                        <line>Use simplified numbers and familiar real-life items such as smartphones, bicycles, or radios to build understanding.</line>
-                        <line>Teacher models each step before learners attempt similar questions.</line>
-                        <line>Provide structured worksheets with hints and partially completed solutions.</line>
-                        <line>Allow use of calculators and peer support to reduce cognitive load.</line>
+                        <p>
+                            Extend problems to include compound interest accumulation on reducing credit balances and complex multi-tier financial options. 
+                        </p>
+                        <p>
+                            Task learners with analyzing and contrasting diverse credit options (e.g., hire purchase plans versus commercial bank loans versus disciplined personal savings timelines). They investigate structural dependencies mathematically to justify the most economical choice, and author their own contextual application problems for peer review.
+                        </p>
                     </cell>
-                    <cell></cell>
                 </row>
-
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>Learners independently apply formulas such as <m>H = D + x \times n</m> and interest-based examples to solve hire purchase problems.</line>
-                        <line>Work through structured group activities involving calculation of total cost, interest, and comparison with cash price.</line>
-                        <line>Interpret word problems and translate them into mathematical expressions.</line>
-                        <line>Engage in discussion to justify answers and compare different repayment options.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        <line>Solve extended problems involving compound interest, reducing balance methods, and mixed financial examples.</line>
-                        <line>Analyze and compare different credit systems (hire purchase vs saving vs bank loan).</line>
-                        <line>Investigate how changes in interest rate or repayment period affect total cost using mathematical reasoning.</line>
-                        <line>Justify the most economical purchasing method using calculations and real-life financial reasoning.</line>
-                        <line>Extend learning by creating their own hire purchase scenarios for peers to solve.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-
             </tabular>
         </table>
     </axiom>

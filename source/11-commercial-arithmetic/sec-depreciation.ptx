@@ -41,31 +41,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To discover the concept of diminishing asset value, compute percentage reductions, and intuitively explore how loss compounds over consecutive years.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Organize learners into small collaborative groups. Prompt them to complete the environment table with local assets (e.g., mobile phones, electronics, farm tools) and identify factors like wear and tear, technology, or age. In the motorbike scenario, check that learners compute the initial loss relative to the original purchase price (Ksh <m>200,000</m>) rather than the closing price.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
     <activity>
         <statement>
@@ -134,22 +132,20 @@
 
 
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize group discoveries into the algebraic diminishing balance formula, explicitly distinguishing it from simple linear interest reductions.
                 </p>
             </li>
             </dl>
@@ -159,14 +155,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Use the motorbike scenario to demonstrate that a drop from Ksh <m>200,000</m> to Ksh <m>140,000</m> represents a loss of Ksh <m>60,000</m>, which evaluates to a <m>30\%</m> depreciation rate. Explicitly guide them through the <em>Further Exploration</em> to show that Year <m>2</m> depreciation is calculated from the new baseline (Ksh <m>140,000</m>), yielding a value of Ksh <m>98,000</m> rather than subtracting another flat Ksh <m>60,000</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Mathematical Synthesis:</alert> Contrast this section against the previous <xref ref="sec-appreciation" text="title"/> section. Explain that while appreciation scales up an asset over time via an additive growth scale factor <m>\left(1 + \frac{R}{100}\right)</m>, depreciation diminishes the asset using a subtractive decay scale factor <m>\left(1 - \frac{R}{100}\right)</m>.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    </axiom>
 
     <insight>
         <p>
@@ -265,6 +264,43 @@
                     <mrow> \amp = \; \text{sh.}\; 313,700 </mrow>
                 </md>
                 
+            </p>
+        </solution>
+    </example>
+    <example>
+        <title>Calculating the Depreciation Rate</title>
+        <statement>
+            <p>
+                A high-capacity solar inverter unit was purchased by a local vocational training center for sh. <m>160,000</m>. After <m>3</m> years of continuous operation, its book value was adjusted to sh. <m>116,640</m>. Calculate the annual rate of depreciation.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <alert>Identify the given values:</alert>
+                <md>
+                    <mrow> P \amp =\; 160,000 \text{ Shillings} </mrow>
+                    <mrow> A \amp = \; 116,640 \text{ Shillings} </mrow>
+                    <mrow> T \amp = \; 3 \text{ years} </mrow>
+                    <mrow> R \amp = \; ? </mrow>
+                </md>
+            </p>
+            <p>
+                Rearrange the standard depreciation formula to solve for the rate <m>R</m>:
+                <md>
+                    <mrow> \frac{A}{P} \amp = \; \left(1 - \frac{R}{100}\right)^T </mrow>
+                    <mrow> \sqrt[T]{\frac{A}{P}} \amp = \; 1 - \frac{R}{100} </mrow>
+                    <mrow> R \amp = \; 100 \times \left(1 - \sqrt[T]{\frac{A}{P}}\right) </mrow>
+                </md>
+            </p>
+            <p>
+                Substitute the known terms into the rearranged expression:
+                <md>
+                    <mrow> R \amp = \; 100 \times \left(1 - \sqrt[3]{\frac{116,640}{160,000}}\right) </mrow>
+                    <mrow> \amp = \; 100 \times \left(1 - \sqrt[3]{0.729}\right) </mrow>
+                    <mrow> \amp = \; 100 \times \left(1 - 0.9\right) </mrow>
+                    <mrow> \amp = \; 100 \times 0.1 = 10\% \text{ p.a.} </mrow>
+                </md>
+                The solar inverter unit depreciated at a rate of <m>10\%</m> per annum.
             </p>
         </solution>
     </example>

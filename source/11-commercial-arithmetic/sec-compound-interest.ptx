@@ -44,33 +44,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To compare linear interest growth (Option A) against compounding growth (Option B) and recognize patterns that transition into exponential notation.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Group learners into squads of <m>3</m> or <m>4</m>. Ensure they realize that for Option A, the interest stays constant at Ksh <m>1,000</m> every single year because the principal remains fixed. For Option B, guide them to notice that the new principal for Year <m>2</m> is Ksh <m>11,000</m>, which yields Ksh <m>1,100</m> in interest. Encourage groups to look at the expanding values and discuss why Option B runs away from Option A over long timelines.
+                </p>
+            </li>
+        </dl>
+    </axiom>
      <activity>
         <statement>
             <p>
@@ -179,24 +175,22 @@
      </activity>
 
     
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
-            </li>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>
+                        10 minutes
+                    </p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To formalize the transition from simple interest to compound interest and connect repeated growth to exponential form.
+                    </p>
+                </li>
             </dl>
         </p>
         <paragraphs>
@@ -204,12 +198,22 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Refer directly to the group activity where learners compared Option A (simple interest) and Option B (interest-on-interest). Emphasize that while both options start with the same principal and rate, Option A produces a constant yearly increase forming a linear pattern because interest is tied to the original amount.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Algebraic Transition:</alert> Contrast this with Option B, showing that after each year, the principal shifts because accumulated interest is added to the base. Guide learners to express this repeated growth step-by-step: after year 1 the amount is <m>P\left(1+\frac{R}{100}\right)</m>, and after year 2 it becomes <m>P\left(1+\frac{R}{100}\right)\left(1+\frac{R}{100}\right)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Pattern Recognition:</alert> Help learners recognize that multiplication by the scale factor <m>\left(1+\frac{R}{100}\right)</m> repeats each year, naturally leading to the power structure <m>P\left(1+\frac{R}{100}\right)^T</m>. Connect this back to the Kisumu youth group context to show why compound interest grows rapidly over time.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     
     <insight>
@@ -413,65 +417,75 @@
         </solution>
     </example>
     <example>
+        <title>Comparing Compounding Frequency vs. Nominal Rate</title>
         <statement>
             <p>
-                An entrepreneur wants to invest <m>100,000</m> Shillings for <m>1</m> year. They must choose between two competing bank offers. 
+                An entrepreneur wants to invest <m>100,000</m> Shillings for <m>1</m> year. They must choose between two competing bank offers:
             </p>
             <p>
                 <ol marker="(a)">
                     <li>
                         <p>
-                           <alert>Bank A :</alert> Offers <m>12 \%</m> per annum compounded Quarterly.
+                           <alert>Bank A:</alert> Offers <m>12\%</m> per annum compounded Quarterly.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <alert>Bank B :</alert> Offers <m>12.5 \%</m> per annum compounded Annually.
+                            <alert>Bank B:</alert> Offers <m>12.5\%</m> per annum compounded Annually.
                         </p>
                     </li>
                 </ol>
             </p>
             <p>
-                Which one should he chose?
+                Which bank option should the entrepreneur choose?
             </p>
         </statement>
         <solution>
             <p>
+                Evaluate both investment pathways independently across the <m>1</m>-year timeline.
+            </p>
+            <p>
                 <ol marker="(a)">
                     <li>
                         <p>
-                            Adjust the rates <m>R = \frac{12 \;\%}{4} = 3 \;\%</m>
+                            For Bank A, the annual nominal rate is <m>12\%</m> compounded quarterly over <m>4</m> periods. We adjust our calculations where:
+                            <m>R = \frac{12\%}{4} = 3\% = 0.03 \text{ per period}</m>
+                            <m>n = 4 \text{ periods}</m>
                         </p>
                         <p>
+                            Apply the compound accumulation formula:
                             <md>
-                                <mrow> A \amp = \;100,000(1+0.03)^4</mrow>
-                                <mrow> \amp = \; 112,550.88 \;\text{shillings}</mrow>
+                                <mrow> A \amp = \; 100,000(1 + 0.03)^4 </mrow>
+                                <mrow> \amp = \; 100,000(1.1255088) </mrow>
+                                <mrow> \amp \approx \; 112,550.88 \text{ Shillings} </mrow>
                             </md>
-                            
                         </p>
                         <p>
-                            Interest earned <m> = 12,550.88 \;\text{shillings}</m>
+                            Total interest earned from Bank A <m> = 12,550.88 \text{ Shillings}</m>.
                         </p>
                     </li>
                     <li>
                         <p>
+                            For Bank B, the rate is <m>12.5\%</m> compounded annually over a single period.
+                        </p>
+                        <p>
+                            Apply the annual interest calculation:
                             <md>
-                                <mrow> A \amp = \;100,000(1+0.125)^1</mrow>
-                                <mrow> \amp = \; 122,500 \;\text{shillings}</mrow>
+                                <mrow> A \amp = \; 100,000(1 + 0.125)^1 </mrow>
+                                <mrow> \amp = \; 112,500 \text{ Shillings} </mrow>
                             </md>
                         </p>
                         <p>
-                            Interest earned <m> = 12,500 \;\text{shillings}</m>
+                            Total interest earned from Bank B <m> = 12,500 \text{ Shillings}</m>.
                         </p>
                     </li>
                 </ol>
             </p>
             <p>
-                Bank A; It yields a higher interest.
+                <alert>Decision Conclusion:</alert> The entrepreneur should choose <alert>Bank A</alert>. Even though Bank B offers a higher nominal starting rate (<m>12.5\%</m> vs <m>12\%</m>), the quarterly compounding effect of Bank A successfully maximizes yield, generating an extra <m>50.88</m> Shillings in returns.
             </p>
         </solution>
     </example>
-
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->
@@ -540,86 +554,34 @@
     </exercises>
 
     <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        10 minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        To formalize the transition from simple interest to compound interest and connect repeated growth to exponential form.
-                    </p>
-                </li>
-            </dl>
-        </p>
-
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ul>
-
-                <li>
-                    <p>
-                        Begin by referring to the group activity: learners compared Option A (simple interest) and Option B (interest-on-interest).
-                        Emphasise that both start with the same principal and rate, but differ in how interest is treated over time.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Highlight the key observation from Option A: interest is calculated on the same original amount each year.
-                        This produces a constant yearly increase, forming a linear pattern.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Contrast this with Option B: after each year, the principal changes because interest is added to it.
-                        This means the base for the next calculation is always increasing.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Guide learners to express this repeated growth step-by-step:
-                        after year 1 the amount becomes <m>P(1+r)</m>, after year 2 it becomes <m>P(1+r)(1+r)</m>, and so on.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Emphasise the emerging pattern: multiplication by <m>(1+r)</m> repeats each year, leading to a power structure:
-                        <m>P(1+r)^T</m>.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Without formal derivation pressure, help learners interpret the expression:
-                        each factor of <m>(1+r)</m> represents one full growth cycle of “adding interest then reinvesting it”.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Connect back to the real context (investment decision in Kisumu youth group):
-                        compound interest grows faster over time because each year builds on a larger base.
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        Teacher emphasis: ensure learners can explain *why* the exponent appears before introducing the general formula formally.
-                        Focus on pattern recognition, not memorisation.
-                    </p>
-                </li>
-
-            </ul>
-        </paragraphs>
+        <title>Differentiation</title>
+        <table>
+            <title>Differentiation Strategies for Compound Interest</title>
+            <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
+                <row header="yes" bottom="minor">
+                    <cell>Learner Group</cell>
+                    <cell>Strategy &amp; Learning Experience</cell>
+                </row>
+                <row bottom="minor">
+                    <cell><alert>Support (Struggling)</alert></cell>
+                    <cell>
+                        Avoid starting directly with fractions or variables inside exponents. Have learners compute the total account balances manually year-by-year using simple interest methods on an updating ledger. Reinforce the concept that "Compound Interest is just Simple Interest calculated repeatedly on a shifting base value."
+                    </cell>
+                </row>
+                <row bottom="minor">
+                    <cell><alert>Core (On-Level)</alert></cell>
+                    <cell>
+                        Guide learners to map calculations directly into the algebraic structure <m>A = P\left(1 + \frac{R}{100}\right)^T</m>. Ensure they can comfortably adjust variables when compounding frequencies shift from annual to semi-annual or quarterly cycles.
+                    </cell>
+                </row>
+                <row>
+                    <cell><alert>Challenge (Advanced)</alert></cell>
+                    <cell>
+                        Task learners with examining the upper limits of compounding frequencies. Ask them to investigate what happens to an initial principal when compounding intervals shrink from daily down to hourly parameters, paving an intuitive roadway toward continuous compounding models.
+                    </cell>
+                </row>
+            </tabular>
+        </table>
     </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
