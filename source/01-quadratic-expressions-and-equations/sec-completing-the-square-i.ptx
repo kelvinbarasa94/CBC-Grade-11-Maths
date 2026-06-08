@@ -70,7 +70,7 @@
      <activity>
         <introduction>
             <p>
-                Explore how to solve the equation <m>x^2 + 6x + 3 = 0</m> by completing the square method.
+                Explore how the equation <m>x^2 + 6x + 3 = 0</m> can be solved using the completing the square method.
             </p>
         </introduction>
             <task>
@@ -97,7 +97,7 @@
             <task>
                 <statement>
                     <p>
-                        Add <m>6x</m> to represent rectangles attached to the square by dividing it into two equal parts
+                       Represent <m>6x</m> using two rectangles attached to the square.
                     </p>
                     <p>
                         <m>6x= 3x + 3x</m>
@@ -157,7 +157,7 @@
                     </image>
 
                 <p>
-                    Since each rectangle has width 3, the missing corner is: <m>3 \times 3 = 9</m>
+                   The missing corner forms a square with side length <m>3</m>.
                 </p>
                 </statement>
             </task>
@@ -211,7 +211,7 @@
                         This simplifies to: <m>(x + 3)^2 - 6 = 0</m>
                     </p>
                     <p>
-                       Solve for <m>x</m>.
+                       Solve for <m>x</m> in the equation <m>(x + 3)^2 - 6 = 0</m>.
                     </p>
 
                 </statement>
@@ -286,7 +286,7 @@
         </p>
         
         <p>
-            We do this by adding a specific constant <m>(\frac{b}{2})^2</m> to "force" the variable terms into a squared binomial format, allowing us to isolate <m>x</m> using square roots.
+            We do this by adding a specific constant <m>(\frac{b}{2})^2</m> to transform the variable terms into a squared binomial format, allowing us to isolate <m>x</m> using square roots.
         </p>
         <p>
             <term>How to complete a square for the equation <m>x^2 + bx - c = 0</m>:</term>
@@ -527,6 +527,9 @@
                         <p>
                             <m>x = \frac{7}{2} \pm \frac{\sqrt{45}}{2}</m>
                         </p>
+                        <p>
+                            <m>x= \frac{7}{2} + \frac{\sqrt{45}}{2}</m> or <m>x= \frac{7}{2} - \frac{\sqrt{45}}{2}</m>
+                        </p>
                     </li>
 
                 </ol>
@@ -545,12 +548,15 @@
                 <p>
                      <m>t = 3 \pm \sqrt{5}</m>
                 </p>
+                <p>
+                    The ball reaches a height of 6 meters at approximately <m>t = 3 + \sqrt{5}</m> seconds and <m>t = 3 - \sqrt{5}</m> seconds. 
+                </p>
             </answer>
         </exercise> 
         <exercise>
             <statement>
                 <p>
-                    Solve for <m>x</m> in the following equations by completing the squares
+                    Solve for <m>x</m> in the following equations by completing the square
                 </p>
                 <p>
                     <ol marker="(a)">
@@ -579,6 +585,9 @@
                             <p>
                                 <m>x = -2 \pm \sqrt{11}</m>
                             </p>
+                            <p>
+                                <m>x = -2 + \sqrt{11}</m> or <m>x = -2 - \sqrt{11}</m>
+                            </p>
                         </li>
                         <li>
                             <p>
@@ -588,6 +597,9 @@
                         <li>
                             <p>
                                 <m>x = -3 \pm \sqrt{8}</m>
+                            </p>
+                            <p>
+                                <m>x = -3 + \sqrt{8}</m> or <m>x = -3 - \sqrt{8}</m>
                             </p>
                         </li>       
                     </ol>

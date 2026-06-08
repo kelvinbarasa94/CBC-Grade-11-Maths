@@ -145,7 +145,7 @@
                 <alert>Work in Groups</alert>
             </p>
             <p>
-                If you have a fence that is <m>30</m> meters long, what is the biggest garden you can build? Let's find out using a string!
+                If you have a fence that is <m>30</m> meters long, what is the biggest garden you can build? Let's find out using a <m>30</m> cm string! The string is a scale model of the <m>30</m> meters fence.
             </p>
             <p>
                 <alert>What you need</alert>
@@ -231,7 +231,10 @@
         <task>
             <statement>
                 <p>
-                    Looking at your table, which length <m>x</m> gave the <alert>largest</alert> area? Is this shape a square?
+                    Looking at your table, which length <m>x</m> gave the <alert>largest</alert> area? Study the dimensions and areas in the table then state the shapes you identified.
+                </p>
+                <p>
+                    Compare the dimensions of the rectangles. What do you notice about the shape when the area is largest? Explain your observation using values from the table.
                 </p>
             </statement>
         </task>
@@ -286,6 +289,9 @@
             Quadratic equations are essential for modeling various real-world phenomena where a variable depends on the square of another, or where two linear relationships are multiplied.
         </p>
         <p>
+            The rectangle investigation is one example of many real-life situations that can be modelled using quadratic equations.
+        </p>
+        <p>
             <alert>Common Applications:</alert>
             <ul>
                 <li>
@@ -307,7 +313,7 @@
             <ol>
                 <li><p>Define the variable clearly.</p></li>
                 <li><p>Set up the equation based on the given relationships.</p></li>
-                <li><p>Solve using the most efficient method (Factoring, Quadratic Formula, completing the square, perfect square trinomials, etc.).</p></li>
+                <li><p>Solve using the most efficient method (factoring, quadratic formula, completing the square, perfect square trinomials, etc.).</p></li>
                 <li><p>Verify solutions by substituting the values back into the original equation.</p></li>
             </ol>
         </p>
