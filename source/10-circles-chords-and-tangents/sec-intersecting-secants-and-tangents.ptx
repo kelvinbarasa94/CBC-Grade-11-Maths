@@ -19,7 +19,7 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
                         Determine the length of intersecting chords and tangent to a circle
                     </p>
@@ -41,161 +41,497 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    12 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To lead learners to discover that the products of secant segments from the same external point are equal, and that this product equals the square of the tangent from that point.
                 </p>
             </li>
-            </dl>
-        </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Circulate as groups measure and compute. If a group's products are quite different, ask them to re-measure carefully — small errors in drawing the secant near the circle can skew the external segment. Once groups have results, ask: <em>"What do you notice about your two products? And how does PT² compare?"</em> Resist confirming the answer until groups have shared with each other.
+                </p>
+            </li>
+        </dl>
+    </axiom>
+
+    <activity xml:id="activity-secant-tangent-discovery">
+        <statement>
+            <p>
+                For this activity you will need plain paper, a ruler, a pencil, and a circular object such as the base of a tin or bottle.
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Place your circular object on the paper and trace carefully around it to draw a circle. Label its centre <m>O</m> (you can find the centre by folding if needed, or just estimate it). This circle will represent a circular feature — imagine it is a roundabout, a circular water tank, or a plot of land.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Mark a point <m>P</m> clearly outside the circle, at least 3 cm from the nearest point of the circle.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw a straight line from <m>P</m> that crosses through the circle, entering at one point and leaving at another. Label the two crossing points <m>A</m> (the one nearer to <m>P</m>) and <m>B</m> (the one farther from <m>P</m>). A line like this, which cuts a circle at two points, is called a <term>secant</term>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw a second secant from <m>P</m>, going in a different direction, and label its two crossing points <m>C</m> (nearer to <m>P</m>) and <m>D</m> (farther from <m>P</m>).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Measure the four distances <m>PA</m>, <m>PB</m>, <m>PC</m>, <m>PD</m> in millimetres. Record them in a table and calculate the two products:
+                            <md>
+                                PA \times PB \qquad \text{and} \qquad PC \times PD.
+                            </md>
+                            What do you notice?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Learners should find <m>PA \times PB \approx PC \times PD</m>. Small measurement errors are expected; differences of up to 5% are acceptable with careful drawing. The key result is that the two products are approximately equal.
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            Now draw a line from <m>P</m> that <em>just touches</em> the circle at exactly one point — a tangent. Label the point of tangency <m>T</m>. Measure the length <m>PT</m>.
+                        </p>
+                        <note component="lesson-plan">
+                            <p>
+                                Learners may need a moment to get the tangent right. Remind them that a tangent touches at one point only — it should not enter the circle. Rotating a ruler slowly around <m>P</m> until it just grazes the circle works well.
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate <m>PT^2</m>. How does it compare with <m>PA \times PB</m>?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Learners should find <m>PT^2 \approx PA \times PB \approx PC \times PD</m>. All three quantities are equal — this shared value is called the <em>power of the point</em> <m>P</m> with respect to the circle. The two theorems in this section both express this same underlying fact.
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            Compare your results with another group. Do they get the same products even though they used a different external point <m>P</m>? What conjecture can you make?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+
+    <axiom component="lesson-plan">
+        <title>Structured Instruction</title>
+        <p>
+            <dl>
                 <li>
+                    <title>Suggested Time</title>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        15 minutes
                     </p>
                 </li>
-            </ol>
-        </paragraphs>
-    </axiom> -->
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To formalise the two-secant and tangent-secant theorems and develop learners' fluency in applying them.
+                    </p>
+                </li>
+            </dl>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    Confirm the results from the activity. Write on the board: <m>PA \times PB = PC \times PD = PT^2</m> and tell learners this comes from a property called the <em>power of a point</em>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Introduce the vocabulary: a <em>secant</em> is a line that crosses a circle at two points; the <em>external segment</em> of a secant from point <m>P</m> is the part from <m>P</m> to the nearer intersection.
+                </p>
+            </li>
+            <li>
+                <p>
+                    State and display the Two-Secant Theorem and the Tangent-Secant Theorem using the diagrams below.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Remind learners of the equal-tangents result from the previous section: since <m>PT_1^2 = PT_2^2</m> (both equal the same power of the point), the two tangent lengths from any external point must be equal.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Work through Example 1 with the class before asking learners to attempt Examples 2 and 3 independently.
+                </p>
+            </li>
+        </ul>
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        A <term>secant</term> to a circle is a straight line that intersects the circle at two distinct points.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Two-Secant Theorem.</alert> If two secants are drawn to a circle from the same external point <m>P</m>, with one secant meeting the circle at <m>A</m> and <m>B</m> (<m>A</m> nearer to <m>P</m>) and the other meeting the circle at <m>C</m> and <m>D</m> (<m>C</m> nearer to <m>P</m>), then
+                        <md>
+                            PA \times PB = PC \times PD.
+                        </md>
+                        In words: <em>the product of the external segment and the whole secant is the same for both secants.</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Tangent-Secant Theorem.</alert> If a tangent and a secant are drawn to a circle from the same external point <m>P</m>, with the tangent touching at <m>T</m> and the secant meeting the circle at <m>A</m> (<m>A</m> nearer) and <m>B</m>, then
+                        <md>
+                            PT^2 = PA \times PB.
+                        </md>
+                        In words: <em>the square of the tangent length equals the product of the external segment and the whole secant.</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Equal Tangent Lengths.</alert> Tangent segments drawn to a circle from the same external point are equal in length: if <m>T_1</m> and <m>T_2</m> are the two points of tangency, then <m>PT_1 = PT_2</m>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
-    <!-- <insight>
-    </insight> -->
+    <paragraphs>
+        <title>Understanding the Theorems</title>
+        <p>
+            In the diagram below, point <m>P</m> lies outside a circle. Two secants from <m>P</m> cross the circle at <m>A, B</m> and at <m>C, D</m> respectively.
+        </p>
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+        <!-- TODO: TikZ diagram — Two-Secant Theorem. External point P to the left. Two secants: one through A (near) and B (far) going upper-right, one through C (near) and D (far) going lower-right. Label all four points on the circle and P. Indicate the segments PA, PB, PC, PD with tick-labels or braces. -->
+
+        <p>
+            The Two-Secant Theorem tells us that <m>PA \times PB = PC \times PD</m>. This can be understood using similar triangles: the triangles <m>\triangle PAD</m> and <m>\triangle PCB</m> share the angle at <m>P</m>, and the angles <m>\angle PAD</m> and <m>\angle PCB</m> are both supplementary to the same inscribed angle in the circle, making the triangles similar. The equal products then follow from the ratios of corresponding sides.
+        </p>
+        <p>
+            In the second diagram, one of the secants has been replaced by a tangent at <m>T</m>.
+        </p>
+
+        <!-- TODO: TikZ diagram — Tangent-Secant Theorem. External point P to the left. One tangent from P touching at T (upper side of circle). One secant from P through A (near, lower side) and B (far, lower side). Label P, T, A, B. Show right-angle mark at T (radius OT perpendicular to tangent). -->
+
+        <p>
+            As the secant <m>PCD</m> rotates toward the tangent position, <m>C</m> and <m>D</m> merge into a single point <m>T</m>, and the product <m>PC \times PD</m> becomes <m>PT \times PT = PT^2</m>. This gives the Tangent-Secant Theorem: <m>PT^2 = PA \times PB</m>.
+        </p>
+    </paragraphs>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example xml:id="example-two-secant-theorem">
+        <title>Using the Two-Secant Theorem</title>
         <statement>
+            <p>
+                From an external point <m>P</m>, two secants are drawn to a circle. The first secant meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and <m>PB = 9</m> cm. The second secant meets the circle at <m>C</m> and <m>D</m>, where <m>PC = 3</m> cm. Find <m>PD</m>.
+            </p>
         </statement>
         <solution>
+            <p>
+                By the Two-Secant Theorem:
+                <md>
+                    PA \times PB = PC \times PD.
+                </md>
+                Substituting the known values:
+                <md>
+                    4 \times 9 = 3 \times PD.
+                </md>
+                <md>
+                    36 = 3 \times PD.
+                </md>
+                <md>
+                    PD = \frac{36}{3} = 12 \text{ cm.}
+                </md>
+            </p>
+            <p>
+                Note that the chord <m>CD</m> inside the circle has length <m>PD - PC = 12 - 3 = 9</m> cm.
+            </p>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="example-tangent-secant-theorem">
+        <title>Using the Tangent-Secant Theorem</title>
         <statement>
+            <p>
+                From an external point <m>P</m>, a tangent <m>PT</m> is drawn to a circle, touching it at <m>T</m>. A secant from <m>P</m> meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm is the external segment. Given that <m>PT = 6</m> cm, find the length <m>PB</m> and the length of the chord <m>AB</m>.
+            </p>
+
+            <!-- TODO: TikZ diagram — Tangent-Secant worked example. P on the left. Tangent up to T on the upper arc; secant through A (lower arc, near P) and B (far arc). Label P, T, A, B with distances PT=6, PA=4. -->
+
         </statement>
         <solution>
+            <p>
+                By the Tangent-Secant Theorem:
+                <md>
+                    PT^2 = PA \times PB.
+                </md>
+                <md>
+                    6^2 = 4 \times PB.
+                </md>
+                <md>
+                    36 = 4 \times PB.
+                </md>
+                <md>
+                    PB = \frac{36}{4} = 9 \text{ cm.}
+                </md>
+            </p>
+            <p>
+                The chord <m>AB</m> lies inside the circle, so its length is:
+                <md>
+                    AB = PB - PA = 9 - 4 = 5 \text{ cm.}
+                </md>
+            </p>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="example-equal-tangents-combined">
+        <title>Equal Tangent Lengths and the Tangent-Secant Theorem</title>
         <statement>
+            <p>
+                Two tangents are drawn from an external point <m>T</m> to a circle, touching it at <m>A</m> and <m>B</m>. The tangent lengths satisfy <m>TA = 2x + 1</m> and <m>TB = x + 5</m>.
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Find the value of <m>x</m> and the tangent length.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            A secant from <m>T</m> meets the circle at <m>E</m> and <m>F</m>, where <m>TE = 3</m> cm is the external segment. Use your answer to part (a) to find <m>TF</m> and the length of chord <m>EF</m>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            By the Equal Tangent Lengths property, <m>TA = TB</m>:
+                            <md>
+                                2x + 1 = x + 5.
+                            </md>
+                            <md>
+                                x = 4.
+                            </md>
+                            The tangent length is <m>TA = 2(4) + 1 = 9</m> cm.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            By the Tangent-Secant Theorem, with tangent <m>TA = 9</m> cm and external segment <m>TE = 3</m> cm:
+                            <md>
+                                TA^2 = TE \times TF.
+                            </md>
+                            <md>
+                                81 = 3 \times TF.
+                            </md>
+                            <md>
+                                TF = 27 \text{ cm.}
+                            </md>
+                            The chord <m>EF</m> has length <m>TF - TE = 27 - 3 = 24</m> cm.
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
+    <exercises>
 
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
+        <exercise xml:id="exercise-two-secants-find-segment">
+            <title>Two-Secant Theorem</title>
+            <statement>
+                <p>
+                    From an external point <m>P</m>, two secants are drawn to a circle.
+                    <ul>
+                        <li><p>The first secant meets the circle at <m>A</m> and <m>B</m>, with <m>PA = 2</m> cm and <m>PB = 18</m> cm.</p></li>
+                        <li><p>The second secant meets the circle at <m>C</m> and <m>D</m>, with <m>PC = 6</m> cm.</p></li>
+                    </ul>
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li><p>Find <m>PD</m>.</p></li>
+                        <li><p>Find the length of chord <m>CD</m>.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>PA \times PB = PC \times PD \Rightarrow 2 \times 18 = 6 \times PD \Rightarrow PD = 6</m> cm.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>CD = PD - PC = 6 - 6 = 0</m> cm.
+                            </p>
+                            <p>
+                                This means <m>C = D</m>: the second <q>secant</q> is actually a tangent! The second line just touches the circle at one point. This is consistent: <m>PC^2 = 36 = PA \times PB</m>, which is exactly the tangent condition.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- Add STACK exercises if made -->
+        <exercise xml:id="exercise-tangent-secant-find-tangent">
+            <title>Finding a Tangent Length</title>
+            <statement>
+                <p>
+                    A secant from external point <m>P</m> meets a circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and the chord <m>AB = 12</m> cm. A tangent from <m>P</m> touches the circle at <m>T</m>. Find the length <m>PT</m>.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    First find <m>PB</m> using <m>PB = PA + AB</m>, then apply the Tangent-Secant Theorem.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>PB = PA + AB = 4 + 12 = 16</m> cm.
+                </p>
+                <p>
+                    <m>PT^2 = PA \times PB = 4 \times 16 = 64</m>, so <m>PT = 8</m> cm.
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- Add static exercises -->
+        <exercise xml:id="exercise-equal-tangents-algebra">
+            <title>Equal Tangents</title>
+            <statement>
+                <p>
+                    Two tangents are drawn from an external point <m>Q</m> to a circle. The tangent lengths are <m>QR = 3x - 2</m> and <m>QS = x + 6</m>. Find the value of <m>x</m> and the length of each tangent.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>3x - 2 = x + 6 \Rightarrow 2x = 8 \Rightarrow x = 4</m>.
+                </p>
+                <p>
+                    Each tangent has length <m>QR = 3(4) - 2 = 10</m> cm.
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- <exercises>
-        <exercise>
-            <statement>   
+        <exercise xml:id="exercise-find-chord-from-tangent">
+            <title>Finding a Chord from a Known Tangent</title>
+            <statement>
+                <p>
+                    From an external point <m>P</m>, a tangent <m>PT = 10</m> cm is drawn to a circle. A secant from <m>P</m> has an external segment <m>PA = 4</m> cm.
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li><p>Find the full length <m>PB</m> of the secant.</p></li>
+                        <li><p>Find the length of the chord <m>AB</m> inside the circle.</p></li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>PT^2 = PA \times PB \Rightarrow 100 = 4 \times PB \Rightarrow PB = 25</m> cm.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>AB = PB - PA = 25 - 4 = 21</m> cm.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
 
-            </statement>   
-            <solution>
+        <exercise xml:id="exercise-secant-tangent-reasoning">
+            <title>Reasoning with Similar Triangles</title>
+            <statement>
+                <p>
+                    The diagram below shows a circle with external point <m>P</m>. A tangent from <m>P</m> touches the circle at <m>T</m>, and a secant from <m>P</m> meets the circle at <m>A</m> (nearer) and <m>B</m> (farther).
+                </p>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+                <!-- TODO: TikZ diagram — Same as the tangent-secant theorem diagram above. External point P, tangent to T, secant through A and B. Label all points. -->
 
-    <!-- [LP] Add information on how to differentiate  -->
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Write down the size of angle <m>\angle PTA</m>. (<em>Hint:</em> what is the angle between a tangent and a radius?)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                In triangle <m>\triangle PTB</m> and triangle <m>\triangle PAT</m>, identify the angle they share and explain why <m>\angle PTB = \angle TAB</m>. (This follows from the tangent-chord angle theorem — the angle between a tangent and a chord equals the inscribed angle on the opposite side.)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Explain why <m>\triangle PTB \sim \triangle PAT</m>, and use this to show that <m>PT^2 = PA \times PB</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                The radius <m>OT</m> is perpendicular to the tangent at <m>T</m>. However, <m>\angle PTA</m> is not a right angle in general — it is the tangent-chord angle. The angle between the tangent <m>PT</m> and chord <m>TA</m> equals the inscribed angle in the alternate segment, i.e. <m>\angle PTA = \angle TBA</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Both triangles share the angle at <m>P</m>. By the tangent-chord angle theorem, <m>\angle PTB = \angle TAB</m> (tangent-chord angle equals inscribed angle in alternate segment).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Since <m>\triangle PTB</m> and <m>\triangle PAT</m> share angle <m>P</m> and have <m>\angle PTB = \angle PAT</m> (= inscribed angle in alternate segment), they are similar by AA. From the ratio of corresponding sides:
+                                <md>
+                                    \frac{PT}{PB} = \frac{PA}{PT},
+                                </md>
+                                which gives <m>PT^2 = PA \times PB</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
-
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

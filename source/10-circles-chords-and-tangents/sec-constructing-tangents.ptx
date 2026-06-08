@@ -19,7 +19,7 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
                         Construct a tangent to a circle at a given point
                     </p>
@@ -41,161 +41,636 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
-        <statement>
-        </statement>
-    </activity> -->
-
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
-        <p>
-            <dl>
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To lead learners to discover that a tangent to a circle is perpendicular to the radius at the point of tangency.
                 </p>
             </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Circulate as learners draw and measure. Prompt any group that gets an angle far from 90° to check whether their line is truly tangent (touching at exactly one point, neither cutting through nor missing the circle). After groups share results, confirm that the answer is always 90° and ask learners why they think this must be so.
+                </p>
+            </li>
+        </dl>
+    </axiom>
+
+    <activity xml:id="activity-tangent-discovery">
+        <statement>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            In pairs, draw a circle of any size and mark its centre <m>O</m>. Then mark any point <m>P</m> on the circumference.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Draw the radius <m>OP</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Try to draw a straight line through <m>P</m> that <em>just touches</em> the circle at <m>P</m> — it should not cut through the circle, and it should not miss the circle entirely. This type of line is called a <term>tangent</term> to the circle at <m>P</m>.
+                        </p>
+                        <note component="lesson-plan">
+                            <p>
+                                Learners may find this tricky at first. Encourage them to hold a ruler at <m>P</m> and rotate it slowly until only one point on the ruler's edge touches the circle. Accept any line that is approximately correct.
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            Use a protractor to measure the angle between your tangent line and the radius <m>OP</m> at the point <m>P</m>. Write down your measurement.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Compare your measurement with other groups. What do you notice? Why do you think this is the case?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                All groups should measure approximately <m>90°</m>. The tangent is perpendicular to the radius at the point of tangency. This is the key property that makes the compass-and-straightedge construction possible: to construct a tangent at <m>P</m>, we need to construct a line through <m>P</m> that is perpendicular to the radius <m>OP</m>.
+                            </p>
+                        </solution>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+
+    <axiom component="lesson-plan">
+        <title>Structured Instruction</title>
+        <p>
+            <dl>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>
+                        15 minutes
+                    </p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To formalise the tangent-radius property and teach the compass-and-straightedge construction.
+                    </p>
+                </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
+        <ul>
+            <li>
+                <p>
+                    Confirm the result from the activity: at the point of tangency, the tangent is perpendicular to the radius. Write this as the key property on the board.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Walk through the six construction steps using the diagrams below, pausing at each step for learners to follow along on their own paper with compass and straightedge.
+                </p>
+            </li>
+            <li>
+                <p>
+                    After completing the construction, ask learners to verify that their tangent line is perpendicular to the radius using a set square or protractor.
+                </p>
+            </li>
+        </ul>
+    </axiom>
+
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        A <term>tangent</term> to a circle is a straight line that touches the circle at exactly one point, called the <term>point of tangency</term>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        At the point of tangency, the tangent is <em>perpendicular to the radius</em>. Conversely, any line through a point on the circle that is perpendicular to the radius at that point is the tangent at that point.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        From any point outside a circle, exactly two tangents can be drawn to the circle. The distances from the external point to the two points of tangency are <em>equal</em>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
+
+    <paragraphs>
+        <title>Constructing a Tangent at a Point on a Circle</title>
+        <p>
+            To construct a tangent to a circle at a point <m>P</m> on the circle, using only a pair of compasses and a straightedge, follow these steps.
+        </p>
+        <p>
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Draw a circle with centre <m>O</m> and mark the point <m>P</m> on the circle.
                     </p>
+                    <figure xml:id="fig-tangent-step-1">
+                        <caption>Step 1: Circle with centre <m>O</m> and point <m>P</m> on the circumference.</caption>
+                        <image width="50%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(2,0){P}
+                                    \tkzDrawCircle[thick, teal](O,P)
+                                    \tkzDrawPoints(O,P)
+                                    \tkzLabelPoints[below left](O)
+                                    \tkzLabelPoints[right](P)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </li>
+                <li>
+                    <p>
+                        Draw the radius <m>OP</m> and extend the line beyond <m>P</m>.
+                    </p>
+                    <figure xml:id="fig-tangent-step-2">
+                        <caption>Step 2: Radius <m>OP</m> extended beyond <m>P</m>.</caption>
+                        <image width="55%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(2,0){P}
+                                    \tkzDefPoint(4.7,0){Ext}
+                                    \tkzDrawCircle[thick, teal](O,P)
+                                    \tkzDrawSegment(O,Ext)
+                                    \tkzDrawPoints(O,P)
+                                    \tkzLabelPoints[below left](O)
+                                    \tkzLabelPoints[below](P)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </li>
+                <li>
+                    <p>
+                        Set your compasses to the length <m>OP</m>. Placing the compass point at <m>P</m>, mark a point <m>Q</m> on the extended line on the far side of <m>P</m> from <m>O</m>, so that <m>PQ = OP</m>. The point <m>P</m> is now the midpoint of <m>OQ</m>.
+                    </p>
+                    <figure xml:id="fig-tangent-step-3">
+                        <caption>Step 3: Point <m>Q</m> marked so that <m>PQ = OP</m>.</caption>
+                        <image width="58%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(2,0){P}
+                                    \tkzDefPoint(4,0){Q}
+                                    \tkzDrawCircle[thick, teal](O,P)
+                                    \tkzDrawSegments(O,P P,Q)
+                                    \tkzMarkSegments[mark=|](O,P P,Q)
+                                    \tkzDrawPoints(O,P,Q)
+                                    \tkzLabelPoints[below left](O)
+                                    \tkzLabelPoints[below](P,Q)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </li>
+                <li>
+                    <p>
+                        Open your compasses to a width greater than half of <m>OQ</m>. With the compass point at <m>O</m>, draw arcs above and below the line <m>OQ</m>. Without changing the compass width, place the compass point at <m>Q</m> and draw arcs above and below the line, crossing the first arcs. Label the two crossing points <m>X</m> and <m>Y</m>.
+                    </p>
+                    <figure xml:id="fig-tangent-step-4">
+                        <caption>Step 4: Compass arcs from <m>O</m> and from <m>Q</m>, crossing at <m>X</m> and <m>Y</m>.</caption>
+                        <image width="58%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(2,0){P}
+                                    \tkzDefPoint(4,0){Q}
+                                    \tkzDefPoint(2,1.5){X}
+                                    \tkzDefPoint(2,-1.5){Y}
+                                    \tkzDrawCircle[thick, teal](O,P)
+                                    \tkzDrawSegments(O,P P,Q)
+                                    \tkzMarkSegments[mark=|](O,P P,Q)
+                                    \draw[dashed,gray] (1.607,-1.915) arc[start angle=-50, end angle=50, radius=2.5];
+                                    \draw[dashed,gray] (2.393,1.915) arc[start angle=130, end angle=230, radius=2.5];
+                                    \tkzDrawPoints(O,P,Q,X,Y)
+                                    \tkzLabelPoints[below left](O)
+                                    \tkzLabelPoints[below](P,Q)
+                                    \tkzLabelPoints[right](X)
+                                    \tkzLabelPoints[right](Y)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </li>
+                <li>
+                    <p>
+                        Draw the straight line through <m>X</m> and <m>Y</m>. This is the <term>tangent</term> to the circle at <m>P</m>.
+                    </p>
+                    <figure xml:id="fig-tangent-step-5">
+                        <caption>Step 5: Line through <m>X</m> and <m>Y</m> drawn, passing through <m>P</m> at a right angle to <m>OP</m>.</caption>
+                        <image width="58%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(2,0){P}
+                                    \tkzDefPoint(4,0){Q}
+                                    \tkzDefPoint(2,1.5){X}
+                                    \tkzDefPoint(2,-1.5){Y}
+                                    \tkzDefPoint(2,2.3){Xtop}
+                                    \tkzDrawCircle[thick, teal](O,P)
+                                    \tkzDrawSegments(O,P P,Q)
+                                    \tkzMarkSegments[mark=|](O,P P,Q)
+                                    \draw[dashed,gray] (1.607,-1.915) arc[start angle=-50, end angle=50, radius=2.5];
+                                    \draw[dashed,gray] (2.393,1.915) arc[start angle=130, end angle=230, radius=2.5];
+                                    \draw[blue,thick] (2,-2.3) -- (2,2.3);
+                                    \tkzMarkRightAngle[size=0.2](O,P,Xtop)
+                                    \tkzDrawPoints(O,P,Q,X,Y)
+                                    \tkzLabelPoints[below left](O)
+                                    \tkzLabelPoints[below right](P)
+                                    \tkzLabelPoints[below](Q)
+                                    \tkzLabelPoints[right](X)
+                                    \tkzLabelPoints[right](Y)
+                                    \node[blue] at (2.9,2.2) {\small tangent};
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
                 </li>
             </ol>
-        </paragraphs>
-    </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+        </p>
+        <p>
+            <em>Why does this work?</em> Since <m>P</m> is the midpoint of <m>OQ</m>, the perpendicular bisector of <m>OQ</m> passes through <m>P</m> and is perpendicular to <m>OQ</m>. Since <m>OP</m> is a radius and the constructed line is perpendicular to <m>OP</m> at <m>P</m>, it is exactly the tangent to the circle at <m>P</m>.
+        </p>
+    </paragraphs>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example xml:id="example-tangent-construction-worked">
+        <title>Constructing a Tangent</title>
         <statement>
+            <p>
+                The diagram shows a circle with centre <m>O</m> and a point <m>P</m> at the top of the circle. Describe the steps to construct the tangent to the circle at <m>P</m>, and show the completed construction.
+            </p>
+            <figure xml:id="fig-tangent-eg1-given">
+                <caption>Circle with centre <m>O</m> and point <m>P</m> at the top of the circle.</caption>
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(0,2){P}
+                            \tkzDrawCircle[thick, teal](O,P)
+                            \tkzDrawPoints(O,P)
+                            \tkzLabelPoints[left](O)
+                            \tkzLabelPoints[above](P)
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
+            <p>
+                <ol marker="1.">
+                    <li><p>Draw the radius <m>OP</m> and extend it beyond <m>P</m>.</p></li>
+                    <li><p>Set compasses to length <m>OP</m>. With centre <m>P</m>, mark point <m>Q</m> on the extension above <m>P</m> so that <m>PQ = OP</m>. Now <m>P</m> is the midpoint of <m>OQ</m>.</p></li>
+                    <li><p>Open compasses to more than half the length of <m>OQ</m>. Draw arcs from <m>O</m> and from <m>Q</m> to either side of the line <m>OQ</m>, and label the crossing points <m>X</m> and <m>Y</m>.</p></li>
+                    <li><p>Draw the straight line through <m>X</m> and <m>Y</m>. This line passes through <m>P</m> and is the tangent at <m>P</m>.</p></li>
+                </ol>
+            </p>
+            <p>
+                The completed construction is shown below. Because <m>P</m> is at the top of the circle, the radius <m>OP</m> is vertical, and so the tangent is horizontal.
+            </p>
+            <figure xml:id="fig-tangent-eg1-solution">
+                <caption>Completed tangent construction. The blue horizontal line is the tangent at <m>P</m>.</caption>
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(0,2){P}
+                            \tkzDefPoint(0,4){Q}
+                            \tkzDefPoint(-1.5,2){X}
+                            \tkzDefPoint(1.5,2){Y}
+                            \tkzDefPoint(2.5,2){Tang}
+                            \tkzDrawCircle[thick, teal](O,P)
+                            \tkzDrawSegments(O,P P,Q)
+                            \tkzMarkSegments[mark=|](O,P P,Q)
+                            \draw[dashed,gray] (1.915,1.607) arc[start angle=40, end angle=140, radius=2.5];
+                            \draw[dashed,gray] (-1.915,2.393) arc[start angle=220, end angle=320, radius=2.5];
+                            \draw[blue,very thick] (-2.5,2) -- (2.5,2);
+                            \tkzMarkRightAngle[size=0.2](O,P,Tang)
+                            \tkzDrawPoints(O,P,Q,X,Y)
+                            \tkzLabelPoints[left](O)
+                            \tkzLabelPoints[left](P)
+                            \tkzLabelPoints[above](Q, X, Y)
+                            \node[blue] at (2.9,1.7) {\small tangent};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="example-identifying-tangents">
+        <title>Identifying a Tangent</title>
         <statement>
+            <p>
+                The diagram shows a circle with centre <m>O</m> and three lines labelled <m>\ell_1</m>, <m>\ell_2</m>, and <m>\ell_3</m>. Identify which line is a tangent to the circle and explain how you can tell.
+            </p>
+            <figure xml:id="fig-identify-tangent-eg">
+                <caption>Circle with three lines.</caption>
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(2,0){P}
+                            \tkzDrawCircle[thick, teal](O,P)
+                            \tkzDrawPoints(O)
+                            \tkzLabelPoints[below left](O)
+                            \draw[thick] (2,-3) -- (2,3);
+                            \draw[thick] (-3,0.8) -- (3,0.8);
+                            \draw[thick] (3.5,-3) -- (3.5,3);
+                            \node at (2.45,2.8) {$\ell_1$};
+                            \node at (3.25,0.7) {$\ell_2$};
+                            \node at (3.95,2.8) {$\ell_3$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
+            <p>
+                The line <m>\ell_1</m> is the tangent. It touches the circle at exactly one point (the rightmost point of the circle) and does not enter the interior of the circle.
+            </p>
+            <p>
+                <m>\ell_2</m> is a <term>secant</term>: it crosses the circle at two distinct points, so it is not a tangent.
+            </p>
+            <p>
+                <m>\ell_3</m> does not touch the circle at all, so it is neither a tangent nor a secant.
+            </p>
+            <p>
+                We can confirm that <m>\ell_1</m> is the tangent because it is perpendicular to the radius drawn to its point of contact.
+            </p>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="example-equal-tangent-lengths">
+        <title>Equal Tangent Lengths</title>
         <statement>
+            <p>
+                Two tangents are drawn from an external point <m>T</m> to a circle with centre <m>O</m> and radius <m>2</m> cm. The tangents touch the circle at <m>A</m> and <m>B</m>. Given that <m>OT = 5</m> cm, find the length of each tangent.
+            </p>
+            <figure xml:id="fig-equal-tangents-eg">
+                <caption>Two tangents from external point <m>T</m>.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(2,0){Pr}
+                            \tkzDefPoint(5,0){T}
+                            \tkzDefPoint(0.8,1.833){A}
+                            \tkzDefPoint(0.8,-1.833){B}
+                            \tkzDrawCircle[thick](O,Pr)
+                            \tkzDrawSegments(T,A T,B)
+                            \tkzDrawSegments[dashed](O,A O,B O,T)
+                            \tkzMarkRightAngle[size=0.15](O,A,T)
+                            \tkzMarkRightAngle[size=0.15](O,B,T)
+                            \tkzDrawPoints(O,T,A,B)
+                            \tkzLabelPoints[below left](O)
+                            \tkzLabelPoints[right](T)
+                            \tkzLabelPoints[above right](A)
+                            \tkzLabelPoints[below right](B)
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
+            <p>
+                Since <m>OA</m> is a radius and <m>TA</m> is a tangent at <m>A</m>, we have <m>\angle OAT = 90°</m>. By Pythagoras' theorem in triangle <m>OAT</m>:
+                <md>
+                    TA^2 = OT^2 - OA^2 = 5^2 - 2^2 = 25 - 4 = 21.
+                </md>
+                So <m>TA = \sqrt{21} \approx 4.58</m> cm.
+            </p>
+            <p>
+                By the same argument in triangle <m>OBT</m>, <m>TB = \sqrt{21}</m> cm. The two tangent lengths are equal, confirming the property stated in the Key Ideas above.
+            </p>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
+    <exercises>
+        <exercise xml:id="exercise-identify-tangent-lines">
+            <title>Identifying Tangent Lines</title>
+            <statement>
+                <p>
+                    The diagram shows a circle with centre <m>O</m> and four lines labelled (a), (b), (c), and (d). For each line, state whether it is a tangent, a secant, a diameter, or misses the circle entirely, and justify your answer.
+                </p>
+                <figure xml:id="fig-identify-four-lines">
+                    <caption>Circle with four lines.</caption>
+                    <image width="60%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \tkzDefPoint(0,0){O}
+                                \tkzDefPoint(2,0){P}
+                                \tkzDefPoint(-1.2, 1.6){A}
+                                \tkzDrawCircle[thick, teal](O,P)
+                                \tkzDrawPoints(O)
+                                \tkzLabelPoints[above right](O)
+                                \tkzDefLine[tangent at=A](O)
+                                \tkzGetPoint{h}
+                                \tkzDrawLine[add = 4 and 3](A,h)
+                                \tkzLabelLine[pos=1.25,right](A,h){(c)}
+                                \draw[thick] (2,-3.2) -- (2,3.2);
+                                \draw[thick] (-3,0.7) -- (3,0.7);
+                                \draw[thick] (3.5,-3.2) -- (3.5,3.2);
+                                \draw[thick] (-3,0) -- (3,0);
+                                \node at (2.45,3.0) {\small (a)};
+                                \node at (3.3,0.7) {\small (b)};
+                                \node at (3.3,0) {\small (d)};
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </statement>
+            <answer>
+                <p>
+                    <ul>
+                        <li><p>(a) is the <em>tangent</em> — it touches the circle at exactly one point (the rightmost point).</p></li>
+                        <li><p>(b) is a <em>secant</em> — it cuts through the circle at two points.</p></li>
+                        <li><p>(c) <em>misses the circle entirely</em> — it is further from the centre than the radius.</p></li>
+                        <li><p>(d) is a <em>diameter</em> — it passes through the centre <m>O</m> and intersects the circle at two diametrically opposite points.</p></li>
+                    </ul>
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
+        <exercise xml:id="exercise-construct-tangent-at-point">
+            <statement>
+                <p>
+                    Draw a circle of radius 4 cm with centre <m>O</m>. Mark any point <m>P</m> on the circumference. Using a pair of compasses and a straightedge only, construct the tangent to the circle at <m>P</m>.
+                </p>
+                <p>
+                    Check your construction by measuring the angle between your tangent and the radius <m>OP</m> with a protractor.
+                </p>
+            </statement>
+        </exercise>
 
-    <!-- Add STACK exercises if made -->
+        <exercise xml:id="exercise-construct-external-tangents">
+            <statement>
+                <p>
+                    Draw a circle with centre <m>O</m> and radius 3 cm. Mark an external point <m>T</m> such that <m>OT = 6</m> cm. Construct both tangents from <m>T</m> to the circle and label the points of tangency <m>A</m> and <m>B</m>.
+                </p>
+                <p>
+                    Calculate the exact length of each tangent.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    By Pythagoras' theorem in triangle <m>OAT</m> (where <m>\angle OAT = 90°</m>):
+                    <md>
+                        TA^2 = OT^2 - OA^2 = 6^2 - 3^2 = 36 - 9 = 27.
+                    </md>
+                    So <m>TA = \sqrt{27} = 3\sqrt{3} \approx 5.2</m> cm, and by symmetry <m>TB = 3\sqrt{3}</m> cm.
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- Add static exercises -->
+        <exercise xml:id="exercise-equal-tangents-discovery">
+            <title>Equal Tangents from an External Point</title>
+            <statement>
+                <p>
+                    Draw a circle with centre <m>O</m> and mark an external point <m>T</m>. Construct both tangents from <m>T</m> to the circle and label the points of tangency <m>A</m> and <m>B</m>.
+                </p>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>Measure <m>TA</m> and <m>TB</m>. What do you notice?</p>
+                        </li>
+                        <li>
+                            <p>
+                                Explain why this must always be true. (<em>Hint:</em> consider triangles <m>OAT</m> and <m>OBT</m>. What can you say about their sides and angles?)
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p><m>TA = TB</m>.</p>
+                        </li>
+                        <li>
+                            <p>
+                                In triangles <m>OAT</m> and <m>OBT</m>:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li><p><m>OA = OB</m> (both radii of the same circle),</p></li>
+                                    <li><p><m>OT = OT</m> (common side),</p></li>
+                                    <li><p><m>\angle OAT = \angle OBT = 90°</m> (radius perpendicular to tangent at point of tangency).</p></li>
+                                </ul>
+                            </p>
+                            <p>
+                                By the RHS congruence rule, <m>\triangle OAT \equiv \triangle OBT</m>, and therefore <m>TA = TB</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
 
-    <!-- <exercises>
-        <exercise>
-            <statement>   
+        <exercise xml:id="exercise-tangent-uniqueness">
+            <statement>
+                <p>
+                    Can two different tangent lines to a circle be drawn at the same point on the circle? Explain your answer.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    No. At any point <m>P</m> on the circle, the tangent must be perpendicular to the radius <m>OP</m>. There is exactly one line through <m>P</m> perpendicular to <m>OP</m>, so there is exactly one tangent at <m>P</m>.
+                </p>
+            </answer>
+        </exercise>
 
-            </statement>   
-            <solution>
-
-            </solution>             
-        </exercise>        
-    </exercises> -->
-
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
-
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+        <exercise xml:id="exercise-two-touching-circles">
+            <title>Two Touching Circles</title>
+            <statement>
+                <p>
+                    The diagram shows two circles with centres <m>O_1</m> and <m>O_2</m> and radii <m>r_1</m> and <m>r_2</m> that touch at a single point <m>T</m>.
+                </p>
+                <figure xml:id="fig-two-touching-circles">
+                    <caption>Two circles touching at point <m>T</m>.</caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \tkzDefPoint(-1,0){O1}
+                                \tkzDefPoint(2,0){O2}
+                                \tkzDefPoint(0,0){T}
+                                \tkzDrawCircle(O1,T)
+                                \tkzDrawCircle(O2,T)
+                                \draw[dashed] (-2.3,0) -- (4.3,0);
+                                \tkzDrawPoints(O1,O2,T)
+                                \tkzLabelPoints[below](O1,O2)
+                                \tkzLabelPoints[below right](T)
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Using a ruler, draw a tangent to each circle at <m>T</m>. What do you notice about the two tangents?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The tangent at <m>T</m> is perpendicular to the radius of each circle at <m>T</m>. What does this tell you about the two radii <m>O_1T</m> and <m>O_2T</m>? What does this mean for the positions of <m>O_1</m>, <m>T</m>, and <m>O_2</m>?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Write down the distance <m>O_1O_2</m> in terms of <m>r_1</m> and <m>r_2</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                The two tangents are the same line. There is only one tangent to a circle at any given point, and at <m>T</m> both circles share this unique common tangent.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Both radii <m>O_1T</m> and <m>O_2T</m> must be perpendicular to the same tangent line at <m>T</m>. Since two lines through the same point that are both perpendicular to the same line must be the same line, <m>O_1T</m> and <m>O_2T</m> are collinear. Therefore <m>O_1</m>, <m>T</m>, and <m>O_2</m> all lie on the same straight line.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Since <m>O_1</m>, <m>T</m>, <m>O_2</m> are collinear and <m>T</m> lies between the two centres (the circles are externally tangent),
+                                <md>
+                                    O_1O_2 = r_1 + r_2.
+                                </md>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

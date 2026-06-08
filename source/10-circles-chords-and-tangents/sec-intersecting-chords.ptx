@@ -19,9 +19,9 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
-                        Determine the length of intersecting chords and tangent to a circle
+                        Determine the length of intersecting chords in a circle
                     </p>
                 </li>
                 <li component="lesson-plan">
@@ -41,92 +41,259 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    12 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To guide learners to discover the Intersecting Chords Theorem through measurement and pattern recognition.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Prepare a pre-drawn circle with two intersecting chords for learners who struggle to draw their own. Circulate as learners fill in the table, and prompt with questions such as: <q>Look at your two products — what do you notice? Does this hold for your classmates' circles too?</q>
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <paragraphs>
+                <title>Discovering a Pattern</title>
+                <p>
+                    In this activity you will draw circles, construct intersecting chords, and measure their segments.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Draw a circle using a compass (or trace a circular object). Draw two chords <m>AB</m> and <m>CD</m> that cross each other <em>inside</em> the circle. Label their intersection point <m>P</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Measure <m>AP</m>, <m>PB</m>, <m>CP</m>, and <m>PD</m> to the nearest millimetre. Record your results in the table below, and calculate the two products <m>AP \times PB</m> and <m>CP \times PD</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Repeat parts (a) and (b) with two more circles, choosing a different size circle and a different position for the intersection point each time.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What do you notice about <m>AP \times PB</m> and <m>CP \times PD</m> across your three circles? Write a conjecture.
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    Learners should observe that <m>AP \times PB \approx CP \times PD</m> for each circle (small differences are due to measurement error). The conjecture should state that the two products are always equal.
+                                </p>
+                            </solution>
+                        </li>
+                    </ol>
+                </p>
+                <table>
+                    <title>Intersecting chord measurements</title>
+                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+                        <row header="yes" bottom="medium">
+                            <cell>Circle</cell>
+                            <cell><m>AP</m> (mm)</cell>
+                            <cell><m>PB</m> (mm)</cell>
+                            <cell><m>AP \times PB</m></cell>
+                            <cell><m>CP</m> (mm)</cell>
+                            <cell><m>PD</m> (mm)</cell>
+                            <cell><m>CP \times PD</m></cell>
+                        </row>
+                        <row>
+                            <cell>1</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>2</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>3</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                    </tabular>
+                </table>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalise the pattern Learners discovered in the activity and present a proof using similar triangles.
                 </p>
             </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Ask a few learners to share their products. Confirm that everyone's measurements (approximately) agree — the products are always equal. Tell Learners: <q>This isn't a coincidence — it's always exactly true, and we can prove it using similar triangles.</q>
                     </p>
                 </li>
-            </ol>
+                <li>
+                    <p>
+                        Ensure Learners recall that angles subtended by the same arc are equal (covered earlier in this chapter) — the proof depends on this result.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Stress that the theorem holds for <em>any</em> two chords that cross inside the circle, whether or not they meet at right angles.
+                    </p>
+                </li>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <theorem xml:id="thm-intersecting-chords">
+        <title>The Intersecting Chords Theorem</title>
+        <statement>
+            <p>
+                If two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle, then
+                <md>
+                    AP \times PB = CP \times PD.
+                </md>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Consider the two triangles <m>\triangle APD</m> and <m>\triangle CPB</m>, shown below.
+            </p>
+            <figure xml:id="fig-intersecting-chords-proof">
+                <caption>
+                    Triangle <m>\triangle APD</m> (red) and triangle <m>\triangle CPB</m> (blue).
+                    Matching angle labels show the two pairs of equal angles.
+                </caption>
+                <image width="55%">
+                    <shortdescription>
+                        A circle with chords AB and CD intersecting at P.
+                        Triangle APD is shaded red and triangle CPB is shaded blue.
+                        Angle alpha is marked at vertices A and C; angle beta at vertices D and B.
+                    </shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+                            \draw[thick] (0,0) circle (3);
 
-    <!-- <insight>
-    </insight> -->
+                            \coordinate (A) at (-2.8, -0.8);
+                            \coordinate (B) at (2.6,  1.4);
+                            \coordinate (C) at (-0.9,  2.9);
+                            \coordinate (D) at (2.1, -2.1);
+                            \coordinate (P) at (0.44, 0.52);
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+                            \fill[red!20]  (A) -- (P) -- (D) -- cycle;
+                            \fill[blue!20] (C) -- (P) -- (B) -- cycle;
+
+                            \draw[thick] (A) -- (B);
+                            \draw[thick] (C) -- (D);
+
+                            \node[right, red!70!black]  at (-2.1, -0.5) {$\alpha$};
+                            \node[below, blue!70!black] at (-0.5,  2.4) {$\alpha$};
+                            \node[above, red!70!black]  at ( 1.8, -1.6) {$\beta$};
+                            \node[left,  blue!70!black] at ( 2.2,  1.1) {$\beta$};
+
+                            \node[left]        at (A) {$A$};
+                            \node[right]       at (B) {$B$};
+                            \node[above]       at (C) {$C$};
+                            \node[below right] at (D) {$D$};
+                            \node[above right] at (P) {$P$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                We show that <m>\triangle APD \sim \triangle CPB</m> using the AA (angle-angle) condition.
+                <ul>
+                    <li>
+                        <p>
+                            <m>\angle DAP = \angle BCP</m> (both labelled <m>\alpha</m>): both angles are subtended by arc <m>BD</m> from the same side of the chord, so they are equal by the theorem on angles in the same segment.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\angle ADP = \angle CBP</m> (both labelled <m>\beta</m>): both angles are subtended by arc <m>AC</m> from the same side of the chord, so they are equal by the same theorem.
+                        </p>
+                    </li>
+                </ul>
+                Therefore <m>\triangle APD \sim \triangle CPB</m> (AA).
+            </p>
+            <p>
+                Since corresponding sides of similar triangles are in proportion:
+                <md>
+                    <mrow> \frac{AP}{CP} \amp= \frac{DP}{BP} </mrow>
+                </md>
+                Cross-multiplying gives:
+                <md>
+                    AP \times BP = CP \times DP.
+                </md>
+            </p>
+        </proof>
+    </theorem>
+
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <term>The Intersecting Chords Theorem:</term> when two chords <m>AB</m> and <m>CD</m> intersect at a point <m>P</m> inside a circle,
+                        <md>
+                            AP \times PB = CP \times PD.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The proof uses the fact that angles subtended by the same arc are equal — a result from earlier in this chapter.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If three of the four segment lengths are known, set up the equation <m>AP \times PB = CP \times PD</m> and solve for the unknown.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-     <example>
+    <example>
         <statement>
             <p>
-                AB and XY are two chords that intersect in a circle at R. Given that AR <m> = 4</m> cm, XR <m> = 5</m> cm, and RY <m> = 3</m> cm, find AB.
+                Chords <m>AB</m> and <m>XY</m> intersect inside a circle at <m>R</m>. Given that <m>AR = 4</m> cm, <m>XR = 5</m> cm, and <m>RY = 3</m> cm, find the length of <m>AB</m>.
             </p>
         </statement>
         <solution>
             <figure>
-                <caption>Chords intersecting inside a circle.</caption>
-                <image>
-                    <shortdescription>A circle with two intersecting chords AB and XY meeting at point R.</shortdescription>
+                <caption>Chords <m>AB</m> and <m>XY</m> intersecting at <m>R</m>.</caption>
+                <image width="55%">
+                    <shortdescription>A circle with two intersecting chords AB and XY meeting at point R inside the circle.</shortdescription>
                     <latex-image>
                         \begin{tikzpicture}
                             \draw[thick] (0,0) circle (3);
@@ -135,107 +302,325 @@
                             \coordinate (B) at (2.8, 1.1);
                             \coordinate (X) at (-2.1, -2.1);
                             \coordinate (Y) at (1.9, 2.3);
-
                             \coordinate (R) at (0.42, 0.83);
 
                             \draw[blue, thick] (A) -- (B);
-                            \draw[red, thick] (X) -- (Y);
+                            \draw[red,  thick] (X) -- (Y);
 
-                            \node[left] at (A) {A};
-                            \node[right] at (B) {B};
-                            \node[below left] at (X) {X};
-                            \node[below right] at (Y) {Y};
-                            \node[below] at (R) {R};
+                            \node[left]        at (A) {$A$};
+                            \node[right]       at (B) {$B$};
+                            \node[below left]  at (X) {$X$};
+                            \node[above right] at (Y) {$Y$};
+                            \node[below]       at (R) {$R$};
 
                             \node[above] at (-1.2, 0.65) {4 cm};
-                            \node[above] at (1.6, 0.95) {x cm};
-                            \node[left] at (-0.8, -0.6) {5 cm};
-                            \node[left] at (1.2, 1.6) {3 cm};
-
-
+                            \node[above] at ( 1.6, 0.95) {$x$ cm};
+                            \node[left]  at (-0.8, -0.6) {5 cm};
+                            \node[right] at ( 1.2,  1.6) {3 cm};
                         \end{tikzpicture}
                     </latex-image>
-                    
                 </image>
             </figure>
             <p>
-                Let RB <m> = x</m> cm
-            </p>
-            <p>
-                <m>4 \times x = 5 \times 3</m>
-            </p>
-            <p>
-                <m> 4x = 15</m>
-            </p>
-            <p>
-                <m> x = 3.75</m> cm
-            </p>
-            <p>
+                Let <m>RB = x</m> cm. By the Intersecting Chords Theorem:
                 <md>
-                    <mrow> \text{since AB}\; \amp = \; \text{AR}\; + \;\text{RB} </mrow>
-                    <mrow> \text{Therefore} \; \amp = \; 4 + 3.75 </mrow>
-                    <mrow> \amp = \; 7.75 \text{cm} </mrow>
+                    <mrow> AR \times RB \amp= XR \times RY </mrow>
+                    <mrow> 4 \times x   \amp= 5 \times 3 </mrow>
+                    <mrow> 4x           \amp= 15 </mrow>
+                    <mrow> x            \amp= 3.75 \text{ cm} </mrow>
                 </md>
-                
+            </p>
+            <p>
+                Therefore:
+                <md>
+                    <mrow> AB \amp= AR + RB </mrow>
+                    <mrow>    \amp= 4 + 3.75 </mrow>
+                    <mrow>    \amp= 7.75 \text{ cm} </mrow>
+                </md>
             </p>
         </solution>
-     </example>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Chords <m>PQ</m> and <m>RS</m> intersect inside a circle at <m>T</m>. Given that <m>PT = x + 2</m>, <m>TQ = 3</m>, <m>RT = x</m>, and <m>TS = 6</m>, find <m>x</m> and the length of <m>RS</m>.
+            </p>
+        </statement>
+        <solution>
+            <figure>
+                <caption>Chords <m>PQ</m> and <m>RS</m> intersecting at <m>T</m>, with algebraic segment lengths.</caption>
+                <image width="55%">
+                    <shortdescription>A circle with two intersecting chords PQ and RS meeting at T. Segments are labelled PT = x+2, TQ = 3, RT = x, TS = 6.</shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \draw[thick] (0,0) circle (3);
+
+                            \coordinate (P) at (-2.9, -0.3);
+                            \coordinate (Q) at ( 2.7,  0.7);
+                            \coordinate (R) at (-0.9,  2.9);
+                            \coordinate (S) at ( 1.4, -2.7);
+                            \coordinate (T) at ( 0.24, 0.26);
+
+                            \draw[blue, thick] (P) -- (Q);
+                            \draw[red,  thick] (R) -- (S);
+
+                            \node[left]        at (P) {$P$};
+                            \node[right]       at (Q) {$Q$};
+                            \node[above]       at (R) {$R$};
+                            \node[below right] at (S) {$S$};
+                            \node[above right] at (T) {$T$};
+
+                            \node[above] at (-1.3,  0.0) {$(x+2)$};
+                            \node[above] at ( 1.45, 0.5) {$3$};
+                            \node[left]  at (-0.3,  1.7) {$x$};
+                            \node[right] at ( 0.9, -1.2) {$6$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                By the Intersecting Chords Theorem:
+                <md>
+                    <mrow> PT \times TQ     \amp= RT \times TS </mrow>
+                    <mrow> (x + 2)(3)       \amp= x(6) </mrow>
+                    <mrow> 3x + 6           \amp= 6x </mrow>
+                    <mrow> 6                \amp= 3x </mrow>
+                    <mrow> x                \amp= 2 </mrow>
+                </md>
+            </p>
+            <p>
+                Therefore:
+                <md>
+                    <mrow> RS \amp= RT + TS </mrow>
+                    <mrow>    \amp= 2 + 6 </mrow>
+                    <mrow>    \amp= 8 \text{ cm} </mrow>
+                </md>
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                Two chords <m>AB</m> and <m>CD</m> of a circle intersect at right angles at a point <m>P</m> inside the circle. Given that <m>AP = 3</m> cm, <m>PB = 12</m> cm, and that <m>P</m> is the midpoint of <m>CD</m>,
+                <ol marker="(a)">
+                    <li><p>find <m>CP</m>,</p></li>
+                    <li><p>find the length of <m>CD</m>.</p></li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <figure>
+                <caption>Perpendicular chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                <image width="55%">
+                    <shortdescription>A circle with a horizontal chord AB and a vertical chord CD crossing at right angles at P. AP = 3 cm, PB = 12 cm, and CP = PD = y cm are labelled.</shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.9]
+                            % Circle: centre (1.5, 0), radius 2.5
+                            % Verification: A=(-1,0): dist to (1.5,0) = 2.5 OK
+                            %               B=(4,0):  dist to (1.5,0) = 2.5 OK
+                            %               C=(0,2):  dist to (1.5,0) = sqrt(2.25+4) = 2.5 OK
+                            %               D=(0,-2): same OK
+                            \draw[thick] (1.5, 0) circle (2.5);
+
+                            \coordinate (A) at (-1, 0);
+                            \coordinate (B) at ( 4, 0);
+                            \coordinate (C) at ( 0, 2);
+                            \coordinate (D) at ( 0,-2);
+                            \coordinate (P) at ( 0, 0);
+
+                            \draw[blue, thick] (A) -- (B);
+                            \draw[red,  thick] (C) -- (D);
+
+                            \draw (0.22, 0) -- (0.22, 0.22) -- (0, 0.22);
+
+                            \node[left]        at (A) {$A$};
+                            \node[right]       at (B) {$B$};
+                            \node[above]       at (C) {$C$};
+                            \node[below]       at (D) {$D$};
+                            \node[below left]  at (P) {$P$};
+
+                            \node[above] at (-0.5, 0) {3 cm};
+                            \node[above] at ( 2.0, 0) {12 cm};
+                            \node[right] at (0,  1.0) {$y$ cm};
+                            \node[right] at (0, -1.0) {$y$ cm};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                Let <m>CP = PD = y</m> cm (since <m>P</m> is the midpoint of <m>CD</m>).
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            By the Intersecting Chords Theorem:
+                            <md>
+                                <mrow> AP \times PB \amp= CP \times PD </mrow>
+                                <mrow> 3 \times 12  \amp= y \times y </mrow>
+                                <mrow> 36           \amp= y^2 </mrow>
+                                <mrow> y            \amp= 6 \text{ cm} </mrow>
+                            </md>
+                            Therefore <m>CP = 6</m> cm.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow> CD \amp= CP + PD </mrow>
+                                <mrow>    \amp= 6 + 6 </mrow>
+                                <mrow>    \amp= 12 \text{ cm} </mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </example>
+
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->
 
     <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
 
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-     <exercises>
+    <exercises>
         <exercise>
             <statement>
                 <p>
-                    
+                    In each part, two chords intersect inside a circle at point <m>P</m>. Find the missing length.
+                </p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 6</m> cm, <m>PB = 4</m> cm, <m>CP = 8</m> cm. Find <m>PD</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 3</m> cm, <m>PB = 8</m> cm, <m>CP = 6</m> cm. Find <m>PD</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 2</m> cm, <m>PB = 9</m> cm, <m>CP = 6</m> cm. Find <m>PD</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 5</m> cm, <m>PB = 4</m> cm, <m>CP = 10</m> cm. Find <m>PD</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 4</m> cm, <m>PB = 7</m> cm, <m>CP = 14</m> cm. Find <m>PD</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 6</m> cm, <m>PB = 6</m> cm, <m>CP = 9</m> cm. Find <m>PD</m>.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li><p><m>PD = 3</m> cm</p></li>
+                    <li><p><m>PD = 4</m> cm</p></li>
+                    <li><p><m>PD = 3</m> cm</p></li>
+                    <li><p><m>PD = 2</m> cm</p></li>
+                    <li><p><m>PD = 2</m> cm</p></li>
+                    <li><p><m>PD = 4</m> cm</p></li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    In each part, two chords intersect inside a circle at point <m>T</m>. Find <m>x</m> and then find the length of chord <m>RS</m>.
+                </p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p>
+                            <m>PT = x</m>, <m>TQ = 6</m>, <m>RT = 4</m>, <m>TS = x + 2</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>PT = x + 1</m>, <m>TQ = 4</m>, <m>RT = x</m>, <m>TS = 5</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>PT = 2x</m>, <m>TQ = 3</m>, <m>RT = x + 1</m>, <m>TS = 4</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>PT = 3</m>, <m>TQ = 2x + 1</m>, <m>RT = x + 2</m>, <m>TS = 3</m>.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li><p><m>x = 4</m>; <m>RS = 10</m> cm</p></li>
+                    <li><p><m>x = 4</m>; <m>RS = 9</m> cm</p></li>
+                    <li><p><m>x = 2</m>; <m>RS = 7</m> cm</p></li>
+                    <li><p><m>x = 1</m>; <m>RS = 6</m> cm</p></li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    In each part, two chords of a circle meet at right angles at point <m>P</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Chords <m>AB</m> and <m>CD</m> meet at right angles at <m>P</m>. <m>AP = 4</m> cm, <m>PB = 9</m> cm, and <m>P</m> is the midpoint of <m>CD</m>. Find <m>CP</m> and the length of <m>CD</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Two perpendicular chords intersect at <m>P</m>. The segments of the first chord are <m>AP = 2</m> cm and <m>PB = 8</m> cm. Without finding <m>CP</m> and <m>PD</m> individually, state the value of <m>CP \times PD</m>.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li><p><m>CP = 6</m> cm; <m>CD = 12</m> cm</p></li>
+                    <li><p><m>CP \times PD = 16</m> cm<m>^2</m></p></li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle such that <m>AP = CP</m>. Prove that <m>PB = PD</m>.
                 </p>
             </statement>
+            <solution>
+                <p>
+                    By the Intersecting Chords Theorem:
+                    <md>
+                        AP \times PB = CP \times PD.
+                    </md>
+                    Since <m>AP = CP</m>, we may divide both sides by <m>AP</m> (which is non-zero):
+                    <md>
+                        PB = PD.
+                    </md>
+                </p>
+            </solution>
         </exercise>
-     </exercises>
-
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
-
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
