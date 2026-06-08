@@ -290,9 +290,9 @@
                     <mrow> \text{Balance} \amp = \;50,000 - 10,000 = \;\text{Ksh}\; 40,000 </mrow>
                     <mrow> \text{Total Paid in Installments} \amp = \; 12 \times 4,000 = \;\text{Ksh}\; 48,000 </mrow>
                     <mrow> \text{Interest Paid} \amp = \; 48,000 - 40,000 = \text{Ksh}\; 8,000 </mrow>
-                    <mrow> I \amp = \; \frac{P \time R \times T}{100} </mrow>
+                    <mrow> I \amp = \; \frac{P \times R \times T}{100} </mrow>
                     <mrow> 8,000 \amp = \; \frac{40,000 \times R \times 1}{100} </mrow>
-                    <mrow> 8,000 \amp = \; 400 R </mrow>
+                    <mrow> 8,000 \amp = 400 R </mrow>
                     <mrow> R \amp = \; 20 \% \; \text{Per annum} </mrow>
                 </md>
                 

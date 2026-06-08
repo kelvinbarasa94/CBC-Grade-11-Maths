@@ -23,12 +23,21 @@ jobs:
             - name: install deps
               run: pip install -r requirements.txt
 
+            # - name: install tex dependencies
+            #   run: |
+            #     tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2025/tlnet-final
+            #     tlmgr update --self
+            #     tlmgr install tkz-euclide tikz-3dplot longdivision
+
+            # Reverting to previous tlmgr repository
             - name: install tex dependencies
               run: |
-                tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2025/tlnet-final
-                tlmgr update --self
-                tlmgr install tkz-euclide tikz-3dplot longdivision
+                REPO=https://texlive.info/historic/systems/texlive/2025/tlnet-final
 
+                tlmgr option repository "$REPO"
+                tlmgr update --self
+                tlmgr install tkz-euclide tikz-3dplot
+                  
             - name: install local ptx files
               run: pretext --version
 
@@ -49,9 +58,6 @@ jobs:
               run: |
                 cp assets/pretext/js/pretext-stack/stackapicalls.js output/web/_static/pretext/js/pretext-stack/stackapicalls.js
 
-            - name: build deploy target student
-              run: pretext build student
-
             - name: Copy custom stackapicalls.js
               run: |
                 cp assets/pretext/js/pretext-stack/stackapicalls.js output/student/_static/pretext/js/pretext-stack/stackapicalls.js
@@ -59,6 +65,10 @@ jobs:
             - name: Copy version without review links into student subfolder
               run: |
                 cp -r output/student/ output/web/
+
+            - name: Copy plans version into web
+              run: |
+                cp -r output/plans/ output/web/
 
             - name: build deploy target print
               run: pretext build print

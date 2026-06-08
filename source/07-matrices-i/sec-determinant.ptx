@@ -43,47 +43,259 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    10 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To provide a visual explanation for the formula for the determinant.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    If time allows, prepare the shapes from <xref ref="det-triangles"/> in advance, so that you can cut them out and rearrange them with the class during the activity. If not, you can ask learners to draw and cut out the shapes themselves.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <!-- TODO, create a quick JS visualiser with different matrices, creating the parallelogram-->
+    <activity>
         <statement>
+            <paragraphs>
+                <title>Visualising a Matrix</title>
+                <p>
+                    Suppose <m>A = \begin{bmatrix} 6 \amp 2.5 \\ 2.2 \amp 3 \end{bmatrix}</m>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                If <m>\mathbf{x} = \begin{bmatrix} 1\\ 0\end{bmatrix}</m> and <m>\mathbf{y} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}</m>, find <m>A\mathbf{x}</m> and <m>A\mathbf{y}</m>.
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    <m>A\mathbf{x} = \begin{bmatrix}6 \\ 2.2\end{bmatrix}</m>, the first column of <m>A</m> and <m>A\mathbf{y} = \begin{bmatrix}2.5 \\ 3\end{bmatrix}</m>, the second column of <m>A</m>.
+                                </p>
+                            </solution>
+                        </li>
+                        <li>
+                            <p>
+                                Plot the vectors <m>A\mathbf{x}</m> and <m>A\mathbf{y}</m> on the coordinate plane, with their tails at the origin
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                <figure xml:id="Ax-Ay">
+                                <caption>Plotting the vectors</caption>
+                                <image width="70%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
+                                        % Dimensions
+                                        \def\a{6}
+                                        \def\b{2.5}
+                                        \def\c{2.2}
+                                        \def\d{3}
+                                        \pgfmathsetmacro{\W}{\a+\b}
+                                        \pgfmathsetmacro{\H}{\c+\d}
+
+                                        % Helper points (line intersections)
+                                        \coordinate (x1) at (\a,\c);
+                                        \coordinate (x2) at (\b,\d);
+
+                                        \draw (0,0) grid (9,6);
+
+                                        % Main outline and diagonals
+                                        \draw[very thick, -&gt;] (0,0) -- (x1) node [below right, fill=white, opacity=0.8] {$A\mathbf{x} = (6, 2.2)$};
+                                        \draw[very thick, -&gt;] (0,0) -- (x2) node [above left, fill=white, opacity=0.8] {$A\mathbf{y} = (2.5, 3)$};
+
+
+                                        
+                                        % Labels
+                                        \node[below right] at (0,0) {$O$};
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                            </figure>
+                                </p>
+                            </solution>
+                        </li>
+                        <li>
+                            <p>
+                                Also plot a point representing the sum <m>A\mathbf{x} + A\mathbf{y}</m>, and connect the tips of your previous vectors to this point to form a parallelogram.
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                <figure xml:id="Ax-Ay-P">
+                                <caption>Creating the Parallelogram</caption>
+                                <image width="70%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
+                                        % Dimensions
+                                        \def\a{6}
+                                        \def\b{2.5}
+                                        \def\c{2.2}
+                                        \def\d{3}
+                                        \pgfmathsetmacro{\W}{\a+\b}
+                                        \pgfmathsetmacro{\H}{\c+\d}
+
+                                        % Helper points (line intersections)
+                                        \coordinate (x1) at (\a,\c);
+                                        \coordinate (x2) at (\b,\d);
+
+                                        \draw (0,0) grid (9,6);
+                                        % Main outline and diagonals
+                                        \draw[very thick, -&gt;] (0,0) -- (x1) node [below right, fill=white, opacity=0.8] {$A\mathbf{x} = (6, 2.2)$};
+                                        \draw[very thick] (x1) -- (\W, \H) -- (x2);
+                                        \draw[very thick, -&gt;] (0,0) -- (x2) node [above left, fill=white, opacity=0.8] {$A\mathbf{y} = (2.5, 3)$};
+                                        
+                                        % Labels
+                                        \node[below left] at (0,0) {$O$};
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                            </figure>
+                                </p>
+                            </solution>
+                        </li>
+                    </ol>
+                    The <term>determinant</term> of a matrix tells us how it changes areas (like the parallelogram we just created). We'll explore how to find it.
+                </p>
+            </paragraphs>
+            <paragraphs>
+                <title>Finding an Expression for the Determinant</title>
+                <p>
+                    We'll consider how the general matrix <m>A = \begin{bmatrix}a \amp b\\ c \amp d\end{bmatrix}</m> changes areas. In general, we have:
+                    <md>
+                        <mrow>A\mathbf{x} \amp = \begin{bmatrix}a \amp b\\ c \amp d\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix} = \begin{bmatrix}a \\ c\end{bmatrix} </mrow>
+                        <mrow>A\mathbf{y} \amp = \begin{bmatrix}a \amp b\\ c \amp d\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix} = \begin{bmatrix}b \\ d\end{bmatrix} </mrow>
+                    </md>
+                    To do so, this figure will help:
+                <figure xml:id="det-triangles">
+                    <caption>Finding the area of a parallelogram</caption>
+                    <image width="70%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
+                            % Dimensions
+                            \def\a{6}
+                            \def\b{2.5}
+                            \def\c{2.2}
+                            \def\d{3}
+                            \pgfmathsetmacro{\W}{\a+\b}
+                            \pgfmathsetmacro{\H}{\c+\d}
+
+                            % Helper points (line intersections)
+                            \coordinate (x1) at (\a,\c);
+                            \coordinate (x2) at (\b,\d);
+
+                            % Red regions
+                            \fill[red!20, draw=black!20] (0,0) -- (x1) -- (\a, 0) -- cycle;
+                            \fill[red!20, draw=black!20] (\W, \H) -- (x2) -- (\b, \H) -- cycle;
+
+                            % Purple regions
+                            \fill[blue!20, draw=black!20] (0,0) -- (x2) -- (0, \d) -- cycle;
+                            \fill[blue!20, draw=black!20] (\W, \H) -- (x1) -- (\W, \c) -- cycle;
+
+                            % Orange rectangles
+                            \fill[orange!35, draw=black!20] (0,\d) -- (x2) -- (\b, \H) -- (0, \H) -- cycle;
+                            \fill[orange!35, draw=black!20] (\a,0) -- (x1) -- (\W, \c) -- (\W, 0) -- cycle;
+
+                            % Main outline and diagonals
+                            \draw[thick] (0,0) rectangle (\W,\H);
+                            \draw[very thick, -&gt;] (0,0) -- (x1) node [midway, above] {$A\mathbf{x}$};
+                            \draw[very thick, -&gt;] (0,0) -- (x2) node [midway, below] {$A\mathbf{y}$};
+                            \draw[very thick] (x2) -- (\W,\H) node [midway, below] {$A\mathbf{x}$};
+                            \draw[very thick] (x1) -- (\W,\H) node [midway, above] {$A\mathbf{y}$};
+                            
+
+                            % Labels
+                            \node at (\b + \a/2,\H+0.4) {$a$};
+                            \node at (\a/2,-0.4) {$a$};
+                            \node at (\b/2,\H+0.35) {$b$};
+                            \node at (\a+\b/2,-0.35) {$b$};
+                            \node at (-0.4,\H-\c/2) {$c$};
+                            \node at (\W+0.4,\c/2) {$c$};
+                            \node at (-0.4,\d/2) {$d$};
+                            \node at (\W+0.4,\c+\d/2) {$d$};
+                            \node at (\W/2,\d/2+\c/2) {$D$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Copy out <xref ref="det-triangles"/> into a loose piece of paper, label all the side lengths (on the inside!).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What's the total area of the large rectangle?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The area of the large rectangle is given by the product of its width and height, which are <m>a + b</m> and <m>c + d</m> respectively. Therefore, the area of the large rectangle is:
+                                <md>
+                                    <mrow> \text{Total Area} \amp = (a + b)(c + d) </mrow>
+                                    <mrow number="yes" xml:id="total-area"> \amp = ac + ad + bc + bd </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                            Cut out all the coloured triangles and squares. Can you find a helpful way to rearrange them to figure out the total coloured area?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The two red triangles can be combined to form a rectangle with area <m>ac</m>, and the two blue triangles can be combined to form a rectangle with area <m>bd</m>. Thus the combined area is:
+                                <md>
+                                    <mrow> \text{Coloured Area} \amp = \color{red}{\text{red area}} + \color{blue}{\text{blue area}} + \color{orange}{\text{orange area}} </mrow>
+                                    <mrow number="yes" xml:id="coloured-area"> \amp = \color{red}{ac} + \color{blue}{bd} + \color{orange}{2bc} </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                        <note component="lesson-plan">
+                            <p>
+                                Gently guide Learners if they are struggling to find the area. There are many different ways to rearrange the shapes, so encourage Learners to be creative.
+                            </p>
+                        </note>
+                    </li>
+                    <li>
+                        <p>
+                            What is the area of the parallelogram <m>D</m>?
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                The area of the parallelogram <m>D</m> is given by the total area of the large rectangle minus the coloured area. Thus, using <xref ref="total-area"/> and <xref ref="coloured-area"/>, we have:
+                                <md>
+                                    <mrow> \text{Area of } D \amp = \text{Total Area} - \text{Coloured Area} </mrow>
+                                    <mrow> \amp = (ac + ad + bc + bd) - (ac + bd + 2bc) </mrow>
+                                    <mrow> \amp = ad + bc - 2bc </mrow>
+                                    <mrow> \amp = ad - bc </mrow>
+                                </md>
+                            </p>
+                        </solution>
+                    </li>
+                </ol>
+                </p>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    5 minutes
                 </p>
             </li>
             <li>
@@ -96,20 +308,87 @@
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        Make sure Learners recognise the area <m>D = ad - bc</m> from the Learner Experience is the determinant of the matrix <m>A</m>.
                     </p>
                 </li>
-            </ol>
+                <li>
+                    <p>
+                        Stress the connection between determinants and inverses. Relate this to how we cannot divide by zero.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Remind Learners that they only need to find the determinant of 2 by 2 matrices in this course. Point them to <xref ref="det-technology"/> if they are curious about higher dimensions.
+                    </p>
+                </li>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <definition xml:id="def-determinant">
+        <title>The Determinant</title>
+        <statement>
+            <p>
+                If <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m> is a 2 by 2 matrix, then the <term>determinant</term> of <m>A</m> is given by the formula <md>\det{A} = ad - bc</md>.
+            </p>
+        </statement>
+    </definition>
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        The <term>determinant</term> measures how an area changes when we apply a matrix to it.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The determinant of a matrix <m>A</m> is denoted by <m>\det{A}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>A = \begin{bmatrix}a \amp b \\ c \amp d\end{bmatrix}</m>, then <m>\det{A} = ad - bc</m>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <paragraphs>
+            <title>The Determinant and the Inverse</title>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            You might recognise this expression from the formula for the inverse of a 2 by 2 matrix. We have: <md>
+                                A^{-1} = \frac{1}{ad-bc}\begin{bmatrix}d \amp -b \\ -c \amp a\end{bmatrix} = \frac{1}{\det{A}}\begin{bmatrix}d \amp -b \\ -c \amp a\end{bmatrix}
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If the determinant of a matrix is zero, then the matrix does not have an inverse.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            This is because the matrix <q>collapses</q> areas to zero, meaning that we cannot reverse the transformation to get back to our original vectors.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </paragraphs>
+    </insight>
+
+    <technology xml:id="det-technology">
+        <p> For a visual introduction to the determinant, check out this video, by 3Blue1Brown. It uses a similar visual approach to the one we used in the activity, but also explores how the determinant changes when we apply different transformations to our matrix.</p>
+
+        <video xml:id="yt-list-vars" youtube="Ip3X9LOh2dk"/>
+    </technology>
+    
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
@@ -117,26 +396,161 @@
 
     <!-- Add at least 3 examples -->
 
-    <!-- <example>
+    <!-- Show det(aM) = a det(A), det(AB) = det(A) det(B)-->
+
+    <example>
         <statement>
+            <p> If <m>A = \begin{bmatrix} 5 &amp; 3 \\ 1 &amp; 4 \end{bmatrix}</m>, compute the determinant of <m>A</m>, written <m>\det{A}</m>.</p>
         </statement>
         <solution>
+            <p>
+                We can compute the determinant of a 2 by 2 matrix using the formula <m>\det{\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}} = ad - bc</m>. In this case, we have <m>a = 5</m>, <m>b = 3</m>, <m>c = 1</m>, and <m>d = 4</m>. Substituting these values into the formula gives us:
+
+                <md>
+                    <mrow> \det{A} \amp = (5)(4) - (3)(1) </mrow>
+                    <mrow>  \amp = 20 - 3 </mrow>
+                    <mrow> \amp = 17 </mrow>
+                </md>
+
+                Therefore, the determinant of matrix <m>A</m> is <m>17</m>.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                Let <m>M = \begin{bmatrix} 2 &amp; -1 \\ 4 &amp; -2 \end{bmatrix}</m>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Compute <m>\det{M}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What does the value of the determinant tell us about the inverse of <m>M</m>?
+                        </p>
+                    </li>
+                </ol>
+            </p>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Using the formula for the determinant of a 2 by 2 matrix, we have:
+
+                        <md>
+                            <mrow> \det{M} \amp = ad - bc </mrow>
+                            <mrow> \amp = (2)(-2) - (-1)(4) </mrow>
+                            <mrow> \amp = -4 + 4 </mrow>
+                            <mrow> \amp = 0 </mrow>
+                        </md>
+
+                        Therefore, the determinant of matrix <m>M</m> is <m>0</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Since <m>\det{M} = 0</m>, the matrix <m>M</m> does not have an inverse. 
+                    </p>
+                    <p>
+                        This is because any system of equations <m>M\mathbf{x} = \mathbf{b}</m> would have either no solutions or infinitely many solutions, depending on the value of <m>\mathbf{b}</m>.
+                    </p>
+                    <p> 
+                        For example, if <m>\mathbf{x} = \begin{bmatrix} x \\ y \end{bmatrix}</m> and <m>\mathbf{b} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}</m>, then we get the system of equations:
+                        <md>
+                            <mrow> 2x - y \amp = 0 </mrow>
+                            <mrow> 4x - 2y \amp = 0 </mrow>
+                        </md>
+                        These equations represent the same line, so the system has infinitely many solutions.
+                    </p>
+                    <p>
+                        In either case, we cannot find a unique solution for <m>\mathbf{x}</m>, which is why the matrix <m>M</m> does not have an inverse.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
+    
+
     <example>
         <statement>
+            <p>
+                Let <m>A = \begin{bmatrix}-4 \amp 0 \\ 0 \amp 3\end{bmatrix}</m> and <m> B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 2 \end{bmatrix}</m>.
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Compute <m>\det{A}</m> and <m>\det{B}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the product <m>AB</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Compute <m>\det{AB}</m> and verify that it is equal to <m>\det{A} \cdot \det{B}</m>.
+                        </p>
+                    </li>
+                </ol>   
+            </p>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Finding <m>\det{A}</m>:
+                        <md>
+                            <mrow> \det{A} \amp = ad - bc </mrow>
+                            <mrow> \amp = (-4)(3) - (0)(0) </mrow>
+                            <mrow> \amp = -12 </mrow>
+                        </md>
+                        Finding <m>\det{B}</m>:
+                        <md>
+                            <mrow> \det{B} \amp = ad - bc </mrow>
+                            <mrow> \amp = (1)(2) - (2)(3) </mrow>
+                            <mrow> \amp = 2 - 6 </mrow>
+                            <mrow> \amp = -4 </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        To find the product <m>AB</m>, we perform matrix multiplication:
+                        <md>
+                            <mrow> AB \amp = \begin{bmatrix} -4 \amp 0 \\ 0 \amp 3 \end{bmatrix} \begin{bmatrix} 1 \amp 2 \\ 3 \amp 2 \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} (-4)(1) + (0)(3) \amp (-4)(2) + (0)(2) \\ (0)(1) + (3)(3) \amp (0)(2) + (3)(2) \end{bmatrix} </mrow>
+                            <mrow> \amp = \begin{bmatrix} -4 \amp -8 \\ 9 \amp 6 \end{bmatrix} </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Finding <m>\det{AB}</m>:
+                        <md>
+                            <mrow> \det{AB} \amp = ad - bc </mrow>
+                            <mrow> \amp = (-4)(6) - (-8)(9) </mrow>
+                            <mrow> \amp = -24 + 72 </mrow>
+                            <mrow> \amp = 48 </mrow>
+                        </md>
+                        Now we verify that <m>\det{AB} = \det{A} \cdot \det{B}</m>:
+                        <md>
+                            <mrow> \det{A} \cdot \det{B} \amp = (-12)(-4) </mrow>
+                            <mrow> \amp = 48 </mrow>
+                            <mrow> \amp = \det{AB} </mrow>
+                        </md>
+                    </p>
+                    <p>
+                        In fact, the property <m>\det{AB} = \det{A} \cdot \det{B}</m> holds for all matrices <m>A</m> and <m>B</m> (as long as <m>AB</m> is defined).
+                    </p>
+                </li>
+            </ol>
         </solution>
-    </example> -->
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -148,16 +562,366 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>Compute the determinant of each matrix.</p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A = \begin{bmatrix} 3 &amp; -1 \\ 2 &amp; 4 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B = \begin{bmatrix} -5 &amp; 0 \\ 0 &amp; 2 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C = \begin{bmatrix} 7 &amp; 2 \\ -3 &amp; 1 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>D = \begin{bmatrix} 0 &amp; -2 \\ 5 &amp; 1 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E = \begin{bmatrix} -4 &amp; -1 \\ 2 &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F = \begin{bmatrix} 1 &amp; 3 \\ 2 &amp; 6 \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>\det{A} = 14</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{B} = -10</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{C} = 13</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{D} = 10</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{E} = 2</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{F} = 0</m></p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Compute the determinant of each matrix.</p>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>A = \begin{bmatrix} 6 &amp; 0 \\ 0 &amp; -3 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>B = \begin{bmatrix} 1 &amp; -4 \\ 2 &amp; 5 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>C = \begin{bmatrix} -1 &amp; 2 \\ 3 &amp; -6 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>D = \begin{bmatrix} 2 &amp; -3 \\ 1 &amp; 4 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>E = \begin{bmatrix} 0 &amp; 1 \\ 4 &amp; 0 \end{bmatrix}</m></p>
+                    </li>
+                    <li>
+                        <p><m>F = \begin{bmatrix} -2 &amp; 5 \\ 3 &amp; -1 \end{bmatrix}</m></p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>\det{A} = -18</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{B} = 13</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{C} = 0</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{D} = 11</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{E} = -4</m></p>
+                    </li>
+                    <li>
+                        <p><m>\det{F} = -13</m></p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+            <p>
+                Suppose <m>A</m> and <m>B</m> are 2 by 2 matrices. Which of the following statements are true? If a statement is false, provide a counterexample, and if a statement is true, provide a short proof.
+                <ol marker="(a)" cols="2">
+                    <li>
+                        <p><m>\det{\left(A + B\right)} = \det{A} + \det{B}</m></p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\det{2A} = 2\det{A}</m>
+                        </p>
+                    </li>
+                    <li xml:id="exercise-det-AB">
+                        <p><m>\det{AB} = \det{A} \cdot \det{B}</m></p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\det{I} = 1</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\det{\left(A^2\right)} = 2\det{A}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\det{AB} = \det{BA} </m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            </statement>
             <solution>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                This statement is false. A counterexample is:
+                                <md>
+                                    A = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix},\quad  B = \begin{bmatrix} 2 \amp 0 \\ 0 \amp 2 \end{bmatrix}
+                                </md>
+                                We have:
+                                <md>
+                                    <mrow> \det{A} + \det{B} \amp = (1)(1) + (2)(2) </mrow>
+                                    <mrow> \amp = 1 + 4 </mrow>
+                                    <mrow> \amp = 5 </mrow>
+                                </md>
+                                However, we also have:
+                                <md>
+                                    <mrow> A + B \amp = \begin{bmatrix} 3 &amp; 0 \\ 0 &amp; 3 \end{bmatrix} </mrow>
+                                    <mrow> \det{\left(A + B\right)} \amp = (3)(3) - (0)(0) </mrow>
+                                    <mrow> \amp = 9 </mrow>
+                                </md>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+                                Therefore, <m>\det{\left(A + B\right)} = 9</m> and <m>\det{A} + \det{B} = 5</m>, which shows that the statement is false.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This statement is false. 
+                                <aside>
+                                    <title>A Related True Statement</title>
+                                    <p>
+                                        In fact, the related true result for any <m>n\times n</m> matrix <m>A</m> and scalar <m>k</m> is:
+                                        <md>
+                                            <mrow> \det{kA} \amp = k^n \det{A} </mrow>
+                                        </md>
+                                    </p>
+                                </aside>
+                                A counterexample is <m> A = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</m>
+                                We have
+                                <md>
+                                    <mrow> \det{A} \amp = (1)(1) - (0)(0) </mrow>
+                                    <mrow> \amp = 1 </mrow>
+                                </md>
+                                However, we also have:
+                                <md>
+                                    <mrow> 2A \amp = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{bmatrix} </mrow>
+                                    <mrow> \det{2A} \amp = (2)(2) - (0)(0) </mrow>
+                                    <mrow> \amp = 4 </mrow>
+                                </md>
+
+                                Therefore, <m>\det{2A} = 4</m> and <m>2\det{A} = 2</m>, which shows that the statement is false.
+                            </p>
+                        </li>
+                        <li xml:id="proof-det-AB">
+                            <p>
+                                This statement is true. The proof is as follows:
+                                    Let <m>A</m> and <m>B</m> be 2 by 2 matrices. We can write <m>A</m> and <m>B</m> as:
+                                    <md>
+                                        <mrow> A \amp = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix} </mrow>
+                                        <mrow> B \amp = \begin{bmatrix} e &amp; f \\ g &amp; h \end{bmatrix} </mrow>
+                                    </md>
+
+                                    Then the product <m>AB</m> is given by:
+                                    <md>
+                                        <mrow> AB \amp = \begin{bmatrix} ae + bg &amp; af + bh \\ ce + dg &amp; cf + dh \end{bmatrix} </mrow>
+                                    </md>
+
+                                    Now we compute the determinant of <m>AB</m>:
+                                    <md>
+                                        <mrow> \det{AB} =\, \amp (ae + bg)(cf + dh) - (af + bh)(ce + dg) </mrow>
+                                        <mrow> =\, \amp aecf + aedh + bgcf + bgdh </mrow>
+                                        <mrow> \amp - afce - afdg - bhce - bhdg </mrow>
+                                        <mrow> = \amp \phantom{+} \cancel{aecf} + aedh + bgcf + \cancel{bgdh} </mrow>
+                                        <mrow> \amp - \cancel{afce} - afdg - bhce - \cancel{bhdg} </mrow>
+                                        <mrow>= \,\amp \phantom{+}adeh - adfg - bceh + bcfg </mrow>
+                                    </md>
+                                    Tackling <m>\det{A} \cdot \det{B}</m>, we have:
+                                    <md>
+                                        <mrow>\det{A} \cdot \det{B} \amp = (ad - bc)(eh - fg) </mrow>
+                                        <mrow> \amp = adeh - adfg - bceh + bcfg </mrow>
+                                        <mrow> \amp = \det{AB} </mrow>
+                                    </md>
+                                    Therefore, we have shown that <m>\det{AB} = \det{A} \cdot \det{B}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This statement is true. The 2 by 2 identity matrix is given by:
+                                <md>
+                                    <mrow> I \amp = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} </mrow>
+                                </md>
+
+                                Now we compute the determinant of the identity matrix:
+                                <md>
+                                    <mrow> \det{I} \amp = (1)(1) - (0)(0) </mrow>
+                                    <mrow> \amp = 1 </mrow>
+                                </md>
+
+                                Therefore, we have shown that <m>\det{I} = 1</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This statement is false. 
+                                <aside>
+                                    <title>Another Related True Statement</title>
+                                    <p>
+                                        In fact, the related true result for any square matrix <m>A</m> and power <m>k</m> is:
+                                        <md>
+                                            <mrow> \det{\left(A^k\right)} \amp = \left(\det{A}\right)^k </mrow>
+                                        </md>
+                                        Can you use <xref ref="exercise-det-AB"/> to prove this statement?
+                                    </p>
+                                </aside>
+                                A counterexample is:  <m> A = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} </m>
+                                We have:
+                                <md>
+                                    <mrow> \det{A} \amp = (1)(1) - (0)(0) </mrow>
+                                    <mrow> \amp = 1 </mrow>
+                                </md>
+                                However,
+                                <md>
+                                    <mrow> A^2 \amp = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} </mrow>
+                                    <mrow> \det{A^2} \amp = (1)(1) - (0)(0) </mrow>
+                                    <mrow> \amp = 1 </mrow>
+                                </md>
+                                So <m>2\det{A} = 2 \neq 1 = \det{\left(A^2\right)}</m>
+                            </p>
+
+                        </li>
+                        <li>
+                            <p>
+                                This statement is true. From (c), we know that <md>\det{AB} = \det{A} \cdot \det{B}</md> 
+                                
+                                Swapping the roles of <m>A</m> and <m>B</m>, we get <md>\det{BA} = \det{B} \cdot \det{A}</md>. 
+                                
+                                Since multiplication of real numbers can be done in any order, we have <md> <mrow>\det{AB} = \det{A} \cdot \det{B} = \det{B} \cdot \det{A} = \det{BA}</mrow></md>
+                            </p>
+                            <p>
+                                This should be surprising: while <m>AB \neq BA</m> in general, we have <m>\det{AB} = \det{BA}</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <title>The Determinant of the Inverse</title>
+            <statement>
+                <p>Let <m>A = \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 4 \end{bmatrix}</m>.
+                    <ol>
+                        <li>
+                            <p>
+                                Compute <m>\det{A}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find <m>A^{-1}</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Find <m>\det{\left(A^{-1}\right)}</m>, the determinant of the inverse of <m>A</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What's the relationship between <m>\det{\left(A^{-1}\right)}</m> and <m>\det{A}</m>? Can you prove it?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <ol>
+                    <li>
+                        <p>
+                            Using the formula:
+                            <md>
+                                <mrow> \det{A} \amp = ad - bc </mrow>
+                                <mrow> \amp = (2)(4) - (1)(3) </mrow>
+                                <mrow> \amp = 8 - 3 </mrow>
+                                <mrow> \amp = 5 </mrow>
+                            </md>
+
+                            Therefore, <m>\det{A} = 5</m>.
+                        </p>    
+                    </li>
+                    <li>
+                        <p> 
+                            To find the inverse of a 2 by 2 matrix, we can use the formula:
+                            <md>
+                                <mrow> A^{-1} \amp = \frac{1}{ad - bc} \begin{bmatrix} d &amp; -b \\ -c &amp; a \end{bmatrix} </mrow>
+                            </md>
+
+                            Substituting the values from matrix <m>A</m>, we get:
+                            <md>
+                                <mrow> A^{-1} \amp = \frac{1}{5} \begin{bmatrix} 4 &amp; -1 \\ -3 &amp; 2 \end{bmatrix} </mrow>
+                                <mrow> \amp = \begin{bmatrix} \frac{4}{5} &amp; -\frac{1}{5} \\ -\frac{3}{5} &amp; \frac{2}{5} \end{bmatrix} </mrow>
+                            </md>
+
+                            Therefore, the inverse of matrix <m>A</m> is <m>A^{-1} = \begin{bmatrix} \frac{4}{5} &amp; -\frac{1}{5} \\ -\frac{3}{5} &amp; \frac{2}{5} \end{bmatrix}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Now we compute the determinant of the inverse of <m>A</m>:
+                            <md>
+                                <mrow> \det{\left(A^{-1}\right)} \amp = ad - bc </mrow>
+                                <mrow> \amp = \left(\frac{4}{5}\right)\left(\frac{2}{5}\right) - \left(-\frac{1}{5}\right)\left(-\frac{3}{5}\right) </mrow>
+                                <mrow> \amp = \frac{8}{25} - \frac{3}{25} </mrow>
+                                <mrow> \amp = \frac{5}{25} </mrow>
+                                <mrow> \amp = \frac{1}{5} </mrow>
+                            </md>
+
+                            Therefore, <m>\det{\left(A^{-1}\right)} = \frac{1}{5}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The relationship between <m>\det{\left(A^{-1}\right)}</m> and <m>\det{A}</m> is: <md>\det{\left(A^{-1}\right)} = \frac{1}{\det{A}}</md>
+                        </p>
+                        <p>
+                            You can prove this using the fact from <xref ref="proof-det-AB"/> that <md>\det{AB} = \det{A} \cdot \det{B}</md>. Letting <m>B = A^{-1}</m>, and remembering that <m>AA^{-1} = I</m> by definition, we have <md>(\det{A})(\det{\left(A^{-1}\right)}) = \det{\left(AA^{-1}\right)} = \det{I} = 1</md>, where <m>I</m> is the identity matrix.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 
