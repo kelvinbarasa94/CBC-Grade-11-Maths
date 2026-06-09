@@ -324,8 +324,50 @@
         <example>
             <statement>
                 <p>
-                    An arc <m>AB</m> of a circle with center <m>O</m> subtends an angle <m>\angle AOB = 148^\circ</m> at the center. If point <m>P</m> is a variable point moving along the major arc <m>AB</m> on the circumference, determine the constant measure of <m>\angle APB</m>.
+                    An arc <m>AB</m> of a circle with center <m>O</m> subtends an angle <m>\angle AOB = 148^\circ</m> at the center. If point <m>P</m> is a variable point moving along the major arc <m>AB</m> on the circumference, determine the size of <m>\angle APB</m>.
                 </p>
+                <figure xml:id="angle-subtended-1">
+                    <caption></caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            % --- Centre and points on the circle ---
+                            \tkzDefPoint(0,0){O}
+                            % Endpoints of the arc (central angle AOB = 148 deg),
+                            % placed symmetrically about the bottom of the circle.
+                            \tkzDefPointOnCircle[R = center O angle 196 radius 3]\tkzGetPoint{A}
+                            \tkzDefPointOnCircle[R = center O angle 344 radius 3]\tkzGetPoint{B}
+                            % Point on the major arc (on the circumference).
+                            \tkzDefPointOnCircle[R = center O angle 90 radius 3]\tkzGetPoint{P}
+
+                            % Draw the circle through one of the points so radii always match.
+                            \tkzDrawCircle[thick](O,A)
+
+                            % --- Radii (centre angle) and chords (circumference angle) ---
+                            \tkzDrawSegments(O,A O,B P,A P,B)
+
+                            % --- Fill and mark the two angles ---
+                            \tkzFillAngle[fill=red!20,opacity=.6, size=.5](A,O,B)
+                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.9](A,P,B)
+
+                            \tkzMarkAngle[size=.5,color=red](A,O,B)
+                            \tkzMarkAngle[size=.9,color=blue](A,P,B)
+
+                            % --- Angle labels ---
+                            \tkzLabelAngle[pos=0.9](A,O,B){$148^{\circ}$}
+                            \tkzLabelAngle[pos=1.2](A,P,B){$x^{\circ}$}
+
+                            % --- Points and point labels ---
+                            \tkzDrawPoints(O,A,B,P)
+                            \tkzLabelPoints[above](O)
+                            \tkzLabelPoints[left](A)
+                            \tkzLabelPoints[right](B)
+                            \tkzLabelPoints[above](P)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -348,6 +390,53 @@
                 <p>
                     In a circle with center <m>O</m>, a triangle <m>ABC</m> is drawn such that the side <m>AC</m> passes through the center <m>O</m>. If the angle <m>\angle ACB = 28^\circ</m>, find the measure of the remaining interior angle <m>\angle BAC</m>.
                 </p>
+           
+<figure xml:id="angle-semicircle-problem">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            \begin{tikzpicture}
+            % --- Centre and points on the circle ---
+            \tkzDefPoint(0,0){O}
+            
+            % AC is a diameter passing through O. Let's make it horizontal for clean layout.
+            \tkzDefPointOnCircle[R = center O angle 180 radius 3]\tkzGetPoint{A}
+            \tkzDefPointOnCircle[R = center O angle 0 radius 3]\tkzGetPoint{C}
+            
+            % To get exactly a 28 degree angle at C, angle BOC (central angle) needs to be 2 * 28 = 56 degrees.
+            \tkzDefPointOnCircle[R = center O angle 56 radius 3]\tkzGetPoint{B}
+
+            % Draw the circle through point A
+            \tkzDrawCircle[thick](O,A)
+
+            % --- Draw Triangle ABC and the center point ---
+            \tkzDrawSegments(A,C A,B B,C)
+
+            % --- Right angle mark at B ---
+            \tkzMarkRightAngle[size=0.3,color=black](A,B,C)
+
+            % --- Fill and mark the interior angles ---
+            \tkzFillAngle[fill=blue!10,opacity=.6, size=.7](B,C,A)
+            \tkzMarkAngle[size=.7,color=blue](B,C,A)
+            
+            \tkzFillAngle[fill=red!10,opacity=.6, size=.6](C,A,B)
+            \tkzMarkAngle[size=.6,color=red](C,A,B)
+
+            % --- Angle labels ---
+            \tkzLabelAngle[pos=1.1](B,C,A){$28^{\circ}$}
+            \tkzLabelAngle[pos=1.0](C,A,B){$x^{\circ}$}
+
+            % --- Points and point labels ---
+            \tkzDrawPoints(O,A,B,C)
+            \tkzLabelPoints[below](O)
+            \tkzLabelPoints[left](A)
+            \tkzLabelPoints[above right](B)
+            \tkzLabelPoints[right](C)
+
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>
@@ -375,6 +464,53 @@
                 <p>
                     Points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> lie on a circle in that order. The chords <m>AC</m> and <m>BD</m> intersect at point <m>E</m>. If the inscribed angle <m>\angle ABD = 42^\circ</m> and <m>\angle BEC = 85^\circ</m>, calculate the measure of <m>\angle ACD</m>.
                 </p>
+                <figure xml:id="fig-angles-same-segment">
+            <caption>Intersecting chords AC and BD inside a circle.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates on Circle ---
+                    \coordinate (O) at (0,0);
+                    \coordinate (A) at (140:2);
+                    \coordinate (B) at (50:2);
+                    \coordinate (C) at (-40:2);
+                    \coordinate (D) at (-110:2);
+
+                    % --- Find Intersection Point E of AC and BD ---
+                    \coordinate (E) at (intersection of A--C and B--D);
+
+                    % --- Draw Circle and Chords ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (A) -- (C);
+                    \draw[thick] (B) -- (D);
+                    
+                    % Draw optional dashed lines to fully show the inscribed angles
+                    \draw[thick, dashed, gray!70] (A) -- (B);
+                    \draw[thick, dashed, gray!70] (C) -- (D);
+
+                    % --- Annotate Angles ---
+                    % Angle ABD = 42 degrees
+                    \draw[shift={(B)}] (230:0.4) arc (230:190:0.4);
+                    \node at (0.9,1.4) {$42^{\circ}$};
+
+                    % Angle BEC = 85 degrees
+                    \draw[shift={(E)}] (-40:0.25) arc (-40:50:0.25);
+                    \node at ($(E)+(0.4,0.05)$) {$85^{\circ}$};
+
+                    % Angle ACD = 42 degrees (Target angle)
+                    \draw[shift={(C)}] (140:0.4) arc (140:192:0.4);
+                    \node at (1.2,-1.0) {$x^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (A) circle (1.5pt) node[above left] {$A$};
+                    \fill (B) circle (1.5pt) node[above right] {$B$};
+                    \fill (C) circle (1.5pt) node[below right] {$C$};
+                    \fill (D) circle (1.5pt) node[below left] {$D$};
+                    \fill (E) circle (1.5pt) node[below] {$E$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>
@@ -491,6 +627,49 @@
                 <p>
                     A circular community shield design has three decorative brass studs placed at points <m>A</m>, <m>B</m>, and <m>P</m> on its outer rim. If the center of the shield is <m>O</m> and the central angle is <m>\angle AOB = 130^\circ</m>, calculate the angle <m>\angle APB</m> on the rim.
                 </p>
+            
+             <figure xml:id="angle-subtended-2">
+                    <caption></caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            % --- Centre and points on the circle ---
+                            \tkzDefPoint(0,0){O}
+                            % Endpoints of the arc (central angle AOB = 130 deg),
+                            % placed symmetrically about the bottom of the circle.
+                            \tkzDefPointOnCircle[R = center O angle 218 radius 3]\tkzGetPoint{A}
+                            \tkzDefPointOnCircle[R = center O angle 348 radius 3]\tkzGetPoint{B}
+                            % Point on the major arc (on the circumference).
+                            \tkzDefPointOnCircle[R = center O angle 110 radius 3]\tkzGetPoint{P}
+
+                            % Draw the circle through one of the points so radii always match.
+                            \tkzDrawCircle[thick](O,A)
+
+                            % --- Radii (centre angle) and chords (circumference angle) ---
+                            \tkzDrawSegments(O,A O,B P,A P,B)
+
+                            % --- Fill and mark the two angles ---
+                            \tkzFillAngle[fill=red!20,opacity=.6, size=.5](A,O,B)
+                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.9](A,P,B)
+
+                            \tkzMarkAngle[size=.5,color=red](A,O,B)
+                            \tkzMarkAngle[size=.9,color=blue](A,P,B)
+
+                            % --- Angle labels ---
+                            \tkzLabelAngle[pos=0.9](A,O,B){$130^{\circ}$}
+                            \tkzLabelAngle[pos=1.2](A,P,B){$k^{\circ}$}
+
+                            % --- Points and point labels ---
+                            \tkzDrawPoints(O,A,B,P)
+                            \tkzLabelPoints[above](O)
+                            \tkzLabelPoints[left](A)
+                            \tkzLabelPoints[right](B)
+                            \tkzLabelPoints[above](P)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
