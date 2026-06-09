@@ -74,7 +74,7 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            Place your circular object on the paper and trace carefully around it to draw a circle. Label its centre <m>O</m> (you can find the centre by folding if needed, or just estimate it). This circle will represent a circular feature — imagine it is a roundabout, a circular water tank, or a plot of land.
+                            Place your circular object on the paper and trace carefully around it to draw a circle. Label its centre <m>O</m>.
                         </p>
                     </li>
                     <li>
@@ -84,7 +84,7 @@
                     </li>
                     <li>
                         <p>
-                            Draw a straight line from <m>P</m> that crosses through the circle, entering at one point and leaving at another. Label the two crossing points <m>A</m> (the one nearer to <m>P</m>) and <m>B</m> (the one farther from <m>P</m>). A line like this, which cuts a circle at two points, is called a <term>secant</term>.
+                            Draw a straight line from <m>P</m> that crosses through the circle, entering at one point (<m>A</m>) and leaving at another (<m>B</m>). A line like this, which cuts a circle at two points, is called a <term>secant</term>.
                         </p>
                     </li>
                     <li>
@@ -184,61 +184,184 @@
     </axiom>
 
     <insight>
+        <title>Two-Secant Theorem</title>
         <p>
-            <ul>
-                <li>
-                    <p>
-                        A <term>secant</term> to a circle is a straight line that intersects the circle at two distinct points.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <alert>Two-Secant Theorem.</alert> If two secants are drawn to a circle from the same external point <m>P</m>, with one secant meeting the circle at <m>A</m> and <m>B</m> (<m>A</m> nearer to <m>P</m>) and the other meeting the circle at <m>C</m> and <m>D</m> (<m>C</m> nearer to <m>P</m>), then
-                        <md>
-                            PA \times PB = PC \times PD.
-                        </md>
-                        In words: <em>the product of the external segment and the whole secant is the same for both secants.</em>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <alert>Tangent-Secant Theorem.</alert> If a tangent and a secant are drawn to a circle from the same external point <m>P</m>, with the tangent touching at <m>T</m> and the secant meeting the circle at <m>A</m> (<m>A</m> nearer) and <m>B</m>, then
-                        <md>
-                            PT^2 = PA \times PB.
-                        </md>
-                        In words: <em>the square of the tangent length equals the product of the external segment and the whole secant.</em>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <alert>Equal Tangent Lengths.</alert> Tangent segments drawn to a circle from the same external point are equal in length: if <m>T_1</m> and <m>T_2</m> are the two points of tangency, then <m>PT_1 = PT_2</m>.
-                    </p>
-                </li>
-            </ul>
+            A <term>secant</term> to a circle is a straight line that intersects the circle at two distinct points.
+        </p>
+    
+        <figure xml:id="fig-two-secant-theorem">
+            <caption>Two secants from external point <m>P</m>.</caption>
+            <image width="60%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \tkzDefPoints{0/0/P, 4/0/O}
+                        \tkzDefCircle[R](O,2) \tkzGetPoint{cR}
+                        \tkzDrawCircle[thick, teal](O,cR)
+                        \tkzDefPoint(6.5,2){S1}
+                        \tkzInterLC[near](P,S1)(O,cR) \tkzGetPoints{A}{B}
+                        \tkzDefPoint(6.5,-1.5){S2}
+                        \tkzInterLC[near](P,S2)(O,cR) \tkzGetPoints{C}{D}
+                        \tkzDrawSegments(P,B P,D)
+                        \tkzDrawPoints(P,A,B,C,D)
+                        \tkzLabelPoints[left](P)
+                        \tkzLabelPoints[above left](A)
+                        \tkzLabelPoints[above right](B)
+                        \tkzLabelPoints[below left](C)
+                        \tkzLabelPoints[below right](D)
+                        \tkzLabelSegment[above, sloped, pos=0.2, font=\small](P,B){$PA$}
+                        \tkzLabelSegment[above, sloped, pos=0.55, font=\small](P,B){$PB$}
+                        \tkzLabelSegment[below, sloped, pos=0.2, font=\small](P,D){$PC$}
+                        \tkzLabelSegment[below, sloped, pos=0.55, font=\small](P,D){$PD$}
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+                    
+        <p> If two secants are drawn to a circle from the same external point <m>P</m>, with one secant meeting the circle at <m>A</m> and <m>B</m> and the other meeting the circle at <m>C</m> and <m>D</m>, then
+            <md>
+                PA \times PB = PC \times PD.
+            </md>
+            In words: <em>the product of the external segment and the whole secant is the same for both secants.</em>
         </p>
     </insight>
 
-    <paragraphs>
-        <title>Understanding the Theorems</title>
+    <warning>
         <p>
-            In the diagram below, point <m>P</m> lies outside a circle. Two secants from <m>P</m> cross the circle at <m>A, B</m> and at <m>C, D</m> respectively.
-        </p>
-
-        <!-- TODO: TikZ diagram — Two-Secant Theorem. External point P to the left. Two secants: one through A (near) and B (far) going upper-right, one through C (near) and D (far) going lower-right. Label all four points on the circle and P. Indicate the segments PA, PB, PC, PD with tick-labels or braces. -->
-
-        <p>
-            The Two-Secant Theorem tells us that <m>PA \times PB = PC \times PD</m>. This can be understood using similar triangles: the triangles <m>\triangle PAD</m> and <m>\triangle PCB</m> share the angle at <m>P</m>, and the angles <m>\angle PAD</m> and <m>\angle PCB</m> are both supplementary to the same inscribed angle in the circle, making the triangles similar. The equal products then follow from the ratios of corresponding sides.
+            The formula <term>does not</term> mention the internal chord <m>AB</m>, but the external secant <m>PB</m>. Make sure you use the full distance from <m>B</m> to <m>P</m>, not just the distance from <m>B</m> to <m>A</m>. You might have to add <m>PA</m> and <m>AB</m> to get <m>PB</m>.
         </p>
         <p>
-            In the second diagram, one of the secants has been replaced by a tangent at <m>T</m>.
+            The same applies to the second secant: use the full distance from <m>D</m> to <m>P</m>, not just the distance from <m>D</m> to <m>C</m>.
         </p>
+    </warning>
 
-        <!-- TODO: TikZ diagram — Tangent-Secant Theorem. External point P to the left. One tangent from P touching at T (upper side of circle). One secant from P through A (near, lower side) and B (far, lower side). Label P, T, A, B. Show right-angle mark at T (radius OT perpendicular to tangent). -->
+    <p>
+        The Two-Secant Theorem tells us that <m>PA \times PB = PC \times PD</m>. This can be understood using similar triangles: 
+        
+    </p>
+    <figure xml:id="fig-two-secant-theorem-explain">
+            <caption>Similar Triangles</caption>
+            <image width="80%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        \tkzDefPoints{0/0/P, 4/0/O}
+                        \tkzDefCircle[R](O,2) \tkzGetPoint{cR}
+                        \tkzDrawCircle[thick, teal](O,cR)
+                        \tkzDefPoint(6.5,2){S1}
+                        \tkzInterLC[near](P,S1)(O,cR) \tkzGetPoints{A}{B}
+                        \tkzDefPoint(6.5,-1.5){S2}
+                        \tkzInterLC[near](P,S2)(O,cR) \tkzGetPoints{C}{D}
+                        \tkzDrawSegments(P,B P,D A,C B,D)
+                        \tkzDrawPoints(P,A,B,C,D)
+                        \tkzLabelPoints[left](P)
+                        \tkzLabelPoints[above left](A)
+                        \tkzLabelPoints[above right](B)
+                        \tkzLabelPoints[below left](C)
+                        \tkzLabelPoints[below right](D)
+                        \tkzLabelSegment[above, sloped, pos=0.2, font=\small](P,B){$PA$}
+                        \tkzLabelSegment[above, sloped, pos=0.55, font=\small](P,B){$PB$}
+                        \tkzLabelSegment[below, sloped, pos=0.2, font=\small](P,D){$PC$}
+                        \tkzLabelSegment[below, sloped, pos=0.55, font=\small](P,D){$PD$}
+                        \tkzFillAngle[fill=orange!20, opacity=0.5, size=0.5](C,P,A)
+                        \tkzMarkAngle[size=0.5](C,P,A)
+                        \tkzLabelAngle[pos=0.8](C,P,A){\small $\alpha$}
 
+                        \tkzFillAngle[fill=cyan!20, opacity=0.5, size=0.4](P,A,C)
+                        \tkzMarkAngle[size=0.4](P,A,C)
+                        \tkzLabelAngle[pos=0.7](P,A,C){\small $\beta$}
+
+                        \tkzFillAngle[fill=red!20, opacity=0.5, size=0.4](C,A,B)
+                        \tkzMarkAngle[size=0.4](C,A,B)
+                        \tkzLabelAngle[pos=0.7, xshift=10pt](C,A,B){\small $180^\circ - \beta$}
+
+                        \tkzFillAngle[fill=cyan!20, opacity=0.5, size=0.5](B,D,C)
+                        \tkzMarkAngle[size=0.5](B,D,C)
+                        \tkzLabelAngle[pos=0.9](B,D,C){\small $\beta$}
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    <p>
+        The triangles <m>\triangle PAD</m> and <m>\triangle PCB</m> are similar because:
+        <ul>
+            <li>
+                <p>
+                    They share the angle <m>\alpha</m> at <m>P</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Since <m>ABDC</m> is a cyclic quadrilateral, we have <m>\angle BDC = 180^\circ - \angle BAC</m>. Since <m>PB</m> is a line, <m>\angle PAC = 180^\circ - \angle BAC</m>. Thus <md>
+                        \angle BDC = 180^\circ - \angle BAC = \angle PAC
+                    </md>
+                    
+                </p>
+            </li>
+            <li>
+                <p>
+                    Hence the two triangles are similar by the AA criterion.
+                </p>
+            </li>
+        </ul>
+    </p>
+    <p>
+        Hence the ratios of corresponding sides are equal, so:
+        <md>
+            <mrow> \frac{PA}{PD} \amp = \frac{PC}{PB} </mrow>
+            <mrow> PA \times PB \amp = PC \times PD </mrow>
+        </md> 
+    </p>
+
+    <insight>
+        <title>Special Case: Tangent-Secant Theorem</title>
         <p>
-            As the secant <m>PCD</m> rotates toward the tangent position, <m>C</m> and <m>D</m> merge into a single point <m>T</m>, and the product <m>PC \times PD</m> becomes <m>PT \times PT = PT^2</m>. This gives the Tangent-Secant Theorem: <m>PT^2 = PA \times PB</m>.
+            As the points <m>C</m> and <m>D</m> move closer together, we have <m>PC \approx PD</m>. In the limit as <m>C</m> and <m>D</m> merge into a single point <m>T</m>, the second secant becomes a tangent, and the product <m>PC \times PD</m> becomes <m>PT \times PT = PT^2</m>. This gives us the Tangent-Secant Theorem, which is a special case of the Two-Secant Theorem:
         </p>
-    </paragraphs>
+        <figure xml:id="fig-tangent-secant-insight">
+                <caption>Tangent and secant.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                          %% --- SET ---
+                          \tkzDefPoint(0,0){P}
+                          \tkzDefPoint(4,0){O}
+
+                          %% --- CALCULATE ---
+                          \tkzDefCircle[R](O,2) \tkzGetPoint{cR}
+                          \tkzDefMidPoint(P,O)   \tkzGetPoint{M}
+                          \tkzInterCC(M,P)(O,cR)   \tkzGetPoints{Thigh}{T}
+                          \tkzDefPoint(8,2){Sg}
+                          \tkzInterLC[near](P,Sg)(O,cR)   \tkzGetPoints{A}{B}
+
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick, teal](O,cR)
+                          \tkzDrawSegment(P,T)
+                          \tkzDrawSegment(P,B)
+                          \tkzDrawPoints[size=2pt](P,T,A,B)
+
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](P)
+                          \tkzLabelPoints[above right](T)
+                          \tkzLabelPoints[above left](A)
+                          \tkzLabelPoints[right](B)
+                          \tkzLabelSegment[above, sloped, font=\small](P,T){PT}
+                          \tkzLabelSegment[above, sloped, font=\small](P,A){PA}
+                          \tkzLabelSegment[above, sloped, pos=0.6, font=\small](P,B){PB}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+        <p>
+            If a tangent and a secant are drawn to a circle from the same external point <m>P</m>, with the tangent touching at <m>T</m> and the secant meeting the circle at <m>A</m> (<m>A</m> nearer) and <m>B</m>, then
+            <md>
+                PT^2 = PA \times PB.
+            </md>
+            In words: <em>the square of the tangent length equals the product of the external segment and the whole secant.</em>
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
@@ -248,6 +371,47 @@
             <p>
                 From an external point <m>P</m>, two secants are drawn to a circle. The first secant meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and <m>PB = 9</m> cm. The second secant meets the circle at <m>C</m> and <m>D</m>, where <m>PC = 3</m> cm. Find <m>PD</m>.
             </p>
+
+            <figure xml:id="fig-two-secant-example">
+                <caption>Two secants from <m>P</m>: first meeting the circle at <m>A</m> (<m>PA = 4</m> cm) and <m>B</m> (<m>PB = 9</m> cm); second meeting at <m>C</m> (<m>PC = 3</m> cm) and <m>D</m>.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                          %% --- SET ---
+                          \tkzDefPoint(7,0){P}
+                          \tkzDefPoint(3,0){O}
+                          \tkzDefPoint(5,0){cR}
+
+                          %% --- CALCULATE ---
+                          \tkzDefPoint(-1,2.5){Sg1}
+                          \tkzInterLC[near](P,Sg1)(O,cR)   \tkzGetPoints{A}{B}
+                          \tkzDefPoint(-1,-2.5){Sg2}
+                          \tkzInterLC[near](P,Sg2)(O,cR)   \tkzGetPoints{C}{D}
+
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick, teal](O,cR)
+                          \tkzDrawSegment[thick](P,B)
+                          \tkzDrawSegment[thick](P,D)
+                          \tkzDrawPoints[size=2pt](P,A,B,C,D)
+
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[right](P)
+                          \tkzLabelPoints[above right](A)
+                          \tkzLabelPoints[above left](B)
+                          \tkzLabelPoints[below right](C)
+                          \tkzLabelPoints[below left](D)
+                          \tkzLabelSegment[above, sloped, font=\small](P,A){$4$ cm}
+                          \tkzLabelSegment[above, sloped, pos=0.75, font=\small](P,B){$9$ cm}
+                          \tkzLabelSegment[below, sloped, font=\small](P,C){$3$ cm}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+
         </statement>
         <solution>
             <p>
@@ -279,7 +443,43 @@
                 From an external point <m>P</m>, a tangent <m>PT</m> is drawn to a circle, touching it at <m>T</m>. A secant from <m>P</m> meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm is the external segment. Given that <m>PT = 6</m> cm, find the length <m>PB</m> and the length of the chord <m>AB</m>.
             </p>
 
-            <!-- TODO: TikZ diagram — Tangent-Secant worked example. P on the left. Tangent up to T on the upper arc; secant through A (lower arc, near P) and B (far arc). Label P, T, A, B with distances PT=6, PA=4. -->
+            <figure xml:id="fig-tangent-secant-example">
+                <caption>Tangent <m>PT = 6</m> cm from external point <m>P</m>; secant with external segment <m>PA = 4</m> cm.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                          %% --- SET ---
+                          \tkzDefPoint(0,0){P}
+                          \tkzDefPoint(5,0){O}
+                          \tkzDefPoint(7,0){cR}
+
+                          %% --- CALCULATE ---
+                          \tkzDefMidPoint(P,O)   \tkzGetPoint{M}
+                          \tkzInterCC(M,P)(O,cR)   \tkzGetPoints{T}{Tlow}
+                          \tkzDefPoint(8,-1.5){Sg}
+                          \tkzInterLC[near](P,Sg)(O,cR)   \tkzGetPoints{A}{B}
+
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick, teal](O,cR)
+                          \tkzDrawSegment[thick](P,T)
+                          \tkzDrawSegment[thick](P,B)
+                          \tkzDrawPoints[size=2pt](P,T,A,B)
+
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](P)
+                          \tkzLabelPoints[above right](T)
+                          \tkzLabelPoints[below](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelSegment[above, sloped, font=\small](P,T){$6$ cm}
+                          \tkzLabelSegment[below, sloped, font=\small](P,A){$4$ cm}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
 
         </statement>
         <solution>
@@ -327,6 +527,47 @@
                     </li>
                 </ol>
             </p>
+
+            <figure xml:id="fig-equal-tangents-secant-example">
+                <caption>From external point <m>T</m>, two tangents touch the circle at <m>A</m> and <m>B</m>, and a secant meets it at <m>E</m> (nearer) and <m>F</m> (farther).</caption>
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                          %% --- SET ---
+                          \tkzDefPoint(3,0){T}
+                          \tkzDefPoint(3,4){O}
+                          \tkzDefPoint(5,4){cR}
+
+                          %% --- CALCULATE ---
+                          \tkzDefMidPoint(T,O)   \tkzGetPoint{M}
+                          \tkzInterCC(M,T)(O,cR)   \tkzGetPoints{A}{B}
+                          \tkzDefPoint(0.5,7){Sg}
+                          \tkzInterLC[near](T,Sg)(O,cR)   \tkzGetPoints{E}{F}
+
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick, teal](O,cR)
+                          \tkzDrawSegments[thick](T,A T,B)
+                          \tkzDrawSegment[thick](T,F)
+                          \tkzDrawPoints[size=2pt](T,A,B,E,F)
+
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](T)
+                          \tkzLabelPoints[right](A)
+                          \tkzLabelPoints[left](B)
+                          \tkzLabelPoints[below left](E)
+                          \tkzLabelPoints[above left](F)
+                          \tkzLabelSegment[above, sloped, font=\small](T,A){$2x+1$}
+                          \tkzLabelSegment[above, sloped, font=\small](T,B){$x+5$}
+                          \tkzLabelSegment[right, sloped, font=\small](T,E){$3$ cm}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+
         </statement>
         <solution>
             <p>
@@ -377,6 +618,45 @@
                         <li><p>The second secant meets the circle at <m>C</m> and <m>D</m>, with <m>PC = 6</m> cm.</p></li>
                     </ul>
                 </p>
+                <figure xml:id="fig-two-secants-exercise">
+                    <caption>Two secants from <m>P</m> below the circle: first meeting at <m>A</m> (<m>PA = 2</m> cm) and <m>B</m>; second meeting at <m>C</m> (<m>PC = 6</m> cm) and <m>D</m>.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(4,0){P}
+                              \tkzDefPoint(4,4.5){O}
+                              \tkzDefPoint(6,4.5){cR}
+
+                              %% --- CALCULATE ---
+                              \tkzDefPoint(1,7){Sg1}
+                              \tkzInterLC[near](P,Sg1)(O,cR)   \tkzGetPoints{A}{B}
+                              \tkzDefPoint(7,7){Sg2}
+                              \tkzInterLC[near](P,Sg2)(O,cR)   \tkzGetPoints{C}{D}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick, teal](O,cR)
+                              \tkzDrawSegment[thick](P,B)
+                              \tkzDrawSegment[thick](P,D)
+                              \tkzDrawPoints[size=2pt](P,A,B,C,D)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below](P)
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[above left](B)
+                              \tkzLabelPoints[below right](C)
+                              \tkzLabelPoints[above right](D)
+                              \tkzLabelSegment[above, sloped, font=\small](P,A){$2$ cm}
+                              \tkzLabelSegment[above, sloped, font=\small](P,C){$6$ cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+
                 <p>
                     <ol marker="(a)">
                         <li><p>Find <m>PD</m>.</p></li>
@@ -411,6 +691,45 @@
                 <p>
                     A secant from external point <m>P</m> meets a circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and the chord <m>AB = 12</m> cm. A tangent from <m>P</m> touches the circle at <m>T</m>. Find the length <m>PT</m>.
                 </p>
+
+                <figure xml:id="fig-find-tangent-exercise">
+                    <caption>Secant from <m>P</m> with external segment <m>PA = 4</m> cm and chord <m>AB = 12</m> cm; tangent from <m>P</m> to <m>T</m>.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(7,5){P}
+                              \tkzDefPoint(3,2){O}
+                              \tkzDefPoint(5,2){cR}
+
+                              %% --- CALCULATE ---
+                              \tkzDefMidPoint(P,O)   \tkzGetPoint{M}
+                              \tkzInterCC(M,P)(O,cR)   \tkzGetPoints{T}{Tsec}
+                              \tkzDefPoint(1,0){Sg}
+                              \tkzInterLC[near](P,Sg)(O,cR)   \tkzGetPoints{A}{B}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick, teal](O,cR)
+                              \tkzDrawSegment[thick](P,T)
+                              \tkzDrawSegment[thick](P,B)
+                              \tkzDrawPoints[size=2pt](P,T,A,B)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[above right](P)
+                              \tkzLabelPoints[above left](T)
+                              \tkzLabelPoints[above](A)
+                              \tkzLabelPoints[below left](B)
+                              \tkzLabelSegment[above, sloped, font=\small](P,A){$4$ cm}
+                              \tkzLabelSegment[above, sloped, font=\small](A,B){$12$ cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+
             </statement>
             <hint>
                 <p>
@@ -433,6 +752,41 @@
                 <p>
                     Two tangents are drawn from an external point <m>Q</m> to a circle. The tangent lengths are <m>QR = 3x - 2</m> and <m>QS = x + 6</m>. Find the value of <m>x</m> and the length of each tangent.
                 </p>
+
+                <figure xml:id="fig-equal-tangents-exercise">
+                    <caption>Two tangents from external point <m>Q</m> touching the circle at <m>R</m> and <m>S</m>.</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(7,-1){Q}
+                              \tkzDefPoint(2.5,3){O}
+                              \tkzDefPoint(4.5,3){cR}
+
+                              %% --- CALCULATE ---
+                              \tkzDefMidPoint(Q,O)   \tkzGetPoint{M}
+                              \tkzInterCC(M,Q)(O,cR)   \tkzGetPoints{R}{S}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick, teal](O,cR)
+                              \tkzDrawSegments[thick](Q,R Q,S)
+                              \tkzDrawPoints[size=2pt](Q,R,S)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below right](Q)
+                              \tkzLabelPoints[above left](R)
+                              \tkzLabelPoints[above right](S)
+                              \tkzLabelSegment[above, sloped, font=\small](Q,R){$3x-2$}
+                              \tkzLabelSegment[below, sloped, font=\small](Q,S){$x+6$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+
             </statement>
             <answer>
                 <p>
@@ -450,6 +804,45 @@
                 <p>
                     From an external point <m>P</m>, a tangent <m>PT = 10</m> cm is drawn to a circle. A secant from <m>P</m> has an external segment <m>PA = 4</m> cm.
                 </p>
+
+                <figure xml:id="fig-chord-from-tangent-exercise">
+                    <caption>Tangent <m>PT = 10</m> cm and secant with external segment <m>PA = 4</m> cm from external point <m>P</m>.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(0,0){P}
+                              \tkzDefPoint(5,3.5){O}
+                              \tkzDefPoint(7,3.5){cR}
+
+                              %% --- CALCULATE ---
+                              \tkzDefMidPoint(P,O)   \tkzGetPoint{M}
+                              \tkzInterCC(M,P)(O,cR)   \tkzGetPoints{T}{Tsec}
+                              \tkzDefPoint(8,3){Sg}
+                              \tkzInterLC[near](P,Sg)(O,cR)   \tkzGetPoints{A}{B}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick, teal](O,cR)
+                              \tkzDrawSegment[thick](P,T)
+                              \tkzDrawSegment[thick](P,B)
+                              \tkzDrawPoints[size=2pt](P,T,A,B)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[left](P)
+                              \tkzLabelPoints[above](T)
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[right](B)
+                              \tkzLabelSegment[above, sloped, font=\small](P,T){$10$ cm}
+                              \tkzLabelSegment[below, sloped, font=\small](P,A){$4$ cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+
                 <p>
                     <ol marker="(a)">
                         <li><p>Find the full length <m>PB</m> of the secant.</p></li>
@@ -482,7 +875,41 @@
                     The diagram below shows a circle with external point <m>P</m>. A tangent from <m>P</m> touches the circle at <m>T</m>, and a secant from <m>P</m> meets the circle at <m>A</m> (nearer) and <m>B</m> (farther).
                 </p>
 
-                <!-- TODO: TikZ diagram — Same as the tangent-secant theorem diagram above. External point P, tangent to T, secant through A and B. Label all points. -->
+                <figure xml:id="fig-tangent-secant-exercise">
+                    <caption>External point <m>P</m>, tangent to <m>T</m>, secant through <m>A</m> (nearer) and <m>B</m> (farther).</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(0,0){P}
+                              \tkzDefPoint(5,0){O}
+                              \tkzDefPoint(7,0){cR}
+
+                              %% --- CALCULATE ---
+                              \tkzDefMidPoint(P,O)   \tkzGetPoint{M}
+                              \tkzInterCC(M,P)(O,cR)   \tkzGetPoints{T}{Tlow}
+                              \tkzDefPoint(8,-1.5){Sg}
+                              \tkzInterLC[near](P,Sg)(O,cR)   \tkzGetPoints{A}{B}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick, teal](O,cR)
+                              \tkzDrawSegment[thick](P,T)
+                              \tkzDrawSegment[thick](P,B)
+                              \tkzDrawPoints[size=2pt](P,T,A,B)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[left](P)
+                              \tkzLabelPoints[above right](T)
+                              \tkzLabelPoints[below](A)
+                              \tkzLabelPoints[below right](B)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
 
                 <p>
                     <ol marker="(a)">

@@ -544,13 +544,37 @@
         </exercise>
 
         <exercise xml:id="exercise-equal-tangents-discovery">
-            <title>Equal Tangents from an External Point</title>
+            <title>Equal Tangents</title>
             <statement>
                 <p>
                     Draw a circle with centre <m>O</m> and mark an external point <m>T</m>. Construct both tangents from <m>T</m> to the circle and label the points of tangency <m>A</m> and <m>B</m>.
                 </p>
                 <p>
                     <ol marker="(a)">
+                        <li>
+                            <p>
+                                Copy the diagram belowm add the two tangents to the circle at points <m>A</m> and <m>B</m>, and label their intesection point as <m>T</m>.
+                            </p>
+                            <figure xml:id="fig-equal-tangents-ex">
+                                <caption>Two tangents</caption>
+                                <image width="60%">
+                                    <latex-image>
+                                        \begin{tikzpicture}
+                                            \tkzDefPoint(0,0){O}
+                                            \tkzDefPoint(2,0){Pr}
+                                            \tkzDefPoint(0.8,1.833){A}
+                                            \tkzDefPoint(0.8,-1.833){B}
+                                            \tkzDrawCircle[thick](O,Pr)
+                                            \tkzDrawSegments[dashed](O,A O,B)
+                                            \tkzDrawPoints(O,A,B)
+                                            \tkzLabelPoints[below left](O)
+                                            \tkzLabelPoints[above right](A)
+                                            \tkzLabelPoints[below right](B)
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </li>
                         <li>
                             <p>Measure <m>TA</m> and <m>TB</m>. What do you notice?</p>
                         </li>
@@ -565,6 +589,35 @@
             <answer>
                 <p>
                     <ol marker="(a)">
+                        <li>
+                            <p>
+                                The two tangents are shown here:
+                                <figure xml:id="fig-equal-tangents-ex-solution">
+                                    <caption>Two tangents from external point <m>T</m>.</caption>
+                                    <image width="60%">
+                                        <latex-image>
+                                            \begin{tikzpicture}
+                                                \tkzDefPoint(0,0){O}
+                                                \tkzDefPoint(2,0){Pr}
+                                                \tkzDefPoint(5,0){T}
+                                                \tkzDefPoint(0.8,1.833){A}
+                                                \tkzDefPoint(0.8,-1.833){B}
+                                                \tkzDrawCircle[thick](O,Pr)
+                                                \tkzDrawSegments(T,A T,B)
+                                                \tkzDrawSegments[dashed](O,A O,B O,T)
+                                                \tkzMarkRightAngle[size=0.15](O,A,T)
+                                                \tkzMarkRightAngle[size=0.15](O,B,T)
+                                                \tkzDrawPoints(O,T,A,B)
+                                                \tkzLabelPoints[below left](O)
+                                                \tkzLabelPoints[right](T)
+                                                \tkzLabelPoints[above right](A)
+                                                \tkzLabelPoints[below right](B)
+                                            \end{tikzpicture}
+                                        </latex-image>
+                                    </image>
+                                </figure>
+                            </p>
+                        </li>
                         <li>
                             <p><m>TA = TB</m>.</p>
                         </li>
@@ -669,6 +722,38 @@
                     </ol>
                 </p>
             </answer>
+        </exercise>
+        <exercise>
+            <introduction>
+                <p>
+                    <figure xml:id="pappus-chain">
+                        <caption>Pappus Chain</caption>
+                        <image>
+                            <!-- Adapted from tkz-euclide documentation p. 237  -->
+                            <latex-image>
+                                \begin{tikzpicture}[ultra thin]
+                                    \pgfmathsetmacro{\xB}{6}%
+                                    \pgfmathsetmacro{\xC}{9}%
+                                    \pgfmathsetmacro{\xD}{(\xC*\xC)/\xB}%
+                                    \pgfmathsetmacro{\xJ}{(\xC+\xD)/2}%
+                                    \pgfmathsetmacro{\r}{\xD-\xJ}%
+                                    \pgfmathsetmacro{\nc}{16}%
+                                    \tkzDefPoints{0/0/A,\xB/0/B,\xC/0/C,\xD/0/D}
+                                    \tkzDefCircle[diameter](A,C) \tkzGetPoint{x}
+                                    \tkzDrawCircle[fill=teal!30](x,C)
+                                    \tkzDefCircle[diameter](A,B) \tkzGetPoint{y}
+                                    \tkzDrawCircle[fill=teal!30](y,B)
+                                    \foreach \i in {-\nc,...,0,...,\nc}
+                                    {\tkzDefPoint(\xJ,2*\r*\i){J}
+                                    \tkzDefPoint(\xJ,2*\r*\i-\r){H}
+                                    \tkzDefCircleBy[inversion = center A through C](J,H)
+                                    \tkzDrawCircle[fill=teal](tkzFirstPointResult,tkzSecondPointResult)}
+                                    \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </p>
+            </introduction>
         </exercise>
     </exercises>
 
