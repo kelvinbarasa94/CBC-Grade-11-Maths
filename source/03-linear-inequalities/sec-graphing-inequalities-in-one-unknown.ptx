@@ -535,10 +535,28 @@
                     This means the student can spend at most <m>5</m> hours on practice problems each week.
                 </p>
                 <p>
-                    The graph of the solution on a number line would show a closed circle at <m>5</m> and shading to the left, indicating all values of <m>h</m> that are less than or equal to <m>5</m>.
+                    The graphical representation is;
                 </p>
                 <p>
-                    
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                % 1. Draw the main number line axis centered around 5
+                                \draw[&lt;-&gt;, thick] (-1,0) -- (7,0) node[right] {$h$};
+                                
+                                % 2. Draw the tick marks and numbers
+                                \foreach \x in {0, 1, 2, 3, 4, 5, 6} {
+                                    \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                }
+
+                                % 3. Draw the thick line pointing left, starting exactly at 5
+                                \draw[-&gt;, ultra thick] (5,0) -- (-1,0);
+
+                                % 4. Draw the CLOSED circle at h = 5 (covers the start of the thick line)
+                                \fill[draw=black, fill=black] (5,0) circle (3pt);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
                 </p>
             </answer>
         </exercise>
@@ -569,19 +587,105 @@
             </statement>
             <answer>
                 <p>
-                    
+                    <ol marker="a)">
+                        <li>
+                            <p>
+                                <m>1200 - 150d \ge 0</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>1200 - 150d \ge 450 \Rightarrow 150d \le 750 \Rightarrow d \le 5</m>.
+                            </p>
+                            <p>
+                                The school can safely run the borehole for a maximum of <m>5</m> days before refilling.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The graphical representation:
+                            </p>
+                            <p>
+                                <image>
+                                    <latex-image>
+                                        \begin{tikzpicture}
+                                            % 1. Draw the main number line axis centered around 5
+                                            \draw[&lt;-&gt;, thick] (-1,0) -- (7,0) node[right] {$d$};
+                                            
+                                            % 2. Draw the tick marks and numbers
+                                            \foreach \x in {0, 1, 2, 3, 4, 5, 6} {
+                                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                            }
+
+                                            % 3. Draw the thick line pointing left, starting exactly at 5
+                                            \draw[-&gt;, ultra thick] (5,0) -- (-1,0);
+
+                                            % 4. Draw the CLOSED circle at d = 5 (covers the start of the thick line)
+                                            \fill[draw=black, fill=black] (5,0) circle (3pt);
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </p>
+                        </li>
+                    </ol>
                 </p>
             </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    A local bakery in <em>Githunguri</em> has a daily production capacity of <m>200\text{ loaves}</m> of bread. The bakery has received an order for <m>150\text{ loaves}</m> to be delivered within the next 3 days. If the bakery can produce a maximum of <m>50\text{ loaves}</m> per day, write an inequality to represent the number of loaves they can produce each day to meet the order without exceeding their daily production capacity. Then solve the inequality and graph the solution on a number line.
+                    A local bakery in <em>Githunguri</em> has a maximum daily production capacity of <m>200</m> loaves of bread. The bakery has received an urgent order for <m>150</m> loaves that must be baked and delivered tomorrow.
+                </p>
+                <p>
+                    <ol marker="a)">
+                        <li>
+                            <p>
+                                Write an inequality to represent the number of loaves, <m>l</m>, the bakery must produce tomorrow to fulfill this order without exceeding its maximum daily production capacity.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Graph this solution on a number line.
+                            </p>
+                        </li>
+                    </ol>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <ol>
+                        <li>
+                            <p>
+                                <m>l \ge 150</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The graphical representation:
+                            </p>
+                            <p>
+                                <image>
+                                    <latex-image>
+                                        \begin{tikzpicture}
+                                            % 1. Draw the main number line axis centered around 150
+                                            \draw[&lt;-&gt;, thick] (140,0) -- (210,0) node[right] {$l$};
+                                            
+                                            % 2. Draw the tick marks and numbers
+                                            \foreach \x in {140, 145, 150, 155, 160, 165, 170} {
+                                                \draw (\x, 0.12) -- (\x, -0.12) node[below] {$\x$};
+                                            }
+
+                                            % 3. Draw the thick line pointing right, starting exactly at 150
+                                            \draw[-&gt;, ultra thick] (150,0) -- (205,0);
+
+                                            % 4. Draw the CLOSED circle at l = 150 (covers the start of the thick line)
+                                            \fill[draw=black, fill=black] (150,0) circle (3pt);
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </p>
+                        </li>
+                    </ol>
                 </p>
             </answer>
         </exercise>
