@@ -54,13 +54,13 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To conceptualize the real-world meaning of asset appreciation and discover how to calculate percentage increase based on an initial principal value.
+                    To identify assets that increase in value and determine the percentage increase in their value over time.
                 </p>
             </li>
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Organize learners into diverse groups of <m>2-4</m>. Circulate around the room to ensure groups differentiate between assets that grow in value (like land) and those that lose value (like vehicles). Guide them gently through the percentage calculations without explicitly revealing the compound appreciation formula.
+                    Organize learners into groups of <m>2-4</m>. Guide learners to identify assets that increase in value and those that decrease in value. Ensure learners correctly calculate percentage increase from the given information and encourage them to explain their findings during group discussions.
                 </p>
             </li>
         </dl>
@@ -164,22 +164,24 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize group findings into the generalized multi-year appreciation formula, making connections to compound interest structures.
+                    To develop the appreciation formula from the results obtained in the activity.
                 </p>
             </li>
             </dl>
         </p>
+
         <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
+            <title>Discussion of Learner Findings</title>
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Highlight the Kisumu vs. Nairobi land problem. Show learners that while both plots grew by an absolute value of Ksh <m>600,000</m>, the Kisumu plot had a higher percentage rate of appreciation (<m>30\%</m> vs <m>10\%</m>). This demonstrates why percentages are used to compare financial growth equitably.
+                        <alert>Discussion:</alert> Discuss the results obtained from the Kisumu and Nairobi land examples. Point out that although both plots increased by Ksh <m>600,000</m>, their percentage increases were different. Explain that percentage increase provides a better basis for comparison than the actual increase in value.
                     </p>
                 </li>
+
                 <li>
                     <p>
-                        <alert>Algebraic Transition:</alert> Lead the class through factoring out the principal <m>P</m> to move from <m>P + \frac{R}{100}P</m> to the factored form <m>P\left(1 + \frac{R}{100}\right)</m>, then logically extend this exponentiation to year <m>T</m>.
+                        <alert>Developing the Formula:</alert> Starting from the percentage increase obtained by learners, show that the new value can be written as <m>P + \frac{R}{100}P</m>. Factor out <m>P</m> to obtain <m>P\left(1+\frac{R}{100}\right)</m>. Extend the pattern to determine the value after <m>T</m> years.
                     </p>
                 </li>
             </ol>
@@ -275,7 +277,7 @@
             </p>
             <p>
                 Make <m>P</m> the subject in the appreciation formula: 
-                <me>P = \frac{A}{\left(1 + \frac{R}{100}\right)^T}</me>
+                <m>P = \frac{A}{\left(1 + \frac{R}{100}\right)^T}</m>
             </p>
             <p>
                 Substitute the values into the adjusted formula:
@@ -417,7 +419,7 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        Provide concrete numerical examples using familiar contexts (e.g. land, phones, livestock). Guide learners step-by-step through identifying original value, new value, and increase before introducing percentage change. Emphasise the meaning of “increase” as a difference between two values rather than a formula.
+                        Use simple examples such as land, phones, or livestock. Help learners identify the original value, new value, and the increase. Use these values to calculate percentage increase.
                     </cell>
                     <cell></cell>
                 </row>
@@ -425,7 +427,7 @@
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        Learners work in groups to compute appreciation using real data from the activity, calculate percentage increase, and interpret results in context. Encourage them to express appreciation as <m>A = P\left(1 + \frac{R}{100}\right)</m> and explain each component.
+                        Learners work in groups to calculate appreciation using values from the activity. They compute percentage increase and interpret their answers. Help them relate their results to the form <m>A = P\left(1 + \frac{R}{100}\right)</m>.
                     </cell>
                     <cell></cell>
                 </row>
@@ -433,7 +435,7 @@
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        Extend learning by comparing appreciation and depreciation models across multiple years, and exploring how repeated appreciation leads to exponential growth. Challenge learners to generalize the model to multi-year prediction and compare different rates of appreciation across assets.
+                        Compare appreciation across several years and different rates. Explore how repeated increases affect the final value. Extend the pattern to make predictions for future years.
                     </cell>
                     <cell></cell>
                 </row>

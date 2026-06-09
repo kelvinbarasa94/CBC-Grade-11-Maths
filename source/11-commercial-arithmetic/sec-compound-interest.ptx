@@ -57,7 +57,7 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To compare linear interest growth (Option A) against compounding growth (Option B) and recognize patterns that transition into exponential notation.
+                    To compare simple interest and compound interest and identify the pattern formed by compound interest.
                 </p>
             </li>
             <li>
@@ -86,7 +86,7 @@
                 If the interest rate is given to be <m>10 \%</m> p.a for both options.
             </p>
             <p>
-                <term>In Groups</term> you are required to:
+                <term>In Groups</term> 
             </p>
             <p>
                 <ol marker="(a)">
@@ -147,7 +147,7 @@
                 </ol>
             </p>
             <p>
-                <term>Explore in your groups</term> how to express the interest and totals earned each year in option B in power form.
+                <term>Use your results</term> to write the amounts obtained in Option B using powers.
             </p>
             <p>
                 Predict the amount after:
@@ -189,7 +189,7 @@
                 <li>
                     <title>Objective</title>
                     <p>
-                        To formalize the transition from simple interest to compound interest and connect repeated growth to exponential form.
+                        To help learners derive the compound interest formula from repeated yearly growth.
                     </p>
                 </li>
             </dl>
@@ -199,17 +199,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Refer directly to the group activity where learners compared Option A (simple interest) and Option B (interest-on-interest). Emphasize that while both options start with the same principal and rate, Option A produces a constant yearly increase forming a linear pattern because interest is tied to the original amount.
+                        <alert>Discussion:</alert> Discuss the results obtained by learners in the two investment options. Point out that in Option A the same amount of interest is earned each year because interest is calculated on the original principal.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <alert>Algebraic Transition:</alert> Contrast this with Option B, showing that after each year, the principal shifts because accumulated interest is added to the base. Guide learners to express this repeated growth step-by-step: after year 1 the amount is <m>P\left(1+\frac{R}{100}\right)</m>, and after year 2 it becomes <m>P\left(1+\frac{R}{100}\right)\left(1+\frac{R}{100}\right)</m>.
+                        <alert>Developing the Formula:</alert> In Option B, the amount at the end of each year becomes the starting amount for the next year. Guide learners to write the amounts after Year <m>1</m> and Year <m>2</m> and identify the pattern.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <alert>Pattern Recognition:</alert> Help learners recognize that multiplication by the scale factor <m>\left(1+\frac{R}{100}\right)</m> repeats each year, naturally leading to the power structure <m>P\left(1+\frac{R}{100}\right)^T</m>. Connect this back to the Kisumu youth group context to show why compound interest grows rapidly over time.
+                        <alert>Observing the Pattern:</alert> Learners should observe that the same factor <m>\left(1+\frac{R}{100}\right)</m> is multiplied each year, giving <m>P\left(1+\frac{R}{100}\right)^T</m>.
                     </p>
                 </li>
             </ol>
@@ -219,7 +219,7 @@
     
     <insight>
         <p>
-            From the learner experience we can get the amount by 
+            From the activity, learners observe that:
         </p>
         <p>
             <ol marker="(a)">
@@ -240,7 +240,7 @@
                         Amount after <m>2</m> years
                     </p>
                     <p>
-                        Notice that here our <m>P =\; \text{Ksh}\;110,000</m>
+                        At the beginning of the second year, the accumulated amount is Ksh <m>110,000</m>.
                     </p>
                     <p>
                         <md>
@@ -310,12 +310,21 @@
         </statement>
         <solution>
             <p>
-                Because we are starting with Ksh <m>3,000</m>, <m>P=3000.</m> Our interest rate is <m>3 \%</m>, so <m>r=0.03.</m> Because we are compounding quarterly, we are compounding <m>4</m> times per year, so <m>n=4.</m> We want to know the value of the account in <m>10</m> years, so we are looking for <m>A(10),</m> the value when <m>t=10.</m>
+                Given:
+            </p>    
+            <p>
+                <md>
+                    <mrow>p = \amp \; 3000 </mrow>
+                    <mrow>r = \amp \; 0.03 </mrow>
+                    <mrow>n = \amp \; 4 </mrow>
+                    <mrow>t = \amp \; 10 </mrow>
+                </md>
+                
             </p>
             <p>
             <md>
-                <mrow>A(t) &amp; =P\left(1+\frac{r}{n}\right)^{nt}</mrow>
-                <mrow>A(10) &amp; =3000\left(1+\frac{0.03}{4}\right)^{4⋅10} </mrow>
+                <mrow>A(t) = &amp; P\left(1+\frac{r}{n}\right)^{nt}</mrow>
+                <mrow>A(10) = &amp; 3000\left(1+\frac{0.03}{4}\right)^{4⋅10} </mrow>
                 <mrow>≈\text{Ksh} \;4045.05 &amp; \text{ Round to two decimal places }.</mrow>
             </md>
             </p>
@@ -327,7 +336,7 @@
     <example>
         <statement>
             <p>
-                A <m>529</m> Plan is a college-savings plan that allows relatives to invest money to pay for a child's future college tuition; the account grows tax-free. Lily wants to set up a <m>529</m> account for her new granddaughter and wants the account to grow to Ksh <m>400,000</m> over <m>18</m> years. The account earns <m>6</m> % compounded semi-annually. To the nearest Ksh, how much will Lily need to invest in the account now?
+                Lily wishes to save money for her granddaughter's university education and wants the account to grow to Ksh <m>400,000</m> over <m>18</m> years. The account earns <m>6</m> % compounded semi-annually. To the nearest Ksh, how much will Lily need to invest in the account now?
             </p>
         </statement>
         <solution>
@@ -339,11 +348,11 @@
             </p>
             <p>
             <md>
-                <mrow>A(t) &amp; =P\left(1+\frac{r}{n}\right)^{nt} </mrow>
-                <mrow>400,000 &amp; =P\left(1+\frac{0.06}{2}\right)^{2(18)} </mrow>
-                <mrow>400,000 &amp; =P(1.03)^{36}</mrow>
-                <mrow>\frac{400,000}{(1.03)^{36}} &amp; = P </mrow>
-                <mrow>P &amp; ≈\text{Ksh}\;138,010 </mrow>
+                <mrow>A(t) = &amp; P\left(1+\frac{r}{n}\right)^{nt} </mrow>
+                <mrow>400,000 = &amp; P\left(1+\frac{0.06}{2}\right)^{2(18)} </mrow>
+                <mrow>400,000 = &amp; P(1.03)^{36}</mrow>
+                <mrow>\frac{400,000}{(1.03)^{36}} = &amp; P </mrow>
+                <mrow>P = &amp; \text{Ksh}\;138,010 </mrow>
             </md>
             </p>
             <p>Lily will need to invest Ksh <m>138,010</m> to have Ksh <m>400,000</m> in <m>18</m> years.</p>
@@ -372,9 +381,9 @@
         <solution>
             <p>
                 <md>
-                    <mrow> P \amp = \; \text{Ksh} \; 50,000</mrow>
-                    <mrow> R \amp = 12 \;\% </mrow>
-                    <mrow> T \amp = 2 \; \text{years} </mrow>
+                    <mrow> P = \amp  \; \text{Ksh} \; 50,000</mrow>
+                    <mrow> R = \amp 12 \;\% </mrow>
+                    <mrow> T = \amp 2 \; \text{years} </mrow>
                 </md>
                 
             </p>
@@ -386,9 +395,9 @@
                     <li>
                         <p>
                            <md>
-                                <mrow> A \amp = 50,000 \left(1 + \frac{12}{100}\right)^2 </mrow>
-                                <mrow> \amp = 50,000(1.12)^2 </mrow>
-                                <mrow> \amp = 62,720 \;\text{shillings} </mrow>
+                                <mrow> A = \amp 50,000 \left(1 + \frac{12}{100}\right)^2 </mrow>
+                                <mrow> = \amp 50,000(1.12)^2 </mrow>
+                                <mrow> = \amp 62,720 \;\text{shillings} </mrow>
                            </md>
                             
                         </p>
@@ -403,9 +412,9 @@
                         <p>
                             Applying the compound interest formula gives
                             <md>
-                                <mrow> A \amp = \;50,000 \left(1 + \frac{6}{100}\right)^4</mrow>
-                                <mrow> \amp = \;50,000(1.006)^4 </mrow>
-                                <mrow> \amp =\; 63,123.85 \;\text{shillings} </mrow>
+                                <mrow> A = \amp \;50,000 \left(1 + \frac{6}{100}\right)^4</mrow>
+                                <mrow> = \amp \;50,000(1.006)^4 </mrow>
+                                <mrow> = \amp \; 63,123.85 \;\text{shillings} </mrow>
                             </md>
                             
                         </p>
@@ -443,9 +452,6 @@
         </statement>
         <solution>
             <p>
-                Evaluate both investment pathways independently across the <m>1</m>-year timeline.
-            </p>
-            <p>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -456,9 +462,9 @@
                         <p>
                             Apply the compound accumulation formula:
                             <md>
-                                <mrow> A \amp = \; 100,000(1 + 0.03)^4 </mrow>
-                                <mrow> \amp = \; 100,000(1.1255088) </mrow>
-                                <mrow> \amp \approx \; 112,550.88 \text{ Shillings} </mrow>
+                                <mrow> A = \amp \; 100,000(1 + 0.03)^4 </mrow>
+                                <mrow> = \amp \; 100,000(1.1255088) </mrow>
+                                <mrow> = \amp \; 112,550.88 \text{ Shillings} </mrow>
                             </md>
                         </p>
                         <p>
@@ -472,8 +478,8 @@
                         <p>
                             Apply the annual interest calculation:
                             <md>
-                                <mrow> A \amp = \; 100,000(1 + 0.125)^1 </mrow>
-                                <mrow> \amp = \; 112,500 \text{ Shillings} </mrow>
+                                <mrow> A = \amp \; 100,000(1 + 0.125)^1 </mrow>
+                                <mrow> = \amp \; 112,500 \text{ Shillings} </mrow>
                             </md>
                         </p>
                         <p>
@@ -483,7 +489,7 @@
                 </ol>
             </p>
             <p>
-                <alert>Decision Conclusion:</alert> The entrepreneur should choose <alert>Bank A</alert>. Even though Bank B offers a higher nominal starting rate (<m>12.5\%</m> vs <m>12\%</m>), the quarterly compounding effect of Bank A successfully maximizes yield, generating an extra <m>50.88</m> Shillings in returns.
+                <alert>Decision Conclusion:</alert> The entrepreneur should choose <alert>Bank A</alert>. Even though Bank B offers a higher nominal starting rate (<m>12.5\%</m> vs <m>12\%</m>), Bank A gives a slightly higher return because interest is added four times during the year.
             </p>
         </solution>
     </example>
@@ -566,7 +572,7 @@
                 <row bottom="minor">
                     <cell><alert>Support (Struggling)</alert></cell>
                     <cell>
-                        Avoid starting directly with fractions or variables inside exponents. Have learners compute the total account balances manually year-by-year using simple interest methods on an updating ledger. Reinforce the concept that "Compound Interest is just Simple Interest calculated repeatedly on a shifting base value."
+                        Avoid starting directly with fractions or variables inside exponents. Have learners compute the total account balances manually year-by-year using simple interest methods on an updating ledger. Allow learners to calculate the amount year by year before introducing the compound interest formula.
                     </cell>
                 </row>
                 <row bottom="minor">
@@ -578,7 +584,7 @@
                 <row>
                     <cell><alert>Challenge (Advanced)</alert></cell>
                     <cell>
-                        Task learners with examining the upper limits of compounding frequencies. Ask them to investigate what happens to an initial principal when compounding intervals shrink from daily down to hourly parameters, paving an intuitive roadway toward continuous compounding models.
+                        Ask learners to investigate how increasing the frequency of compounding affects the final amount accumulated. For example, compare the amounts obtained from annual, semi-annual, quarterly, and monthly compounding for the same principal, rate, and time period. Encourage them to derive the formula for continuous compounding and explore its implications.
                     </cell>
                 </row>
             </tabular>

@@ -44,26 +44,28 @@
 
     <axiom component="lesson-plan">
         <title>Problem-Solving and Discovery</title>
-        <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    15 minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To discover the concept of diminishing asset value, compute percentage reductions, and intuitively explore how loss compounds over consecutive years.
-                </p>
-            </li>
-            <li>
-                <title>Teacher's Role</title>
-                <p>
-                    Organize learners into small collaborative groups. Prompt them to complete the environment table with local assets (e.g., mobile phones, electronics, farm tools) and identify factors like wear and tear, technology, or age. In the motorbike scenario, check that learners compute the initial loss relative to the original purchase price (Ksh <m>200,000</m>) rather than the closing price.
-                </p>
-            </li>
-        </dl>
+        <p>
+            <ol>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>
+                        15 minutes
+                    </p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To identify depreciation as a decrease in value and determine how the value of an asset changes over time.
+                    </p>
+                </li>
+                <li>
+                    <title>Teacher's Role</title>
+                    <p>
+                        Organize learners into groups. Guide learners to complete the table using examples from their surroundings and facilitate a discussion on the factors that contribute to the decrease in value of these items.
+                    </p>
+                </li>
+            </ol>
+        </p>
     </axiom>
 
     <activity>
@@ -126,7 +128,7 @@
                 </ol>
             </p>
             <p>
-                <alert>Further Exploration:</alert> If the motorbike continues to lose value at the same rate every year, find the value after the second year and the third year.
+                <alert>Further Activity:</alert> If the motorbike continues to lose value at the same rate each year, determine its value after the second and third year.
             </p>
         </statement>
     </activity>
@@ -146,22 +148,23 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize group discoveries into the algebraic diminishing balance formula, explicitly distinguishing it from simple linear interest reductions.
+                    To develop the depreciation formula from the results obtained in the activity.
                 </p>
             </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
+
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Use the motorbike scenario to demonstrate that a drop from Ksh <m>200,000</m> to Ksh <m>140,000</m> represents a loss of Ksh <m>60,000</m>, which evaluates to a <m>30\%</m> depreciation rate. Explicitly guide them through the <em>Further Exploration</em> to show that Year <m>2</m> depreciation is calculated from the new baseline (Ksh <m>140,000</m>), yielding a value of Ksh <m>98,000</m> rather than subtracting another flat Ksh <m>60,000</m>.
+                        <alert>Discussion:</alert> Discuss the results obtained by learners from the motorbike activity. Show that the decrease in value is Ksh <m>60,000</m>, which represents <m>30\%</m> of the original value. Use the second and third year calculations to show that depreciation is calculated on the current value of the asset.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <alert>Mathematical Synthesis:</alert> Contrast this section against the previous <xref ref="sec-appreciation" text="title"/> section. Explain that while appreciation scales up an asset over time via an additive growth scale factor <m>\left(1 + \frac{R}{100}\right)</m>, depreciation diminishes the asset using a subtractive decay scale factor <m>\left(1 - \frac{R}{100}\right)</m>.
+                        <alert>Developing the Formula:</alert> Contrast this section against the previous <xref ref="sec-appreciation" text="title"/> section. Remind learners that appreciation increases value while depreciation decreases value. Compare the factors <m>\left(1+\frac{R}{100}\right)</m> and <m>\left(1-\frac{R}{100}\right)</m>.
                     </p>
                 </li>
             </ol>
@@ -176,7 +179,7 @@
             Let the original value be <m>P</m>, the new value be <m>A</m>, the decrease in value be <m>I</m>, and the percentage decrease be <m>R</m>.
         </p>
         <p>
-            From the learner experience, we observe that depreciation reduces the value of an asset by a fixed percentage each year.
+            From the activity, learners observe that depreciation reduces the value of an asset by the same percentage each year.
         </p>
         <p>
             <md>
@@ -205,7 +208,7 @@
         </p>
 
         <p>
-            This shows that depreciation is not a constant decrease but a repeated percentage reduction, where the value reduces on a decreasing base over time.
+            Depreciation is calculated on the current value of the asset and not on its original value.
         </p>
     </insight>
 
@@ -272,12 +275,12 @@
         <title>Calculating the Depreciation Rate</title>
         <statement>
             <p>
-                A high-capacity solar inverter unit was purchased by a local vocational training center for sh. <m>160,000</m>. After <m>3</m> years of continuous operation, its book value was adjusted to sh. <m>116,640</m>. Calculate the annual rate of depreciation.
+                A solar inverter was purchased by a local vocational training center for sh. <m>160,000</m>. After <m>3</m> years of continuous operation, its book value was adjusted to sh. <m>116,640</m>. Calculate the annual rate of depreciation.
             </p>
         </statement>
         <solution>
             <p>
-                <alert>Identify the given values:</alert>
+                <alert>Given:</alert>
                 <md>
                     <mrow> P \amp =\; 160,000 \text{ Shillings} </mrow>
                     <mrow> A \amp = \; 116,640 \text{ Shillings} </mrow>
@@ -286,7 +289,7 @@
                 </md>
             </p>
             <p>
-                Rearrange the standard depreciation formula to solve for the rate <m>R</m>:
+                Using the depreciation formula:
                 <md>
                     <mrow> \frac{A}{P} \amp = \; \left(1 - \frac{R}{100}\right)^T </mrow>
                     <mrow> \sqrt[T]{\frac{A}{P}} \amp = \; 1 - \frac{R}{100} </mrow>
@@ -294,7 +297,7 @@
                 </md>
             </p>
             <p>
-                Substitute the known terms into the rearranged expression:
+                Substituting the values:
                 <md>
                     <mrow> R \amp = \; 100 \times \left(1 - \sqrt[3]{\frac{116,640}{160,000}}\right) </mrow>
                     <mrow> \amp = \; 100 \times \left(1 - \sqrt[3]{0.729}\right) </mrow>
@@ -380,7 +383,7 @@
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        Learners work with real depreciation scenarios from the activity, calculate yearly value reduction, and express depreciation using <m>A = P\left(1 - \frac{R}{100}\right)^T</m>. Encourage interpretation of each step as repeated percentage reduction over time.
+                        Learners work with real depreciation scenarios from the activity, calculate yearly value reduction, and express depreciation using <m>A = P\left(1 - \frac{R}{100}\right)^T</m>. Emphasise that depreciation is calculated on the current value of the asset.
                     </cell>
                     <cell></cell>
                 </row>
@@ -388,7 +391,7 @@
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        Extend learning by comparing depreciation across different time intervals (monthly vs yearly) and analyzing how compounding loss accelerates value reduction. Challenge learners to compare depreciation and appreciation models and explain their symmetry and differences in exponential form.
+                        Extend learning by comparing depreciation across different time intervals (monthly vs yearly) and investigating how different depreciation periods affect the value of an asset. Challenge learners to compare depreciation and appreciation formulas and explain the differences between them.
                     </cell>
                     <cell></cell>
                 </row>
