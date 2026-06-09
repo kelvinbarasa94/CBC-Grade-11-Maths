@@ -964,7 +964,7 @@
                     <image width="50%">
                         <shortdescription>A circle with two intersecting chords PQ (blue) and RS (red) meeting at T. The four segments PT, TQ, RT, TS are labelled.</shortdescription>
                         <latex-image>
-                            \begin{tikzpicture}[scale=1.0]
+                            \begin{tikzpicture}[scale=0.8]
 
                               %% --- SET ---
                               \tkzDefPoint(0,0){O}
@@ -1005,21 +1005,229 @@
                         <p>
                             <m>PT = x</m>, <m>TQ = 6</m>, <m>RT = 4</m>, <m>TS = x + 2</m>.
                         </p>
+                    <figure xml:id="T-chord-1">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.9]
+                            \pgfmathsetmacro{\PT}{4}
+                            \pgfmathsetmacro{\TQ}{6}
+                            \pgfmathsetmacro{\RT}{4}
+                            \pgfmathsetmacro{\TS}{6}
+                            \pgfmathsetmacro{\r}{6}
+                            \pgfmathsetmacro{\Qangle}{120} % inclination of B from positive x-axis
+
+                            %% --- SET ---
+                            \begin{scope}[rotate=\Qangle]
+                                \tkzDefPoint(0,0){O}
+
+                                %% --- CALCULATE ---
+                                \pgfmathsetmacro{\PQhalf}{(\PT + \TQ)/2}
+                                \pgfmathsetmacro{\h}{sqrt(\r * \r - \PQhalf * \PQhalf)} % height
+                                
+                                \tkzDefShiftPoint[O](-\PQhalf,\h){P}
+                                \tkzDefShiftPoint[O](\PQhalf,\h){Q}
+                            \end{scope}
+
+                                \pgfmathsetmacro{\posP}{(\PT)/(\PT + \TQ)}
+                                \tkzDefPointOnLine[pos=\posP](P,Q) \tkzGetPoint{T}
+
+                                \tkzDefShiftPoint[T](40:\RT){R}
+                                \tkzDefShiftPoint[T](220:\TS){S}
+                                \tkzDefTriangleCenter[circum](S,Q,R) \tkzGetPoint{O}
+                                \tkzDrawCircle[thick](O,S)
+
+
+                                \tkzDrawSegment[blue, thick](P,Q)
+                                \tkzDrawSegment[red, thick](R,S)
+
+                                %% --- LABEL ---
+                                \tkzDrawPoints(P,Q,R,S,T)
+                                \tkzLabelPoints[below right](P)
+                                \tkzLabelPoints[above left](Q)
+                                \tkzLabelPoints[right](R)
+                                \tkzLabelPoints[left](S)
+                                \tkzLabelPoints[left](T)
+                                \tkzLabelSegment[above, sloped, font=\small](P,T){$x$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](Q,T){$\pgfmathprintnumber{\TQ}$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](R,T){$\pgfmathprintnumber{\RT}$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](S,T){$x+2$ cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
                             <m>PT = x + 1</m>, <m>TQ = 4</m>, <m>RT = x</m>, <m>TS = 5</m>.
                         </p>
+                        <figure xml:id="T-chord-2">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            \pgfmathsetmacro{\PT}{5}
+                            \pgfmathsetmacro{\TQ}{4}
+                            \pgfmathsetmacro{\RT}{4}
+                            \pgfmathsetmacro{\r}{6}
+                            \pgfmathsetmacro{\Qangle}{195} % inclination of B from positive x-axis
+
+                            %% --- SET ---
+                            \begin{scope}[rotate=\Qangle]
+                                \tkzDefPoint(0,0){O}
+
+                                %% --- CALCULATE ---
+                                \pgfmathsetmacro{\PQhalf}{(\PT + \TQ)/2}
+                                \pgfmathsetmacro{\h}{sqrt(\r * \r - \PQhalf * \PQhalf)} % height
+                                
+                                \tkzDefShiftPoint[O](-\PQhalf,\h){P}
+                                \tkzDefShiftPoint[O](\PQhalf,\h){Q}
+                                \tkzDrawCircle[thick](O,P)
+                            \end{scope}
+
+                                \pgfmathsetmacro{\posP}{(\PT)/(\PT + \TQ)}
+                                \tkzDefPointOnLine[pos=\posP](P,Q) \tkzGetPoint{T}
+
+                                \tkzInterCC[R](O,\r)(T,\RT) \tkzGetPoints{R}{Ralt}
+
+                                \tkzInterLC(R,T)(O,P) \tkzGetPoints{S}{Salt}
+
+                                \tkzDrawSegment[blue, thick](P,Q)
+                                \tkzDrawSegment[red, thick](R,S)
+
+                                %% --- LABEL ---
+                                \tkzDrawPoints(P,Q,R,S,T)
+                                \tkzLabelPoints[right](P)
+                                \tkzLabelPoints[left](Q)
+                                \tkzLabelPoints[right](R)
+                                \tkzLabelPoints[left](S)
+                                \tkzLabelPoints[above](T)
+                                \tkzLabelSegment[above, sloped, font=\small](P,T){$x + 1$ cm}
+                                \tkzLabelSegment[below, sloped, font=\small](T,Q){$\pgfmathprintnumber{\TQ}$ cm}
+                                \tkzLabelSegment[below, sloped, font=\small](R,T){$x$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](T,S){5 cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
                             <m>PT = 2x</m>, <m>TQ = 3</m>, <m>RT = x + 1</m>, <m>TS = 4</m>.
                         </p>
+                        <figure xml:id="T-chord-3">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\PT}{4}
+                            \pgfmathsetmacro{\TQ}{3}
+                            \pgfmathsetmacro{\RT}{3}
+                            \pgfmathsetmacro{\r}{4}
+                            \pgfmathsetmacro{\Qangle}{30} % inclination of B from positive x-axis
+
+                            %% --- SET ---
+                            \begin{scope}[rotate=\Qangle]
+                                \tkzDefPoint(0,0){O}
+
+                                %% --- CALCULATE ---
+                                \pgfmathsetmacro{\PQhalf}{(\PT + \TQ)/2}
+                                \pgfmathsetmacro{\h}{sqrt(\r * \r - \PQhalf * \PQhalf)} % height
+                                
+                                \tkzDefShiftPoint[O](-\PQhalf,\h){P}
+                                \tkzDefShiftPoint[O](\PQhalf,\h){Q}
+                                \tkzDrawCircle[thick](O,P)
+                            \end{scope}
+
+                                \pgfmathsetmacro{\posP}{(\PT)/(\PT + \TQ)}
+                                \tkzDefPointOnLine[pos=\posP](P,Q) \tkzGetPoint{T}
+
+                                \tkzInterCC[R](O,\r)(T,\RT) \tkzGetPoints{R}{Ralt}
+
+                                \tkzInterLC(R,T)(O,P) \tkzGetPoints{S}{Salt}
+
+                                \tkzDrawSegment[blue, thick](P,Q)
+                                \tkzDrawSegment[red, thick](R,S)
+
+                                %% --- LABEL ---
+                                \tkzDrawPoints(P,Q,R,S,T)
+                                \tkzLabelPoints[left](P)
+                                \tkzLabelPoints[above right](Q)
+                                \tkzLabelPoints[left](R)
+                                \tkzLabelPoints[right](S)
+                                \tkzLabelPoints[below](T)
+                                \tkzLabelSegment[below, sloped, font=\small](P,T){$2x$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](T,Q){$\pgfmathprintnumber{\TQ}$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](R,T){$x + 1$ cm}
+                                \tkzLabelSegment[below, sloped, font=\small](T,S){4 cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
                             <m>PT = 3</m>, <m>TQ = 2x + 1</m>, <m>RT = x + 2</m>, <m>TS = 3</m>.
                         </p>
+                                            <figure xml:id="T-chord-4">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\PT}{3}
+                            \pgfmathsetmacro{\TQ}{3}
+                            \pgfmathsetmacro{\RT}{3}
+                            \pgfmathsetmacro{\TS}{3}
+                            \pgfmathsetmacro{\r}{6}
+                            \pgfmathsetmacro{\Qangle}{120} % inclination of B from positive x-axis
+
+                            %% --- SET ---
+                            \begin{scope}[rotate=\Qangle]
+                                \tkzDefPoint(0,0){O}
+
+                                %% --- CALCULATE ---
+                                \pgfmathsetmacro{\PQhalf}{(\PT + \TQ)/2}
+                                \pgfmathsetmacro{\h}{sqrt(\r * \r - \PQhalf * \PQhalf)} % height
+                                
+                                \tkzDefShiftPoint[O](-\PQhalf,\h){P}
+                                \tkzDefShiftPoint[O](\PQhalf,\h){Q}
+                            \end{scope}
+
+                                \pgfmathsetmacro{\posP}{(\PT)/(\PT + \TQ)}
+                                \tkzDefPointOnLine[pos=\posP](P,Q) \tkzGetPoint{T}
+
+                                \tkzDefShiftPoint[T](40:\RT){R}
+                                \tkzDefShiftPoint[T](220:\TS){S}
+                                \tkzDefTriangleCenter[circum](S,Q,R) \tkzGetPoint{O}
+                                \tkzDrawCircle[thick](O,S)
+
+
+                                \tkzDrawSegment[blue, thick](P,Q)
+                                \tkzDrawSegment[red, thick](R,S)
+
+                                %% --- LABEL ---
+                                \tkzDrawPoints(P,Q,R,S,T)
+                                \tkzLabelPoints[below right](P)
+                                \tkzLabelPoints[above left](Q)
+                                \tkzLabelPoints[right](R)
+                                \tkzLabelPoints[left](S)
+                                \tkzLabelPoints[left](T)
+                                \tkzLabelSegment[above, sloped, font=\small](P,T){$3$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](Q,T){$2x + 1$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](R,T){$x + 2$ cm}
+                                \tkzLabelSegment[above, sloped, font=\small](S,T){$3$ cm}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                 </ol>
             </statement>
@@ -1105,39 +1313,51 @@
                 <p>
                     Two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle such that <m>AP = CP</m>. Prove that <m>PB = PD</m>.
                 </p>
-                <figure>
-                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>, with <m>AP = CP</m>.</caption>
-                    <image width="50%">
-                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. Single tick marks on AP and CP show that they are equal.</shortdescription>
+               <figure xml:id="matching-T">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
                         <latex-image>
-                            \begin{tikzpicture}[scale=1.0]
+                        \begin{tikzpicture}[scale=0.5]
+                            \pgfmathsetmacro{\PT}{4}
+                            \pgfmathsetmacro{\TQ}{6}
+                            \pgfmathsetmacro{\RT}{4}
+                            \pgfmathsetmacro{\TS}{6}
+                            \pgfmathsetmacro{\r}{6}
+                            \pgfmathsetmacro{\Qangle}{120} % inclination of B from positive x-axis
 
-                              %% --- SET ---
-                              \tkzDefPoint(0,0){O}
-                              \tkzDefPoint(3,0){cR}
-                              \tkzDefPointBy[rotation=center O angle 175](cR) \tkzGetPoint{A}
-                              \tkzDefPointBy[rotation=center O angle 40](cR)  \tkzGetPoint{B}
-                              \tkzDefPointBy[rotation=center O angle 215](cR) \tkzGetPoint{C}
-                              \tkzDefPointBy[rotation=center O angle 80](cR)  \tkzGetPoint{D}
+                            %% --- SET ---
+                            \begin{scope}[rotate=\Qangle]
+                                \tkzDefPoint(0,0){O}
 
-                              %% --- CALCULATE ---
-                              \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
+                                %% --- CALCULATE ---
+                                \pgfmathsetmacro{\PQhalf}{(\PT + \TQ)/2}
+                                \pgfmathsetmacro{\h}{sqrt(\r * \r - \PQhalf * \PQhalf)} % height
+                                
+                                \tkzDefShiftPoint[O](-\PQhalf,\h){P}
+                                \tkzDefShiftPoint[O](\PQhalf,\h){Q}
+                            \end{scope}
 
-                              %% --- DRAW ---
-                              \tkzDrawCircle[thick](O,cR)
-                              \tkzDrawSegment[blue, thick](A,B)
-                              \tkzDrawSegment[red, thick](C,D)
-                              \tkzDrawPoints(A,B,C,D,P)
+                                \pgfmathsetmacro{\posP}{(\PT)/(\PT + \TQ)}
+                                \tkzDefPointOnLine[pos=\posP](P,Q) \tkzGetPoint{T}
 
-                              %% --- MARK ---
-                              \tkzMarkSegments[mark=|](A,P C,P)
+                                \tkzDefShiftPoint[T](40:\RT){R}
+                                \tkzDefShiftPoint[T](220:\TS){S}
+                                \tkzDefTriangleCenter[circum](S,Q,R) \tkzGetPoint{O}
+                                \tkzDrawCircle[thick](O,S)
 
-                              %% --- LABEL ---
-                              \tkzLabelPoints[left](A)
-                              \tkzLabelPoints[right](B)
-                              \tkzLabelPoints[below left](C)
-                              \tkzLabelPoints[above](D)
-                              \tkzLabelPoints[above right](P)
+
+                                \tkzDrawSegment[blue, thick](P,Q)
+                                \tkzDrawSegment[red, thick](R,S)
+
+                                %% --- LABEL ---
+                                \tkzDrawPoints(P,Q,R,S,T)
+                                \tkzLabelPoint[below right](P){$A$}
+                                \tkzLabelPoint[above left](Q){$B$}
+                                \tkzLabelPoint[above right](R){$C$}
+                                \tkzLabelPoint[below left](S){$D$}
+                                \tkzLabelPoint[left](T){$P$}
+                                \tkzMarkSegments[mark=|](P,T R,T)
 
                             \end{tikzpicture}
                         </latex-image>
