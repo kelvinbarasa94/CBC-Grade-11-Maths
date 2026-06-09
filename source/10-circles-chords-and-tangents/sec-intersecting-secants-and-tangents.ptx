@@ -122,7 +122,7 @@
                         </p>
                         <solution component="lesson-plan">
                             <p>
-                                Learners should find <m>PT^2 \approx PA \times PB \approx PC \times PD</m>. All three quantities are equal — this shared value is called the <em>power of the point</em> <m>P</m> with respect to the circle. The two theorems in this section both express this same underlying fact.
+                                Learners should find <m>PT^2 \approx PA \times PB \approx PC \times PD</m>.
                             </p>
                         </solution>
                     </li>
@@ -157,27 +157,12 @@
         <ul>
             <li>
                 <p>
-                    Confirm the results from the activity. Write on the board: <m>PA \times PB = PC \times PD = PT^2</m> and tell learners this comes from a property called the <em>power of a point</em>.
+                    Confirm the results from the activity. Write on the board: <m>PA \times PB = PC \times PD = PT^2</m>.
                 </p>
             </li>
             <li>
                 <p>
                     Introduce the vocabulary: a <em>secant</em> is a line that crosses a circle at two points; the <em>external segment</em> of a secant from point <m>P</m> is the part from <m>P</m> to the nearer intersection.
-                </p>
-            </li>
-            <li>
-                <p>
-                    State and display the Two-Secant Theorem and the Tangent-Secant Theorem using the diagrams below.
-                </p>
-            </li>
-            <li>
-                <p>
-                    Remind learners of the equal-tangents result from the previous section: since <m>PT_1^2 = PT_2^2</m> (both equal the same power of the point), the two tangent lengths from any external point must be equal.
-                </p>
-            </li>
-            <li>
-                <p>
-                    Work through Example 1 with the class before asking learners to attempt Examples 2 and 3 independently.
                 </p>
             </li>
         </ul>
@@ -355,7 +340,7 @@
                 </image>
             </figure>
         <p>
-            If a tangent and a secant are drawn to a circle from the same external point <m>P</m>, with the tangent touching at <m>T</m> and the secant meeting the circle at <m>A</m> (<m>A</m> nearer) and <m>B</m>, then
+            If a tangent and a secant are drawn to a circle from the same external point <m>P</m>, with the tangent touching at <m>T</m> and the secant meeting the circle at <m>A</m> and <m>B</m>, then
             <md>
                 PT^2 = PA \times PB.
             </md>
@@ -369,11 +354,11 @@
         <title>Using the Two-Secant Theorem</title>
         <statement>
             <p>
-                From an external point <m>P</m>, two secants are drawn to a circle. The first secant meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and <m>PB = 9</m> cm. The second secant meets the circle at <m>C</m> and <m>D</m>, where <m>PC = 3</m> cm. Find <m>PD</m>.
+                From an external point <m>P</m>, two secants are drawn to a circle. The first secant meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and <m>AB = 9</m> cm. The second secant meets the circle at <m>C</m> and <m>D</m>, where <m>PC = 3</m> cm. Find <m>PD</m>.
             </p>
 
             <figure xml:id="fig-two-secant-example">
-                <caption>Two secants from <m>P</m>: first meeting the circle at <m>A</m> (<m>PA = 4</m> cm) and <m>B</m> (<m>PB = 9</m> cm); second meeting at <m>C</m> (<m>PC = 3</m> cm) and <m>D</m>.</caption>
+                <caption>Two secants from <m>P</m>.</caption>
                 <image width="60%">
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
@@ -404,7 +389,7 @@
                           \tkzLabelPoints[below right](C)
                           \tkzLabelPoints[below left](D)
                           \tkzLabelSegment[above, sloped, font=\small](P,A){$4$ cm}
-                          \tkzLabelSegment[above, sloped, pos=0.75, font=\small](P,B){$9$ cm}
+                          \tkzLabelSegment[above, sloped, pos=0.75, font=\small](P,B){$8$ cm}
                           \tkzLabelSegment[below, sloped, font=\small](P,C){$3$ cm}
 
                         \end{tikzpicture}
@@ -415,23 +400,16 @@
         </statement>
         <solution>
             <p>
+                Since we are only told <m>PA</m> and <m>AB</m>, we calculate <m>PB = PA + PB = 4 + 8 = 12</m>
                 By the Two-Secant Theorem:
                 <md>
-                    PA \times PB = PC \times PD.
-                </md>
-                Substituting the known values:
-                <md>
-                    4 \times 9 = 3 \times PD.
-                </md>
-                <md>
-                    36 = 3 \times PD.
-                </md>
-                <md>
-                    PD = \frac{36}{3} = 12 \text{ cm.}
+                    <mrow> PA \times PB \amp = PC \times PD </mrow>
+                    <mrow> 4 \times 12 \amp = 3 \times PD </mrow>
+                    <mrow>PD \amp = 16 \text{\, cm} </mrow>
                 </md>
             </p>
             <p>
-                Note that the chord <m>CD</m> inside the circle has length <m>PD - PC = 12 - 3 = 9</m> cm.
+                Note that the chord <m>CD</m> inside the circle has length <m>PD - PC = 16 - 3 = 13</m> cm.
             </p>
         </solution>
     </example>
@@ -471,7 +449,7 @@
                           %% --- LABEL ---
                           \tkzLabelPoints[left](P)
                           \tkzLabelPoints[above right](T)
-                          \tkzLabelPoints[below](A)
+                          \tkzLabelPoints[below left](A)
                           \tkzLabelPoints[below right](B)
                           \tkzLabelSegment[above, sloped, font=\small](P,T){$6$ cm}
                           \tkzLabelSegment[below, sloped, font=\small](P,A){$4$ cm}
@@ -486,16 +464,10 @@
             <p>
                 By the Tangent-Secant Theorem:
                 <md>
-                    PT^2 = PA \times PB.
-                </md>
-                <md>
-                    6^2 = 4 \times PB.
-                </md>
-                <md>
-                    36 = 4 \times PB.
-                </md>
-                <md>
-                    PB = \frac{36}{4} = 9 \text{ cm.}
+                    <mrow> PT^2 \amp = PA \times PB </mrow>
+                    <mrow> 6^2 \amp = 4 \times PB </mrow>
+                    <mrow> 36 \amp = 4 \times PB </mrow>
+                    <mrow> PB \amp = \frac{36}{4} = 9 \text{ cm.} </mrow>
                 </md>
             </p>
             <p>
@@ -508,60 +480,46 @@
     </example>
 
     <example xml:id="example-equal-tangents-combined">
-        <title>Equal Tangent Lengths and the Tangent-Secant Theorem</title>
         <statement>
             <p>
-                Two tangents are drawn from an external point <m>T</m> to a circle, touching it at <m>A</m> and <m>B</m>. The tangent lengths satisfy <m>TA = 2x + 1</m> and <m>TB = x + 5</m>.
+                In <xref ref="fig-secant-quadratic"/>, a tangent from <m>A</m> meets a secant through <m>F</m> and <m>E</m> at <m>T</m>, with <m>AT = 4 \,\text{cm}</m> and <m>FE = 6\,\text{cm}</m>
             </p>
             <p>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            Find the value of <m>x</m> and the tangent length.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            A secant from <m>T</m> meets the circle at <m>E</m> and <m>F</m>, where <m>TE = 3</m> cm is the external segment. Use your answer to part (a) to find <m>TF</m> and the length of chord <m>EF</m>.
-                        </p>
-                    </li>
-                </ol>
+                Find the distance <m>TF</m>.
             </p>
 
-            <figure xml:id="fig-equal-tangents-secant-example">
-                <caption>From external point <m>T</m>, two tangents touch the circle at <m>A</m> and <m>B</m>, and a secant meets it at <m>E</m> (nearer) and <m>F</m> (farther).</caption>
+            <figure xml:id="fig-secant-quadratic">
+                <caption>Tangent and a Secant</caption>
                 <image width="55%">
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
 
                           %% --- SET ---
-                          \tkzDefPoint(3,0){T}
+                          \tkzDefPoint(6,1){T}
                           \tkzDefPoint(3,4){O}
                           \tkzDefPoint(5,4){cR}
 
                           %% --- CALCULATE ---
                           \tkzDefMidPoint(T,O)   \tkzGetPoint{M}
                           \tkzInterCC(M,T)(O,cR)   \tkzGetPoints{A}{B}
-                          \tkzDefPoint(0.5,7){Sg}
+                          \tkzDefPoint(2,7){Sg}
                           \tkzInterLC[near](T,Sg)(O,cR)   \tkzGetPoints{E}{F}
 
                           %% --- DRAW ---
                           \tkzDrawCircle[thick, teal](O,cR)
-                          \tkzDrawSegments[thick](T,A T,B)
+                          \tkzDrawSegments[thick](T,A)
                           \tkzDrawSegment[thick](T,F)
-                          \tkzDrawPoints[size=2pt](T,A,B,E,F)
+                          \tkzDrawPoints[size=2pt](T,A,E,F)
 
                           %% --- MARK ---
 
                           %% --- LABEL ---
                           \tkzLabelPoints[below](T)
-                          \tkzLabelPoints[right](A)
-                          \tkzLabelPoints[left](B)
-                          \tkzLabelPoints[below left](E)
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[left](E)
                           \tkzLabelPoints[above left](F)
-                          \tkzLabelSegment[above, sloped, font=\small](T,A){$2x+1$}
-                          \tkzLabelSegment[above, sloped, font=\small](T,B){$x+5$}
-                          \tkzLabelSegment[right, sloped, font=\small](T,E){$3$ cm}
+                          \tkzLabelSegment[below left, font=\small](T,A){$4$ cm}
+                          \tkzLabelSegment[left, font=\small](F,E){$6$ cm}
 
                         \end{tikzpicture}
                     </latex-image>
@@ -571,35 +529,14 @@
         </statement>
         <solution>
             <p>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            By the Equal Tangent Lengths property, <m>TA = TB</m>:
-                            <md>
-                                2x + 1 = x + 5.
-                            </md>
-                            <md>
-                                x = 4.
-                            </md>
-                            The tangent length is <m>TA = 2(4) + 1 = 9</m> cm.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            By the Tangent-Secant Theorem, with tangent <m>TA = 9</m> cm and external segment <m>TE = 3</m> cm:
-                            <md>
-                                TA^2 = TE \times TF.
-                            </md>
-                            <md>
-                                81 = 3 \times TF.
-                            </md>
-                            <md>
-                                TF = 27 \text{ cm.}
-                            </md>
-                            The chord <m>EF</m> has length <m>TF - TE = 27 - 3 = 24</m> cm.
-                        </p>
-                    </li>
-                </ol>
+                Let <m>TE = x\,\text{cm}</m>, which makes <m>TF = TE + EF = x + 6</m>. By the Tangent-Secant Theorem we have:
+                <md>
+                    <mrow>AT^2 \amp = TE \times TF</mrow>
+                    <mrow>16 \amp = x(x+6)</mrow>
+                    <mrow>x^2 + 6x - 16 \amp = 0</mrow>
+                    <mrow>(x+8)(x-2) \amp = 0</mrow>
+                </md>
+                As distances must be positive, we have <m>x = 2\,\text{cm}</m> as the only option. This gives <m>TF = x + 6 = 8\, \text{cm}</m>
             </p>
         </solution>
     </example>
@@ -609,30 +546,29 @@
     <exercises>
 
         <exercise xml:id="exercise-two-secants-find-segment">
-            <title>Two-Secant Theorem</title>
             <statement>
                 <p>
                     From an external point <m>P</m>, two secants are drawn to a circle.
                     <ul>
-                        <li><p>The first secant meets the circle at <m>A</m> and <m>B</m>, with <m>PA = 2</m> cm and <m>PB = 18</m> cm.</p></li>
-                        <li><p>The second secant meets the circle at <m>C</m> and <m>D</m>, with <m>PC = 6</m> cm.</p></li>
+                        <li><p>The first secant meets the circle at <m>A</m> and <m>B</m>, with <m>PA = 2</m> cm and <m>PB = 9</m> cm.</p></li>
+                        <li><p>The second secant meets the circle at <m>C</m> and <m>D</m>, with <m>PC = 3</m> cm.</p></li>
                     </ul>
                 </p>
                 <figure xml:id="fig-two-secants-exercise">
-                    <caption>Two secants from <m>P</m> below the circle: first meeting at <m>A</m> (<m>PA = 2</m> cm) and <m>B</m>; second meeting at <m>C</m> (<m>PC = 6</m> cm) and <m>D</m>.</caption>
+                    <caption>Two secants from <m>P</m> below the circle: first meeting at <m>A</m> and <m>B</m>; second meeting at <m>C</m> and <m>D</m>.</caption>
                     <image width="55%">
                         <latex-image>
                             \begin{tikzpicture}[scale=1.0]
 
                               %% --- SET ---
-                              \tkzDefPoint(4,0){P}
+                              \tkzDefPoint(5,1.5){P}
                               \tkzDefPoint(4,4.5){O}
                               \tkzDefPoint(6,4.5){cR}
 
                               %% --- CALCULATE ---
                               \tkzDefPoint(1,7){Sg1}
                               \tkzInterLC[near](P,Sg1)(O,cR)   \tkzGetPoints{A}{B}
-                              \tkzDefPoint(7,7){Sg2}
+                              \tkzDefPoint(5,7){Sg2}
                               \tkzInterLC[near](P,Sg2)(O,cR)   \tkzGetPoints{C}{D}
 
                               %% --- DRAW ---
@@ -647,10 +583,11 @@
                               \tkzLabelPoints[below](P)
                               \tkzLabelPoints[below left](A)
                               \tkzLabelPoints[above left](B)
-                              \tkzLabelPoints[below right](C)
+                              \tkzLabelPoints[right](C)
                               \tkzLabelPoints[above right](D)
-                              \tkzLabelSegment[above, sloped, font=\small](P,A){$2$ cm}
-                              \tkzLabelSegment[above, sloped, font=\small](P,C){$6$ cm}
+                              \tkzLabelSegment[below left, font=\small](P,A){$2$ cm}
+                              \tkzLabelSegment[above right, font=\small](P,B){$9$ cm}
+                              \tkzLabelSegment[above right, font=\small](P,C){$3$ cm}
 
                             \end{tikzpicture}
                         </latex-image>
@@ -668,16 +605,17 @@
                 <p>
                     <ol marker="(a)">
                         <li>
-                            <p>
-                                <m>PA \times PB = PC \times PD \Rightarrow 2 \times 18 = 6 \times PD \Rightarrow PD = 6</m> cm.
+                            <p> We have:
+                                <md>
+                                    <mrow> PA \times PB \amp = PC \times PD </mrow>
+                                    <mrow> 2 \times 9 \amp = 3 \times PD </mrow> 
+                                    <mrow> PD \amp = 6 \text{\, cm}</mrow>
+                                </md>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <m>CD = PD - PC = 6 - 6 = 0</m> cm.
-                            </p>
-                            <p>
-                                This means <m>C = D</m>: the second <q>secant</q> is actually a tangent! The second line just touches the circle at one point. This is consistent: <m>PC^2 = 36 = PA \times PB</m>, which is exactly the tangent condition.
+                                <m>CD = PD - PC = 6 - 3 = 3</m> cm.
                             </p>
                         </li>
                     </ol>

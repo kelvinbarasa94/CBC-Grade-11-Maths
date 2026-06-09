@@ -175,6 +175,47 @@
     <theorem xml:id="thm-intersecting-chords">
         <title>The Intersecting Chords Theorem</title>
         <statement>
+            <figure xml:id="intersecting-chords-thm">
+                <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                <image width="50%">
+                    <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                            %% --- SET ---
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(3,0){cR}
+                            \tkzDefPointBy[rotation=center O angle 175](cR) \tkzGetPoint{A}
+                            \tkzDefPointBy[rotation=center O angle 18](cR)  \tkzGetPoint{B}
+                            \tkzDefPointBy[rotation=center O angle 248](cR) \tkzGetPoint{C}
+                            \tkzDefPointBy[rotation=center O angle 72](cR)  \tkzGetPoint{D}
+
+                            %% --- CALCULATE ---
+                            \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
+
+                            %% --- DRAW ---
+                            \tkzDrawCircle[thick](O,cR)
+                            \tkzDrawSegment[blue, thick](A,B)
+                            \tkzDrawSegment[red, thick](C,D)
+                            \tkzDrawPoints(A,B,C,D,P)
+
+                            %% --- MARK ---
+
+                            %% --- LABEL ---
+                            \tkzLabelPoints[left](A)
+                            \tkzLabelPoints[right](B)
+                            \tkzLabelPoints[below left](C)
+                            \tkzLabelPoints[above](D)
+                            \tkzLabelPoints[above right](P)
+                            \tkzLabelSegment[above, sloped, font=\small](A,P){$AP$}
+                            \tkzLabelSegment[above, sloped, font=\small](P,B){$PB$}
+                            \tkzLabelSegment[above, sloped, font=\small](C,P){$CP$}
+                            \tkzLabelSegment[above, sloped, font=\small](P,D){$PD$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
             <p>
                 If two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle, then
                 <md>
@@ -199,30 +240,46 @@
                     </shortdescription>
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
-                            \draw[thick] (0,0) circle (3);
 
-                            \coordinate (A) at (-2.8, -0.8);
-                            \coordinate (B) at (2.6,  1.4);
-                            \coordinate (C) at (-0.9,  2.9);
-                            \coordinate (D) at (2.1, -2.1);
-                            \coordinate (P) at (0.44, 0.52);
+                          %% --- SET ---
+                          \tkzDefPoint(0,0){O}
+                          \tkzDefPoint(3,0){cR}
+                          \tkzDefPointBy[rotation=center O angle 196](cR) \tkzGetPoint{A}
+                          \tkzDefPointBy[rotation=center O angle 28](cR)  \tkzGetPoint{B}
+                          \tkzDefPointBy[rotation=center O angle 107](cR) \tkzGetPoint{C}
+                          \tkzDefPointBy[rotation=center O angle 314](cR) \tkzGetPoint{D}
 
-                            \fill[red!20]  (A) -- (P) -- (D) -- cycle;
-                            \fill[blue!20] (C) -- (P) -- (B) -- cycle;
+                          %% --- CALCULATE ---
+                          \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
 
-                            \draw[thick] (A) -- (B);
-                            \draw[thick] (C) -- (D);
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick](O,cR)
+                          \tkzFillPolygon[red!20](A,P,D)
+                          \tkzFillPolygon[blue!20](C,P,B)
+                          \tkzDrawSegments[thick](A,B C,D)
+                          \tkzDrawPoints(A,B,C,D,P)
 
-                            \node[right, red!70!black]  at (-2.1, -0.5) {$\alpha$};
-                            \node[below, blue!70!black] at (-0.5,  2.4) {$\alpha$};
-                            \node[above, red!70!black]  at ( 1.8, -1.6) {$\beta$};
-                            \node[left,  blue!70!black] at ( 2.2,  1.1) {$\beta$};
+                          %% --- MARK ---
+                          \tkzFillAngle[fill=red!20, opacity=0.6, size=0.45](D,A,P)
+                          \tkzMarkAngle[size=0.45](D,A,P)
+                          \tkzFillAngle[fill=blue!20, opacity=0.6, size=0.45](P,C,B)
+                          \tkzMarkAngle[size=0.45](P,C,B)
+                          \tkzFillAngle[fill=red!20, opacity=0.6, size=0.45](P,D,A)
+                          \tkzMarkAngle[size=0.45](P,D,A)
+                          \tkzFillAngle[fill=blue!20, opacity=0.6, size=0.45](C,B,P)
+                          \tkzMarkAngle[size=0.45](C,B,P)
 
-                            \node[left]        at (A) {$A$};
-                            \node[right]       at (B) {$B$};
-                            \node[above]       at (C) {$C$};
-                            \node[below right] at (D) {$D$};
-                            \node[above right] at (P) {$P$};
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](A)
+                          \tkzLabelPoints[right](B)
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoints[below right](D)
+                          \tkzLabelPoints[above right](P)
+                          \tkzLabelAngle[pos=0.75, color=red!70!black](D,A,P){$\alpha$}
+                          \tkzLabelAngle[pos=0.75, color=blue!70!black](P,C,B){$\alpha$}
+                          \tkzLabelAngle[pos=0.75, color=red!70!black](P,D,A){$\beta$}
+                          \tkzLabelAngle[pos=0.75, color=blue!70!black](C,B,P){$\beta$}
+
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -295,28 +352,38 @@
                 <image width="55%">
                     <shortdescription>A circle with two intersecting chords AB and XY meeting at point R inside the circle.</shortdescription>
                     <latex-image>
-                        \begin{tikzpicture}
-                            \draw[thick] (0,0) circle (3);
+                        \begin{tikzpicture}[scale=1.0]
 
-                            \coordinate (A) at (-2.8, 0.5);
-                            \coordinate (B) at (2.8, 1.1);
-                            \coordinate (X) at (-2.1, -2.1);
-                            \coordinate (Y) at (1.9, 2.3);
-                            \coordinate (R) at (0.42, 0.83);
+                          %% --- SET ---
+                          \tkzDefPoint(0,0){O}
+                          \tkzDefPoint(3,0){cR}
+                          \tkzDefPointBy[rotation=center O angle 177](cR) \tkzGetPoint{A}
+                          \tkzDefPointBy[rotation=center O angle 22](cR)  \tkzGetPoint{B}
+                          \tkzDefPointBy[rotation=center O angle 228](cR) \tkzGetPoint{X}
+                          \tkzDefPointBy[rotation=center O angle 78](cR)  \tkzGetPoint{Y}
 
-                            \draw[blue, thick] (A) -- (B);
-                            \draw[red,  thick] (X) -- (Y);
+                          %% --- CALCULATE ---
+                          \tkzInterLL(A,B)(X,Y) \tkzGetPoint{R}
 
-                            \node[left]        at (A) {$A$};
-                            \node[right]       at (B) {$B$};
-                            \node[below left]  at (X) {$X$};
-                            \node[above right] at (Y) {$Y$};
-                            \node[below]       at (R) {$R$};
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick](O,cR)
+                          \tkzDrawSegment[blue, thick](A,B)
+                          \tkzDrawSegment[red, thick](X,Y)
+                          \tkzDrawPoints(A,B,X,Y,R)
 
-                            \node[above] at (-1.2, 0.65) {4 cm};
-                            \node[above] at ( 1.6, 0.95) {$x$ cm};
-                            \node[left]  at (-0.8, -0.6) {5 cm};
-                            \node[right] at ( 1.2,  1.6) {3 cm};
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](A)
+                          \tkzLabelPoints[right](B)
+                          \tkzLabelPoints[below left](X)
+                          \tkzLabelPoints[above right](Y)
+                          \tkzLabelPoints[below right](R)
+                          \tkzLabelSegment[above, sloped, font=\small](A,R){$4$ cm}
+                          \tkzLabelSegment[above, sloped, font=\small](R,B){$x$ cm}
+                          \tkzLabelSegment[below, sloped, font=\small](X,R){$5$ cm}
+                          \tkzLabelSegment[above, sloped, font=\small](R,Y){$3$ cm}
+
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -353,28 +420,38 @@
                 <image width="55%">
                     <shortdescription>A circle with two intersecting chords PQ and RS meeting at T. Segments are labelled PT = x+2, TQ = 3, RT = x, TS = 6.</shortdescription>
                     <latex-image>
-                        \begin{tikzpicture}
-                            \draw[thick] (0,0) circle (3);
+                        \begin{tikzpicture}[scale=1.0]
 
-                            \coordinate (P) at (-2.9, -0.3);
-                            \coordinate (Q) at ( 2.7,  0.7);
-                            \coordinate (R) at (-0.9,  2.9);
-                            \coordinate (S) at ( 1.4, -2.7);
-                            \coordinate (T) at ( 0.24, 0.26);
+                          %% --- SET ---
+                          \tkzDefPoint(0,0){O}
+                          \tkzDefPoint(3,0){cR}
+                          \tkzDefPointBy[rotation=center O angle 186](cR) \tkzGetPoint{P}
+                          \tkzDefPointBy[rotation=center O angle 13](cR)  \tkzGetPoint{Q}
+                          \tkzDefPointBy[rotation=center O angle 107](cR) \tkzGetPoint{R}
+                          \tkzDefPointBy[rotation=center O angle 297](cR) \tkzGetPoint{S}
 
-                            \draw[blue, thick] (P) -- (Q);
-                            \draw[red,  thick] (R) -- (S);
+                          %% --- CALCULATE ---
+                          \tkzInterLL(P,Q)(R,S) \tkzGetPoint{T}
 
-                            \node[left]        at (P) {$P$};
-                            \node[right]       at (Q) {$Q$};
-                            \node[above]       at (R) {$R$};
-                            \node[below right] at (S) {$S$};
-                            \node[above right] at (T) {$T$};
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick](O,cR)
+                          \tkzDrawSegment[blue, thick](P,Q)
+                          \tkzDrawSegment[red, thick](R,S)
+                          \tkzDrawPoints(P,Q,R,S,T)
 
-                            \node[above] at (-1.3,  0.0) {$(x+2)$};
-                            \node[above] at ( 1.45, 0.5) {$3$};
-                            \node[left]  at (-0.3,  1.7) {$x$};
-                            \node[right] at ( 0.9, -1.2) {$6$};
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](P)
+                          \tkzLabelPoints[right](Q)
+                          \tkzLabelPoints[above](R)
+                          \tkzLabelPoints[below right](S)
+                          \tkzLabelPoints[above right](T)
+                          \tkzLabelSegment[above, sloped, font=\small](P,T){$(x+2)$}
+                          \tkzLabelSegment[above, sloped, font=\small](T,Q){$3$}
+                          \tkzLabelSegment[right, font=\small](R,T){$x$}
+                          \tkzLabelSegment[right, font=\small](T,S){$6$}
+
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -417,34 +494,37 @@
                     <shortdescription>A circle with a horizontal chord AB and a vertical chord CD crossing at right angles at P. AP = 3 cm, PB = 12 cm, and CP = PD = y cm are labelled.</shortdescription>
                     <latex-image>
                         \begin{tikzpicture}[scale=0.9]
-                            % Circle: centre (1.5, 0), radius 2.5
-                            % Verification: A=(-1,0): dist to (1.5,0) = 2.5 OK
-                            %               B=(4,0):  dist to (1.5,0) = 2.5 OK
-                            %               C=(0,2):  dist to (1.5,0) = sqrt(2.25+4) = 2.5 OK
-                            %               D=(0,-2): same OK
-                            \draw[thick] (1.5, 0) circle (2.5);
 
-                            \coordinate (A) at (-1, 0);
-                            \coordinate (B) at ( 4, 0);
-                            \coordinate (C) at ( 0, 2);
-                            \coordinate (D) at ( 0,-2);
-                            \coordinate (P) at ( 0, 0);
+                          %% --- SET ---
+                          \tkzDefPoint(0,0){P}
+                          \tkzDefPoint(-1,0){A}
+                          \tkzDefPoint(4,0){B}
+                          \tkzDefPoint(0,2){C}
+                          \tkzDefPoint(0,-2){D}
 
-                            \draw[blue, thick] (A) -- (B);
-                            \draw[red,  thick] (C) -- (D);
+                          %% --- CALCULATE ---
+                          \tkzDefCircle[circum](A,B,C) \tkzGetPoint{O}
 
-                            \draw (0.22, 0) -- (0.22, 0.22) -- (0, 0.22);
+                          %% --- DRAW ---
+                          \tkzDrawCircle[thick](O,A)
+                          \tkzDrawSegment[blue, thick](A,B)
+                          \tkzDrawSegment[red, thick](C,D)
+                          \tkzDrawPoints(A,B,C,D,P)
 
-                            \node[left]        at (A) {$A$};
-                            \node[right]       at (B) {$B$};
-                            \node[above]       at (C) {$C$};
-                            \node[below]       at (D) {$D$};
-                            \node[below left]  at (P) {$P$};
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.18](A,P,C)
 
-                            \node[above] at (-0.5, 0) {3 cm};
-                            \node[above] at ( 2.0, 0) {12 cm};
-                            \node[right] at (0,  1.0) {$y$ cm};
-                            \node[right] at (0, -1.0) {$y$ cm};
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](A)
+                          \tkzLabelPoints[right](B)
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoints[below](D)
+                          \tkzLabelPoints[below left](P)
+                          \tkzLabelSegment[above, font=\small](A,P){$3$ cm}
+                          \tkzLabelSegment[above, font=\small](P,B){$12$ cm}
+                          \tkzLabelSegment[right, font=\small](C,P){$y$ cm}
+                          \tkzLabelSegment[right, font=\small](P,D){$y$ cm}
+
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -492,36 +572,373 @@
                 <p>
                     In each part, two chords intersect inside a circle at point <m>P</m>. Find the missing length.
                 </p>
-                <ol marker="(a)" cols="2">
+    
+                <ol marker="(a)">
                     <li>
                         <p>
-                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 6</m> cm, <m>PB = 4</m> cm, <m>CP = 8</m> cm. Find <m>PD</m>.
+                            <m>AP = 6</m> cm, <m>PB = 4</m> cm, <m>CP = 8</m> cm. Find <m>PD</m>.
                         </p>
+                        <figure xml:id="chord-1">
+                            <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                            <image width="60%">
+                                <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.5]
+                                    \pgfmathsetmacro{\AP}{6}
+                                        \pgfmathsetmacro{\PB}{4}
+                                        \pgfmathsetmacro{\CP}{8}
+                                        \pgfmathsetmacro{\r}{6}
+                                        \pgfmathsetmacro{\Bangle}{30} % inclination of B from positive x-axis
+                                        \pgfmathsetmacro{\PD}{(\AP * \PB)/(\CP)}
+
+                                        %% --- SET ---
+                                        \begin{scope}[rotate=\Bangle]
+                                            \tkzDefPoint(0,0){O}
+                                            \tkzDefPoint(0, 3){cR}
+
+
+                                            %% --- CALCULATE ---
+                                            \pgfmathsetmacro{\ABhalf}{(\AP + \PB)/2}
+                                            \pgfmathsetmacro{\h}{sqrt(\r * \r - \ABhalf * \ABhalf)} % height
+                                            \tkzDefCircle[R](O,\ABhalf) \tkzGetPoint{C}
+                                            
+                                            \tkzDefShiftPoint[O](-\ABhalf,\h){A}
+                                            \tkzDefShiftPoint[O](\ABhalf,\h){B}
+                                            \tkzDrawCircle[thick](O,A)
+                                        \end{scope}
+
+                                            \pgfmathsetmacro{\posP}{(\AP)/(\AP + \PB)}
+                                            \tkzDefPointOnLine[pos=\posP](A,B) \tkzGetPoint{P}
+
+                                            \tkzInterCC[R](O,\r)(P,\CP) \tkzGetPoints{C}{Calt}
+
+                                            \tkzInterLC(C,P)(O,A) \tkzGetPoints{D}{Dalt}
+
+                                            \tkzDrawSegment[blue, thick](A,B)
+                                            \tkzDrawSegment[red, thick](C,D)
+
+                                            %% --- LABEL ---
+                                            \tkzDrawPoints(A,B,C,D,P)
+                                            \tkzLabelPoints[left](A)
+                                            \tkzLabelPoints[above right](B)
+                                            \tkzLabelPoints[below left](C)
+                                            \tkzLabelPoints[above](D)
+                                            \tkzLabelPoints[right](P)
+                                            \tkzLabelSegment[above, sloped, font=\small](A,P){$\pgfmathprintnumber{\AP}$ cm}
+                                            \tkzLabelSegment[below, sloped, font=\small](P,B){$\pgfmathprintnumber{\PB}$ cm}
+                                            \tkzLabelSegment[above, sloped, font=\small](C,P){$\pgfmathprintnumber{\CP}$ cm}
+                                            \tkzLabelSegment[above, sloped, font=\small](P,D){$x$ cm}
+
+
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
                     </li>
                     <li>
                         <p>
-                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 3</m> cm, <m>PB = 8</m> cm, <m>CP = 6</m> cm. Find <m>PD</m>.
+                            <m>AP = 3</m> cm, <m>PB = 8</m> cm, <m>CP = 6</m> cm. Find <m>PD</m>.
                         </p>
+                        <figure xml:id="chord-2">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.5]
+                              \pgfmathsetmacro{\AP}{3}
+                                \pgfmathsetmacro{\PB}{8}
+                                \pgfmathsetmacro{\CP}{6}
+                                \pgfmathsetmacro{\r}{6}
+                                \pgfmathsetmacro{\Bangle}{60} % inclination of B from positive x-axis
+                                \pgfmathsetmacro{\PD}{(\AP * \PB)/(\CP)}
+
+                                %% --- SET ---
+                                \begin{scope}[rotate=\Bangle]
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(0, 3){cR}
+
+
+                                    %% --- CALCULATE ---
+                                    \pgfmathsetmacro{\ABhalf}{(\AP + \PB)/2}
+                                    \pgfmathsetmacro{\h}{sqrt(\r * \r - \ABhalf * \ABhalf)} % height
+                                    \tkzDefCircle[R](O,\ABhalf) \tkzGetPoint{C}
+                                    
+                                    \tkzDefShiftPoint[O](-\ABhalf,\h){A}
+                                    \tkzDefShiftPoint[O](\ABhalf,\h){B}
+                                    \tkzDrawCircle[thick](O,A)
+                                \end{scope}
+
+                                    \pgfmathsetmacro{\posP}{(\AP)/(\AP + \PB)}
+                                    \tkzDefPointOnLine[pos=\posP](A,B) \tkzGetPoint{P}
+
+                                    \tkzInterCC[R](O,\r)(P,\CP) \tkzGetPoints{C}{Calt}
+
+                                    \tkzInterLC(C,P)(O,A) \tkzGetPoints{D}{Dalt}
+
+                                    \tkzDrawSegment[blue, thick](A,B)
+                                    \tkzDrawSegment[red, thick](C,D)
+
+                                    %% --- LABEL ---
+                                    \tkzDrawPoints(A,B,C,D,P)
+                                    \tkzLabelPoints[left](A)
+                                    \tkzLabelPoints[above](B)
+                                    \tkzLabelPoints[below left](C)
+                                    \tkzLabelPoints[above](D)
+                                    \tkzLabelPoints[right](P)
+                                    \tkzLabelSegment[above, sloped, font=\small](A,P){$\pgfmathprintnumber{\AP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,B){$\pgfmathprintnumber{\PB}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](C,P){$\pgfmathprintnumber{\CP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,D){$x$ cm}
+
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
-                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 2</m> cm, <m>PB = 9</m> cm, <m>CP = 6</m> cm. Find <m>PD</m>.
+                            <m>AP = 2</m> cm, <m>PB = 9</m> cm, <m>CP = 6</m> cm. Find <m>PD</m>.
                         </p>
+                        <figure xml:id="chord-3">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.5]
+                              \pgfmathsetmacro{\AP}{2}
+                                \pgfmathsetmacro{\PB}{9}
+                                \pgfmathsetmacro{\CP}{6}
+                                \pgfmathsetmacro{\r}{6}
+                                \pgfmathsetmacro{\Bangle}{120} % inclination of B from positive x-axis
+                                \pgfmathsetmacro{\PD}{(\AP * \PB)/(\CP)}
+
+                                %% --- SET ---
+                                \begin{scope}[rotate=\Bangle]
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(0, 3){cR}
+
+
+                                    %% --- CALCULATE ---
+                                    \pgfmathsetmacro{\ABhalf}{(\AP + \PB)/2}
+                                    \pgfmathsetmacro{\h}{sqrt(\r * \r - \ABhalf * \ABhalf)} % height
+                                    \tkzDefCircle[R](O,\ABhalf) \tkzGetPoint{C}
+                                    
+                                    \tkzDefShiftPoint[O](-\ABhalf,\h){A}
+                                    \tkzDefShiftPoint[O](\ABhalf,\h){B}
+                                    \tkzDrawCircle[thick](O,A)
+                                \end{scope}
+
+                                    \pgfmathsetmacro{\posP}{(\AP)/(\AP + \PB)}
+                                    \tkzDefPointOnLine[pos=\posP](A,B) \tkzGetPoint{P}
+
+                                    \tkzInterCC[R](O,\r)(P,\CP) \tkzGetPoints{C}{Calt}
+
+                                    \tkzInterLC(C,P)(O,A) \tkzGetPoints{D}{Dalt}
+
+                                    \tkzDrawSegment[blue, thick](A,B)
+                                    \tkzDrawSegment[red, thick](C,D)
+
+                                    %% --- LABEL ---
+                                    \tkzDrawPoints(A,B,C,D,P)
+                                    \tkzLabelPoints[below](A)
+                                    \tkzLabelPoints[above left](B)
+                                    \tkzLabelPoints[right](C)
+                                    \tkzLabelPoints[left](D)
+                                    \tkzLabelPoints[above right](P)
+                                    \tkzLabelSegment[above, sloped, font=\small](A,P){$\pgfmathprintnumber{\AP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,B){$\pgfmathprintnumber{\PB}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](C,P){$\pgfmathprintnumber{\CP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,D){$x$ cm}
+
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
-                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 5</m> cm, <m>PB = 4</m> cm, <m>CP = 10</m> cm. Find <m>PD</m>.
+                            <m>AP = 5</m> cm, <m>PB = 4</m> cm, <m>CP = 10</m> cm. Find <m>PD</m>.
                         </p>
+                        <figure xml:id="chord-4">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.5]
+                              \pgfmathsetmacro{\AP}{5}
+                                \pgfmathsetmacro{\PB}{4}
+                                \pgfmathsetmacro{\CP}{10}
+                                \pgfmathsetmacro{\r}{6}
+                                \pgfmathsetmacro{\Bangle}{240} % inclination of B from positive x-axis
+                                \pgfmathsetmacro{\PD}{(\AP * \PB)/(\CP)}
+
+                                %% --- SET ---
+                                \begin{scope}[rotate=\Bangle]
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(0, 3){cR}
+
+
+                                    %% --- CALCULATE ---
+                                    \pgfmathsetmacro{\ABhalf}{(\AP + \PB)/2}
+                                    \pgfmathsetmacro{\h}{sqrt(\r * \r - \ABhalf * \ABhalf)} % height
+                                    \tkzDefCircle[R](O,\ABhalf) \tkzGetPoint{C}
+                                    
+                                    \tkzDefShiftPoint[O](-\ABhalf,\h){A}
+                                    \tkzDefShiftPoint[O](\ABhalf,\h){B}
+                                    \tkzDrawCircle[thick](O,A)
+                                \end{scope}
+
+                                    \pgfmathsetmacro{\posP}{(\AP)/(\AP + \PB)}
+                                    \tkzDefPointOnLine[pos=\posP](A,B) \tkzGetPoint{P}
+
+                                    \tkzInterCC[R](O,\r)(P,\CP) \tkzGetPoints{C}{Calt}
+
+                                    \tkzInterLC(C,P)(O,A) \tkzGetPoints{D}{Dalt}
+
+                                    \tkzDrawSegment[blue, thick](A,B)
+                                    \tkzDrawSegment[red, thick](C,D)
+
+                                    %% --- LABEL ---
+                                    \tkzDrawPoints(A,B,C,D,P)
+                                    \tkzLabelPoints[right](A)
+                                    \tkzLabelPoints[below](B)
+                                    \tkzLabelPoints[above left](C)
+                                    \tkzLabelPoints[right](D)
+                                    \tkzLabelPoints[left](P)
+                                    \tkzLabelSegment[above, sloped, font=\small](A,P){$\pgfmathprintnumber{\AP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,B){$\pgfmathprintnumber{\PB}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](C,P){$\pgfmathprintnumber{\CP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,D){$x$ cm}
+
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
-                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 4</m> cm, <m>PB = 7</m> cm, <m>CP = 14</m> cm. Find <m>PD</m>.
+                            <m>AP = 4</m> cm, <m>PB = 7</m> cm, <m>CP = 14</m> cm. Find <m>PD</m>.
                         </p>
+                        <figure xml:id="chord-5">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.3]
+                              \pgfmathsetmacro{\AP}{4}
+                                \pgfmathsetmacro{\PB}{7}
+                                \pgfmathsetmacro{\CP}{14}
+                                \pgfmathsetmacro{\r}{8}
+                                \pgfmathsetmacro{\Bangle}{60} % inclination of B from positive x-axis
+                                \pgfmathsetmacro{\PD}{(\AP * \PB)/(\CP)}
+
+                                %% --- SET ---
+                                \begin{scope}[rotate=\Bangle]
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(0, 3){cR}
+
+
+                                    %% --- CALCULATE ---
+                                    \pgfmathsetmacro{\ABhalf}{(\AP + \PB)/2}
+                                    \pgfmathsetmacro{\h}{sqrt(\r * \r - \ABhalf * \ABhalf)} % height
+                                    \tkzDefCircle[R](O,\ABhalf) \tkzGetPoint{C}
+                                    
+                                    \tkzDefShiftPoint[O](-\ABhalf,\h){A}
+                                    \tkzDefShiftPoint[O](\ABhalf,\h){B}
+                                    \tkzDrawCircle[thick](O,A)
+                                \end{scope}
+
+                                    \pgfmathsetmacro{\posP}{(\AP)/(\AP + \PB)}
+                                    \tkzDefPointOnLine[pos=\posP](A,B) \tkzGetPoint{P}
+
+                                    \tkzInterCC[R](O,\r)(P,\CP) \tkzGetPoints{C}{Calt}
+
+                                    \tkzInterLC(C,P)(O,A) \tkzGetPoints{D}{Dalt}
+
+                                    \tkzDrawSegment[blue, thick](A,B)
+                                    \tkzDrawSegment[red, thick](C,D)
+
+                                    %% --- LABEL ---
+                                    \tkzDrawPoints(A,B,C,D,P)
+                                    \tkzLabelPoints[below left](A)
+                                    \tkzLabelPoints[above right](B)
+                                    \tkzLabelPoints[below right](C)
+                                    \tkzLabelPoints[above left](D)
+                                    \tkzLabelPoints[right](P)
+                                    \tkzLabelSegment[above, sloped, font=\small](A,P){$\pgfmathprintnumber{\AP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,B){$\pgfmathprintnumber{\PB}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](C,P){$\pgfmathprintnumber{\CP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,D){$x$ cm}
+
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                     <li>
                         <p>
-                            Chords <m>AB</m> and <m>CD</m>: <m>AP = 6</m> cm, <m>PB = 6</m> cm, <m>CP = 9</m> cm. Find <m>PD</m>.
+                            <m>AP = 6</m> cm, <m>PB = 6</m> cm, <m>CP = 9</m> cm. Find <m>PD</m>.
                         </p>
+                        <figure xml:id="chord-6">
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                    <image width="60%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.5]
+                              \pgfmathsetmacro{\AP}{6}
+                                \pgfmathsetmacro{\PB}{6}
+                                \pgfmathsetmacro{\CP}{9}
+                                \pgfmathsetmacro{\r}{7}
+                                \pgfmathsetmacro{\Bangle}{100} % inclination of B from positive x-axis
+                                \pgfmathsetmacro{\PD}{(\AP * \PB)/(\CP)}
+
+                                %% --- SET ---
+                                \begin{scope}[rotate=\Bangle]
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(0, 3){cR}
+
+
+                                    %% --- CALCULATE ---
+                                    \pgfmathsetmacro{\ABhalf}{(\AP + \PB)/2}
+                                    \pgfmathsetmacro{\h}{sqrt(\r * \r - \ABhalf * \ABhalf)} % height
+                                    \tkzDefCircle[R](O,\ABhalf) \tkzGetPoint{C}
+                                    
+                                    \tkzDefShiftPoint[O](-\ABhalf,\h){A}
+                                    \tkzDefShiftPoint[O](\ABhalf,\h){B}
+                                    \tkzDrawCircle[thick](O,A)
+                                \end{scope}
+
+                                    \pgfmathsetmacro{\posP}{(\AP)/(\AP + \PB)}
+                                    \tkzDefPointOnLine[pos=\posP](A,B) \tkzGetPoint{P}
+
+                                    \tkzInterCC[R](O,\r)(P,\CP) \tkzGetPoints{C}{Calt}
+
+                                    \tkzInterLC(C,P)(O,A) \tkzGetPoints{D}{Dalt}
+
+                                    \tkzDrawSegment[blue, thick](A,B)
+                                    \tkzDrawSegment[red, thick](C,D)
+
+                                    %% --- LABEL ---
+                                    \tkzDrawPoints(A,B,C,D,P)
+                                    \tkzLabelPoints[below](A)
+                                    \tkzLabelPoints[above](B)
+                                    \tkzLabelPoints[below right](C)
+                                    \tkzLabelPoints[left](D)
+                                    \tkzLabelPoints[right](P)
+                                    \tkzLabelSegment[above, sloped, font=\small](A,P){$\pgfmathprintnumber{\AP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,B){$\pgfmathprintnumber{\PB}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](C,P){$\pgfmathprintnumber{\CP}$ cm}
+                                    \tkzLabelSegment[above, sloped, font=\small](P,D){$x$ cm}
+
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                     </li>
                 </ol>
             </statement>
@@ -542,7 +959,48 @@
                 <p>
                     In each part, two chords intersect inside a circle at point <m>T</m>. Find <m>x</m> and then find the length of chord <m>RS</m>.
                 </p>
-                <ol marker="(a)" cols="2">
+                <figure>
+                    <caption>Chords <m>PQ</m> and <m>RS</m> intersecting at <m>T</m>.</caption>
+                    <image width="50%">
+                        <shortdescription>A circle with two intersecting chords PQ (blue) and RS (red) meeting at T. The four segments PT, TQ, RT, TS are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(0,0){O}
+                              \tkzDefPoint(3,0){cR}
+                              \tkzDefPointBy[rotation=center O angle 188](cR) \tkzGetPoint{P}
+                              \tkzDefPointBy[rotation=center O angle 12](cR)  \tkzGetPoint{Q}
+                              \tkzDefPointBy[rotation=center O angle 100](cR) \tkzGetPoint{R}
+                              \tkzDefPointBy[rotation=center O angle 292](cR) \tkzGetPoint{S}
+
+                              %% --- CALCULATE ---
+                              \tkzInterLL(P,Q)(R,S) \tkzGetPoint{T}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick](O,cR)
+                              \tkzDrawSegment[blue, thick](P,Q)
+                              \tkzDrawSegment[red, thick](R,S)
+                              \tkzDrawPoints(P,Q,R,S,T)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[left](P)
+                              \tkzLabelPoints[right](Q)
+                              \tkzLabelPoints[above](R)
+                              \tkzLabelPoints[below right](S)
+                              \tkzLabelPoints[above right](T)
+                              \tkzLabelSegment[above, sloped, font=\small](P,T){$PT$}
+                              \tkzLabelSegment[above, sloped, font=\small](T,Q){$TQ$}
+                              \tkzLabelSegment[right, font=\small](R,T){$RT$}
+                              \tkzLabelSegment[right, font=\small](T,S){$TS$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <ol marker="(a)">
                     <li>
                         <p>
                             <m>PT = x</m>, <m>TQ = 6</m>, <m>RT = 4</m>, <m>TS = x + 2</m>.
@@ -566,7 +1024,7 @@
                 </ol>
             </statement>
             <answer>
-                <ol marker="(a)" cols="2">
+                <ol marker="(a)">
                     <li><p><m>x = 4</m>; <m>RS = 10</m> cm</p></li>
                     <li><p><m>x = 4</m>; <m>RS = 9</m> cm</p></li>
                     <li><p><m>x = 2</m>; <m>RS = 7</m> cm</p></li>
@@ -580,6 +1038,47 @@
                 <p>
                     In each part, two chords of a circle meet at right angles at point <m>P</m>.
                 </p>
+                <figure>
+                    <caption>Perpendicular chords <m>AB</m> and <m>CD</m> meeting at <m>P</m>.</caption>
+                    <image width="50%">
+                        <shortdescription>A circle with a horizontal chord AB (blue) and a vertical chord CD (red) crossing at right angles at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.85]
+
+                              %% --- SET ---
+                              \tkzDefPoint(0,0){P}
+                              \tkzDefPoint(-2,0){A}
+                              \tkzDefPoint(4.5,0){B}
+                              \tkzDefPoint(0,3){C}
+                              \tkzDefPoint(0,-3){D}
+
+                              %% --- CALCULATE ---
+                              \tkzDefCircle[circum](A,B,C) \tkzGetPoint{O}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick](O,A)
+                              \tkzDrawSegment[blue, thick](A,B)
+                              \tkzDrawSegment[red, thick](C,D)
+                              \tkzDrawPoints(A,B,C,D,P)
+
+                              %% --- MARK ---
+                              \tkzMarkRightAngle[size=0.20](A,P,C)
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[left](A)
+                              \tkzLabelPoints[right](B)
+                              \tkzLabelPoints[above](C)
+                              \tkzLabelPoints[below](D)
+                              \tkzLabelPoints[below left](P)
+                              \tkzLabelSegment[above, font=\small](A,P){$AP$}
+                              \tkzLabelSegment[above, font=\small](P,B){$PB$}
+                              \tkzLabelSegment[right, font=\small](C,P){$CP$}
+                              \tkzLabelSegment[right, font=\small](P,D){$PD$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -606,6 +1105,44 @@
                 <p>
                     Two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle such that <m>AP = CP</m>. Prove that <m>PB = PD</m>.
                 </p>
+                <figure>
+                    <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>, with <m>AP = CP</m>.</caption>
+                    <image width="50%">
+                        <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. Single tick marks on AP and CP show that they are equal.</shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=1.0]
+
+                              %% --- SET ---
+                              \tkzDefPoint(0,0){O}
+                              \tkzDefPoint(3,0){cR}
+                              \tkzDefPointBy[rotation=center O angle 175](cR) \tkzGetPoint{A}
+                              \tkzDefPointBy[rotation=center O angle 40](cR)  \tkzGetPoint{B}
+                              \tkzDefPointBy[rotation=center O angle 215](cR) \tkzGetPoint{C}
+                              \tkzDefPointBy[rotation=center O angle 80](cR)  \tkzGetPoint{D}
+
+                              %% --- CALCULATE ---
+                              \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
+
+                              %% --- DRAW ---
+                              \tkzDrawCircle[thick](O,cR)
+                              \tkzDrawSegment[blue, thick](A,B)
+                              \tkzDrawSegment[red, thick](C,D)
+                              \tkzDrawPoints(A,B,C,D,P)
+
+                              %% --- MARK ---
+                              \tkzMarkSegments[mark=|](A,P C,P)
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[left](A)
+                              \tkzLabelPoints[right](B)
+                              \tkzLabelPoints[below left](C)
+                              \tkzLabelPoints[above](D)
+                              \tkzLabelPoints[above right](P)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
