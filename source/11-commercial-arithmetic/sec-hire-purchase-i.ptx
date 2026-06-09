@@ -44,26 +44,31 @@
 
     <axiom component="lesson-plan">
         <title>Problem-Solving and Discovery</title>
-        <dl>
+
+        <ol>
+
             <li>
                 <title>Suggested Time</title>
                 <p>
                     15 minutes
                 </p>
             </li>
+
             <li>
                 <title>Objective</title>
                 <p>
-                    To understand the operational mechanics of consumer credit hire-purchase plans, calculate total costs over time, and discover the hidden carrying charges.
+                    To understand how hire purchase works, calculate the total amount paid over time, and identify the extra cost paid.
                 </p>
             </li>
+
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Group learners into balanced teams of <m>3</m> or <m>4</m>. Guide them through expanding the local asset environment table (e.g., boda-boda motorcycles, solar power kits, smartphones). In the television scenario, ensure learners do not mistake the cash price as part of the operational tracking accumulation; emphasize that the hire purchase price is strictly built by compiling the initial deposit and all monthly installments together.
+                    Put learners in groups of <m>3</m> or <m>4</m>. Let them use familiar examples such as motorcycles, solar kits, and smartphones. In the television example, guide them to see that the total cost is made up of the deposit plus all monthly payments. Help them avoid confusing the cash price with the hire purchase total.
                 </p>
             </li>
-        </dl>
+
+        </ol>
     </axiom>
 
     <activity>
@@ -148,40 +153,47 @@
 
     <axiom component="lesson-plan">
         <title>Structured Instruction</title>
+
         <p>
-            <dl>
+            <ol>
             <li>
                 <title>Suggested Time</title>
                 <p>
                     10 minutes
                 </p>
             </li>
+
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize algebraic operational structures for cash price comparisons, determine interest carrying charges, and evaluate financial rates of interest over fractional terms.
+                    To use algebra to compare cash price and hire purchase price and determine the extra cost paid.
                 </p>
             </li>
-            </dl>
+            </ol>
         </p>
+
         <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
+            <title>Discussion of Learner Findings</title>
             <ol>
+
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Use the television scenario to clarify terms. Show that while the cash price is Ksh <m>40,000</m>, buying via hire purchase sets the cost to Ksh <m>10,000 + (2,500 \times 14) = 45,000</m>. This reveals an extra cost of Ksh <m>5,000</m>, which functions as the carrying charge or hidden interest fee for the convenience of deferred payments.
+                        <alert>Discussion:</alert> Use the television example to guide discussion. Show that the cash price is Ksh <m>40,000</m>, while the hire purchase cost is Ksh <m>10,000 + (2,500 \times 14) = 45,000</m>. The difference of Ksh <m>5,000</m> is the extra cost of buying on credit.
                     </p>
                 </li>
+
                 <li>
                     <p>
-                        <alert>Formula Formulation:</alert> Transition learners from raw descriptive terms into clean algebraic shorthand parameters. Define the fundamental mathematical relationship: Hire Purchase Price equals Deposit plus total installments (<m>H = D + xn</m>). Define carrying charges as the difference between credit and spot pricing (<m>I = H - P</m>).
+                        <alert>Developing the Formula:</alert> Help learners express the relationship as <m>H = D + xn</m>. Explain that the extra cost is the difference between the total paid and the cash price (<m>I = H - P</m>).
                     </p>
                 </li>
+
                 <li>
                     <p>
-                        <alert>Financial Awareness:</alert> Frame this mathematical foundation within realistic socio-economic behaviors. Emphasize that long repayment horizons reduce individual monthly impacts but dramatically expand the overall carrying charge percentage paid to retailers.
+                        <alert>Discussion:</alert> Discuss how paying in installments makes goods more expensive overall. Relate this to everyday buying decisions.
                     </p>
                 </li>
+
             </ol>
         </paragraphs>
     </axiom>
@@ -361,6 +373,7 @@
 
     <axiom component="lesson-plan">
         <title>Differentiation</title>
+
         <table>
             <title>Differentiation Strategies for Hire Purchase</title>
             <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
@@ -368,24 +381,28 @@
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
                 </row>
+
                 <row bottom="minor">
                     <cell><alert>Support (Struggling)</alert></cell>
                     <cell>
-                        Provide explicit scaffolded structural equations: <m>H = D + (x \times n)</m>. Guide learners through step-by-step extraction where they write down the values of deposit, installment size, and duration before starting computations.
+                        Help learners identify the deposit, installment amount, and number of payments. Use simple substitution into the formula <m>H = D + (x \times n)</m> and solve step by step.
                     </cell>
                 </row>
+
                 <row bottom="minor">
                     <cell><alert>Core (On-Level)</alert></cell>
                     <cell>
-                        Task learners with computing compound hire purchase equations, evaluating carrying charges, and solving dynamic multi-step word problems involving real-world asset items like household electronics and appliances.
+                        Learners calculate total hire purchase cost from given deposit and installment values. Use examples from household items such as phones, TVs, and furniture.
                     </cell>
                 </row>
+
                 <row>
-                    <cell><alert>Challenge (Advanced)</alert></cell>
+                    <cell><alert>Advanced (Challenge)</alert></cell>
                     <cell>
-                        Introduce alternative reverse calculation tasks. Challenge learners to derive initial deposit boundaries, individual installment sizes, or term durations when given total hire purchase cost thresholds or comparative market parameters.
+                        Give problems where one value is missing (deposit, installment, or time). Learners solve for the unknown and explain their steps.
                     </cell>
                 </row>
+
             </tabular>
         </table>
     </axiom>
