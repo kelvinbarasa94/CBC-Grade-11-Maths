@@ -41,6 +41,62 @@
         </introduction>
     </objectives>
 
+    <!-- [LP] Add guidance on activity -->
+     <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>15 minutes</p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>To allow learners to discover that the opposite interior angles of a cyclic quadrilateral sum to <m>180^\circ</m> and that an exterior angle equals the interior opposite angle.</p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>Organize learners into pairs or small groups. Provide template circles and straightedges. Monitor groups to ensure all four vertices of their quadrilaterals lie exactly on the circle's edge.</p>
+            </li>
+        </dl>
+    </axiom>
+
+    <activity>
+        <statement>
+            <paragraphs>
+                <title>Learner Experience Sequence</title>
+                <p>
+                    <ul>
+                        <li>
+                            <p><alert>1. Group Work Formulation:</alert> Join a small peer collaborative group of <m>3</m> to <m>4</m> members to map out, measure, and verify geometric trends collectively.</p>
+                        </li>
+                        <li>
+                            <p><alert>2. Materials Needed:</alert>
+                                <ul>
+                                    <li>Blank chart paper</li>
+                                    <li>Drawing compass</li>
+                                    <li>Clear straightedge ruler</li>
+                                    <li>Protractor</li>
+                                    <li>Colored fine-liner pens</li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li>
+                            <p><alert>3. Step-by-Step Activity Instruction:</alert>
+                                <ul>
+                                    <li>Use your compass to construct a large circle with center <m>O</m>.</li>
+                                    <li>Mark four random, distinct points anywhere along the outer edge of the circumference. Label these points in order as <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>.</li>
+                                    <li>Use your straightedge to draw segments <m>AB</m>, <m>BC</m>, <m>CD</m>, and <m>DA</m> to form an inscribed quadrilateral <m>ABCD</m>.</li>
+                                    <li>Measure the internal magnitudes of all four corner vertices: <m>\angle DAB</m>, <m>\angle ABC</m>, <m>\angle BCD</m>, and <m>\angle CDA</m>.</li>
+                                    <li>Calculate the sum of the pairs facing across from each other: <m>\angle DAB + \angle BCD</m> and <m>\angle ABC + \angle CDA</m>. What constant mathematical value do you compute?</li>
+                                    <li>Extend line segment <m>AB</m> past vertex <m>B</m> to an external point <m>E</m>. Measure the exterior angle <m>\angle CBE</m> and compare it directly to the interior opposite angle <m>\angle ADC</m>. Record your observations.</li>
+                                </ul>
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </paragraphs>
+        </statement>
+    </activity>
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
@@ -105,6 +161,45 @@
     </axiom> -->
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
+     <axiom component="lesson-plan">
+        <title>Structured Instruction</title>
+        <p>
+            <dl>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>10 minutes</p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>To formalize the core theorems governing cyclic quadrilaterals based on data gathered during the anchor activity.</p>
+                </li>
+            </dl>
+        </p>
+        <paragraphs>
+            <title>Key Takeaways &amp; Teacher Connection</title>
+            <ol>
+                <li>
+                    <p><alert>Connecting to Learner Work:</alert> Collect total sums calculated by different groups. Standardize the discovery: A quadrilateral is <alert>cyclic</alert> if and only if all four vertices touch a single circle circumference. The opposite interior angles are supplementary, meaning they add up to exactly <m>180^\circ</m>.</p>
+                </li>
+                <li>
+                    <p><alert>Exterior Angle Property:</alert> Because angles on a straight line add to <m>180^\circ</m>, extending a side creates a direct relationship: The exterior angle of a cyclic quadrilateral is always equal to its interior opposite angle.</p>
+                </li>
+            </ol>
+        </paragraphs>
+    </axiom>
+
+    <insight>
+        <title>Key Insight: The Cyclical Balance</title>
+        <p>When working with a <alert>cyclic quadrilateral</alert>, think of it as an algebraic seesaw balanced at <m>180^\circ</m>. If one interior angle increases, the angle directly across the circle must decrease by that exact same amount. Furthermore, look for lines extended outside the circle; the <alert>exterior angle</alert> acts as a perfect geometric clone of the <alert>interior opposite angle</alert>.</p>
+        <figure xml:id="fig-cyclic-quad-insight">
+            <caption>Opposite angles in cyclic quadrilateral ABCD sum to 180 degrees, and the exterior angle at vertex B equals the opposite interior angle at vertex D.</caption>
+            <image source="images/cyclic-quadrilateral-properties.png" width="80%">
+                <description>A circle containing a four-sided polygon ABCD where all vertices touch the circumference. Opposite angles A and C are highlighted in one color, while B and D are highlighted in another. Line AB is extended to point E, showing that exterior angle CBE matches interior angle ADC.</description>
+            </image>
+        </figure>
+    </insight>
+
+    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- <insight>
     </insight> -->
@@ -114,6 +209,96 @@
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
+     <example>
+        <statement>
+            <p>A school maps out four stations on a circular sports field boundary labeled <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>. Ropes connect them sequentially to create quadrilateral <m>ABCD</m>. If the interior angle at station <m>A</m> is <m>\angle BAD = 78^\circ</m> and the interior angle at station <m>B</m> is <m>\angle ABC = 92^\circ</m>, calculate the measures of the remaining interior angles <m>\angle BCD</m> and <m>\angle ADC</m>.</p>
+        </statement>
+        <solution>
+            <p>Identify the opposite stations on the circular track: Station <m>A</m> faces station <m>C</m>, and station <m>B</m> faces station <m>D</m>.</p>
+            <p>Apply the supplementary opposite angles property to find <m>\angle BCD</m>:
+                <me>\angle BAD + \angle BCD = 180^\circ</me>
+                <me>78^\circ + \angle BCD = 180^\circ</me>
+                <me>\angle BCD = 180^\circ - 78^\circ = 102^\circ</me>
+            </p>
+            <p>Apply the property to find <m>\angle ADC</m>:
+                <me>\angle ABC + \angle ADC = 180^\circ</me>
+                <me>92^\circ + \angle ADC = 180^\circ</me>
+                <me>\angle ADC = 180^\circ - 92^\circ = 88^\circ</me>
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>A mechanic models four mounting bolt holes on a circular car wheel rim at positions <m>W</m>, <m>X</m>, <m>Y</m>, and <m>Z</m> to form a cyclic quadrilateral <m>WXYZ</m>. The straight rim edge segment <m>WX</m> is extended past vertex <m>X</m> to create an exterior alignment angle measuring <m>\angle YXE = 105^\circ</m>. Calculate the value of interior opposite angle <m>\angle WZY</m>.</p>
+        </statement>
+        <solution>
+            <p>Apply the exterior angle property of a cyclic quadrilateral: The exterior angle formed by extending a side is equal to the interior opposite angle across the circle.</p>
+            <p>Identify the correct opposite relationship: For the exterior angle at vertex <m>X</m>, the interior opposite angle is located at vertex <m>Z</m> (<m>\angle WZY</m>).</p>
+            <p>State the conclusion directly:
+                <me>\angle WZY = \angle YXE = 105^\circ</me>
+                The interior structural angle at vertex <m>Z</m> is <m>105^\circ</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>A designer plans four placeholder settings on a round dining table surface labeled <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m> sequentially. The opposite interior angles are expressed as algebraic values where <m>\angle QPS = 3x + 20^\circ</m> and <m>\angle QRS = 2x + 10^\circ</m>. Determine the value of <m>x</m> and the true measure of <m>\angle QPS</m>.</p>
+        </statement>
+        <solution>
+            <p>Since the settings lie on the circle's edge, <m>PQRS</m> forms a cyclic quadrilateral, meaning opposite interior angles must sum to <m>180^\circ</m>:
+                <me>\angle QPS + \angle QRS = 180^\circ</me>
+            </p>
+            <p>Substitute the algebraic expressions:
+                <me>(3x + 20^\circ) + (2x + 10^\circ) = 180^\circ</me>
+                <me>5x + 30^\circ = 180^\circ</me>
+            </p>
+            <p>Isolate and solve for <m>x</m>:
+                <me>5x = 180^\circ - 30^\circ</me>
+                <me>5x = 150^\circ</me>
+                <me>x = 30^\circ</me>
+            </p>
+            <p>Calculate the measure of <m>\angle QPS</m>:
+                <me>\angle QPS = 3(30^\circ) + 20^\circ = 90^\circ + 20^\circ = 110^\circ</me>
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>A circular dome greenhouse frame connects four joints <m>K</m>, <m>L</m>, <m>M</m>, and <m>N</m>. An outer horizontal pathway extends straight past joint <m>N</m> along the line segment <m>MN</m> to an exterior support post <m>G</m>. If the interior opposite angle across the frame is <m>\angle KLM = 85^\circ</m>, determine the size of the exterior joint angle <m>\angle KNG</m>.</p>
+        </statement>
+        <solution>
+            <p>Recognize the geometric framework: The joints form an inscribed cyclic quadrilateral <m>KLMN</m>, and extending side <m>MN</m> creates the exterior angle <m>\angle KNG</m> at vertex <m>N</m>.</p>
+            <p>Apply the exterior angle theorem: The exterior angle is identical in measure to the interior opposite angle directly across the shape.
+                <me>\angle KNG = \angle KLM</me>
+                <me>\angle KNG = 85^\circ</me>
+                The exterior joint angle measures <m>85^\circ</m>.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>Four landmark statues are positioned on the perimeter of a circular town square plaza at positions <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>. Pedestrian pathways connect them to form quadrilateral <m>ABCD</m>. The blueprint notes that <m>\angle ABC</m> is exactly twice the size of its opposite interior angle <m>\angle ADC</m>. Calculate both angle measures.</p>
+        </statement>
+        <solution>
+            <p>Define the relationship using a variable: Let the smaller opposite angle <m>\angle ADC = y</m>. This means <m>\angle ABC = 2y</m>.</p>
+            <p>Since opposite angles in a cyclic quadrilateral are supplementary:
+                <me>\angle ABC + \angle ADC = 180^\circ</me>
+                <me>2y + y = 180^\circ</me>
+                <me>3y = 180^\circ</me>
+                <me>y = 60^\circ</me>
+            </p>
+            <p>State the measure of each plaza walkway angle:
+                <me>\angle ADC = 60^\circ</me>
+                <me>\angle ABC = 2(60^\circ) = 120^\circ</me>
+            </p>
+        </solution>
+    </example>
+
+    <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- <example>
         <statement>
@@ -145,6 +330,89 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
+     <exercises>
+        <exercise>
+            <statement>
+                <p>A circular irrigation field has four control boxes located at points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> on its perimeter fence. If the angle between the lines at box <m>B</m> is <m>\angle ABC = 104^\circ</m>, find the magnitude of the angle at the opposite control box, <m>\angle ADC</m>.</p>
+            </statement>
+            <solution>
+                <p>Because all four points lie on the circular boundary, <m>ABCD</m> is a cyclic quadrilateral. Opposite angles sum to <m>180^\circ</m>:
+                    <me>\angle ABC + \angle ADC = 180^\circ</me>
+                    <me>104^\circ + \angle ADC = 180^\circ</me>
+                    <me>\angle ADC = 180^\circ - 104^\circ = 76^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>A mechanic balances a circular motorcycle wheel rim containing four reference marks <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m>. Rim segment <m>PQ</m> is extended in a straight line past point <m>Q</m> to an external valve alignment point <m>E</m>. If the interior opposite angle across the rim is <m>\angle PSR = 98^\circ</m>, determine the measure of the exterior angle <m>\angle RQE</m>.</p>
+            </statement>
+            <solution>
+                <p>By the exterior angle theorem of a cyclic quadrilateral, the exterior angle formed by an extended edge matches the interior opposite angle:
+                    <me>\angle RQE = \angle PSR</me>
+                    <me>\angle RQE = 98^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Four corner posts of a circular playground zone are positioned at <m>W</m>, <m>X</m>, <m>Y</m>, and <m>Z</m>. The opposite interior boundary angles are given by the expressions <m>\angle WXY = 4x + 12^\circ</m> and <m>\angle WZY = 2x + 18^\circ</m>. Solve for <m>x</m>.</p>
+            </statement>
+            <solution>
+                <p>Set up the equation using the supplementary property of opposite angles:
+                    <me>(4x + 12^\circ) + (2x + 18^\circ) = 180^\circ</me>
+                    <me>6x + 30^\circ = 180^\circ</me>
+                </p>
+                <p>Isolate the variable <m>x</m>:
+                    <me>6x = 150^\circ</me>
+                    <me>x = 25^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>A circular wooden shield has four decorative metal studs along its perimeter labeled <m>K</m>, <m>L</m>, <m>M</m>, and <m>N</m>. An artisan extends the straight line pattern <m>NM</m> past stud <m>M</m> to the edge of the shield frame point <m>F</m>. If the interior angle at the opposite stud is <m>\angle KNL = 71^\circ</m>, evaluate the size of the exterior angle <m>\angle LMF</m>.</p>
+            </statement>
+            <solution>
+                <p>Since the studs form an inscribed cyclic quadrilateral, the exterior angle at vertex <m>M</m> equals the opposite interior angle at vertex <m>N</m>:
+                    <me>\angle LMF = \angle KNL = 71^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>A circular observation deck has four structural support columns positioned at <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>. The angle measured at column <m>A</m> is exactly four times the size of the angle measured at the opposite column <m>C</m>. Calculate the measures of both <m>\angle BAD</m> and <m>\angle BCD</m>.</p>
+            </statement>
+            <solution>
+                <p>Let the smaller interior angle <m>\angle BCD = w</m>. Therefore, opposite angle <m>\angle BAD = 4w</m>.</p>
+                <p>Sum the opposite angles to <m>180^\circ</m>:
+                    <me>4w + w = 180^\circ</me>
+                    <me>5w = 180^\circ \implies w = 36^\circ</me>
+                </p>
+                <p>State both structural angle values:
+                    <me>\angle BCD = 36^\circ</me>
+                    <me>\angle BAD = 4(36^\circ) = 144^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>A dome-shaped greenhouse framework connects four perimeter joints sequentially labeled <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m>. The base metal tube segment <m>SR</m> extends past joint <m>R</m> to an external structural peg <m>T</m>. If the exterior joint angle measures <m>\angle QRT = 93^\circ</m>, determine the value of the interior opposite frame angle <m>\angle QPS</m>.</p>
+            </statement>
+            <solution>
+                <p>Applying the exterior angle property of an inscribed cyclic quadrilateral:
+                    <me>\angle QPS = \angle QRT</me>
+                    <me>\angle QPS = 93^\circ</me>
+                    The interior structural frame angle measures <m>93^\circ</m>.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <!-- <exercises>
         <exercise>

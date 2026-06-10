@@ -41,6 +41,71 @@
         </introduction>
     </objectives>
 
+    <!-- [LP] Add guidance on activity -->
+   <axiom component="lesson-plan">
+    <title>Problem-Solving and Discovery</title>
+    <dl>
+        <li>
+            <title>Suggested Time</title>
+            <p>15 minutes</p>
+        </li>
+        <li>
+            <title>Objective</title>
+            <p>
+                To allow learners to intuitively discover that any angle subtended by a diameter at the circumference is a right angle of ninety degrees.
+            </p>
+        </li>
+        <li>
+            <title>Teacher's Role</title>
+            <p>
+                Facilitate the group formation, distribute the necessary physical toolkits, and clear up any initial confusion regarding terminology (such as distinguishing a chord from a diameter). Circulate around the room to prompt discoveries without giving away the final theorem.
+            </p>
+        </li>
+    </dl>
+</axiom>
+
+<activity>
+    <statement>
+        <paragraphs>
+            <title>Learner Experience Sequence</title>
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            <alert>Group Work Formulation:</alert> Work in small collaborative groups of three to four learners to promote peer discussion, shared measuring responsibilities, and collective data verification.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Materials Needed:</alert>
+                            <ul>
+                                <li>Blank sheet of paper</li>
+                                <li>Geometry compass</li>
+                                <li>Straightedge ruler</li>
+                                <li>Protractor</li>
+                                <li>Colored pens or highlighters</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Step-by-Step Activity Instruction:</alert>
+                            <ul>
+                                <li>Using your compass, draw a large, clear circle on your paper and mark its exact center point as O.</li>
+                                <li>Use your straightedge to draw a straight line passing directly through the center O from one side of the circle to the other. Label this diameter line segment as AB.</li>
+                                <li>Choose any random point C on the circumference of the circle, making sure it does not overlap with points A or B.</li>
+                                <li>Draw two straight lines to connect point A to point C, and point B to point C, creating an inscribed angle labeled angle ACB.</li>
+                                <li>Carefully measure the exact size of angle ACB using your protractor and record it.</li>
+                                <li>Repeat this process by selecting two more random points along the edge of the circle (such as point D and point E). Draw their respective lines back to the diameter endpoints and measure angle ADB and angle AEB. Compare your group results and identify the constant property observed across all trials.</li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </paragraphs>
+    </statement>
+</activity>
+
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
@@ -105,6 +170,52 @@
     </axiom> -->
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
+   <axiom component="lesson-plan">
+    <title>Structured Instruction</title>
+    <p>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>10 minutes</p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To formalize the concepts and properties learners discovered in the anchor task.
+                </p>
+            </li>
+        </dl>
+    </p>
+    <paragraphs>
+        <title>Key Takeaways &amp; Teacher Connection</title>
+        <ol>
+            <li>
+                <p>
+                    <alert>Connecting to Learner Work:</alert> Group the measurements found by the class during the activity. Highlight that regardless of where point <m>C</m> was placed, the angle consistently measured exactly <m>90^\circ</m>. Formalize this as Thales's Theorem: <em>The angle subtended by a diameter at the circumference of a circle is always a right angle.</em>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <alert>Mathematical Proof Connection:</alert> Connect this back to the core circle theorem: <em>The angle subtended by an arc at the center is twice the angle subtended at the circumference</em>. Since a straight-line diameter forms a <m>180^\circ</m> angle at the center <m>O</m>, the angle at the circumference must be:
+                    <me>\frac{180^\circ}{2} = 90^\circ</me>
+                </p>
+            </li>
+        </ol>
+    </paragraphs>
+</axiom>
+
+<insight>
+    <title>Key Insight: The Right-Triangle Hidden in the Circle</title>
+    <p>
+        Whenever you see a triangle inscribed inside a circle where one side is explicitly stated to be the <alert>diameter</alert>, you can automatically mark the opposite interior angle at the circumference as a <alert>right angle</alert> measuring <m>90^\circ</m>. This foundational concept acts as a gateway that bridges circle geometry directly with the <alert>Pythagorean theorem</alert> and <alert>trigonometric ratios</alert> such as <m>\sin</m>, <m>\cos</m>, and <m>\tan</m>.
+    </p>
+    <!-- <figure xml:id="fig-thales-theorem-insight">
+        <caption>Angles subtended by the diameter line AB at various points on the circumference (C, D, and E) consistently equal 90 degrees.</caption>
+        <image source="images/angles-subtended-diameter.png" width="80%">
+            <description>A circle with center O and horizontal diameter AB. Inscribed triangles ACB, ADB, and AEB are shown, with points C, D, and E on the circumference. Each inscribed angle is marked with a right-angle square symbol and labeled 90 degrees.</description>
+        </image>
+    </figure> -->
+</insight>
 
     <!-- <insight>
     </insight> -->
@@ -114,8 +225,151 @@
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <!-- Add at least 3 examples -->
+    <example>
+    <!-- <title>Example 1: Finding a Missing Angle</title> -->
+    <statement>
+        <p>
+            In a circle with center <m>O</m>, <m>PQ</m> is the diameter. A point <m>R</m> lies on the circumference such that <m>\angle RPQ = 34^\circ</m>. Determine the magnitude of <m>\angle PQR</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            1. Identify the angle subtended by the diameter: Since <m>PQ</m> is the diameter, <m>\angle PRQ = 90^\circ</m> (Angle subtended by diameter).
+        </p>
+        <p>
+            2. Use the sum of angles in <m>\triangle PQR</m>:
+            <me>\angle RPQ + \angle PRQ + \angle PQR = 180^\circ</me>
+            <me>34^\circ + 90^\circ + \angle PQR = 180^\circ</me>
+        </p>
+        <p>
+            3. Solve for <m>\angle PQR</m>:
+            <me>\angle PQR = 180^\circ - 124^\circ = 56^\circ</me>
+        </p>
+    </solution>
+</example>
 
+<example>
+    <!-- <title>Example 2: Combining with Algebraic Expressions</title> -->
+    <statement>
+        <p>
+            Line <m>AB</m> passes through the center <m>O</m> of a circle. Point <m>C</m> is on the circumference. If <m>\angle CAB = 2x</m> and <m>\angle CBA = 3x - 5^\circ</m>, find the value of <m>x</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            1. Since <m>AB</m> passes through the center <m>O</m>, it is a diameter. Therefore, <m>\angle ACB = 90^\circ</m>.
+        </p>
+        <p>
+            2. Set up the interior angles equation for <m>\triangle ABC</m>:
+            <me>2x + (3x - 5^\circ) + 90^\circ = 180^\circ</me>
+            <me>5x + 85^\circ = 180^\circ</me>
+        </p>
+        <p>
+            3. Isolate <m>x</m>:
+            <me>5x = 95^\circ</me>
+            <me>x = 19^\circ</me>
+        </p>
+    </solution>
+</example>
+
+<example>
+    <!-- <title>Example 3: Integrating the Pythagorean Theorem</title> -->
+    <statement>
+        <p>
+            <m>XY</m> is the diameter of a circle with center <m>O</m>. Point <m>Z</m> is on the circumference such that chord <m>XZ = 6\text{ cm}</m> and chord <m>YZ = 8\text{ cm}</m>. Calculate the radius of the circle.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            1. Because <m>XY</m> is the diameter, <m>\triangle XYZ</m> is a right-angled triangle with <m>\angle XZY = 90^\circ</m>.
+        </p>
+        <p>
+            2. Apply the Pythagorean theorem to find the hypotenuse <m>XY</m>:
+            <me>XY^2 = XZ^2 + YZ^2</me>
+            <me>XY^2 = 6^2 + 8^2 = 36 + 64 = 100</me>
+            <me>XY = \sqrt{100} = 10\text{ cm}</me>
+        </p>
+        <p>
+            3. The diameter is <m>10\text{ cm}</m>, so the radius (<m>r</m>) is:
+            <me>r = \frac{XY}{2} = \frac{10}{2} = 5\text{ cm}</me>
+        </p>
+    </solution>
+</example>
+<example>
+    <!-- <title>Example 4: The Circular Sports Field Shortcut</title> -->
+    <statement>
+        <p>
+            A school has a perfectly circular sports field. A straight running track represents the diameter <m>AB</m> of the field. A student stands at a flagpost located at point <m>C</m> on the boundary fence. The student measures the angle from their position to the two endpoints of the diameter track. If <m>\angle CAB = 42^\circ</m>, calculate the angle <m>\angle CBA</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            1. Identify the hidden geometric property: Because the running track <m>AB</m> is a diameter of the circular field, the angle subtended at the boundary point <m>C</m> must be a right angle. Therefore, <m>\angle ACB = 90^\circ</m>.
+        </p>
+        <p>
+            2. Apply the interior angle sum theorem for <m>\triangle ABC</m>:
+            <me>\angle CAB + \angle ACB + \angle CBA = 180^\circ</me>
+            <me>42^\circ + 90^\circ + \angle CBA = 180^\circ</me>
+        </p>
+        <p>
+            3. Solve for the remaining angle <m>\angle CBA</m>:
+            <me>\angle CBA = 180^\circ - 132^\circ = 48^\circ</me>
+        </p>
+    </solution>
+</example>
+
+<example>
+    <!-- <title>Example 5: Structural Alignment of a Car Wheel Rim</title> -->
+    <statement>
+        <p>
+            A mechanic uses a computer balancing alignment rig on a circular car wheel rim. The computer identifies a straight diameter line segment across the rim labeled <m>XY</m>. Two structural reinforcement spokes connect from points <m>X</m> and <m>Y</m> to a single outer valve point <m>Z</m> on the edge of the rim. If the lengths of these spokes are represented by algebraic expressions where <m>\angle XZY = 5a - 10^\circ</m> and <m>\angle ZXY = 2a</m>, determine the value of <m>a</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            1. Apply Thales's Theorem to the wheel setup: Since <m>XY</m> is the diameter of the circular rim, the angle subtended at the outer valve point <m>Z</m> on the circumference must equal <m>90^\circ</m>.
+            <me>\angle XZY = 90^\circ</me>
+        </p>
+        <p>
+            2. Equate the expression to find the scalar variable <m>a</m>:
+            <me>5a - 10^\circ = 90^\circ</me>
+            <me>5a = 100^\circ</me>
+            <me>a = 20^\circ</me>
+        </p>
+        <p>
+            3. Check consistency using the remaining angle <m>\angle ZXY</m>:
+            <me>\angle ZXY = 2(20^\circ) = 40^\circ</me>
+            The setup remains a valid right-angled triangle since the acute angles sum up to <m>90^\circ</m> (<m>40^\circ + 50^\circ = 90^\circ</m>).
+        </p>
+    </solution>
+</example>
+
+<example>
+    <statement>
+        <p>
+            A packaging engineer designs a novelty triangular pizza slice box that fits exactly inside a semi-circular transparent lid. The straight baseline of the box is the diameter <m>MN</m> of the circle and measures <m>13\text{ cm}</m>. The vertex corner of the pizza slice touches the curved lid edge at point <m>P</m>. If the shorter cardboard side wall <m>MP</m> is <m>5\text{ cm}</m> long, calculate the length of the remaining side wall <m>NP</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            1. Establish the right-angle framework: Because the baseline <m>MN</m> is the diameter of the circle, the triangle <m>\triangle MNP</m> formed within the semi-circle is right-angled at the circumference vertex. Thus, <m>\angle MPN = 90^\circ</m>.
+        </p>
+        <p>
+            2. Use the Pythagorean theorem to calculate side wall <m>NP</m>, where diameter <m>MN</m> acts as the hypotenuse:
+            <me>MN^2 = MP^2 + NP^2</me>
+            <me>13^2 = 5^2 + NP^2</me>
+            <me>169 = 25 + NP^2</me>
+        </p>
+        <p>
+            3. Isolate and solve for <m>NP</m>:
+            <me>NP^2 = 169 - 25 = 144</me>
+            <me>NP = \sqrt{144} = 12\text{ cm}</me>
+            The length of the remaining cardboard side wall is <m>12\text{ cm}</m>.
+        </p>
+    </solution>
+</example>
     <!-- <example>
+     
         <statement>
         </statement>
         <solution>
@@ -145,8 +399,185 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
+     <exercises>
+    <exercise>
+        <statement>
+            <p>
+                In a circle with center <m>O</m>, <m>AB</m> is a diameter and <m>C</m> is a point on the circumference. If <m>\triangle ABC</m> is an isosceles triangle where <m>AC = BC</m>, determine the measure of <m>\angle CAB</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                1. Since <m>AB</m> is a diameter, <m>\angle ACB = 90^\circ</m>.
+            </p>
+            <p>
+                2. In an isosceles triangle, angles opposite equal sides are equal. Since <m>AC = BC</m>, we know that <m>\angle CAB = \angle CBA</m>.
+            </p>
+            <p>
+                3. Let <m>\angle CAB = y</m>. Then:
+                <me>y + y + 90^\circ = 180^\circ</me>
+                <me>2y = 90^\circ \implies y = 45^\circ</me>
+                Therefore, <m>\angle CAB = 45^\circ</m>.
+            </p>
+        </solution>
+    </exercise>
 
+    <exercise>
+        <statement>
+            <p>
+                A circle has a diameter <m>MN</m> of length <m>26\text{ mm}</m>. A point <m>K</m> is on the circumference such that the chord <m>MK</m> has a length of <m>10\text{ mm}</m>. Find the length of chord <m>NK</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                1. <m>MN</m> is the diameter, meaning <m>\angle MKN = 90^\circ</m>. <m>\triangle MKN</m> is a right-angled triangle where <m>MN</m> is the hypotenuse.
+            </p>
+            <p>
+                2. Apply the Pythagorean theorem:
+                <me>MN^2 = MK^2 + NK^2</me>
+                <me>26^2 = 10^2 + NK^2</me>
+                <me>676 = 100 + NK^2</me>
+            </p>
+            <p>
+                3. Isolate <m>NK^2</m>:
+                <me>NK^2 = 576</me>
+                <me>NK = \sqrt{576} = 24\text{ mm}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+            <statement>
+                <p>
+                    An engineer is inspecting a circular water tank. A straight walkway bridge spanning across the middle forms its diameter, labeled <m>AB</m>. An emergency control valve is positioned at point <m>P</m> on the perimeter wall. If <m>\angle PAB = 28^\circ</m>, calculate the measure of <m>\angle PBA</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since the walkway bridge <m>AB</m> is the diameter of the circular tank, the angle subtended at the perimeter wall point <m>P</m> must be a right angle. Therefore, <m>\angle APB = 90^\circ</m>.
+                </p>
+                <p>
+                    Set up the interior angle sum equation for the triangle <m>\triangle ABP</m>:
+                    <me>\angle PAB + \angle APB + \angle PBA = 180^\circ</me>
+                    <me>28^\circ + 90^\circ + \angle PBA = 180^\circ</me>
+                </p>
+                <p>
+                    Solve for the remaining angle <m>\angle PBA</m>:
+                    <me>\angle PBA = 180^\circ - 118^\circ = 62^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A landscape architect designs a circular courtyard garden. A pathway runs straight through the center from gate <m>X</m> to gate <m>Y</m>, acting as the diameter. A fountain is placed at point <m>Z</m> on the outer wall. If <m>\angle XZY = 4x + 10^\circ</m>, find the value of <m>x</m>.
+            </p>
+            </statement>
+            <solution>
+                <p>
+                    Because pathway <m>XY</m> is the diameter of the circular courtyard, the angle subtended at the outer wall fountain <m>Z</m> must equal exactly <m>90^\circ</m>.
+                    <me>\angle XZY = 90^\circ</me>
+                </p>
+                <p>
+                    Set up the algebraic equation using the given angle expression:
+                    <me>4x + 10^\circ = 90^\circ</me>
+                    <me>4x = 80^\circ</me>
+                    <me>x = 20^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A round dining table has a straight seam splitting it in half along its diameter <m>MN</m>, which measures <m>20\text{ dm}</m>. A designer paints a right-angled triangle pattern whose third vertex sits at point <m>K</m> on the table edge. If chord side <m>MK</m> must measure exactly <m>12\text{ dm}</m>, calculate the required length of side <m>NK</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since <m>MN</m> is the table's diameter, the inscribed angle at the table edge is a right angle (<m>\angle MKN = 90^\circ</m>). This means <m>\triangle MKN</m> is a right-angled triangle with the diameter <m>MN</m> serving as the hypotenuse.
+                </p>
+                <p>
+                    Apply the Pythagorean theorem to find the missing side length <m>NK</m>:
+                    <me>MN^2 = MK^2 + NK^2</me>
+                    <me>20^2 = 12^2 + NK^2</me>
+                    <me>400 = 144 + NK^2</me>
+                </p>
+                <p>
+                    Isolate and solve for <m>NK</m>:
+                    <me>NK^2 = 400 - 144 = 256</me>
+                    <me>NK = \sqrt{256} = 16\text{ dm}</me>
+                </p>
+            </solution>
+        </exercise>
+</exercises>
+<!-- <exercise>
+            <statement>
+                <p>
+                    An engineer is inspecting a circular water tank. A straight walkway bridge spanning across the middle forms its diameter, labeled <m>AB</m>. An emergency control valve is positioned at point <m>P</m> on the perimeter wall. If <m>\angle PAB = 28^\circ</m>, calculate the measure of <m>\angle PBA</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since the walkway bridge <m>AB</m> is the diameter of the circular tank, the angle subtended at the perimeter wall point <m>P</m> must be a right angle. Therefore, <m>\angle APB = 90^\circ</m>.
+                </p>
+                <p>
+                    Set up the interior angle sum equation for the triangle <m>\triangle ABP</m>:
+                    <me>\angle PAB + \angle APB + \angle PBA = 180^\circ</me>
+                    <me>28^\circ + 90^\circ + \angle PBA = 180^\circ</me>
+                </p>
+                <p>
+                    Solve for the remaining angle <m>\angle PBA</m>:
+                    <me>\angle PBA = 180^\circ - 118^\circ = 62^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A landscape architect designs a circular courtyard garden. A pathway runs straight through the center from gate <m>X</m> to gate <m>Y</m>, acting as the diameter. A fountain is placed at point <m>Z</m> on the outer wall. If <m>\angle XZY = 4x + 10^\circ</m>, find the value of <m>x</m>.
+            </p>
+            </statement>
+            <solution>
+                <p>
+                    Because pathway <m>XY</m> is the diameter of the circular courtyard, the angle subtended at the outer wall fountain <m>Z</m> must equal exactly <m>90^\circ</m>.
+                    <me>\angle XZY = 90^\circ</me>
+                </p>
+                <p>
+                    Set up the algebraic equation using the given angle expression:
+                    <me>4x + 10^\circ = 90^\circ</me>
+                    <me>4x = 80^\circ</me>
+                    <me>x = 20^\circ</me>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    A round dining table has a straight seam splitting it in half along its diameter <m>MN</m>, which measures <m>20\text{ dm}</m>. A designer paints a right-angled triangle pattern whose third vertex sits at point <m>K</m> on the table edge. If chord side <m>MK</m> must measure exactly <m>12\text{ dm}</m>, calculate the required length of side <m>NK</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since <m>MN</m> is the table's diameter, the inscribed angle at the table edge is a right angle (<m>\angle MKN = 90^\circ</m>). This means <m>\triangle MKN</m> is a right-angled triangle with the diameter <m>MN</m> serving as the hypotenuse.
+                </p>
+                <p>
+                    Apply the Pythagorean theorem to find the missing side length <m>NK</m>:
+                    <me>MN^2 = MK^2 + NK^2</me>
+                    <me>20^2 = 12^2 + NK^2</me>
+                    <me>400 = 144 + NK^2</me>
+                </p>
+                <p>
+                    Isolate and solve for <m>NK</m>:
+                    <me>NK^2 = 400 - 144 = 256</me>
+                    <me>NK = \sqrt{256} = 16\text{ dm}</me>
+                </p>
+            </solution>
+        </exercise> -->
     <!-- <exercises>
+     
         <exercise>
             <statement>   
 
