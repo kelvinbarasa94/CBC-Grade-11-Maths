@@ -207,7 +207,7 @@
         </p>
         
         <p>
-            <strong>1. The Slingshot Rule (Angle at the Centre)</strong>
+            <strong>1. Angle at the Centre</strong>
         </p>
         <p>
             Imagine holding a giant circular slingshot anchored at two fixed perimeter pegs, <m>A</m> and <m>B</m> (your arc). 
@@ -231,7 +231,7 @@
         <me>\angle AOB = 2 \times \angle APB</me>
 
         <p>
-            <strong>2. The Theater Stage Rule (Angles in the Same Segment)</strong>
+            <strong>2.Angles in the Same Segment</strong>
         </p>
         <p>
             Imagine points <m>A</m> and <m>B</m> represent the left and right sides of a stage in a circular amphitheater. Points <m>P</m>, <m>Q</m>, and <m>R</m> are seats at different locations in the balcony.
@@ -242,7 +242,7 @@
         <me>\angle APB = \angle AQB = \angle ARB</me>
 
         <p>
-            <strong>3. The Right-Angle Split (Angle in a Semicircle)</strong>
+            <strong>3. Angle in a Semicircle</strong>
         </p>
         <p>
             This is a special case of the Slingshot Rule. If you place your anchors directly opposite each other, the line connecting them is the diameter (<m>RT</m>). 
@@ -252,31 +252,7 @@
         </p>
         <me>\angle RST = \frac{180^\circ}{2} = 90^\circ</me>
     </insight>
-    <insight>
-        <p>
-            <strong>Mastering Circle Geometry</strong>
-        </p>
-        <p>
-            . To build spatial reasoning and solve complex geometric problems, a  learner needs to master three key skills:
-        </p>
-        <ul>
-            <li>
-                <p>
-                    <strong>Identifying Subtending Arcs:</strong> Always trace back from the vertices of the angles to the circle's boundary. Identifying which specific arc (or chord) is "holding up" the angles is the secret to choosing the correct theorem.
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>Spotting the Radii:</strong> Many circle geometry problems involve hidden isosceles triangles. Remember that any line drawn from the center <m>O</m> to the boundary is a radius (<m>r</m>). Since all radii are equal, triangles formed by two radii and a chord always have two equal base angles.
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>Recognizing Segments:</strong> A chord splits a circle into a major segment (the larger area) and a minor segment (the smaller area). Remember that the <em>Angles in the Same Segment</em> theorem only applies when the vertices of the circumference angles lie within the exact same segment.
-                </p>
-            </li>
-        </ul>
-    </insight>
+    
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
