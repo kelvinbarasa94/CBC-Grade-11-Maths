@@ -806,6 +806,8 @@
             </answer>
         </exercise>
 
+        <!-- TODO: tighten up this proof -->
+
         <exercise xml:id="exercise-secant-tangent-reasoning">
             <title>Reasoning with Similar Triangles</title>
             <statement>

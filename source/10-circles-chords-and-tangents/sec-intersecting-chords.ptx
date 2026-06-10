@@ -160,7 +160,7 @@
                 </li>
                 <li>
                     <p>
-                        Ensure Learners recall that angles subtended by the same arc are equal (covered earlier in this chapter) — the proof depends on this result.
+                        Ensure Learners recall that angles subtended by the same arc are equal — the proof depends on this result.
                     </p>
                 </li>
                 <li>
@@ -227,58 +227,59 @@
             <p>
                 Consider the two triangles <m>\triangle APD</m> and <m>\triangle CPB</m>, shown below.
             </p>
-            <figure xml:id="fig-intersecting-chords-proof">
-                <caption>
-                    Triangle <m>\triangle APD</m> (red) and triangle <m>\triangle CPB</m> (blue).
-                    Matching angle labels show the two pairs of equal angles.
-                </caption>
-                <image width="55%">
-                    <shortdescription>
-                        A circle with chords AB and CD intersecting at P.
-                        Triangle APD is shaded red and triangle CPB is shaded blue.
-                        Angle alpha is marked at vertices A and C; angle beta at vertices D and B.
-                    </shortdescription>
+            <figure xml:id="intersecting-chords-thm-proof-2">
+                <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                <image width="70%">
+                    <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
 
-                          %% --- SET ---
-                          \tkzDefPoint(0,0){O}
-                          \tkzDefPoint(3,0){cR}
-                          \tkzDefPointBy[rotation=center O angle 196](cR) \tkzGetPoint{A}
-                          \tkzDefPointBy[rotation=center O angle 28](cR)  \tkzGetPoint{B}
-                          \tkzDefPointBy[rotation=center O angle 107](cR) \tkzGetPoint{C}
-                          \tkzDefPointBy[rotation=center O angle 314](cR) \tkzGetPoint{D}
+                            %% --- SET ---
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(3,0){cR}
+                            \tkzDefPointBy[rotation=center O angle 175](cR) \tkzGetPoint{A}
+                            \tkzDefPointBy[rotation=center O angle 18](cR)  \tkzGetPoint{B}
+                            \tkzDefPointBy[rotation=center O angle 248](cR) \tkzGetPoint{C}
+                            \tkzDefPointBy[rotation=center O angle 72](cR)  \tkzGetPoint{D}
 
-                          %% --- CALCULATE ---
-                          \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
+                            %% --- CALCULATE ---
+                            \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
 
-                          %% --- DRAW ---
-                          \tkzDrawCircle[thick](O,cR)
-                          \tkzFillPolygon[red!20](A,P,D)
-                          \tkzFillPolygon[blue!20](C,P,B)
-                          \tkzDrawSegments[thick](A,B C,D)
-                          \tkzDrawPoints(A,B,C,D,P)
+                            
 
-                          %% --- MARK ---
-                          \tkzFillAngle[fill=red!20, opacity=0.6, size=0.45](D,A,P)
-                          \tkzMarkAngle[size=0.45](D,A,P)
-                          \tkzFillAngle[fill=blue!20, opacity=0.6, size=0.45](P,C,B)
-                          \tkzMarkAngle[size=0.45](P,C,B)
-                          \tkzFillAngle[fill=red!20, opacity=0.6, size=0.45](P,D,A)
-                          \tkzMarkAngle[size=0.45](P,D,A)
-                          \tkzFillAngle[fill=blue!20, opacity=0.6, size=0.45](C,B,P)
-                          \tkzMarkAngle[size=0.45](C,B,P)
+                            %% --- MARK ---
+                            \tkzMarkAngle[size=0.6](P,A,D)
+                            \tkzMarkAngle[size=0.6](B,C,P)
+                            \tkzMarkAngle[size=0.6](A,D,P)
+                            \tkzMarkAngle[size=0.6](P,B,C)
 
-                          %% --- LABEL ---
-                          \tkzLabelPoints[left](A)
-                          \tkzLabelPoints[right](B)
-                          \tkzLabelPoints[above](C)
-                          \tkzLabelPoints[below right](D)
-                          \tkzLabelPoints[above right](P)
-                          \tkzLabelAngle[pos=0.75, color=red!70!black](D,A,P){$\alpha$}
-                          \tkzLabelAngle[pos=0.75, color=blue!70!black](P,C,B){$\alpha$}
-                          \tkzLabelAngle[pos=0.75, color=red!70!black](P,D,A){$\beta$}
-                          \tkzLabelAngle[pos=0.75, color=blue!70!black](C,B,P){$\beta$}
+                            \tkzLabelAngle[pos=0.85](P,A,D){$\alpha$}
+                            \tkzLabelAngle[pos=0.85](B,C,P){$\alpha$}
+                            \tkzLabelAngle[pos=0.85](A,D,P){$\beta$}
+                            \tkzLabelAngle[pos=0.85](P,B,C){$\beta$}
+
+                            \tkzFillAngle[fill=red!20, opacity=0.6, size=0.6](P,A,D)
+                            \tkzFillAngle[fill=red!20, opacity=0.6, size=0.6](B,C,P)
+                            \tkzFillAngle[fill=blue!20, opacity=0.6, size=0.6](A,D,P)
+                            \tkzFillAngle[fill=blue!20, opacity=0.6, size=0.6](P,B,C)
+
+                            %% --- DRAW ---
+                            \tkzDrawCircle[thick](O,cR)
+                            \tkzDrawSegment[thick](A,B)
+                            \tkzDrawSegment[thick](C,D)
+                            \tkzDrawSegments[thick](A,D C,B)
+                            \tkzDrawPoints(A,B,C,D,P)
+
+                            %% --- LABEL ---
+                            \tkzLabelPoints[left](A)
+                            \tkzLabelPoints[right](B)
+                            \tkzLabelPoints[below left](C)
+                            \tkzLabelPoints[above](D)
+                            \tkzLabelPoints[above right](P)
+                            \tkzLabelSegment[below, sloped, font=\small](A,P){$AP$}
+                            \tkzLabelSegment[above, sloped, font=\small](P,B){$PB$}
+                            \tkzLabelSegment[above, sloped, font=\small](C,P){$CP$}
+                            \tkzLabelSegment[below, sloped, font=\small](P,D){$PD$}
 
                         \end{tikzpicture}
                     </latex-image>

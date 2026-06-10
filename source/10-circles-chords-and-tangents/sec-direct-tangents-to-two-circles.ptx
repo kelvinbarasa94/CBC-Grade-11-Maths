@@ -177,6 +177,335 @@
         </paragraphs>
     </axiom>
 
+    <paragraphs>
+        <title>Constructing a Direct Common Tangent</title>
+        
+         <ol marker="1.">
+            <li>
+                <p>
+                    Draw the two circles with centres <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>), and draw a line through the centres (that continues beyond them).
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-1">
+                <caption>
+                    Two circles with centres A and B, and line AB extended.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawPoints(A,B)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzLabelPoints(A,B)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Draw an <term>auxiliary circle</term> centred at <m>B</m> with radius <m>R - r</m>.
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-3">
+                <caption>
+                    The auxiliary circle (red) with radius <m>R-r</m>.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDefShiftPoint[c](-2*\rt, 0){c1}
+                            \tkzDrawCircles[red](B,c1)
+                            \tkzDrawSegment[red](B,c1)
+                            \tkzLabelSegment[above, sloped](B,c1){$R - r$}
+                            \tkzDrawPoints(A,B)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzLabelPoints(A,B)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Find the midpoint <m>I</m> of segment <m>AB</m>.
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-4">
+                <caption>
+                    Point Q is the intersection of the connecting circle and the auxiliary circle.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzInterCC(A,B)(B,A) \tkzGetPoints{i}{j}
+                            \tkzCompass(A,i)\tkzCompass(A,j)
+                            \tkzCompass(B,i)\tkzCompass(B,j)
+                            \tkzDrawLine[very thin, add=0.1 and 0.1](i,j)
+                            \tkzDrawPoints(A,B,I)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzLabelPoints(A,B,I)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Draw the <term>connecting circle</term> centred at <m>I</m> with radius <m>IA</m>. Use a dashed line.
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-5">
+                <caption>
+                    The auxiliary circle (red) and the connecting circle (dashed orange).
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,I)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzLabelPoints(A,B,I)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Label <m>Q</m> as one of the intersection points of the connecting circle and the auxiliary circle.
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-6">
+                <caption>
+                    Point Q is the intersection of the connecting circle and the auxiliary circle.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,Q, I)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzLabelPoints(A,B,Q,I)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Draw the ray from <m>B</m> through <m>Q</m> and extend it to meet circle <m>B</m> at the point <m>T'_1</m>.
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-7">
+                <caption>
+                    Ray from B through Q meets circle B at <m>T'_1</m>
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,T',Q, I)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzDrawLines(B,T')
+                            \tkzLabelPoints(A,B,Q,I)
+                            \tkzLabelPoint[left, xshift=-5pt](T'){$T'_1$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    At <m>T'_1</m>, construct the tangent to circle <m>B</m>. Continue this line until it intersects with the extended line <m>AB</m>, and label this point <m>O</m>. Mark the point <m>T_1</m> where the tangent meets <m>AB</m>. The line <m>T_1T'_1</m> is one direct common tangent.
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-8">
+                <caption>
+                    First direct tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(O,A,B,T',T,Q, I)
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzDrawLines(T',O B,T' A,T)
+                            \tkzLabelPoints(O,A,B,Q,I)
+                            \tkzLabelPoint[left](T){$T_1$}
+                            \tkzLabelPoint[left, xshift=-5pt](T'){$T'_1$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6 and 7 using <m>Q'</m> in place of <m>Q</m> to obtain the second direct common tangent, <m>T_2T'_2</m>
+                </p>
+                <figure xml:id="fig-direct-tangents-construction-9">
+                <caption>
+                    Second direct tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{3}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzInterLC[R](B,Q')(B,\R) \tkzGetPoints{X2'}{T2'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzInterLC[R](O,T2')(A,\r) \tkzGetPoints{T2}{T2}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(O,A,B,T',T,T2,Q,Q',I,T2')
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzDrawLines(B,T' A,T B,T2' A,T2)
+                            \tkzDrawLines(T',O T2',O)
+                            \tkzLabelPoints(O,B,Q,I)
+                            \tkzLabelPoints[right](A)
+                            \tkzLabelPoints[below right](Q')
+                            \tkzLabelPoint[left](T){$T_1$}
+                            \tkzLabelPoint[left, xshift=-5pt](T'){$T'_1$}
+                            \tkzLabelPoint[below](T2){$T_2$}
+                            \tkzLabelPoint[below right](T2'){$T'_2$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+        </ol>
+    </paragraphs>
+
     <insight>
         <p>
             <ul>
@@ -192,199 +521,12 @@
                 </li>
                 <li>
                     <p>
-                        Both direct common tangents pass through a single point <m>O</m> on the line through the centres, beyond the smaller circle. This point is called the <term>external centre of similitude</term>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <alert>Construction of a direct common tangent</alert> (circles with centres <m>A</m>, radius <m>r</m>, and <m>B</m>, radius <m>R</m>, with <m>R \gt r</m>):
-                        <ol>
-                            <li>
-                                <p>
-                                    Draw the two circles with centres <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>).
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw an <em>auxiliary circle</em> centred at <m>B</m> with radius <m>R - r</m> (use a dashed line to distinguish it from the main circles).
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Find the midpoint <m>I</m> of segment <m>AB</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw a circle centred at <m>I</m> with radius <m>IA</m> (this is a semicircle on <m>AB</m> as diameter). Use a dashed line.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Label <m>Q</m> as one of the intersection points of the semicircle and the auxiliary circle.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw the ray from <m>B</m> through <m>Q</m> and extend it to meet circle <m>B</m> at the point <m>T'</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    At <m>T'</m>, construct the tangent to circle <m>B</m> (draw a line through <m>T'</m> perpendicular to the radius <m>BT'</m>). Extend this tangent until it meets line <m>AB</m> extended at the point <m>O</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw a straight line from <m>O</m> through <m>T'</m> and extend it until it meets circle <m>A</m> at the point <m>T</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    The line <m>TT'</m> is one direct common tangent.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6–9 using <m>Q'</m> in place of <m>Q</m> to obtain the second direct common tangent.
-                                </p>
-                            </li>
-                        </ol>
+                        Both direct common tangents pass through a single point <m>O</m> on the line through the centres.
                     </p>
                 </li>
             </ul>
         </p>
     </insight>
-
-    <p>
-        The diagram below shows the construction for two circles with centre <m>A</m> (radius <m>r</m>) and centre <m>B</m> (radius <m>R</m>). The dashed orange circle (radius <m>R - r</m>) and the dashed blue semicircle are construction aids; the two solid lines through <m>O</m> are the direct common tangents.
-    </p>
-
-    <!-- TODO: TikZ construction figure — tkz-euclide, A at origin, B to the right,
-         show auxiliary circle at B (dashed orange, radius R-r), semicircle at I (dashed blue),
-         intersection points Q and Q', rays BQ and BQ' to T1' and T2', tangent lines T1T1' and T2T2',
-         external centre of similitude O on line AB extended left beyond A.
-         Labels: O, A, B, I, Q, Q', T1, T1', T2, T2'. -->
-
-    <figure xml:id="fig-direct-tangents-construction">
-        <caption>
-            Construction of the two direct common tangents to circles at <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>).
-            The dashed circles are construction aids only.
-        </caption>
-        <image width="75%">
-            <shortdescription>
-                Two circles centred at A and B. A dashed auxiliary circle at B has radius R minus r.
-                A dashed semicircle has diameter AB. Intersection points Q and Q' are marked.
-                Rays from B through Q and Q' meet circle B at T1-prime and T2-prime.
-                Two tangent lines pass through the external centre of similitude O on line AB extended.
-            </shortdescription>
-            <latex-image>
-                \begin{tikzpicture}[scale=1.1]
-                \pgfmathsetmacro{\rA}{1}
-                \pgfmathsetmacro{\rB}{2.5}
-                \pgfmathsetmacro{\rdiff}{\rB-\rA}
-                % A=(0,0), B=(4.5,0); represents r=2cm, R=5cm, d=9cm scaled by 1/2.
-                \tkzDefPoints{0/0/A, 4.5/0/B}
-                \tkzDefMidPoint(A,B) \tkzGetPoint{I}
-                % Reference point on auxiliary circle (center B, radius R-r=1.5).
-                % Intersect line AB with auxiliary circle; F is the right-side point.
-                \tkzInterLC[R](A,B)(B,\rdiff) \tkzGetPoints{Eleft}{F}
-                % Intersect Thales circle (center I, through B) with auxiliary circle (center B, through F)
-                % gives the two intersection points Q (upper) and Qp (lower).
-                \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Qp}
-                % Extend ray B->Q to circle B; second returned point T1p is in direction of Q from B.
-                \tkzInterLC[R](B,Q)(B,\rB) \tkzGetPoints{Xtmp}{T1p}
-                % Tangent at T1p meets line AB at the external centre of similitude O.
-                \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{tang1}
-                \tkzInterLL(T1p,tang1)(A,B) \tkzGetPoint{O}
-                % Line O->T1p meets circle A at T1 (tangency, so double root; first point = T1).
-                \tkzInterLC[R](O,T1p)(A,\rA) \tkzGetPoints{T1}{T1x}
-                % Lower tangent: extend ray B->Qp to circle B; second point T2p in direction of Qp.
-                \tkzInterLC[R](B,Qp)(B,\rB) \tkzGetPoints{Xtmp2}{T2p}
-                \tkzInterLC[R](O,T2p)(A,\rA) \tkzGetPoints{T2}{T2x}
-                % Circle reference points (distinct names to avoid colliding with intersection points above).
-                \tkzDefCircle[R](A,\rA) \tkzGetPoint{cA}
-                \tkzDefCircle[R](B,\rB) \tkzGetPoint{cB}
-                \tkzDefCircle[R](B,\rdiff) \tkzGetPoint{cAux}
-                % Draw the two main circles (solid) and the construction aids (dashed).
-                \tkzDrawCircle[thick](A,cA)
-                \tkzDrawCircle[thick](B,cB)
-                \tkzDrawCircle[orange,dashed](B,cAux)
-                \tkzDrawCircle[teal,dashed](I,B)
-                % Construction rays from B to Q and Qp.
-                \tkzDrawSegments[gray,dashed](B,Q B,Qp)
-                % The two direct common tangent lines.
-                \tkzDrawLine[add=0.15 and 0.15](T1,T1p)
-                \tkzDrawLine[add=0.15 and 0.15](T2,T2p)
-                % Centre line extended to show O.
-                \tkzDrawLine[add=0.8 and 0.1](O,B)
-                % Points and labels.
-                \tkzDrawPoints(O,A,B,I,Q,Qp,T1,T1p,T2,T2p)
-                \tkzLabelPoint[below left](O){$O$}
-                \tkzLabelPoint[below](A){$A$}
-                \tkzLabelPoint[below right](B){$B$}
-                \tkzLabelPoint[below](I){$I$}
-                \tkzLabelPoint[above](Q){$Q$}
-                \tkzLabelPoint[below](Qp){$Q'$}
-                \tkzLabelPoint[above left](T1){$T_1$}
-                \tkzLabelPoint[above right](T1p){$T_1'$}
-                \tkzLabelPoint[below left](T2){$T_2$}
-                \tkzLabelPoint[below right](T2p){$T_2'$}
-                \end{tikzpicture}
-            </latex-image>
-        </image>
-    </figure>
-
-    <p>
-        Once the construction lines are removed, the result is two circles with two direct common tangents meeting at <m>O</m>.
-    </p>
-
-    <figure xml:id="fig-direct-tangents-result">
-        <caption>
-            The two direct common tangents <m>T_1 T_1'</m> and <m>T_2 T_2'</m> to circles at <m>A</m>
-            (radius 2 cm) and <m>B</m> (radius 5 cm), both passing through the external centre of
-            similitude <m>O</m>.
-        </caption>
-        <image width="70%">
-            <shortdescription>
-                Two circles centred at A and B. Two straight lines each touch both circles and
-                meet at the external centre of similitude O on line AB extended beyond A.
-                The four tangent points T1, T1-prime, T2, T2-prime are marked.
-            </shortdescription>
-            <latex-image>
-                \begin{tikzpicture}[scale=1.1]
-                \pgfmathsetmacro{\rA}{1}
-                \pgfmathsetmacro{\rB}{2.5}
-                % A=(0,0), B=(4.5,0), O=(-3,0); represents r=2cm, R=5cm, d=9cm scaled by 1/2.
-                \tkzDefPoints{0/0/A, 4.5/0/B, -3/0/O}
-                \tkzDefCircle[R](A,\rA) \tkzGetPoint{cA}
-                \tkzDefCircle[R](B,\rB) \tkzGetPoint{cB}
-                % Tangent points from O to each circle via the circle-on-diameter method.
-                % For circle A: T1 and T2 lie on both circle A and the circle with diameter OA.
-                \tkzDefMidPoint(O,A) \tkzGetPoint{MA}
-                \tkzInterCC(MA,A)(A,cA) \tkzGetPoints{T1}{T2}
-                % For circle B: T1p and T2p via circle with diameter OB.
-                \tkzDefMidPoint(O,B) \tkzGetPoint{MB}
-                \tkzInterCC(MB,B)(B,cB) \tkzGetPoints{T1p}{T2p}
-                % Draw circles and tangent lines.
-                \tkzDrawCircle[thick](A,cA)
-                \tkzDrawCircle[thick](B,cB)
-                \tkzDrawLine[add=0.25 and 0.15](T1,T1p)
-                \tkzDrawLine[add=0.25 and 0.15](T2,T2p)
-                \tkzDrawLine[add=0.8 and 0.1](O,B)
-                % Points and labels.
-                \tkzDrawPoints(O,A,B,T1,T1p,T2,T2p)
-                \tkzLabelPoint[below left](O){$O$}
-                \tkzLabelPoint[below](A){$A$}
-                \tkzLabelPoint[below right](B){$B$}
-                \tkzLabelPoint[above left](T1){$T_1$}
-                \tkzLabelPoint[above right](T1p){$T_1'$}
-                \tkzLabelPoint[below left](T2){$T_2$}
-                \tkzLabelPoint[below right](T2p){$T_2'$}
-                \end{tikzpicture}
-            </latex-image>
-        </image>
-    </figure>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
@@ -435,7 +577,6 @@
                     </li>
                 </ol>
             </p>
-            <p>The completed diagram is shown in <xref ref="fig-direct-tangents-result"/>.</p>
         </solution>
     </example>
 
@@ -861,6 +1002,14 @@
                 </ol>
             </answer>
         </exercise>
+
+        <!-- TODO: Case with equal sized circles   -->
+
+        <!-- TODO: Exercise where the cricles overlap (but one is not completely insight the other)-->
+
+        <!-- TODO: -->
+
+        <!-- TODO: Add different method using radical axis, tkz-euclide p. 233-->
 
         <exercise>
             <statement>

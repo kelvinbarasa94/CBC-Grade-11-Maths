@@ -19,7 +19,7 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
                             <ul>
                               <li>Construct an inscribed, circumscribed and escribed circles on a triangle</li>
@@ -44,161 +44,454 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    12 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To guide learners to discover the incenter by asking: <em>what is the largest circle that fits inside a triangle?</em> Learners experiment with circle placement, then reason their way to the angle bisector construction.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Resist giving the answer to part (a). Let learners place the centre intuitively first — most will not choose the same point, which makes part (b) productive. When circulating, prompt with: <q>If your circle is touching one side but not another, can you shift the centre to make it bigger?</q> The key insight in part (c) is that if the centre is closer to one side than another, there is room to shift it away from the nearest side, increasing the radius. This motivates equidistance — and from there, angle bisectors.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <paragraphs>
+                <title>The Largest Circle Inside a Triangle</title>
+                <p>
+                    In this activity you will investigate where to place a circle so that it fits inside a triangle as large as possible.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Draw a triangle <m>ABC</m> of your choice using a ruler (no need for a specific size). Using a compass, try to draw the largest circle you can that fits <em>completely inside</em> the triangle — the circle must not cross any side. Mark the centre you used and record the radius.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Compare your circle with a classmate's. Did you choose the same centre? Who has the larger radius? Try adjusting your centre to see if you can do better.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Think about why the best centre must be <em>equidistant from all three sides</em>. If the circle is closer to one side than the others, explain why you could shift the centre slightly to increase the radius.
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    If the distance to one side is less than the distance to another, the circle's radius is limited by the nearest side. Shifting the centre away from the nearest side (while staying away from the other two) increases the minimum distance, allowing a larger circle. The optimal centre is where all three distances are equal.
+                                </p>
+                            </solution>
+                        </li>
+                        <li>
+                            <p>
+                                Now use a systematic construction. Bisect angle <m>A</m> — recall that every point on an angle bisector is equidistant from the two sides of that angle. Bisect angle <m>B</m>. Label the intersection of the two bisectors <m>I</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Drop a perpendicular from <m>I</m> to each side of the triangle. Measure all three perpendicular distances <m>d_1</m>, <m>d_2</m>, <m>d_3</m> in millimetres and record them in the table below.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Draw a circle with centre <m>I</m> and radius equal to the common perpendicular distance. Does it touch all three sides? Is it larger than the circle you drew in part (a)?
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    The three distances should agree to within measurement error. The circle will be tangent to all three sides, and will be the largest possible circle fitting inside the triangle.
+                                </p>
+                            </solution>
+                        </li>
+                    </ol>
+                </p>
+                <table>
+                    <title>Perpendicular distances from incenter to each side</title>
+                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+                        <row header="yes" bottom="medium">
+                            <cell>Triangle</cell>
+                            <cell><m>d_1</m> (mm)</cell>
+                            <cell><m>d_2</m> (mm)</cell>
+                            <cell><m>d_3</m> (mm)</cell>
+                        </row>
+                        <row>
+                            <cell>1</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>2</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>3</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                    </tabular>
+                </table>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalise the incenter construction and introduce the inradius formula <m>r = \text{Area}/s</m>.
                 </p>
             </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Ask a few learners to share their three distances. Confirm they are (approximately) equal. Tell learners: <q>This point <m>I</m> is called the <term>incenter</term>. The circle we drew is the <term>inscribed circle</term>, or <term>incircle</term>, and its radius is called the <term>inradius</term>.</q>
                     </p>
                 </li>
-            </ol>
+                <li>
+                    <p>
+                        Emphasise that the incenter is always inside the triangle (unlike the circumcenter, which can be outside for obtuse triangles).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Present the key formula: the triangle can be cut into three smaller triangles by joining <m>I</m> to each vertex. Each has a side of the original triangle as its base and <m>r</m> as its height, giving <m>\text{Area} = r \cdot s</m>, so <m>r = \text{Area}/s</m>.
+                    </p>
+                </li>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <theorem xml:id="thm-inscribed-circle">
+        <title>The Incircle and Inradius</title>
+        <statement>
+            <p>
+                The three angle bisectors of any triangle meet at a single point <m>I</m>, called the <term>incenter</term>. The circle centred at <m>I</m> that is tangent to all three sides is the <term>inscribed circle</term> (or <term>incircle</term>). Its radius, the <term>inradius</term> <m>r</m>, satisfies
+                <md>
+                    r = \frac{\text{Area}}{s},
+                </md>
+                where <m>s = \tfrac{1}{2}(a+b+c)</m> is the semi-perimeter of the triangle.
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle ABC with incircle, centre I,
+                 right-angle marks at the three tangent points, label r on one perpendicular.
+                 Use \tkzDefCircle[in](A,B,C)\tkzGetPoint{I} and \tkzDrawCircle[in](A,B,C). -->
+        </statement>
+        <proof>
+            <p>
+                Join <m>I</m> to each vertex, dividing triangle <m>ABC</m> into three smaller triangles: <m>\triangle IBC</m>, <m>\triangle ICA</m>, and <m>\triangle IAB</m>. Because <m>I</m> is the incenter, its perpendicular distance to every side equals <m>r</m>. Using base <m>\times</m> height for each smaller triangle:
+                <md>
+                    <mrow>\text{Area}(\triangle IBC) \amp= \tfrac{1}{2} a r,</mrow>
+                    <mrow>\text{Area}(\triangle ICA) \amp= \tfrac{1}{2} b r,</mrow>
+                    <mrow>\text{Area}(\triangle IAB) \amp= \tfrac{1}{2} c r.</mrow>
+                </md>
+                Adding these and using <m>s = \tfrac{1}{2}(a+b+c)</m>:
+                <md>
+                    \text{Area} = \tfrac{1}{2}r(a+b+c) = r \cdot s.
+                </md>
+                Dividing both sides by <m>s</m> gives <m>r = \text{Area}/s</m>.
+            </p>
+        </proof>
+    </theorem>
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <term>The incenter</term> is the intersection of the three angle bisectors. It is equidistant from all three sides of the triangle.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Inradius formula:</term>
+                        <md>
+                            r = \frac{\text{Area}}{s}, \qquad \text{equivalently} \qquad \text{Area} = r \cdot s,
+                        </md>
+                        where <m>s = \tfrac{1}{2}(a+b+c)</m> is the semi-perimeter.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Right-triangle shortcut:</term> for a right triangle with legs <m>a</m>, <m>b</m> and hypotenuse <m>c</m>,
+                        <md>
+                            r = \frac{a + b - c}{2}.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Tangent segment lengths:</term> if the incircle touches side <m>BC</m> at <m>X</m>, side <m>CA</m> at <m>Y</m>, and side <m>AB</m> at <m>Z</m>, then
+                        <md>
+                            AY = AZ = s - a, \quad BX = BZ = s - b, \quad CX = CY = s - c.
+                        </md>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <paragraphs>
+        <title>The Centroid</title>
+        <p>
+            A <term>median</term> of a triangle is a line segment joining a vertex to the midpoint of the opposite side. Every triangle has three medians, and they always meet at a single point called the <term>centroid</term>, usually labelled <m>G</m>.
+        </p>
+        <!-- TODO: tkz-euclide diagram — triangle ABC, midpoints M_a, M_b, M_c,
+             three medians drawn, centroid G marked.
+             Use \tkzDefMidPoint(B,C)\tkzGetPoint{M_a} etc., then \tkzDefCentroid(A,B,C)\tkzGetPoint{G}. -->
+        <p>
+            The centroid has a special property: it divides each median in the ratio <m>2:1</m> from the vertex. So if the median from <m>A</m> has length <m>m_a</m>, then <m>AG = \tfrac{2}{3}m_a</m> and <m>GM_a = \tfrac{1}{3}m_a</m>.
+        </p>
+        <p>
+            Physically, the centroid is the <em>balance point</em> of the triangle: a uniform triangular lamina (flat plate) would balance on a pin placed exactly at <m>G</m>. The centroid is always inside the triangle, regardless of whether the triangle is acute, right, or obtuse.
+        </p>
+    </paragraphs>
+
+    <paragraphs>
+        <title>The Orthocentre</title>
+        <p>
+            An <term>altitude</term> of a triangle is the perpendicular from a vertex to the line containing the opposite side. The three altitudes of a triangle always meet at a single point called the <term>orthocentre</term>, usually labelled <m>H</m>.
+        </p>
+        <!-- TODO: tkz-euclide diagram — acute triangle ABC, three altitudes drawn with
+             right-angle marks at the feet, orthocentre H marked.
+             Use \tkzDefOrthocenter(A,B,C)\tkzGetPoint{H} and \tkzMarkRightAngle at each foot. -->
+        <p>
+            The position of <m>H</m> depends on the type of triangle:
+            <ul>
+                <li>
+                    <p>
+                        In an <em>acute triangle</em>, <m>H</m> lies <em>inside</em> the triangle.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        In a <em>right triangle</em>, <m>H</m> is at the <em>vertex of the right angle</em> (the two legs are themselves altitudes).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        In an <em>obtuse triangle</em>, <m>H</m> lies <em>outside</em> the triangle, on the far side of the obtuse vertex.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </paragraphs>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                A triangle has sides <m>3</m> cm, <m>4</m> cm, and <m>5</m> cm. Find the radius of its inscribed circle.
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 3-4-5 with incircle. -->
         </statement>
         <solution>
+            <p>
+                First check: <m>3^2 + 4^2 = 9 + 16 = 25 = 5^2</m>, so this is a right triangle with hypotenuse <m>c = 5</m> cm.
+            </p>
+            <p>
+                <em>Method 1 — inradius formula.</em>
+                <md>
+                    <mrow>s \amp= \frac{3+4+5}{2} = 6 \text{ cm}</mrow>
+                    <mrow>\text{Area} \amp= \tfrac{1}{2} \times 3 \times 4 = 6 \text{ cm}^2</mrow>
+                    <mrow>r \amp= \frac{\text{Area}}{s} = \frac{6}{6} = 1 \text{ cm}</mrow>
+                </md>
+            </p>
+            <p>
+                <em>Method 2 — right-triangle shortcut.</em>
+                <md>
+                    r = \frac{a+b-c}{2} = \frac{3+4-5}{2} = \frac{2}{2} = 1 \text{ cm.}
+                </md>
+                Both methods agree: the inradius is <m>\boxed{1}</m> cm.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A triangle has sides <m>5</m> cm, <m>12</m> cm, and <m>13</m> cm.
+                <ol marker="(a)">
+                    <li>Find the inradius.</li>
+                    <li>The incircle touches side <m>QR = 13</m> cm at point <m>X</m>, and the opposite vertex is <m>P</m>. Find the tangent length <m>PX'</m> from <m>P</m> to its tangent point.</li>
+                </ol>
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with incircle and tangent points labelled. -->
         </statement>
         <solution>
+            <p>
+                (a) Check: <m>5^2+12^2 = 25+144 = 169 = 13^2</m>, so the triangle is right-angled.
+                <md>
+                    <mrow>s \amp= \frac{5+12+13}{2} = 15 \text{ cm}</mrow>
+                    <mrow>\text{Area} \amp= \tfrac{1}{2}\times 5 \times 12 = 30 \text{ cm}^2</mrow>
+                    <mrow>r \amp= \frac{30}{15} = 2 \text{ cm}</mrow>
+                </md>
+            </p>
+            <p>
+                (b) Label the triangle so that <m>PQ = 5</m>, <m>PR = 12</m>, <m>QR = 13</m>. Using the tangent length formula with <m>a = QR = 13</m>:
+                <md>
+                    PY = PZ = s - a = 15 - 13 = 2 \text{ cm.}
+                </md>
+                The tangent length from <m>P</m> to its tangent point is <m>2</m> cm.
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A triangular plot of land in Kiambu has sides <m>30</m> m, <m>40</m> m, and <m>50</m> m. A farmer wants to install a circular irrigation pond that fits inside the plot and just touches all three boundaries. Find the radius of the pond.
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 30-40-50 with incircle. -->
         </statement>
         <solution>
+            <p>
+                Check: <m>30^2+40^2 = 900+1600 = 2500 = 50^2</m>, so the plot is a right triangle.
+                <md>
+                    <mrow>s \amp= \frac{30+40+50}{2} = 60 \text{ m}</mrow>
+                    <mrow>\text{Area} \amp= \tfrac{1}{2}\times 30 \times 40 = 600 \text{ m}^2</mrow>
+                    <mrow>r \amp= \frac{600}{60} = 10 \text{ m}</mrow>
+                </md>
+                The pond should have a radius of <m>10</m> m.
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A triangle has a perimeter of <m>36</m> cm and an inscribed circle of radius <m>3</m> cm. Find the area of the triangle.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The semi-perimeter is <m>s = 36/2 = 18</m> cm. Using <m>\text{Area} = r \cdot s</m>:
+                <md>
+                    \text{Area} = 3 \times 18 = 54 \text{ cm}^2.
+                </md>
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>
+                    Find the inradius of a triangle with sides <m>6</m> cm, <m>8</m> cm, and <m>10</m> cm.
+                </p>
+                <!-- TODO: tkz-euclide diagram — right triangle 6-8-10 with incircle. -->
+            </statement>
             <solution>
+                <p>
+                    Check: <m>6^2+8^2 = 36+64 = 100 = 10^2</m> (right triangle).
+                    <md>
+                        <mrow>s \amp= \frac{6+8+10}{2} = 12 \text{ cm}</mrow>
+                        <mrow>\text{Area} \amp= \tfrac{1}{2}\times 6 \times 8 = 24 \text{ cm}^2</mrow>
+                        <mrow>r \amp= \frac{24}{12} = 2 \text{ cm}</mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    A triangle has sides <m>7</m> cm, <m>15</m> cm, and <m>20</m> cm. Calculate its inradius.
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 7-15-20 with incircle. -->
+            </statement>
+            <solution>
+                <p>
+                    <md>
+                        <mrow>s \amp= \frac{7+15+20}{2} = 21 \text{ cm}</mrow>
+                        <mrow>\text{Area} \amp= \sqrt{21 \times 14 \times 6 \times 1} = \sqrt{1764} = 42 \text{ cm}^2</mrow>
+                        <mrow>r \amp= \frac{42}{21} = 2 \text{ cm}</mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    The incircle of a triangle has radius <m>4</m> cm, and the triangle has perimeter <m>48</m> cm. Find the area of the triangle.
+                </p>
+                <!-- TODO: tkz-euclide diagram — generic triangle with incircle, r = 4 labelled. -->
+            </statement>
+            <solution>
+                <p>
+                    <md>
+                        s = \frac{48}{2} = 24 \text{ cm}, \qquad \text{Area} = r \cdot s = 4 \times 24 = 96 \text{ cm}^2.
+                    </md>
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+        <exercise>
+            <statement>
+                <p>
+                    In triangle <m>PQR</m>, <m>PQ = 13</m> cm, <m>QR = 14</m> cm, and <m>PR = 15</m> cm. The incircle touches side <m>QR</m> at <m>X</m>. Find the length <m>QX</m>.
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle PQR with incircle, tangent point X on QR labelled. -->
+            </statement>
+            <solution>
+                <p>
+                    <md>
+                        <mrow>s \amp= \frac{13+14+15}{2} = 21 \text{ cm}</mrow>
+                        <mrow>QX \amp= s - PR = 21 - 15 = 6 \text{ cm}</mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
 
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+        <exercise>
+            <statement>
+                <p>
+                    A right triangle has legs <m>5</m> cm and <m>12</m> cm.
+                    <ol marker="(a)">
+                        <li>Use the formula <m>r = \dfrac{a+b-c}{2}</m> to find the inradius.</li>
+                        <li>Verify your answer using <m>r = \text{Area}/s</m>.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with incircle. -->
+            </statement>
+            <solution>
+                <p>
+                    The hypotenuse is <m>c = \sqrt{5^2+12^2} = \sqrt{169} = 13</m> cm.
+                </p>
+                <p>
+                    (a) <m>r = \dfrac{5+12-13}{2} = \dfrac{4}{2} = 2</m> cm.
+                </p>
+                <p>
+                    (b) <m>s = \dfrac{5+12+13}{2} = 15</m> cm, Area <m>= \tfrac{1}{2}\times 5 \times 12 = 30</m> cm<m>^2</m>, so <m>r = 30/15 = 2</m> cm. <m>\checkmark</m>
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
