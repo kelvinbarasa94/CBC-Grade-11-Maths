@@ -135,7 +135,7 @@
                 </li>
             </dl>
         </p>
-        <paragraphs>
+        <!-- <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
             <ol>
                 <li>
@@ -145,21 +145,47 @@
                     <p><alert>Geometric Efficiency:</alert> Using cyclic quadrilaterals allows industrial designers to distribute forces evenly across circular objects, like wheel rims, storage silos, and satellite dishes, ensuring components remain structurally sound under high pressure.</p>
                 </li>
             </ol>
-        </paragraphs>
+        </paragraphs> -->
     </axiom>
 
-    <insight>
+   <insight>
         <title>Key Insight: The Blueprint of the Arc</title>
-        <p>Whenever you see a circular object in real life—whether it is a Ferris wheel, a pizza cutter, a suspension bridge arch, or a round window—the angles built into it obey fixed mathematical ratios. If an engineer knows the center angle of a rotation, they automatically know the edge tolerances. The circle is nature’s most stable shape because its angle properties preserve balance perfectly across every degree of arc.</p>
-        <figure xml:id="fig-real-life-circle-insight">
-            <caption>A circular layout demonstrating how a camera at the center covers twice the angular field of a lens positioned at the edge boundary.</caption>
-            <image source="images/real-life-circle-angles.png" width="80%">
-                <description>A circular stadium schematic showing a central camera rig connected to two stage points, and a spectator seat at the edge boundary connected to the same two stage points, demonstrating the 2-to-1 angle ratio.</description>
-            </image>
-        </figure>
+        <p>
+            Whenever you see a circular object in real life—whether it is a Ferris wheel, a structural arch bridge, a round stadium, or a mechanical wheel rim—the angles built into it are far from random. Engineers and architects rely on the fixed mathematical ratios of circle theorems to preserve physical balance, distribute weight, and guarantee uniform sightlines.
+        </p>
+
+        <p>
+            Consider how these abstract geometric properties translate directly into functional real-world designs:
+            <ul>
+                <li>
+                    <p>
+                        Broadcast engineers use the <term>Angle at the Center Theorem</term> (<m>\angle \text{Center} = 2\angle \text{Circumference}</m>) to position security cameras and theater spotlights, maximizing focal coverage across a venue.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The principle of <term>Angles in the Same Segment</term> ensures that different spectator seats along the same continuous arena balcony arc get the exact same width of camera or stage view.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Roof trusses and arched windows leverage the <term>Angle in a Semicircle Theorem</term>. Because any angle subtended by a true diameter forms a perfect, self-supporting <m>90^\circ</m> right angle, it creates an incredibly stable framing joint.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Heavy-duty storage silos, water tanks, and car wheel rims are designed around <term>Cyclic Quadrilaterals</term>. Because opposite angles sum to <m>180^\circ</m>, mechanical forces and internal pressures are distributed evenly rather than clustering at a single structural weak spot.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        
+        <p>
+            Ultimately, the circle is nature's most stable shape because its angle properties preserve balance perfectly across every single degree of arc.
+        </p>
     </insight>
 
-    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
+    <!-- <xi:include href="../lesson-plan-templates/example-intro.ptx" /> -->
 
     <!-- <activity>
         <statement>

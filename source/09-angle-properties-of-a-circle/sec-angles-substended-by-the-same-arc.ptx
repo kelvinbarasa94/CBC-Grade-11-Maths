@@ -228,7 +228,7 @@
             </li>
             </dl>
         </p>
-        <paragraphs>
+        <!-- <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
             <ol>
                 <li>
@@ -237,7 +237,7 @@
                     </p>
                 </li>
             </ol>
-        </paragraphs>
+        </paragraphs> -->
     </axiom>
 
     <!-- <insight xml:id="insight-double-angle-theorem">
@@ -273,38 +273,32 @@
         <me>\angle APB = \angle AQB = \angle ARB</me>
     </insight> -->
 <insight xml:id="insight-angles-same-arc">
-        <p>
-            <strong>Core Circle Theorem: Angles Standing on the Same Arc</strong>
-        </p>
-        <p>
-            When two or more angles are drawn from the same standing arc to any points on the remaining part of the circle's circumference, those angles are exactly equal in measure.
-        </p>
-        <p>
-            This is widely known as the <strong>"Bow-Tie"</strong> or <strong>"Butterfly"</strong> theorem due to the distinct geometric shape formed by the intersecting chords.
-        </p>
-        
-        <p><strong>Areas of Concern &amp;</strong></p>
-        <ul>
-            <li>
-                <p>
-                    <strong>The "Same Segment" Boundary Rule:</strong> The vertices of the angles must lie in the <em>same segment</em> (usually the major segment). If one vertex is on the major arc and another is on the minor arc, they are no longer equal; instead, they become supplementary (adding up to <m>180^\circ</m>) because they form a cyclic quadrilateral.
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>Touching the Circumference:</strong> Every vertex of the subtended angles <em>must</em> lie exactly on the outer boundary of the circle. If a vertex stops short of the circumference or goes past it, the theorem does not apply.
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>Hidden Overlaps:</strong> In complex multi-line circle problems, the "bow-tie" shape might be rotated, stretched, or partially hidden by other chords. Advise learners to physically trace the two arms of an angle down to their "landing points" on the circumference to identify their standing arc. If two angles share the exact same landing points, they are equal.
-                </p>
-            </li>
-        </ul>
-        <p>
-            Whenever you are stuck on a circle geometry proof, find the baseline arc and trace upwards to locate your equal angles!
-        </p>
-    </insight>
+    <p>
+        <strong>Core Circle Theorem: Angles Subtended by the Same Arc</strong>
+    </p>
+    <p>
+        Angles formed at the circumference by drawing lines from the same standing arc are exactly equal in measure. This is often referred to visually as the <strong>"Bow-Tie"</strong> or <strong>"Butterfly"</strong> theorem.
+    </p>
+    
+    <p><strong>Key Takeaways and Common Misconceptions:</strong></p>
+    <ul>
+        <li>
+            <p>
+                The vertices of the angles must lie within the same circle segment. If one vertex crosses over to the opposite segment, the angles are no longer equal; they become supplementary (summing to <m>180^\circ</m>) as part of a cyclic quadrilateral.
+            </p>
+        </li>
+        <li>
+            <p>
+                Every vertex <em>must</em> touch the outer circumference boundary. The theorem fails if a vertex stops short inside the circle or extends past it.
+            </p>
+        </li>
+        <li>
+            <p>
+                In complex diagrams, the "bow-tie" shape can be rotated or obscured. Track the arms of an angle down to its endpoints on the circumference. If different angles share the exact same landing points, they are subtended by the same arc and are equal.
+            </p>
+        </li>
+    </ul>
+</insight>
     <!-- <insight>
      
     </insight> -->

@@ -67,10 +67,10 @@
                 <p>
                     <ul>
                         <li>
-                            <p><alert>1. Group Work Formulation:</alert> Join a small peer collaborative group of <m>3</m> to <m>4</m> members to map out, measure, and verify geometric trends collectively.</p>
+                            <p><alert>Group Work Formulation:</alert> Join a small peer collaborative group of <m>3</m> to <m>4</m> members to map out, measure, and verify geometric trends collectively.</p>
                         </li>
                         <li>
-                            <p><alert>2. Materials Needed:</alert>
+                            <p><alert>Materials Needed:</alert>
                                 <ul>
                                     <li>Blank chart paper</li>
                                     <li>Drawing compass</li>
@@ -81,7 +81,7 @@
                             </p>
                         </li>
                         <li>
-                            <p><alert>3. Step-by-Step Activity Instruction:</alert>
+                            <p><alert>Step-by-Step Activity Instruction:</alert>
                                 <ul>
                                     <li>Use your compass to construct a large circle with center <m>O</m>.</li>
                                     <li>Mark four random, distinct points anywhere along the outer edge of the circumference. Label these points in order as <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>.</li>
@@ -176,7 +176,7 @@
             </dl>
         </p>
         <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
+            <title>Teacher Connection</title>
             <ol>
                 <li>
                     <p><alert>Connecting to Learner Work:</alert> Collect total sums calculated by different groups. Standardize the discovery: A quadrilateral is <alert>cyclic</alert> if and only if all four vertices touch a single circle circumference. The opposite interior angles are supplementary, meaning they add up to exactly <m>180^\circ</m>.</p>
@@ -188,18 +188,80 @@
         </paragraphs>
     </axiom>
 
-    <insight>
-        <title>Key Insight: The Cyclical Balance</title>
-        <p>When working with a <alert>cyclic quadrilateral</alert>, think of it as an algebraic seesaw balanced at <m>180^\circ</m>. If one interior angle increases, the angle directly across the circle must decrease by that exact same amount. Furthermore, look for lines extended outside the circle; the <alert>exterior angle</alert> acts as a perfect geometric clone of the <alert>interior opposite angle</alert>.</p>
-        <figure xml:id="fig-cyclic-quad-insight">
-            <caption>Opposite angles in cyclic quadrilateral ABCD sum to 180 degrees, and the exterior angle at vertex B equals the opposite interior angle at vertex D.</caption>
-            <image source="images/cyclic-quadrilateral-properties.png" width="80%">
-                <description>A circle containing a four-sided polygon ABCD where all vertices touch the circumference. Opposite angles A and C are highlighted in one color, while B and D are highlighted in another. Line AB is extended to point E, showing that exterior angle CBE matches interior angle ADC.</description>
+   <insight xml:id="insight-cyclic-quadrilateral-properties">
+        <title>Key Insight: Cyclic Quadrilateral Properties</title>
+        <p>
+            A quadrilateral is strictly classified as <strong>cyclic</strong> if and only if all four of its corner vertices lie directly on the circle's circumference. 
+        </p>
+        <ul>
+            <li>
+                <p>
+                    The opposite interior angles are supplementary, meaning their measures always sum to exactly <m>180^\circ</m>. If one angle changes, its opposite facing counterpart must adjust conversely to maintain this constant sum.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Extending any straight side of the polygon creates an exterior angle that is always identical in measure to its interior opposite angle.
+                </p>
+            </li>
+        </ul>
+        <figure xml:id="fig-cyclic-quad-properties">
+            <caption>Opposite interior angles in cyclic quadrilateral ABCD sum to 180 degrees, and exterior angle CBE equals interior opposite angle ADC.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
+                    
+                    % Define vertices on the circumference
+                    \tkzDefPointOnCircle[R = center O angle 130 radius 3]\tkzGetPoint{A}
+                    \tkzDefPointOnCircle[R = center O angle 40 radius 3]\tkzGetPoint{B}
+                    \tkzDefPointOnCircle[R = center O angle -50 radius 3]\tkzGetPoint{C}
+                    \tkzDefPointOnCircle[R = center O angle 220 radius 3]\tkzGetPoint{D}
+                    
+                    % Define an external point E by extending line AB past B
+                    \tkzDefPointBy[homothety=center A ratio 1.4](B)\tkzGetPoint{E}
+
+                    % Draw the circle boundary
+                    \tkzDrawCircle[thick](O,A)
+
+                    % --- Draw cyclic quadrilateral sides and extended exterior line ---
+                    \tkzDrawSegments[thick](A,D D,C C,B)
+                    \tkzDrawSegment[thick, color=black](A,E)
+
+                    % --- Fill and mark matching angles (Exterior B and Interior D) ---
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=0.6](A,D,C)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=0.6](C,B,E)
+                    \tkzMarkAngle[size=0.6,color=blue,thick](A,D,C)
+                    \tkzMarkAngle[size=0.6,color=blue,thick](C,B,E)
+
+                    % --- Fill and mark supplementary opposite angle pairs (e.g., Angle A) ---
+                    \tkzFillAngle[fill=red!15,opacity=.6, size=0.5](D,A,B)
+                    \tkzMarkAngle[size=0.5,color=red](D,A,B)
+                    
+                    \tkzFillAngle[fill=orange!20,opacity=.6, size=0.5](B,C,D)
+                    \tkzMarkAngle[size=0.5,color=orange](B,C,D)
+
+                    % --- Labels for vertices and lines ---
+                    \tkzDrawPoints(A,B,C,D,E)
+                    \tkzLabelPoints[above left](A)
+                    \tkzLabelPoints[above](B)
+                    \tkzLabelPoints[right](C)
+                    \tkzLabelPoints[below left](D)
+                    \tkzLabelPoints[above right](E)
+
+                    % --- Angle algebraic labels ---
+                    \tkzLabelAngle[pos=0.9](A,D,C){$y$}
+                    \tkzLabelAngle[pos=0.9](C,B,E){$y$}
+                    \tkzLabelAngle[pos=0.8](D,A,B){$\alpha$}
+                    \tkzLabelAngle[pos=0.8](B,C,D){$180^{\circ} - \alpha$}
+
+                    \end{tikzpicture}
+                </latex-image>
             </image>
         </figure>
     </insight>
-
-    <xi:include href="../lesson-plan-templates/example-intro.ptx" />
+    <!-- <xi:include href="../lesson-plan-templates/example-intro.ptx" /> -->
 
     <!-- <insight>
     </insight> -->

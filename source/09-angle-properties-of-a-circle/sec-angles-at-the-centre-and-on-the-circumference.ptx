@@ -44,7 +44,29 @@
     
 
     <!-- [LP] Add guidance on activity -->
-
+<axiom component="lesson-plan">
+        <title>Teacher's Guide: Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    15 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To guide learners through empirical measurement and data collection so they construct conjectures regarding the central angle and inscribed angles in the same segment.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Circulate around the groups to ensure precise measurements with protractors. Encourage students to compare column entries in their data sets. Prompts should guide them to recognize that the circumference angle is half the central angle, and that it remains invariant across the major segment.
+                </p>
+            </li>
+        </dl>
+    </axiom>
     <!-- <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
@@ -199,10 +221,42 @@
             </instructions>
         </interactive>
     </exploration>
-    <insight>
+    <axiom component="lesson-plan">
+        <title>Structured Instruction</title>
         <p>
-            <strong>Making Sense of the Geometry: Real-World Visualizations</strong>
+            <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    10 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To formalize the concepts and properties learners discovered in the anchor task and solidify geometric proof-writing formats.
+                </p>
+            </li>
+            </dl>
         </p>
+        <!-- <paragraphs>
+            <title>Teacher Connection</title>
+            <p>
+                        <alert>Connecting to Learner Work:</alert> Collect findings from the dynamic activity. Explicitly record definitions for a <term>subtended angle</term>, <term>major segment</term>, and <term>minor segment</term>. Highlight that the properties hold true regardless of variations in the circle's total radius length.
+                    </p>
+            <!- <ol>
+                <li>
+                    <p>
+                        <alert>Connecting to Learner Work:</alert> Collect findings from the dynamic activity. Explicitly record definitions for a <term>subtended angle</term>, <term>major segment</term>, and <term>minor segment</term>. Highlight that the properties hold true regardless of variations in the circle's total radius length.
+                    </p>
+                </li>
+            </ol> -->
+        <!-- </paragraphs> --> -->
+    </axiom>
+    <insight>
+        <!-- <p>
+            <strong>Making Sense of the Geometry: Real-World Visualizations</strong>
+        </p> -->
         <p>
             To understand how these circle theorems work, let us connect them to everyday visual ideas:
         </p>

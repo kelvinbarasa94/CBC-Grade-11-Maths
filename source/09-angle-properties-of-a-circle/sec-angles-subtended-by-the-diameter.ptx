@@ -187,16 +187,16 @@
         </dl>
     </p>
     <paragraphs>
-        <title>Key Takeaways &amp; Teacher Connection</title>
+        <title>Teacher Connection</title>
         <ol>
             <li>
                 <p>
-                    <alert>Connecting to Learner Work:</alert> Group the measurements found by the class during the activity. Highlight that regardless of where point <m>C</m> was placed, the angle consistently measured exactly <m>90^\circ</m>. Formalize this as Thales's Theorem: <em>The angle subtended by a diameter at the circumference of a circle is always a right angle.</em>
+                    Group the measurements found by the class during the activity. Highlight that regardless of where point <m>C</m> was placed, the angle consistently measured exactly <m>90^\circ</m>. Formalize this as Thales's Theorem: <em>The angle subtended by a diameter at the circumference of a circle is always a right angle.</em>
                 </p>
             </li>
             <li>
                 <p>
-                    <alert>Mathematical Proof Connection:</alert> Connect this back to the core circle theorem: <em>The angle subtended by an arc at the center is twice the angle subtended at the circumference</em>. Since a straight-line diameter forms a <m>180^\circ</m> angle at the center <m>O</m>, the angle at the circumference must be:
+                     Connect this back to the core circle theorem: <em>The angle subtended by an arc at the center is twice the angle subtended at the circumference</em>. Since a straight-line diameter forms a <m>180^\circ</m> angle at the center <m>O</m>, the angle at the circumference must be:
                     <me>\frac{180^\circ}{2} = 90^\circ</me>
                 </p>
             </li>
@@ -205,17 +205,15 @@
 </axiom>
 
 <insight>
-    <title>Key Insight: The Right-Triangle Hidden in the Circle</title>
-    <p>
-        Whenever you see a triangle inscribed inside a circle where one side is explicitly stated to be the <alert>diameter</alert>, you can automatically mark the opposite interior angle at the circumference as a <alert>right angle</alert> measuring <m>90^\circ</m>. This foundational concept acts as a gateway that bridges circle geometry directly with the <alert>Pythagorean theorem</alert> and <alert>trigonometric ratios</alert> such as <m>\sin</m>, <m>\cos</m>, and <m>\tan</m>.
-    </p>
-    <!-- <figure xml:id="fig-thales-theorem-insight">
-        <caption>Angles subtended by the diameter line AB at various points on the circumference (C, D, and E) consistently equal 90 degrees.</caption>
-        <image source="images/angles-subtended-diameter.png" width="80%">
-            <description>A circle with center O and horizontal diameter AB. Inscribed triangles ACB, ADB, and AEB are shown, with points C, D, and E on the circumference. Each inscribed angle is marked with a right-angle square symbol and labeled 90 degrees.</description>
-        </image>
-    </figure> -->
-</insight>
+        <title>The Hidden Right-Triangle</title>
+        <p>
+            An inscribed triangle whose longest side is the <alert>diameter</alert> of a circle always forms a <alert>right angle (<m>90^\circ</m>)</alert> at the circumference. This property bridges circle geometry with:
+            <ul>
+                <li>The <alert>Pythagorean Theorem</alert> (<m>a^2 + b^2 = c^2</m>)</li>
+                <li>Right-angle trigonometry ratios (<m>\sin, \cos, \tan</m>)</li>
+            </ul>
+        </p>
+    </insight>
 
     <!-- <insight>
     </insight> -->

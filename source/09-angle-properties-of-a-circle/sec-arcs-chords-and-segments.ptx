@@ -59,12 +59,12 @@
                     Learners identify and describe arcs, chords, and segments in circles, and distinguish between minor and major arcs.
                 </p>
             </li>
-            <li>
+            <!-- <li>
                 <title>Materials Needed</title>
                 <p>
                     Paper, compass, ruler, protractor, and a set of coloured pencils or markers.
                 </p>
-            </li>
+            </li> -->
             <li>
                 <title>Teacher's Role</title>
                 <p>
@@ -76,6 +76,12 @@
 
     <activity>
         <statement>
+            <li>
+                <title>Materials Needed</title>
+                <p>
+                    Paper, compass, ruler, protractor, and a set of coloured pencils or markers.
+                </p>
+            </li>
             <p><strong>Part A: Draw and Identify</strong></p>
             <p>
                 Learners work in groups to study or draw a circle with centre <m>O</m> and points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> on the circumference. In each group, identify and label the following on your diagram:
@@ -162,6 +168,60 @@
                 <me>\text{Area of Segment} = \left(\frac{\theta}{360^\circ} \times \pi r^2\right) - \left(\frac{1}{2}r^2 \sin\theta\right)</me>
             </li>
         </ul>
+        <figure xml:id="geometry-of-a-sector">
+    <caption>Components of a circle: Sector, segment, arc, chord, and radius.</caption>
+    <image width="65%">
+        <shortdescription>A circle diagram clearly labeling the sector area, segment area, bounding radii, arc length, and chord line.</shortdescription>
+        <latex-image>
+            \begin{tikzpicture}
+            % --- Centre and points forming the sector ---
+            \tkzDefPoint(0,0){O}
+            
+            % Define boundary points on the circumference
+            \tkzDefPointOnCircle[R = center O angle 40 radius 3.5]\tkzGetPoint{A}
+            \tkzDefPointOnCircle[R = center O angle 140 radius 3.5]\tkzGetPoint{B}
+
+            % Draw the baseline circle
+            \tkzDrawCircle[thick](O,A)
+
+            % --- Shading the geometric regions ---
+            % Light green for the inner triangular sector area
+            \tkzFillPolygon[fill=green!15,opacity=0.6](O,A,B)
+            % Light teal for the outer minor segment area
+            \tkzFillSector[fill=teal!20,opacity=0.6](O,A)(B)
+
+            % --- Boundaries and lines ---
+            \tkzDrawSegments[thick](O,A O,B) % Radii
+            \tkzDrawSegment[thick, color=blue, dashed](A,B) % Chord
+
+            % --- Central Angle Theta ---
+            \tkzFillAngle[fill=red!20,opacity=0.7, size=0.6](A,O,B)
+            \tkzMarkAngle[size=0.6,color=red](A,O,B)
+            \tkzLabelAngle[pos=0.9](A,O,B){$\theta$}
+
+            % --- Feature Labels ---
+            % Labeling lines (Radii and Chord)
+            \tkzLabelSegment[pos=0.5, right](O,A){Radius ($r$)}
+            \tkzLabelSegment[pos=0.5, left](O,B){Radius ($r$)}
+            \tkzLabelSegment[pos=0.5, above, color=blue!80!black](A,B){Chord}
+            
+            % Labeling the curved arc line along the top circumference
+            \node[color=black] at (0,3.8) {Arc Length};
+
+            % Shaded region descriptive labels
+            \node[text=teal!90!black, font=\bfseries] at (0,2.6) {Segment};
+            \node[text=green!50!black, font=\bfseries] at (0,1.2) {Sector};
+
+            % --- Draw points and labels ---
+            \tkzDrawPoints(O,A,B)
+            \tkzLabelPoints[below](O)
+            \tkzLabelPoints[right](A)
+            \tkzLabelPoints[left](B)
+
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</figure>
     </insight>
 
     <!-- [LP] Add guidance on structured lesson plan-->
