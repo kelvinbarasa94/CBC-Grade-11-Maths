@@ -148,16 +148,148 @@
 
     <!-- Add static exercises -->
 
-    <!-- <exercises>
+    <exercises>
         <exercise>
             <statement>   
+                <p>
+                    A circular tree is created by placing a circle with diameter 1 cm on the ground, then taking circles with half the diameter of the previous circle on top, as shown below.
+                </p>
+                <figure xml:id="fig-circular-tree">
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=2]
+                                \foreach \i in {0, 1,..., 4} {
+                                    \tkzDefPoint(0,{4 - 3/(2^(\i))}){O\i}
+                                    \pgfmathsetmacro{\r}{1/(2^(\i))}
+                                    \pgfmathsetmacro{\di}{2^(\i)}
+                                    \tkzDefCircle[R](O\i,\r) \tkzGetPoint{cA}
+                                    \tkzDrawCircle[thick](O\i,cA)
+                                    \tkzDefShiftPoint[O\i](1.5,-\r){T\i}
+                                    \tkzDefShiftPoint[O\i](1.5,\r){T2\i}
+                                    {         
+                                        \ifnum \i > 0              
+                                            \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1/\pgfmathprintnumber{\di}$ cm};
+                                        \else
+                                            \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1$ cm};
+                                        \fi
+                                    }
+                                }
+                                \tkzDefPoint(0,4){T}
+                                \tkzDefPoint(-sqrt(2), 0){A}
+                                \tkzDefPoint(sqrt(2), 0){B}
+                                \tkzDefPoint(0,0){O}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Draw the direct tangents between the bottom two circles. What do you notice about their position relative to the other circles?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Prove the relationship you observed in part (a).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <xref ref="length-of-direct-tangent"/> stated that the length of the direct tangent between two circles with radii <m>r</m> and <m>R</m> and distance between their centres <m>d</m> is given by <md>L = \sqrt{d^2 - (R - r)^2}</md>. Can you simplify this formula in the case when the two circles touch? (Hint: What is the relationship between <m>r</m>, <m>R</m>, and <m>d</m> in this case?)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Using the simplified formula from part (b), can you find the length of the direct tangent between the bottom two circles?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find a general formula for the length of the direct tangent between circle number <m>i</m> and <m>i+1</m>, where <m>i = 1</m> is the bottom circle.
+                        </p>
+                    </li>
+                </ol>
 
             </statement>   
             <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Constructing the direct tangents between the bottom two circles, we can see that they are also tangent to the next circle above them. In fact, the direct tangents between any two circles in the tree are also tangent to all the circles above them.
+                        </p>
+                            <figure xml:id="fig-circular-tree-soln-2">
+                                <image>
+                                    <latex-image>
+                                    \begin{tikzpicture}[scale=2]
+                                    \foreach \i in {0, 1,..., 4} {
+                                        \tkzDefPoint(0,{4 - 3/(2^(\i))}){O\i}
+                                        \pgfmathsetmacro{\r}{1/(2^(\i))}
+                                        \pgfmathsetmacro{\di}{2^(\i)}
+                                        \tkzDefCircle[R](O\i,\r) \tkzGetPoint{cA}
+                                        \tkzDrawCircle[thick](O\i,cA)
+                                        \tkzDefShiftPoint[O\i](1.5,-\r){T\i}
+                                        \tkzDefShiftPoint[O\i](1.5,\r){T2\i}
+                                        {         
+                                            \ifnum \i > 0              
+                                                \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1/\pgfmathprintnumber{\di}$ cm};
+                                            \else
+                                                \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1$ cm};
+                                            \fi
+                                        }
+                                    }
+                                    \tkzDefPoint(0,4){T}
+                                    \tkzDefPoint(-sqrt(2), 0){A}
+                                    \tkzDefPoint(sqrt(2), 0){B}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDrawSegment[red](A,T)
+                                    \tkzDrawSegment[blue](B,T)
+                                    \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                    </li>
+                    <li>
+                        <p>
+                            TBD
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            When the two circles touch, we have <m>d = R + r</m>, as the line connecting the two centres passes through the point of contact, and is perpendicular to the common tangent. Substituting this into the formula for the length of the direct tangent, we get:
+                            <md>
+                                L = \sqrt{(R + r)^2 - (R - r)^2} = \sqrt{4Rr} = 2\sqrt{Rr}
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            In the case of the bottom two circles, we have <m>R = 1/2</m> and <m>r = 1/4</m>, so the length of the direct tangent is:
+                            <md>
+                                <mrow>L \amp = 2 \sqrt{\frac{1}{2} \cdot \frac{1}{4}} </mrow>
+                                <mrow> \amp = 2 \sqrt{\frac{1}{8}} </mrow> 
+                                <mrow> \amp = \frac{\sqrt{2}}{2} \text{ cm}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We have <m>r_i = \frac{1}{2^{i}}</m> for <m>i \geq 1</m>. Using the simplified formula for the length of the direct tangent, we get:
+                            <md>
+                                <mrow> L_i \amp = \sqrt{4r_i r_{i+1}} </mrow>
+                                <mrow> \amp = \sqrt{\frac{1}{2^{i}} \cdot \frac{4}{2^{i+1}}} </mrow>
+                                <mrow> \amp = \sqrt{\frac{2}{2^{2i}}} </mrow>
+                                <mrow> \amp = \frac{\sqrt{2}}{2^{i}} \text{ cm}</mrow>
+                            </md>
+                            When <m>i = 1</m>, <m>L_1 = \frac{\sqrt{2}}{2} \text{ cm}</m>, agreeing with our previous calculation.
+                        </p>
+                    </li>
+                </ol>
+                <p>
 
+                </p>
             </solution>             
         </exercise>        
-    </exercises> -->
+    </exercises>
 
     <!-- [LP] Add information on how to differentiate  -->
 

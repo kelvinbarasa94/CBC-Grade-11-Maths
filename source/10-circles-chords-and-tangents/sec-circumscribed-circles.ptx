@@ -19,7 +19,7 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
                             <ul>
                               <li>Construct an inscribed, circumscribed and escribed circles on a triangle</li>
@@ -44,161 +44,508 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    12 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To guide learners to discover the circumcenter by asking: <em>can you draw a circle that passes through all three vertices of a triangle?</em>
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Let learners attempt part (a) with trial and error — most will not find the right centre immediately, and that frustration motivates the reasoning in part (c). When circulating, prompt with: <q>If the circle must pass through both A and B, where could the centre be?</q> and <q>What if it also has to pass through C?</q> The key insight is that the centre must be equidistant from all three vertices, so it lies on the perpendicular bisector of every side.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <paragraphs>
+                <title>A Circle Through All Three Vertices</title>
+                <p>
+                    In this activity you will investigate whether a circle can pass through all three vertices of a triangle, and how to find its centre.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Draw a triangle <m>ABC</m> of your choice using a ruler. Using a compass, try to draw a circle that passes exactly through all three vertices. Mark the centre you used. (You may need several attempts!)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Compare with a classmate. Did you choose the same centre? Whose circle passes more accurately through all three vertices?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Reason about where the centre must be. The circle passes through <m>A</m> and <m>B</m>, so the centre is equidistant from <m>A</m> and <m>B</m>. What is the set of all points equidistant from two given points? Where must the centre also lie because the circle passes through <m>B</m> and <m>C</m>?
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    The set of points equidistant from <m>A</m> and <m>B</m> is the perpendicular bisector of <m>AB</m>. Similarly for <m>B</m> and <m>C</m>. The centre lies on both perpendicular bisectors, so it must be their intersection.
+                                </p>
+                            </solution>
+                        </li>
+                        <li>
+                            <p>
+                                Construct the perpendicular bisector of <m>AB</m> using compasses and a ruler. Then construct the perpendicular bisector of <m>BC</m>. Label their intersection <m>O</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Measure <m>OA</m>, <m>OB</m>, and <m>OC</m>. Record them in the table below. Draw a circle with centre <m>O</m> and radius <m>OA</m>. Does it pass through all three vertices?
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    The three distances should be equal up to measurement error. The circle passes through all three vertices — this confirms that <m>O</m> is equidistant from all three vertices.
+                                </p>
+                            </solution>
+                        </li>
+                    </ol>
+                </p>
+                <table>
+                    <title>Distances from circumcenter to vertices</title>
+                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+                        <row header="yes" bottom="medium">
+                            <cell>Triangle</cell>
+                            <cell><m>OA</m> (mm)</cell>
+                            <cell><m>OB</m> (mm)</cell>
+                            <cell><m>OC</m> (mm)</cell>
+                        </row>
+                        <row>
+                            <cell>1</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>2</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>3</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                    </tabular>
+                </table>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalise the circumcenter construction and discuss how its position changes with the type of triangle.
                 </p>
             </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Ask learners to share their distances. Confirm they are (approximately) equal. Tell learners: <q>This point <m>O</m> is called the <term>circumcenter</term>. The circle centred at <m>O</m> that passes through all three vertices is the <term>circumscribed circle</term>, or <term>circumcircle</term>, and its radius <m>R</m> is the <term>circumradius</term>.</q>
                     </p>
                 </li>
-            </ol>
+                <li>
+                    <p>
+                        Ask: <q>Was <m>O</m> inside or outside your triangle? Did everyone's triangle give the same answer?</q> Draw attention to the fact that the position of <m>O</m> depends on whether the triangle is acute, right, or obtuse.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For a right triangle, <m>O</m> always falls at the midpoint of the hypotenuse — learners can verify this with their own diagram.
+                    </p>
+                </li>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <theorem xml:id="thm-circumscribed-circle">
+        <title>The Circumcircle and Circumradius</title>
+        <statement>
+            <p>
+                The three perpendicular bisectors of the sides of any triangle meet at a single point <m>O</m>, called the <term>circumcenter</term>. The circle centred at <m>O</m> passing through all three vertices is the <term>circumscribed circle</term> (or <term>circumcircle</term>). Its radius, the <term>circumradius</term> <m>R</m>, satisfies
+                <md>
+                    R = \frac{abc}{4 \cdot \text{Area}},
+                </md>
+                where <m>a</m>, <m>b</m>, <m>c</m> are the side lengths of the triangle.
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle ABC with circumcircle, centre O,
+                 dashed equal radii OA = OB = OC labelled, perpendicular bisectors shown faintly.
+                 Use \tkzDefCircle[circum](A,B,C)\tkzGetPoint{O} and \tkzDrawCircle(O,A). -->
+        </statement>
+        <proof>
+            <p>
+                Let <m>O</m> be the intersection of the perpendicular bisector of <m>AB</m> and the perpendicular bisector of <m>BC</m>. Since <m>O</m> lies on the perpendicular bisector of <m>AB</m>, it is equidistant from <m>A</m> and <m>B</m>: <m>OA = OB</m>. Since <m>O</m> lies on the perpendicular bisector of <m>BC</m>, we have <m>OB = OC</m>. Therefore <m>OA = OB = OC</m>, so the circle with centre <m>O</m> and radius <m>R = OA</m> passes through all three vertices.
+            </p>
+            <p>
+                The formula <m>R = abc/(4 \cdot \text{Area})</m> follows from the extended law of sines: <m>a/\sin A = 2R</m>, combined with the formula Area <m>= \tfrac{1}{2}bc\sin A</m>, which gives <m>\sin A = 2\,\text{Area}/(bc)</m> and hence <m>R = a/(2\sin A) = abc/(4\,\text{Area})</m>.
+            </p>
+        </proof>
+    </theorem>
 
-    <!-- <insight>
-    </insight> -->
+    <insight>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <term>The circumcenter</term> is the intersection of the three perpendicular bisectors of the sides. It is equidistant from all three vertices: <m>OA = OB = OC = R</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Circumradius formula:</term>
+                        <md>
+                            R = \frac{abc}{4 \cdot \text{Area}}.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Extended law of sines:</term>
+                        <md>
+                            \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Right-triangle shortcut:</term> for a right triangle with hypotenuse <m>c</m>,
+                        <md>
+                            R = \frac{c}{2}.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Position of the circumcenter:</term>
+                        <ul>
+                            <li><p>Acute triangle: <m>O</m> is <em>inside</em> the triangle.</p></li>
+                            <li><p>Right triangle: <m>O</m> is at the <em>midpoint of the hypotenuse</em>.</p></li>
+                            <li><p>Obtuse triangle: <m>O</m> is <em>outside</em> the triangle.</p></li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <paragraphs>
+        <title>Comparing the Circumcircle and the Incircle</title>
+        <p>
+            Every triangle has exactly one circumcircle and exactly one incircle. They are different in construction and location:
+            <ul>
+                <li>
+                    <p>
+                        The <term>incircle</term> is the largest circle that fits <em>inside</em> the triangle, tangent to all three sides. Its centre (the incenter) is always inside the triangle.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The <term>circumcircle</term> is the unique circle that passes through all three vertices. Its centre (the circumcenter) is inside the triangle only when the triangle is acute.
+                    </p>
+                </li>
+            </ul>
+            For an equilateral triangle, both circles share the same centre and <m>R = 2r</m> — the circumradius is exactly twice the inradius.
+        </p>
+    </paragraphs>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Draw a triangle <m>ABC</m> with <m>AB = 7</m> cm, <m>BC = 5</m> cm, and <m>CA = 6</m> cm. Construct the circumcircle and state the circumradius.
+            </p>
         </statement>
         <solution>
+            <p>
+                <ol marker="1.">
+                    <li>
+                        <p>Draw <m>BC = 5</m> cm as a base. Use compasses to mark <m>AB = 7</m> cm from <m>B</m> and <m>CA = 6</m> cm from <m>C</m>; label the intersection <m>A</m>.</p>
+                    </li>
+                    <li>
+                        <p>Open the compasses to more than half of <m>AB</m>. Place the point at <m>A</m> and draw arcs above and below <m>AB</m>; repeat from <m>B</m>. Join the two arc intersections — this is the perpendicular bisector of <m>AB</m>.</p>
+                    </li>
+                    <li>
+                        <p>Repeat the construction for side <m>BC</m>. Label the intersection of the two perpendicular bisectors <m>O</m>.</p>
+                    </li>
+                    <li>
+                        <p>Set the compasses to <m>OA</m> and draw the circumcircle. It should pass through <m>A</m>, <m>B</m>, and <m>C</m>.</p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                Measuring <m>OA</m> from an accurate drawing gives <m>R \approx 3.4</m> cm. We can verify using the formula: with <m>a = 5</m>, <m>b = 6</m>, <m>c = 7</m>, semi-perimeter <m>s = 9</m>, Heron's formula gives
+                <md>
+                    <mrow>\text{Area} \amp= \sqrt{9 \times 4 \times 3 \times 2} = \sqrt{216} = 6\sqrt{6} \text{ cm}^2</mrow>
+                    <mrow>R \amp= \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{210}{24\sqrt{6}} = \frac{35}{4\sqrt{6}} = \frac{35\sqrt{6}}{24} \approx 3.57 \text{ cm.}</mrow>
+                </md>
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with circumcircle and perpendicular bisectors shown,
+                 circumcenter O labelled. Use \tkzDefCircle[circum](A,B,C)\tkzGetPoint{O}. -->
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A triangle has sides <m>6</m> cm, <m>8</m> cm, and <m>10</m> cm.
+                <ol marker="(a)">
+                    <li>Draw the triangle accurately and construct the circumcircle. Where does the circumcenter fall?</li>
+                    <li>Find the circumradius by calculation and compare with your measured value.</li>
+                </ol>
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 6-8-10 with circumcircle, O at midpoint of hypotenuse. -->
         </statement>
         <solution>
+            <p>
+                (a) Draw the right triangle with the right angle at one vertex. Construct the perpendicular bisectors of two sides — they meet at <m>O</m>. You should find that <m>O</m> falls exactly at the midpoint of the hypotenuse (<m>10</m> cm side). This confirms the insight: for a right triangle, the circumcenter is always the midpoint of the hypotenuse.
+            </p>
+            <p>
+                (b) Check: <m>6^2 + 8^2 = 36 + 64 = 100 = 10^2</m>, so the hypotenuse is <m>c = 10</m> cm. Using the right-triangle shortcut:
+                <md>
+                    R = \frac{c}{2} = \frac{10}{2} = 5 \text{ cm.}
+                </md>
+                Verify with the general formula: Area <m>= \tfrac{1}{2} \times 6 \times 8 = 24</m> cm<m>^2</m>, so
+                <md>
+                    R = \frac{6 \times 8 \times 10}{4 \times 24} = \frac{480}{96} = 5 \text{ cm.} \checkmark
+                </md>
+                This should agree with the measured radius from part (a).
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A triangle has sides <m>13</m> cm, <m>14</m> cm, and <m>15</m> cm.
+                <ol marker="(a)">
+                    <li>Draw the triangle to scale and construct the circumcircle. Measure the circumradius <m>R</m> from your diagram.</li>
+                    <li>Calculate <m>R</m> using the formula and compare with your measured value.</li>
+                </ol>
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle 13-14-15 with circumcircle and circumcenter O. -->
         </statement>
         <solution>
+            <p>
+                (a) Draw the triangle. Construct the perpendicular bisector of the side of length 14 cm and the perpendicular bisector of the side of length 15 cm. Their intersection is <m>O</m>. Draw the circle centred at <m>O</m> through any vertex — it should pass through all three. Measuring <m>R \approx 8.1</m> cm.
+            </p>
+            <p>
+                (b)
+                <md>
+                    <mrow>s \amp= \frac{13+14+15}{2} = 21 \text{ cm}</mrow>
+                    <mrow>\text{Area} \amp= \sqrt{21 \times 8 \times 7 \times 6} = \sqrt{7056} = 84 \text{ cm}^2</mrow>
+                    <mrow>R \amp= \frac{13 \times 14 \times 15}{4 \times 84} = \frac{2730}{336} = \frac{65}{8} = 8.125 \text{ cm.}</mrow>
+                </md>
+                This agrees with the measured value from part (a).
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A triangular market plot in Mombasa has boundary lengths <m>5</m> m, <m>12</m> m, and <m>13</m> m. The market committee wants to install a circular fence that runs exactly through all three corners of the plot. Find the radius of the fence.
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with circumcircle. -->
+        </statement>
+        <solution>
+            <p>
+                Check: <m>5^2 + 12^2 = 25 + 144 = 169 = 13^2</m>, so the plot is a right triangle with hypotenuse <m>13</m> m.
+                <md>
+                    R = \frac{13}{2} = 6.5 \text{ m.}
+                </md>
+                The circular fence has a radius of <m>6.5</m> m.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                In a triangle, side <m>BC = 10</m> cm and the circumradius is <m>R = 8</m> cm. Find angle <m>BAC</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                By the extended law of sines, <m>a = 2R\sin A</m>, so
+                <md>
+                    \sin A = \frac{a}{2R} = \frac{10}{16} = \frac{5}{8}.
+                </md>
+                Therefore <m>A = \arcsin\!\left(\tfrac{5}{8}\right) \approx 38.7°</m>.
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>
+                    Triangle <m>ABC</m> has <m>AB = 7</m> cm, <m>BC = 8</m> cm, and <m>CA = 6</m> cm.
+                    <ol marker="(a)">
+                        <li>Draw the triangle accurately using ruler and compasses.</li>
+                        <li>Construct the perpendicular bisector of <m>AB</m>.</li>
+                        <li>Construct the perpendicular bisector of <m>BC</m>. Label the intersection <m>O</m>.</li>
+                        <li>Draw the circumcircle with centre <m>O</m>. Measure the circumradius <m>R</m>.</li>
+                        <li>Check your answer: measure <m>OA</m>, <m>OB</m>, and <m>OC</m>. What do you find?</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 6-7-8 with labelled sides but no circumcircle
+                     (construction exercise; learner draws the circle). -->
+            </statement>
             <solution>
+                <p>
+                    Construction exercise. For checking: with <m>a=8</m>, <m>b=6</m>, <m>c=7</m>, <m>s=10.5</m>,
+                    <md>
+                        <mrow>\text{Area} \amp= \sqrt{10.5 \times 2.5 \times 4.5 \times 3.5} = \sqrt{413.4375} \approx 20.33 \text{ cm}^2</mrow>
+                        <mrow>R \amp= \frac{6 \times 7 \times 8}{4 \times 20.33} \approx \frac{336}{81.3} \approx 4.13 \text{ cm.}</mrow>
+                    </md>
+                    Learners should find <m>OA \approx OB \approx OC \approx R</m>.
+                </p>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    A triangle has sides <m>9</m> cm, <m>12</m> cm, and <m>15</m> cm.
+                    <ol marker="(a)">
+                        <li>Draw the triangle accurately and construct the circumcircle. Before you start: predict where the circumcenter will fall. Explain your prediction.</li>
+                        <li>Find the circumradius by calculation and check it matches your diagram.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — right triangle 9-12-15 with circumcircle, O at midpoint of hypotenuse. -->
+            </statement>
+            <solution>
+                <p>
+                    (a) Check: <m>9^2+12^2 = 225 = 15^2</m>, so it is a right triangle. The circumcenter should fall at the midpoint of the hypotenuse (15 cm side). After construction, the circumcenter <m>O</m> should indeed be at the midpoint of the hypotenuse.
+                </p>
+                <p>
+                    (b) <m>R = 15/2 = 7.5</m> cm.
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    A triangle has sides <m>5</m> cm, <m>12</m> cm, and <m>13</m> cm.
+                    <ol marker="(a)">
+                        <li>Draw the triangle and construct its circumcircle. Mark the circumcenter <m>O</m> and measure <m>R</m>.</li>
+                        <li>Calculate <m>R</m> using the right-triangle shortcut, then verify using <m>R = abc/(4\,\text{Area})</m>.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with circumcircle. -->
+            </statement>
+            <solution>
+                <p>
+                    (a) The triangle is right-angled (<m>5^2+12^2 = 13^2</m>), so <m>O</m> falls at the midpoint of the hypotenuse. Measured <m>R \approx 6.5</m> cm.
+                </p>
+                <p>
+                    (b) Shortcut: <m>R = 13/2 = 6.5</m> cm. Verify: Area <m>= 30</m> cm<m>^2</m>, <m>R = 5\times12\times13/(4\times30) = 780/120 = 6.5</m> cm. <m>\checkmark</m>
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+        <exercise>
+            <statement>
+                <p>
+                    A triangle has sides <m>7</m> cm, <m>8</m> cm, and <m>9</m> cm.
+                    <ol marker="(a)">
+                        <li>Draw the triangle accurately and construct its circumcircle. Is the circumcenter inside or outside the triangle?</li>
+                        <li>Calculate the circumradius, leaving your answer in surd form.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 7-8-9 with circumcircle. -->
+            </statement>
+            <solution>
+                <p>
+                    (a) The triangle is acute (no side satisfies <m>a^2 = b^2 + c^2</m>), so the circumcenter is inside the triangle.
+                </p>
+                <p>
+                    (b)
+                    <md>
+                        <mrow>s \amp= 12, \quad \text{Area} = \sqrt{12 \times 5 \times 4 \times 3} = \sqrt{720} = 12\sqrt{5} \text{ cm}^2</mrow>
+                        <mrow>R \amp= \frac{7 \times 8 \times 9}{4 \times 12\sqrt{5}} = \frac{504}{48\sqrt{5}} = \frac{21}{2\sqrt{5}} = \frac{21\sqrt{5}}{10} \text{ cm} \approx 4.70 \text{ cm.}</mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
 
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+        <exercise>
+            <statement>
+                <p>
+                    In triangle <m>ABC</m>, <m>BC = 9</m> cm and the circumradius is <m>6</m> cm.
+                    <ol marker="(a)">
+                        <li>Find angle <m>BAC</m>.</li>
+                        <li>Using your answer to (a) and any valid choice for the other sides, draw a possible triangle <m>ABC</m> and construct its circumcircle. Check that the radius is approximately <m>6</m> cm.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle with angle A and side a = 9 labelled, circumcircle shown. -->
+            </statement>
+            <solution>
+                <p>
+                    (a)
+                    <md>
+                        \sin A = \frac{9}{2 \times 6} = \frac{3}{4}, \qquad A = \arcsin\!\left(\tfrac{3}{4}\right) \approx 48.6°.
+                    </md>
+                </p>
+                <p>
+                    (b) Draw a triangle with <m>BC = 9</m> cm and <m>\angle BAC \approx 48.6°</m> (e.g. use the sine rule or choose suitable side lengths). Construct the circumcircle using perpendicular bisectors; the measured radius should be close to <m>6</m> cm.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    An equilateral triangle has side length <m>12</m> cm.
+                    <ol marker="(a)">
+                        <li>Draw the triangle and construct both its circumcircle and its incircle. What do you notice about their centres?</li>
+                        <li>Calculate the circumradius <m>R</m> and inradius <m>r</m>.</li>
+                        <li>Show that <m>R = 2r</m>. How does this match what you see in your diagram?</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — equilateral triangle with both circumcircle and incircle shown, shared centre. -->
+            </statement>
+            <solution>
+                <p>
+                    (a) For an equilateral triangle, the angle bisectors and perpendicular bisectors all coincide, so the incenter and circumcenter are the same point.
+                </p>
+                <p>
+                    Area: <m>\dfrac{\sqrt{3}}{4} \times 12^2 = 36\sqrt{3}</m> cm<m>^2</m>; semi-perimeter <m>s = 18</m> cm.
+                </p>
+                <p>
+                    (b) <m>R = \dfrac{12^3}{4 \times 36\sqrt{3}} = \dfrac{12}{\sqrt{3}} = 4\sqrt{3}</m> cm; <m>r = \dfrac{36\sqrt{3}}{18} = 2\sqrt{3}</m> cm.
+                </p>
+                <p>
+                    (c) <m>R = 4\sqrt{3} = 2 \times 2\sqrt{3} = 2r</m>. <m>\checkmark</m> In the diagram, the circumcircle's radius is visibly twice the incircle's radius.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

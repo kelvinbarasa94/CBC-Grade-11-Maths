@@ -19,7 +19,7 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
                             <ul>
                               <li>Construct an inscribed, circumscribed and escribed circles on a triangle</li>
@@ -44,161 +44,547 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    12 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    To guide learners to ask: <em>can a circle be tangent to a triangle from the outside?</em> By trying to find a centre equidistant from one side and the extensions of the other two, learners rediscover the idea of the excircle through exploration.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Ask learners to extend two sides of their triangle beyond two vertices, then attempt to draw a circle tangent to the original side and the two extensions. Circulate and prompt with: <q>The circle must touch all three lines. What does that tell you about how far the centre is from each line?</q> Do not reveal the construction — that comes in the theory section. The goal here is simply for learners to struggle productively and measure distances.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
         <statement>
+            <paragraphs>
+                <title>A Circle Outside the Triangle</title>
+                <p>
+                    You have seen how a circle can fit perfectly <em>inside</em> a triangle, tangent to all three sides. In this activity you will explore whether a circle can also be tangent to a triangle from <em>outside</em>.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Draw a triangle <m>ABC</m> of your choice. Extend side <m>AB</m> beyond <m>B</m> (draw a ray from <m>B</m> pointing away from <m>A</m>). Extend side <m>AC</m> beyond <m>C</m> (draw a ray from <m>C</m> pointing away from <m>A</m>).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Using a compass, try to draw a circle that is tangent to side <m>BC</m>, to the extension of <m>AB</m> beyond <m>B</m>, and to the extension of <m>AC</m> beyond <m>C</m>. Mark the centre you used. (You may need several attempts!)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Compare with a classmate. Did you choose the same centre? What did you find most difficult about the construction?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Measure the perpendicular distance from your chosen centre to each of the three lines (side <m>BC</m>, and the two extensions). Record your measurements in the table below. What do you notice?
+                            </p>
+                            <solution component="lesson-plan">
+                                <p>
+                                    If the centre has been chosen well, the three perpendicular distances should be approximately equal — the centre is equidistant from all three lines. In the structured instruction that follows, learners will learn <em>how</em> to find this centre exactly using angle bisectors.
+                                </p>
+                            </solution>
+                        </li>
+                    </ol>
+                </p>
+                <table>
+                    <title>Perpendicular distances from chosen centre to each line</title>
+                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+                        <row header="yes" bottom="medium">
+                            <cell>Triangle</cell>
+                            <cell>Distance to <m>BC</m> (mm)</cell>
+                            <cell>Distance to extension of <m>AB</m> (mm)</cell>
+                            <cell>Distance to extension of <m>AC</m> (mm)</cell>
+                        </row>
+                        <row>
+                            <cell>1</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>2</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell>3</cell>
+                            <cell></cell><cell></cell><cell></cell>
+                        </row>
+                    </tabular>
+                </table>
+            </paragraphs>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalise the excircle construction and establish the key properties of the excenter.
                 </p>
             </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Ask learners to share their measurements. Confirm that the three distances are (approximately) equal. Tell learners: <q>This point is called an <term>excenter</term>, and the circle centred there is called an <term>excircle</term> or <term>escribed circle</term>.</q>
                     </p>
                 </li>
-            </ol>
+                <li>
+                    <p>
+                        Every triangle has exactly <em>three</em> excircles — one opposite each vertex. The excircle opposite <m>A</m> is tangent to side <m>BC</m> and to the <em>extensions</em> of sides <m>AB</m> and <m>AC</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The excenter <m>I_a</m> (opposite <m>A</m>) lies on the <em>internal</em> angle bisector from <m>A</m> and on the <em>external</em> angle bisectors at <m>B</m> and <m>C</m>. It is the intersection of these two external bisectors that learners will use to construct it.
+                    </p>
+                </li>
+            </ul>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
+    <paragraphs>
+        <title>Constructing the Excircle Opposite <m>A</m></title>
+        <p>
+            Follow these steps to construct the excircle opposite vertex <m>A</m>. Each step is shown in the diagrams below.
+        </p>
+        <p>
+            <alert>Step 1.</alert> Draw triangle <m>ABC</m>. Extend side <m>AB</m> beyond <m>B</m> as a dashed ray, and extend side <m>AC</m> beyond <m>C</m> as a dashed ray.
+        </p>
+        <!-- TODO: tkz-euclide diagram — Step 1: triangle ABC with dashed extensions of AB beyond B and AC beyond C. No bisectors yet. -->
+        <p>
+            <alert>Step 2.</alert> Bisect the exterior angle at <m>B</m>: this is the angle between side <m>BC</m> and the extension of <m>AB</m> beyond <m>B</m>. Draw the bisector as a ray from <m>B</m>.
+        </p>
+        <!-- TODO: tkz-euclide diagram — Step 2: add the external angle bisector at B. Use \tkzDefLine[bisector out](A,B,C). -->
+        <p>
+            <alert>Step 3.</alert> Bisect the exterior angle at <m>C</m>: this is the angle between side <m>BC</m> and the extension of <m>AC</m> beyond <m>C</m>. Draw the bisector as a ray from <m>C</m>. Label the intersection of the two bisectors <m>I_a</m>.
+        </p>
+        <!-- TODO: tkz-euclide diagram — Step 3: add the external angle bisector at C; label intersection I_a. -->
+        <p>
+            <alert>Step 4.</alert> From <m>I_a</m>, drop a perpendicular to side <m>BC</m>. Label the foot of the perpendicular <m>X</m>. The distance <m>I_aX</m> is the excircle radius <m>r_a</m>.
+        </p>
+        <!-- TODO: tkz-euclide diagram — Step 4: add perpendicular from I_a to BC with foot X and right-angle mark. Use \tkzDefPointBy[projection=onto BC](Ia). -->
+        <p>
+            <alert>Step 5.</alert> Draw the circle with centre <m>I_a</m> and radius <m>I_aX</m>. It should be tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>.
+        </p>
+        <!-- TODO: tkz-euclide diagram — Step 5 (complete diagram): triangle, dashed extensions, I_a, perpendicular to BC, excircle drawn.
+             Use \tkzDefCircle[ex](A,B,C)\tkzGetPoint{Ia} and \tkzDrawCircle(Ia,X). -->
+    </paragraphs>
 
-    <!-- <insight>
-    </insight> -->
+    <theorem xml:id="thm-escribed-circle">
+        <title>The Excircle and its Radius</title>
+        <statement>
+            <p>
+                For any triangle <m>ABC</m> with side lengths <m>a = BC</m>, <m>b = CA</m>, <m>c = AB</m>, semi-perimeter <m>s</m>, and area <m>\Delta</m>, the <term>excircle opposite <m>A</m></term> has centre <m>I_a</m> — the intersection of the internal angle bisector from <m>A</m> with the external angle bisectors from <m>B</m> and <m>C</m> — and radius
+                <md>
+                    r_a = \frac{\Delta}{s - a}.
+                </md>
+                Similarly, the excircles opposite <m>B</m> and <m>C</m> have radii <m>r_b = \Delta/(s-b)</m> and <m>r_c = \Delta/(s-c)</m>.
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle ABC, excircle opposite A with centre I_a labelled,
+                 perpendicular from I_a to BC with right-angle mark, tangent points on side BC and on the two extensions shown.
+                 Use \tkzDefCircle[ex](A,B,C)\tkzGetPoint{Ia}. -->
+        </statement>
+        <proof>
+            <p>
+                Let the excircle opposite <m>A</m> touch side <m>BC</m> at <m>X</m>, the extension of <m>AB</m> beyond <m>B</m> at <m>Y</m>, and the extension of <m>AC</m> beyond <m>C</m> at <m>Z</m>. By the equal tangent theorem, tangent segments from an external point to a circle are equal:
+                <ul>
+                    <li><p>From <m>B</m>: <m>BX = BY</m>.</p></li>
+                    <li><p>From <m>C</m>: <m>CX = CZ</m>.</p></li>
+                    <li><p>From <m>A</m>: <m>AY = AZ</m>.</p></li>
+                </ul>
+            </p>
+            <p>
+                Now <m>AY = AB + BY = c + BX</m> and <m>AZ = AC + CZ = b + CX</m>. Since <m>AY = AZ</m> and <m>BX + CX = a</m>, solving gives <m>BX = s - c</m> and <m>CX = s - b</m>, so <m>AY = s</m>.
+            </p>
+            <p>
+                To find <m>r_a</m>, connect <m>I_a</m> to each vertex. Since <m>I_a</m> lies outside the triangle (on the far side of <m>BC</m> from <m>A</m>), the area of triangle <m>ABC</m> equals the sum of triangles <m>I_aAB</m> and <m>I_aAC</m> minus triangle <m>I_aBC</m>:
+                <md>
+                    \Delta = \tfrac{1}{2}r_a c + \tfrac{1}{2}r_a b - \tfrac{1}{2}r_a a = r_a(s - a),
+                </md>
+                giving <m>r_a = \Delta\,/\,(s-a)</m>. <m>\square</m>
+            </p>
+        </proof>
+    </theorem>
 
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <insight>
+        <title>Key Ideas</title>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        Every triangle has exactly <term>three excircles</term>, one opposite each vertex.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Excircle radii:</term>
+                        <md>
+                            r_a = \frac{\Delta}{s-a}, \qquad r_b = \frac{\Delta}{s-b}, \qquad r_c = \frac{\Delta}{s-c},
+                        </md>
+                        where <m>\Delta</m> is the area and <m>s</m> the semi-perimeter.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Tangent lengths</term> from each vertex to the excircle opposite <m>A</m>:
+                        <md>
+                            \text{from } A = s, \qquad \text{from } B = s - c, \qquad \text{from } C = s - b.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Reciprocal identity:</term>
+                        <md>
+                            \frac{1}{r} = \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c}.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Product identity:</term>
+                        <md>
+                            r \cdot r_a \cdot r_b \cdot r_c = \Delta^2.
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <term>Right-triangle special case:</term> if <m>C</m> is the right angle, then <m>r_c = s</m>.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
+
+    <paragraphs>
+        <title>The Nagel Point</title>
+        <p>
+            Here is a beautiful discovery to explore by construction. Label the point where the excircle opposite <m>A</m> touches side <m>BC</m> as <m>X_a</m>; similarly, let <m>X_b</m> be where the excircle opposite <m>B</m> touches side <m>CA</m>, and <m>X_c</m> be where the excircle opposite <m>C</m> touches side <m>AB</m>.
+        </p>
+        <p>
+            Draw lines <m>AX_a</m>, <m>BX_b</m>, and <m>CX_c</m>. What do you notice? The three lines all pass through a single point — called the <term>Nagel point</term> of the triangle. Try to verify this on your own triangle as a construction exercise.
+        </p>
+    </paragraphs>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example>
         <statement>
+            <p>
+                Draw a triangle <m>ABC</m> with <m>AB = 7</m> cm, <m>BC = 5</m> cm, and <m>CA = 6</m> cm. Construct the excircle opposite <m>A</m>.
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with excircle opposite A; I_a labelled, tangent foot on BC and tangent points on extensions shown. -->
         </statement>
         <solution>
+            <p>
+                <ol marker="1.">
+                    <li>
+                        <p>Draw <m>BC = 5</m> cm as a base. Use compasses to mark <m>AB = 7</m> cm from <m>B</m> and <m>CA = 6</m> cm from <m>C</m>; label the intersection <m>A</m>.</p>
+                    </li>
+                    <li>
+                        <p>Extend side <m>AB</m> beyond <m>B</m> as a dashed ray. Extend side <m>AC</m> beyond <m>C</m> as a dashed ray.</p>
+                    </li>
+                    <li>
+                        <p>Bisect the exterior angle at <m>B</m> (between side <m>BC</m> and the extension of <m>AB</m> beyond <m>B</m>): open the compasses and draw equal arcs from <m>B</m> on both lines, then bisect between their intersection points. Draw the bisector as a ray from <m>B</m>.</p>
+                    </li>
+                    <li>
+                        <p>Bisect the exterior angle at <m>C</m> in the same way. Label the intersection of the two bisector rays <m>I_a</m>.</p>
+                    </li>
+                    <li>
+                        <p>From <m>I_a</m>, drop a perpendicular to line <m>BC</m> (foot <m>X</m>). Set the compasses to <m>I_aX</m> and draw the excircle. It should touch <m>BC</m> and both extensions.</p>
+                    </li>
+                </ol>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A triangle has sides <m>3</m> cm, <m>4</m> cm, and <m>5</m> cm. Find all three excircle radii.
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 3-4-5 with all three excircles shown. -->
         </statement>
         <solution>
+            <p>
+                Label the sides <m>a = 3</m>, <m>b = 4</m>, <m>c = 5</m>. The semi-perimeter is <m>s = 6</m> and the area is <m>\Delta = 6</m> cm<m>^2</m>. Then:
+                <md>
+                    <mrow>r_a \amp= \frac{6}{6 - 3} = 2 \text{ cm}</mrow>
+                    <mrow>r_b \amp= \frac{6}{6 - 4} = 3 \text{ cm}</mrow>
+                    <mrow>r_c \amp= \frac{6}{6 - 5} = 6 \text{ cm.}</mrow>
+                </md>
+                The largest excircle (<m>r_c = 6</m> cm) is opposite the shortest side (<m>a = 3</m> cm). We can verify the reciprocal identity: the inradius is <m>r = \Delta/s = 1</m> cm, and
+                <md>
+                    \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c} = \frac{1}{2} + \frac{1}{3} + \frac{1}{6} = 1 = \frac{1}{r}. \checkmark
+                </md>
+            </p>
         </solution>
     </example>
 
     <example>
         <statement>
+            <p>
+                A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use the reciprocal identity to find <m>r_c</m>.
+            </p>
+            <!-- TODO: tkz-euclide diagram — triangle with incircle and excircles r_a, r_b labelled. -->
         </statement>
         <solution>
+            <p>
+                By the reciprocal identity <m>\dfrac{1}{r} = \dfrac{1}{r_a} + \dfrac{1}{r_b} + \dfrac{1}{r_c}</m>:
+                <md>
+                    \frac{1}{r_c} = \frac{1}{r} - \frac{1}{r_a} - \frac{1}{r_b} = \frac{1}{2} - \frac{1}{3} - \frac{1}{10} = \frac{15 - 10 - 3}{30} = \frac{2}{30} = \frac{1}{15}.
+                </md>
+                Therefore <m>r_c = 15</m> cm.
+            </p>
         </solution>
-    </example> -->
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A triangular plot in Nairobi has boundary lengths <m>9</m> m, <m>12</m> m, and <m>15</m> m. A developer wants to install a circular water tank just outside the plot, touching the <m>15</m> m boundary and the extensions of the other two sides. Find the radius of the tank.
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 9-12-15 with excircle opposite the vertex across from the 15m side. -->
+        </statement>
+        <solution>
+            <p>
+                The excircle touching the <m>15</m> m side is opposite the vertex across from it. Label <m>a = 15</m> m, so we need <m>r_a</m>. Check: <m>9^2 + 12^2 = 225 = 15^2</m>, confirming a right triangle with area <m>\Delta = 54</m> m<m>^2</m> and semi-perimeter <m>s = 18</m> m. Therefore:
+                <md>
+                    r_a = \frac{54}{18 - 15} = \frac{54}{3} = 18 \text{ m.}
+                </md>
+                The water tank has radius <m>18</m> m.
+            </p>
+        </solution>
+    </example>
+
+    <example>
+        <statement>
+            <p>
+                A right triangle has legs <m>8</m> cm and <m>15</m> cm. Find the radius of the excircle opposite the right angle.
+            </p>
+            <!-- TODO: tkz-euclide diagram — right triangle 8-15-17 with excircle opposite the right angle shown. -->
+        </statement>
+        <solution>
+            <p>
+                The hypotenuse is <m>c = 17</m> cm and the semi-perimeter is <m>s = 20</m> cm. By the right-triangle special case:
+                <md>
+                    r_c = s = 20 \text{ cm.}
+                </md>
+                Verify: area <m>\Delta = 60</m> cm<m>^2</m>, and <m>r_c = 60\,/\,(s - c) = 60\,/\,3 = 20</m> cm. <m>\checkmark</m>
+            </p>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
-    <!-- <exercises>
+    <exercises>
         <exercise>
-            <statement>   
-
-            </statement>   
+            <statement>
+                <p>
+                    Triangle <m>ABC</m> has <m>AB = 6</m> cm, <m>BC = 8</m> cm, and <m>CA = 7</m> cm.
+                    <ol marker="(a)">
+                        <li>Draw the triangle accurately. Extend side <m>AB</m> beyond <m>B</m> and side <m>AC</m> beyond <m>C</m> as dashed rays.</li>
+                        <li>Construct the external bisector of angle <m>B</m> and the external bisector of angle <m>C</m>. Label their intersection <m>I_a</m>.</li>
+                        <li>Draw the excircle opposite <m>A</m>. Measure <m>r_a</m>.</li>
+                        <li>Verify your answer by calculation using <m>r_a = \Delta\,/\,(s-a)</m>.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 6-7-8 with excircle opposite A and external bisector construction lines shown. -->
+            </statement>
             <solution>
+                <p>
+                    Construction exercise. For checking: <m>s = 10.5</m> cm; by Heron's formula <m>\Delta \approx 20.3</m> cm<m>^2</m>; <m>r_a = \Delta\,/\,(s-a) \approx 20.3\,/\,2.5 \approx 8.1</m> cm.
+                </p>
+            </solution>
+        </exercise>
 
-            </solution>             
-        </exercise>        
-    </exercises> -->
+        <exercise>
+            <statement>
+                <p>
+                    Triangle <m>ABC</m> has <m>AB = 3</m> cm, <m>BC = 4</m> cm, and <m>CA = 5</m> cm.
+                    <ol marker="(a)">
+                        <li>Construct all three excircles, one opposite each vertex.</li>
+                        <li>Measure each excircle radius. Which is the largest? Which is the smallest?</li>
+                        <li>What relationship do you notice between the size of an excircle and the length of the side it is opposite?</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — right triangle 3-4-5 with all three excircles shown. -->
+            </statement>
+            <solution>
+                <p>
+                    <m>r_a = 2</m> cm, <m>r_b = 3</m> cm, <m>r_c = 6</m> cm. The largest excircle is opposite the shortest side; the smallest excircle is opposite the longest side.
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- [LP] Add information on how to differentiate  -->
+        <exercise>
+            <statement>
+                <p>
+                    A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use the reciprocal identity to find <m>r_c</m>.
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle with incircle and two excircles labelled r, r_a, r_b. -->
+            </statement>
+            <solution>
+                <p>
+                    <m>r_c = 15</m> cm.
+                </p>
+            </solution>
+        </exercise>
 
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
+        <exercise>
+            <statement>
+                <p>
+                    A right triangle has legs <m>5</m> cm and <m>12</m> cm.
+                    <ol marker="(a)">
+                        <li>Construct the excircle opposite the right angle.</li>
+                        <li>Measure its radius, then verify using <m>r_c = \Delta\,/\,(s-c)</m>.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with excircle opposite the right angle constructed. -->
+            </statement>
+            <solution>
+                <p>
+                    Hypotenuse <m>c = 13</m> cm, semi-perimeter <m>s = 15</m> cm, area <m>\Delta = 30</m> cm<m>^2</m>. By the shortcut <m>r_c = s = 15</m> cm; verify: <m>r_c = 30\,/\,(15-13) = 15</m> cm. <m>\checkmark</m>
+                </p>
+            </solution>
+        </exercise>
 
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
+        <exercise>
+            <statement>
+                <p>
+                    (Construction/discovery) For triangle <m>ABC</m> with sides <m>5</m> cm, <m>6</m> cm, and <m>7</m> cm:
+                    <ol marker="(a)">
+                        <li>Construct all three excircles. Label the tangent point of the excircle opposite <m>A</m> on side <m>BC</m> as <m>X_a</m>; the tangent point of the excircle opposite <m>B</m> on side <m>CA</m> as <m>X_b</m>; and the tangent point of the excircle opposite <m>C</m> on side <m>AB</m> as <m>X_c</m>.</li>
+                        <li>Draw lines <m>AX_a</m>, <m>BX_b</m>, and <m>CX_c</m>. What do you notice?</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with all three excircles, tangent points X_a, X_b, X_c labelled, and the three cevians to the Nagel point shown. -->
+            </statement>
+            <solution>
+                <p>
+                    The three lines <m>AX_a</m>, <m>BX_b</m>, <m>CX_c</m> are concurrent — they all pass through the <term>Nagel point</term> of the triangle.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    In triangle <m>PQR</m>, <m>PQ = 13</m> cm, <m>QR = 14</m> cm, and <m>PR = 15</m> cm. The excircle opposite <m>P</m> touches side <m>QR</m> at point <m>X</m>.
+                    <ol marker="(a)">
+                        <li>Find the lengths <m>QX</m> and <m>RX</m>.</li>
+                        <li>Find the tangent length from <m>P</m> to this excircle.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 13-14-15, excircle opposite P, tangent point X on QR with QX and RX labelled. -->
+            </statement>
+            <solution>
+                <p>
+                    Semi-perimeter <m>s = 21</m> cm. Using the tangent length formulas for the excircle opposite <m>P</m> (where <m>p = QR = 14</m>):
+                    <md>
+                        <mrow>QX \amp= s - PR = 21 - 15 = 6 \text{ cm}</mrow>
+                        <mrow>RX \amp= s - PQ = 21 - 13 = 8 \text{ cm.}</mrow>
+                    </md>
+                    Check: <m>QX + RX = 14 = QR</m>. <m>\checkmark</m>
+                </p>
+                <p>
+                    The tangent length from <m>P</m> is <m>s = 21</m> cm.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    (Enrichment — construction discovery) For a triangle of your choice:
+                    <ol marker="(a)">
+                        <li>Construct all three excircles.</li>
+                        <li>Construct the <term>nine-point circle</term> of the triangle: the circle passing through the midpoints of the three sides. (Find each midpoint, then construct the circumcircle of those three points.)</li>
+                        <li>Does the nine-point circle appear to touch each excircle at one point?</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle with nine-point circle and all three excircles, each touching the nine-point circle at one point (Feuerbach tangencies). -->
+            </statement>
+            <solution>
+                <p>
+                    The nine-point circle touches each excircle at exactly one point. This is <term>Feuerbach's theorem</term> — one of the most celebrated results in classical geometry. The nine-point circle also touches the incircle, making it tangent to all four circles associated with a triangle.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    (Construction) For a triangle with sides <m>5</m> cm, <m>6</m> cm, and <m>7</m> cm:
+                    <ol marker="(a)">
+                        <li>Construct the incircle.</li>
+                        <li>Construct all three excircles.</li>
+                        <li>Describe how the four circles are arranged around the triangle.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with incircle and all three excircles shown together. -->
+            </statement>
+            <solution>
+                <p>
+                    Construction exercise. The incircle sits inside the triangle touching all three sides. The three excircles sit outside, each in the region beyond one side of the triangle. Together the four circles fit snugly around the triangle without overlapping.
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    (Advanced construction) Draw two circles of radii <m>2</m> cm and <m>3</m> cm with their centres <m>7</m> cm apart.
+                    <ol marker="(a)">
+                        <li>Construct both <term>transverse common tangents</term> to the two circles (tangents that cross between the circles). Label their intersection point <m>P</m>.</li>
+                        <li>Construct one <term>direct common tangent</term> (a tangent that does not cross between the circles). This tangent, together with the two transverse tangents, forms a triangle. Label the triangle <m>PQR</m>, where <m>Q</m> and <m>R</m> are the points where the direct tangent meets the transverse tangents.</li>
+                        <li>The two original circles are excircles of triangle <m>PQR</m>. Which vertices are they opposite?</li>
+                        <li>Construct the third excircle of triangle <m>PQR</m> — the one opposite <m>P</m>.</li>
+                    </ol>
+                </p>
+                <!-- TODO: tkz-euclide diagram — two circles of radii 2 and 3 with centres 7 apart; transverse tangents meeting at P; one direct tangent forming triangle PQR; third excircle opposite P constructed. -->
+            </statement>
+            <solution>
+                <p>
+                    (a)–(b) Construction exercise. The two transverse tangents meet at <m>P</m>, the internal centre of similitude of the two circles (between them, dividing the line of centres in the ratio of the radii).
+                </p>
+                <p>
+                    (c) Each original circle is tangent to the direct tangent line (side <m>QR</m>) and to the extensions of the two sides of the triangle meeting at its adjacent vertex. This is exactly the definition of an excircle: the circle of radius <m>2</m> cm is opposite <m>Q</m>, and the circle of radius <m>3</m> cm is opposite <m>R</m>.
+                </p>
+                <p>
+                    (d) Construct the external bisectors of angles <m>Q</m> and <m>R</m> in triangle <m>PQR</m>; their intersection is the excenter <m>I_p</m>. Drop a perpendicular from <m>I_p</m> to one side to find the radius, then draw the excircle.
+                </p>
+            </solution>
+        </exercise>
+    </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

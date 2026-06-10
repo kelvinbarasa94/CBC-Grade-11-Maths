@@ -53,13 +53,16 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To guide learners to discover that exactly two direct common tangents exist for two separate circles, and that these tangents appear to meet at a single point on the line through the two centres.
+                    To guide learners to discover that exactly two direct common tangents exist for two separate circles, and that these tangents meet at a single point on the line through the two centres.
                 </p>
             </li>
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Prepare a sheet with two pre-drawn circles of clearly different sizes for learners who struggle to draw their own. Circulate and prompt: <q>Does your line touch both circles without crossing either one? Can you find another such line on the same side? Where do your two lines meet when you extend them?</q>
+                    Prepare a sheet with two pre-drawn circles of clearly different sizes for learners who struggle to draw their own. 
+                </p>
+                <p>
+                    If learners find the tangents easily, challenge them to find a formula for the distance between the two tangent points in terms of the radii and distance between the centres.
                 </p>
             </li>
         </dl>
@@ -160,17 +163,12 @@
             <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Confirm that everyone found exactly two tangents on the same side. Ask a learner to describe where the two lines met — establish together that this point always lies on line <m>AB</m> extended beyond the smaller circle. Introduce the term <term>external centre of similitude</term> for this point.
+                        <alert>Connecting to Learner Work:</alert> Confirm that everyone found exactly two tangents on the same side. Ask a learner to describe where the two lines met — establish together that this point always lies on line <m>AB</m> extended beyond the smaller circle.
                     </p>
                 </li>
                 <li>
                     <p>
                         Work through the construction steps in the Key Ideas box below. Demonstrate each step on the board before asking learners to follow along at their desks.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Emphasise that the auxiliary circle (radius <m>R - r</m>) and the semicircle on <m>AB</m> are construction tools only — they do not appear in the final diagram.
                     </p>
                 </li>
             </ul>
@@ -530,15 +528,54 @@
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <example xml:id="ex-direct-tangent-construction">
+    <example xml:id="ex-2-9-5-construction">
         <statement>
             <p>
                 Two circles have centres <m>A</m> and <m>B</m> with radii 2 cm and 5 cm respectively. The distance <m>AB = 9</m> cm. Using a compass and ruler, construct the direct common tangents to the two circles.
             </p>
+            <figure xml:id="fig-2-5-9-construction">
+                <caption>
+                    Two circles with centres A and B, and line AB extended.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{5}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(-30:9){B}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDefShiftPoint[a](-2*\r, 0){a1}
+                            \tkzDefShiftPoint[b](-2*\R, 0){b1}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawPoints(A,B)
+                            \tkzDrawSegment(A,B)
+                            \tkzLabelSegment[above, sloped, fill=white, opacity=0.5](A,B){$9$ cm}
+                            \tkzDrawSegment[blue](A,a)
+                            \tkzDrawSegment[red](B,b1)
+                            \tkzLabelSegment[above, sloped](A,a1){$2$ cm}
+                            \tkzLabelSegment[above, sloped](B,b1){$5$ cm}
+                            \tkzLabelPoints(A,B)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
         </statement>
         <solution>
             <p>
-                Follow the construction steps from the Key Ideas box above.
+                Follow the construction steps as discussed above:
                 <ol>
                     <li>
                         <p>
@@ -557,7 +594,7 @@
                     </li>
                     <li>
                         <p>
-                            Set your compass to <m>IA = IB = 4.5</m> cm. Draw the semicircle on diameter <m>AB</m> (dashed).
+                            Set your compass to <m>IA = IB = 4.5</m> cm. Draw the connecting circle on diameter <m>AB</m> (dashed).
                         </p>
                     </li>
                     <li>
@@ -567,16 +604,65 @@
                     </li>
                     <li>
                         <p>
-                            Draw the ray <m>BQ</m> extended to meet circle <m>B</m> at <m>T_1'</m>. Construct the tangent to circle <m>B</m> at <m>T_1'</m>; extend it to meet line <m>AB</m> extended at <m>O</m>. Draw line <m>OT_1'</m> extended to meet circle <m>A</m> at <m>T_1</m>.
+                            Draw the ray <m>BQ</m> extended to meet circle <m>B</m> at <m>T_1'</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Repeat using <m>Q'</m> to find the second tangent <m>T_2 T_2'</m>.
+                            Construct the tangent to circle <m>B</m> at <m>T_1'</m>; extend it to meet line <m>AB</m> extended at <m>O</m>, and mark the point <m>T_1</m> where the tangent meets <m>AB</m>. The line <m>T_1T_1'</m> is one direct common tangent.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Repeat the previous two steps using <m>Q'</m> to find the second direct common tangent <m>T_2T_2'</m>.
                         </p>
                     </li>
                 </ol>
             </p>
+            <figure xml:id="fig-2-5-9-soln">
+                <caption>
+                    Second direct tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{5}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(-30:9){B}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzInterLC[R](B,Q')(B,\R) \tkzGetPoints{X2'}{T2'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzInterLC[R](O,T2')(A,\r) \tkzGetPoints{T2}{T2}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(O,A,B,T',T,T2,Q,Q',I,T2')
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzDrawLines(B,T' A,T B,T2' A,T2)
+                            \tkzDrawLines(T',O T2',O)
+                            \tkzLabelPoints(O,B,I)
+                            \tkzLabelPoints[right](A, Q)
+                            \tkzLabelPoints[above](Q')
+                            \tkzLabelPoint[above](T){$T_1$}
+                            \tkzLabelPoint[above left](T'){$T'_1$}
+                            \tkzLabelPoint[below](T2){$T_2$}
+                            \tkzLabelPoint[below](T2'){$T'_2$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
         </solution>
     </example>
 
@@ -654,7 +740,7 @@
             <p>
                 By Pythagoras:
                 <md>
-                    <mrow> TT'^2 \amp= AB^2 - (R - r)^2 </mrow>
+                    <mrow> (TT')^2 \amp= AB^2 - BM^2 </mrow>
                     <mrow>       \amp= 13^2 - 5^2 </mrow>
                     <mrow>       \amp= 169 - 25 </mrow>
                     <mrow>       \amp= 144 </mrow>
@@ -666,6 +752,19 @@
             </p>
         </solution>
     </example>
+
+    <theorem xml:id="length-of-direct-tangent">
+        <title>Length of the Direct Tangent</title>
+        <p>
+            Generalising the previous example, if we have two circles with radii <m>r</m> and <m>R</m> and the distance between their centres is <m>d</m>, then the length of the direct common tangent <m>L</m> is given by:
+            <md>
+                <mrow> L \amp= \sqrt{d^2 - (R - r)^2} </mrow>
+            </md>
+        </p>
+        <p>
+            You'll prove this in <xref ref="ex-direct-tangent-length-proof"/>.
+        </p>
+    </theorem>
 
     <example xml:id="ex-direct-tangent-find-d">
         <statement>
@@ -826,7 +925,7 @@
         </solution>
         </exercise>
 
-        <exercise>
+        <exercise xml:id="ex-direct-tangent-length-proof">
             <statement>
                 <p>
                     A direct common tangent <m>TT'</m> touches circle <m>A</m> (radius <m>r</m>) at <m>T</m> and circle <m>B</m> (radius <m>R</m>, <m>R \gt r</m>) at <m>T'</m>. The distance between the centres is <m>d = AB</m>.
