@@ -44,26 +44,32 @@
 
     <axiom component="lesson-plan">
         <title>Problem-Solving and Discovery</title>
+
         <ol>
+
             <li>
                 <title>Suggested Time</title>
                 <p>
                     15 minutes
                 </p>
             </li>
+
             <li>
                 <title>Objective</title>
                 <p>
-                    To discover the mechanism of a progressive tax structure, explore why tax burdens change across various income thresholds, and examine the purpose of post-tax relief mechanisms.
+                    To understand how PAYE is calculated using different tax bands and how tax relief affects the amount of tax paid.
                 </p>
             </li>
+
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Organize learners into small collaborative task groups. Guide them to discuss and fill in the missing entries in the introductory <em>Income Level vs. Tax Effect</em> table. Circulate to ensure learners understand that under a progressive taxation model, higher incomes do not just pay more tax overall, but are subject to increasing marginal tax percentages. Prompt deep evaluation during the <em>Higher Order Thinking Task</em> regarding why personal relief is deducted from gross tax rather than being subtracted directly from gross earnings.
+                    Organize learners into groups and guide them to complete the <em>Income Level vs. Tax Effect</em> table. Encourage discussion on why people with different incomes pay different amounts of tax. Help learners identify how tax relief reduces the final tax payable.
                 </p>
             </li>
+
         </ol>
+
     </axiom>
         <activity>
             <statement>
@@ -169,44 +175,52 @@
 
     <axiom component="lesson-plan">
         <title>Structured Instruction</title>
+
         <p>
-            <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    10 minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To formalize multi-tiered statutory slab partitions and anchor the operational sequence for calculating progressive PAYE balances.
-                </p>
-            </li>
-            </dl>
-        </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
             <ol>
                 <li>
+                    <title>Suggested Time</title>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Review the exploratory table from the anchor task. Explicitly demonstrate that in progressive systems, tax calculations do not apply a single high rate to an individual's entire salary pool. Instead, the total income is sectioned into separate layers or "slabs," and each layer is taxed at its own corresponding rate.
+                        10 minutes
                     </p>
                 </li>
+
                 <li>
+                    <title>Objective</title>
                     <p>
-                        <alert>The Mechanism of the "Excess" Band:</alert> Walk learners through what happens when an income overflows a given tax bracket. Show that you must tax the maximum width of the fully saturated lower slabs first, and then apply the subsequent higher percentage rate strictly to the remaining portion (the excess balance) that falls into the next band.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <alert>Consolidating Reductions and Reliefs:</alert> Standardize the terminal computation process on the chalkboard: <m>\text{Net PAYE}\; = \;\text{Sum of Bracket Taxes}\; - \;(\text{Personal Relief} \;+\; \text{Insurance Relief})</m>. Emphasize that net pay can then be determined by subtracting this final Net PAYE alongside any other non-tax deductions (such as SHA, WCPS, or SACCO loans) from the individual's original gross salary.
+                        To understand how PAYE is calculated using different tax bands and how tax reliefs affect the final tax payable.
                     </p>
                 </li>
             </ol>
+        </p>
+
+        <paragraphs>
+            <title>Discussion of Learner Findings</title>
+
+            <ol>
+
+                <li>
+                    <p>
+                        <alert>Discussion:</alert> Review the activity and remind learners that different parts of an income may be taxed at different rates. Explain that a higher tax rate is not applied to the entire income but only to the amount that falls within that tax band.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <alert>Discussion:</alert> Use an example to show how income is divided among the tax bands. Calculate the tax for each band separately and then find the total tax payable.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <alert>Discussion:</alert> Show learners how personal relief and insurance relief reduce the total tax payable. Explain that net pay is obtained after deducting PAYE and any other deductions from the gross salary.
+                    </p>
+                </li>
+
+            </ol>
+
         </paragraphs>
     </axiom>
-"
     <insight>
         <p>
             Income tax is calculated using a progressive system where different portions of income are taxed at different rates depending on income level.
@@ -728,7 +742,9 @@
 
         <table>
             <title>Differentiation Matrix for Progressive Income Tax</title>
+
             <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
+
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
@@ -738,10 +754,10 @@
                     <cell><alert>Struggling Learners (Support)</alert></cell>
                     <cell>
                         <p>
-                            Provide targeted assistance isolating basic single-band tax exercises before jumping into multi-layered progressive structures. Use pre-rendered visual flowcharts tracking gross earnings down to net income.
+                            Begin with simple tax calculations involving one tax band. Guide learners through each step and provide worked examples.
                         </p>
                         <p>
-                            Worksheets include clear structural boundaries for tax calculations. Provide scaffolds showing how to partition money within the first active band boundary (e.g., matching the initial threshold limit) before checking higher brackets.
+                            Use tables and worksheets to help learners identify the taxable amount in each band before calculating the tax due.
                         </p>
                     </cell>
                 </row>
@@ -750,9 +766,8 @@
                     <cell><alert>On-Level Learners (Core)</alert></cell>
                     <cell>
                         <p>
-                            Learners practice breaking salaries into sequential portions, reading complex data matrices, mapping currencies, and using multiple compound slabs to execute PAYE scenarios.
+                            Learners calculate tax for incomes that fall within different tax bands. They determine gross pay, tax payable, and net income using given tax rates.
                         </p>
-                        
                     </cell>
                 </row>
 
@@ -760,36 +775,45 @@
                     <cell><alert>Advanced Learners (Challenge)</alert></cell>
                     <cell>
                         <p>
-                            Extend problems to complex backward calculations, where learners determine original basic salaries or total gross pay starting from a given net take-home pay and tax framework.
+                            Give learners problems that require finding missing values such as gross income or taxable income from the net income.
                         </p>
                         <p>
-                            Learners explore and analyze how sudden modifications to state tax brackets or relief limits impact distinct economic demographics. They construct contextual commercial application tasks, design progressive tax matrices, and lead peer troubleshooting workshops.
+                            Encourage learners to compare the amount of tax paid by people in different income groups and explain their findings.
                         </p>
                     </cell>
                 </row>
+
             </tabular>
+
         </table>
 
         <paragraphs>
-            <title>Teacher Execution Guidance</title>
+            <title>Teacher Guidance</title>
+
             <ol>
+
                 <li>
                     <p>
-                        <alert>Classroom Layout:</alert> Seat struggling learners together near the front of the room. This allows you to check their first-band calculations quickly while core and advanced groups work independently on multi-slab calculations and backward-mapping challenges.
+                        <alert>Classroom Organization:</alert> Provide additional support to learners who experience difficulty with tax calculations while allowing other groups to work independently.
                     </p>
                 </li>
+
                 <li>
                     <p>
-                        <alert>Strategic Peer Mentoring:</alert> Pair on-level learners who finish early with support groups as peer consultants. Having them explain how to calculate tax on an overflow balance helps solidify their own mathematical reasoning.
+                        <alert>Peer Support:</alert> Encourage learners who complete their work early to assist others by explaining the calculation steps.
                     </p>
                 </li>
+
                 <li>
                     <p>
-                        <alert>Extension Prompts:</alert> Challenge advanced learners by asking: <em>"If a worker receives an extra Ksh 5,000 bonus that pushes them into the highest tax bracket, how does their net bonus compare to a worker whose bonus stays in a lower bracket?"</em> This helps connect algebraic computations to real-world economic logic.
+                        <alert>Extension Activity:</alert> Ask learners to investigate how a change in income affects the amount of tax paid and the net income received.
                     </p>
                 </li>
+
             </ol>
+
         </paragraphs>
+
     </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />

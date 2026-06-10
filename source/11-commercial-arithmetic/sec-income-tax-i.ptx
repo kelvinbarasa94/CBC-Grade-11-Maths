@@ -46,26 +46,32 @@
 
     <axiom component="lesson-plan">
         <title>Problem-Solving and Discovery</title>
+
         <ol>
+
             <li>
                 <title>Suggested Time</title>
                 <p>
                     15 minutes
                 </p>
             </li>
+
             <li>
                 <title>Objective</title>
                 <p>
-                    To simplify real-world problems into known values (basic salary, allowances, relief) and show how they affect taxable income.
+                    To identify basic salary, allowances, deductions, and reliefs in practical situations and determine how they affect taxable income.
                 </p>
             </li>
+
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Organize learners into groups. Make groups understand that currency translation between Kenyan Shillings and Kenya Pounds (<m>1 \;\text{K£} \; = \;\text{Ksh}\; 20</m>) requires dividing the Shilling total by <m>20</m>.
+                    Organize learners into groups and guide them through the activities. Remind learners that to convert Kenyan Shillings to Kenya Pounds, the amount is divided by <m>20</m> since <m>1\;\text{K£} = \text{Ksh}\;20</m>.
                 </p>
             </li>
+
         </ol>
+
     </axiom>
 
     <activity>
@@ -176,36 +182,44 @@
 
     <axiom component="lesson-plan">
         <title>Structured Instruction</title>
+
         <p>
-            <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    10 minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To give equations for individual income tax calculations and distinguish cleanly between tax deductions and relief.
-                </p>
-            </li>
-            </dl>
-        </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
             <ol>
                 <li>
+                    <title>Suggested Time</title>
                     <p>
-                        Use the results from Case Studies 1 through 4 to build a salary-to-tax workflow on the board. Simply show that allowances increases an individual's taxable income, whereas deductions like NSSF reduces it.
+                        10 minutes
                     </p>
                 </li>
+
                 <li>
+                    <title>Objective</title>
                     <p>
-                        Address a common point of confusion directly: point out that deductions (like NSSF) are subtracted from <em>basic salary</em> before tax is calculated, whereas reliefs (like Personal Relief) are subtracted from the <em>gross tax</em>  after the percentage rate is applied.
+                        To develop formulas for income tax calculations and distinguish between deductions and reliefs.
                     </p>
                 </li>
             </ol>
+        </p>
+
+        <paragraphs>
+            <title>Discussion of Learner Findings</title>
+
+            <ol>
+
+                <li>
+                    <p>
+                        Use the results from Case Studies 1 to 4 to show the steps involved in calculating income tax. Guide learners to see that allowances increase taxable income, while deductions such as NSSF reduce it.
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Explain that deductions, such as NSSF, are subtracted before tax is calculated, while reliefs, such as Personal Relief, are subtracted from the tax payable after the tax has been calculated.
+                    </p>
+                </li>
+
+            </ol>
+
         </paragraphs>
     </axiom>
 
@@ -379,7 +393,9 @@
 
         <table>
             <title>Differentiation Matrix for Income Tax Calculations</title>
+
             <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
+
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
@@ -389,9 +405,10 @@
                     <cell><alert>Struggling Learners</alert></cell>
                     <cell>
                         <p>
-                            Provide highly guided instruction using questions that allows one operation at a time: Gross Income <m>=</m> Basic salary <m>+</m> Allowances. Remind the earners that we perform Ksh <m>\div 20</m> to transformation into K£.
+                            Guide learners through one step at a time. Begin with finding Gross Income using:
+                            <m>\text{Gross Income} = \text{Basic Salary} + \text{Allowances}</m>.
+                            Remind learners that Ksh is converted to K£ by dividing by 20.
                         </p>
-                        
                     </cell>
                 </row>
 
@@ -399,9 +416,8 @@
                     <cell><alert>On-Level Learners</alert></cell>
                     <cell>
                         <p>
-                            Learners independently point out income variables, handle currency conversions, and apply formulas to determine taxable income and Net PAYE.
+                            Learners identify the relevant values, perform currency conversions, and calculate taxable income and PAYE using the given tax rates.
                         </p>
-                        
                     </cell>
                 </row>
 
@@ -409,11 +425,13 @@
                     <cell><alert>Advanced Learners</alert></cell>
                     <cell>
                         <p>
-                            Give problems to include reverse tax calculations, such as determining an employee's basic salary or gross income when given only the PAYE and the tax slabs.
+                            Challenge learners with questions that require finding the basic salary or gross income when the PAYE and tax bands are given.
                         </p>
                     </cell>
                 </row>
+
             </tabular>
+
         </table>
     </axiom>
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
