@@ -162,10 +162,6 @@
             </p>
 
             <p>
-                <term>Further Exploration</term>
-            </p>
-
-            <p>
                 The group notices a pattern in Plan B where each year the amount is multiplied by the same factor.
                 Investigate how this pattern can be written in a general mathematical form.
             </p>
@@ -186,10 +182,6 @@
                         The amount after <m>n</m> years
                     </li>
                 </ol>
-            </p>
-
-            <p>
-                <term>Reflection</term>
             </p>
 
             <p>
@@ -304,7 +296,7 @@
                     </p>
 
                     <p>
-                        On computation year by year, observe that:
+                        From the year-by-year calculations, observe that:
                     </p>
                 <p>
 

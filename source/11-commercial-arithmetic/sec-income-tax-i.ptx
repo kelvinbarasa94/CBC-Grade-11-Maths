@@ -96,7 +96,7 @@
             <tabular top="medium" bottom="medium" right="medium" left="medium">
                 <row header="yes">
                     <cell>Income Component</cell>
-                    <cell>Role in Salary Structure</cell>
+                    <cell>Effect in Taxable Income</cell>
                 </row>
                 <row>
                     <cell>Basic salary</cell>
@@ -276,7 +276,7 @@
     <example>
         <statement>
             <p>
-                A teacher has a basic salary of Ksh <m>35,000</m>, a house allowance of Ksh <m>12,000</m>, and a medical allowance of Ksh <m>3,000</m>. She contributes Ksh <m>200</m> to NSSF. Find her monthly taxable income.
+                A teacher has a basic salary of Ksh <m>35,000</m>, a house allowance of Ksh <m>12,000</m>, and a medical allowance of Ksh <m>3,000</m>. She contributes Ksh <m>200</m> to NSSF, find her monthly taxable income.
             </p>
         </statement>
         <solution>
