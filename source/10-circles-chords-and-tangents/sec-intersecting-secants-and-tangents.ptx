@@ -168,8 +168,9 @@
         </ul>
     </axiom>
 
-    <insight>
+    <theorem>
         <title>Two-Secant Theorem</title>
+        <statement>
         <p>
             A <term>secant</term> to a circle is a straight line that intersects the circle at two distinct points.
         </p>
@@ -208,7 +209,82 @@
             </md>
             In words: <em>the product of the external segment and the whole secant is the same for both secants.</em>
         </p>
-    </insight>
+        </statement>
+        <proof>
+                <figure xml:id="fig-two-secant-theorem-explain">
+                    <caption>Similar Triangles</caption>
+                    <image width="80%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \tkzDefPoints{0/0/P, 4/0/O}
+                                \tkzDefCircle[R](O,2) \tkzGetPoint{cR}
+                                \tkzDrawCircle[thick, teal](O,cR)
+                                \tkzDefPoint(6.5,2){S1}
+                                \tkzInterLC[near](P,S1)(O,cR) \tkzGetPoints{A}{B}
+                                \tkzDefPoint(6.5,-1.5){S2}
+                                \tkzInterLC[near](P,S2)(O,cR) \tkzGetPoints{C}{D}
+                                \tkzDrawSegments(P,B P,D A,C B,D)
+                                \tkzDrawPoints(P,A,B,C,D)
+                                \tkzLabelPoints[left](P)
+                                \tkzLabelPoints[above left](A)
+                                \tkzLabelPoints[above right](B)
+                                \tkzLabelPoints[below left](C)
+                                \tkzLabelPoints[below right](D)
+                                \tkzLabelSegment[above, sloped, pos=0.2, font=\small](P,B){$PA$}
+                                \tkzLabelSegment[above, sloped, pos=0.55, font=\small](P,B){$PB$}
+                                \tkzLabelSegment[below, sloped, pos=0.2, font=\small](P,D){$PC$}
+                                \tkzLabelSegment[below, sloped, pos=0.55, font=\small](P,D){$PD$}
+                                \tkzFillAngle[fill=orange!20, opacity=0.5, size=0.5](C,P,A)
+                                \tkzMarkAngle[size=0.5](C,P,A)
+                                \tkzLabelAngle[pos=0.8](C,P,A){\small $\alpha$}
+
+                                \tkzFillAngle[fill=cyan!20, opacity=0.5, size=0.4](P,A,C)
+                                \tkzMarkAngle[size=0.4](P,A,C)
+                                \tkzLabelAngle[pos=0.7](P,A,C){\small $\beta$}
+
+                                \tkzFillAngle[fill=red!20, opacity=0.5, size=0.4](C,A,B)
+                                \tkzMarkAngle[size=0.4](C,A,B)
+                                \tkzLabelAngle[pos=0.7, xshift=10pt](C,A,B){\small $180^\circ - \beta$}
+
+                                \tkzFillAngle[fill=cyan!20, opacity=0.5, size=0.5](B,D,C)
+                                \tkzMarkAngle[size=0.5](B,D,C)
+                                \tkzLabelAngle[pos=0.9](B,D,C){\small $\beta$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            <p>
+                The triangles <m>\triangle PAD</m> and <m>\triangle PCB</m> are similar because:
+                <ul>
+                    <li>
+                        <p>
+                            They share the angle <m>\alpha</m> at <m>P</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Since <m>ABDC</m> is a cyclic quadrilateral, we have <m>\angle BDC = 180^\circ - \angle BAC</m>. Since <m>PB</m> is a line, <m>\angle PAC = 180^\circ - \angle BAC</m>. Thus <md>
+                                \angle BDC = 180^\circ - \angle BAC = \angle PAC
+                            </md>
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Hence the two triangles are similar by the AA criterion.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Hence the ratios of corresponding sides are equal, so:
+                <md>
+                    <mrow> \frac{PA}{PD} \amp = \frac{PC}{PB} </mrow>
+                    <mrow> PA \times PB \amp = PC \times PD </mrow>
+                </md> 
+            </p>
+        </proof>
+    </theorem>
 
     <warning>
         <p>
@@ -218,85 +294,9 @@
             The same applies to the second secant: use the full distance from <m>D</m> to <m>P</m>, not just the distance from <m>D</m> to <m>C</m>.
         </p>
     </warning>
+    
 
-    <p>
-        The Two-Secant Theorem tells us that <m>PA \times PB = PC \times PD</m>. This can be understood using similar triangles: 
-        
-    </p>
-    <figure xml:id="fig-two-secant-theorem-explain">
-            <caption>Similar Triangles</caption>
-            <image width="80%">
-                <latex-image>
-                    \begin{tikzpicture}
-                        \tkzDefPoints{0/0/P, 4/0/O}
-                        \tkzDefCircle[R](O,2) \tkzGetPoint{cR}
-                        \tkzDrawCircle[thick, teal](O,cR)
-                        \tkzDefPoint(6.5,2){S1}
-                        \tkzInterLC[near](P,S1)(O,cR) \tkzGetPoints{A}{B}
-                        \tkzDefPoint(6.5,-1.5){S2}
-                        \tkzInterLC[near](P,S2)(O,cR) \tkzGetPoints{C}{D}
-                        \tkzDrawSegments(P,B P,D A,C B,D)
-                        \tkzDrawPoints(P,A,B,C,D)
-                        \tkzLabelPoints[left](P)
-                        \tkzLabelPoints[above left](A)
-                        \tkzLabelPoints[above right](B)
-                        \tkzLabelPoints[below left](C)
-                        \tkzLabelPoints[below right](D)
-                        \tkzLabelSegment[above, sloped, pos=0.2, font=\small](P,B){$PA$}
-                        \tkzLabelSegment[above, sloped, pos=0.55, font=\small](P,B){$PB$}
-                        \tkzLabelSegment[below, sloped, pos=0.2, font=\small](P,D){$PC$}
-                        \tkzLabelSegment[below, sloped, pos=0.55, font=\small](P,D){$PD$}
-                        \tkzFillAngle[fill=orange!20, opacity=0.5, size=0.5](C,P,A)
-                        \tkzMarkAngle[size=0.5](C,P,A)
-                        \tkzLabelAngle[pos=0.8](C,P,A){\small $\alpha$}
-
-                        \tkzFillAngle[fill=cyan!20, opacity=0.5, size=0.4](P,A,C)
-                        \tkzMarkAngle[size=0.4](P,A,C)
-                        \tkzLabelAngle[pos=0.7](P,A,C){\small $\beta$}
-
-                        \tkzFillAngle[fill=red!20, opacity=0.5, size=0.4](C,A,B)
-                        \tkzMarkAngle[size=0.4](C,A,B)
-                        \tkzLabelAngle[pos=0.7, xshift=10pt](C,A,B){\small $180^\circ - \beta$}
-
-                        \tkzFillAngle[fill=cyan!20, opacity=0.5, size=0.5](B,D,C)
-                        \tkzMarkAngle[size=0.5](B,D,C)
-                        \tkzLabelAngle[pos=0.9](B,D,C){\small $\beta$}
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
-    <p>
-        The triangles <m>\triangle PAD</m> and <m>\triangle PCB</m> are similar because:
-        <ul>
-            <li>
-                <p>
-                    They share the angle <m>\alpha</m> at <m>P</m>.
-                </p>
-            </li>
-            <li>
-                <p>
-                    Since <m>ABDC</m> is a cyclic quadrilateral, we have <m>\angle BDC = 180^\circ - \angle BAC</m>. Since <m>PB</m> is a line, <m>\angle PAC = 180^\circ - \angle BAC</m>. Thus <md>
-                        \angle BDC = 180^\circ - \angle BAC = \angle PAC
-                    </md>
-                    
-                </p>
-            </li>
-            <li>
-                <p>
-                    Hence the two triangles are similar by the AA criterion.
-                </p>
-            </li>
-        </ul>
-    </p>
-    <p>
-        Hence the ratios of corresponding sides are equal, so:
-        <md>
-            <mrow> \frac{PA}{PD} \amp = \frac{PC}{PB} </mrow>
-            <mrow> PA \times PB \amp = PC \times PD </mrow>
-        </md> 
-    </p>
-
-    <insight>
+    <theorem>
         <title>Special Case: Tangent-Secant Theorem</title>
         <p>
             As the points <m>C</m> and <m>D</m> move closer together, we have <m>PC \approx PD</m>. In the limit as <m>C</m> and <m>D</m> merge into a single point <m>T</m>, the second secant becomes a tangent, and the product <m>PC \times PD</m> becomes <m>PT \times PT = PT^2</m>. This gives us the Tangent-Secant Theorem, which is a special case of the Two-Secant Theorem:
@@ -346,7 +346,7 @@
             </md>
             In words: <em>the square of the tangent length equals the product of the external segment and the whole secant.</em>
         </p>
-    </insight>
+    </theorem>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
@@ -354,7 +354,7 @@
         <title>Using the Two-Secant Theorem</title>
         <statement>
             <p>
-                From an external point <m>P</m>, two secants are drawn to a circle. The first secant meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and <m>AB = 9</m> cm. The second secant meets the circle at <m>C</m> and <m>D</m>, where <m>PC = 3</m> cm. Find <m>PD</m>.
+                From an external point <m>P</m>, two secants are drawn to a circle. The first secant meets the circle at <m>A</m> and <m>B</m>, where <m>PA = 4</m> cm and <m>AB = 8</m> cm. The second secant meets the circle at <m>C</m> and <m>D</m>, where <m>PC = 3</m> cm. Find <m>PD</m>.
             </p>
 
             <figure xml:id="fig-two-secant-example">
@@ -400,7 +400,7 @@
         </statement>
         <solution>
             <p>
-                Since we are only told <m>PA</m> and <m>AB</m>, we calculate <m>PB = PA + PB = 4 + 8 = 12</m>
+                Since we are only told <m>PA</m> and <m>AB</m>, we calculate <md>PB = PA + PB = 4 + 8 = 12</md>
                 By the Two-Secant Theorem:
                 <md>
                     <mrow> PA \times PB \amp = PC \times PD </mrow>
@@ -409,7 +409,7 @@
                 </md>
             </p>
             <p>
-                Note that the chord <m>CD</m> inside the circle has length <m>PD - PC = 16 - 3 = 13</m> cm.
+                Note that the chord <m>CD</m> inside the circle has length <md>CD = PD - PC = 16 - 3 = 13\,\text{cm}</md>
             </p>
         </solution>
     </example>
@@ -516,7 +516,7 @@
                           %% --- LABEL ---
                           \tkzLabelPoints[below](T)
                           \tkzLabelPoints[below left](A)
-                          \tkzLabelPoints[left](E)
+                          \tkzLabelPoints[right](E)
                           \tkzLabelPoints[above left](F)
                           \tkzLabelSegment[below left, font=\small](T,A){$4$ cm}
                           \tkzLabelSegment[left, font=\small](F,E){$6$ cm}
@@ -669,11 +669,6 @@
                 </figure>
 
             </statement>
-            <hint>
-                <p>
-                    First find <m>PB</m> using <m>PB = PA + AB</m>, then apply the Tangent-Secant Theorem.
-                </p>
-            </hint>
             <answer>
                 <p>
                     <m>PB = PA + AB = 4 + 12 = 16</m> cm.
@@ -819,7 +814,7 @@
                     <caption>External point <m>P</m>, tangent to <m>T</m>, secant through <m>A</m> (nearer) and <m>B</m> (farther).</caption>
                     <image width="55%">
                         <latex-image>
-                            \begin{tikzpicture}[scale=1.0]
+                            \begin{tikzpicture}[scale=0.8]
 
                               %% --- SET ---
                               \tkzDefPoint(0,0){P}
@@ -834,8 +829,8 @@
 
                               %% --- DRAW ---
                               \tkzDrawCircle[thick, teal](O,cR)
-                              \tkzDrawSegment[thick](P,T)
-                              \tkzDrawSegment[thick](P,B)
+                              \tkzDrawSegments[thick](P,T P,B)
+                              \tkzDrawSegments(A,T T,B)
                               \tkzDrawPoints[size=2pt](P,T,A,B)
 
                               %% --- MARK ---
@@ -843,7 +838,7 @@
                               %% --- LABEL ---
                               \tkzLabelPoints[left](P)
                               \tkzLabelPoints[above right](T)
-                              \tkzLabelPoints[below](A)
+                              \tkzLabelPoints[below left](A)
                               \tkzLabelPoints[below right](B)
 
                             \end{tikzpicture}
@@ -855,17 +850,17 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Write down the size of angle <m>\angle PTA</m>. (<em>Hint:</em> what is the angle between a tangent and a radius?)
+                                Explain why <m>\angle PTA = \angle PBT</m>.
                             </p>
                         </li>
                         <li>
                             <p>
-                                In triangle <m>\triangle PTB</m> and triangle <m>\triangle PAT</m>, identify the angle they share and explain why <m>\angle PTB = \angle TAB</m>. (This follows from the tangent-chord angle theorem — the angle between a tangent and a chord equals the inscribed angle on the opposite side.)
+                                Show that <m>\triangle PTB \sim \triangle PAT</m>, i.e. the two triangles are similar.
                             </p>
                         </li>
                         <li>
                             <p>
-                                Explain why <m>\triangle PTB \sim \triangle PAT</m>, and use this to show that <m>PT^2 = PA \times PB</m>.
+                                Use this to show that <m>PT^2 = PA \times PB</m>.
                             </p>
                         </li>
                     </ol>
@@ -876,21 +871,21 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                The radius <m>OT</m> is perpendicular to the tangent at <m>T</m>. However, <m>\angle PTA</m> is not a right angle in general — it is the tangent-chord angle. The angle between the tangent <m>PT</m> and chord <m>TA</m> equals the inscribed angle in the alternate segment, i.e. <m>\angle PTA = \angle TBA</m>.
+                                By the alternate segement theorem, since <m>PT</m> is a tangent, <m>\angle PTA</m> is equal to the inscribed angle in the alternate segment, which is <m>\angle ABT</m>. Since <m>PB</m> is a line, we conclude that <md> \angle PBT = \angle ABT = \angle PTA</md>.
                             </p>
                         </li>
                         <li>
                             <p>
-                                Both triangles share the angle at <m>P</m>. By the tangent-chord angle theorem, <m>\angle PTB = \angle TAB</m> (tangent-chord angle equals inscribed angle in alternate segment).
+                                Both triangles share the angle at <m>P</m>, and we have just shown that <m>\angle PTA = \angle PBT</m>. Hence the two triangles are similar by the AA criterion.
                             </p>
                         </li>
                         <li>
                             <p>
-                                Since <m>\triangle PTB</m> and <m>\triangle PAT</m> share angle <m>P</m> and have <m>\angle PTB = \angle PAT</m> (= inscribed angle in alternate segment), they are similar by AA. From the ratio of corresponding sides:
+                                From the ratio of corresponding sides:
                                 <md>
-                                    \frac{PT}{PB} = \frac{PA}{PT},
+                                   <mrow> \frac{PT}{PB} \amp = \frac{PA}{PT} </mrow>
+                                   <mrow> PT^2 \amp = PA \times PB </mrow>
                                 </md>
-                                which gives <m>PT^2 = PA \times PB</m>.
                             </p>
                         </li>
                     </ol>

@@ -10,11 +10,11 @@
   <!-- include sections -->
   <!-- <xi:include href="sec-section-name.ptx" /> -->
   <xi:include href="sec-constructing-tangents.ptx" />
+  <xi:include href="sec-alternate-segment-theorem.ptx" />
   <xi:include href="sec-intersecting-chords.ptx" />
   <xi:include href="sec-intersecting-secants-and-tangents.ptx" />
   <xi:include href="sec-direct-tangents-to-two-circles.ptx" />
   <xi:include href="sec-transverse-tangents-to-two-circles.ptx" />
-  <xi:include href="sec-alternate-segment-theorem.ptx" />
   <xi:include href="sec-inscribed-circles.ptx" />
   <xi:include href="sec-circumscribed-circles.ptx" />
   <xi:include href="sec-escribed-circles.ptx" />
