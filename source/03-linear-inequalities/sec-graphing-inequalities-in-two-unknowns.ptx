@@ -430,7 +430,7 @@
                             }
                             
                             % Draw only one 0 at the intersection
-                            \node[below right=5pt] at (0, 0) {$0$};
+                            \node[below left=5pt] at (0, 0) {$0$};
                             
                             % Label the line equation on the line itself
                             \node at (2.5, 0.25) [fill=white, inner sep=2pt, font=\small] {$y = \frac{1}{2}x - 1$};
