@@ -358,7 +358,7 @@
             <p>
                 Sketching the graph:
             </p>
-                <image xml:id="img-example-origin" width="95%">
+                <image xml:id="img-example-origin" width="65%">
                     <latex-image>
                         \begin{tikzpicture}
                         \begin{axis}[
@@ -442,7 +442,7 @@
             <p>
                 The center is <m>(3, -4)</m> and the radius is <m>5</m>.
             </p>
-                <image xml:id="img-example-h-k" width="95%">
+                <image xml:id="img-example-h-k" width="60%">
                     <latex-image>
                         \begin{tikzpicture}
                         \begin{axis}[
@@ -496,7 +496,7 @@
             <p>
                 Identify the correct equation for the graph below:
             </p>
-            <image width="95%">
+            <image width="65%">
                 <latex-image label="fig-example-multiple-choice">
                     \begin{tikzpicture}
                     \begin{axis}[
@@ -621,6 +621,30 @@
                                 <mrow> x^2 + y^2  \amp = 49</mrow>
                             </md>
                         </p>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-9, xmax=9,
+                                    ymin=-9, ymax=9,
+                                    xtick={-7,-4,0,4,7},
+                                    ytick={-7,-4,0,4,7},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({7*cos(\x)}, {7*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,0)};
+                                    \node[above left, font=\footnotesize] at (axis cs:0,0) {$(0,0)$};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p> We have:
@@ -629,6 +653,30 @@
                                 <mrow> (x - 1)^2 + (y + 2)^2 \amp = 36 </mrow>
                             </md>
                         </p>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-7, xmax=9,
+                                    ymin=-10, ymax=6,
+                                    xtick={-5,-2,1,4,7},
+                                    ytick={-8,-5,-2,1,4},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({1 + 6*cos(\x)}, {-2 + 6*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(1,-2)};
+                                    \node[above right, font=\footnotesize] at (axis cs:1,-2) {$(1,-2)$};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p> We have:
@@ -637,6 +685,30 @@
                                 <mrow> (x + 3)^2 + (y + 5)^2 \amp = 10 </mrow>
                             </md>
                         </p>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-8, xmax=2,
+                                    ymin=-10, ymax=0,
+                                    xtick={-6,-3,0},
+                                    ytick={-8,-5,-2},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({-3 + sqrt(10)*cos(\x)}, {-5 + sqrt(10)*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-3,-5)};
+                                    \node[above right, font=\footnotesize] at (axis cs:-3,-5) {$(-3,-5)$};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                 </ol>
             </solution>             
@@ -672,6 +744,88 @@
                     <li><p>Center <m>(4.5, -2.5)</m>, radius <m>4</m></p></li>
                 </ol>
             </answer>
+            <solution>
+                <ol>
+                    <li>
+                        <p>
+                            From <m>x^2 + y^2 = 100</m>, we have <m>h=0, k=0</m> and <m>r = \sqrt{100} = 10</m>.
+                        </p>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-12, xmax=12,
+                                    ymin=-12, ymax=12,
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({10*cos(\x)}, {10*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,0)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            From <m>(x + 1)^2 + (y - 9)^2 = 81</m>, we have <m>h=-1, k=9</m> and <m>r = \sqrt{81} = 9</m>.
+                        </p>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-12, xmax=10,
+                                    ymin=-2, ymax=20,
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({-1 + 9*cos(\x)}, {9 + 9*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(-1,9)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                    <li>
+                        <p>
+                            From <m>(x - 4.5)^2 + (y + 2.5)^2 = 16</m>, we have <m>h=4.5, k=-2.5</m> and <m>r = \sqrt{16} = 4</m>.
+                        </p>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=center,
+                                    xlabel={$x$},
+                                    ylabel={$y$},
+                                    xmin=-1, xmax=10,
+                                    ymin=-8, ymax=3,
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                    axis equal image,
+                                ]
+                                    \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                        ({4.5 + 4*cos(\x)}, {-2.5 + 4*sin(\x)});
+                                    \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(4.5,-2.5)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </li>
+                </ol>
+            </solution>
         </exercise>
 
         <exercise>
@@ -695,9 +849,31 @@
                         <mrow>(x - 2)^2 + (y - 3)^2 \amp = 5^2</mrow>
                         <mrow>(x - 2)^2 + (y - 3)^2 \amp = 25</mrow>
                     </md>
-                    
-
                 </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-4, xmax=8,
+                            ymin=-3, ymax=9,
+                            tick label style={font=\footnotesize},
+                            grid=both,
+                            grid style={line width=0.2pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                ({2 + 5*cos(\x)}, {3 + 5*sin(\x)});
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(2,3) (5,7)};
+                            \node[below, font=\footnotesize] at (axis cs:2,3) {Center $(2,3)$};
+                            \node[above right, font=\footnotesize] at (axis cs:5,7) {$(5,7)$};
+                            \draw[thick, red, dashed] (axis cs:2,3) -- (axis cs:5,7) node[midway, below right, font=\footnotesize] {$r=5$};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             </solution>
         </exercise>
 
@@ -714,7 +890,7 @@
                 <p>
                     Key points: <m>(-2, 2), (-2, -2), (0, 0), (-4, 0)</m>.
                 </p>
-                    <image xml:id="img-exercise-sketch" width="95%">
+                    <image xml:id="img-exercise-sketch" width="65%">
                         <latex-image>
                             \begin{tikzpicture}
                             \begin{axis}[
@@ -762,6 +938,30 @@
                 <p>
                     Since <m>\sqrt{5} &lt; 3</m>, the point lies <alert>inside</alert> the circle.
                 </p>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines=center,
+                            xlabel={$x$},
+                            ylabel={$y$},
+                            xmin=-4, xmax=4,
+                            ymin=-4, ymax=4,
+                            tick label style={font=\footnotesize},
+                            grid=both,
+                            grid style={line width=0.2pt, draw=gray!30},
+                            axis equal image,
+                        ]
+                            \addplot[blue, thick, domain=0:360, samples=100, smooth]
+                                ({3*cos(\x)}, {3*sin(\x)});
+                            \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(1,2)};
+                            \node[above right, font=\footnotesize, red] at (axis cs:1,2) {$(1,2)$};
+                            \addplot[only marks, mark=*, mark size=2pt, black] coordinates {(0,0)};
+                            \draw[thick, black, dashed] (axis cs:0,0) -- (axis cs:1,2) node[midway, left, font=\footnotesize] {$\sqrt{5}$};
+                        \end{axis}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             </solution>
         </exercise>
         <exercise>

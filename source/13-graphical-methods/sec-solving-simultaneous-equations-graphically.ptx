@@ -103,7 +103,7 @@
                 </ol>
             </p>
         </statement>
-        <solution>
+        <solution component="lesson-plan">
             <p>
                 <alert>Step 1: Table of values</alert>
             </p>
@@ -481,7 +481,7 @@
                     <latex-image>
                         \begin{tikzpicture}
                         \begin{axis}[
-                            axis lines=center,
+                            axis lines=left,
                             xlabel={$x$},
                             ylabel={$y$},
                             xmin=-4, xmax=4,

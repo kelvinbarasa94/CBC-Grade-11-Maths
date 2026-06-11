@@ -182,6 +182,9 @@
             A line of best fit allows us to model the relationship between two variables and make predictions.
         </p>
         <p>
+            When constructing a line of best fit manually, <term> the Mean-Coordinate Method</term> which is finding the mean of the x-coordinates and the mean of the y-coordinates removes visual guesswork by ensuring that the line passes directly through the statistical center of the dataset.
+        </p>
+        <p>
             The line does not need to pass through every point. Instead, it represents the overall pattern of the data:
         </p>
         <p>
@@ -241,7 +244,13 @@
         <p>
             <ol>
                 <li><p>Plot the data points on a scatter plot.</p></li>
-                <li><p>Use a ruler to draw a straight line that passes through the middle of the points, ensuring that there are roughly equal numbers of points above and below the line.</p></li>
+                <li><p>Use a ruler to draw a straight line that passes through the mean coordinate i.e., the point <m>(\bar{x}, \bar{y})</m>.</p>
+                <p>
+                     To compute <m>\bar{x}</m>, sum all values in the x column and divide by the total number of data points.
+                </p>
+                <p>
+                        To compute <m>\bar{y}</m>, sum all values in the y column and divide by the total number of data points.
+                </p></li>
             </ol>
         </p>
         <image width="65%">

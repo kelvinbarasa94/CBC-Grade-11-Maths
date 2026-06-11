@@ -106,6 +106,11 @@
                         <p>
                             On your graph paper, set the town center at the origin <m>(0,0)</m>.
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Students should draw a Cartesian plane with the horizontal axis labeled <m>x</m> (km) and the vertical axis labeled <m>y</m> (km), intersecting at <m>(0,0)</m>.
+                            </p>
+                        </solution>
                     </li>
                     <li>
                         <p>
@@ -116,11 +121,21 @@
                                 <li>Zone C (Market): located at <m>(0, -5)</m></li>
                             </ul>
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Students should plot the points <m>A(3,4)</m>, <m>B(-4,-3)</m>, and <m>C(0,-5)</m> on their grids as shown in the initial diagram.
+                            </p>
+                        </solution>
                     </li>
                     <li>
                         <p>
                             You have two cell towers. Each tower has a circular coverage range of <m>5</m> km.
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Each tower covers a circular area defined by the inequality <m>(x-h)^2 + (y-k)^2 \le 25</m>, where <m>(h,k)</m> is the tower's location.
+                            </p>
+                        </solution>
                         <image width="65%">
                             <latex-image label="Graphical representation of the telecom problem">
                                 \begin{tikzpicture}
@@ -153,11 +168,21 @@
                         <p>
                             Decide on the best coordinates to place your two towers so that all three zones receive a signal. Hint: Use the equations of circles <m>(x-h)^2 + (y-k)^2 = r^2</m>.
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                By inspecting the coordinates, students may notice that <m>A(3,4)</m>, <m>B(-4,-3)</m>, and <m>C(0,-5)</m> are all exactly <m>5</m> units from the origin. While a single tower at <m>(0,0)</m> would cover all three on its boundary, using two towers allows for more robust coverage. For example, placing Tower 1 at <m>(1,1)</m> and Tower 2 at <m>(-1,-3)</m> ensures all zones are well within the signal circles.
+                            </p>
+                        </solution>
                     </li>
                     <li>
                         <p>
                             Draw the circles representing the coverage area for each tower.
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Students should use a compass set to a radius of <m>5</m> units (km) to draw circles centered at their chosen tower coordinates. The resulting map should show all three zones inside or on the boundary of the circles.
+                            </p>
+                        </solution>
                         <image width="65%">
                             <latex-image label="Graphical representation of the telecom problem with coverage circles">
                                 \begin{tikzpicture}
@@ -193,6 +218,54 @@
                         <p>
                             Identify the area where the signals overlap. Discuss: Is overlap good for the users (e.g., seamless handoff)? Is it efficient for the company (e.g., redundant equipment)?
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Overlap is beneficial for users because it ensures a "seamless handoff" when moving between zones and provides redundancy if one tower fails. For the company, it can be seen as less efficient due to the cost of overlapping equipment, but it improves service reliability.
+                            </p>
+                        </solution>
+                    </li>
+                    <li>
+                        <p>
+                             Instead of placing towers yourself, consider a scenario where three towers are already fixed at <m>(0,0)</m>, <m>(6,0)</m>, and <m>(3,6)</m>, each with a coverage radius of <m>5</m> km. The school board wants to know if their school at <m>(3,4)</m> is in a "dead zone" or a "power zone".
+                            <ul>
+                                <li>
+                                    <p>
+                                        Write the mathematical equations for the three circular coverage areas to formalize the model.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Plot these circles on your graph. Identify the intersection points of the towers at <m>(0,0)</m> and <m>(6,0)</m> graphically. Does the school lie exactly on this boundary?
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        By looking at your graph, determine if the school is covered by the third tower as well. If the tower at <m>(0,0)</m> were to fail, would the school still have signal?
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                <ol marker="i.">
+                                    <li>
+                                        <p>
+                                            The model equations are: <m>x^2 + y^2 = 25</m>, <m>(x-6)^2 + y^2 = 25</m>, and <m>(x-3)^2 + (y-6)^2 = 25</m>.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            By plotting the first two circles, students will observe that they intersect exactly at <m>(3, 4)</m> and <m>(3, -4)</m>. The school at <m>(3, 4)</m> lies directly on the intersection point of these two signal boundaries.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Visually, the school is well within the third circle. Since it lies on the boundary of two towers and inside a third, it is in a "triple-coverage" zone. Even if any one tower fails, the school remains connected—demonstrating the "impact" of redundant graphical design!
+                                        </p>
+                                    </li>
+                                </ol>
+                            </p>
+                        </solution>
                     </li>
                 </ol>
             </p>
@@ -951,6 +1024,27 @@
                     </li>
                     <li>
                         <p>The five points are collinear with gradient approximately <m>0.477</m> and <m>y</m>-intercept <m>0.602</m>.</p>
+                        <image width="65%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=left,
+                                    xlabel={Time $t$ (h)},
+                                    ylabel={$\log N$},
+                                    xmin=0, xmax=5,
+                                    ymin=0, ymax=3,
+                                    xtick={0,1,2,3,4,5},
+                                    ytick={0,0.5,1,1.5,2,2.5,3},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                ]
+                                    \addplot[blue, thick, domain=0:4.2] {0.47712*x + 0.60206};
+                                    \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(0,0.602) (1,1.079) (2,1.556) (3,2.033) (4,2.511)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p>
@@ -1013,6 +1107,27 @@
                     </li>
                     <li>
                         <p>The best-fit line passes through all five points. Its gradient is <m>-0.1</m> and its <m>y</m>-intercept is <m>4.382 = \ln 80</m>, matching the model exactly.</p>
+                        <image width="65%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                \begin{axis}[
+                                    axis lines=left,
+                                    xlabel={Time $t$ (min)},
+                                    ylabel={$\ln(T - 20)$},
+                                    xmin=0, xmax=25,
+                                    ymin=2, ymax=5,
+                                    xtick={0,5,10,15,20,25},
+                                    ytick={2.0,2.5,3.0,3.5,4.0,4.5,5.0},
+                                    tick label style={font=\footnotesize},
+                                    grid=both,
+                                    grid style={line width=0.2pt, draw=gray!30},
+                                ]
+                                    \addplot[blue, thick, domain=0:22] {-0.1*x + 4.382};
+                                    \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(0,4.382) (5,3.882) (10,3.382) (15,2.882) (20,2.382)};
+                                \end{axis}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p>

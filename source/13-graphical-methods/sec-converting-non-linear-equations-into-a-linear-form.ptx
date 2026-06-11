@@ -518,6 +518,52 @@
                     </ol>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                Given <m>y = ax^2 + c</m>, let <m>X = x^2</m>.
+                                The linear form is <m>y = aX + c</m>.
+                                We plot <m>y</m> on the vertical axis and <m>x^2</m> on the horizontal axis.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The points are <m>(1, 5)</m> and <m>(9, 21)</m> on the <m>(x^2, y)</m> plane.
+                                <md>
+                                    <mrow>\text{Gradient } a \amp= \frac{21 - 5}{9 - 1} = \frac{16}{8} = 2</mrow>
+                                    <mrow>\text{Intercept } c \amp: 5 = 2(1) + c \implies c = 3</mrow>
+                                </md>
+                                The original equation is <m>y = 2x^2 + 3</m>.
+                            </p>
+                            <image width="65%">
+                                <latex-image>
+                                    \begin{tikzpicture}
+                                    \begin{axis}[
+                                        axis lines=left,
+                                        xlabel={$x^2$},
+                                        ylabel={$y$},
+                                        xmin=0, xmax=10,
+                                        ymin=0, ymax=25,
+                                        xtick={0,2,4,6,8,10},
+                                        ytick={0,5,10,15,20,25},
+                                        tick label style={font=\footnotesize},
+                                        grid=both,
+                                        grid style={line width=0.2pt, draw=gray!30},
+                                    ]
+                                        \addplot[blue, thick, domain=0:10] {2*x + 3};
+                                        \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(1,5) (9,21)};
+                                        \node[below right, font=\footnotesize] at (axis cs:1,5) {$(1,5)$};
+                                        \node[above left, font=\footnotesize] at (axis cs:9,21) {$(9,21)$};
+                                    \end{axis}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
 
         <exercise>
@@ -545,6 +591,49 @@
                     </ol>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                Given <m>y = ax^n</m>, taking logs gives <m>\log y = n \log x + \log a</m>.
+                                We plot <m>\log y</m> on the vertical axis and <m>\log x</m> on the horizontal axis.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Using the points <m>(0.5, 1.9)</m> and <m>(1.5, 3.1)</m>:
+                                <md>
+                                    <mrow>n \amp= \frac{3.1 - 1.9}{1.5 - 0.5} = 1.2</mrow>
+                                    <mrow>\log a \amp= 1.9 - 1.2(0.5) = 1.3 \implies a = 10^{1.3} \approx 20</mrow>
+                                </md>
+                                The equation is <m>y = 20x^{1.2}</m>.
+                            </p>
+                            <image width="65%">
+                                <latex-image>
+                                    \begin{tikzpicture}
+                                    \begin{axis}[
+                                        axis lines=left,
+                                        xlabel={$\log x$},
+                                        ylabel={$\log y$},
+                                        xmin=0, xmax=2,
+                                        ymin=0, ymax=4,
+                                        xtick={0,0.5,1,1.5,2},
+                                        ytick={0,1,2,3,4},
+                                        tick label style={font=\footnotesize},
+                                        grid=both,
+                                        grid style={line width=0.2pt, draw=gray!30},
+                                    ]
+                                        \addplot[blue, thick, domain=0:2] {1.2*x + 1.3};
+                                        \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(0.5,1.9) (1.5,3.1)};
+                                    \end{axis}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
 
         <exercise>
@@ -572,6 +661,48 @@
                     </ol>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                Given <m>N = N_0 \cdot r^t</m>, taking logs gives <m>\log N = (\log r)t + \log N_0</m>.
+                                This is a straight line if we plot <m>\log N</m> against <m>t</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The points are <m>(0, 3.0)</m> and <m>(4, 3.6)</m> on the <m>(t, \log N)</m> plane.
+                                <md>
+                                    <mrow>\text{Intercept } \log N_0 \amp= 3.0 \implies N_0 = 10^3 = 1000</mrow>
+                                    <mrow>\text{Gradient } \log r \amp= \frac{3.6 - 3.0}{4 - 0} = 0.15 \implies r = 10^{0.15} \approx 1.41</mrow>
+                                </md>
+                            </p>
+                            <image width="65%">
+                                <latex-image>
+                                    \begin{tikzpicture}
+                                    \begin{axis}[
+                                        axis lines=left,
+                                        xlabel={$t$},
+                                        ylabel={$\log N$},
+                                        xmin=0, xmax=5,
+                                        ymin=2.5, ymax=4,
+                                        xtick={0,1,2,3,4,5},
+                                        ytick={3.0,3.2,3.4,3.6,3.8},
+                                        tick label style={font=\footnotesize},
+                                        grid=both,
+                                        grid style={line width=0.2pt, draw=gray!30},
+                                    ]
+                                        \addplot[blue, thick, domain=0:5] {0.15*x + 3.0};
+                                        \addplot[only marks, mark=*, mark size=2pt, red] coordinates {(0,3.0) (4,3.6)};
+                                    \end{axis}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
 
         <exercise>
