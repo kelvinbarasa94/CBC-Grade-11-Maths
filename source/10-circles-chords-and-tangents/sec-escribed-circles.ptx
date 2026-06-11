@@ -177,24 +177,151 @@
         <p>
             <alert>Step 1.</alert> Draw triangle <m>ABC</m>. Extend side <m>AB</m> beyond <m>B</m> as a dashed ray, and extend side <m>AC</m> beyond <m>C</m> as a dashed ray.
         </p>
-        <!-- TODO: tkz-euclide diagram — Step 1: triangle ABC with dashed extensions of AB beyond B and AC beyond C. No bisectors yet. -->
+        <figure xml:id="fig-excircle-step1">
+            <caption>Step 1: Triangle <m>ABC</m> with dashed extensions.</caption>
+            <image width="60%">
+                <latex-image>
+                \begin{tikzpicture}
+                  %% --- SET ---
+                  \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                  %% --- CALCULATE ---
+                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  %% --- DRAW ---
+                  \tkzDrawPolygon[thick](A,B,C)
+                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawPoints(A,B,C)
+                  %% --- MARK ---
+                  %% --- LABEL ---
+                  \tkzLabelPoints[below](B,C)
+                  \tkzLabelPoints[above](A)
+                \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         <p>
             <alert>Step 2.</alert> Bisect the exterior angle at <m>B</m>: this is the angle between side <m>BC</m> and the extension of <m>AB</m> beyond <m>B</m>. Draw the bisector as a ray from <m>B</m>.
         </p>
-        <!-- TODO: tkz-euclide diagram — Step 2: add the external angle bisector at B. Use \tkzDefLine[bisector out](A,B,C). -->
+        <figure xml:id="fig-excircle-step2">
+            <caption>Step 2: External angle bisector at <m>B</m>.</caption>
+            <image width="60%">
+                <latex-image>
+                \begin{tikzpicture}
+                  %% --- SET ---
+                  \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                  %% --- CALCULATE ---
+                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                  %% --- DRAW ---
+                  \tkzDrawPolygon[thick](A,B,C)
+                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawLine[add=0 and 0.3, blue](B,Ia)
+                  \tkzDrawPoints(A,B,C)
+                  %% --- MARK ---
+                  %% --- LABEL ---
+                  \tkzLabelPoints[below](B,C)
+                  \tkzLabelPoints[above](A)
+                \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         <p>
             <alert>Step 3.</alert> Bisect the exterior angle at <m>C</m>: this is the angle between side <m>BC</m> and the extension of <m>AC</m> beyond <m>C</m>. Draw the bisector as a ray from <m>C</m>. Label the intersection of the two bisectors <m>I_a</m>.
         </p>
-        <!-- TODO: tkz-euclide diagram — Step 3: add the external angle bisector at C; label intersection I_a. -->
+        <figure xml:id="fig-excircle-step3">
+            <caption>Step 3: External bisectors at <m>B</m> and <m>C</m> meet at <m>I_a</m>.</caption>
+            <image width="60%">
+                <latex-image>
+                \begin{tikzpicture}
+                  %% --- SET ---
+                  \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                  %% --- CALCULATE ---
+                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                  %% --- DRAW ---
+                  \tkzDrawPolygon[thick](A,B,C)
+                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawLine[add=0 and 0.1, blue](B,Ia)
+                  \tkzDrawLine[add=0 and 0.1, blue](C,Ia)
+                  \tkzDrawPoints(A,B,C,Ia)
+                  %% --- MARK ---
+                  %% --- LABEL ---
+                  \tkzLabelPoints[below](B,C)
+                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoint[right](Ia){$I_a$}
+                \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         <p>
             <alert>Step 4.</alert> From <m>I_a</m>, drop a perpendicular to side <m>BC</m>. Label the foot of the perpendicular <m>X</m>. The distance <m>I_aX</m> is the excircle radius <m>r_a</m>.
         </p>
-        <!-- TODO: tkz-euclide diagram — Step 4: add perpendicular from I_a to BC with foot X and right-angle mark. Use \tkzDefPointBy[projection=onto BC](Ia). -->
+        <figure xml:id="fig-excircle-step4">
+            <caption>Step 4: Perpendicular from <m>I_a</m> to <m>BC</m> gives radius <m>r_a = I_aX</m>.</caption>
+            <image width="60%">
+                <latex-image>
+                \begin{tikzpicture}
+                  %% --- SET ---
+                  \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                  %% --- CALCULATE ---
+                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                  \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                  %% --- DRAW ---
+                  \tkzDrawPolygon[thick](A,B,C)
+                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawLine[add=0 and 0.1, blue](B,Ia)
+                  \tkzDrawLine[add=0 and 0.1, blue](C,Ia)
+                  \tkzDrawSegment[red,thick](Ia,X)
+                  \tkzDrawPoints(A,B,C,Ia,X)
+                  %% --- MARK ---
+                  \tkzMarkRightAngle[size=0.18](Ia,X,B)
+                  %% --- LABEL ---
+                  \tkzLabelPoints[below](B,C,X)
+                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoint[right](Ia){$I_a$}
+                  \tkzLabelSegment[right](Ia,X){$r_a$}
+                \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         <p>
             <alert>Step 5.</alert> Draw the circle with centre <m>I_a</m> and radius <m>I_aX</m>. It should be tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>.
         </p>
-        <!-- TODO: tkz-euclide diagram — Step 5 (complete diagram): triangle, dashed extensions, I_a, perpendicular to BC, excircle drawn.
-             Use \tkzDefCircle[ex](A,B,C)\tkzGetPoint{Ia} and \tkzDrawCircle(Ia,X). -->
+        <figure xml:id="fig-excircle-step5">
+            <caption>Step 5: The completed excircle opposite <m>A</m>.</caption>
+            <image width="60%">
+                <latex-image>
+                \begin{tikzpicture}
+                  %% --- SET ---
+                  \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                  %% --- CALCULATE ---
+                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                  \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                  %% --- DRAW ---
+                  \tkzDrawPolygon[thick](A,B,C)
+                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawLine[add=0 and 0.1, blue!60](B,Ia)
+                  \tkzDrawLine[add=0 and 0.1, blue!60](C,Ia)
+                  \tkzDrawSegment[red,thick](Ia,X)
+                  \tkzDrawCircle[blue,thick](Ia,X)
+                  \tkzDrawPoints(A,B,C,Ia,X)
+                  %% --- MARK ---
+                  \tkzMarkRightAngle[size=0.18](Ia,X,B)
+                  %% --- LABEL ---
+                  \tkzLabelPoints[below](B,C)
+                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoint[right](Ia){$I_a$}
+                  \tkzLabelPoint[below](X){$X$}
+                \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
     </paragraphs>
 
     <theorem xml:id="thm-escribed-circle">
@@ -207,9 +334,41 @@
                 </md>
                 Similarly, the excircles opposite <m>B</m> and <m>C</m> have radii <m>r_b = \Delta/(s-b)</m> and <m>r_c = \Delta/(s-c)</m>.
             </p>
-            <!-- TODO: tkz-euclide diagram — triangle ABC, excircle opposite A with centre I_a labelled,
-                 perpendicular from I_a to BC with right-angle mark, tangent points on side BC and on the two extensions shown.
-                 Use \tkzDefCircle[ex](A,B,C)\tkzGetPoint{Ia}. -->
+            <figure xml:id="fig-excircle-theorem">
+                <caption>The excircle opposite <m>A</m>: centre <m>I_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
+                <image width="65%">
+                    <latex-image>
+                    \begin{tikzpicture}
+                      %% --- SET ---
+                      \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                      %% --- CALCULATE ---
+                      \tkzDefPointBy[homothety=center B ratio -0.6](A) \tkzGetPoint{ABext}
+                      \tkzDefPointBy[homothety=center C ratio -0.6](A) \tkzGetPoint{ACext}
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                      \tkzDefPointBy[projection=onto B--ABext](Ia) \tkzGetPoint{Y}
+                      \tkzDefPointBy[projection=onto C--ACext](Ia) \tkzGetPoint{Z}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                      \tkzDrawSegments[red,thin](Ia,X)(Ia,Y)(Ia,Z)
+                      \tkzDrawCircle[blue,thick](Ia,X)
+                      \tkzDrawPoints(A,B,C,Ia,X,Y,Z)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.15](Ia,X,C)
+                      \tkzMarkRightAngle[size=0.15](Ia,Y,B)
+                      \tkzMarkRightAngle[size=0.15](Ia,Z,C)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below](B,C)
+                      \tkzLabelPoints[above](A)
+                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelPoint[below](X){$X$}
+                      \tkzLabelPoint[below left](Y){$Y$}
+                      \tkzLabelPoint[below right](Z){$Z$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <proof>
             <p>
@@ -301,7 +460,38 @@
             <p>
                 Draw a triangle <m>ABC</m> with <m>AB = 7</m> cm, <m>BC = 5</m> cm, and <m>CA = 6</m> cm. Construct the excircle opposite <m>A</m>.
             </p>
-            <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with excircle opposite A; I_a labelled, tangent foot on BC and tangent points on extensions shown. -->
+            <figure xml:id="fig-excircle-ex1">
+                <caption>Excircle opposite <m>A</m> for triangle with <m>AB=7</m>, <m>BC=5</m>, <m>CA=6</m>.</caption>
+                <image width="65%">
+                    <latex-image>
+                    \begin{tikzpicture}
+                      %% --- SET: place B and C; find A by intersection of circles of radii AB=7 and CA=6 ---
+                      \tkzDefPoints{0/0/B, 5/0/C}
+                      \tkzDefPoint(7,0){bR}
+                      \tkzDefPoint(11,0){cR}
+                      %% --- CALCULATE ---
+                      \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+                      \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                      \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                      \tkzDrawSegment[red,thin](Ia,X)
+                      \tkzDrawCircle[blue,thick](Ia,X)
+                      \tkzDrawPoints(A,B,C,Ia,X)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below](B,C)
+                      \tkzLabelPoints[above](A)
+                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelPoint[below](X){$X$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -331,7 +521,39 @@
             <p>
                 A triangle has sides <m>3</m> cm, <m>4</m> cm, and <m>5</m> cm. Find all three excircle radii.
             </p>
-            <!-- TODO: tkz-euclide diagram — right triangle 3-4-5 with all three excircles shown. -->
+            <figure xml:id="fig-excircle-ex2">
+                <caption>All three excircles of the 3-4-5 right triangle.</caption>
+                <image width="75%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.65]
+                      %% --- SET: right angle at C; a=BC=3, b=CA=4, c=AB=5 ---
+                      \tkzDefPoints{0/0/C, 3/0/B, 0/4/A}
+                      %% --- CALCULATE ---
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                      \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xb}
+                      \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xc}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
+                      \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
+                      \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawCircle[blue](Ia,FootA)
+                      \tkzDrawCircle[blue](Ib,FootB)
+                      \tkzDrawCircle[blue](Ic,FootC)
+                      \tkzDrawPoints(A,B,C,Ia,Ib,Ic)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.2](A,C,B)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below](B)
+                      \tkzLabelPoints[left](C)
+                      \tkzLabelPoints[above left](A)
+                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelPoint[left](Ib){$I_b$}
+                      \tkzLabelPoint[above right](Ic){$I_c$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -354,7 +576,37 @@
             <p>
                 A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use the reciprocal identity to find <m>r_c</m>.
             </p>
-            <!-- TODO: tkz-euclide diagram — triangle with incircle and excircles r_a, r_b labelled. -->
+            <figure xml:id="fig-excircle-ex3">
+                <caption>Incircle (radius <m>r</m>) and excircles opposite <m>A</m> and <m>B</m>.</caption>
+                <image width="70%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.75]
+                      %% --- SET ---
+                      \tkzDefPoints{0/0/B, 6/0/C, 2/4/A}
+                      %% --- CALCULATE ---
+                      \tkzDefCircle[in](A,B,C) \tkzGetPoints{I}{Xi}
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xia}
+                      \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xib}
+                      \tkzDefPointBy[projection=onto B--C](I)  \tkzGetPoint{FootI}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
+                      \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawCircle[green!60!black](I,FootI)
+                      \tkzDrawCircle[blue](Ia,FootA)
+                      \tkzDrawCircle[blue](Ib,FootB)
+                      \tkzDrawPoints(A,B,C,I,Ia,Ib)
+                      %% --- MARK ---
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below](B,C)
+                      \tkzLabelPoints[above](A)
+                      \tkzLabelPoint[above](I){$r$}
+                      \tkzLabelPoint[right](Ia){$r_a$}
+                      \tkzLabelPoint[left](Ib){$r_b$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -372,7 +624,35 @@
             <p>
                 A triangular plot in Nairobi has boundary lengths <m>9</m> m, <m>12</m> m, and <m>15</m> m. A developer wants to install a circular water tank just outside the plot, touching the <m>15</m> m boundary and the extensions of the other two sides. Find the radius of the tank.
             </p>
-            <!-- TODO: tkz-euclide diagram — right triangle 9-12-15 with excircle opposite the vertex across from the 15m side. -->
+            <figure xml:id="fig-excircle-ex4">
+                <caption>Excircle opposite <m>A</m> (the right angle) in the 9-12-15 triangle.</caption>
+                <image width="70%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.35]
+                      %% --- SET: right angle at A; AB=9, AC=12, BC=15 ---
+                      \tkzDefPoints{0/0/A, 9/0/B, 0/12/C}
+                      %% --- CALCULATE ---
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawSegment[red,thin](Ia,X)
+                      \tkzDrawCircle[blue,thick](Ia,X)
+                      \tkzDrawPoints(A,B,C,Ia,X)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.5](B,A,C)
+                      \tkzMarkRightAngle[size=0.4](Ia,X,B)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[left](A,C)
+                      \tkzLabelPoints[below](B)
+                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelSegment[right,pos=0.5](A,B){$9$}
+                      \tkzLabelSegment[left,pos=0.5](A,C){$12$}
+                      \tkzLabelSegment[above right,pos=0.5](B,C){$15$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -390,7 +670,34 @@
             <p>
                 A right triangle has legs <m>8</m> cm and <m>15</m> cm. Find the radius of the excircle opposite the right angle.
             </p>
-            <!-- TODO: tkz-euclide diagram — right triangle 8-15-17 with excircle opposite the right angle shown. -->
+            <figure xml:id="fig-excircle-ex5">
+                <caption>Excircle opposite the right angle <m>C</m> in the 8-15-17 triangle.</caption>
+                <image width="70%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.4]
+                      %% --- SET: right angle at C; CA=8, CB=15, AB=17 ---
+                      \tkzDefPoints{0/0/C, 15/0/B, 0/8/A}
+                      %% --- CALCULATE ---
+                      \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xc}
+                      \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawSegment[red,thin](Ic,FootC)
+                      \tkzDrawCircle[blue,thick](Ic,FootC)
+                      \tkzDrawPoints(A,B,C,Ic,FootC)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.5](A,C,B)
+                      \tkzMarkRightAngle[size=0.4](Ic,FootC,A)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below](C,B)
+                      \tkzLabelPoints[above left](A)
+                      \tkzLabelPoint[right](Ic){$I_c$}
+                      \tkzLabelSegment[below,pos=0.5](C,B){$15$}
+                      \tkzLabelSegment[left,pos=0.5](C,A){$8$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -417,7 +724,40 @@
                         <li>Verify your answer by calculation using <m>r_a = \Delta\,/\,(s-a)</m>.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle 6-7-8 with excircle opposite A and external bisector construction lines shown. -->
+                <figure xml:id="fig-excircle-exr1">
+                    <caption>Excircle opposite <m>A</m> for the 6-7-8 triangle, with external bisectors at <m>B</m> and <m>C</m>.</caption>
+                    <image width="70%">
+                        <latex-image>
+                        \begin{tikzpicture}
+                          %% --- SET: AB=6, BC=8, CA=7 ---
+                          \tkzDefPoints{0/0/B, 8/0/C}
+                          \tkzDefPoint(6,0){bR}
+                          \tkzDefPoint(15,0){cR}
+                          %% --- CALCULATE ---
+                          \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+                          \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
+                          \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                          \tkzDrawLine[add=0 and 0.1, blue!60](B,Ia)
+                          \tkzDrawLine[add=0 and 0.1, blue!60](C,Ia)
+                          \tkzDrawSegment[red,thin](Ia,X)
+                          \tkzDrawCircle[blue,thick](Ia,X)
+                          \tkzDrawPoints(A,B,C,Ia,X)
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.2](Ia,X,C)
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](B,C)
+                          \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[right](Ia){$I_a$}
+                          \tkzLabelPoint[below](X){$X$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -436,7 +776,41 @@
                         <li>What relationship do you notice between the size of an excircle and the length of the side it is opposite?</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — right triangle 3-4-5 with all three excircles shown. -->
+                <figure xml:id="fig-excircle-exr2">
+                    <caption>All three excircles of a 3-4-5 triangle (<m>AB=3</m>, <m>BC=4</m>, <m>CA=5</m>).</caption>
+                    <image width="75%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.65]
+                          %% --- SET: AB=3, BC=4, CA=5; right angle at A ---
+                          \tkzDefPoints{0/0/A, 3/0/B, 0/5/C}
+                          \tkzDefPoint(4,0){bR}
+                          \tkzDefPoint(8,0){cR}
+                          %% --- CALCULATE ---
+                          \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{Bpos}{Bneg}
+                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                          \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xb}
+                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xc}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
+                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
+                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue](Ia,FootA)
+                          \tkzDrawCircle[blue](Ib,FootB)
+                          \tkzDrawCircle[blue](Ic,FootC)
+                          \tkzDrawPoints(A,B,C,Ia,Ib,Ic)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoints[left](A)
+                          \tkzLabelPoints[below](B)
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoint[below right](Ia){$I_a$}
+                          \tkzLabelPoint[left](Ib){$I_b$}
+                          \tkzLabelPoint[right](Ic){$I_c$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -450,7 +824,37 @@
                 <p>
                     A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use the reciprocal identity to find <m>r_c</m>.
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle with incircle and two excircles labelled r, r_a, r_b. -->
+                <figure xml:id="fig-excircle-exr3">
+                    <caption>Incircle (radius <m>r</m>) and excircles with radii <m>r_a</m> and <m>r_b</m>.</caption>
+                    <image width="70%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.75]
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/B, 6/0/C, 2/4/A}
+                          %% --- CALCULATE ---
+                          \tkzDefCircle[in](A,B,C)  \tkzGetPoints{I}{Xi}
+                          \tkzDefCircle[ex](A,B,C)  \tkzGetPoints{Ia}{Xia}
+                          \tkzDefCircle[ex](B,C,A)  \tkzGetPoints{Ib}{Xib}
+                          \tkzDefPointBy[projection=onto B--C](I)  \tkzGetPoint{FootI}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootIa}
+                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootIb}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[green!60!black,thick](I,FootI)
+                          \tkzDrawCircle[blue,thick](Ia,FootIa)
+                          \tkzDrawCircle[blue,thick](Ib,FootIb)
+                          \tkzDrawPoints(A,B,C,I,Ia,Ib)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](B,C)
+                          \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[above right](I){$r$}
+                          \tkzLabelPoint[right](Ia){$r_a$}
+                          \tkzLabelPoint[left](Ib){$r_b$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -468,7 +872,34 @@
                         <li>Measure its radius, then verify using <m>r_c = \Delta\,/\,(s-c)</m>.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with excircle opposite the right angle constructed. -->
+                <figure xml:id="fig-excircle-exr4">
+                    <caption>Excircle opposite the right angle <m>C</m> in the 5-12-13 triangle.</caption>
+                    <image width="70%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.55]
+                          %% --- SET: right angle at C; CA=5, CB=12, AB=13 ---
+                          \tkzDefPoints{0/0/C, 12/0/B, 0/5/A}
+                          %% --- CALCULATE ---
+                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xc}
+                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawSegment[red,thin](Ic,FootC)
+                          \tkzDrawCircle[blue,thick](Ic,FootC)
+                          \tkzDrawPoints(A,B,C,Ic,FootC)
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.5](A,C,B)
+                          \tkzMarkRightAngle[size=0.4](Ic,FootC,A)
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](C,B)
+                          \tkzLabelPoints[above left](A)
+                          \tkzLabelPoint[right](Ic){$I_c$}
+                          \tkzLabelSegment[below](C,B){$12$}
+                          \tkzLabelSegment[left](C,A){$5$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -486,7 +917,41 @@
                         <li>Draw lines <m>AX_a</m>, <m>BX_b</m>, and <m>CX_c</m>. What do you notice?</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with all three excircles, tangent points X_a, X_b, X_c labelled, and the three cevians to the Nagel point shown. -->
+                <figure xml:id="fig-excircle-exr5">
+                    <caption>The Nagel point: cevians <m>AX_a</m>, <m>BX_b</m>, <m>CX_c</m> are concurrent (triangle with sides 5, 6, 7).</caption>
+                    <image width="75%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.75]
+                          %% --- SET: a=BC=5, b=CA=6, c=AB=7 ---
+                          \tkzDefPoints{0/0/B, 5/0/C}
+                          \tkzDefPoint(7,0){bR}
+                          \tkzDefPoint(11,0){cR}
+                          %% --- CALCULATE ---
+                          \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xia}
+                          \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xib}
+                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xic}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{Xa}
+                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{Xb}
+                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{Xc}
+                          \tkzInterLL(A,Xa)(B,Xb) \tkzGetPoint{Nagel}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircles[blue!70](Ia,Xa)(Ib,Xb)(Ic,Xc)
+                          \tkzDrawSegments[red,thick](A,Xa)(B,Xb)(C,Xc)
+                          \tkzDrawPoints(A,B,C,Xa,Xb,Xc,Nagel)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](B,C)
+                          \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[below](Xa){$X_a$}
+                          \tkzLabelPoint[above right](Xb){$X_b$}
+                          \tkzLabelPoint[above left](Xc){$X_c$}
+                          \tkzLabelPoint[right](Nagel){\footnotesize Nagel}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -504,7 +969,39 @@
                         <li>Find the tangent length from <m>P</m> to this excircle.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle 13-14-15, excircle opposite P, tangent point X on QR with QX and RX labelled. -->
+                <figure xml:id="fig-excircle-exr6">
+                    <caption>Excircle opposite <m>P</m> in triangle <m>PQR</m>; tangent point <m>X</m> on <m>QR</m>.</caption>
+                    <image width="70%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.6]
+                          %% --- SET: QR=14, PQ=13, PR=15 ---
+                          \tkzDefPoints{0/0/Q, 14/0/R}
+                          \tkzDefPoint(13,0){qR}
+                          \tkzDefPoint(29,0){rR}
+                          %% --- CALCULATE ---
+                          \tkzInterCC(Q,qR)(R,rR) \tkzGetPoints{P}{Pp}
+                          \tkzDefCircle[ex](P,Q,R) \tkzGetPoints{Ip}{Xp}
+                          \tkzDefPointBy[projection=onto Q--R](Ip) \tkzGetPoint{X}
+                          \tkzDefMidPoint(Q,X) \tkzGetPoint{MQX}
+                          \tkzDefMidPoint(X,R) \tkzGetPoint{MXR}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](P,Q,R)
+                          \tkzDrawSegment[red,thin](Ip,X)
+                          \tkzDrawCircle[blue,thick](Ip,X)
+                          \tkzDrawPoints(P,Q,R,Ip,X)
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.3](Ip,X,R)
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](Q,R)
+                          \tkzLabelPoints[above](P)
+                          \tkzLabelPoint[below](X){$X$}
+                          \tkzLabelPoint[right](Ip){$I_p$}
+                          \tkzLabelSegment[below](Q,X){$6$}
+                          \tkzLabelSegment[below](X,R){$8$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -531,7 +1028,38 @@
                         <li>Does the nine-point circle appear to touch each excircle at one point?</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle with nine-point circle and all three excircles, each touching the nine-point circle at one point (Feuerbach tangencies). -->
+                <figure xml:id="fig-excircle-exr7">
+                    <caption>Nine-point circle and all three excircles (Feuerbach's theorem: each excircle is internally tangent to the nine-point circle).</caption>
+                    <image width="75%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.75]
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/B, 6/0/C, 1.8/4/A}
+                          %% --- CALCULATE ---
+                          \tkzDefMidPoint(A,B) \tkzGetPoint{Mab}
+                          \tkzDefMidPoint(B,C) \tkzGetPoint{Mbc}
+                          \tkzDefMidPoint(A,C) \tkzGetPoint{Mac}
+                          \tkzDefCircle[circum](Mab,Mbc,Mac) \tkzGetPoints{N9}{N9r}
+                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xia}
+                          \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xib}
+                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xic}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
+                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
+                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[orange,thick](N9,N9r)
+                          \tkzDrawCircles[blue!70](Ia,FootA)(Ib,FootB)(Ic,FootC)
+                          \tkzDrawPoints(A,B,C,N9)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](B,C)
+                          \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[above right](N9){\footnotesize nine-point}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -550,7 +1078,38 @@
                         <li>Describe how the four circles are arranged around the triangle.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with incircle and all three excircles shown together. -->
+                <figure xml:id="fig-excircle-exr8">
+                    <caption>Incircle and all three excircles of a 5-6-7 triangle.</caption>
+                    <image width="75%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.75]
+                          %% --- SET: a=BC=5, b=CA=6, c=AB=7 ---
+                          \tkzDefPoints{0/0/B, 5/0/C}
+                          \tkzDefPoint(7,0){bR}
+                          \tkzDefPoint(11,0){cR}
+                          %% --- CALCULATE ---
+                          \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+                          \tkzDefCircle[in](A,B,C)  \tkzGetPoints{I}{Xi}
+                          \tkzDefCircle[ex](A,B,C)  \tkzGetPoints{Ia}{Xia}
+                          \tkzDefCircle[ex](B,C,A)  \tkzGetPoints{Ib}{Xib}
+                          \tkzDefCircle[ex](C,A,B)  \tkzGetPoints{Ic}{Xic}
+                          \tkzDefPointBy[projection=onto B--C](I)  \tkzGetPoint{FootI}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
+                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
+                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[green!60!black,thick](I,FootI)
+                          \tkzDrawCircles[blue](Ia,FootA)(Ib,FootB)(Ic,FootC)
+                          \tkzDrawPoints(A,B,C)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below](B,C)
+                          \tkzLabelPoints[above](A)
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -570,7 +1129,55 @@
                         <li>Construct the third excircle of triangle <m>PQR</m> — the one opposite <m>P</m>.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — two circles of radii 2 and 3 with centres 7 apart; transverse tangents meeting at P; one direct tangent forming triangle PQR; third excircle opposite P constructed. -->
+                <figure xml:id="fig-excircle-exr9">
+                    <caption>Two circles (radii 2 and 3, centres 7 apart); transverse tangents meet at <m>P</m>; triangle <m>PQR</m> formed with third excircle opposite <m>P</m>.</caption>
+                    <image width="80%">
+                        <latex-image>
+                        \begin{tikzpicture}
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/O1, 7/0/O2}
+                          \tkzDefPoint(2,0){rO1}
+                          \tkzDefPoint(10,0){rO2}
+                          %% --- CALCULATE ---
+                          % Internal centre of similitude P (divides O1O2 in ratio r1:r2 = 2:3)
+                          \pgfmathsetmacro{\pRat}{2/(2+3)}
+                          \tkzDefPointBy[homothety=center O1 ratio \pRat](O2) \tkzGetPoint{P}
+                          % External centre of similitude E (ratio r1/(r1-r2) = -2)
+                          \pgfmathsetmacro{\eRat}{2/(2-3)}
+                          \tkzDefPointBy[homothety=center O1 ratio \eRat](O2) \tkzGetPoint{E}
+                          % Transverse tangent touch-points from P
+                          \tkzDefTangent[from=P](O1,rO1) \tkzGetPoints{T1a}{T1b}
+                          \tkzDefTangent[from=P](O2,rO2) \tkzGetPoints{T2a}{T2b}
+                          % Direct tangent touch-points from E
+                          \tkzDefTangent[from=E](O1,rO1) \tkzGetPoints{Td1a}{Td1b}
+                          \tkzDefTangent[from=E](O2,rO2) \tkzGetPoints{Td2a}{Td2b}
+                          % Triangle vertices: Q,R = direct tangent meets transverse tangents
+                          \tkzInterLL(Td1a,Td2a)(P,T1a) \tkzGetPoint{Q}
+                          \tkzInterLL(Td1a,Td2a)(P,T1b) \tkzGetPoint{R}
+                          % Third excircle opposite P
+                          \tkzDefCircle[ex](P,Q,R) \tkzGetPoints{Ip}{Xp}
+                          \tkzDefPointBy[projection=onto Q--R](Ip) \tkzGetPoint{FootP}
+                          %% --- DRAW ---
+                          \tkzInit[xmin=-0.5,xmax=11,ymin=-4.5,ymax=4.5]
+                          \tkzClip
+                          \tkzDrawCircles[thick](O1,rO1)(O2,rO2)
+                          \tkzDrawPolygon[red,thick](P,Q,R)
+                          \tkzDrawLines[dashed,gray,add=0.1 and 0.1](P,T1a)(P,T1b)
+                          \tkzDrawLine[blue!70,add=0.05 and 0.05](Td1a,Td2a)
+                          \tkzDrawCircle[blue!60,thick](Ip,FootP)
+                          \tkzDrawPoints(O1,O2,P,Q,R,Ip)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoint[below](O1){$O_1$}
+                          \tkzLabelPoint[below](O2){$O_2$}
+                          \tkzLabelPoint[above](P){$P$}
+                          \tkzLabelPoint[below left](Q){$Q$}
+                          \tkzLabelPoint[below right](R){$R$}
+                          \tkzLabelPoint[right](Ip){$I_p$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>

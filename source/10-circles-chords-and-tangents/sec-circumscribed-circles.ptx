@@ -189,9 +189,45 @@
                 </md>
                 where <m>a</m>, <m>b</m>, <m>c</m> are the side lengths of the triangle.
             </p>
-            <!-- TODO: tkz-euclide diagram — triangle ABC with circumcircle, centre O,
-                 dashed equal radii OA = OB = OC labelled, perpendicular bisectors shown faintly.
-                 Use \tkzDefCircle[circum](A,B,C)\tkzGetPoint{O} and \tkzDrawCircle(O,A). -->
+            <figure xml:id="fig-circumcircle-thm">
+                <caption>The circumcircle of triangle <m>ABC</m>. The three perpendicular bisectors (grey) meet at circumcenter <m>O</m>, which is equidistant from all three vertices: <m>OA = OB = OC = R</m>.</caption>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 6/0/B, 2.5/4/C}
+
+                          %% --- CALCULATE ---
+                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+                          \tkzDefMidPoint(A,B)  \tkzGetPoint{MAB}
+                          \tkzDefMidPoint(B,C)  \tkzGetPoint{MBC}
+                          \tkzDefMidPoint(A,C)  \tkzGetPoint{MAC}
+
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue!70!black, thick](O,A)
+                          \tkzDrawLines[gray!55, thin, add=0.8 and 0.8](MAB,O)(MBC,O)(MAC,O)
+                          \tkzDrawSegments[dashed, red!60!black](O,A)(O,B)(O,C)
+                          \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.25](A,MAB,O)
+                          \tkzMarkRightAngle[size=0.25](B,MBC,O)
+                          \tkzMarkRightAngle[size=0.25](A,MAC,O)
+                          \tkzMarkSegments[mark=|](O,A)(O,B)(O,C)
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoint[above right](O){$O$}
+                          \tkzLabelSegment[pos=0.55, left](O,C){$R$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <proof>
             <p>
@@ -301,8 +337,48 @@
                     <mrow>R \amp= \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{210}{24\sqrt{6}} = \frac{35}{4\sqrt{6}} = \frac{35\sqrt{6}}{24} \approx 3.57 \text{ cm.}</mrow>
                 </md>
             </p>
-            <!-- TODO: tkz-euclide diagram — triangle 5-6-7 with circumcircle and perpendicular bisectors shown,
-                 circumcenter O labelled. Use \tkzDefCircle[circum](A,B,C)\tkzGetPoint{O}. -->
+            <figure xml:id="fig-circum-5-6-7">
+                <caption>Triangle with <m>AB=7</m>, <m>BC=5</m>, <m>CA=6</m> and its circumcircle. The perpendicular bisectors of <m>AB</m> and <m>BC</m> meet at circumcenter <m>O</m>.</caption>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.85]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 7/0/B}
+                          \pgfmathsetmacro{\rAC}{6}
+                          \pgfmathsetmacro{\rBC}{5}
+                          \tkzDefCircle[R](A,\rAC)  \tkzGetPoint{cAC}
+                          \tkzDefCircle[R](B,\rBC)  \tkzGetPoint{cBC}
+                          \tkzInterCC(A,cAC)(B,cBC)  \tkzGetPoints{C}{Cp}
+
+                          %% --- CALCULATE ---
+                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+                          \tkzDefMidPoint(A,B)  \tkzGetPoint{MAB}
+                          \tkzDefMidPoint(B,C)  \tkzGetPoint{MBC}
+
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue!70!black, thick](O,A)
+                          \tkzDrawLines[gray!55, thin, add=0.6 and 0.6](MAB,O)(MBC,O)
+                          \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.25](A,MAB,O)
+                          \tkzMarkRightAngle[size=0.25](B,MBC,O)
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoint[above right](O){$O$}
+                          \tkzLabelSegment[below](A,B){$7$}
+                          \tkzLabelSegment[above right](B,C){$5$}
+                          \tkzLabelSegment[left](A,C){$6$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
@@ -315,7 +391,40 @@
                     <li>Find the circumradius by calculation and compare with your measured value.</li>
                 </ol>
             </p>
-            <!-- TODO: tkz-euclide diagram — right triangle 6-8-10 with circumcircle, O at midpoint of hypotenuse. -->
+            <figure xml:id="fig-circum-6-8-10">
+                <caption>Right triangle with legs <m>6</m> cm and <m>8</m> cm, hypotenuse <m>10</m> cm. The circumcenter <m>O</m> lies at the midpoint of the hypotenuse.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 6/0/B, 0/8/C}
+
+                          %% --- CALCULATE ---
+                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue!70!black, thick](O,A)
+                          \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.3](B,A,C)
+                          \tkzMarkSegments[mark=|](O,B)(O,C)
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoints[above left](C)
+                          \tkzLabelPoint[right](O){$O$}
+                          \tkzLabelSegment[below](A,B){$6$}
+                          \tkzLabelSegment[left](A,C){$8$}
+                          \tkzLabelSegment[above right](B,C){$10$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -344,7 +453,43 @@
                     <li>Calculate <m>R</m> using the formula and compare with your measured value.</li>
                 </ol>
             </p>
-            <!-- TODO: tkz-euclide diagram — triangle 13-14-15 with circumcircle and circumcenter O. -->
+            <figure xml:id="fig-circum-13-14-15">
+                <caption>Triangle with sides <m>13</m> cm, <m>14</m> cm, and <m>15</m> cm and its circumcircle with circumcenter <m>O</m>.</caption>
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 14/0/B}
+                          \pgfmathsetmacro{\rAC}{13}
+                          \pgfmathsetmacro{\rBC}{15}
+                          \tkzDefCircle[R](A,\rAC)  \tkzGetPoint{cAC}
+                          \tkzDefCircle[R](B,\rBC)  \tkzGetPoint{cBC}
+                          \tkzInterCC(A,cAC)(B,cBC)  \tkzGetPoints{C}{Cp}
+
+                          %% --- CALCULATE ---
+                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue!70!black, thick](O,A)
+                          \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                          %% --- MARK ---
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoint[right](O){$O$}
+                          \tkzLabelSegment[below](A,B){$14$}
+                          \tkzLabelSegment[above right](B,C){$15$}
+                          \tkzLabelSegment[left](A,C){$13$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -367,7 +512,40 @@
             <p>
                 A triangular market plot in Mombasa has boundary lengths <m>5</m> m, <m>12</m> m, and <m>13</m> m. The market committee wants to install a circular fence that runs exactly through all three corners of the plot. Find the radius of the fence.
             </p>
-            <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with circumcircle. -->
+            <figure xml:id="fig-circum-5-12-13">
+                <caption>Right triangle with legs <m>5</m> m and <m>12</m> m, hypotenuse <m>13</m> m. The circumcenter <m>O</m> lies at the midpoint of the hypotenuse.</caption>
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.6]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 5/0/B, 0/12/C}
+
+                          %% --- CALCULATE ---
+                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue!70!black, thick](O,A)
+                          \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.3](B,A,C)
+                          \tkzMarkSegments[mark=|](O,B)(O,C)
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoints[above left](C)
+                          \tkzLabelPoint[right](O){$O$}
+                          \tkzLabelSegment[below](A,B){$5$}
+                          \tkzLabelSegment[left](A,C){$12$}
+                          \tkzLabelSegment[above right](B,C){$13$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -412,8 +590,40 @@
                         <li>Check your answer: measure <m>OA</m>, <m>OB</m>, and <m>OC</m>. What do you find?</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle 6-7-8 with labelled sides but no circumcircle
-                     (construction exercise; learner draws the circle). -->
+                <figure xml:id="fig-circum-exer-6-7-8">
+                    <caption>Triangle <m>ABC</m> with <m>AB=7</m> cm, <m>BC=8</m> cm, <m>CA=6</m> cm. Construct the circumcircle.</caption>
+                    <image width="60%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.85]
+
+                              %% --- SET ---
+                              \tkzDefPoints{0/0/A, 7/0/B}
+                              \pgfmathsetmacro{\rAC}{6}
+                              \pgfmathsetmacro{\rBC}{8}
+                              \tkzDefCircle[R](A,\rAC)  \tkzGetPoint{cAC}
+                              \tkzDefCircle[R](B,\rBC)  \tkzGetPoint{cBC}
+                              \tkzInterCC(A,cAC)(B,cBC)  \tkzGetPoints{C}{Cp}
+
+                              %% --- CALCULATE ---
+
+                              %% --- DRAW ---
+                              \tkzDrawPolygon[thick](A,B,C)
+                              \tkzDrawPoints[size=3pt](A,B,C)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[below right](B)
+                              \tkzLabelPoints[above](C)
+                              \tkzLabelSegment[below](A,B){$7$}
+                              \tkzLabelSegment[right](B,C){$8$}
+                              \tkzLabelSegment[left](A,C){$6$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -436,7 +646,40 @@
                         <li>Find the circumradius by calculation and check it matches your diagram.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — right triangle 9-12-15 with circumcircle, O at midpoint of hypotenuse. -->
+                <figure xml:id="fig-circum-exer-9-12-15">
+                    <caption>Right triangle with legs <m>9</m> cm and <m>12</m> cm, hypotenuse <m>15</m> cm. The circumcenter <m>O</m> lies at the midpoint of the hypotenuse.</caption>
+                    <image width="60%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.55]
+
+                              %% --- SET ---
+                              \tkzDefPoints{0/0/A, 9/0/B, 0/12/C}
+
+                              %% --- CALCULATE ---
+                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                              %% --- DRAW ---
+                              \tkzDrawPolygon[thick](A,B,C)
+                              \tkzDrawCircle[blue!70!black, thick](O,A)
+                              \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                              %% --- MARK ---
+                              \tkzMarkRightAngle[size=0.35](B,A,C)
+                              \tkzMarkSegments[mark=|](O,B)(O,C)
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[below right](B)
+                              \tkzLabelPoints[above left](C)
+                              \tkzLabelPoint[right](O){$O$}
+                              \tkzLabelSegment[below](A,B){$9$}
+                              \tkzLabelSegment[left](A,C){$12$}
+                              \tkzLabelSegment[above right](B,C){$15$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -457,7 +700,40 @@
                         <li>Calculate <m>R</m> using the right-triangle shortcut, then verify using <m>R = abc/(4\,\text{Area})</m>.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — right triangle 5-12-13 with circumcircle. -->
+                <figure xml:id="fig-circum-exer-5-12-13">
+                    <caption>Right triangle with legs <m>5</m> cm and <m>12</m> cm, hypotenuse <m>13</m> cm, and its circumcircle.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.6]
+
+                              %% --- SET ---
+                              \tkzDefPoints{0/0/A, 5/0/B, 0/12/C}
+
+                              %% --- CALCULATE ---
+                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                              %% --- DRAW ---
+                              \tkzDrawPolygon[thick](A,B,C)
+                              \tkzDrawCircle[blue!70!black, thick](O,A)
+                              \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                              %% --- MARK ---
+                              \tkzMarkRightAngle[size=0.3](B,A,C)
+                              \tkzMarkSegments[mark=|](O,B)(O,C)
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[below right](B)
+                              \tkzLabelPoints[above left](C)
+                              \tkzLabelPoint[right](O){$O$}
+                              \tkzLabelSegment[below](A,B){$5$}
+                              \tkzLabelSegment[left](A,C){$12$}
+                              \tkzLabelSegment[above right](B,C){$13$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -478,7 +754,43 @@
                         <li>Calculate the circumradius, leaving your answer in surd form.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle 7-8-9 with circumcircle. -->
+                <figure xml:id="fig-circum-exer-7-8-9">
+                    <caption>Triangle with sides <m>7</m> cm, <m>8</m> cm, and <m>9</m> cm and its circumcircle. The circumcenter <m>O</m> lies inside the triangle.</caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.75]
+
+                              %% --- SET ---
+                              \tkzDefPoints{0/0/A, 9/0/B}
+                              \pgfmathsetmacro{\rAC}{7}
+                              \pgfmathsetmacro{\rBC}{8}
+                              \tkzDefCircle[R](A,\rAC)  \tkzGetPoint{cAC}
+                              \tkzDefCircle[R](B,\rBC)  \tkzGetPoint{cBC}
+                              \tkzInterCC(A,cAC)(B,cBC)  \tkzGetPoints{C}{Cp}
+
+                              %% --- CALCULATE ---
+                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                              %% --- DRAW ---
+                              \tkzDrawPolygon[thick](A,B,C)
+                              \tkzDrawCircle[blue!70!black, thick](O,A)
+                              \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                              %% --- MARK ---
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[below right](B)
+                              \tkzLabelPoints[above](C)
+                              \tkzLabelPoint[above right](O){$O$}
+                              \tkzLabelSegment[below](A,B){$9$}
+                              \tkzLabelSegment[above right](B,C){$8$}
+                              \tkzLabelSegment[left](A,C){$7$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -503,7 +815,38 @@
                         <li>Using your answer to (a) and any valid choice for the other sides, draw a possible triangle <m>ABC</m> and construct its circumcircle. Check that the radius is approximately <m>6</m> cm.</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — triangle with angle A and side a = 9 labelled, circumcircle shown. -->
+                <figure xml:id="fig-circum-exer-angle">
+                    <caption>An illustrative triangle <m>ABC</m> with side <m>BC = 9</m> cm and circumcircle of radius <m>R = 6</m> cm. Angle <m>A</m> is the inscribed angle subtending <m>BC</m>.</caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.75]
+
+                              %% --- SET ---
+                              \tkzDefPoints{0/0/B, 9/0/C, 3/8/A}
+
+                              %% --- CALCULATE ---
+                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+
+                              %% --- DRAW ---
+                              \tkzDrawPolygon[thick](A,B,C)
+                              \tkzDrawCircle[blue!70!black, thick](O,A)
+                              \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                              %% --- MARK ---
+                              \tkzMarkAngle[arc=l, size=0.7](B,A,C)
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below left](B)
+                              \tkzLabelPoints[below right](C)
+                              \tkzLabelPoints[above left](A)
+                              \tkzLabelPoint[above right](O){$O$}
+                              \tkzLabelSegment[below](B,C){$9$ cm}
+                              \tkzLabelAngle[pos=1.1](B,A,C){$A$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -528,7 +871,40 @@
                         <li>Show that <m>R = 2r</m>. How does this match what you see in your diagram?</li>
                     </ol>
                 </p>
-                <!-- TODO: tkz-euclide diagram — equilateral triangle with both circumcircle and incircle shown, shared centre. -->
+                <figure xml:id="fig-circum-exer-equilateral">
+                    <caption>Equilateral triangle with side <m>12</m> cm, circumcircle (blue) and incircle (orange). For an equilateral triangle the circumcenter and incenter coincide.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.55]
+
+                              %% --- SET ---
+                              \tkzDefPoints{0/0/A, 12/0/B}
+                              \tkzDefPointBy[rotation=center A angle 60](B)  \tkzGetPoint{C}
+
+                              %% --- CALCULATE ---
+                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+                              \tkzDefCircle[in](A,B,C)  \tkzGetPoints{I}{Ix}
+
+                              %% --- DRAW ---
+                              \tkzDrawPolygon[thick](A,B,C)
+                              \tkzDrawCircle[blue!70!black, thick](O,A)
+                              \tkzDrawCircle[orange!80!black, thick](I,Ix)
+                              \tkzDrawPoints[size=3pt](A,B,C,O)
+
+                              %% --- MARK ---
+                              \tkzMarkSegments[mark=|](A,B)(B,C)(A,C)
+
+                              %% --- LABEL ---
+                              \tkzLabelPoints[below left](A)
+                              \tkzLabelPoints[below right](B)
+                              \tkzLabelPoints[above](C)
+                              \tkzLabelPoint[right](O){$O$}
+                              \tkzLabelSegment[below](A,B){$12$}
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>

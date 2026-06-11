@@ -135,7 +135,7 @@
             </li>
             <li>
                 <p>
-                    Walk through the six construction steps using the diagrams below, pausing at each step for learners to follow along on their own paper with compass and straightedge.
+                    Walk through the construction steps using the diagrams below, pausing at each step for learners to follow along on their own paper with compass and straightedge.
                 </p>
             </li>
             <li>
@@ -153,15 +153,35 @@
                     <p>
                         A <term>tangent</term> to a circle is a straight line that touches the circle at exactly one point, called the <term>point of tangency</term>.
                     </p>
+                    <figure xml:id="fig-intro-tangent">
+                        <caption>Circle with a tangent line.</caption>
+                        <image width="60%">
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \tkzDefPoint(0,0){O}
+                                    \tkzDefPoint(-1.2, 1.6){A}
+                                    \tkzDrawCircle[thick, teal](O,A)
+                                    \tkzDrawPoints(O, A)
+                                    \tkzLabelPoints[above right](O)
+                                    \tkzLabelPoints[above](A){$P$}
+                                    \tkzDefLine[tangent at=A](O) \tkzGetPoint{h}
+                                    \tkzDrawLine[add = 3 and 2, thick](A,h)
+                                    \tkzDrawSegment(O,A)
+                                    \tkzMarkRightAngle(O,A,h)
+                                    \tkzLabelLine[pos=1.25,above left](A,h){Tangent}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
                 </li>
                 <li>
                     <p>
-                        At the point of tangency, the tangent is <em>perpendicular to the radius</em>. Conversely, any line through a point on the circle that is perpendicular to the radius at that point is the tangent at that point.
+                        At the point of tangency, the tangent is <em>perpendicular to the radius</em>.
                     </p>
                 </li>
                 <li>
                     <p>
-                        From any point outside a circle, exactly two tangents can be drawn to the circle. The distances from the external point to the two points of tangency are <em>equal</em>.
+                        Conversely, any line through a point on the circle that is perpendicular to the radius at that point is the tangent at that point.
                     </p>
                 </li>
             </ul>
@@ -189,7 +209,7 @@
                                     \tkzDrawCircle[thick, teal](O,P)
                                     \tkzDrawPoints(O,P)
                                     \tkzLabelPoints[below left](O)
-                                    \tkzLabelPoints[right](P)
+                                    \tkzLabelPoints[below right](P)
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -211,7 +231,7 @@
                                     \tkzDrawSegment(O,Ext)
                                     \tkzDrawPoints(O,P)
                                     \tkzLabelPoints[below left](O)
-                                    \tkzLabelPoints[below](P)
+                                    \tkzLabelPoints[below right](P)
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -234,7 +254,8 @@
                                     \tkzMarkSegments[mark=|](O,P P,Q)
                                     \tkzDrawPoints(O,P,Q)
                                     \tkzLabelPoints[below left](O)
-                                    \tkzLabelPoints[below](P,Q)
+                                    \tkzLabelPoints[below right](P)
+                                    \tkzLabelPoints[below](Q)
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -261,9 +282,8 @@
                                     \draw[dashed,gray] (2.393,1.915) arc[start angle=130, end angle=230, radius=2.5];
                                     \tkzDrawPoints(O,P,Q,X,Y)
                                     \tkzLabelPoints[below left](O)
-                                    \tkzLabelPoints[below](P,Q)
-                                    \tkzLabelPoints[right](X)
-                                    \tkzLabelPoints[right](Y)
+                                    \tkzLabelPoints[below right](P)
+                                    \tkzLabelPoints[right](X, Y, Q)
                                 \end{tikzpicture}
                             </latex-image>
                         </image>
@@ -324,7 +344,7 @@
                     <latex-image>
                         \begin{tikzpicture}
                             \tkzDefPoint(0,0){O}
-                            \tkzDefPoint(0,2){P}
+                            \tkzDefPointOnCircle[R = center O angle 110 radius 2] \tkzGetPoint{P}
                             \tkzDrawCircle[thick, teal](O,P)
                             \tkzDrawPoints(O,P)
                             \tkzLabelPoints[left](O)
@@ -351,6 +371,7 @@
                 <image width="55%">
                     <latex-image>
                         \begin{tikzpicture}
+                            \begin{scope}[rotate=20]
                             \tkzDefPoint(0,0){O}
                             \tkzDefPoint(0,2){P}
                             \tkzDefPoint(0,4){Q}
@@ -366,9 +387,10 @@
                             \tkzMarkRightAngle[size=0.2](O,P,Tang)
                             \tkzDrawPoints(O,P,Q,X,Y)
                             \tkzLabelPoints[left](O)
-                            \tkzLabelPoints[left](P)
+                            \tkzLabelPoints[above left](P)
                             \tkzLabelPoints[above](Q, X, Y)
                             \node[blue] at (2.9,1.7) {\small tangent};
+                            \end{scope}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -459,10 +481,42 @@
                 So <m>TA = \sqrt{21} \approx 4.58</m> cm.
             </p>
             <p>
-                By the same argument in triangle <m>OBT</m>, <m>TB = \sqrt{21}</m> cm. The two tangent lengths are equal, confirming the property stated in the Key Ideas above.
+                By the same argument in triangle <m>OBT</m>, <m>TB = \sqrt{21}</m> cm. The two tangent lengths are equal, which is true of any two tangents drawn from the same external point to a circle.
             </p>
         </solution>
     </example>
+
+    <insight>
+        <title>Equal Tangents</title>
+        <p>
+            Any two tangents drawn from the same external point to a circle are equal in length.
+        </p>
+        <figure xml:id="fig-equal-tangents-insight">
+                <caption>Two tangents from external point <m>T</m>.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPoint(2,0){Pr}
+                            \tkzDefPoint(5,0){T}
+                            \tkzDefPoint(0.8,1.833){A}
+                            \tkzDefPoint(0.8,-1.833){B}
+                            \tkzDrawCircle[thick](O,Pr)
+                            \tkzDrawSegments(T,A T,B)
+                            \tkzDrawSegments[dashed](O,A O,B O,T)
+                            \tkzMarkRightAngle[size=0.15](O,A,T)
+                            \tkzMarkRightAngle[size=0.15](O,B,T)
+                            \tkzMarkSegments[mark=|](T,A T,B)
+                            \tkzDrawPoints(O,T,A,B)
+                            \tkzLabelPoints[below left](O)
+                            \tkzLabelPoints[right](T)
+                            \tkzLabelPoints[above right](A)
+                            \tkzLabelPoints[below right](B)
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -486,11 +540,10 @@
                                 \tkzLabelPoints[above right](O)
                                 \tkzDefLine[tangent at=A](O)
                                 \tkzGetPoint{h}
-                                \tkzDrawLine[add = 4 and 3](A,h)
-                                \tkzLabelLine[pos=1.25,right](A,h){(c)}
+                                \tkzDrawLine[add = 4 and 3, thick](A,h)
+                                \tkzLabelLine[pos=1.25,above](A,h){(c)}
                                 \draw[thick] (2,-3.2) -- (2,3.2);
                                 \draw[thick] (-3,0.7) -- (3,0.7);
-                                \draw[thick] (3.5,-3.2) -- (3.5,3.2);
                                 \draw[thick] (-3,0) -- (3,0);
                                 \node at (2.45,3.0) {\small (a)};
                                 \node at (3.3,0.7) {\small (b)};
@@ -500,16 +553,16 @@
                     </image>
                 </figure>
             </statement>
-            <answer>
+            <solution>
                 <p>
                     <ul>
-                        <li><p>(a) is the <em>tangent</em> — it touches the circle at exactly one point (the rightmost point).</p></li>
+                        <li><p>(a) is a <em>tangent</em> — it touches the circle at exactly one point (the rightmost point).</p></li>
                         <li><p>(b) is a <em>secant</em> — it cuts through the circle at two points.</p></li>
-                        <li><p>(c) <em>misses the circle entirely</em> — it is further from the centre than the radius.</p></li>
+                        <li><p>(c) is a <em>tangent</em> — it touches the circle at exactly one point.</p></li>
                         <li><p>(d) is a <em>diameter</em> — it passes through the centre <m>O</m> and intersects the circle at two diametrically opposite points.</p></li>
                     </ul>
                 </p>
-            </answer>
+            </solution>
         </exercise>
 
         <exercise xml:id="exercise-construct-tangent-at-point">
@@ -521,26 +574,135 @@
                     Check your construction by measuring the angle between your tangent and the radius <m>OP</m> with a protractor.
                 </p>
             </statement>
+            <solution>
+                <p>
+                    Your answer should look like <xref ref="fig-tangent-eg1-solution"/>.
+                </p>
+            </solution>
         </exercise>
 
         <exercise xml:id="exercise-construct-external-tangents">
             <statement>
-                <p>
-                    Draw a circle with centre <m>O</m> and radius 3 cm. Mark an external point <m>T</m> such that <m>OT = 6</m> cm. Construct both tangents from <m>T</m> to the circle and label the points of tangency <m>A</m> and <m>B</m>.
-                </p>
-                <p>
-                    Calculate the exact length of each tangent.
-                </p>
+                <introduction>
+                    <p>
+                        Draw a circle with centre <m>O</m> and radius 3 cm. 
+                    </p>
+                </introduction>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Mark an external point <m>T</m> such that <m>OT = 6</m> cm. Construct both tangents from <m>T</m> to the circle and label the points of tangency <m>A</m> and <m>B</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the exact length of each tangent, and confirm by measuring.
+                        </p>
+                    </li>
+                </ol>
             </statement>
-            <answer>
-                <p>
-                    By Pythagoras' theorem in triangle <m>OAT</m> (where <m>\angle OAT = 90°</m>):
-                    <md>
-                        TA^2 = OT^2 - OA^2 = 6^2 - 3^2 = 36 - 9 = 27.
-                    </md>
-                    So <m>TA = \sqrt{27} = 3\sqrt{3} \approx 5.2</m> cm, and by symmetry <m>TB = 3\sqrt{3}</m> cm.
-                </p>
-            </answer>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Construction steps:
+                            <ol marker="1.">
+                                <li><p>Draw segment <m>OT</m> and bisect it with compasses to find its midpoint <m>M</m>.</p></li>
+                                <li><p>Draw a circle centred at <m>M</m> with radius <m>MO</m>. This <q>midpoint circle</q> also passes through <m>T</m>, since <m>MO = MT</m>.</p></li>
+                                <li><p>Mark the two points <m>A</m> and <m>B</m> where the midpoint circle crosses the original circle.</p></li>
+                                <li><p>Draw lines <m>TA</m> and <m>TB</m> — these are the required tangents.</p></li>
+                            </ol>
+                        </p>
+                        <sidebyside widths="48% 48%" margins="auto">
+                            <figure xml:id="fig-construct-external-tangent-step1">
+                                <caption>Steps 1–3: the midpoint circle (dashed) intersects the original circle at the tangent points <m>A</m> and <m>B</m>.</caption>
+                                <image>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.7]
+                                        \pgfmathsetmacro{\r}{3}
+
+                                        %% --- SET ---
+                                        \tkzDefPoints{0/0/O, 6/0/T}
+                                        \tkzDefPoint(\r, 0){Pr}
+
+                                        %% --- CALCULATE ---
+                                        \tkzDefMidPoint(O,T) \tkzGetPoint{M}
+                                        \tkzInterCC(O,Pr)(M,O) \tkzGetPoints{A}{B}
+
+                                        %% --- DRAW ---
+                                        \tkzDrawCircle[thick, blue](O,Pr)
+                                        \tkzDrawCircle[dashed, gray!70](M,O)
+                                        \tkzDrawSegment[thin](O,T)
+                                        \tkzDrawPoints[size=3pt](O,T,M,A,B)
+
+                                        %% --- MARK ---
+                                        \tkzMarkSegments[mark=|](M,O M,T)
+
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below left](O){$O$}
+                                        \tkzLabelPoint[below right](T){$T$}
+                                        \tkzLabelPoint[below right](M){$M$}
+                                        \tkzLabelPoint[above right](A){$A$}
+                                        \tkzLabelPoint[below right](B){$B$}
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                            <figure xml:id="fig-construct-external-tangent-final">
+                                <caption>Step 4: tangents <m>TA</m> and <m>TB</m> meet the circle at right angles to the radii.</caption>
+                                <image>
+                                    <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                    \pgfmathsetmacro{\r}{3}
+
+                                    %% --- SET ---
+                                    \tkzDefPoints{0/0/O, 6/0/T}
+                                    \tkzDefPoint(\r, 0){Pr}
+
+                                    %% --- CALCULATE ---
+                                    \tkzDefMidPoint(O,T) \tkzGetPoint{M}
+                                    \tkzInterCC(O,Pr)(M,O) \tkzGetPoints{A}{B}
+
+                                    %% --- DRAW ---
+                                    \tkzDrawCircle[thick, blue](O,Pr)
+                                    \tkzDrawSegments[thick, red](T,A T,B)
+                                    \tkzDrawSegments[dashed, gray](O,A O,B)
+                                    \tkzDrawSegment[thin](O,T)
+                                    \tkzDrawPoints[size=3pt](O,T,A,B)
+
+                                    %% --- MARK ---
+                                    \tkzMarkRightAngle[size=0.22](O,A,T)
+                                    \tkzMarkRightAngle[size=0.22](O,B,T)
+                                    \tkzMarkSegments[mark=|](O,A O,B)
+
+                                    %% --- LABEL ---
+                                    \tkzLabelPoint[below left](O){$O$}
+                                    \tkzLabelPoint[below right](T){$T$}
+                                    \tkzLabelPoint[above](A){$A$}
+                                    \tkzLabelPoint[below](B){$B$}
+                                    \tkzLabelSegment[left](O,A){$3$}
+                                    \tkzLabelSegment[above, sloped](A,T){$3\sqrt{3}$}
+                                    \tkzLabelSegment[below](O,T){$6$}
+                                    \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </sidebyside>
+                        <p>
+                            <em>Why it works:</em> Because <m>OT</m> is a diameter of the midpoint circle, Thales' theorem gives <m>\angle OAT = 90°</m> for every point <m>A</m> on that circle. So <m>OA \perp TA</m> — a radius meeting a line at <m>90°</m> means that line is tangent to the original circle at <m>A</m>. The same argument applies at <m>B</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            By Pythagoras' theorem in triangle <m>OAT</m> (where <m>\angle OAT = 90°</m>):
+                            <md>
+                                TA^2 = OT^2 - OA^2 = 6^2 - 3^2 = 36 - 9 = 27.
+                            </md>
+                            So <m>TA = \sqrt{27} = 3\sqrt{3} \approx 5.2</m> cm, and by symmetry <m>TB = 3\sqrt{3}</m> cm.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
         </exercise>
 
         <exercise xml:id="exercise-equal-tangents-discovery">
@@ -723,13 +885,14 @@
                 </p>
             </answer>
         </exercise>
-        <exercise>
+        <!-- Adapted from tkz-euclide documentation p. 237  -->
+        <!-- TODO: Make Pappus Chain exercise -->
+        <!-- <exercise>
             <introduction>
                 <p>
                     <figure xml:id="pappus-chain">
                         <caption>Pappus Chain</caption>
                         <image>
-                            <!-- Adapted from tkz-euclide documentation p. 237  -->
                             <latex-image>
                                 \begin{tikzpicture}[ultra thin]
                                     \pgfmathsetmacro{\xB}{6}%
@@ -754,7 +917,7 @@
                     </figure>
                 </p>
             </introduction>
-        </exercise>
+        </exercise> -->
     </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />

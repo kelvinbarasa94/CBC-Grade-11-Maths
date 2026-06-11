@@ -74,8 +74,49 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Draw a circle using a compass (or trace a circular object). Draw two chords <m>AB</m> and <m>CD</m> that cross each other <em>inside</em> the circle. Label their intersection point <m>P</m>.
+                                Draw a circle using a compass (or trace a circular object). Draw two chords <m>AB</m> and <m>CD</m> that cross each other <em>inside</em> the circle. Label their intersection point <m>P</m>, as shown below.
                             </p>
+                            <figure xml:id="intersecting-chords-demo">
+                                <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
+                                <image width="50%">
+                                    <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=1.0]
+
+                                            %% --- SET ---
+                                            \tkzDefPoint(0,0){O}
+                                            \tkzDefPoint(3,0){cR}
+                                            \tkzDefPointBy[rotation=center O angle 175](cR) \tkzGetPoint{A}
+                                            \tkzDefPointBy[rotation=center O angle 18](cR)  \tkzGetPoint{B}
+                                            \tkzDefPointBy[rotation=center O angle 248](cR) \tkzGetPoint{C}
+                                            \tkzDefPointBy[rotation=center O angle 72](cR)  \tkzGetPoint{D}
+
+                                            %% --- CALCULATE ---
+                                            \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
+
+                                            %% --- DRAW ---
+                                            \tkzDrawCircle[thick](O,cR)
+                                            \tkzDrawSegment[blue, thick](A,B)
+                                            \tkzDrawSegment[red, thick](C,D)
+                                            \tkzDrawPoints(A,B,C,D,P,O)
+
+                                            %% --- MARK ---
+
+                                            %% --- LABEL ---
+                                            \tkzLabelPoints[left](A)
+                                            \tkzLabelPoints[right](B, O)
+                                            \tkzLabelPoints[below left](C)
+                                            \tkzLabelPoints[above](D)
+                                            \tkzLabelPoints[above right](P)
+                                            \tkzLabelSegment[above, sloped, font=\small](A,P){$AP$}
+                                            \tkzLabelSegment[above, sloped, font=\small](P,B){$PB$}
+                                            \tkzLabelSegment[above, sloped, font=\small](C,P){$CP$}
+                                            \tkzLabelSegment[above, sloped, font=\small](P,D){$PD$}
+
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
                         </li>
                         <li>
                             <p>
@@ -155,17 +196,12 @@
             <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Ask a few learners to share their products. Confirm that everyone's measurements (approximately) agree — the products are always equal. Tell Learners: <q>This isn't a coincidence — it's always exactly true, and we can prove it using similar triangles.</q>
+                        <alert>Connecting to Learner Work:</alert> Ask a few learners to share their products. Confirm that everyone's measurements (approximately) agree — the products are always equal.
                     </p>
                 </li>
                 <li>
                     <p>
-                        Ensure Learners recall that angles subtended by the same arc are equal — the proof depends on this result.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Stress that the theorem holds for <em>any</em> two chords that cross inside the circle, whether or not they meet at right angles.
+                        Ensure Learners recall that angles subtended by the same arc are equal as the proof depends on this result.
                     </p>
                 </li>
             </ul>
@@ -175,7 +211,13 @@
     <theorem xml:id="thm-intersecting-chords">
         <title>The Intersecting Chords Theorem</title>
         <statement>
-            <figure xml:id="intersecting-chords-thm">
+            <p>
+                If two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle, then
+                <md>
+                    AP \times PB = CP \times PD.
+                </md>
+            </p>
+                        <figure xml:id="intersecting-chords-thm">
                 <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
                 <image width="50%">
                     <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
@@ -216,12 +258,6 @@
                     </latex-image>
                 </image>
             </figure>
-            <p>
-                If two chords <m>AB</m> and <m>CD</m> of a circle intersect at a point <m>P</m> inside the circle, then
-                <md>
-                    AP \times PB = CP \times PD.
-                </md>
-            </p>
         </statement>
         <proof>
             <p>
@@ -313,31 +349,6 @@
             </p>
         </proof>
     </theorem>
-
-    <insight>
-        <p>
-            <ul>
-                <li>
-                    <p>
-                        <term>The Intersecting Chords Theorem:</term> when two chords <m>AB</m> and <m>CD</m> intersect at a point <m>P</m> inside a circle,
-                        <md>
-                            AP \times PB = CP \times PD.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        The proof uses the fact that angles subtended by the same arc are equal — a result from earlier in this chapter.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        If three of the four segment lengths are known, set up the equation <m>AP \times PB = CP \times PD</m> and solve for the unknown.
-                    </p>
-                </li>
-            </ul>
-        </p>
-    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
@@ -513,7 +524,7 @@
                           \tkzDrawPoints(A,B,C,D,P)
 
                           %% --- MARK ---
-                          \tkzMarkRightAngle[size=0.18](A,P,C)
+                          \tkzMarkRightAngle[size=0.18](C,P,B)
 
                           %% --- LABEL ---
                           \tkzLabelPoints[left](A)
@@ -546,9 +557,9 @@
                             </md>
                             Therefore <m>CP = 6</m> cm.
                         </p>
-                    </li>
+                    </li> 
                     <li>
-                        <p>
+                        <p> We have:
                             <md>
                                 <mrow> CD \amp= CP + PD </mrow>
                                 <mrow>    \amp= 6 + 6 </mrow>
@@ -828,7 +839,7 @@
                     <image width="60%">
                         <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.3]
+                            \begin{tikzpicture}[scale=0.5]
                               \pgfmathsetmacro{\AP}{4}
                                 \pgfmathsetmacro{\PB}{7}
                                 \pgfmathsetmacro{\CP}{14}
@@ -960,47 +971,6 @@
                 <p>
                     In each part, two chords intersect inside a circle at point <m>T</m>. Find <m>x</m> and then find the length of chord <m>RS</m>.
                 </p>
-                <figure>
-                    <caption>Chords <m>PQ</m> and <m>RS</m> intersecting at <m>T</m>.</caption>
-                    <image width="50%">
-                        <shortdescription>A circle with two intersecting chords PQ (blue) and RS (red) meeting at T. The four segments PT, TQ, RT, TS are labelled.</shortdescription>
-                        <latex-image>
-                            \begin{tikzpicture}[scale=0.8]
-
-                              %% --- SET ---
-                              \tkzDefPoint(0,0){O}
-                              \tkzDefPoint(3,0){cR}
-                              \tkzDefPointBy[rotation=center O angle 188](cR) \tkzGetPoint{P}
-                              \tkzDefPointBy[rotation=center O angle 12](cR)  \tkzGetPoint{Q}
-                              \tkzDefPointBy[rotation=center O angle 100](cR) \tkzGetPoint{R}
-                              \tkzDefPointBy[rotation=center O angle 292](cR) \tkzGetPoint{S}
-
-                              %% --- CALCULATE ---
-                              \tkzInterLL(P,Q)(R,S) \tkzGetPoint{T}
-
-                              %% --- DRAW ---
-                              \tkzDrawCircle[thick](O,cR)
-                              \tkzDrawSegment[blue, thick](P,Q)
-                              \tkzDrawSegment[red, thick](R,S)
-                              \tkzDrawPoints(P,Q,R,S,T)
-
-                              %% --- MARK ---
-
-                              %% --- LABEL ---
-                              \tkzLabelPoints[left](P)
-                              \tkzLabelPoints[right](Q)
-                              \tkzLabelPoints[above](R)
-                              \tkzLabelPoints[below right](S)
-                              \tkzLabelPoints[above right](T)
-                              \tkzLabelSegment[above, sloped, font=\small](P,T){$PT$}
-                              \tkzLabelSegment[above, sloped, font=\small](T,Q){$TQ$}
-                              \tkzLabelSegment[right, font=\small](R,T){$RT$}
-                              \tkzLabelSegment[right, font=\small](T,S){$TS$}
-
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1011,7 +981,7 @@
                     <image width="60%">
                         <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
                         <latex-image>
-                        \begin{tikzpicture}[scale=0.9]
+                        \begin{tikzpicture}[scale=0.7]
                             \pgfmathsetmacro{\PT}{4}
                             \pgfmathsetmacro{\TQ}{6}
                             \pgfmathsetmacro{\RT}{4}
@@ -1247,66 +1217,115 @@
                 <p>
                     In each part, two chords of a circle meet at right angles at point <m>P</m>.
                 </p>
-                <figure>
-                    <caption>Perpendicular chords <m>AB</m> and <m>CD</m> meeting at <m>P</m>.</caption>
-                    <image width="50%">
-                        <shortdescription>A circle with a horizontal chord AB (blue) and a vertical chord CD (red) crossing at right angles at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
-                        <latex-image>
-                            \begin{tikzpicture}[scale=0.85]
-
-                              %% --- SET ---
-                              \tkzDefPoint(0,0){P}
-                              \tkzDefPoint(-2,0){A}
-                              \tkzDefPoint(4.5,0){B}
-                              \tkzDefPoint(0,3){C}
-                              \tkzDefPoint(0,-3){D}
-
-                              %% --- CALCULATE ---
-                              \tkzDefCircle[circum](A,B,C) \tkzGetPoint{O}
-
-                              %% --- DRAW ---
-                              \tkzDrawCircle[thick](O,A)
-                              \tkzDrawSegment[blue, thick](A,B)
-                              \tkzDrawSegment[red, thick](C,D)
-                              \tkzDrawPoints(A,B,C,D,P)
-
-                              %% --- MARK ---
-                              \tkzMarkRightAngle[size=0.20](A,P,C)
-
-                              %% --- LABEL ---
-                              \tkzLabelPoints[left](A)
-                              \tkzLabelPoints[right](B)
-                              \tkzLabelPoints[above](C)
-                              \tkzLabelPoints[below](D)
-                              \tkzLabelPoints[below left](P)
-                              \tkzLabelSegment[above, font=\small](A,P){$AP$}
-                              \tkzLabelSegment[above, font=\small](P,B){$PB$}
-                              \tkzLabelSegment[right, font=\small](C,P){$CP$}
-                              \tkzLabelSegment[right, font=\small](P,D){$PD$}
-
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
                             Chords <m>AB</m> and <m>CD</m> meet at right angles at <m>P</m>. <m>AP = 4</m> cm, <m>PB = 9</m> cm, and <m>P</m> is the midpoint of <m>CD</m>. Find <m>CP</m> and the length of <m>CD</m>.
                         </p>
+                        <figure xml:id="perpendicular-chords-1">
+                    <caption>Perpendicular chords <m>AB</m> and <m>CD</m> meeting at <m>P</m>.</caption>
+                    <image width="50%">
+                            <shortdescription>A circle with a horizontal chord AB (blue) and a vertical chord CD (red) crossing at right angles at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.85]
+
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){P}
+                                \tkzDefPoint(-2,0){A}
+                                \tkzDefPoint(4.5,0){B}
+                                \tkzDefPoint(0,3){C}
+                                \tkzDefPoint(0,-3){D}
+
+                                %% --- CALCULATE ---
+                                \tkzDefCircle[circum](A,B,C) \tkzGetPoint{O}
+
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O,A)
+                                \tkzDrawSegment[blue, thick](A,B)
+                                \tkzDrawSegment[red, thick](C,D)
+                                \tkzDrawPoints(A,B,C,D,P)
+
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=0.20](A,P,C)
+
+                                %% --- LABEL ---
+                                \tkzLabelPoints[left](A)
+                                \tkzLabelPoints[right](B)
+                                \tkzLabelPoints[above](C)
+                                \tkzLabelPoints[below](D)
+                                \tkzLabelPoints[below left](P)
+                                \tkzLabelSegment[above, font=\small](A,P){$4$ cm}
+                                \tkzLabelSegment[above, font=\small](P,B){$9$ cm}
+                                \tkzLabelSegment[right, font=\small](C,P){$CP$ cm}
+                                \tkzLabelSegment[right, font=\small](P,D){$PD$ cm}
+
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
                     </li>
                     <li>
                         <p>
                             Two perpendicular chords intersect at <m>P</m>. The segments of the first chord are <m>AP = 2</m> cm and <m>PB = 8</m> cm. Without finding <m>CP</m> and <m>PD</m> individually, state the value of <m>CP \times PD</m>.
                         </p>
+                         <figure xml:id="perpendicular-chords-2">
+                    <caption>Perpendicular chords <m>AB</m> and <m>CD</m> meeting at <m>P</m>.</caption>
+                    <image width="50%">
+                            <shortdescription>A circle with a horizontal chord AB (blue) and a vertical chord CD (red) crossing at right angles at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.85]
+
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){P}
+                                \tkzDefPoint(-2,0){A}
+                                \tkzDefPoint(4.5,0){B}
+                                \tkzDefPoint(0,3){C}
+                                \tkzDefPoint(0,-3){D}
+
+                                %% --- CALCULATE ---
+                                \tkzDefCircle[circum](A,B,C) \tkzGetPoint{O}
+
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O,A)
+                                \tkzDrawSegment[blue, thick](A,B)
+                                \tkzDrawSegment[red, thick](C,D)
+                                \tkzDrawPoints(A,B,C,D,P)
+
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=0.20](A,P,C)
+
+                                %% --- LABEL ---
+                                \tkzLabelPoints[left](A)
+                                \tkzLabelPoints[right](B)
+                                \tkzLabelPoints[above](C)
+                                \tkzLabelPoints[below](D)
+                                \tkzLabelPoints[below left](P)
+                                \tkzLabelSegment[above, font=\small](A,P){$2$ cm}
+                                \tkzLabelSegment[above, font=\small](P,B){$8$ cm}
+                                \tkzLabelSegment[right, font=\small](C,P){$CP$ cm}
+                                \tkzLabelSegment[right, font=\small](P,D){$PD$ cm}
+
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
                     </li>
                 </ol>
             </statement>
-            <answer>
+            <solution>
                 <ol marker="(a)">
-                    <li><p><m>CP = 6</m> cm; <m>CD = 12</m> cm</p></li>
-                    <li><p><m>CP \times PD = 16</m> cm<m>^2</m></p></li>
+                    <li><p>Since <m>AB</m> bisects <m>CD</m>, we have <m>CP = PD</m>. By the intersecting chords theorem, 
+                        <md>
+                            <mrow> CP \times PD \amp = AP \times PB </mrow>
+                            <mrow> CP^2 \amp = 4 \times 9 </mrow>
+                            <mrow> \amp = 36 </mrow>
+                            <mrow> CP \amp = 6 </mrow>
+                        </md>
+                        Thus <m>CP = PD = 6\,\text{cm}</m>, so <m>CD = 2 \times 6 = 12\,\text{cm}</m>
+                    </p></li>
+                    <li><p><m>CP \times PD = AP \times PB = 2 \times 8 = 16</m> cm<m>^2</m></p></li>
                 </ol>
-            </answer>
+            </solution>
         </exercise>
 
         <exercise>
