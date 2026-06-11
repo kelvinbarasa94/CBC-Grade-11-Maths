@@ -19,7 +19,7 @@
                     </p>
                 </li>
                 <li>
-                    <title>Specific Learning Outcomes</title> 
+                    <title>Specific Learning Outcomes</title>
                     <p>
                         Apply angles chords and tangents to real life situations
                     </p>
@@ -41,55 +41,83 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
+    <axiom component="lesson-plan">
+        <title>Problem-Solving and Discovery</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    12 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    Learners discover the size of the circle that fits in the gap between three mutually tangent circles of equal radius, building intuition for Descartes' circle theorem.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Provide each group with three identical circular objects (e.g. 50 shilling coins, all of the same denomination) and a piece of paper. Ask groups to trace around the three coins arranged so each touches the other two, then try to draw the largest circle that fits in the central gap. Prompt: <em>How do the sizes seem to compare? Can you express your answer as a fraction of the radius of one coin?</em> After groups share results, move to the structured instruction to formalise the pattern.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
-
-    <!-- <activity>
+    <activity>
+        <title>Three Sodas and the Gap Circle</title>
         <statement>
+            <p>
+                Three soda bottles, each with a circular base of radius 4 cm, are placed on a flat surface so that each bottle touches the other two.
+            </p>
+            <!-- TODO: tkz-euclide diagram — three equal circles (r = 4) arranged tangentially, small gap circle in the centre, all four mutually tangent -->
+            <image width="45%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        % TODO: three equal circles r=4, gap circle in centre
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Trace the base of each bottle onto paper (or use three equal coins). Arrange the three circles so each touches the other two.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Using ruler and compasses only, construct the largest circle that fits inside the central gap, touching all three outer circles.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Measure the radius of your gap circle. Compare with classmates. What fraction of 4 cm is it?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What would happen to the gap circle if the three bottles were larger? Would the fraction change?
+                    </p>
+                </li>
+            </ol>
         </statement>
-    </activity> -->
+    </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalise the pattern discovered in the activity as Descartes' circle theorem, and give learners a tool to compute gap circle radii for any combination of tangent circles.
                 </p>
             </li>
             </dl>
@@ -99,58 +127,762 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Ask groups to share their measured gap radii. They should all be close to 0.619 cm, i.e. about <m>\frac{1}{6.5}</m> of the bottle radius. This surprising result is captured exactly by Descartes' theorem below.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Generalisation:</alert> The theorem works for any four mutually tangent circles, even when the outer three have different radii.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- Add further instruction (not in a block) to develop ideas as needed -->
+    <insight>
+        <title>Descartes' Circle Theorem</title>
+        <p>
+            If four circles are mutually tangent (each touching the other three) and have radii <m>r_1, r_2, r_3, r_4</m>, then
+            <md>
+                <mrow>\frac{1}{r_4} = \frac{1}{r_1} + \frac{1}{r_2} + \frac{1}{r_3} + 2\sqrt{\frac{1}{r_1 r_2} + \frac{1}{r_2 r_3} + \frac{1}{r_3 r_1}}</mrow>
+            </md>
+        </p>
+        <p>
+            For the three equal bottles with <m>r_1 = r_2 = r_3 = 4</m> cm:
+            <md>
+                <mrow>\frac{1}{r_4} \amp = \frac{3}{4} + 2\sqrt{\frac{3}{16}}</mrow>
+                <mrow>\amp = \frac{3}{4} + \frac{\sqrt{3}}{2} \approx 1.616</mrow>
+            </md>
+            so <m>r_4 \approx 0.619</m> cm — about <m>\frac{r}{3 + 2\sqrt{3}}</m> for any equal radius <m>r</m>.
+        </p>
+        <p>
+            Descartes discovered this result in 1643; it was later rediscovered several times and is the key to understanding chains of tangent circles such as the Pappus chain.
+        </p>
+    </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
-    <!-- Add at least 3 examples -->
-
-    <!-- <example>
+    <example xml:id="ex-rl-shanga-dish">
+        <title>Chinese Dish at Shanga</title>
         <statement>
+            <p>
+                Archaeologists at Shanga on Pate Island, on Kenya's coast, discovered a fragment of the rim of a circular Chinese ceramic dish dating to the 15th century. To find the dish's original radius, a student lays a straight ruler across the fragment. The ruler crosses the rim at two points, forming a chord of length 24 cm, and the greatest distance from the ruler to the rim is 4 cm.
+            </p>
+            <!-- TODO: tkz-euclide diagram — partial arc (~120°) representing the broken fragment, chord of 24 cm across it, perpendicular from midpoint of chord to the rim showing sagitta 4 cm and remaining segment (2R − 4) -->
+            <image width="55%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        % TODO: broken arc fragment with chord and sagitta labelled
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Explain why the perpendicular from the midpoint of the chord passes through the centre of the dish.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use the intersecting chords theorem to find the original radius of the dish.
+                    </p>
+                </li>
+            </ol>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        The perpendicular bisector of any chord of a circle passes through the centre. (It is the locus of points equidistant from the two endpoints of the chord, and the centre is equidistant from all points on the circle.) Since the chord lies on the ruler, the perpendicular from the midpoint of the ruler stands along the diameter, and the greatest distance from the ruler to the rim is measured along this perpendicular — which is therefore the sagitta.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Let the radius of the dish be <m>R</m>. The perpendicular from the midpoint of the chord meets the circle at two points: one is at distance 4 cm from the chord (the nearer rim), and the other is at distance <m>2R - 4</m> cm from the chord (the far rim). The chord has length 24 cm, so each half has length 12 cm. By the intersecting chords theorem (the chord and the diameter intersect at the midpoint of the chord):
+                        <md>
+                            <mrow>12 \times 12 \amp = 4 \times (2R - 4)</mrow>
+                            <mrow>144 \amp = 8R - 16</mrow>
+                            <mrow>8R \amp = 160</mrow>
+                            <mrow>R \amp = 20 \text{ cm}</mrow>
+                        </md>
+                        The original dish had a radius of 20 cm.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="ex-rl-bomas-arena">
+        <title>The Arena at Bomas</title>
         <statement>
+            <p>
+                Spectators sit around the edge of the circular performance arena at Bomas of Kenya in Nairobi. A straight road runs tangent to the arena at the entrance gate <m>T</m>. During a performance, a dance troupe walks in a straight line across the arena from the entrance gate <m>T</m> to the exit gate <m>A</m> on the far side. At the entrance, the procession path makes an angle of <m>48°</m> with the road.
+            </p>
+            <!-- TODO: tkz-euclide diagram — circle with horizontal tangent at T, chord TA at 48° to the tangent, spectator point B on major arc, angle ∠TBA marked; road labelled -->
+            <image width="60%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        % TODO: circle, tangent road at T, chord TA at 48°, spectator B on major arc
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Draw the diagram: the circle, the tangent road at <m>T</m>, the chord <m>TA</m>, and a spectator at a seat <m>B</m> on the major arc <m>TA</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The spectator at <m>B</m> watches the dancers cross. Through what angle must she turn her head to look from the entrance gate to the exit gate?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Her friend is sitting at a different seat, also on the major arc. Show that he turns his head through exactly the same angle, wherever on the major arc he sits.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A drummer sits on the <em>minor</em> arc <m>TA</m>, between the two gates. Through what angle does he turn his head to look from one gate to the other?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Extension:</alert> The arena has radius 15 m. How far do the dancers walk from gate to gate?
+                    </p>
+                </li>
+            </ol>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        See the diagram above: the tangent road is horizontal at <m>T</m>, the chord <m>TA</m> rises at <m>48°</m> to the road, and spectator <m>B</m> sits on the major arc with angle <m>\angle TBA</m> marked.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        By the <em>alternate segment theorem</em>, the angle between a tangent and a chord equals the inscribed angle in the alternate segment. The chord <m>TA</m> makes a <m>48°</m> angle with the tangent road, so the inscribed angle <m>\angle TBA = 48°</m>. She must turn through <m>48°</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Any spectator on the major arc subtends the same chord <m>TA</m> from the same side. By the theorem of angles in the same segment, all such inscribed angles are equal. Every spectator on the major arc therefore turns through exactly <m>48°</m> — there is no "best seat" for watching the crossing!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The drummer's seat <m>D</m> is on the minor arc, so <m>TBAD</m> is a cyclic quadrilateral with <m>B</m> on the major arc and <m>D</m> on the minor arc. Opposite angles of a cyclic quadrilateral are supplementary, so
+                        <md>
+                            <mrow>\angle TDA = 180° - \angle TBA = 180° - 48° = 132°</mrow>
+                        </md>
+                        The drummer must turn through <m>132°</m> — much further, because he is close to the action.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The angle at the centre is twice the inscribed angle, so <m>\angle TOA = 2 \times 48° = 96°</m>. The chord length is
+                        <md>
+                            <mrow>TA = 2R \sin\!\left(\frac{\angle TOA}{2}\right) = 2 \times 15 \times \sin 48° \approx 30 \times 0.743 \approx 22.3 \text{ m}</mrow>
+                        </md>
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
-    <example>
+    <example xml:id="ex-rl-posho-belt">
+        <title>The Posho Mill Belt</title>
         <statement>
+            <p>
+                A diesel posho mill at a rural market centre is driven by a flat belt connecting the engine pulley (radius <m>r = 6</m> cm) to the mill pulley (radius <m>R = 21</m> cm). The centres of the two pulleys are <m>d = 60</m> cm apart. The belt runs as an <em>open</em> (uncrossed) loop, following the two direct common tangents between the circles.
+            </p>
+            <!-- TODO: tkz-euclide diagram — two circles (r = 6, R = 21) with two parallel tangent lines above and below (open belt); centres 60 cm apart; label R, r, d, φ, and one straight section L -->
+            <image width="70%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        % TODO: open belt diagram, r=6, R=21, d=60
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Show that each straight section of belt has length <m>L = \sqrt{d^2 - (R - r)^2}</m> and calculate it.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Find the total belt length, including the two arcs. (The tangent makes angle <m>\varphi = \arcsin\!\dfrac{R-r}{d}</m> with the line of centres; the belt wraps through <m>\pi + 2\varphi</m> radians around the large pulley and <m>\pi - 2\varphi</m> radians around the small pulley.)
+                    </p>
+                </li>
+            </ol>
         </statement>
         <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Draw a perpendicular from the centre of the small pulley <m>O_2</m> to the tangent line, meeting it at <m>Q</m>. Draw the line <m>O_1 O_2</m> between the centres. Since the tangent is perpendicular to each radius at the contact point, dropping a parallel from <m>O_2</m> creates a right-angled trapezium. The right triangle formed has:
+                        <ul>
+                            <li><p>hypotenuse <m>O_1 O_2 = d = 60</m> cm,</p></li>
+                            <li><p>one leg <m>= R - r = 15</m> cm (the difference of radii),</p></li>
+                            <li><p>other leg <m>= L</m> (the length of the straight section of belt).</p></li>
+                        </ul>
+                        By Pythagoras:
+                        <md>
+                            <mrow>L \amp = \sqrt{d^2 - (R - r)^2}</mrow>
+                            <mrow>\amp = \sqrt{3600 - 225}</mrow>
+                            <mrow>\amp = \sqrt{3375} \approx 58.1 \text{ cm}</mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The angle <m>\varphi = \arcsin\!\dfrac{R - r}{d} = \arcsin\!\dfrac{15}{60} = \arcsin(0.25) \approx 14.5°\approx 0.253</m> rad.
+                    </p>
+                    <p>
+                        Arc length on large pulley: <m>R(\pi + 2\varphi) = 21(\pi + 0.506) \approx 21 \times 3.647 \approx 76.6</m> cm.
+                    </p>
+                    <p>
+                        Arc length on small pulley: <m>r(\pi - 2\varphi) = 6(\pi - 0.506) \approx 6 \times 2.636 \approx 15.8</m> cm.
+                    </p>
+                    <p>
+                        Total belt length:
+                        <md>
+                            <mrow>2L + \text{large arc} + \text{small arc} \approx 2(58.1) + 76.6 + 15.8 \approx 208.6 \text{ cm}</mrow>
+                        </md>
+                    </p>
+                </li>
+            </ol>
         </solution>
-    </example> -->
+    </example>
+
+    <example xml:id="ex-rl-conversion-kick">
+        <title>The Conversion Kick</title>
+        <statement>
+            <p>
+                In rugby sevens, after scoring a try the kicker must kick for goal from a line perpendicular to the try line through the point where the try was scored. The two goal posts <m>A</m> and <m>B</m> are 5.6 m apart on the try line. The try was scored 10 m outside the nearer post, so from the foot of the kicker's perpendicular, <m>A</m> is 10 m along the try line and <m>B</m> is 15.6 m along the try line. The kicker stands at point <m>K</m>, at distance <m>x</m> from the try line along the perpendicular.
+            </p>
+            <!-- TODO: tkz-euclide diagram — horizontal try line, perpendicular kicker's line, posts A (10 m from foot T₁) and B (15.6 m from foot), kicker K at distance x; circumcircle through A, K, B tangent to try line at T₁; mark x, 10, 15.6, and angle θ = ∠AKB -->
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}
+                        % TODO: rugby try conversion diagram
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Explain why the maximum viewing angle <m>\theta = \angle AKB</m> is achieved when the circumcircle through <m>A</m>, <m>K</m>, and <m>B</m> is tangent to the try line.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Let <m>T_1</m> be the foot of the perpendicular from <m>K</m> to the try line. Use the tangent–secant theorem to show that the optimal distance is <m>x = \sqrt{10 \times 15.6}</m>, and evaluate it.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Find the maximum viewing angle <m>\theta</m>.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        The inscribed angle <m>\angle AKB</m> depends on the arc <m>AB</m> of the circumcircle: the smaller the circumcircle, the larger the arc <m>AB</m> subtends at the centre, and hence the larger the inscribed angle. As <m>K</m> moves along the perpendicular, the circumcircle through <m>A</m>, <m>K</m>, <m>B</m> changes size. The smallest possible circumcircle that can still reach the try line is the one that is <em>tangent</em> to the try line — moving <m>K</m> further from the try line makes the circle larger and <m>\theta</m> smaller; moving it closer also eventually makes the circle larger on the other side. The maximum <m>\theta</m> therefore occurs at the tangent position.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        When the circumcircle is tangent to the try line at <m>T_1</m>, the tangent–secant theorem applies from the external point <m>T_1</m>:
+                        <ul>
+                            <li><p><m>T_1 K</m> is the tangent from <m>T_1</m> to the circumcircle (length <m>x</m>),</p></li>
+                            <li><p><m>T_1 A B</m> is a secant from <m>T_1</m> through the circle (<m>T_1 A = 10</m> m, <m>T_1 B = 15.6</m> m).</p></li>
+                        </ul>
+                        By the tangent–secant theorem:
+                        <md>
+                            <mrow>x^2 \amp = T_1 A \times T_1 B = 10 \times 15.6 = 156</mrow>
+                            <mrow>x \amp = \sqrt{156} \approx 12.5 \text{ m}</mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        With <m>x \approx 12.5</m> m, <m>T_1 A = 10</m> m, and <m>T_1 B = 15.6</m> m (all from the foot <m>T_1</m>):
+                        <md>
+                            <mrow>\angle AKT_1 \amp = \arctan\!\left(\frac{10}{12.5}\right) \approx 38.7°</mrow>
+                            <mrow>\angle BKT_1 \amp = \arctan\!\left(\frac{15.6}{12.5}\right) \approx 51.3°</mrow>
+                            <mrow>\theta = \angle AKB \amp = 51.3° - 38.7° \approx 12.6°</mrow>
+                        </md>
+                        The kicker maximises the angle of the goal posts at about <m>12.5</m> m from the try line.
+                    </p>
+                </li>
+            </ol>
+        </solution>
+    </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
-    <!-- If STACK questions are included, uncomment this: -->
-
-    <!-- <xi:include href="../lesson-plan-templates/checkpoint.ptx" /> -->
-
-    <!-- Add STACK exercises if made -->
-
-    <!-- Add static exercises -->
-
     <exercises>
+
+        <exercise xml:id="ex-rl-basketball">
+            <title>Passing the Basketball</title>
+            <statement>
+                <p>
+                    In a basketball game, the three-point arc is modelled as a circle. The touchline (by-line) runs tangent to the arc at the corner, where Wanjiku is standing. She can pass directly to Amina, who is standing on the arc, or relay to Baraka (also on the arc), who then passes to Amina. Wanjiku's direct pass to Amina makes an angle of <m>35°</m> with the touchline.
+                </p>
+                <!-- TODO: tkz-euclide diagram — semicircle (3-point arc), horizontal tangent at corner (Wanjiku), chord from corner to Amina at 35° to tangent, Baraka at another point on the arc -->
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: basketball court with 3-point arc, tangent at corner, chord and relay point
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Through what angle must Wanjiku pivot to pass directly to Amina?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Baraka catches the relay pass and must turn to pass to Amina. Through what angle does Baraka pivot?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Would your answer to (b) change if Baraka stood at a different spot on the arc?
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>35°</m> (the angle between the touchline and the chord to Amina).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>35°</m>. By the alternate segment theorem, the inscribed angle <m>\angle(\text{Baraka, Wanjiku, Amina})</m> equals the angle between the tangent and the chord <m>TA</m>, which is <m>35°</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            No. Angles in the same segment are equal: every spectator on the major arc subtends chord <m>WA</m> at the same angle of <m>35°</m>.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise xml:id="ex-rl-lake-road">
+            <title>Driving Past the Lake</title>
+            <statement>
+                <p>
+                    A town at point <m>P</m> must be connected by road to a town at <m>T</m>, which is 56 km away in a straight line. A circular lake of radius 9 km lies in the way: its centre <m>O</m> lies on the direct road, 41 km from <m>P</m> and 15 km from <m>T</m>. The shortest road must be tangent to the lake and follow the lake shore between the two tangent points.
+                </p>
+                <!-- TODO: tkz-euclide diagram — external points P (left) and T (right), circle (r = 9) between them centred on the line PT, tangent lines from P and T touching the circle, arc between the two tangent points highlighted -->
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: lake road diagram, P and T on either side of circle
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            On a scale diagram (1 cm : 5 km), mark points <m>P</m>, <m>O</m>, and <m>T</m>. Using ruler and compasses only, construct the tangents from <m>P</m> and from <m>T</m> to the circle.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the length of each tangent segment.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the arc length along the lake shore between the two tangent points.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            How long is the shortest road that avoids the lake?
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            On a scale drawing: <m>P</m> is 8.2 cm from <m>O</m>, <m>T</m> is 3 cm from <m>O</m>. Construct the tangent from <m>P</m> by finding the midpoint <m>M</m> of <m>PO</m> and drawing a circle centred at <m>M</m> with radius <m>MO</m>; the intersections with the lake circle are the tangent points. Repeat for <m>T</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            In each case the tangent is perpendicular to the radius at the contact point:
+                            <md>
+                                <mrow>\text{From } P: \quad L_P \amp = \sqrt{OP^2 - r^2} = \sqrt{41^2 - 9^2} = \sqrt{1681 - 81} = \sqrt{1600} = 40 \text{ km}</mrow>
+                                <mrow>\text{From } T: \quad L_T \amp = \sqrt{OT^2 - r^2} = \sqrt{15^2 - 9^2} = \sqrt{225 - 81} = \sqrt{144} = 12 \text{ km}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Let <m>\varphi_P</m> be the angle at <m>P</m> in the right triangle formed by <m>O</m>, <m>P</m>, and the tangent point, and <m>\varphi_T</m> the corresponding angle at <m>T</m>:
+                            <md>
+                                <mrow>\varphi_P \amp = \arcsin\!\left(\frac{9}{41}\right) \approx 12.7°</mrow>
+                                <mrow>\varphi_T \amp = \arcsin\!\left(\frac{9}{15}\right) = \arcsin(0.6) \approx 36.9°</mrow>
+                            </md>
+                            Since <m>P</m>, <m>O</m>, <m>T</m> are collinear (with <m>O</m> between them), the arc between the two tangent points subtends an angle of <m>\varphi_P + \varphi_T</m> at the centre:
+                            <md>
+                                <mrow>\text{arc} \amp = r(\varphi_P + \varphi_T) = 9 \times (12.7° + 36.9°) \times \frac{\pi}{180°}</mrow>
+                                <mrow>\amp = 9 \times 0.865 \approx 7.8 \text{ km}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Total route length <m>= L_P + \text{arc} + L_T \approx 40 + 7.8 + 12 = \mathbf{59.8} \text{ km}</m>.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise xml:id="ex-rl-mount-kenya">
+            <title>The View from Mount Kenya</title>
+            <statement>
+                <p>
+                    Model the Earth as a sphere (in cross-section, a circle) with radius <m>R = 6\,400</m> km. Your line of sight to the horizon is a tangent to the Earth at the horizon point. Suppose you are standing on the summit of Mount Kenya, at height <m>h = 5.2</m> km above the Earth's surface.
+                </p>
+                <!-- TODO: tkz-euclide diagram — large circle (Earth), observer P above surface at height h, tangent from P touching circle at horizon H, triangle OPH labelled -->
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: Earth circle, observer P at height h, tangent to horizon H
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Using the fact that the line of sight to the horizon is tangent to the Earth (and hence perpendicular to the radius at the horizon), find how far away the horizon is.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Mount Kilimanjaro (height 5.9 km) is approximately 323 km from Mount Kenya. Could you see the summit of Kilimanjaro from the summit of Mount Kenya on a perfectly clear day? Justify your answer.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Let <m>P</m> be the observer, <m>O</m> the centre of the Earth, and <m>H</m> the horizon point. Then <m>OH = R = 6\,400</m> km, <m>OP = R + h = 6\,405.2</m> km, and <m>\angle OHP = 90°</m>. By Pythagoras:
+                            <md>
+                                <mrow>PH \amp = \sqrt{OP^2 - OH^2} = \sqrt{(R + h)^2 - R^2}</mrow>
+                                <mrow>\amp = \sqrt{2Rh + h^2}</mrow>
+                                <mrow>\amp \approx \sqrt{2 \times 6400 \times 5.2}</mrow>
+                                <mrow>\amp = \sqrt{66\,560} \approx 258 \text{ km}</mrow>
+                            </md>
+                            (The term <m>h^2 = 27.04</m> km² is negligible compared to <m>2Rh \approx 66\,560</m> km².)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            From Kilimanjaro (height 5.9 km), the horizon distance is <m>\sqrt{2 \times 6400 \times 5.9} \approx \sqrt{75\,520} \approx 275</m> km. For the two summits to be mutually visible, the sum of their horizon distances must exceed the distance between them:
+                            <md>
+                                <mrow>258 + 275 = 533 \text{ km} \gg 323 \text{ km}</mrow>
+                            </md>
+                            Yes — in principle you could see Kilimanjaro from Mount Kenya on a clear day. (In practice, atmospheric haze usually limits visibility to much less than this.)
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise xml:id="ex-rl-boda-boda-chain">
+            <title>The Boda Boda Chain</title>
+            <statement>
+                <p>
+                    On a boda boda motorcycle, the engine sprocket has radius <m>r = 3</m> cm and the rear-wheel sprocket has radius <m>R = 9</m> cm; their centres are <m>d = 48</m> cm apart. The chain follows the direct common tangents between the two sprockets.
+                </p>
+                <!-- TODO: tkz-euclide diagram — two circles (r = 3, R = 9) with chain lines tangent above and below; centres 48 cm apart; mark r, R, d, φ, and one straight run L -->
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: boda boda chain diagram
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Using the formula <m>L = \sqrt{d^2 - (R - r)^2}</m> (see <xref ref="length-of-direct-tangent"/>), find the length of each straight run of chain.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The wrap angle on each sprocket depends on <m>\varphi = \arcsin\!\dfrac{R - r}{d}</m>. Find <m>\varphi</m>, and hence find the arc length of chain on each sprocket.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Find the total chain length.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>L = \sqrt{48^2 - 6^2} = \sqrt{2268} \approx 47.6</m> cm.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\varphi = \arcsin(6/48) \approx 7.2°\approx 0.1253</m> rad. Large sprocket arc: <m>9(\pi + 2\varphi) \approx 30.5</m> cm. Small sprocket arc: <m>3(\pi - 2\varphi) \approx 8.7</m> cm.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Total <m>\approx 2(47.6) + 30.5 + 8.7 \approx 134.4</m> cm.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise xml:id="ex-rl-jua-kali-belt">
+            <title>The Jua Kali Crossed Belt</title>
+            <statement>
+                <p>
+                    In a jua kali workshop in Gikomba, an old lathe is driven by a <em>crossed</em> belt so that the two shafts rotate in opposite directions. The pulleys have radii <m>r = 5</m> cm and <m>R = 10</m> cm, and their centres are <m>d = 30</m> cm apart. The crossed belt follows the transverse common tangents.
+                </p>
+                <!-- TODO: tkz-euclide diagram — two circles (r = 5, R = 10) with two crossed (X-shaped) belt lines between them; mark r, R, d, φ, and one straight section L -->
+                <image width="65%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: crossed belt diagram
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Show that the straight sections of a crossed belt have length <m>L = \sqrt{d^2 - (R + r)^2}</m>, and calculate <m>L</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For a crossed belt, the wrap angle on <em>both</em> pulleys is <m>\pi + 2\varphi</m> where <m>\varphi = \arcsin\!\dfrac{R + r}{d}</m>. Find the total belt length.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            For a crossed belt, the two tangent lines cross between the circles. Drawing the right triangle formed by the line of centres, the sum of the radii, and the tangent line: the hypotenuse is <m>d = 30</m> cm and one leg is <m>R + r = 15</m> cm, giving
+                            <md>
+                                <mrow>L \amp = \sqrt{d^2 - (R + r)^2} = \sqrt{900 - 225} = \sqrt{675} = 15\sqrt{3} \approx 26.0 \text{ cm}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\varphi \amp = \arcsin\!\left(\frac{15}{30}\right) = \arcsin(0.5) = 30° = \frac{\pi}{6} \text{ rad}</mrow>
+                            </md>
+                            Wrap angle on each pulley: <m>\pi + 2 \times \dfrac{\pi}{6} = \dfrac{4\pi}{3}</m> rad.
+                        </p>
+                        <p>
+                            Large pulley arc: <m>10 \times \dfrac{4\pi}{3} \approx 41.9</m> cm.
+                            Small pulley arc: <m>5 \times \dfrac{4\pi}{3} \approx 20.9</m> cm.
+                        </p>
+                        <p>
+                            Total belt length:
+                            <md>
+                                <mrow>2L + \text{arcs} \approx 2(26.0) + 41.9 + 20.9 \approx 114.8 \text{ cm}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise xml:id="ex-rl-round-table">
+            <title>The Round Table from the Triangular Offcut</title>
+            <statement>
+                <p>
+                    A fundi in Kibuye market, Kisumu, has a triangular offcut of mvule timber with sides 1.3 m, 1.4 m, and 1.5 m. He wants to cut the largest possible circular table top from it.
+                </p>
+                <!-- TODO: tkz-euclide diagram — 1.3–1.4–1.5 triangle with incircle drawn, incentre I marked, angle bisectors from each vertex shown -->
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: triangle with incircle and angle bisectors
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Explain why the largest circle that fits inside the triangle is the <em>incircle</em>, and describe how the fundi could locate its centre using a string-and-chalk angle-bisector construction.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Using Heron's formula, find the area of the triangle and hence the radius of the table top. (Recall <m>r = \text{Area}/s</m>, where <m>s</m> is the semi-perimeter.)
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The incircle is the largest circle that fits inside the triangle: it is tangent to all three sides, so it is as large as possible without crossing any edge. The incentre (its centre) lies at the intersection of the three angle bisectors — the fundi can snap chalk lines bisecting each corner angle; where they meet is the centre.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Semi-perimeter: <m>s = (1.3 + 1.4 + 1.5)/2 = 2.1</m> m.
+                        </p>
+                        <p>
+                            Area by Heron's formula: <m>\text{Area} = \sqrt{2.1 \times 0.8 \times 0.7 \times 0.6} = \sqrt{0.7056} = 0.84</m> m².
+                        </p>
+                        <p>
+                            Inradius: <m>r = 0.84/2.1 = 0.4</m> m. The table top has a radius of 40 cm (diameter 80 cm).
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise xml:id="ex-rl-signal-mast">
+            <title>One Mast for Three Markets</title>
+            <statement>
+                <p>
+                    A telecommunications company wants to place a single signal mast so that it is exactly the same distance from three market centres. The three markets form a triangle with sides 13 km, 14 km, and 15 km.
+                </p>
+                <!-- TODO: tkz-euclide diagram — 13–14–15 triangle with circumcircle drawn, circumcentre O marked, perpendicular bisectors of each side shown -->
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: triangle with circumcircle and perpendicular bisectors
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Explain why the mast must be placed at the <em>circumcentre</em> of the triangle, and describe how to locate it on a scale drawing using perpendicular bisectors.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Calculate the common distance from the mast to each market. (Use <m>R = \dfrac{abc}{4 \times \text{Area}}</m> with Area = 84 km².)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For what type of triangle would the circumcentre fall <em>outside</em> the triangle? Would that placement still make sense practically?
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            The set of points equidistant from two towns lies on the perpendicular bisector of the segment between them. The point equidistant from all three towns is the intersection of the three perpendicular bisectors — the circumcentre.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>R = \frac{13 \times 14 \times 15}{4 \times 84} = \frac{2730}{336} = 8.125 \text{ km}</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For an obtuse triangle, the circumcentre lies outside the triangle. This would mean the mast must be placed outside the triangle formed by the three markets — still geometrically correct, but may be inconvenient in practice.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
+        <exercise xml:id="ex-rl-euler">
+            <title>Euler's Hidden Bridge</title>
+            <statement>
+                <p>
+                    Euler proved that in any triangle, the distance <m>d</m> between the incentre and the circumcentre satisfies
+                    <md>
+                        <mrow>d^2 = R(R - 2r)</mrow>
+                    </md>
+                    where <m>R</m> is the circumradius and <m>r</m> is the inradius.
+                </p>
+                <!-- TODO: tkz-euclide diagram — 13–14–15 triangle with both incircle and circumcircle drawn on the same diagram, incentre I and circumcentre O both labelled, distance d between them indicated -->
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: triangle with both incircle and circumcircle, incentre I and circumcentre O labelled, distance d shown
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            For the 13–14–15 km triangle from the two previous exercises (<m>r = 4</m> km, <m>R = 8.125</m> km), find the distance <m>d</m> between the incentre and the circumcentre.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Since <m>d^2 \geq 0</m>, deduce <em>Euler's inequality</em>: <m>R \geq 2r</m> for every triangle. When does equality hold?
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>d^2 \amp = R(R - 2r) = 8.125(8.125 - 8) = 8.125 \times 0.125 \approx 1.016</mrow>
+                                <mrow>d \amp \approx 1.01 \text{ km}</mrow>
+                            </md>
+                            The two centres are surprisingly close together — just over 1 km apart.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Since <m>d^2 = R(R - 2r) \geq 0</m>, we need <m>R - 2r \geq 0</m>, i.e., <m>R \geq 2r</m>. Equality <m>d = 0</m> means the incentre and circumcentre coincide, which happens only for an equilateral triangle.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
         <exercise>
-            <statement>   
+            <title>The Circular Tree</title>
+            <statement>
                 <p>
                     A circular tree is created by placing a circle with diameter 1 cm on the ground, then taking circles with half the diameter of the previous circle on top, as shown below.
                 </p>
@@ -166,8 +898,8 @@
                                     \tkzDrawCircle[thick](O\i,cA)
                                     \tkzDefShiftPoint[O\i](1.5,-\r){T\i}
                                     \tkzDefShiftPoint[O\i](1.5,\r){T2\i}
-                                    {         
-                                        \ifnum \i > 0              
+                                    {
+                                        \ifnum \i > 0
                                             \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1/\pgfmathprintnumber{\di}$ cm};
                                         \else
                                             \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1$ cm};
@@ -200,7 +932,7 @@
                     </li>
                     <li>
                         <p>
-                            Using the simplified formula from part (b), can you find the length of the direct tangent between the bottom two circles?
+                            Using the simplified formula from part (c), find the length of the direct tangent between the bottom two circles.
                         </p>
                     </li>
                     <li>
@@ -209,8 +941,7 @@
                         </p>
                     </li>
                 </ol>
-
-            </statement>   
+            </statement>
             <solution>
                 <ol marker="(a)">
                     <li>
@@ -229,8 +960,8 @@
                                         \tkzDrawCircle[thick](O\i,cA)
                                         \tkzDefShiftPoint[O\i](1.5,-\r){T\i}
                                         \tkzDefShiftPoint[O\i](1.5,\r){T2\i}
-                                        {         
-                                            \ifnum \i > 0              
+                                        {
+                                            \ifnum \i > 0
                                                 \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1/\pgfmathprintnumber{\di}$ cm};
                                             \else
                                                 \draw [decorate,decoration={brace,mirror, amplitude=8pt},xshift=-4pt] (T\i) -- (T2\i) node [black,midway, xshift=25pt]{\footnotesize $1$ cm};
@@ -249,15 +980,16 @@
                             </figure>
                     </li>
                     <li>
+                        <!-- TODO: write proof that the direct tangents between circles i and i+1 pass through all higher circles in the tree -->
                         <p>
-                            TBD
+                            Proof to be added.
                         </p>
                     </li>
                     <li>
                         <p>
                             When the two circles touch, we have <m>d = R + r</m>, as the line connecting the two centres passes through the point of contact, and is perpendicular to the common tangent. Substituting this into the formula for the length of the direct tangent, we get:
                             <md>
-                                L = \sqrt{(R + r)^2 - (R - r)^2} = \sqrt{4Rr} = 2\sqrt{Rr}
+                                <mrow>L = \sqrt{(R + r)^2 - (R - r)^2} = \sqrt{4Rr} = 2\sqrt{Rr}</mrow>
                             </md>
                         </p>
                     </li>
@@ -266,68 +998,158 @@
                             In the case of the bottom two circles, we have <m>R = 1/2</m> and <m>r = 1/4</m>, so the length of the direct tangent is:
                             <md>
                                 <mrow>L \amp = 2 \sqrt{\frac{1}{2} \cdot \frac{1}{4}} </mrow>
-                                <mrow> \amp = 2 \sqrt{\frac{1}{8}} </mrow> 
+                                <mrow> \amp = 2 \sqrt{\frac{1}{8}} </mrow>
                                 <mrow> \amp = \frac{\sqrt{2}}{2} \text{ cm}</mrow>
                             </md>
                         </p>
                     </li>
                     <li>
                         <p>
-                            We have <m>r_i = \frac{1}{2^{i}}</m> for <m>i \geq 1</m>. Using the simplified formula for the length of the direct tangent, we get:
+                            We have <m>r_i = \dfrac{1}{2^{i}}</m> for <m>i \geq 1</m>. Using the simplified formula for the length of the direct tangent, we get:
                             <md>
                                 <mrow> L_i \amp = \sqrt{4r_i r_{i+1}} </mrow>
                                 <mrow> \amp = \sqrt{\frac{1}{2^{i}} \cdot \frac{4}{2^{i+1}}} </mrow>
                                 <mrow> \amp = \sqrt{\frac{2}{2^{2i}}} </mrow>
                                 <mrow> \amp = \frac{\sqrt{2}}{2^{i}} \text{ cm}</mrow>
                             </md>
-                            When <m>i = 1</m>, <m>L_1 = \frac{\sqrt{2}}{2} \text{ cm}</m>, agreeing with our previous calculation.
+                            When <m>i = 1</m>, <m>L_1 = \dfrac{\sqrt{2}}{2} \text{ cm}</m>, agreeing with our previous calculation.
                         </p>
                     </li>
                 </ol>
                 <p>
 
                 </p>
-            </solution>             
-        </exercise>        
+            </solution>
+        </exercise>
+
+        <exercise xml:id="ex-rl-sodas">
+            <title>Three Sodas and a Bottle Top</title>
+            <statement>
+                <p>
+                    Use Descartes' circle theorem (see the insight above) to solve the following problems.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Three soda bottles, each with a circular base of radius 4 cm, are placed on a flat surface so each touches the other two. What is the radius of the largest circular bottle top that can be placed flat in the central gap between them? First, use trigonometry to find the position of the centre of the gap circle (hint: find the centroid of the triangle of centres), then verify using Descartes' theorem.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Three cylindrical tins of radii 3 cm, 4 cm, and 5 cm are placed on a flat surface, each touching the other two. Find the radius of the largest circular lid that fits in the central gap.
+                        </p>
+                    </li>
+                </ol>
+                <!-- TODO: tkz-euclide diagram — three equal circles (r = 4) arranged tangentially with small gap circle; and separately, three circles of radii 3, 4, 5 with their gap circle -->
+                <image width="70%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: three equal sodas with gap circle; and three unequal tins with gap circle
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <em>Trigonometry method:</em> The centres of the three bottles form an equilateral triangle with side length <m>4 + 4 = 8</m> cm. The centroid of an equilateral triangle is at distance <m>\dfrac{8}{\sqrt{3}}</m> cm from each vertex (using <m>d = \dfrac{s}{\sqrt{3}}</m> for an equilateral triangle of side <m>s</m>). The gap circle is centred at the centroid, so its radius is
+                            <md>
+                                <mrow>r_4 = \frac{8}{\sqrt{3}} - 4 = \frac{8 - 4\sqrt{3}}{\sqrt{3}} = \frac{8\sqrt{3} - 12}{3} \approx \frac{13.856 - 12}{3} \approx 0.619 \text{ cm}</mrow>
+                            </md>
+                        </p>
+                        <p>
+                            <em>Descartes' theorem verification:</em> With <m>r_1 = r_2 = r_3 = 4</m>:
+                            <md>
+                                <mrow>\frac{1}{r_4} \amp = \frac{3}{4} + 2\sqrt{\frac{3}{16}} = \frac{3}{4} + \frac{\sqrt{3}}{2} \approx 0.750 + 0.866 \approx 1.616</mrow>
+                                <mrow>r_4 \amp \approx 0.619 \text{ cm} \checkmark</mrow>
+                            </md>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            With <m>r_1 = 3</m>, <m>r_2 = 4</m>, <m>r_3 = 5</m>:
+                            <md>
+                                <mrow>\frac{1}{r_1} + \frac{1}{r_2} + \frac{1}{r_3} \amp = \frac{1}{3} + \frac{1}{4} + \frac{1}{5} = \frac{20 + 15 + 12}{60} = \frac{47}{60}</mrow>
+                            </md>
+                            <md>
+                                <mrow>\frac{1}{r_1 r_2} + \frac{1}{r_2 r_3} + \frac{1}{r_3 r_1} \amp = \frac{1}{12} + \frac{1}{20} + \frac{1}{15} = \frac{5 + 3 + 4}{60} = \frac{12}{60} = \frac{1}{5}</mrow>
+                            </md>
+                            <md>
+                                <mrow>\frac{1}{r_4} \amp = \frac{47}{60} + 2\sqrt{\frac{1}{5}} = \frac{47}{60} + \frac{2}{\sqrt{5}} \approx 0.783 + 0.894 \approx 1.677</mrow>
+                                <mrow>r_4 \amp \approx 0.60 \text{ cm}</mrow>
+                            </md>
+                            The gap is slightly tighter than in part (a) because the larger outer circles squeeze the central gap more.
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise xml:id="ex-rl-pappus-chain">
+            <title>The Pappus Chain</title>
+            <statement>
+                <p>
+                    Draw a semicircle of radius 12 cm on a diameter <m>AC</m>. Mark <m>B</m> as the midpoint of <m>AC</m>, and draw a second semicircle of radius 6 cm on <m>AB</m>, inside the first semicircle. The crescent-shaped region between the two semicircles is called an <em>arbelos</em> (Greek for shoemaker's knife). Now inscribe a chain of circles in the crescent, each one tangent to both semicircles and to the previous circle in the chain — this is the <em>Pappus chain</em>, studied by Pappus of Alexandria in the 4th century CE.
+                </p>
+                <!-- TODO: tkz-euclide diagram — large semicircle (r = 12) on diameter AC, inner semicircle (r = 6) on AB (left half of AC), first 2–3 Pappus chain circles inscribed in the crescent; dashed vertical lines from each circle centre to AC indicating the height; circles numbered 1, 2, 3 -->
+                <image width="75%">
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % TODO: arbelos with Pappus chain circles
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            On a large, accurate diagram (or a printed figure provided by your teacher), construct or measure the first two circles of the chain.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For each circle you measured, calculate the ratio: height of the centre above <m>AC</m>, divided by the diameter of that circle. What do you notice?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Pappus' Theorem:</alert> The centre of the <m>n</m>th circle in the chain is exactly <m>n</m> diameters above the line <m>AC</m>. State this as a formula relating the height <m>h_n</m>, the radius <m>r_n</m>, and <m>n</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Pappus proved this theorem in the 4th century CE using many pages of classical Euclidean geometry. A technique called <em>circle inversion</em>, developed about 1500 years later, reduces the same proof to a single transformation. What does this suggest about the value of developing new mathematical tools?
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <answer>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Construct by finding circles tangent to both semicircles and to the diameter (or the previous chain circle). Accurate construction requires care; measurements will be approximate.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            For each circle, the ratio height/<m>(2r_n)</m> should be very close to <m>n</m> (the circle's number in the chain). All groups should find approximately the same ratios: 1 for the first circle, 2 for the second, and so on.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The formula is <m>h_n = n \times 2r_n = 2n r_n</m>, i.e. the centre of the <m>n</m>th circle is at height <m>2n r_n</m> above <m>AC</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Sometimes the right mathematical language — like circle inversion — can transform a very hard problem into an easy one. Progress in mathematics often comes not from working harder, but from finding the right viewpoint.
+                        </p>
+                    </li>
+                </ol>
+            </answer>
+        </exercise>
+
     </exercises>
-
-    <!-- [LP] Add information on how to differentiate  -->
-
-    <!-- <axiom component="lesson-plan">
-        <title>Differentiation</title>
-
-        <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
-                <row header="yes" bottom="minor">
-                    <cell>Learner Group</cell>
-                    <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Struggling Learners (Support)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
-                </row>
-            </tabular>
-        </table>
-    </axiom> -->
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

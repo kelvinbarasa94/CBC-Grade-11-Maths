@@ -76,23 +76,6 @@ Spectators sit around the edge of a circular performance arena, like the one at 
 (d) $180° - 48° = 132°$ (opposite angles of cyclic quadrilateral $TBA D$, or: angles in opposite segments are supplementary). He has to swivel much further — he's close to the action.
  
 (e) Angle at centre $= 2 \times 48° = 96°$. Chord $TA = 2R\sin 48° \approx 2 \times 15 \times 0.7431 \approx 22.3$ m. (Or via the isosceles triangle $OTA$: $TA = 2 \times 15 \sin 48°$.)
- 
- 
-
----
-
-## Q5. The View from the top of Mount Kenya. (tangent to a really big circle)
-
-**Concepts:** tangent ⟂ radius, tangent length from an external point — applied to the Earth.
-
-Take the Earth as a circle of radius 6 371 km. Your line of sight to the horizon is a *tangent* to the Earth. From the top of mount kenya (5 199 m), how far away is the horizon?
-
-(a) Draw the diagram: observer at $P$, height $h$, tangent $PT$, radius $OT$. Show $d = \sqrt{(R+h)^2 - R^2}$.
-(b) Kilimanjaro (5 895 m) is about 323 km away. Can you see it?
-
-**Answers:** TBD
-
----
 
 ## Q6. The Posho Mill Belt (direct tangents — the belt problem)
 
@@ -104,18 +87,33 @@ A diesel posho mill in a market centre is driven by a flat belt connecting the e
 (b) **Harder:** find the total belt length, including the two arcs. *(The tangent makes angle $\varphi = \sin^{-1}\frac{R-r}{d}$ with the line of centres; wrap angles are $\pi + 2\varphi$ and $\pi - 2\varphi$.)*
 
 **Answers:** (a) $L = \sqrt{3375} \approx 58.1$ cm. (b) $\varphi \approx 14.5°$; total $\approx 208.6$ cm. Posho mills with belt-and-pulley drives are sold and repaired across rural Kenya, so students may literally have seen this machine.
+ 
+ 
 
 ---
 
-## Q7. The Boda Boda Chain (direct tangents + ratios)
+## Q5. The View from the top of Mount Kenya. (tangent to a really big circle)
+
+**Concepts:** tangent ⟂ radius, tangent length from an external point — applied to the Earth.
+
+Take the Earth as a circle of radius 6,400 km. Your line of sight to the horizon is a *tangent* to the Earth. Suppose you are on the top of mount kenya (5.2km).
+
+(a) observer at $P$, height $h = 5.2$ above circle (earth) with R = 6,400. Construct tangent. Using a theorem from this chapter, find how far away the horizon is from where you are. (Hint: Tangent-secant theorem)
+(b) Kilimanjaro (5.9km) is about 323 km away. Can you see it?
+
+**Answers:** TBD
+
+---
+
+## Q7. The Boda Boda Chain (direct tangents)
 
 **Concepts:** direct common tangent; linked rotation of tangent circles.
 
-On a boda boda motorcycle, the engine sprocket has radius 3 cm and the rear-wheel sprocket has radius 9 cm; their centres are 50 cm apart. The chain follows the direct common tangents.
+On a boda boda motorcycle, the engine sprocket has radius 3 cm and the rear-wheel sprocket has radius 9 cm; their centres are 48 cm apart. The chain follows the direct common tangents.
 
-(a) Find the length of each straight run of chain. **Answer:** $\sqrt{2500 - 36} \approx 49.6$ cm.
-(b) The chain moves at the same speed everywhere. If the engine sprocket turns at 1 800 revolutions per minute, find the rear sprocket's speed. **Answer:** $1800 \times \tfrac{3}{9} = 600$ rpm — the gear ratio is the ratio of radii.
-(c) Discuss: why does a smaller front sprocket help a boda climb hills with a passenger?
+(a) Find the length of each straight run of chain.
+(b) Find the length of the two curved sections of chain
+(c) Find the total chain length
 
 ---
 
@@ -123,38 +121,10 @@ On a boda boda motorcycle, the engine sprocket has radius 3 cm and the rear-whee
 
 **Concepts:** length of a transverse (internal) common tangent; why crossed belts reverse rotation.
 
-In a jua kali workshop in Gikomba, an old lathe is driven by a *crossed* belt so that the two shafts rotate in opposite directions. The pulleys have radii 10 cm and 15 cm and centres 65 cm apart; the crossed belt follows the transverse common tangents.
+In a jua kali workshop in Gikomba, an old lathe is driven by a *crossed* belt so that the two shafts rotate in opposite directions. The pulleys have radii r cm and R cm and centres $d = 2*(r+R)$ cm apart; the crossed belt follows the transverse common tangents.
 
 (a) Show the straight sections have length $L = \sqrt{d^2 - (R+r)^2}$ and compute it.
-(b) Explain with a diagram why crossing the belt reverses the direction of rotation, while an open belt (Q6) preserves it.
-
-**Answer:** $L = \sqrt{4225 - 625} = 60$ cm exactly. Nice contrast with Q6: the only change in the formula is $(R-r) \to (R+r)$.
-
----
-
-## Q9. Checking the SGR Curve (intersecting chords — the versine method)
-
-**Concepts:** intersecting chords theorem on a chord and diameter.
-
-Railway engineers on the Standard Gauge Railway check curved track using the **versine method**: a string (chord) of length 20 m is stretched between two points on the rail, and the offset from the string's midpoint to the rail (the versine $v$) is measured. On one curve, $v = 5$ cm.
-
-(a) Using intersecting chords ($10 \times 10 = v(2R - v)$), find the radius of the curve.
-(b) Since $v$ is tiny compared with $R$, show the handy site formula $R \approx \dfrac{c^2}{8v}$ for chord $c$.
-
-**Answer:** $R \approx 1\,000$ m. This is the actual method used in track maintenance worldwide — the maths the students are learning is used, unchanged, on the railway they may have ridden.
-
----
-
-## Q10. The Path Through Karura (tangent–secant / power of a point)
-
-**Concepts:** intersecting secants and tangent–secant theorem ($PT^2 = PA \cdot PB$).
-
-From a junction $P$ outside a circular thicket in Karura Forest, one footpath just grazes the thicket, touching it at $T$ with $PT = 24$ m. A straight nature trail from the same junction enters the thicket at $A$ and leaves at $B$, with $PA = 16$ m.
-
-(a) Find $PB$, and hence the distance $AB$ the trail spends inside the thicket.
-(b) A second trail from $P$ enters at $C$ with $PC = 18$ m. Find $PD$ without any new measurements. *(Power of the point $P$ is the same for every line: $PA \cdot PB = PC \cdot PD = PT^2$.)*
-
-**Answers:** (a) $PB = 576/16 = 36$ m, so $AB = 20$ m. (b) $PD = 576/18 = 32$ m.
+(b) Find an expression for the total belt length.
 
 ---
 
@@ -162,14 +132,19 @@ From a junction $P$ outside a circular thicket in Karura Forest, one footpath ju
 
 **Concepts:** power of a point; tangent as the limiting/optimal case; circle through two points tangent to a line.
 
-Kenya Sevens score a try. The conversion must be kicked from a line perpendicular to the try line through the point where the try was scored. The posts are 5.6 m apart; the try was scored 10 m outside the nearer post, so the kicker's line passes 10 m from one post and 15.6 m from the other (measured along the try line).
+Kenya Sevens score a try. The conversion must be kicked from a line perpendicular to the try line through the point where the try was scored. The posts A and B are 5.6 m apart; the try was scored 10 m outside the nearer post, so the kicker's line passes 10 m from one post and 15.6 m from the other (measured along the try line). Suppose the kicker kicks from the point K along the perpendicular line
 
-The angle subtended by the posts at the kicker is largest where the circle through both posts is *tangent* to the kicker's line (any circle that *cuts* the line corresponds to a bigger circle and smaller angle — angles in the same segment).
+(a) Draw a diagram, and construct the circumcircle through A, B, K, and draw the angle $\theta = \angle AKB$ of the goal posts from the kicker.
 
-(a) Explain why tangency gives the maximum angle.
-(b) Use the tangent–secant relationship to show the best distance from the try line is $x = \sqrt{10 \times 15.6}$ and evaluate it.
+(b) Explain why tangency gives the maximum value of $\theta$
+(c) Use the tangent–secant relationship to show the best distance from the try line is $x = \sqrt{10 \times 15.6}$ and evaluate it.
+(d) Find $\theta$ for this distance
 
-**Answer:** $x \approx 12.5$ m. A genuinely famous applied-geometry problem, and Kenya's rugby sevens culture makes it land well.
+**Answer:** 
+(b) $\angle AOB = 2\theta$, and this depends solely on the radius of the circumcircle (as A and B are fixed). Smaller radius will give smaller theta, perpendicular / tangent is the smallest distance between circle and the line. 
+(c) $x \approx 12.5$ m. A genuinely famous applied-geometry problem, and Kenya's rugby sevens culture makes it land well.
+(d) Use (c) to calculate $\angle AKT$ and $\angle BKT$ via right angle trig, then subtract. 
+OR, look at triangle $AOB$, drop perpendicular which has a height $KT = x \approx 12.5$, and base $5.6/2 = 2.8$, so find theta. 
 
 ---
 
@@ -200,18 +175,6 @@ A network company wants to place one signal mast exactly the same distance from 
 
 ---
 
-## Q14. The Roundabout in the Road Fork (escribed circle)
-
-**Concepts:** excircle; $r_A = \dfrac{\text{Area}}{s - a}$; excentre as intersection of one internal and two external bisectors.
-
-A triangular traffic island sits where two roads fork. County engineers want a circular flower bed *outside* the island, tangent to the island's rear side and to the two roads (the extensions of the other two sides) — exactly an escribed circle of the triangle.
-
-For the island with sides $a = 13$, $b = 14$, $c = 15$ (in metres), find the radii of all three possible escribed circles, and identify which corresponds to the bed tangent to the 13 m rear side.
-
-**Answers:** $r_a = \dfrac{84}{s-13} = 10.5$ m, $r_b = 12$ m, $r_c = 14$ m. The bed at the rear side has radius 10.5 m.
-
----
-
 ## Q15. Euler's Hidden Bridge (fun result: incircle meets circumcircle)
 
 **Concepts:** synthesis of inscribed and circumscribed circles; inequality reasoning.
@@ -225,9 +188,11 @@ $$d^2 = R(R - 2r).$$
 
 ---
 
-## Q16. Three Sodas and a Bottle Top (fun result: Descartes' circle theorem)
+## Q16. [rework] Three Sodas and a Bottle Top (fun result: Descartes' circle theorem)
 
 **Concepts:** tangent circles; curvature $k = 1/r$.
+
+[rework with different radius bottle tops]
 
 Three soda bottles, each of radius 4 cm, stand touching each other in a crate. What is the radius of the largest circular bottle top that can stand flat on the crate floor in the gap between them?
 
