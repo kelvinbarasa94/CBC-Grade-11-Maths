@@ -71,8 +71,28 @@
             <p>
                 Three soda bottles, each with a circular base of radius 4 cm, are placed on a flat surface so that each bottle touches the other two.
             </p>
-            <!-- TODO: tkz-euclide diagram — three equal circles (r = 4) arranged tangentially, small gap circle in the centre, all four mutually tangent -->
-            <ol marker="1.">
+            <figure xml:id="fig-bottle-caps">
+                <caption>Three equally size bottle caps</caption>
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            \tkzDefPoint(2,3){A}
+                            \begin{scope}[shift=(A)]
+                            \tkzDefPoint(60:5){B}
+                            \tkzDefPoint(0:5){C}
+                            \end{scope}
+
+                            \tkzDefMidPoint(A,B)\tkzGetPoint{MAB}
+                            \tkzDefMidPoint(B,C)\tkzGetPoint{MBC}
+                            \tkzDefMidPoint(C,A)\tkzGetPoint{MCA}
+
+                            \tkzDrawCircles[thick](A,MAB B,MBC C,MCA)
+                            \tkzDrawPoints(A,B,C)
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <ol marker="(a)">
                 <li>
                     <p>
                         Trace the base of each bottle onto paper (or use three equal coins). Arrange the three circles so each touches the other two.
@@ -80,18 +100,113 @@
                 </li>
                 <li>
                     <p>
-                        Using ruler and compasses only, construct the largest circle that fits inside the central gap, touching all three outer circles.
+                        A packing company wants to know what size circular padding to put in the gap between the three bottles to keep them from knocking against each other during transport. Draw the largest circle that fits in the gap between the three bottles.
                     </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            Here we have drawn the largest circle that fits in the gap.
+                        </p>
+                            <figure xml:id="fig-bottle-caps-soln">
+                                <caption>Three equally size bottle caps</caption>
+                                <image>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.5]
+                                            \pgfmathsetmacro{\d}{8} % diameter of the three circles
+                                            \tkzDefPoint(2,3){A} % Setup equilateral ABC
+                                            \begin{scope}[shift=(A)]
+                                            \tkzDefPoint(60:\d){B}
+                                            \tkzDefPoint(0:\d){C}
+                                            \end{scope}
+
+                                            \tkzDefMidPoint(A,B)\tkzGetPoint{MAB}
+                                            \tkzDefMidPoint(B,C)\tkzGetPoint{MBC}
+                                            \tkzDefMidPoint(C,A)\tkzGetPoint{MCA}
+                                            \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                            \tkzInterLC[near](O,A)(A,MAB)\tkzGetFirstPoint{D}
+
+                                            \tkzDrawCircles[thick](A,MAB B,MBC C,MCA)
+                                            \tkzDrawCircle[thick, teal](O,D)
+                                            \tkzDrawPoints(A,B,C)
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                    </solution>
                 </li>
                 <li>
                     <p>
-                        Measure the radius of your gap circle. Compare with classmates. What fraction of 4 cm is it?
+                        Measure the radius of your gap circle, and then try and compute a formula for the radius of the gap circle in terms of the radius of the bottles.
                     </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            As shown in <xref ref="fig-bottle-caps-soln-formula"/>, we first recognise that the centre of the gap circle is the circumcentre and the orthocentre of the triangle formed by the centres of the three bottles.
+                        </p>
+                        <figure xml:id="fig-bottle-caps-soln-formula">
+                            <caption>Three equally size bottle caps</caption>
+                            <image>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.5]
+                                        \pgfmathsetmacro{\d}{8} % diameter of the three circles
+                                        \tkzDefPoint(2,3){A} % Setup equilateral ABC
+                                        \begin{scope}[shift=(A)]
+                                        \tkzDefPoint(60:\d){B}
+                                        \tkzDefPoint(0:\d){C}
+                                        \end{scope}
+
+                                        \tkzDefMidPoint(A,B)\tkzGetPoint{MAB}
+                                        \tkzDefMidPoint(B,C)\tkzGetPoint{MBC}
+                                        \tkzDefMidPoint(C,A)\tkzGetPoint{MCA}
+                                        \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                        \tkzInterLC[near](O,A)(A,MAB)\tkzGetFirstPoint{D}
+
+                                        \tkzDrawCircles[thick](A,MAB B,MBC C,MCA)
+                                        \tkzDrawCircle[thick, teal](O,D)
+                                        \tkzDrawPoints(A,B,C,O,D)
+                                        \tkzLabelPoints(A,B,C)
+                                        \tkzLabelPoint[right, xshift=10pt](O){$O$}
+                                        \tkzLabelPoint[above](MAB){$X$}
+                                        \tkzDrawPolygon[thick](A,B,C)
+
+                                        \tkzDrawSegments[teal](O,D)
+                                        \tkzDrawSegments(D,A MAB,O)
+                                        \tkzMarkRightAngle(O,MAB,A)
+
+                                        \tkzMarkAngle[size=0.8](O,A,B)
+                                        \tkzFillAngle[opacity=0.5, color=red!50, size=0.8](O,A,B)
+                                        \tkzLabelAngle[pos=2](O,A,B){$30^\circ$}
+                                        \tkzLabelSegment[pos=0.5, below right](O,D){$r$}
+                                        \tkzLabelSegment[pos=0.5, sloped, below](D,A){$4$}
+                                        \tkzLabelSegment[pos=0.5, sloped, above](MAB,A){$4$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                        <p>
+                            We thus have <m>\angle XAC = \angle BAC / 2 = 30^\circ</m>, and <m>OX</m> perpendicular to <m>AB</m>. <m>AX = 4</m> since it is a bottle cap radius, and if we let <m>OD = r</m> be the radius of the gap circle, then <m>AO = 4 + r</m>. By the right triangle <m>OXD</m>:
+                            <md>
+                                <mrow> \cos 30^\circ \amp = \frac{4}{4+r} </mrow>
+                                <mrow> 4+r \amp = 4 \times \frac{2}{\sqrt{3}} </mrow>
+                                <mrow>r \amp = \frac{8}{\sqrt{3}} - 4 </mrow>
+                                <mrow> \amp = \frac{8\sqrt{3}}{3} - 4 </mrow>
+                                <mrow> \amp \approx 0.619 \text{ cm} </mrow>
+                            </md>
+                            If we had started with bottles of radius <m>R</m>, we would have found the gap circle radius to be <md>r = \frac{8\sqrt{3}}{3}R - R </md>
+                        </p>
+                    </solution>
                 </li>
                 <li>
                     <p>
-                        What would happen to the gap circle if the three bottles were larger? Would the fraction change?
+                        What would happen to the gap circle if the three bottles were larger? Would the ratio between the gap radius and the bottle radius change? Why or why not?
                     </p>
+                    <solution component="lesson-plan">
+                        <p>
+                            Divide the formula by <m>R</m> gives:
+                            <md>
+                                <mrow> \frac{r}{R} \amp = \frac{2\sqrt{3}}{3} - 1 </mrow>
+                            </md>
+                            This is independent of the bottle radius, so the ratio between the gap radius and the bottle radius does not change. The gap circle scales in size with the bottles.
+                        </p>
+                    </solution>
                 </li>
             </ol>
         </statement>
@@ -104,35 +219,54 @@
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    10 minutes
+                    5 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalise the pattern discovered in the activity as Descartes' circle theorem, and give learners a tool to compute gap circle radii for any combination of tangent circles.
+                    Provide general guidance for solving circle geometry problems in real life.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Tie these tips in to the activity problem.
                 </p>
             </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> Ask groups to share their measured gap radii. They should all be close to 0.619 cm, i.e. about <m>\frac{1}{6.5}</m> of the bottle radius. This surprising result is captured exactly by Descartes' theorem below.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <alert>Generalisation:</alert> The theorem works for any four mutually tangent circles, even when the outer three have different radii.
-                    </p>
-                </li>
-            </ol>
-        </paragraphs>
     </axiom>
 
     <insight>
+        <p>
+            When working with circle geometry problems in real life, it's really important to:
+            <ul>
+                <li>
+                    <p>
+                        Draw a clear diagram, labelling all known and unknown lengths and angles.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Avoid making assumptions about the diagram that aren't justified by the problem statement. Don't make a triangle equilateral unless you are told it is.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Add construction points / lines / circles to your diagram if they help.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Make sure you give your answer in the correct units.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </insight>
+
+    <!-- <insight>
         <title>Descartes' Circle Theorem</title>
         <p>
             If four circles are mutually tangent (each touching the other three) and have radii <m>r_1, r_2, r_3, r_4</m>, then
@@ -151,7 +285,7 @@
         <p>
             Descartes discovered this result in 1643; it was later rediscovered several times and is the key to understanding chains of tangent circles such as the Pappus chain.
         </p>
-    </insight>
+    </insight> -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
@@ -161,7 +295,12 @@
             <p>
                 Archaeologists at Shanga on Pate Island, on Kenya's coast, discovered a fragment of the rim of a circular Chinese ceramic dish dating to the 15th century. To find the dish's original radius, a student lays a straight ruler across the fragment. The ruler crosses the rim at two points, forming a chord of length 24 cm, and the greatest distance from the ruler to the rim is 4 cm.
             </p>
-            <!-- TODO: tkz-euclide diagram — partial arc (~120°) representing the broken fragment, chord of 24 cm across it, perpendicular from midpoint of chord to the rim showing sagitta 4 cm and remaining segment (2R − 4) -->
+            <figure xml:id="fig-shanga-dish">
+                <caption>A fragment of a circular Chinese ceramic dish <url href="https://www.artzip.org/investigation-chinese-ceramics-discovered-kenya-major-conclusions">(Source)</url></caption>
+                <image source="images/celadon-dish-fragment-1.jpg" width="50%">
+                    <shortdescription>A fragment of a circular Chinese ceramic dish</shortdescription>
+                </image>
+            </figure>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -170,7 +309,7 @@
                 </li>
                 <li>
                     <p>
-                        Use the intersecting chords theorem to find the original radius of the dish.
+                        Find the original radius of the dish, using the theory from this chapter.
                     </p>
                 </li>
             </ol>
@@ -179,13 +318,92 @@
             <ol marker="(a)">
                 <li>
                     <p>
-                        The perpendicular bisector of any chord of a circle passes through the centre. (It is the locus of points equidistant from the two endpoints of the chord, and the centre is equidistant from all points on the circle.) Since the chord lies on the ruler, the perpendicular from the midpoint of the ruler stands along the diameter, and the greatest distance from the ruler to the rim is measured along this perpendicular — which is therefore the sagitta.
+                    In <xref ref="perpendicular"/>, we have connected the midpoint <m>M</m> of <m>AB</m> to the centre <m>O</m> of the circle.
+                    <figure xml:id="perpendicular" width="80%">
+                        <caption>Proof that the perpendicular from the midpoint of the chord passes through the centre of the circle</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.65]
+                                    \pgfmathsetmacro{\d}{6} % diameter of the chord
+                                    \pgfmathsetmacro{\h}{1} % height of the chord
+                                    \tkzDefPoint(0,0){A}
+                                    \tkzDefShiftPoint[A](0,\d){B}
+                                    \tkzDefShiftPoint[A](-\h, \d/2){C}
+                                    \tkzDefMidPoint(A,B)\tkzGetPoint{M}
+
+                                    \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                    \tkzInterLC[common = C](C,O)(O,C)\tkzGetFirstPoint{D}
+                                    
+                                    \tkzDrawCircle[thick](O,C)
+                                    \tkzDrawPoints(A,B,C,M,D,O)
+                                    \tkzLabelPoints[below right](M,D,O)
+                                    \tkzLabelPoints[left](A,B,C)
+                                    \tkzMarkSegments[mark=||](A,M M,B)
+                                    \tkzDrawSegment[thick, red](C, M)
+                                    \tkzDrawSegment[thick, purple!50!black](A,B)
+                                    \tkzDrawSegments[thick](D,M O,B O,A)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure> 
+                    We will prove the perpendicular to <m>AB</m> at <m>M</m> goes through <m>O</m> by showing that <m>\angle BMO = 90^\circ</m>. We will show that <m>\Delta OMB \cong \Delta OMA</m> since:
+                    <ul>
+                        <li>
+                            <p>
+                                <m>OB = OA</m> (radii of the same circle)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>MB = MA </m> (as <m>M</m> is the midpoint of <m>AB</m>)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>OM</m> is common to both triangles.
+                            </p>
+                        </li>
+                    </ul> 
+                    Thus by the <m>SSS</m> (side-side-side) test, <m>\Delta OMB \cong \Delta OMA</m>, so <m>\angle BMO = \angle AMO</m>. But <m>AB</m> is a chord, so <m>\angle AMO + \angle BMO = 180^\circ</m>, and therefore <m>\angle BMO = 90^\circ</m>. Thus the perpendicular from the midpoint of the chord passes through the centre of the dish.
                     </p>
                 </li>
                 <li>
                     <p>
-                        Let the radius of the dish be <m>R</m>. The perpendicular from the midpoint of the chord meets the circle at two points: one is at distance 4 cm from the chord (the nearer rim), and the other is at distance <m>2R - 4</m> cm from the chord (the far rim). The chord has length 24 cm, so each half has length 12 cm. By the intersecting chords theorem (the chord and the diameter intersect at the midpoint of the chord):
+                        We can represent the circle fragment as shown below, where the chord is horizontal and the perpendicular from its midpoint is vertical.
+                    </p>
+                    <figure xml:id="circle-fragment" width="80%">
+                        <caption>A Diagram representing the circle fragment</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.75]
+                                    \pgfmathsetmacro{\d}{6} % diameter of the chord
+                                    \pgfmathsetmacro{\h}{1} % height of the chord
+                                    \tkzDefPoint(0,0){A}
+                                    \tkzDefShiftPoint[A](0,\d){B}
+                                    \tkzDefShiftPoint[A](-\h, \d/2){C}
+                                    \tkzDefMidPoint(A,B)\tkzGetPoint{M}
+
+                                    \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                    \tkzInterLC[common = C](C,O)(O,C)\tkzGetFirstPoint{D}
+                                    
+                                    \tkzDrawCircle[thick](O,C)
+                                    \tkzDrawPoints(A,B,C,M,D,O)
+                                    \tkzLabelPoints[below right](M,O,D)
+                                    \tkzLabelPoints[left](A,B,C)
+                                    \tkzDrawSegment[thick, red](C, M)
+                                    \tkzDrawSegment[thick, purple!50!black](A,B)
+                                    \tkzDrawSegment[thick](D,M)
+                                    \tkzLabelSegments[right](A,M M,B){$12$ cm}
+                                    \tkzLabelSegments[above](M,C){$4$ cm}
+                                    \tkzLabelSegments[above](D,M){$2R - 4$ cm}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    <p>
+                        Since <m>CD</m> is a diameter, we have <m>MD = CD - CM = 2R - 4</m>. By the intersecting chords theorem:
                         <md>
+                            <mrow>AM \times MB \amp = CM \times MD </mrow>
                             <mrow>12 \times 12 \amp = 4 \times (2R - 4)</mrow>
                             <mrow>144 \amp = 8R - 16</mrow>
                             <mrow>8R \amp = 160</mrow>
@@ -334,18 +552,46 @@
         <title>The Conversion Kick</title>
         <statement>
             <p>
-                In rugby sevens, after scoring a try the kicker must kick for goal from a line perpendicular to the try line through the point where the try was scored. The two goal posts <m>A</m> and <m>B</m> are 5.6 m apart on the try line. The try was scored 10 m outside the nearer post, so from the foot of the kicker's perpendicular, <m>A</m> is 10 m along the try line and <m>B</m> is 15.6 m along the try line. The kicker stands at point <m>K</m>, at distance <m>x</m> from the try line along the perpendicular.
+                In rugby sevens, after scoring a try the kicker must kick for goal from a line perpendicular to the try line through the point where the try was scored. The two goal posts <m>A</m> and <m>B</m> are 5.6 m apart on the try line. The try was scored 10 m outside the nearer post. The kicker stands at point <m>K</m>, somewhere along the perpendicular line from the try line.
             </p>
-            <!-- TODO: tkz-euclide diagram — horizontal try line, perpendicular kicker's line, posts A (10 m from foot T₁) and B (15.6 m from foot), kicker K at distance x; circumcircle through A, K, B tangent to try line at T₁; mark x, 10, 15.6, and angle θ = ∠AKB -->
+            <figure xml:id="conversion-kick">
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.3]
+                            \tkzDefPoint(0,0){T}
+                            \tkzDefPoint(10,0){A}
+                            \tkzDefPoint(15.6,0){B}
+                            \tkzDefPoint(0,9){K}
+
+                            \tkzDrawSegments[thin, add=0.5 and 2.2](T,A T,K)
+                            \tkzDrawSegments[thick](A,B K,T)
+                            \tkzDrawSegments(A,K B,K)
+                            \tkzDrawPoints(T,A,B,K)
+                            \tkzDrawPoints[size=5](A,B)
+                            \tkzLabelPoints[below left](T)
+                            \tkzLabelPoints[left](K)
+                            \tkzLabelPoints[below](A,B)
+
+                            \tkzMarkRightAngle[size=0.8](A,T,K)
+                            \tkzMarkAngle[size=4](A,K,B)
+                            \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
+                            \tkzLabelAngle[pos=5](A,K,B){$\theta$}
+                            \tkzLabelSegment[below](A,B){5.6 m}
+                            \tkzLabelSegment[below](T,A){10 m}
+                            \tkzLabelSegment[left](T,K){$x$ m}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
             <ol marker="(a)">
                 <li>
                     <p>
-                        Explain why the maximum viewing angle <m>\theta = \angle AKB</m> is achieved when the circumcircle through <m>A</m>, <m>K</m>, and <m>B</m> is tangent to the try line.
+                        Explain why the maximum viewing angle <m>\theta = \angle AKB</m> is achieved when the circumcircle through <m>A</m>, <m>K</m>, and <m>B</m> is tangent to the perpendicular <m>KT</m> to the try line.
                     </p>
                 </li>
                 <li>
                     <p>
-                        Let <m>T_1</m> be the foot of the perpendicular from <m>K</m> to the try line. Use the tangent–secant theorem to show that the optimal distance is <m>x = \sqrt{10 \times 15.6}</m>, and evaluate it.
+                        Use the tangent-secant theorem to find the optimal distance <m>x</m> from the try line to maximise <m>\theta</m>.
                     </p>
                 </li>
                 <li>
@@ -361,28 +607,106 @@
                     <p>
                         The inscribed angle <m>\angle AKB</m> depends on the arc <m>AB</m> of the circumcircle: the smaller the circumcircle, the larger the arc <m>AB</m> subtends at the centre, and hence the larger the inscribed angle. As <m>K</m> moves along the perpendicular, the circumcircle through <m>A</m>, <m>K</m>, <m>B</m> changes size. The smallest possible circumcircle that can still reach the try line is the one that is <em>tangent</em> to the try line — moving <m>K</m> further from the try line makes the circle larger and <m>\theta</m> smaller; moving it closer also eventually makes the circle larger on the other side. The maximum <m>\theta</m> therefore occurs at the tangent position.
                     </p>
+                    <figure xml:id="conversion-kick-soln">
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.3]
+                            \tkzDefPoint(0,0){T}
+                            \tkzDefPoint(10,0){A}
+                            \tkzDefPoint(15.6,0){B}
+                            \tkzDefPoint(0,9){K}
+
+                            \tkzDrawSegments[thin, add=0.5 and 2.2](T,A T,K)
+                            \tkzDrawSegments[thick](A,B K,T)
+                            \tkzDrawSegments(A,K B,K)
+                            \tkzDrawPoints(T,A,B,K)
+                            \tkzDrawPoints[size=5](A,B)
+                            \tkzLabelPoints[below left](T)
+                            \tkzLabelPoints[left](K)
+                            \tkzLabelPoints[below](A,B)
+                            \tkzDefTriangleCenter[circum](K,A,B) \tkzGetPoint{O}
+
+                            \tkzDrawCircle[dashed, thick](O,K O,R)
+                            \tkzDrawSegments(A,O O,B)
+                            \tkzLabelSegment[above, sloped](O,K){$R$}
+
+                            \tkzMarkRightAngle[size=0.8](A,T,K)
+                            \tkzMarkAngle[size=4](A,K,B)
+                            \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
+                            \tkzLabelAngle[pos=5](A,K,B){$\theta$}
+
+                            \tkzMarkAngle[size=3](A,O,B)
+                            \tkzFillAngle[blue!30, size=3, opacity=0.5](A,O,B)
+                            \tkzLabelAngle[pos=4](A,O,B){$2\theta$}
+                            \tkzLabelSegment[below](A,B){5.6 m}
+                            \tkzLabelSegment[below](T,A){10 m}
+                            \tkzLabelSegment[left](T,K){$x$ m}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
                 </li>
                 <li>
                     <p>
-                        When the circumcircle is tangent to the try line at <m>T_1</m>, the tangent–secant theorem applies from the external point <m>T_1</m>:
+                        When the circumcircle is tangent to the try line at <m>T</m>, the tangent-secant theorem applies from the external point <m>T</m>:
                         <ul>
-                            <li><p><m>T_1 K</m> is the tangent from <m>T_1</m> to the circumcircle (length <m>x</m>),</p></li>
-                            <li><p><m>T_1 A B</m> is a secant from <m>T_1</m> through the circle (<m>T_1 A = 10</m> m, <m>T_1 B = 15.6</m> m).</p></li>
+                            <li><p><m>TK</m> is the tangent from <m>T</m> to the circumcircle (length <m>x</m>),</p></li>
+                            <li><p><m>TB</m> is a secant from <m>T</m>, with <m>TA = 10</m> m, <m>TB = 15.6</m> m.</p></li>
                         </ul>
-                        By the tangent–secant theorem:
+                        <figure xml:id="conversion-kick-soln-tangent">
+                            <image>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.3]
+                                        \tkzDefPoint(0,0){T}
+                                        \tkzDefPoint(10,0){A}
+                                        \tkzDefPoint(15.6,0){B}
+                                        \tkzDefPoint(0,12.5){K}
+                                        \tkzDefPoint(0,12.6){X}
+
+                                        \tkzDrawSegments[thin, add=0.5 and 2.2](T,A T,K)
+                                        \tkzDrawSegments[thick](A,B K,T)
+                                        \tkzDrawSegments(A,K B,K)
+                                        \tkzDrawPoints(T,A,B,K)
+                                        \tkzDrawPoints[size=5](A,B)
+                                        \tkzLabelPoints[below left](T)
+                                        \tkzLabelPoints[left](K)
+                                        \tkzLabelPoints[below](A,B)
+                                        \tkzDefTriangleCenter[circum](K,A,B) \tkzGetPoint{O}
+
+                                        \tkzDrawCircle[dashed, thick](O,K O,R)
+                                        \tkzDrawSegments(A,O O,B)
+                                        \tkzLabelSegment[above, sloped](O,K){$R$}
+
+                                        \tkzMarkRightAngle[size=0.8](O,K,X)
+                                        \tkzMarkRightAngle[size=0.8](A,T,K)
+                                        \tkzMarkAngle[size=4](A,K,B)
+                                        \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
+                                        \tkzLabelAngle[pos=5](A,K,B){$\theta$}
+
+                                        \tkzMarkAngle[size=3](A,O,B)
+                                        \tkzFillAngle[blue!30, size=3, opacity=0.5](A,O,B)
+                                        \tkzLabelAngle[pos=4](A,O,B){$2\theta$}
+                                        \tkzLabelSegment[below](A,B){5.6 m}
+                                        \tkzLabelSegment[below](T,A){10 m}
+                                        \tkzLabelSegment[left](T,K){$x$ m}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                        By the tangent-secant theorem:
                         <md>
-                            <mrow>x^2 \amp = T_1 A \times T_1 B = 10 \times 15.6 = 156</mrow>
+                            <mrow>x^2 \amp = TA \times TB = 10 \times 15.6 = 156</mrow>
                             <mrow>x \amp = \sqrt{156} \approx 12.5 \text{ m}</mrow>
                         </md>
                     </p>
                 </li>
                 <li>
                     <p>
-                        With <m>x \approx 12.5</m> m, <m>T_1 A = 10</m> m, and <m>T_1 B = 15.6</m> m (all from the foot <m>T_1</m>):
+                        With <m>x \approx 12.5</m> m, <m>TA = 10</m> m, and <m>TB = 15.6</m> m (all from the foot <m>T</m>):
                         <md>
-                            <mrow>\angle AKT_1 \amp = \arctan\!\left(\frac{10}{12.5}\right) \approx 38.7°</mrow>
-                            <mrow>\angle BKT_1 \amp = \arctan\!\left(\frac{15.6}{12.5}\right) \approx 51.3°</mrow>
-                            <mrow>\theta = \angle AKB \amp = 51.3° - 38.7° \approx 12.6°</mrow>
+                            <mrow>\angle AKT \amp = \arctan\!\left(\frac{10}{12.5}\right) \approx 38.7°</mrow>
+                            <mrow>\angle BKT \amp = \arctan\!\left(\frac{15.6}{12.5}\right) \approx 51.3°</mrow>
+                            <mrow>\theta \amp = \angle AKB = 51.3° - 38.7° \approx 12.6°</mrow>
                         </md>
                         The kicker maximises the angle of the goal posts at about <m>12.5</m> m from the try line.
                     </p>

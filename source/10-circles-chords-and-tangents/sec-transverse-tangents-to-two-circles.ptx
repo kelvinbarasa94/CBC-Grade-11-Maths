@@ -771,11 +771,63 @@
                 </ul>
             </p>
 
-            <!-- TODO: TikZ figure — right triangle ABM for transverse tangent length.
-                 Show two circles, transverse tangent TT', dashed line AM parallel to TT',
-                 M on the extension of BT' beyond T', right angle at M.
-                 Label: d=17 on AB, R+r=8 on BM, L=TT' on AM.
-                 Note: T and T' are on opposite sides of line AB. -->
+            <figure xml:id="fig-transverse-tangent-formula">
+                <caption>
+                    The right triangle <m>ABM</m> used to derive the transverse tangent length formula.
+                    Here <m>r = 3</m> cm, <m>R = 5</m> cm, <m>d = 17</m> cm, and <m>BM = R + r = 8</m> cm.
+                </caption>
+                <image width="90%">
+                    <shortdescription>
+                        Circles at A and B on opposite sides of a transverse common tangent TT-prime.
+                        A dashed line from A parallel to the tangent meets the extension of radius
+                        BT-prime beyond T-prime at M, forming right triangle ABM with the right
+                        angle at M.
+                    </shortdescription>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.45]
+                            %% --- SET ---
+                            \pgfmathsetmacro{\r}{3}%
+                            \pgfmathsetmacro{\R}{5}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A, 17/0/B}
+                            %% --- CALCULATE ---
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{Tp}
+                            \tkzDefLine[tangent at=Tp](B) \tkzGetPoint{h}
+                            \tkzDefPointBy[projection=onto h--Tp](A) \tkzGetPoint{T}
+                            \tkzDefLine[parallel=through A](T,Tp) \tkzGetPoint{aP}
+                            \tkzInterLL(A,aP)(B,Tp) \tkzGetPoint{M}
+                            %% --- DRAW ---
+                            \tkzDrawCircle[thin,gray](A,a)
+                            \tkzDrawCircle[thin,gray](B,b)
+                            \tkzDrawSegment[dashed, gray](A,B)
+                            \tkzDrawSegments[thin](A,T B,M)
+                            \tkzDrawSegment[very thick](T,Tp)
+                            \tkzDrawSegment[dashed](A,M)
+                            %% --- MARK ---
+                            \tkzMarkRightAngle[size=0.4](A,M,B)
+                            \tkzMarkRightAngle[size=0.3](Tp,T,A)
+                            \tkzMarkRightAngle[size=0.3](T,Tp,B)
+                            %% --- LABEL ---
+                            \tkzDrawPoints(A,B,T,Tp,M)
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[below right](B){$B$}
+                            \tkzLabelPoint[above left](T){$T$}
+                            \tkzLabelPoint[below right](Tp){$T'$}
+                            \tkzLabelPoint[above right](M){$M$}
+                            \tkzLabelSegment[below,font=\small](A,B){$d = 17$ cm}
+                            \tkzLabelSegment[left,font=\small](A,T){$r{=}3$}
+                            \tkzLabelSegment[above,sloped,font=\small](T,Tp){$L = 15$ cm}
+                            \tkzLabelSegment[right,font=\small](B,Tp){$R{=}5$}
+                            \tkzLabelSegment[right,font=\small](Tp,M){$r{=}3$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
 
             <p>
                 By Pythagoras:
@@ -792,6 +844,19 @@
             </p>
         </solution>
     </example>
+
+    <theorem xml:id="length-of-transverse-tangent">
+        <title>Length of the Transverse Tangent</title>
+        <p>
+            Generalising the previous example, if we have two circles with radii <m>r</m> and <m>R</m> and the distance between their centres is <m>d</m>, then the length of the transverse common tangent <m>L</m> is given by:
+            <md>
+                <mrow> L \amp= \sqrt{d^2 - (R + r)^2} </mrow>
+            </md>
+        </p>
+        <p>
+            You'll prove this in <xref ref="ex-transverse-tangent-length-proof"/>.
+        </p>
+    </theorem>
 
     <example xml:id="ex-transverse-tangent-find-d">
         <statement>
@@ -843,9 +908,215 @@
                 </ol>
             </statement>
             <solution>
-                <!-- TODO: Three side-by-side tkz-euclide diagrams showing completed constructions. -->
                 <p>
                     The diagrams show the two completed transverse common tangents for each configuration. Both tangent lines, when extended, meet at the point <m>O'</m> on segment <m>AB</m> between the two circles.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <figure xml:id="fig-exer1a-transverse">
+                                <caption>Part (a): <m>r = 1</m>, <m>R = 3</m>, <m>d = 6</m> cm.</caption>
+                                <image>
+                                    <shortdescription>
+                                        Two circles at A and B with two transverse common tangents meeting at O-prime between the circles.
+                                    </shortdescription>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.5]
+                                        %% --- SET ---
+                                        \pgfmathsetmacro{\r}{1}%
+                                        \pgfmathsetmacro{\R}{3}%
+                                        \pgfmathsetmacro{\rt}{\R+\r}%
+                                        \tkzDefPoints{0/0/A, 6/0/B}
+                                        %% --- CALCULATE ---
+                                        \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                                        \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                                        \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                                        \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                                        \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                                        \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                                        \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                                        \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                                        \tkzInterLC[near](Q',B)(B,b) \tkzGetFirstPoint{T2p}
+                                        \tkzDefLine[tangent at=T2p](B) \tkzGetPoint{h2}
+                                        \tkzDefPointBy[projection=onto h2--T2p](A) \tkzGetPoint{T2}
+                                        \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                                        %% --- DRAW ---
+                                        \tkzDrawCircle[thick](A,a)
+                                        \tkzDrawCircle[thick](B,b)
+                                        \tkzDrawLines[add=0.3 and 0.3](T1,T1p T2,T2p)
+                                        \tkzDrawPoints(A,B,Op)
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below](A){$A$}
+                                        \tkzLabelPoint[below](B){$B$}
+                                        \tkzLabelPoint[below](Op){$O'$}
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <figure xml:id="fig-exer1b-transverse">
+                                <caption>Part (b): <m>r = 2</m>, <m>R = 4</m>, <m>d = 9</m> cm.</caption>
+                                <image>
+                                    <shortdescription>
+                                        Two circles at A and B with two transverse common tangents meeting at O-prime between the circles.
+                                    </shortdescription>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.45]
+                                        %% --- SET ---
+                                        \pgfmathsetmacro{\r}{2}%
+                                        \pgfmathsetmacro{\R}{4}%
+                                        \pgfmathsetmacro{\rt}{\R+\r}%
+                                        \tkzDefPoints{0/0/A, 9/0/B}
+                                        %% --- CALCULATE ---
+                                        \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                                        \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                                        \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                                        \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                                        \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                                        \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                                        \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                                        \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                                        \tkzInterLC[near](Q',B)(B,b) \tkzGetFirstPoint{T2p}
+                                        \tkzDefLine[tangent at=T2p](B) \tkzGetPoint{h2}
+                                        \tkzDefPointBy[projection=onto h2--T2p](A) \tkzGetPoint{T2}
+                                        \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                                        %% --- DRAW ---
+                                        \tkzDrawCircle[thick](A,a)
+                                        \tkzDrawCircle[thick](B,b)
+                                        \tkzDrawLines[add=0.3 and 0.3](T1,T1p T2,T2p)
+                                        \tkzDrawPoints(A,B,Op)
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below](A){$A$}
+                                        \tkzLabelPoint[below](B){$B$}
+                                        \tkzLabelPoint[below](Op){$O'$}
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <figure xml:id="fig-exer1c-transverse">
+                                <caption>Part (c): <m>r = 1.5</m>, <m>R = 3.5</m>, <m>d = 8</m> cm.</caption>
+                                <image>
+                                    <shortdescription>
+                                        Two circles at A and B with two transverse common tangents meeting at O-prime between the circles.
+                                    </shortdescription>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.5]
+                                        %% --- SET ---
+                                        \pgfmathsetmacro{\r}{1.5}%
+                                        \pgfmathsetmacro{\R}{3.5}%
+                                        \pgfmathsetmacro{\rt}{\R+\r}%
+                                        \tkzDefPoints{0/0/A, 8/0/B}
+                                        %% --- CALCULATE ---
+                                        \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                                        \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                                        \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                                        \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                                        \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                                        \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                                        \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                                        \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                                        \tkzInterLC[near](Q',B)(B,b) \tkzGetFirstPoint{T2p}
+                                        \tkzDefLine[tangent at=T2p](B) \tkzGetPoint{h2}
+                                        \tkzDefPointBy[projection=onto h2--T2p](A) \tkzGetPoint{T2}
+                                        \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                                        %% --- DRAW ---
+                                        \tkzDrawCircle[thick](A,a)
+                                        \tkzDrawCircle[thick](B,b)
+                                        \tkzDrawLines[add=0.3 and 0.3](T1,T1p T2,T2p)
+                                        \tkzDrawPoints(A,B,Op)
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below](A){$A$}
+                                        \tkzLabelPoint[below](B){$B$}
+                                        \tkzLabelPoint[below](Op){$O'$}
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Two circles of <em>equal</em> radius 2 cm have centres <m>A</m> and <m>B</m> that are 8 cm apart.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Construct both transverse common tangents to the two circles. What radius should your auxiliary circle have?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Where does the meeting point <m>O'</m> of the two tangents lie? Explain why this happens for circles of equal radius.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                The auxiliary circle has radius <m>R + r = 2 + 2 = 4</m> cm. The rest of the construction is unchanged.
+                            </p>
+                            <figure xml:id="fig-exer-equal-transverse">
+                                <caption>Equal circles: <m>r = R = 2</m> cm, <m>d = 8</m> cm. The tangents meet at the midpoint of <m>AB</m>.</caption>
+                                <image>
+                                    <shortdescription>
+                                        Two equal circles at A and B with two transverse common tangents crossing at the midpoint of segment AB.
+                                    </shortdescription>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.5]
+                                        %% --- SET ---
+                                        \pgfmathsetmacro{\r}{2}%
+                                        \pgfmathsetmacro{\R}{2}%
+                                        \pgfmathsetmacro{\rt}{\R+\r}%
+                                        \tkzDefPoints{0/0/A, 8/0/B}
+                                        %% --- CALCULATE ---
+                                        \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                                        \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                                        \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                                        \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                                        \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                                        \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                                        \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                                        \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                                        \tkzInterLC[near](Q',B)(B,b) \tkzGetFirstPoint{T2p}
+                                        \tkzDefLine[tangent at=T2p](B) \tkzGetPoint{h2}
+                                        \tkzDefPointBy[projection=onto h2--T2p](A) \tkzGetPoint{T2}
+                                        \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                                        %% --- DRAW ---
+                                        \tkzDrawCircle[thick](A,a)
+                                        \tkzDrawCircle[thick](B,b)
+                                        \tkzDrawSegment[dashed,gray](A,B)
+                                        \tkzDrawLines[add=0.3 and 0.3](T1,T1p T2,T2p)
+                                        \tkzDrawPoints(A,B,Op)
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below](A){$A$}
+                                        \tkzLabelPoint[below](B){$B$}
+                                        \tkzLabelPoint[below right](Op){$O'$}
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>
+                                <m>O'</m> is the exact midpoint of <m>AB</m>. The point <m>O'</m> divides <m>AB</m> in the ratio <m>AO' : O'B = r : R</m>; when <m>r = R</m> this ratio is <m>1 : 1</m>, so <m>O'</m> is the midpoint.
+                            </p>
+                        </li>
+                    </ol>
                 </p>
             </solution>
         </exercise>
@@ -853,13 +1124,167 @@
         <exercise>
             <statement>
                 <p>
+                    Circle <m>A</m> has radius 1 cm and circle <m>B</m> has radius 3 cm. Their centres are 8 cm apart.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                On a single diagram, construct both <em>direct</em> common tangents (auxiliary circle of radius <m>R - r</m>) and both <em>transverse</em> common tangents (auxiliary circle of radius <m>R + r</m>).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Mark the point <m>O</m> where the direct tangents meet and the point <m>O'</m> where the transverse tangents meet.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                How many common tangents do two separate, non-overlapping circles have in total?
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Carry out the direct tangent construction with auxiliary radius <m>R - r = 2</m> cm, then the transverse construction on the same diagram with auxiliary radius <m>R + r = 4</m> cm.
+                            </p>
+                            <figure xml:id="fig-exer-both-tangent-types">
+                                <caption>All four common tangents: direct tangents meet at <m>O</m>, transverse tangents meet at <m>O'</m>.</caption>
+                                <image width="90%">
+                                    <shortdescription>
+                                        Two circles at A and B with four common tangent lines: two direct tangents meeting at O on line AB beyond the smaller circle, and two transverse tangents meeting at O-prime between the circles.
+                                    </shortdescription>
+                                    <latex-image>
+                                        \begin{tikzpicture}[scale=0.5]
+                                        %% --- SET ---
+                                        \pgfmathsetmacro{\r}{1}%
+                                        \pgfmathsetmacro{\R}{3}%
+                                        \pgfmathsetmacro{\rdiff}{\R-\r}%
+                                        \pgfmathsetmacro{\rsum}{\R+\r}%
+                                        \tkzDefPoints{0/0/A, 8/0/B}
+                                        %% --- CALCULATE ---
+                                        \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                                        \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                                        \tkzDefCircle[R](B,\rdiff) \tkzGetPoint{cd}
+                                        \tkzDefCircle[R](B,\rsum) \tkzGetPoint{cs}
+                                        \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                                        % Direct tangents
+                                        \tkzInterCC(I,B)(B,cd) \tkzGetPoints{P}{P'}
+                                        \tkzInterLC[near](P,B)(B,b) \tkzGetFirstPoint{D1p}
+                                        \tkzDefLine[tangent at=D1p](B) \tkzGetPoint{g1}
+                                        \tkzDefPointBy[projection=onto g1--D1p](A) \tkzGetPoint{D1}
+                                        \tkzInterLC[near](P',B)(B,b) \tkzGetFirstPoint{D2p}
+                                        \tkzDefLine[tangent at=D2p](B) \tkzGetPoint{g2}
+                                        \tkzDefPointBy[projection=onto g2--D2p](A) \tkzGetPoint{D2}
+                                        \tkzInterLL(D1,D1p)(A,B) \tkzGetPoint{O}
+                                        % Transverse tangents
+                                        \tkzInterCC(I,B)(B,cs) \tkzGetPoints{Q}{Q'}
+                                        \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                                        \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                                        \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                                        \tkzInterLC[near](Q',B)(B,b) \tkzGetFirstPoint{T2p}
+                                        \tkzDefLine[tangent at=T2p](B) \tkzGetPoint{h2}
+                                        \tkzDefPointBy[projection=onto h2--T2p](A) \tkzGetPoint{T2}
+                                        \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                                        %% --- DRAW ---
+                                        \tkzDrawCircle[thick](A,a)
+                                        \tkzDrawCircle[thick](B,b)
+                                        \tkzDrawSegment[dashed,gray](O,B)
+                                        \tkzDrawLines[add=0 and 0.2](O,D1p O,D2p)
+                                        \tkzDrawLines[add=0.2 and 0.2](T1,T1p T2,T2p)
+                                        \tkzDrawPoints(A,B,O,Op)
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below](A){$A$}
+                                        \tkzLabelPoint[below](B){$B$}
+                                        \tkzLabelPoint[below](O){$O$}
+                                        \tkzLabelPoint[below right](Op){$O'$}
+                                        \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>
+                                <m>O</m> lies on line <m>AB</m> extended, beyond the smaller circle <m>A</m>; <m>O'</m> lies on segment <m>AB</m>, between the two circles, as shown in the figure.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Four: two direct common tangents and two transverse common tangents.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise xml:id="ex-transverse-tangent-length-proof">
+            <statement>
+                <p>
                     A transverse common tangent <m>TT'</m> touches circle <m>A</m> (radius <m>r</m>) at <m>T</m> and circle <m>B</m> (radius <m>R</m>, <m>R \gt r</m>) at <m>T'</m>. The circles are on opposite sides of the tangent. The distance between the centres is <m>d = AB</m>.
                 </p>
 
-                <!-- TODO: TikZ figure — two circles with transverse tangent TT'.
-                     T on circle A above the line, T' on circle B below the line (or vice versa).
-                     Dashed line from A parallel to TT', meeting the extension of BT' beyond T' at M.
-                     Right angle at M. Labels: A, B, T, T', M; symbolic lengths d, r, R, R+r, L=TT'. -->
+                <figure xml:id="fig-transverse-exer2-proof-setup">
+                    <caption>
+                        Transverse common tangent <m>TT'</m> and the auxiliary right triangle <m>ABM</m>,
+                        where <m>AM \parallel TT'</m> and <m>M</m> lies on the extension of <m>BT'</m> beyond <m>T'</m>.
+                    </caption>
+                    <image width="75%">
+                        <shortdescription>
+                            Two circles at A and B on opposite sides of a tangent line that touches
+                            circle A at T and circle B at T-prime. A dashed line from A parallel to
+                            TT-prime meets the extension of BT-prime beyond T-prime at M, forming
+                            right triangle ABM with the right angle at M.
+                        </shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.8]
+                            %% --- SET ---
+                            % Generic diagram: r=2, R=3.5, d=9 (symbolic labels only).
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{3.5}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A, 9/0/B}
+                            %% --- CALCULATE ---
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{Tp}
+                            \tkzDefLine[tangent at=Tp](B) \tkzGetPoint{h}
+                            \tkzDefPointBy[projection=onto h--Tp](A) \tkzGetPoint{T}
+                            \tkzDefLine[parallel=through A](T,Tp) \tkzGetPoint{aP}
+                            \tkzInterLL(A,aP)(B,Tp) \tkzGetPoint{M}
+                            %% --- DRAW ---
+                            \tkzDrawCircle[thin,gray](A,a)
+                            \tkzDrawCircle[thin,gray](B,b)
+                            \tkzDrawSegment[dashed,gray](A,B)
+                            \tkzDrawSegments[thin](A,T B,M)
+                            \tkzDrawSegment[very thick](T,Tp)
+                            \tkzDrawSegment[dashed](A,M)
+                            %% --- MARK ---
+                            \tkzMarkRightAngle[size=0.3](A,M,B)
+                            \tkzMarkRightAngle[size=0.22](Tp,T,A)
+                            \tkzMarkRightAngle[size=0.22](T,Tp,B)
+                            %% --- LABEL ---
+                            \tkzDrawPoints(A,B,T,Tp,M)
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[below right](B){$B$}
+                            \tkzLabelPoint[above left](T){$T$}
+                            \tkzLabelPoint[below right](Tp){$T'$}
+                            \tkzLabelPoint[above right](M){$M$}
+                            \tkzLabelSegment[below,font=\small](A,B){$d$}
+                            \tkzLabelSegment[left,font=\small](A,T){$r$}
+                            \tkzLabelSegment[above,sloped,font=\small](T,Tp){$L = TT'$}
+                            \tkzLabelSegment[right,font=\small](B,Tp){$R$}
+                            \tkzLabelSegment[right,font=\small](Tp,M){$r$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
 
                 <ol marker="(a)">
                     <li>
@@ -946,6 +1371,45 @@
                     <li><p>8 cm</p></li>
                 </ol>
             </answer>
+            <solution>
+                <p>
+                    In each part we use <m>L = \sqrt{d^2 - (R + r)^2}</m>.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>R + r = 4 + 3 = 7</m> cm, so
+                                <md>
+                                    <mrow> L \amp= \sqrt{25^2 - 7^2} = \sqrt{625 - 49} = \sqrt{576} = 24 \text{ cm}. </mrow>
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>R + r = 5 + 3 = 8</m> cm, so
+                                <md>
+                                    <mrow> L \amp= \sqrt{17^2 - 8^2} = \sqrt{289 - 64} = \sqrt{225} = 15 \text{ cm}. </mrow>
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>R + r = 3 + 2 = 5</m> cm, so
+                                <md>
+                                    <mrow> L \amp= \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12 \text{ cm}. </mrow>
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>R + r = 5 + 1 = 6</m> cm, so
+                                <md>
+                                    <mrow> L \amp= \sqrt{10^2 - 6^2} = \sqrt{100 - 36} = \sqrt{64} = 8 \text{ cm}. </mrow>
+                                </md>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
 
         <exercise>
@@ -972,6 +1436,29 @@
                     <li><p><m>8\sqrt{2}</m> cm</p></li>
                 </ol>
             </answer>
+            <solution>
+                <p>
+                    In each part we rearrange <m>L^2 = d^2 - (R + r)^2</m> to give <m>d = \sqrt{L^2 + (R + r)^2}</m>.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                <m>R + r = 6 + 2 = 8</m> cm, so
+                                <md>
+                                    <mrow> d \amp= \sqrt{15^2 + 8^2} = \sqrt{225 + 64} = \sqrt{289} = 17 \text{ cm}. </mrow>
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>R + r = 5 + 3 = 8</m> cm, so
+                                <md>
+                                    <mrow> d \amp= \sqrt{8^2 + 8^2} = \sqrt{64 + 64} = \sqrt{128} = 8\sqrt{2} \text{ cm} \approx 11.3 \text{ cm}. </mrow>
+                                </md>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
 
         <exercise>
