@@ -261,7 +261,7 @@
                 </p>
                 <figure xml:id="fig-direct-tangents-construction-4">
                 <caption>
-                    Point Q is the intersection of the connecting circle and the auxiliary circle.
+                    Point I is the midpoint of AB.
                 </caption>
                 <image width="90%">
                     <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
@@ -565,7 +565,7 @@
                             \tkzLabelSegment[above, sloped, fill=white, opacity=0.5](A,B){$9$ cm}
                             \tkzDrawSegment[blue](A,a)
                             \tkzDrawSegment[red](B,b1)
-                            \tkzLabelSegment[above, sloped](A,a1){$2$ cm}
+                            \tkzLabelSegment[above, sloped](A,a){$2$ cm}
                             \tkzLabelSegment[above, sloped](B,b1){$5$ cm}
                             \tkzLabelPoints(A,B)
                             \end{tikzpicture}
@@ -816,13 +816,13 @@
                 </ol>
             </statement>
         <solution>
-            <p>
-                The diagrams below show the two completed direct common tangents for each
-                configuration. Both tangent lines, when extended, meet at the external centre
-                of similitude <m>O</m> on line <m>AB</m> extended beyond circle <m>A</m>.
-            </p>
-            <sidebyside widths="32% 32% 32%" margins="auto">
-                <figure xml:id="fig-exer1a-direct">
+            <ol marker="(a)">
+                <li>
+                    <p>
+                    Drawing the tangents:
+                </p>
+                    <p>
+                        <figure xml:id="fig-exer1a-direct">
                     <caption>Part (a): <m>r = 1</m>, <m>R = 3</m>, <m>d = 6</m> cm.</caption>
                     <image>
                         <shortdescription>
@@ -857,6 +857,13 @@
                         </latex-image>
                     </image>
                 </figure>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Drawing the tangents:
+                </p>
+            <p>
                 <figure xml:id="fig-exer1b-direct">
                     <caption>Part (b): <m>r = 2</m>, <m>R = 4</m>, <m>d = 8</m> cm.</caption>
                     <image>
@@ -889,6 +896,13 @@
                         </latex-image>
                     </image>
                 </figure>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Drawing the tangents:
+                </p>
+            <p>
                 <figure xml:id="fig-exer1c-direct">
                     <caption>Part (c): <m>r = 1.5</m>, <m>R = 3.5</m>, <m>d = 7</m> cm.</caption>
                     <image>
@@ -921,7 +935,9 @@
                         </latex-image>
                     </image>
                 </figure>
-            </sidebyside>
+                </p>
+                </li>
+            </ol>
         </solution>
         </exercise>
 
@@ -1034,6 +1050,93 @@
                             </p>
                         </li>
                     </ol>
+                </p>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    So far we've only look at two circles with no overlap. Below are two circles with radius 2 cm and 6 cm, and the distance between their centres is 6 cm. 
+                </p>
+                 <figure xml:id="fig-overlap-setup">
+                <caption>
+                    Overlapping circles
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{6}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(-30:6){B}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawPoints(A,B)
+                            \tkzLabelPoints(B)
+                            \tkzLabelPoints[right](A)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+                <p>
+                    Can you draw a direct common tangent to these circles using our previous methods? Explain why or why not.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Yes, the same method works:
+                </p>
+                <p>
+                    <figure xml:id="fig-overlap-soln">
+                <caption>
+                    Second direct tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{6}%
+                            \pgfmathsetmacro{\rt}{\R-\r}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(-30:6){B}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzInterLC[R](B,Q')(B,\R) \tkzGetPoints{X2'}{T2'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzInterLC[R](O,T2')(A,\r) \tkzGetPoints{T2}{T2}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(O,A,B,T',T,T2,Q,Q',I,T2')
+                            \tkzDrawLines[add=0.2 and 0.5](O,B)
+                            \tkzDrawLines(B,T' A,T B,T2' A,T2)
+                            \tkzDrawLines(T',O T2',O)
+                            \tkzLabelPoints(O,B,I)
+                            \tkzLabelPoints[right](A, Q)
+                            \tkzLabelPoints[above](Q')
+                            \tkzLabelPoint[above](T){$T_1$}
+                            \tkzLabelPoint[above left](T'){$T'_1$}
+                            \tkzLabelPoint[below](T2){$T_2$}
+                            \tkzLabelPoint[below](T2'){$T'_2$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
                 </p>
             </solution>
         </exercise>

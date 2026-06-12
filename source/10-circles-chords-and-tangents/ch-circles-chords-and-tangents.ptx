@@ -18,6 +18,6 @@
   <xi:include href="sec-inscribed-circles.ptx" />
   <xi:include href="sec-circumscribed-circles.ptx" />
   <xi:include href="sec-escribed-circles.ptx" />
-  <xi:include href="sec-circles-chords-and-tangents-in-real-life.ptx" />
+  <!-- <xi:include href="sec-circles-chords-and-tangents-in-real-life.ptx" /> -->
 
 </chapter>

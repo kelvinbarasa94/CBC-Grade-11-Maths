@@ -91,6 +91,38 @@
                         <p>
                             Draw a second secant from <m>P</m>, going in a different direction, and label its two crossing points <m>C</m> (nearer to <m>P</m>) and <m>D</m> (farther from <m>P</m>).
                         </p>
+                        <solution component="lesson-plan">
+                            <p>
+                                Learners' diagrams should look similar to this:
+                            </p>
+                         <figure xml:id="fig-two-secant-activity">
+                            <caption>Two secants from external point <m>P</m>.</caption>
+                            <image width="60%">
+                                <latex-image>
+                                    \begin{tikzpicture}
+                                        \tkzDefPoints{0/0/P, 4/0/O}
+                                        \tkzDefCircle[R](O,2) \tkzGetPoint{cR}
+                                        \tkzDrawCircle[thick, teal](O,cR)
+                                        \tkzDefPoint(6.5,2){S1}
+                                        \tkzInterLC[near](P,S1)(O,cR) \tkzGetPoints{A}{B}
+                                        \tkzDefPoint(6.5,-2){S2}
+                                        \tkzInterLC[near](P,S2)(O,cR) \tkzGetPoints{C}{D}
+                                        \tkzDrawSegments(P,B P,D)
+                                        \tkzDrawPoints(P,A,B,C,D)
+                                        \tkzLabelPoints[left](P)
+                                        \tkzLabelPoints[above left](A)
+                                        \tkzLabelPoints[above right](B)
+                                        \tkzLabelPoints[below left](C)
+                                        \tkzLabelPoints[below right](D)
+                                        \tkzLabelSegment[above, sloped, pos=0.2, font=\small](P,B){$PA$}
+                                        \tkzLabelSegment[above, sloped, pos=0.55, font=\small](P,B){$PB$}
+                                        \tkzLabelSegment[below, sloped, pos=0.2, font=\small](P,D){$PC$}
+                                        \tkzLabelSegment[below, sloped, pos=0.55, font=\small](P,D){$PD$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                         </solution>
                     </li>
                     <li>
                         <p>
@@ -881,7 +913,7 @@
                         </li>
                         <li>
                             <p>
-                                From the ratio of corresponding sides:
+                                From the ratio of corresponding sides in similar triangles:
                                 <md>
                                    <mrow> \frac{PT}{PB} \amp = \frac{PA}{PT} </mrow>
                                    <mrow> PT^2 \amp = PA \times PB </mrow>

@@ -197,63 +197,6 @@
                 </li>
                 <li>
                     <p>
-                        <alert>Construction of a transverse common tangent</alert> (circles with centres <m>A</m>, radius <m>r</m>, and <m>B</m>, radius <m>R</m>, with <m>R \gt r</m>):
-                        <ol>
-                            <li>
-                                <p>
-                                    Draw the two circles with centres <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>).
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw an <em>auxiliary circle</em> centred at <m>B</m> with radius <m>R + r</m> (use a dashed line to distinguish it from the main circles).
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Find the midpoint <m>I</m> of segment <m>AB</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw a circle centred at <m>I</m> with radius <m>IA</m> (this is a semicircle on <m>AB</m> as diameter). Use a dashed line.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Label <m>Q</m> as one of the intersection points of the semicircle and the auxiliary circle.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw the ray from <m>Q</m> through <m>B</m> and extend it <em>past</em> <m>B</m> to meet circle <m>B</m> at the point <m>T_1'</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    At <m>T_1'</m>, construct the tangent to circle <m>B</m> (draw a line through <m>T_1'</m> perpendicular to the radius <m>BT_1'</m>). Extend this tangent until it meets segment <m>AB</m> at the point <m>O'</m>, which lies between <m>A</m> and <m>B</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Draw a straight line from <m>O'</m> through <m>T_1'</m> and extend it until it meets circle <m>A</m> at the point <m>T_1</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    The line <m>T_1 T_1'</m> is one transverse common tangent.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6–9 using <m>Q'</m> in place of <m>Q</m> to obtain the second transverse common tangent.
-                                </p>
-                            </li>
-                        </ol>
-                    </p>
-                </li>
-                <li>
-                    <p>
                         The length <m>L</m> of a transverse common tangent is given by
                         <md>
                             <mrow>L = \sqrt{d^2 - (R + r)^2}</mrow>
@@ -265,61 +208,373 @@
         </p>
     </insight>
 
-    <p>
-        The diagram below shows the construction for two circles with centre <m>A</m> (radius <m>r</m>) and centre <m>B</m> (radius <m>R</m>). The dashed orange circle (radius <m>R + r</m>) and the dashed blue semicircle are construction aids; the two solid lines through <m>O'</m> are the transverse common tangents.
-    </p>
+    <paragraphs>
+        <title>Construction of a Transverse Common Tangent</title>
+        <ol>
+            <li>
+                <p>
+                    Draw the two circles with centres <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>), and draw a line through the centres (that continues beyond them).
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-1">
+                <caption>
+                    Setting up the diagram.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawPoints(A,B)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzLabelPoints(A,B)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Draw an <term>auxiliary circle</term> centred at <m>B</m> with radius <m>R + r</m>. (This is the key difference from the direct tangent construction, where the auxiliary circle had radius <m>R - r</m>.)
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-2">
+                <caption>
+                    Drawing the auxiliary circle (light red) centred at <m>B</m> with radius <m>R + r</m>. We can do so by picking any point on the circumference of circle <m>B</m>, drawing a circle through it with radius <m>r</m>, and marking the intersection of the ray from <m>B</m> to this point with that (light blue) circle.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefPointOnCircle[R = center B angle 60 radius \R] \tkzGetPoint{W}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzInterLC[R](B,W)(W, \r) \tkzGetPoints{W1}{W2}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDefCircle[R](W,\r) \tkzGetPoint{d}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircles[blue, thin](W,d)
+                            \tkzDrawPoints(A,B, W, W2)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzDrawLines[add=0 and 0.6](B,W)
+                            \tkzLabelPoints(A,B)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Find the midpoint <m>I</m> of segment <m>AB</m>.
+                </p>
+                 <figure xml:id="fig-transverse-tangents-construction-3">
+                <caption>
+                    Point I is the midpoint of AB.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzInterCC(A,B)(B,A) \tkzGetPoints{i}{j}
+                            \tkzCompass(A,i)\tkzCompass(A,j)
+                            \tkzCompass(B,i)\tkzCompass(B,j)
+                            \tkzDrawLine[very thin, add=0.1 and 0.1](i,j)
+                            \tkzDrawPoints(A,B,I)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzLabelPoints(A,B,I)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Draw the <term>connecting circle</term> centred at <m>I</m> with radius <m>IA</m>. Use a dashed line.
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-4">
+                <caption>
+                    Creating the connecting circle (dashed orange) centred at the midpoint <m>I</m> of <m>AB</m>.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,T',I)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzLabelPoints(A,B,I)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Label <m>Q</m> as one of the intersection points of the connecting circle and the auxiliary circle.
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-5">
+                <caption>
+                    <m>Q</m> is the intersection of the dashed orange (connecting) and light red (auxiliary) circles.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,Q, I)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzLabelPoints(A,B,I)
+                            \tkzLabelPoints[above](Q)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Draw the ray from <m>Q</m> through <m>B</m> and label the intersection with circle <m>B</m> as <m>T_1'</m>.
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-7">
+                <caption>
+                    Ray <m>QB</m> meets the original red circle at <m>T_1'</m>.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,T',Q, I)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzDrawLines(B,Q)
+                            \tkzLabelPoints(A,B,I)
+                            \tkzLabelPoints[above](Q)
+                            \tkzLabelPoint[right](T'){$T_1$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    At <m>T_1'</m>, construct the tangent to circle <m>B</m> (draw a line through <m>T_1'</m> perpendicular to the radius <m>BT_1'</m>). Extend this tangent until it meets the circle <m>A</m>, where it is tangent. Label the tangent point on circle <m>A</m> as <m>T_1</m>.
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-8">
+                <caption>
+                    First transverse tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,T',T,Q, I)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzDrawLines(T',T B,Q A,T)
+                            \tkzLabelPoints(A,B,I)
+                            \tkzLabelPoints[above](Q)
+                            \tkzLabelPoint[right](T){$T_1$}
+                            \tkzLabelPoint[left](T'){$T'_1$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6 and 7 using <m>Q'</m> in place of <m>Q</m> to obtain the second direct common tangent, <m>T_2T'_2</m>.
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-9">
+                <caption>
+                    First transverse tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,T',T,Q, I)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzDrawLines(T',T B,Q A,T)
+                            \tkzLabelPoints(A,B,I)
+                            \tkzLabelPoints[above](Q)
+                            \tkzLabelPoint[right](T){$T_1$}
+                            \tkzLabelPoint[left](T'){$T'_1$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6–9 using <m>Q'</m> in place of <m>Q</m> to obtain the second transverse common tangent.
+                </p>
+                <figure xml:id="fig-transverse-tangents-construction-10">
+                <caption>
+                    First transverse tangent drawn.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            \pgfmathsetmacro{\r}{1}%
+                            \pgfmathsetmacro{\R}{2}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
+                            \tkzInterLC[R](B,Q')(B,\R) \tkzGetPoints{T2'}{X2'}
+                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+                            \tkzInterLC[R](h,T')(A,\r) \tkzGetPoints{e}{T}
+                            \tkzDefLine[tangent at=T2'](B) \tkzGetPoint{h2}
+                            \tkzInterLC[R](T2',h2)(A,\r) \tkzGetPoints{T2}{T2}
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawPoints(A,B,T',T,Q,Q',I,T2',T2)
+                            \tkzDrawLines[add=0.3 and 0.6](A,B)
+                            \tkzDrawLines(T',T B,Q A,T T2',T2 B,Q' A,T2)
+                            \tkzLabelPoints(A,B,I)
+                            \tkzLabelPoints[above](Q)
+                            \tkzLabelPoints[below](Q')
+                            \tkzLabelPoint[below right](T){$T_1$}
+                            \tkzLabelPoint[left, xshift=-5pt](T'){$T'_1$}
+                            \tkzLabelPoint[above right](T2){$T_2$}
+                            \tkzLabelPoint[left, xshift=-5pt](T2'){$T'_2$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+            </li>
+        </ol>
+    </paragraphs>
 
-    <!-- TODO: TikZ construction figure — tkz-euclide, A at origin, B to the right,
-         show auxiliary circle at B (dashed orange, radius R+r), semicircle at I (dashed blue),
-         intersection points Q and Q', rays from Q and Q' through B extended past B to T1' and T2',
-         tangent lines T1T1' and T2T2' crossing between the circles,
-         point O' on segment AB between the circles.
-         Labels: O', A, B, I, Q, Q', T1, T1', T2, T2'. -->
-
-    <figure xml:id="fig-transverse-tangents-construction">
-        <caption>
-            Construction of the two transverse common tangents to circles at <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>).
-            The dashed circles are construction aids only.
-        </caption>
-        <image width="75%">
-            <shortdescription>
-                Two circles centred at A and B. A dashed auxiliary circle at B has radius R plus r.
-                A dashed semicircle has diameter AB. Intersection points Q and Q' are marked.
-                Rays from Q and Q' pass through B and are extended past B to T1-prime and T2-prime.
-                Two transverse tangent lines cross between the circles, both passing through O' on segment AB.
-            </shortdescription>
-            <latex-image>
-                % TODO: tkz-euclide construction diagram
-                \begin{tikzpicture}
-                \node {TODO};
-                \end{tikzpicture}
-            </latex-image>
-        </image>
-    </figure>
-
-    <p>
-        Once the construction lines are removed, the result is two circles with two transverse common tangents crossing between them at <m>O'</m>.
-    </p>
-
-    <figure xml:id="fig-transverse-tangents-result">
-        <caption>
-            The two transverse common tangents <m>T_1 T_1'</m> and <m>T_2 T_2'</m> to circles at <m>A</m>
-            (radius <m>r</m>) and <m>B</m> (radius <m>R</m>), both passing through <m>O'</m> on segment <m>AB</m>.
-        </caption>
-        <image width="70%">
-            <shortdescription>
-                Two circles centred at A and B. Two straight lines each touch both circles and
-                cross between the circles, meeting at O' on segment AB.
-                The four tangent points T1, T1-prime, T2, T2-prime are marked.
-            </shortdescription>
-            <latex-image>
-                % TODO: tkz-euclide result diagram (no construction aids)
-                \begin{tikzpicture}
-                \node {TODO};
-                \end{tikzpicture}
-            </latex-image>
-        </image>
-    </figure>
 
     <p>
         It is helpful to compare the transverse tangent construction directly with the direct tangent construction from the previous section. The two constructions are almost identical in procedure; the key differences are summarised below.
@@ -358,7 +613,7 @@
         </row>
         <row>
             <cell>Existence condition</cell>
-            <cell>Circles must be separate</cell>
+            <cell><m>d \gt R - r</m> (one circle must not be completely inside the other)</cell>
             <cell><m>d \gt R + r</m> (circles must not touch or overlap)</cell>
         </row>
     </tabular>
@@ -412,7 +667,6 @@
                     </li>
                 </ol>
             </p>
-            <p>The completed diagram is shown in <xref ref="fig-transverse-tangents-result"/>.</p>
         </solution>
     </example>
 
