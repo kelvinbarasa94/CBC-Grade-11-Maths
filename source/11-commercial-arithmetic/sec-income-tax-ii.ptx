@@ -215,7 +215,7 @@
     </axiom>
     <insight>
         <p>
-            Income tax is calculated using a progressive system where different portions of income are taxed at different rates depending on income level.
+            Income tax is calculated using a progressive system where income is divided into different portions, and each portion is taxed at its own rate according to predefined tax brackets. This means that lower portions of income are taxed at lower rates, while only the income that falls within higher brackets is taxed at higher rates. The total tax payable is obtained by summing the tax from each bracket, after which any applicable reliefs are deducted to obtain the final amount of tax due.
         </p>
 
         <p>
@@ -228,15 +228,44 @@
                 <mrow> \text{Net Tax (PAYE)} = \amp \; \text{Gross Tax} - \text{Personal Relief} </mrow>
             </md>
         </p>
-
         <p>
-            In a progressive system, only portions of income fall into higher tax bands, meaning tax increases with income but not uniformly.
+            As a person's income increases, the additional income falls into higher tax bands and is taxed at higher rates. However, the higher rate applies only to the income within that band, not to the entire income.
+        </p>
+        <p>
+            To determine the amount of tax payable:
+        </p>
+        <p>
+            <ol marker="(i)">
+                <li>
+                    <p>
+                        Calculate the taxable income.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Identify the amount of income that falls within each tax band.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Calculate the tax for each band separately.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Add the taxes from all bands to obtain the Gross Tax.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Subtract any eligible tax reliefs to obtain the Net Tax (PAYE).
+                    </p>
+                </li>
+            </ol>
         </p>
 
         <p>
-            <em>
-                Tax systems are designed to distribute financial responsibility fairly, ensuring higher earners contribute more while relief protects low-income earners.
-            </em>
+            Understanding progressive taxation helps workers interpret their payslips and appreciate how taxes are calculated from their earnings.
         </p>
     </insight>
 
@@ -249,12 +278,12 @@
     <example>
         <statement>
             <p>
-                Mr.Masimba earns a basic salary of sh. <m>15,000</m> per month. In addition, he gets a medical allowance of sh. <m>2,400</m>, and a house allowance of sh. <m>12,000</m>. Calculate the tax he pays in a year.
+                Mr.Masimba earns a basic salary of sh. <m>15,000</m> per month. In addition, he gets a medical allowance of sh. <m>2,400</m>, and a house allowance of sh. <m>12,000</m>. Calculate the tax he pays in a year if a personal relief of sh. <m>1,056</m> per month is allowed to all employees..
             </p>
             <tabular left="medium" right="medium" bottom="medium" top="medium">
                 <row header="yes">
-                    <cell>Income (K£ per annum)</cell>
-                    <cell>Rate (Rate (sh. per pound))</cell>
+                    <cell>Income (sh.)</cell>
+                    <cell>Rate </cell>
                 </row>
                 <row>
                     <cell><m>1 - 5,808</m></cell>
@@ -280,28 +309,13 @@
             <p>
                 <alert>Relief</alert>
             </p>
-            <p>
-                <ol marker="(i)">
-                    <li>
-                        <p>
-                            Every employee in kenya is tittled to an automatic personal tax relief of sh. <m>12,672</m> p.a. (sh. <m>1056</m> per month).
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            An employee with a life insurance policy on his life, that of his wife, or children may make a tax claim on the premium paid towards the policy at sh. <m>3</m> per pound subject to a maximum claim of sh. <m>3,000</m> per month.
-                        </p>
-                    </li>
-                </ol>
-            </p>
+            
         </statement>
         <solution>
             <p>
                 <md>
                     <mrow> \text{Taxable income per month}\; =\amp \; \text{sh.}\;(15,000 + 2,400 + 12,000) </mrow>
                     <mrow> \amp =\; \text{sh.}\; 29,400</mrow>
-                    <mrow> \text{Converting to K£ p.a.} \; \amp = \;\text{K£} \; 29,400 \times \frac{12}{20}</mrow>
-                    <mrow> \amp = \;\text{K£}\; 17,640 </mrow>
                 </md>
             </p>
             <p>
@@ -449,9 +463,6 @@
                 </ol>
             </p>
         </solution>
-    </example>
-    <example>
-        
     </example>
             
 
@@ -664,7 +675,7 @@
                         </li>
                         <li>
                             <p>
-                                During that year, the taxable income Tax Rates were as shown in the table below:
+                                During that year, taxable income was taxed according to the rates shown in the table below.
                             </p>
                             <tabular left="medium" right="medium" top="medium" bottom="medium">
                                 <row header="yes">
@@ -693,7 +704,7 @@
                                 </row>
                             </tabular>
                             <p>
-                                Given that the monthly personal relief was Ksh <m>1,056</m>, Calculate the net tax paid by Nicholus.
+                                Calculate the net tax paid by the employee if he was given a monthly personal relief of Ksh 1,056.
                             </p>
                         </li>
                     </ol>

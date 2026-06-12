@@ -90,25 +90,31 @@
             </p>
 
             <p>
-                Identify different components that make up a worker's monthly income and discuss how these components affect the final amount received.
+                Imagine you have just landed your first job after school. Your contract says your salary is <m>50,000</m> shillings, but when bank notification at the end of the month arrives, the salary amount is less than the indicated. Where did the money go? Today, your group is a team of financial investigators. Your mission is to track every single shilling on a standard Kenyan payslip by understanding the factors that affect taxable income and how they affect it.
             </p>
+            
 
             <tabular top="medium" bottom="medium" right="medium" left="medium">
                 <row header="yes">
                     <cell>Income Component</cell>
-                    <cell>Effect in Taxable Income</cell>
+                    <cell>Effect in Net Income</cell>
+
                 </row>
                 <row>
                     <cell>Basic salary</cell>
-                    <cell>Primary earnings for work done</cell>
+                    <cell>?</cell>
                 </row>
                 <row>
                     <cell>Allowances</cell>
-                    <cell>Additional income for services or conditions</cell>
+                    <cell>?</cell>
                 </row>
                 <row>
                     <cell>Deductions</cell>
-                    <cell>Amounts removed before take-home pay</cell>
+                    <cell>?</cell>
+                </row>
+                <row>
+                    <cell>Reliefs</cell>
+                    <cell>?</cell>
                 </row>
             </tabular>
 
@@ -121,7 +127,7 @@
             </p>
 
             <p>
-                In groups, determine his annual income and convert it into Kenya Pounds (K£) given that <m>1 \text{ K£} = \text{Ksh } 20</m>.
+                In groups, determine his taxable income.
             </p>
 
             <p>
@@ -129,23 +135,30 @@
             </p>
 
             <p>
-                Teacher Wanjiku is reviewing her monthly employment contract. It lists a basic salary of Ksh <m>35,000</m>, a house allowance of Ksh <m>12,000</m>, and a medical allowance of Ksh <m>3,000</m>. Before she is taxed, she must contribute Ksh <m>200</m> to the National Social Security Fund (NSSF).
+                Teacher Wanjiku is reviewing her monthly employment contract. It lists a basic salary of Ksh 35,000, a house allowance of Ksh 12,000, and a medical allowance of Ksh 3,000. Before she is taxed, she must contribute Ksh 200 to the National Social Security Fund (NSSF).
             </p>
-
             <p>
-                Work in Groups to determine her monthly taxable income.
+                Calculate her Gross Income (this is her total earnings before any deductions)
             </p>
-
+            <p>
+                Determine her monthly taxable income using the Gross Income and her contribution.
+            </p>
+            <p>
+                How did you find the Gross Income? Define taxable income in relation to Gross Income.
+            </p>
+            <p>
+                Why are allowances added to salary?, Which deduction was removed before tax is calculated? Why?
+            </p>
             <p>
                 <alert>Case Study 3:</alert>
             </p>
 
             <p>
-                A clerk earns Ksh <m>10,000</m> taxable income. The tax rate for this bracket is <m>10\%</m>.
+                Amina has a calculated taxable income of Ksh 10,000 for her first week of high-season work. The tax bracket for this specific amount is charged at a rate of 10%.
             </p>
 
             <p>
-                Determine the gross tax payable.
+                Calculate the Gross Tax Payable that Amina owes the government before any discounts are applied.
             </p>
 
             <p>
@@ -153,7 +166,10 @@
             </p>
 
             <p>
-                 A worker calculates their gross tax and finds it comes to Ksh <m>4,500</m>. However, the government grants every Kenyan worker a financial discount called Personal Relief of Ksh <m>2,400</m> to ease the cost of living. Determine the actual Net Tax (PAYE) that will be deducted from the worker's payslip.
+                A worker calculates their gross tax and finds it comes to Ksh 4,500. However, the government grants every Kenyan worker a financial discount called Personal Relief of Ksh 2,400 to ease the cost of living.
+            </p>
+            <p>
+                Determine the actual Net Tax (PAYE) that will be deducted from the worker's payslip?
             </p>
 
             <p>
@@ -225,6 +241,34 @@
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
      <insight>
+            <p>
+                To start, let's break down the components of a payslip and how they contribute to the final amount you receive in your bank account. A payslip typically includes:   
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <term>Basic Salary</term>: This is the fixed amount agreed upon in your employment contract. It is the core of your income and is subject to taxation.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <term>Allowances</term>: These are additional payments that may be provided for specific purposes, such as housing, transport, or medical expenses. Allowances are usually added to the basic salary and are also taxable.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <term>Deductions</term>: These are amounts subtracted from your gross income before tax is calculated. Common deductions include contributions to the National Social Security Fund (NSSF) and health insurance. Deductions reduce your taxable income, which can lower the amount of tax you owe.
+                        </p>
+                    </li>   
+                    <li>
+                        <p>
+                            <term>Reliefs</term>: These are amounts subtracted from the tax payable after it has been calculated. Personal Relief is a common example, which reduces the amount of tax you owe, effectively increasing your net income.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        
         <p>
             Income tax is a compulsory contribution deducted from an individual's earnings based on their income structure.
         </p>
@@ -258,7 +302,7 @@
     <example>
         <statement>
             <p>
-                Mr. Barasa earns a monthly salary of Ksh <m>48,000</m>. Calculate his annual income in Kenya Pounds (K£).
+                Mr. Barasa earns a monthly salary of Ksh <m>48,000</m>. Calculate his annual income.
             </p>
         </statement>
         <solution>
@@ -268,7 +312,7 @@
             <p>
                 <md>
                     <mrow> \text{Annual Income}: \amp \; 48,000 \times 12 = \;\text{Ksh}\;576,000 </mrow>
-                    <mrow> \text{Income in (K£)}: \amp \; \frac{576000}{20} = \text{K£} 28,800</mrow>
+                    
                 </md>
             </p>
         </solution>
@@ -338,27 +382,16 @@
     <!-- Add static exercises -->
 
     <exercises>
+       
         <exercise>
             <statement>
                 <p>
-                    A manager earns a basic salary of K£ <m>1,500</m> per month. Calculate his annual income in Ksh.
+                    A civil servant's gross monthly income is Ksh <m>64,000</m>. If his total tax less deductions amount to Ksh <m>1,080</m>, find his taxable income per month.
                 </p>
             </statement>
             <answer>
                 <p>
-                   <m>\text{Ksh} \; 360,000</m> 
-                </p>
-            </answer>
-        </exercise>
-        <exercise>
-            <statement>
-                <p>
-                    A civil servant's gross monthly income is Ksh <m>64,000</m>. If his total tax less deductions amount to Ksh <m>1,080</m>, find his taxable income in K£ per month.
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    <m>\text{K£}\; 3146</m>
+                    <m>\text{Ksh}\; 62,920</m>
                 </p>
             </answer>
         </exercise>

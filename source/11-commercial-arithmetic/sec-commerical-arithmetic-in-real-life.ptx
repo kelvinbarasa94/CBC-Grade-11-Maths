@@ -360,7 +360,7 @@
                     <term>From Patterns to General Understanding</term>
                 </p>
                     <p>
-                        From these observations, we can describe financial growth  in two main ways:
+                        From these observations, financial growth can be described in two main ways:
                     </p>
                 <p>
                     <ol marker="(a)">
@@ -377,7 +377,7 @@
                     </ol>
                 </p>
                     <p>
-                        This prepares us to introduce formal methods for calculating interest, profit, and long-term financial changes.
+                        These growth patterns form the basis of calculating interest, profit, and long-term financial changes.
                     </p>
 
                 <p>
@@ -395,12 +395,17 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Why do different financial systems lead to different outcomes over time?
+                                Why do different methods of financial growth produce different outcomes over time?
                             </p>
                         </li>
                         <li>
                             <p>
-                                How can understanding patterns help individuals make better financial decisions?
+                                How can recognising patterns in financial growth help individuals make informed financial decisions?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Why might compound growth lead to larger returns or debts than simple growth over a long period?
                             </p>
                         </li>
                     </ol>
@@ -417,7 +422,7 @@
     <example>
         <statement>
             <p>
-                In a youth SACCO in Kisumu, members save money to support small business projects. One group deposits Ksh <m>20,000</m> in an account that earns simple interest at a rate of <m>5\%</m> per year.
+                A youth SACCO encourages its members to save money to support small business projects. One group deposits Ksh <m>20,000</m> in an account that earns simple interest at a rate of <m>5\%</m> per year.
             </p>
 
             <p>
@@ -427,7 +432,10 @@
 
         <solution>
             <p>
-                Annual interest:
+                Since the account earns simple interest, the same amount of interest is earned each year.
+            </p>
+            <p>
+                Interest earned in one year:
             </p>
 
             <p>
@@ -460,6 +468,9 @@
                         20,000 + 3,000 = 23,000
                     </mrow>
                 </md>
+            </p>
+            <p>
+                Therefore, the group will have Ksh 23,000 after 3 years.
             </p>
         </solution>
     </example>
