@@ -72,13 +72,6 @@
                 Three soda bottles, each with a circular base of radius 4 cm, are placed on a flat surface so that each bottle touches the other two.
             </p>
             <!-- TODO: tkz-euclide diagram — three equal circles (r = 4) arranged tangentially, small gap circle in the centre, all four mutually tangent -->
-            <image width="45%">
-                <latex-image>
-                    \begin{tikzpicture}
-                        % TODO: three equal circles r=4, gap circle in centre
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
             <ol marker="1.">
                 <li>
                     <p>
@@ -169,13 +162,6 @@
                 Archaeologists at Shanga on Pate Island, on Kenya's coast, discovered a fragment of the rim of a circular Chinese ceramic dish dating to the 15th century. To find the dish's original radius, a student lays a straight ruler across the fragment. The ruler crosses the rim at two points, forming a chord of length 24 cm, and the greatest distance from the ruler to the rim is 4 cm.
             </p>
             <!-- TODO: tkz-euclide diagram — partial arc (~120°) representing the broken fragment, chord of 24 cm across it, perpendicular from midpoint of chord to the rim showing sagitta 4 cm and remaining segment (2R − 4) -->
-            <image width="55%">
-                <latex-image>
-                    \begin{tikzpicture}
-                        % TODO: broken arc fragment with chord and sagitta labelled
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -219,13 +205,6 @@
                 Spectators sit around the edge of the circular performance arena at Bomas of Kenya in Nairobi. A straight road runs tangent to the arena at the entrance gate <m>T</m>. During a performance, a dance troupe walks in a straight line across the arena from the entrance gate <m>T</m> to the exit gate <m>A</m> on the far side. At the entrance, the procession path makes an angle of <m>48°</m> with the road.
             </p>
             <!-- TODO: tkz-euclide diagram — circle with horizontal tangent at T, chord TA at 48° to the tangent, spectator point B on major arc, angle ∠TBA marked; road labelled -->
-            <image width="60%">
-                <latex-image>
-                    \begin{tikzpicture}
-                        % TODO: circle, tangent road at T, chord TA at 48°, spectator B on major arc
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -299,13 +278,6 @@
                 A diesel posho mill at a rural market centre is driven by a flat belt connecting the engine pulley (radius <m>r = 6</m> cm) to the mill pulley (radius <m>R = 21</m> cm). The centres of the two pulleys are <m>d = 60</m> cm apart. The belt runs as an <em>open</em> (uncrossed) loop, following the two direct common tangents between the circles.
             </p>
             <!-- TODO: tkz-euclide diagram — two circles (r = 6, R = 21) with two parallel tangent lines above and below (open belt); centres 60 cm apart; label R, r, d, φ, and one straight section L -->
-            <image width="70%">
-                <latex-image>
-                    \begin{tikzpicture}
-                        % TODO: open belt diagram, r=6, R=21, d=60
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -365,13 +337,6 @@
                 In rugby sevens, after scoring a try the kicker must kick for goal from a line perpendicular to the try line through the point where the try was scored. The two goal posts <m>A</m> and <m>B</m> are 5.6 m apart on the try line. The try was scored 10 m outside the nearer post, so from the foot of the kicker's perpendicular, <m>A</m> is 10 m along the try line and <m>B</m> is 15.6 m along the try line. The kicker stands at point <m>K</m>, at distance <m>x</m> from the try line along the perpendicular.
             </p>
             <!-- TODO: tkz-euclide diagram — horizontal try line, perpendicular kicker's line, posts A (10 m from foot T₁) and B (15.6 m from foot), kicker K at distance x; circumcircle through A, K, B tangent to try line at T₁; mark x, 10, 15.6, and angle θ = ∠AKB -->
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}
-                        % TODO: rugby try conversion diagram
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -437,13 +402,6 @@
                     In a basketball game, the three-point arc is modelled as a circle. The touchline (by-line) runs tangent to the arc at the corner, where Wanjiku is standing. She can pass directly to Amina, who is standing on the arc, or relay to Baraka (also on the arc), who then passes to Amina. Wanjiku's direct pass to Amina makes an angle of <m>35°</m> with the touchline.
                 </p>
                 <!-- TODO: tkz-euclide diagram — semicircle (3-point arc), horizontal tangent at corner (Wanjiku), chord from corner to Amina at 35° to tangent, Baraka at another point on the arc -->
-                <image width="55%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: basketball court with 3-point arc, tangent at corner, chord and relay point
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -490,13 +448,6 @@
                     A town at point <m>P</m> must be connected by road to a town at <m>T</m>, which is 56 km away in a straight line. A circular lake of radius 9 km lies in the way: its centre <m>O</m> lies on the direct road, 41 km from <m>P</m> and 15 km from <m>T</m>. The shortest road must be tangent to the lake and follow the lake shore between the two tangent points.
                 </p>
                 <!-- TODO: tkz-euclide diagram — external points P (left) and T (right), circle (r = 9) between them centred on the line PT, tangent lines from P and T touching the circle, arc between the two tangent points highlighted -->
-                <image width="65%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: lake road diagram, P and T on either side of circle
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -566,13 +517,6 @@
                     Model the Earth as a sphere (in cross-section, a circle) with radius <m>R = 6\,400</m> km. Your line of sight to the horizon is a tangent to the Earth at the horizon point. Suppose you are standing on the summit of Mount Kenya, at height <m>h = 5.2</m> km above the Earth's surface.
                 </p>
                 <!-- TODO: tkz-euclide diagram — large circle (Earth), observer P above surface at height h, tangent from P touching circle at horizon H, triangle OPH labelled -->
-                <image width="55%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: Earth circle, observer P at height h, tangent to horizon H
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -620,13 +564,6 @@
                     On a boda boda motorcycle, the engine sprocket has radius <m>r = 3</m> cm and the rear-wheel sprocket has radius <m>R = 9</m> cm; their centres are <m>d = 48</m> cm apart. The chain follows the direct common tangents between the two sprockets.
                 </p>
                 <!-- TODO: tkz-euclide diagram — two circles (r = 3, R = 9) with chain lines tangent above and below; centres 48 cm apart; mark r, R, d, φ, and one straight run L -->
-                <image width="65%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: boda boda chain diagram
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -673,13 +610,6 @@
                     In a jua kali workshop in Gikomba, an old lathe is driven by a <em>crossed</em> belt so that the two shafts rotate in opposite directions. The pulleys have radii <m>r = 5</m> cm and <m>R = 10</m> cm, and their centres are <m>d = 30</m> cm apart. The crossed belt follows the transverse common tangents.
                 </p>
                 <!-- TODO: tkz-euclide diagram — two circles (r = 5, R = 10) with two crossed (X-shaped) belt lines between them; mark r, R, d, φ, and one straight section L -->
-                <image width="65%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: crossed belt diagram
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -732,13 +662,6 @@
                     A fundi in Kibuye market, Kisumu, has a triangular offcut of mvule timber with sides 1.3 m, 1.4 m, and 1.5 m. He wants to cut the largest possible circular table top from it.
                 </p>
                 <!-- TODO: tkz-euclide diagram — 1.3–1.4–1.5 triangle with incircle drawn, incentre I marked, angle bisectors from each vertex shown -->
-                <image width="55%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: triangle with incircle and angle bisectors
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -781,13 +704,6 @@
                     A telecommunications company wants to place a single signal mast so that it is exactly the same distance from three market centres. The three markets form a triangle with sides 13 km, 14 km, and 15 km.
                 </p>
                 <!-- TODO: tkz-euclide diagram — 13–14–15 triangle with circumcircle drawn, circumcentre O marked, perpendicular bisectors of each side shown -->
-                <image width="55%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: triangle with circumcircle and perpendicular bisectors
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -840,13 +756,6 @@
                     where <m>R</m> is the circumradius and <m>r</m> is the inradius.
                 </p>
                 <!-- TODO: tkz-euclide diagram — 13–14–15 triangle with both incircle and circumcircle drawn on the same diagram, incentre I and circumcentre O both labelled, distance d between them indicated -->
-                <image width="55%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: triangle with both incircle and circumcircle, incentre I and circumcentre O labelled, distance d shown
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1041,13 +950,6 @@
                     </li>
                 </ol>
                 <!-- TODO: tkz-euclide diagram — three equal circles (r = 4) arranged tangentially with small gap circle; and separately, three circles of radii 3, 4, 5 with their gap circle -->
-                <image width="70%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: three equal sodas with gap circle; and three unequal tins with gap circle
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
             </statement>
             <solution>
                 <ol marker="(a)">
@@ -1093,13 +995,6 @@
                     Draw a semicircle of radius 12 cm on a diameter <m>AC</m>. Mark <m>B</m> as the midpoint of <m>AC</m>, and draw a second semicircle of radius 6 cm on <m>AB</m>, inside the first semicircle. The crescent-shaped region between the two semicircles is called an <em>arbelos</em> (Greek for shoemaker's knife). Now inscribe a chain of circles in the crescent, each one tangent to both semicircles and to the previous circle in the chain — this is the <em>Pappus chain</em>, studied by Pappus of Alexandria in the 4th century CE.
                 </p>
                 <!-- TODO: tkz-euclide diagram — large semicircle (r = 12) on diameter AC, inner semicircle (r = 6) on AB (left half of AC), first 2–3 Pappus chain circles inscribed in the crescent; dashed vertical lines from each circle centre to AC indicating the height; circles numbered 1, 2, 3 -->
-                <image width="75%">
-                    <latex-image>
-                        \begin{tikzpicture}
-                            % TODO: arbelos with Pappus chain circles
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
                 <ol marker="(a)">
                     <li>
                         <p>

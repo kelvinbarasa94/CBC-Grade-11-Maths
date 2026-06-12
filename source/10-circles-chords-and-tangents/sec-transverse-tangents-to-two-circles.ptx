@@ -625,6 +625,39 @@
             <p>
                 Two circles have centres <m>A</m> and <m>B</m> with radii 2 cm and 5 cm respectively. The distance <m>AB = 9</m> cm. Using a compass and ruler, construct the transverse common tangents to the two circles.
             </p>
+            <figure xml:id="fig-transverse-2-5-9-construction">
+                <caption>
+                    Two circles with centres <m>A</m> and <m>B</m>, with <m>AB = 9</m> cm.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            %% --- SET ---
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{5}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(-30:9){B}
+                            %% --- CALCULATE ---
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefShiftPoint[b](-2*\R, 0){b1}
+                            %% --- DRAW ---
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawPoints(A,B)
+                            \tkzDrawSegment(A,B)
+                            \tkzDrawSegment[blue](A,a)
+                            \tkzDrawSegment[red](B,b1)
+                            %% --- LABEL ---
+                            \tkzLabelSegment[above, sloped, fill=white, opacity=0.5](A,B){$9$ cm}
+                            \tkzLabelSegment[above, sloped](A,a){$2$ cm}
+                            \tkzLabelSegment[above, sloped](B,b1){$5$ cm}
+                            \tkzLabelPoints(A,B)
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </statement>
         <solution>
             <p>
@@ -667,6 +700,55 @@
                     </li>
                 </ol>
             </p>
+            <figure xml:id="fig-transverse-2-5-9-soln">
+                <caption>
+                    The completed construction, showing both transverse common tangents meeting at <m>O'</m> between the circles.
+                </caption>
+                <image width="90%">
+                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            %% --- SET ---
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{5}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(-30:9){B}
+                            %% --- CALCULATE ---
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                            \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                            \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                            \tkzInterLC[near](Q',B)(B,b) \tkzGetFirstPoint{T2p}
+                            \tkzDefLine[tangent at=T2p](B) \tkzGetPoint{h2}
+                            \tkzDefPointBy[projection=onto h2--T2p](A) \tkzGetPoint{T2}
+                            \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                            %% --- DRAW ---
+                            \tkzDrawCircles[blue, thick](A,a)
+                            \tkzDrawCircles[red, thick](B,b)
+                            \tkzDrawCircles[red](B,c)
+                            \tkzDrawCircle[orange, thick, dashed](I,B)
+                            \tkzDrawLines[add=0.2 and 0.2](A,B)
+                            \tkzDrawLines[add=0.2 and 0.2](T1,T1p T2,T2p)
+                            \tkzDrawSegments(Q,B Q',B)
+                            \tkzDrawPoints(A,B,I,Q,Q',T1,T1p,T2,T2p,Op)
+                            %% --- LABEL ---
+                            \tkzLabelPoints(A,B,I)
+                            \tkzLabelPoints[above](Q)
+                            \tkzLabelPoints[below](Q')
+                            \tkzLabelPoint[above left](T1){$T_1$}
+                            \tkzLabelPoint[below right](T1p){$T'_1$}
+                            \tkzLabelPoint[below left](T2){$T_2$}
+                            \tkzLabelPoint[above right](T2p){$T'_2$}
+                            \tkzLabelPoint[above](Op){$O'$}
+                            \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
