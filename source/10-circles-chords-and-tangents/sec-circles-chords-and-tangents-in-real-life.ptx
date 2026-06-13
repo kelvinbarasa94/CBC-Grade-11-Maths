@@ -422,7 +422,49 @@
             <p>
                 Spectators sit around the edge of the circular performance arena at Bomas of Kenya in Nairobi. A straight road runs tangent to the arena at the entrance gate <m>T</m>. During a performance, a dance troupe walks in a straight line across the arena from the entrance gate <m>T</m> to the exit gate <m>A</m> on the far side. At the entrance, the procession path makes an angle of <m>48°</m> with the road.
             </p>
-            <!-- TODO: tkz-euclide diagram — circle with horizontal tangent at T, chord TA at 48° to the tangent, spectator point B on major arc, angle ∠TBA marked; road labelled -->
+            <figure xml:id="fig-bomas-arena">
+                <caption>The arena, the tangent road at <m>T</m>, the chord <m>TA</m> at <m>48^\circ</m> to the road, and a spectator at <m>B</m> on the major arc.</caption>
+                <image width="55%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                            %% --- SET ---
+                            \pgfmathsetmacro{\R}{5}
+                            \tkzDefPoint(0,0){T}
+                            \tkzDefPoint(0,\R){O}
+                            \tkzDefPoint(-\R,0){Lt}
+                            \tkzDefPoint(\R,0){Rt}
+                            \tkzDefPoint(8,0){Xref}
+
+                            %% --- CALCULATE ---
+                            \tkzDefPointBy[rotation=center T angle 48](Xref)\tkzGetPoint{Pdir}
+                            \tkzInterLC[common=T](Pdir,T)(O,T)\tkzGetFirstPoint{A}
+                            \tkzDefPointBy[rotation=center O angle -135](T)\tkzGetPoint{B}
+
+                            %% --- DRAW ---
+                            \tkzDrawCircle[thick](O,T)
+                            \tkzDrawLine[add=0.4 and 0.4, thick, brown!70!black](Lt,Rt)
+                            \tkzDrawSegment[thick, purple!60!black](T,A)
+                            \tkzDrawSegments(B,T B,A)
+                            \tkzDrawPoints[size=3pt](T,A,B,O)
+
+                            %% --- MARK ---
+                            \tkzMarkAngle[size=1.1](Rt,T,A)
+                            \tkzFillAngle[opacity=0.4, color=teal!50, size=1.1](Rt,T,A)
+                            \tkzMarkAngle[size=0.8](T,B,A)
+                            \tkzFillAngle[opacity=0.4, color=orange!60, size=0.8](T,B,A)
+
+                            %% --- LABEL ---
+                            \tkzLabelPoint[below right](T){$T$}
+                            \tkzLabelPoint[right](A){$A$}
+                            \tkzLabelPoint[above left](B){$B$}
+                            \tkzLabelPoint[below right](O){$O$}
+                            \tkzLabelAngle[pos=1.5](Rt,T,A){$48^\circ$}
+                            \tkzLabelAngle[pos=1.2](T,B,A){$\theta$}
+                            \tkzLabelSegment[below, pos=0.15](Lt,Rt){road}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -495,7 +537,58 @@
             <p>
                 A diesel posho mill at a rural market centre is driven by a flat belt connecting the engine pulley (radius <m>r = 6</m> cm) to the mill pulley (radius <m>R = 21</m> cm). The centres of the two pulleys are <m>d = 60</m> cm apart. The belt runs as an <em>open</em> (uncrossed) loop, following the two direct common tangents between the circles.
             </p>
-            <!-- TODO: tkz-euclide diagram — two circles (r = 6, R = 21) with two parallel tangent lines above and below (open belt); centres 60 cm apart; label R, r, d, φ, and one straight section L -->
+            <figure xml:id="fig-posho-belt">
+                <caption>The open belt follows the two direct common tangents. The right triangle <m>O_1 F O_2</m> (right-angled at <m>F</m>) has hypotenuse <m>d</m>, legs <m>R - r</m> and <m>L</m>, and the belt meets each radius at right angles.</caption>
+                <image width="90%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.18]
+                            %% --- SET ---
+                            \pgfmathsetmacro{\Rr}{21}
+                            \pgfmathsetmacro{\rr}{6}
+                            \pgfmathsetmacro{\dd}{60}
+                            \pgfmathsetmacro{\ang}{acos((\Rr-\rr)/\dd)}
+                            \tkzDefPoint(0,0){O1}
+                            \tkzDefPoint(\dd,0){O2}
+                            \tkzDefPoint(\Rr,0){B0}
+                            \tkzDefShiftPoint[O2](\rr,0){S0}
+
+                            %% --- CALCULATE ---
+                            \tkzDefPointBy[rotation=center O1 angle \ang](B0)\tkzGetPoint{P1u}
+                            \tkzDefPointBy[rotation=center O1 angle -\ang](B0)\tkzGetPoint{P1l}
+                            \tkzDefPointBy[rotation=center O2 angle \ang](S0)\tkzGetPoint{P2u}
+                            \tkzDefPointBy[rotation=center O2 angle -\ang](S0)\tkzGetPoint{P2l}
+                            \tkzDefPointBy[projection=onto O1--P1u](O2)\tkzGetPoint{F}
+
+                            %% --- DRAW ---
+                            \tkzDrawCircle[thick](O1,B0)
+                            \tkzDrawCircle[thick](O2,S0)
+                            \tkzDrawSegment[thick, blue](P1u,P2u)
+                            \tkzDrawSegment[thick, blue](P1l,P2l)
+                            \tkzDrawSegment[gray](O1,O2)
+                            \tkzDrawSegment[densely dashed, gray](O1,P1u)
+                            \tkzDrawSegment[densely dashed, gray](O2,P2u)
+                            \tkzDrawSegment[densely dashed, gray](O2,F)
+                            \tkzDrawPoints[size=2pt](O1,O2,P1u,P2u,P1l,P2l,F)
+
+                            %% --- MARK ---
+                            \tkzMarkRightAngle[size=2](O1,P1u,P2u)
+                            \tkzMarkRightAngle[size=2](O1,F,O2)
+                            \tkzMarkAngle[size=8](F,O2,O1)
+                            \tkzFillAngle[opacity=0.4, color=red!40, size=8](F,O2,O1)
+
+                            %% --- LABEL ---
+                            \tkzLabelPoint[below left](O1){$O_1$}
+                            \tkzLabelPoint[below right](O2){$O_2$}
+                            \tkzLabelPoint[above left](F){$F$}
+                            \tkzLabelSegment[below, pos=0.5](O1,O2){$d$}
+                            \tkzLabelSegment[left, pos=0.3](O1,P1u){$R$}
+                            \tkzLabelSegment[right, pos=0.5](O2,P2u){$r$}
+                            \tkzLabelSegment[above, sloped, pos=0.5](P1u,P2u){$L$}
+                            \tkzLabelAngle[pos=10](F,O2,O1){$\varphi$}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
             <ol marker="(a)">
                 <li>
                     <p>
@@ -573,7 +666,6 @@
                             \tkzLabelPoints[below](A,B)
 
                             \tkzMarkRightAngle[size=0.8](A,T,K)
-                            \tkzMarkAngle[size=4](A,K,B)
                             \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
                             \tkzLabelAngle[pos=5](A,K,B){$\theta$}
                             \tkzLabelSegment[below](A,B){5.6 m}
@@ -608,43 +700,42 @@
                         The inscribed angle <m>\angle AKB</m> depends on the arc <m>AB</m> of the circumcircle: the smaller the circumcircle, the larger the arc <m>AB</m> subtends at the centre, and hence the larger the inscribed angle. As <m>K</m> moves along the perpendicular, the circumcircle through <m>A</m>, <m>K</m>, <m>B</m> changes size. The smallest possible circumcircle that can still reach the try line is the one that is <em>tangent</em> to the try line — moving <m>K</m> further from the try line makes the circle larger and <m>\theta</m> smaller; moving it closer also eventually makes the circle larger on the other side. The maximum <m>\theta</m> therefore occurs at the tangent position.
                     </p>
                     <figure xml:id="conversion-kick-soln">
-                <image>
-                    <latex-image>
-                        \begin{tikzpicture}[scale=0.3]
-                            \tkzDefPoint(0,0){T}
-                            \tkzDefPoint(10,0){A}
-                            \tkzDefPoint(15.6,0){B}
-                            \tkzDefPoint(0,9){K}
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.3]
+                                    \tkzDefPoint(0,0){T}
+                                    \tkzDefPoint(10,0){A}
+                                    \tkzDefPoint(15.6,0){B}
+                                    \tkzDefPoint(0,9){K}
 
-                            \tkzDrawSegments[thin, add=0.5 and 2.2](T,A T,K)
-                            \tkzDrawSegments[thick](A,B K,T)
-                            \tkzDrawSegments(A,K B,K)
-                            \tkzDrawPoints(T,A,B,K)
-                            \tkzDrawPoints[size=5](A,B)
-                            \tkzLabelPoints[below left](T)
-                            \tkzLabelPoints[left](K)
-                            \tkzLabelPoints[below](A,B)
-                            \tkzDefTriangleCenter[circum](K,A,B) \tkzGetPoint{O}
+                                    \tkzDrawSegments[thin, add=0.5 and 2.2](T,A T,K)
+                                    \tkzDrawSegments[thick](A,B K,T)
+                                    \tkzDrawSegments(A,K B,K)
+                                    \tkzDrawPoints(T,A,B,K)
+                                    \tkzDrawPoints[size=5](A,B)
+                                    \tkzLabelPoints[below left](T)
+                                    \tkzLabelPoints[left](K)
+                                    \tkzLabelPoints[below](A,B)
+                                    \tkzDefTriangleCenter[circum](K,A,B) \tkzGetPoint{O}
 
-                            \tkzDrawCircle[dashed, thick](O,K O,R)
-                            \tkzDrawSegments(A,O O,B)
-                            \tkzLabelSegment[above, sloped](O,K){$R$}
+                                    \tkzDrawCircle[dashed, thick](O,K)
+                                    \tkzDrawSegments(A,O O,B O,K)
+                                    \tkzLabelSegment[above, sloped](O,K){$R$}
 
-                            \tkzMarkRightAngle[size=0.8](A,T,K)
-                            \tkzMarkAngle[size=4](A,K,B)
-                            \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
-                            \tkzLabelAngle[pos=5](A,K,B){$\theta$}
+                                    \tkzMarkRightAngle[size=0.8](A,T,K)
+                                    \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
+                                    \tkzLabelAngle[pos=5](A,K,B){$\theta$}
 
-                            \tkzMarkAngle[size=3](A,O,B)
-                            \tkzFillAngle[blue!30, size=3, opacity=0.5](A,O,B)
-                            \tkzLabelAngle[pos=4](A,O,B){$2\theta$}
-                            \tkzLabelSegment[below](A,B){5.6 m}
-                            \tkzLabelSegment[below](T,A){10 m}
-                            \tkzLabelSegment[left](T,K){$x$ m}
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
-            </figure>
+                                    \tkzMarkAngle[size=3](A,O,B)
+                                    \tkzFillAngle[blue!30, size=3, opacity=0.5](A,O,B)
+                                    \tkzLabelAngle[pos=4](A,O,B){$2\theta$}
+                                    \tkzLabelSegment[below](A,B){5.6 m}
+                                    \tkzLabelSegment[below](T,A){10 m}
+                                    \tkzLabelSegment[left](T,K){$x$ m}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
                 </li>
                 <li>
                     <p>
@@ -673,13 +764,12 @@
                                         \tkzLabelPoints[below](A,B)
                                         \tkzDefTriangleCenter[circum](K,A,B) \tkzGetPoint{O}
 
-                                        \tkzDrawCircle[dashed, thick](O,K O,R)
-                                        \tkzDrawSegments(A,O O,B)
+                                        \tkzDrawCircle[dashed, thick](O,K)
+                                        \tkzDrawSegments(A,O O,B O,K)
                                         \tkzLabelSegment[above, sloped](O,K){$R$}
 
                                         \tkzMarkRightAngle[size=0.8](O,K,X)
                                         \tkzMarkRightAngle[size=0.8](A,T,K)
-                                        \tkzMarkAngle[size=4](A,K,B)
                                         \tkzFillAngle[blue!30, size=4, opacity=0.5](A,K,B)
                                         \tkzLabelAngle[pos=5](A,K,B){$\theta$}
 
