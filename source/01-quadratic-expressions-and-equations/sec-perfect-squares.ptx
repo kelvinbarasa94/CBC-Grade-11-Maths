@@ -43,29 +43,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        15 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To explore the geometric representation of square numbers and identify the relationship between side length and total area.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Distribute materials, guide learners in drawing and counting accurately, and prompt them to look for patterns in the table.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <activity>
         <statement>
@@ -170,20 +170,20 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the definition of perfect squares and introduce the algebraic identities for <m>(a+b)^2</m> and <m>(a-b)^2</m>.
                 </p>
             </li>
             </dl>
@@ -193,12 +193,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                         Use the learners' discovery of <m>n^2</m> to define perfect squares formally and show how these appear in algebraic expressions like trinomials.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                         Present the identities for perfect squares, emphasizing how they can be used to factor and expand expressions.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <insight>
         <p>
@@ -515,7 +520,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -529,27 +534,27 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide pre-drawn grids or physical square tiles to assist with counting and visualization.
                     </cell>
                     <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, focusing on drawing and identifying patterns.</line>
                     </cell>
                     <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Encourage learners to explore the sum of consecutive odd numbers and how they relate to perfect squares.
                     </cell>
                     <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

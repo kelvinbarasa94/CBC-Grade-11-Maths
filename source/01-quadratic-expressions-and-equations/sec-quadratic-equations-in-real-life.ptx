@@ -62,7 +62,7 @@
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Guide learners to see the connection between the "math" (equations) and the "reality" (the ball hitting the ground or the string forming a square).
+                    Guide learners to see the connection between the math (equations) and the "reality" (the string modelling a garden).
                 </p>
             </li>
         </dl>
@@ -160,7 +160,7 @@
                 <ol>
                     <li>
                         <p>
-                            Form a rectangle with your string. Since the total length is <m>30</m> cm, the sum of one length and one width must be <m>15</m> cm.
+                            Form a two-dimensional shape with your string. Since the total length is <m>30</m> cm, the sum of one length and one width must be <m>15</m> cm.
                         </p>
                         <image width="50%">
                             <latex-image label="Rectangle with perimeter 30 cm">
@@ -199,12 +199,7 @@
                     </li>
                     <li>
                         <p>
-                            If we call the length <m>x</m>, the width is <m>15 - x</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Try different lengths and calculate the Area (<m>A = \text{length} \times \text{width}</m>):
+                            Try the lengths in the table below and calculate the Area (<m>A = \text{length} \times \text{width}</m>) then fill the table.
                         </p>
                             <tabular border="minor" left="medium" right="medium" top="medium" bottom="medium">
                                 <row header="yes">
@@ -224,9 +219,14 @@
         <task>
             <statement>
                 <p>
-                    Write the Area as a quadratic equation: <me>A = x(15 - x) = 15x - x^2</me>.
+                    If we call the length <m>x</m>, then the width is <m>15 - x</m>. Write the area as a quadratic equation.
                 </p>
             </statement>
+            <solution component="lesson-plan">
+                <p>
+                    <me>A = x(15 - x) = 15x - x^2</me>.
+                </p>
+            </solution>
         </task>
         <task>
             <statement>
@@ -234,16 +234,32 @@
                     Looking at your table, which length <m>x</m> gave the <alert>largest</alert> area? Study the dimensions and areas in the table then state the shapes you identified.
                 </p>
                 <p>
-                    Compare the dimensions of the rectangles. What do you notice about the shape when the area is largest? Explain your observation using values from the table.
+                    Compare the dimensions of the two-dimensional shapes. What do you notice about the shape when the area is largest? Explain your observation using values from the table.
                 </p>
             </statement>
+            <solution component="lesson-plan">
+                <p>
+                    The area is largest when the length and width are equal (i.e., when the shape is a square). In this case, the length and width are both <m>7.5</m> cm, giving an area of <m>56.25</m> cm<m>^2</m>. 
+                </p>
+            </solution>
         </task>
         <task>
             <statement>
                 <p>
-                    Use your equation to find the dimensions if the Area must be <m>54</m> cm<m>^2</m>. Solve <m>15x - x^2 = 54</m>.
+                    Use your equation to find the dimensions if the Area must be <m>54</m> cm<m>^2</m>. Hint: Solve <m>15x - x^2 = 54</m>.
                 </p>
             </statement>
+            <solution component="lesson-plan">
+                <p>
+                    Rearranging the equation: <m>x^2 - 15x + 54 = 0</m>.
+                </p>
+                <p>
+                    Factor: <m>(x - 6)(x - 9) = 0</m>.
+                </p>
+                <p>
+                    Solutions: <m>x = 6</m> cm or <m>x = 9</m> cm.
+                </p>
+            </solution>
         </task>
         <task>
             <statement>
@@ -256,8 +272,7 @@
 
     <axiom component="lesson-plan">
         <title>Structured Instruction</title>
-        <p>
-            <dl>
+        <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
@@ -270,8 +285,7 @@
                     To formalize the steps for modeling real-world problems with quadratic equations.
                 </p>
             </li>
-            </dl>
-        </p>
+        </dl>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
             <ol>

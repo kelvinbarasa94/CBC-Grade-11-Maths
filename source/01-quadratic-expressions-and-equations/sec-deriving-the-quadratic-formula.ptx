@@ -43,29 +43,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        20 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To derive a general formula for solving any quadratic equation by generalizing the completing the square method from numerical examples to literal coefficients.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Encourage learners to move from specific numerical cases to literal symbols (<m>a, b, c</m>). Help them manage the algebraic manipulation of fractions and common denominators.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
      <activity>
         <introduction>
@@ -107,20 +107,20 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    15 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the steps of the derivation and identify the Quadratic Formula as a universal tool for solving quadratic equations.
                 </p>
             </li>
             </dl>
@@ -130,12 +130,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                         Walk through the derivation again, step-by-step, ensuring learners can justify the transition from <m>(x + \frac{b}{2a})^2 = \frac{b^2}{4a^2} - \frac{c}{a}</m> to the final formula.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Emphasize that the resulting formula, <m>x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</m>, is a powerful tool that can be applied to any quadratic equation, regardless of the specific values of <m>a, b,</m> and <m>c</m>.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
@@ -306,7 +311,7 @@
         </solution>
     </example>
 
-    <!-- <example>
+    <example>
         <statement>
             <p>
                 Derive the quadratic formula for this equation by completing the square: <m>2x^2 + 3x - 5 = 0</m>.
@@ -360,9 +365,9 @@
                 <md>x = \frac{-3 \pm 7}{4}</md>
              </p>
         </solution>
-    </example> -->
+    </example> 
 
-    <!-- <example>
+    <example>
         <statement>
             <p>
                Using the method of completing the square, derive the quadratic formula for the equation <m>x^2 + \frac{5}{2}x - 3 = 0</m>.
@@ -427,7 +432,7 @@
                 This is why the formula contains <m>4ac</m> in the numerator.
             </p>
         </solution>
-    </example> -->
+    </example> 
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
@@ -439,7 +444,7 @@
     <!-- Add STACK exercises if made -->
 
     <!-- Add static exercises -->
-    <!--
+    
 
     <exercises>
         <exercise>
@@ -532,11 +537,10 @@
             </answer>
         </exercise>   
     </exercises> 
-    -->
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -550,27 +554,27 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide a scaffolded derivation worksheet with key steps already partially filled in, focusing on the numerical example first.
                     </cell>
                     <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, deriving the formula independently in groups.</line>
                     </cell>
                     <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Explore the discriminant <m>D = b^2 - 4ac</m> and predict the nature of roots based on its value.
                     </cell>
                     <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

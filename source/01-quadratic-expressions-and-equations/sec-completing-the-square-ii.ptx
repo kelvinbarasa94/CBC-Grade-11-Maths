@@ -43,29 +43,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        20 minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To realize the necessity of a leading coefficient of 1 when completing the square, using the context of rearranging a garden design.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Facilitate the group work on the garden redesign task. Prompt learners to explain why they chose to factor out or divide by the leading coefficient and how it simplifies the geometry.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
      <activity>
         <introduction>
@@ -118,20 +118,20 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the method for completing the square when the leading coefficient is not 1, highlighting division by 'a' as a critical preliminary step.
                 </p>
             </li>
             </dl>
@@ -141,12 +141,17 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                         Refer to the garden task where they had to factor out 2. Explain that algebraically, this corresponds to dividing the entire equation by 'a' to enable the use of the <m>(b/2)^2</m> pattern.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Emphasize that the step of dividing by 'a' is crucial because it allows the quadratic to be expressed in a form where completing the square can be applied directly, leading to a perfect square trinomial.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
@@ -336,12 +341,12 @@
     <!-- Add static exercises -->
 
     <exercises>
+        <introduction>
+            <p>
+                Solve the following equations by completing the square method.
+            </p>
+        </introduction>
         <exercise>
-            <introduction>
-                <p>
-                    Solve the following equations by completing the square method.
-                </p>
-            </introduction>
             <statement>   
                 <m>4x^2 - 12x + 9 = 0</m>.
             </statement>   
@@ -391,7 +396,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -400,32 +405,32 @@
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
+                    
                 </row>
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Provide a step-by-step checklist for the method. Use examples where dividing by 'a' results in integer coefficients for <m>x</m> to minimize fraction errors initially.
                     </cell>
-                    <cell></cell>
+                    
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, solving non-monic quadratics including those with fractional intermediate steps.</line>
                     </cell>
-                    <cell></cell>
+                    
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Challenge learners to derive the general Quadratic Formula by applying the method of completing the square to the literal equation <m>ax^2 + bx + c = 0</m>.
                     </cell>
-                    <cell></cell>
+                    
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 

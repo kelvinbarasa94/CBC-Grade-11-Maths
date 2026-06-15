@@ -177,20 +177,20 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
             <dl>
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    XX minutes
+                    10 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
+                    To formalize the method of equating expressions to find simultaneous solutions and interpret these solutions as points of intersection.
                 </p>
             </li>
             </dl>
@@ -200,12 +200,23 @@
             <ol>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                         Use the "connected expressions" triangle to show that equating two expressions is the same as finding their simultaneous solution.
+                         Explain that while the activity focused on <m>x</m>, each solution corresponds to a point <m>(x, y)</m> on a graph.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Emphasize that when a linear expression and a quadratic expression are equated, the resulting equation is usually quadratic. Therefore, there may be two distinct real solutions, one repeated real solution, or no real solutions.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Discuss how changing the coefficients of the linear and quadratic expressions affects the number and nature of the solutions. Use examples to illustrate this point.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <insight>
         <p>
@@ -243,7 +254,7 @@
             </ul>
         </p>
         <p>
-            <alert>To solve a simultaneous equation where one is linear and one is quadratic:</alert>
+            <alert>To solve a simultaneous equation where one is linear and one is quadratic, follow these steps:</alert>
         </p>
         <p>
             <ol>
@@ -515,7 +526,7 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
         <title>Differentiation</title>
 
         <table>
@@ -529,27 +540,27 @@
                 <row>
                     <cell>Struggling Learners (Support)</cell>
                     <cell>
-                        XXXX
+                        Use graphing software or coordinate geometry to visualize the intersection points before attempting the algebraic solution.
                     </cell>
                     <cell></cell>
                 </row>
                 <row>
                     <cell>On-Level Learners (Core)</cell>
                     <cell>
-                        <line>The core lesson activities as described above.</line>
+                        <line>The core lesson activities as described above, focusing on algebraic substitution and factorisation.</line>
                     </cell>
                     <cell></cell>
                 </row>
                 <row>
                     <cell>Advanced Learners (Challenge)</cell>
                     <cell>
-                        XXXX
+                        Challenge learners to use the discriminant of the resulting quadratic equation to determine if the line is a tangent, a secant, or does not intersect the curve.
                     </cell>
                     <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
