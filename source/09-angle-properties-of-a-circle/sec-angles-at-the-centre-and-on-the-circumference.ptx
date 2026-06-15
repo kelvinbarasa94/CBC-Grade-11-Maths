@@ -560,6 +560,50 @@
                 <p>
                     In a circle with center <m>O</m>, a triangle <m>OAB</m> is formed where <m>A</m> and <m>B</m> lie on the circumference. If the base angle <m>\angle OAB = 35^\circ</m>, find the measure of the central angle <m>\angle AOB</m>.
                 </p>
+                <figure xml:id="angle-isosceles-triangle">
+    <caption>Isosceles triangle OAB formed by radii within a circle.</caption>
+    <image width="65%">
+        <latex-image>
+            \begin{tikzpicture}[scale=1.5]
+            % --- Define Coordinates ---
+            \coordinate (O) at (0,0);
+            
+            % Symmetrical points for a clean base triangle at the bottom
+            % For a central angle of 110 degrees, we offset by 55 degrees from 270 (bottom)
+            \coordinate (A) at (215:2);
+            \coordinate (B) at (325:2);
+
+            % --- Draw Circle and Triangle ---
+            \draw[thick] (O) circle (2cm);
+            \draw[thick] (O) -- (A) -- (B) -- cycle;
+
+            % --- Fill and Mark Angles ---
+            % Central Angle AOB (110 degrees)
+            \draw[fill=red!20, opacity=0.6] (0,0) -- (215:0.4) arc (215:325:0.4) -- cycle;
+            \node at (270:0.6) {$x^{\circ}$};
+
+            % Base Angle OAB (35 degrees)
+            \begin{scope}
+                \clip (O) -- (A) -- (B) -- cycle;
+                \draw[fill=blue!20, opacity=0.6] (A) circle (0.4cm);
+            \end{scope}
+            \node at ($(A) + (0.5,0.25)$) {$35^{\circ}$};
+
+            % Base Angle OBA (35 degrees)
+            \begin{scope}
+                \clip (O) -- (A) -- (B) -- cycle;
+                \draw[fill=blue!10, opacity=0.6] (B) circle (0.4cm);
+            \end{scope}
+            \node at ($(B) + (-0.5,0.25)$) {$35^{\circ}$};
+
+            % --- Points and Labels ---
+            \fill (O) circle (1.5pt) node[above] {$O$};
+            \fill (A) circle (1.5pt) node[left] {$A$};
+            \fill (B) circle (1.5pt) node[right] {$B$};
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>
@@ -588,6 +632,46 @@
                 <p>
                     An arc <m>CD</m> subtends a central angle <m>\angle COD = 4x + 16^\circ</m> and an angle at the circumference <m>\angle CGD = 3x - 12^\circ</m>. Solve for <m>x</m> and calculate the actual measures of both angles.
                 </p>
+                <figure xml:id="fig-central-inscribed-algebra">
+            <caption>Central angle <m>\angle COD</m> and inscribed angle <m>\angle CGD</m> subtended by arc CD.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates ---
+                    \coordinate (O) at (0,0);
+                    
+                    % Central angle is 96 degrees, place C and D symmetrically at the bottom
+                    \coordinate (C) at (222:2);
+                    \coordinate (D) at (318:2);
+                    
+                    % Place point G on the upper circumference
+                    \coordinate (G) at (90:2);
+
+                    % --- Draw Circle and Lines ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (O) -- (C);
+                    \draw[thick] (O) -- (D);
+                    \draw[thick] (G) -- (C);
+                    \draw[thick] (G) -- (D);
+
+                    % --- Annotate Angles ---
+                    % Central Angle COD
+                    \draw (222:0.4) arc (222:318:0.4);
+                    \node at (270:0.6) {\small $4x + 16^{\circ}$};
+
+                    % Inscribed Angle CGD
+                    \draw[shift={(G)}] (222:0.5) arc (222:318:0.5);
+                    \node at (0,1.2) {\small $3x - 12^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (O) circle (1.5pt) node[above] {$O$};
+                    \fill (C) circle (1.5pt) node[left] {$C$};
+                    \fill (D) circle (1.5pt) node[right] {$D$};
+                    \fill (G) circle (1.5pt) node[above] {$G$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>
@@ -719,6 +803,47 @@
                 <p>
                     In a local irrigation layout, water pipes form a triangle <m>XYZ</m> inside a circular holding field with center <m>O</m>. The main feed pipe <m>XZ</m> is a straight line passing through the center of the reservoir. If <m>\angle YXZ = 55^\circ</m>, calculate the angle <m>\angle YZX</m>.
                 </p>
+                <figure xml:id="fig-irrigation-semicircle">
+            <caption>Irrigation pipe layout forming triangle XYZ inside a circular field.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates ---
+                    \coordinate (O) at (0,0);
+                    
+                    % XZ passes through center O, making it a diameter. Let's place it horizontally.
+                    \coordinate (X) at (-2,0);
+                    \coordinate (Z) at (2,0);
+                    
+                    % Since angle YXZ = 55 degrees, central angle YOZ = 2 * 55 = 110 degrees.
+                    % Therefore, angle of Y from positive x-axis is 110 degrees.
+                    \coordinate (Y) at (110:2);
+
+                    % --- Draw Circle and Triangle ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (X) -- (Y) -- (Z) -- cycle;
+
+                    % --- Right Angle Mark at Y (Semicircle Theorem) ---
+                    \draw[thick] ($(Y)!0.2cm!(X)$) -- ($($(Y)!0.2cm!(X)$)!0.2cm!90:(X)$) -- ($(Y)!0.2cm!(Z)$);
+
+                    % --- Annotate Angles ---
+                    % Angle YXZ = 55 degrees
+                    \draw (-1.5,0) arc (0:55:0.5);
+                    \node at (-1.2,0.25) {$55^{\circ}$};
+
+                    % Angle YZX = 35 degrees (Target angle)
+                    \draw (1.5,0) arc (180:145:0.5);
+                    \node at (1.2,0.2) {$x^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (O) circle (1.5pt) node[below] {$O$};
+                    \fill (X) circle (1.5pt) node[left] {$X$};
+                    \fill (Y) circle (1.5pt) node[above left] {$Y$};
+                    \fill (Z) circle (1.5pt) node[right] {$Z$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>
@@ -743,6 +868,48 @@
                 <p>
                     Four peg markers are placed on a circular school playing field at points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> in clockwise order. Students tie ropes between the pegs forming paths <m>AC</m>, <m>AD</m>, <m>BC</m>, and <m>BD</m>. If the angle formed at peg <m>C</m> by paths <m>AC</m> and <m>BC</m> is <m>\angle ACB = 47^\circ</m>, state the measure of <m>\angle ADB</m> and explain your reasoning.
                 </p>
+                <figure xml:id="fig-playing-field-segments">
+            <caption>Peg layout and rope paths forming inscribed angles inside a circular field.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates on the Circle ---
+                    \coordinate (O) at (0,0);
+                    
+                    % Placing points in clockwise order: A (top-left), B (top-right), C (bottom-right), D (bottom-left)
+                    \coordinate (A) at (135:2);
+                    \coordinate (B) at (45:2);
+                    \coordinate (C) at (-35:2);
+                    \coordinate (D) at (-115:2);
+
+                    % --- Draw Circle and Rope Paths ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (A) -- (C);
+                    \draw[thick] (B) -- (C);
+                    \draw[thick] (A) -- (D);
+                    \draw[thick] (B) -- (D);
+                    
+                    % Optional: Draw base arc line to make the subtended segment visually distinct
+                    \draw[thick, dashed, gray!60] (A) -- (B);
+
+                    % --- Annotate Angles ---
+                    % Angle ACB = 47 degrees
+                    \draw[shift={(C)}] (135:0.4) arc (135:93:0.4);
+                    \node at (1.2,-0.8) {$47^{\circ}$};
+
+                    % Angle ADB = 47 degrees (Target angle)
+                    \draw[shift={(D)}] (45:0.4) arc (45:87:0.4);
+                    \node at (-0.5,-1.3) {$x^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (A) circle (1.5pt) node[above left] {$A$};
+                    \fill (B) circle (1.5pt) node[above right] {$B$};
+                    \fill (C) circle (1.5pt) node[below right] {$C$};
+                    \fill (D) circle (1.5pt) node[below left] {$D$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>
@@ -760,6 +927,46 @@
                 <p>
                     A circular structural gear has points <m>M</m> and <m>N</m> on its perimeter. The axle is at the center <m>O</m>. A sensor at point <m>K</m> on the outer shell measures the angle <m>\angle MKN = 41^\circ</m>. What central angle <m>\angle MON</m> is formed by the spokes connecting <m>M</m> and <m>N</m> to the axle <m>O</m>?
                 </p>
+                <figure xml:id="fig-structural-gear-angles">
+            <caption>Central angle and inscribed angle formed on a circular structural gear.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates ---
+                    \coordinate (O) at (0,0);
+                    
+                    % Points M and N placed symmetrically at the lower half of the circle
+                    \coordinate (M) at (221:2);
+                    \coordinate (N) at (319:2);
+                    
+                    % Sensor point K on the upper perimeter
+                    \coordinate (K) at (90:2);
+
+                    % --- Draw Circle and Lines ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (O) -- (M);
+                    \draw[thick] (O) -- (N);
+                    \draw[thick] (K) -- (M);
+                    \draw[thick] (K) -- (N);
+
+                    % --- Annotate Angles with Variables ---
+                    % Inscribed Angle MKN labeled as x degrees
+                    \draw[shift={(K)}] (221:0.5) arc (221:319:0.5);
+                    \node at (0,1.2) {$41^{\circ}$};
+
+                    % Central Angle MON labeled as 2x degrees
+                    \draw (221:0.4) arc (221:319:0.4);
+                    \node at (270:0.6) {$x^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (O) circle (1.5pt) node[above] {$O$};
+                    \fill (M) circle (1.5pt) node[left] {$M$};
+                    \fill (N) circle (1.5pt) node[right] {$N$};
+                    \fill (K) circle (1.5pt) node[above] {$K$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>
@@ -778,6 +985,46 @@
                 <p>
                     In a circle with center <m>O</m>, the central angle subtended by arc <m>AB</m> is <m>\angle AOB = 5y - 20^\circ</m>. If the angle subtended by the same arc at the circumference is <m>\angle APB = 2y + 5^\circ</m>, solve for <m>y</m> and calculate the size of <m>\angle APB</m>.
                 </p>
+                <figure xml:id="fig-central-circumference-algebraic">
+            <caption>Central angle <m>\angle AOB</m> and circumference angle <m>\angle APB</m> subtended by arc AB.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates ---
+                    \coordinate (O) at (0,0);
+                    
+                    % Placing points A and B symmetrically near the bottom for a 130-degree central angle
+                    \coordinate (A) at (205:2);
+                    \coordinate (B) at (335:2);
+                    
+                    % Point P on the upper circumference
+                    \coordinate (P) at (90:2);
+
+                    % --- Draw Circle and Line Segments ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (O) -- (A);
+                    \draw[thick] (O) -- (B);
+                    \draw[thick] (P) -- (A);
+                    \draw[thick] (P) -- (B);
+
+                    % --- Annotate Angles ---
+                    % Central Angle AOB
+                    \draw (205:0.4) arc (205:335:0.4);
+                    \node at (270:0.6) {\small $5y - 20^{\circ}$};
+
+                    % Circumference Angle APB
+                    \draw[shift={(P)}] (205:0.5) arc (205:335:0.5);
+                    \node at (0,1.2) {\small $2y + 5^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (O) circle (1.5pt) node[above] {$O$};
+                    \fill (A) circle (1.5pt) node[left] {$A$};
+                    \fill (B) circle (1.5pt) node[right] {$B$};
+                    \fill (P) circle (1.5pt) node[above] {$P$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>

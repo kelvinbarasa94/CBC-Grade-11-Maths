@@ -314,6 +314,51 @@
             <p>
                 Points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> lie on the circumference of a circle in that order. Chords <m>AC</m> and <m>BD</m> intersect at point <m>X</m> inside the circle. If the angle <m>\angle ABD = 38^\circ</m>, find the measure of <m>\angle ACD</m>.
             </p>
+            <figure xml:id="fig-chords-intersection-segment">
+            <caption>Intersecting chords AC and BD meeting at an interior point X.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates on the Circle ---
+                    \coordinate (O) at (0,0);
+                    
+                    % Points positioned in clockwise order
+                    \coordinate (A) at (135:2);
+                    \coordinate (B) at (45:2);
+                    \coordinate (C) at (-35:2);
+                    \coordinate (D) at (-115:2);
+
+                    % --- Find Intersection Point X of Chords AC and BD ---
+                    \coordinate (X) at (intersection of A--C and B--D);
+
+                    % --- Draw Circle and Chords ---
+                    \draw[thick] (O) circle (2cm);
+                    \draw[thick] (A) -- (C);
+                    \draw[thick] (B) -- (D);
+                    
+                    % Draw a dashed visual guideline showing the common shared arc base AD
+                    \draw[thick, dashed, gray!60] (A) -- (B);
+                    \draw[thick, dashed, gray!60] (C) -- (D);
+
+                    % --- Annotate Angles ---
+                    % Angle ABD = 38 degrees
+                    \draw[shift={(B)}] (225:0.4) arc (225:192:0.4);
+                    \node at (1.0,1.0) {$38^{\circ}$};
+
+                    % Angle ACD = 38 degrees (Target Angle)
+                    \draw[shift={(C)}] (145:0.4) arc (145:195:0.4);
+                    \node at (1.2,-1.0) {$x^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (A) circle (1.5pt) node[above left] {$A$};
+                    \fill (B) circle (1.5pt) node[above right] {$B$};
+                    \fill (C) circle (1.5pt) node[below right] {$C$};
+                    \fill (D) circle (1.5pt) node[below left] {$D$};
+                    \fill (X) circle (1.5pt) node[below] {$X$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         </statement>
         <solution>
             <p>
@@ -340,6 +385,53 @@
             <p>
                 Four points <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m> are positioned on a circle. Chords <m>PR</m> and <m>QS</m> cross each other. The angle subtended by arc <m>SR</m> at point <m>P</m> is <m>\angle SPR = 3x + 10^\circ</m> and at point <m>Q</m> is <m>\angle SQR = 5x - 12^\circ</m>. Solve for <m>x</m> and determine the physical size of these angles.
             </p>
+            <figure xml:id="fig-chords-algebraic-same-segment">
+            <caption>Intersecting chords PR and QS inside a circle.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates on the Circle ---
+                    \coordinate (O) at (0,0);
+                    \coordinate (P) at (135:2);
+                    \coordinate (Q) at (45:2);
+                    \coordinate (R) at (-45:2);
+                    \coordinate (S) at (-135:2);
+
+                    % --- Colored Background Shading ---
+                    \fill[cyan!20] (S) -- (P) -- (R) -- cycle;
+                    \fill[orange!20] (S) -- (Q) -- (R) -- cycle;
+
+                    % --- Draw Base Circle ---
+                    \draw[thick, gray] (O) circle (2cm);
+
+                    % --- Draw Chords ---
+                    \draw[thick, blue] (P) -- (R);
+                    \draw[thick, blue] (P) -- (S);
+                    \draw[thick, orange] (Q) -- (R);
+                    \draw[thick, orange] (Q) -- (S);
+                    
+                    % --- Highlight Common Arc SR ---
+                    \draw[line width=2pt, red] (-135:2) arc (-135:-45:2);
+                    \node[red, below] at (-90:2.1) {Arc $SR$};
+
+                    % --- Clean Angle Markers (No Clips) ---
+                    % Angle SPR Marker
+                    \draw[thick, blue] ($(P)+(225:0.4)$) arc (250:315:0.4);
+                    \node[blue] at ($(P)+(270:0.65)$) {\small $3x + 10^{\circ}$};
+
+                    % Angle SQR Marker
+                    \draw[thick, orange] ($(Q)+(225:0.4)$) arc (250:315:0.4);
+                    \node[orange] at ($(Q)+(270:0.65)$) {\small $5x - 12^{\circ}$};
+
+                    % --- Label Points ---
+                    \fill (P) circle (1.5pt) node[above left] {$P$};
+                    \fill (Q) circle (1.5pt) node[above right] {$Q$};
+                    \fill (R) circle (1.5pt) node[below right] {$R$};
+                    \fill (S) circle (1.5pt) node[below left] {$S$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         </statement>
         <solution>
             <p>
@@ -373,6 +465,60 @@
             <p>
                 In a circle, points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> are arranged such that chords <m>AC</m> and <m>BD</m> intersect at <m>E</m>. If <m>\angle BAC = 45^\circ</m> and <m>\angle AEB = 80^\circ</m>, find the measure of <m>\angle BDC</m>.
             </p>
+            <figure xml:id="fig-chords-intersection-segment-angles">
+            <caption>Intersecting chords AC and BD meeting at point E inside a circle.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates on the Circle ---
+                    \coordinate (O) at (0,0);
+                    \coordinate (A) at (140:2);
+                    \coordinate (B) at (50:2);
+                    \coordinate (C) at (-30:2);
+                    \coordinate (D) at (-120:2);
+
+                    % --- Find Intersection Point E ---
+                    \coordinate (E) at (intersection of A--C and B--D);
+
+                    % --- Colored Background Shading to Engage Learners ---
+                    \fill[cyan!15] (A) -- (B) -- (E) -- cycle;
+
+                    % --- Draw Base Circle ---
+                    \draw[thick, gray] (O) circle (2cm);
+
+                    % --- Draw Chords and Inner Lines ---
+                    \draw[thick, blue] (A) -- (C);
+                    \draw[thick, blue] (B) -- (D);
+                    \draw[thick, orange] (A) -- (B);
+                    \draw[thick, orange] (C) -- (D);
+                    
+                    % --- Highlight Common Shared Arc BC ---
+                    \draw[line width=2.5pt, red] (50:2) arc (50:-30:2);
+                    \node[red, right] at (10:2.1) {Arc $BC$};
+
+                    % --- Clean Interior Angle Markers ---
+                    % Angle BAC at vertex A
+                    \draw[thick, blue] (A) ++(-40:0.4) arc (-40:-77:0.4);
+                    \node[blue, below right] at ($(A)+( -55:0.55)$) {\small $45^{\circ}$};
+
+                    % Angle AEB at vertex E
+                    \draw[thick, gray!80!black] (E) ++(50:0.3) arc (50:140:0.3);
+                    \node[gray!80!black, above] at ($(E)+(90:0.35)$) {\small $80^{\circ}$};
+
+                    % Target Angle BDC at vertex D
+                    \draw[thick, orange] (D) ++(60:0.4) arc (60:97:0.4);
+                    \node[orange, above left] at ($(D)+(78:0.55)$) {\small ?};
+
+                    % --- Label Points ---
+                    \fill (A) circle (1.5pt) node[above left] {$A$};
+                    \fill (B) circle (1.5pt) node[above right] {$B$};
+                    \fill (C) circle (1.5pt) node[below right] {$C$};
+                    \fill (D) circle (1.5pt) node[below left] {$D$};
+                    \fill (E) circle (1.5pt) node[below] {$E$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         </statement>
         <solution>
             <p>
@@ -414,6 +560,53 @@
                 <p>
                     Two distinct angles on a circumference, <m>\angle PQS</m> and <m>\angle PRS</m>, stand on the same arc <m>PS</m>. If <m>\angle PQS = 3a + 2b</m> and <m>\angle PRS = a + 4b</m> where the physical measure of <m>\angle PQS = 54^\circ</m>, find the values of constants <m>a</m> and <m>b</m>.
                 </p>
+                <figure xml:id="fig-angles-same-segment-algebraic">
+            <caption>Two distinct inscribed angles sharing the common base arc PS.</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                    % --- Define Coordinates on the Circle ---
+                    \coordinate (O) at (0,0);
+                    \coordinate (P) at (-135:2);
+                    \coordinate (S) at (-45:2);
+                    \coordinate (Q) at (135:2);
+                    \coordinate (R) at (45:2);
+
+                    % --- Colored Background Shading for Visual Engagement ---
+                    \fill[cyan!15] (P) -- (Q) -- (S) -- cycle;
+                    \fill[orange!15] (P) -- (R) -- (S) -- cycle;
+
+                    % --- Draw Base Circle ---
+                    \draw[thick, gray] (O) circle (2cm);
+
+                    % --- Draw Chords ---
+                    \draw[thick, blue] (Q) -- (P);
+                    \draw[thick, blue] (Q) -- (S);
+                    \draw[thick, orange] (R) -- (P);
+                    \draw[thick, orange] (R) -- (S);
+                    
+                    % --- Highlight Common Shared Arc PS ---
+                    \draw[line width=2.5pt, red] (-135:2) arc (-135:-45:2);
+                    \node[red, below] at (-90:2.1) {Arc $PS$};
+
+                    % --- Clean Interior Angle Markers ---
+                    % Angle PQS Marker (Vertex Q)
+                    \draw[thick, blue] (Q) ++(287:0.4) arc (287:323:0.4);
+                    \node[blue] at ($(Q)+(270:0.65)$) {\small $3a + 2b$};
+
+                    % Angle PRS Marker (Vertex R)
+                    \draw[thick, orange] (R) ++(217:0.4) arc (217:253:0.4);
+                    \node[orange] at ($(R)+(270:0.65)$) {\small $a + 4b$};
+
+                    % --- Label Points ---
+                    \fill (P) circle (1.5pt) node[below left] {$P$};
+                    \fill (S) circle (1.5pt) node[below right] {$S$};
+                    \fill (Q) circle (1.5pt) node[above left] {$Q$};
+                    \fill (R) circle (1.5pt) node[above right] {$R$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
             </statement>
             <solution>
                 <p>
