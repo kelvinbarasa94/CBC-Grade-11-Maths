@@ -196,16 +196,18 @@
                 <li>
                     <p>
                         First, draw the <term>boundary line</term> by graphing the related equation <m>y = x + 1</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Use a <term>dashed line</term> for strict inequalities (<m>\gt</m> or <m>\lt</m>) because points on the line don't satisfy the inequality.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Use a <term>solid line</term> for inclusive inequalities (<m>\ge</m> or <m>\le</m>) because points on the line do satisfy the inequality.
+                        <ul>
+                            <li>
+                                <p>
+                                    Use a <term>dashed line</term> for strict inequalities (<m>\gt</m> or <m>\lt</m>) because points on the line don't satisfy the inequality.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Use a <term>solid line</term> for inclusive inequalities (<m>\ge</m> or <m>\le</m>) because points on the line do satisfy the inequality.
+                                </p>
+                            </li>
+                        </ul>
                     </p>
                 </li>
                 <li>
@@ -243,11 +245,13 @@
                     <li>
                         <p>
                             First, we draw the boundary line <m>y = -x + 2</m>. This line passes through <m>(0, 2)</m> and <m>(2, 0)</m>, with a slope of <m>-1</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Since we have a strict inequality (<m>\lt</m>), we use a <term>dashed line</term> to show that points on the line are not included in the solution set.
+                        <ul>
+                            <li>
+                                <p>
+                                    Since we have a strict inequality (<m>\lt</m>), we use a <term>dashed line</term> to show that points on the line are not included in the solution set.
+                                </p>
+                            </li>
+                        </ul>
                         </p>
                     </li>
                     <li>
@@ -467,7 +471,7 @@
                     We shade the region above and on the boundary line.
                 </p>
                 <p>
-                    <image>
+                    <image width="70%">
                         <latex-image>
                             \begin{tikzpicture}
                                 % Draw grid with visible boxes
@@ -497,7 +501,7 @@
                                 \node[below left=5pt] at (0, 0) {$0$};
                                 
                                 % Label the line
-                                \node at (1.5, 0) [fill=white, inner sep=2pt, font=\small] {$y = 2x - 3$};
+                                \node at (1.5, 1) [fill=white, inner sep=2pt, font=\small] {$y = 2x - 3$};
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -529,7 +533,7 @@
                     Testing <m>(0, 0)</m>: Is <m>0 \gt -\frac{1}{2}(0) + 3</m>? No, <m>0 \gt 3</m> is false. So we shade the region that does not contain <m>(0, 0)</m>, which is above the line.
                 </p>
                 <p>
-                    <image>
+                    <image width="70%">
                         <latex-image>
                             \begin{tikzpicture}
                                 % Draw grid with visible boxes
@@ -584,14 +588,14 @@
                     We shade the region below and on the boundary line (the region that contains <m>(0, 0)</m>).
                 </p>
                 <p>
-                    <image>
+                    <image width="70%">
                         <latex-image>
                             \begin{tikzpicture}
                                 % Draw grid with visible boxes
-                                \draw[gray!40, thin] (-1,-5) grid (3,4);
+                                \draw[gray!40, thin] (-3,-5) grid (5,4);
                                 
                                 % Draw axes with arrows
-                                \draw[black, thick, &lt;-&gt;] (-1,0) -- (3,0) node[right, above] {$x$};
+                                \draw[black, thick, &lt;-&gt;] (-3,0) -- (5,0) node[right, above] {$x$};
                                 \draw[black, thick, &lt;-&gt;] (0,-5) -- (0,4) node[left, above] {$y$};
                                 
                                 % Shade the region below the line
@@ -601,7 +605,7 @@
                                 \draw[solid, thick, black] (-0.667, -5) -- (2.333, 4);
                                 
                                 % Draw tick marks and labels (except at origin)
-                                \foreach \x in {-1, 1, 2} {
+                                \foreach \x in {-2, -1, 1, 2, 3} {
                                     \draw (\x, -0.2) -- (\x, 0.2);
                                     \node[below=3pt] at (\x, 0) {$\x$};
                                 }
@@ -614,7 +618,7 @@
                                 \node[below left=5pt] at (0, 0) {$0$};
                                 
                                 % Label the line
-                                \node at (1.5, -0.5) [fill=white, inner sep=2pt, font=\small] {$y = 3x - 3$};
+                                \node at (1.5, 2) [fill=white, inner sep=2pt, font=\small] {$y = 3x - 3$};
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -648,7 +652,7 @@
                     </ul>
                 </p>
                 <p>
-                    <ol marker="a)">
+                    <ol marker="(a)">
                         <li>
                             <p>
                                 Write the inequality representing the total food prepared.
@@ -674,13 +678,13 @@
             </statement>
             <solution>
                 <p>
-                    <ol marker="a)">
+                    <ol marker="(a)">
                         <li>
                             <p>
                                 The inequality representing the total food constraint is:
                             </p>
                             <p>
-                                <m>x + y \le 100</m>
+                                <md>x + y \le 100</md>
                             </p>
                         </li>
                         <li>
