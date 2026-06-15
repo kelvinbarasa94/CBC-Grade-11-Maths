@@ -202,7 +202,7 @@
                   \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
-                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                   \tkzDrawPoints(A,B,C)
                   %% --- MARK ---
                   %% --- LABEL ---
@@ -228,7 +228,7 @@
                   \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
-                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                   \tkzDrawLine[add=0 and 0.3, blue](B,Ia)
                   \tkzDrawPoints(A,B,C)
                   %% --- MARK ---
@@ -255,7 +255,7 @@
                   \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
-                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                   \tkzDrawLine[add=0 and 0.1, blue](B,Ia)
                   \tkzDrawLine[add=0 and 0.1, blue](C,Ia)
                   \tkzDrawPoints(A,B,C,Ia)
@@ -285,7 +285,7 @@
                   \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
-                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                   \tkzDrawLine[add=0 and 0.1, blue](B,Ia)
                   \tkzDrawLine[add=0 and 0.1, blue](C,Ia)
                   \tkzDrawSegment[red,thick](Ia,X)
@@ -318,7 +318,7 @@
                   \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
-                  \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                  \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                   \tkzDrawLine[add=0 and 0.1, blue!60](B,Ia)
                   \tkzDrawLine[add=0 and 0.1, blue!60](C,Ia)
                   \tkzDrawSegment[red,thick](Ia,X)
@@ -363,8 +363,8 @@
                       \tkzDefPointBy[projection=onto C--ACext](Ia) \tkzGetPoint{Z}
                       %% --- DRAW ---
                       \tkzDrawPolygon[thick](A,B,C)
-                      \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
-                      \tkzDrawSegments[red,thin](Ia,X)(Ia,Y)(Ia,Z)
+                      \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
+                      \tkzDrawSegments[red,thin](Ia,X Ia,Y Ia,Z)
                       \tkzDrawCircle[blue,thick](Ia,X)
                       \tkzDrawPoints(A,B,C,Ia,X,Y,Z)
                       %% --- MARK ---
@@ -490,7 +490,7 @@
                       \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                       %% --- DRAW ---
                       \tkzDrawPolygon[thick](A,B,C)
-                      \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                      \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                       \tkzDrawSegment[red,thin](Ia,X)
                       \tkzDrawCircle[blue,thick](Ia,X)
                       \tkzDrawPoints(A,B,C,Ia,X)
@@ -754,7 +754,7 @@
                           \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawSegments[dashed,thick](B,ABext)(C,ACext)
+                          \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
                           \tkzDrawLine[add=0 and 0.1, blue!60](B,Ia)
                           \tkzDrawLine[add=0 and 0.1, blue!60](C,Ia)
                           \tkzDrawSegment[red,thin](Ia,X)
@@ -950,8 +950,8 @@
                           \tkzInterLL(A,Xa)(B,Xb) \tkzGetPoint{Nagel}
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawCircles[blue!70](Ia,Xa)(Ib,Xb)(Ic,Xc)
-                          \tkzDrawSegments[red,thick](A,Xa)(B,Xb)(C,Xc)
+                          \tkzDrawCircles[blue!70](Ia,Xa Ib,Xb Ic,Xc)
+                          \tkzDrawSegments[red,thick](A,Xa B,Xb C,Xc)
                           \tkzDrawPoints(A,B,C,Xa,Xb,Xc,Nagel)
                           %% --- MARK ---
                           %% --- LABEL ---
@@ -1062,7 +1062,7 @@
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[orange,thick](N9,N9r)
-                          \tkzDrawCircles[blue!70](Ia,FootA)(Ib,FootB)(Ic,FootC)
+                          \tkzDrawCircles[blue!70](Ia,FootA Ib,FootB Ic,FootC)
                           \tkzDrawPoints(A,B,C,N9)
                           %% --- MARK ---
                           %% --- LABEL ---
@@ -1113,7 +1113,7 @@
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[green!60!black,thick](I,FootI)
-                          \tkzDrawCircles[blue](Ia,FootA)(Ib,FootB)(Ic,FootC)
+                          \tkzDrawCircles[blue](Ia,FootA Ib,FootB Ic,FootC)
                           \tkzDrawPoints(A,B,C)
                           %% --- MARK ---
                           %% --- LABEL ---
@@ -1173,9 +1173,9 @@
                           %% --- DRAW ---
                           \tkzInit[xmin=-0.5,xmax=11,ymin=-4.5,ymax=4.5]
                           \tkzClip
-                          \tkzDrawCircles[thick](O1,rO1)(O2,rO2)
+                          \tkzDrawCircles[thick](O1,rO1 O2,rO2)
                           \tkzDrawPolygon[red,thick](P,Q,R)
-                          \tkzDrawLines[dashed,gray,add=0.1 and 0.1](P,T1a)(P,T1b)
+                          \tkzDrawLines[dashed,gray,add=0.1 and 0.1](P,T1a P,T1b)
                           \tkzDrawLine[blue!70,add=0.05 and 0.05](Td1a,Td2a)
                           \tkzDrawCircle[blue!60,thick](Ip,FootP)
                           \tkzDrawPoints(O1,O2,P,Q,R,Ip)
@@ -1193,15 +1193,28 @@
                 </figure>
             </statement>
             <solution>
-                <p>
-                    (a)–(b) Construction exercise. The two transverse tangents meet at <m>P</m>, the internal centre of similitude of the two circles (between them, dividing the line of centres in the ratio of the radii).
-                </p>
-                <p>
-                    (c) Each original circle is tangent to the direct tangent line (side <m>QR</m>) and to the extensions of the two sides of the triangle meeting at its adjacent vertex. This is exactly the definition of an excircle: the circle of radius <m>2</m> cm is opposite <m>Q</m>, and the circle of radius <m>3</m> cm is opposite <m>R</m>.
-                </p>
-                <p>
-                    (d) Construct the external bisectors of angles <m>Q</m> and <m>R</m> in triangle <m>PQR</m>; their intersection is the excenter <m>I_p</m>. Drop a perpendicular from <m>I_p</m> to one side to find the radius, then draw the excircle.
-                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Construction exercise. The two transverse common tangents meet at <m>P</m>, the internal centre of similitude of the two circles — the point between them that divides the line of centres in the ratio of the radii.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Construction exercise: the direct common tangent meets the two transverse tangents at <m>Q</m> and <m>R</m>, forming the triangle <m>PQR</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Each original circle is tangent to the direct tangent line (side <m>QR</m>) and to the extensions of the two sides of the triangle meeting at its adjacent vertex. This is exactly the definition of an excircle: the circle of radius <m>2</m> cm is opposite <m>Q</m>, and the circle of radius <m>3</m> cm is opposite <m>R</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Construct the external bisectors of angles <m>Q</m> and <m>R</m> in triangle <m>PQR</m>; their intersection is the excenter <m>I_p</m>. Drop a perpendicular from <m>I_p</m> to one side to find the radius, then draw the excircle.
+                        </p>
+                    </li>
+                </ol>
             </solution>
         </exercise>
     </exercises>

@@ -616,21 +616,27 @@
             </figure>
         </statement>
         <solution>
-            <p>
-                (a) Check: <m>5^2+12^2 = 25+144 = 169 = 13^2</m>, so the triangle is right-angled.
-                <md>
-                    <mrow>s \amp= \frac{5+12+13}{2} = 15 \text{ cm}</mrow>
-                    <mrow>\text{Area} \amp= \tfrac{1}{2}\times 5 \times 12 = 30 \text{ cm}^2</mrow>
-                    <mrow>r \amp= \frac{30}{15} = 2 \text{ cm}</mrow>
-                </md>
-            </p>
-            <p>
-                (b) Label the triangle so that <m>PQ = 5</m>, <m>PR = 12</m>, <m>QR = 13</m>. Using the tangent length formula with <m>a = QR = 13</m>:
-                <md>
-                    PY = PZ = s - a = 15 - 13 = 2 \text{ cm.}
-                </md>
-                The tangent length from <m>P</m> to its tangent point is <m>2</m> cm.
-            </p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Check: <m>5^2+12^2 = 25+144 = 169 = 13^2</m>, so the triangle is right-angled.
+                        <md>
+                            <mrow>s \amp= \frac{5+12+13}{2} = 15 \text{ cm}</mrow>
+                            <mrow>\text{Area} \amp= \tfrac{1}{2}\times 5 \times 12 = 30 \text{ cm}^2</mrow>
+                            <mrow>r \amp= \frac{30}{15} = 2 \text{ cm}</mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Label the triangle so that <m>PQ = 5</m>, <m>PR = 12</m>, <m>QR = 13</m>. Using the tangent length formula with <m>a = QR = 13</m>:
+                        <md>
+                            PY = PZ = s - a = 15 - 13 = 2 \text{ cm.}
+                        </md>
+                        The tangent length from <m>P</m> to its tangent point is <m>2</m> cm.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
@@ -887,12 +893,18 @@
                 <p>
                     The hypotenuse is <m>c = \sqrt{5^2+12^2} = \sqrt{169} = 13</m> cm.
                 </p>
-                <p>
-                    (a) <m>r = \dfrac{5+12-13}{2} = \dfrac{4}{2} = 2</m> cm.
-                </p>
-                <p>
-                    (b) <m>s = \dfrac{5+12+13}{2} = 15</m> cm, Area <m>= \tfrac{1}{2}\times 5 \times 12 = 30</m> cm<m>^2</m>, so <m>r = 30/15 = 2</m> cm. <m>\checkmark</m>
-                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>r = \dfrac{5+12-13}{2} = \dfrac{4}{2} = 2</m> cm.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>s = \dfrac{5+12+13}{2} = 15</m> cm, Area <m>= \tfrac{1}{2}\times 5 \times 12 = 30</m> cm<m>^2</m>, so <m>r = 30/15 = 2</m> cm. <m>\checkmark</m>
+                        </p>
+                    </li>
+                </ol>
             </solution>
         </exercise>
         <exercise>

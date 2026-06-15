@@ -862,6 +862,154 @@
         </exercise>
 
         <exercise>
+            <introduction>
+                <p>
+                    An arbitrary triangle <m>ABC</m> is drawn below. We have created three new triangles <m>\Delta APB</m>, <m>\Delta BQC</m>, <m>\Delta CRA</m>, which are all similar to each other.
+                </p>
+                <figure xml:id="triangle-with-triangles">
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.8]
+                                \tkzDefPoints{0/0/A, 4/2/B, 5.5/-3/C}
+                                \tkzFindSlopeAngle(A,B)\tkzGetAngle{AngAB}
+                                \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
+                                \begin{scope}[rotate=\AngAB]
+                                    \tkzDefShiftPoint[A](30:3.8){P}
+                                \end{scope}
+                                \tkzDefPointBy[rotation with nodes=center O from B to C](P) \tkzGetPoint{Q}
+                                \tkzDefPointBy[rotation with nodes=center O from B to A](P) \tkzGetPoint{R}
+
+                                \tkzDefTriangleCenter[circum](P,Q,R) \tkzGetPoint{O'} % This is the same as O
+
+
+                                \tkzDrawSegments(A,P P,B B,Q Q,C C,R R,A)
+                                \tkzFillAngles[size=0.6, color=red!20, opacity=0.5](B,A,P C,B,Q A,C,R)
+                                \tkzMarkAngles[size=0.6, mark=|](B,A,P C,B,Q A,C,R)
+
+                                \tkzFillAngles[size=0.6, color=blue!20, opacity=0.5](P,B,A Q,C,B R,A,C)
+                                \tkzMarkAngles[size=0.6, mark=||](P,B,A Q,C,B R,A,C)
+
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawPoints(A,B,C,P,Q,R)
+                                \tkzLabelPoints[above](P)
+                                \tkzLabelPoints[above right](B)
+                                \tkzLabelPoints[right](Q)
+                                \tkzLabelPoints[below right](C)
+                                \tkzLabelPoints[below left](R)
+                                \tkzLabelPoints[left](A)
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                        Find the circumcenter of <m>\Delta ABC</m>, and mark it as <m>O</m>.
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        <figure xml:id="triangle-with-triangles-soln1">
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.8]
+                                \tkzDefPoints{0/0/A, 4/2/B, 5.5/-3/C}
+                                \tkzFindSlopeAngle(A,B)\tkzGetAngle{AngAB}
+                                \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
+                                \begin{scope}[rotate=\AngAB]
+                                    \tkzDefShiftPoint[A](30:3.8){P}
+                                \end{scope}
+                                \tkzDefPointBy[rotation with nodes=center O from B to C](P) \tkzGetPoint{Q}
+                                \tkzDefPointBy[rotation with nodes=center O from B to A](P) \tkzGetPoint{R}
+
+                                \tkzDefTriangleCenter[circum](P,Q,R) \tkzGetPoint{O'} % This is the same as O
+
+
+                                \tkzDrawSegments(A,P P,B B,Q Q,C C,R R,A)
+                                \tkzFillAngles[size=0.6, color=red!20, opacity=0.5](B,A,P C,B,Q A,C,R)
+                                \tkzMarkAngles[size=0.6, mark=|](B,A,P C,B,Q A,C,R)
+
+                                \tkzFillAngles[size=0.6, color=blue!20, opacity=0.5](P,B,A Q,C,B R,A,C)
+                                \tkzMarkAngles[size=0.6, mark=||](P,B,A Q,C,B R,A,C)
+
+                                \tkzDrawCircle(O,A)
+
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawPoints(A,B,C,P,Q,R,O)
+                                \tkzLabelPoints[above](P)
+                                \tkzLabelPoints[above right](B)
+                                \tkzLabelPoints[right](Q)
+                                \tkzLabelPoints[below right](C, O)
+                                \tkzLabelPoints[below left](R)
+                                \tkzLabelPoints[left](A)
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Find the circumcenter of <m>\Delta PQR</m>. What do you notice?
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        The circumcenter of <m>\Delta PQR</m> is the same point <m>O</m> as the circumcenter of <m>\Delta ABC</m>.
+                        <figure xml:id="triangle-with-triangles-soln2">
+                            <image>
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8]
+                                        \tkzDefPoints{0/0/A, 4/2/B, 5.5/-3/C}
+                                        \tkzFindSlopeAngle(A,B)\tkzGetAngle{AngAB}
+                                        \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
+                                        \begin{scope}[rotate=\AngAB]
+                                            \tkzDefShiftPoint[A](30:3.8){P}
+                                        \end{scope}
+                                        \tkzDefPointBy[rotation with nodes=center O from B to C](P) \tkzGetPoint{Q}
+                                        \tkzDefPointBy[rotation with nodes=center O from B to A](P) \tkzGetPoint{R}
+
+                                        \tkzDefTriangleCenter[circum](P,Q,R) \tkzGetPoint{O'} % This is the same as O
+
+
+                                        \tkzDrawSegments(A,P P,B B,Q Q,C C,R R,A)
+                                        \tkzFillAngles[size=0.6, color=red!20, opacity=0.5](B,A,P C,B,Q A,C,R)
+                                        \tkzMarkAngles[size=0.6, mark=|](B,A,P C,B,Q A,C,R)
+
+                                        \tkzFillAngles[size=0.6, color=blue!20, opacity=0.5](P,B,A Q,C,B R,A,C)
+                                        \tkzMarkAngles[size=0.6, mark=||](P,B,A Q,C,B R,A,C)
+
+                                        \tkzDrawCircle(O,A)
+                                        \tkzDrawCircle(O',P)
+
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawPoints(A,B,C,P,Q,R,O)
+                                        \tkzLabelPoints[above](P)
+                                        \tkzLabelPoints[above right](B)
+                                        \tkzLabelPoints[right](Q)
+                                        \tkzLabelPoints[below right](C)
+                                        \tkzLabelPoints[below left](R)
+                                        \tkzLabelPoints[left](A)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Explain why this happens.
+                    </p>
+                </statement>
+            </task>
+        </exercise>
+
+        <exercise>
             <statement>
                 <p>
                     An equilateral triangle has side length <m>12</m> cm.
