@@ -44,29 +44,29 @@
 
     <!-- [LP] Add guidance on activity -->
 
-    <!-- <axiom component="lesson-plan">
-            <title>Problem-Solving and Discovery</title>
-            <dl>
-                <li>
-                    <title>Suggested Time</title>
-                    <p>
-                        XX minutes
-                    </p>
-                </li>
-                <li>
-                    <title>Objective</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-                <li>
-                    <title>Teacher's Role</title>
-                    <p>
-                        XXX
-                    </p>
-                </li>
-            </dl>
-        </axiom> -->
+    <axiom component="lesson-plan" xml:id="lesson-plan-locker-discovery">
+        <title>Problem-Solving and Discovery: Absolute and Relative Error</title>
+        <dl>
+            <li>
+                <title>Suggested Time</title>
+                <p>
+                    40 minutes
+                </p>
+            </li>
+            <li>
+                <title>Objective</title>
+                <p>
+                    Students will discover how to calculate absolute differences between measured values and a known true value, and express these differences as a fraction of the true value.
+                </p>
+            </li>
+            <li>
+                <title>Teacher's Role</title>
+                <p>
+                    Ensure every group has access to a standard 15 cm ruler. Let students run the three trials independently without interfering. When they discover that their results vary, introduce Mr. Mbasu's 90 cm measurement as the official benchmark (true value) to anchor the subtraction and division steps.
+                </p>
+            </li>
+        </dl>
+    </axiom>
 
     <activity>
         <p>
@@ -76,6 +76,76 @@
             <term>Work in Groups to:</term>
             Clear the surface of one student's locker. Use a <m>15</m> cm ruler to measure the total length of the locker and record the observation in the table below.
         </p>
+
+        <figure xml:id="fig-locker-error-analysis">
+            <caption>Visualizing measurement variations and errors on a school locker surface</caption>
+            <image xml:id="img-locker-error-analysis">
+                <description>
+                    A technical 2D diagram illustrating a locker surface being measured in two different ways. 
+                    The top section shows three separate student attempts with a 15 cm ruler: Attempt 1 is slightly longer than the surface, Attempt 2 perfectly aligns with the edge, and Attempt 3 is slightly short. 
+                    The bottom section shows Mr. Mbasu's 90 cm rule spanning the exact surface length as the true value benchmark.
+                </description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=0.12, every node/.style={font=\sffamily\small}]
+                        % --- STYLING DEFINTIONS ---
+                        \tikzset{
+                            locker/.style={fill=gray!10, draw=gray!60!black, line width=1.5pt, rounded corners=1pt},
+                            ruler15/.style={fill=yellow!40, draw=yellow!70!black, thin},
+                            ruler90/.style={fill=orange!30, draw=orange!70!black, thin},
+                            errorLine/.style={thick, dashed, red}
+                        }
+
+                        
+                        % True baseline boundaries (Locker is exactly 90 cm wide)
+                        \draw[gray!40, dashed] (0, 35) -- (0, -15);
+                        \draw[gray!60, line width=1pt, dashed] (90, 35) -- (90, -15);
+                        \node[gray!80!black, scale=0.8, anchor=south] at (90, 35) {True Edge (90 cm)};
+
+                        
+                        % --- ATTEMPT 1: Overshot (e.g., due to gaps/slips, total 92 cm) ---
+                        \node[anchor=west] at (-35, 30) {\textbf{Attempt 1:}};
+                        \draw[locker] (0,28) rectangle (90,31);
+                        \foreach \x in {0,15,30,45,60,75} {
+                            \draw[ruler15] (\x,28.5) rectangle (\x+15,30.5);
+                        }
+                        \draw[ruler15] (75,28.5) rectangle (92,30.5); % Last one slips out to 92
+                        \node[scale=0.75] at (45, 29.5) {15 cm (Repeated)};
+                        \draw[errorLine, ->] (90,32) -- (92,32) node[right, red, scale=0.75] {+2 cm Error};
+
+                        % --- ATTEMPT 2: Exact Match (90 cm) ---
+                        \node[anchor=west] at (-35, 17) {\textbf{Attempt 2:}};
+                        \draw[locker] (0,15) rectangle (90,18);
+                        \foreach \x in {0,15,30,45,60,75} {
+                            \draw[ruler15] (\x,15.5) rectangle (\x+15,17.5);
+                        }
+                        \node[scale=0.75, text=green!50!black] at (45, 13.5) {Perfect alignment = True Value};
+
+                        % --- ATTEMPT 3: Undershot (e.g., due to overlaps, total 87 cm) ---
+                        \node[anchor=west] at (-35, 4) {\textbf{Attempt 3:}};
+                        \draw[locker] (0,2) rectangle (90,5);
+                        \foreach \x in {0,14.5,29,43.5,58,72.5} { % Cumulative overlap drift
+                            \draw[ruler15] (\x,2.5) rectangle (\x+14.5,4.5);
+                        }
+                        \draw[errorLine, ->] (87,6) -- (90,6);
+                        \node[left, red, scale=0.75] at (86, 6) {-3 cm Error};
+                        
+                        \node[anchor=west, text=orange!80!black] at (-35, -10) {\textbf{Mr. Mbasu's Tool:}};
+                        \draw[locker] (0,-12) rectangle (90,-9);
+                        
+                        % One long solid 90 cm rule matches locker exactly
+                        \draw[ruler90] (0,-11.5) rectangle (90,-9.5);
+                        \node[scale=0.85, font=\bfseries] at (45, -10.5) {90 cm Ruler (Single Placement)};
+                        
+                        % Major ticks on the 90cm ruler
+                        \foreach \t in {0,15,30,45,60,75,90} {
+                            \draw (\t,-11.5) -- (\t,-10.7);
+                            \node[scale=0.6, below] at (\t,-11.5) {\t};
+                        }
+
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
         
         <tabular left="medium" right="medium" top="medium" bottom="medium">
             <row header="yes">
@@ -151,35 +221,45 @@
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
-    <!-- <axiom component="lesson-plan">
-        <title>Structured Instruction</title>
+    <axiom component="lesson-plan" xml:id="lesson-plan-locker-structured-instruction">
+        <title>Structured Instruction: Formalizing Error Calculations</title>
         <p>
             <dl>
-            <li>
-                <title>Suggested Time</title>
-                <p>
-                    XX minutes
-                </p>
-            </li>
-            <li>
-                <title>Objective</title>
-                <p>
-                    To formalize the concepts and properties learners discovered in the anchor task.
-                </p>
-            </li>
+                <li>
+                    <title>Suggested Time</title>
+                    <p>
+                        15 minutes
+                    </p>
+                </li>
+                <li>
+                    <title>Objective</title>
+                    <p>
+                        To formalize the definitions and formulas for Absolute Error, Relative Error, and Percentage Error using the locker data.
+                    </p>
+                </li>
             </dl>
         </p>
         <paragraphs>
             <title>Key Takeaways &amp; Teacher Connection</title>
-            <ol>
+            <ol marker="(a)">
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> XXXX
+                        <alert>Connecting to Learner Work:</alert> Use the differences calculated in questions (b), (c), and (d) to define <alert>Absolute Error</alert> as <m>|\text{Measured Value} - \text{True Value}|</m>. Point out that Mr. Mbasu's <m>90</m> cm measurement is the true value.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Formalizing Relative Error:</alert> Connect questions (e) and (f) to the concept of <alert>Relative Error</alert>. Explain that dividing the absolute error by the true value shows the size of the error relative to the object being measured.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <alert>Formalizing Percentage Error:</alert> Use question (g) to define <alert>Percentage Error</alert> by multiplying the relative error by <m>100\%</m>. Explain that a larger percentage means a less accurate measurement process.
                     </p>
                 </li>
             </ol>
         </paragraphs>
-    </axiom> -->
+    </axiom>
 
     <insight>
         <p>
@@ -473,41 +553,37 @@
 
     <!-- [LP] Add information on how to differentiate  -->
 
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan" xml:id="lesson-plan-locker-differentiation">
         <title>Differentiation</title>
 
         <table>
-            <title>Differentiation</title>
-            <tabular halign="left">
+            <title>Differentiation Strategies for Error Analysis Activity</title>
+            <tabular halign="left" top="medium" bottom="medium" left="medium" right="medium">
                 <row header="yes" bottom="minor">
                     <cell>Learner Group</cell>
                     <cell>Strategy &amp; Learning Experience</cell>
-                    <cell></cell>
+                </row>
+                <row bottom="minor">
+                    <cell><alert>Struggling Learners (Support)</alert></cell>
+                    <cell>
+                        Provide a structured worksheet that separates the subtraction step (Absolute Error) from the division step (Relative Error). Use color-coded blocks to show where to plug in the student measurement and Mr. Mbasu's <m>90</m> cm benchmark.
+                    </cell>
+                </row>
+                <row bottom="minor">
+                    <cell><alert>On-Level Learners (Core)</alert></cell>
+                    <cell>
+                        The core lesson activities as described above, calculating the differences, executing the divisions, converting the results into percentages, and interpreting which trial had the greatest error.
+                    </cell>
                 </row>
                 <row>
-                    <cell>Struggling Learners (Support)</cell>
+                    <cell><alert>Advanced Learners (Challenge)</alert></cell>
                     <cell>
-                        XXXX
+                        Ask them to determine what the maximum allowable absolute error would be if a student wanted to keep their total percentage error strictly under <m>1\%</m> for this specific locker length.
                     </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>On-Level Learners (Core)</cell>
-                    <cell>
-                        <line>The core lesson activities as described above.</line>
-                    </cell>
-                    <cell></cell>
-                </row>
-                <row>
-                    <cell>Advanced Learners (Challenge)</cell>
-                    <cell>
-                        XXXX
-                    </cell>
-                    <cell></cell>
                 </row>
             </tabular>
         </table>
-    </axiom> -->
+    </axiom>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
 
