@@ -310,14 +310,11 @@
                             
                             % 4. Dashed boundary line
                             \draw[dashed, thick, black] (-1,-5) -- (3.5,4);
-                            
-                            % 5. Intercept point markers
-                            \fill[black] (0,-3) circle (2.5pt);
-                            \fill[black] (1.5,0) circle (2.5pt);
+                        
                             
                             % 6. White-backed coordinate labels clear of grid lines
                             \node at (0,-3) [below right=2pt, font=\small, fill=white, inner sep=1pt] {$(0,-3)$};
-                            \node at (1.5,0) [above right=4pt, font=\small, fill=white, inner sep=1pt] {$(1.5,0)$};
+                            \node at (1.6,0) [above right=4pt, font=\small, fill=white, inner sep=1pt] {$(1.5,0)$};
                             
                             % 7. Ticks and grid numbering
                             \foreach \x in {-1, 1, 2, 3, 4} {
@@ -327,6 +324,10 @@
                                 \draw (0.1, \y) -- (-0.1, \y) node[left=3pt, font=\small] {$\y$};
                             }
                             \node at (-0.4,-0.4) [font=\small] {0};
+
+                            % 5. Intercept point markers
+                            \draw[fill=white] (0,-3) circle (2.5pt);
+                            \draw[fill=white] (1.5,0) circle (2.5pt);
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -540,7 +541,7 @@
                 </p>
                 <p>
                     <md>
-                        <mrow>x + y \le 5, \amp x \ge 0, \amp y \ge 0</mrow>
+                        <mrow>x + y \le 5,\quad x \ge 0,\quad y \ge 0</mrow>
                     </md>
                 </p>
             </solution>
@@ -666,7 +667,7 @@
                 </p>
                 <p>
                     <md>
-                        <mrow>x + 2y \le 10, \amp x \ge 0, \amp y \ge 0</mrow>
+                        <mrow>x + 2y \le 10, \quad x \ge 0, \quad y \ge 0</mrow>
                     </md>
                 </p>
             </solution>
