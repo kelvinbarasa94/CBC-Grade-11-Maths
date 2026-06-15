@@ -1221,6 +1221,141 @@
             </solution>
         </exercise>
 
+        <exercise xml:id="ex-transverse-construction-why">
+            <statement>
+                <p>
+                    This exercise explains <em>why</em> the construction in the Key Ideas box always produces a transverse common tangent. Recall the construction for two circles with centres <m>A</m> (radius <m>r</m>) and <m>B</m> (radius <m>R</m>):
+                </p>
+                <ul>
+                    <li><p>the <term>connecting circle</term> has <m>AB</m> as a diameter (centre <m>I</m>, the midpoint of <m>AB</m>);</p></li>
+                    <li><p>the <term>auxiliary circle</term> has centre <m>B</m> and radius <m>R + r</m>;</p></li>
+                    <li><p><m>Q</m> is a point where these two circles meet;</p></li>
+                    <li><p><m>T_1'</m> is the point where line <m>QB</m> meets circle <m>B</m> between <m>Q</m> and <m>B</m>, and the tangent line is drawn through <m>T_1'</m> at right angles to the radius <m>BT_1'</m>.</p></li>
+                </ul>
+                <figure xml:id="fig-transverse-why">
+                    <caption>
+                        The points behind the construction. <m>Q</m> lies on the connecting circle (orange, on diameter <m>AB</m>) and on the auxiliary circle (light red, radius <m>R+r</m>); the tangent is drawn at <m>T_1'</m>.
+                    </caption>
+                    <image width="80%">
+                        <shortdescription>
+                            Two circles centred at A and B. A dashed connecting circle on diameter AB and a dashed auxiliary circle of radius R plus r meet at Q, where angle AQB is a right angle. The line QB meets circle B at T-one-prime, where a line is drawn tangent to circle B; this same line is tangent to circle A at T-one and crosses AB at O-prime between the two circles.
+                        </shortdescription>
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.55]
+                            %% --- SET ---
+                            \pgfmathsetmacro{\r}{2}%
+                            \pgfmathsetmacro{\R}{4}%
+                            \pgfmathsetmacro{\rt}{\R+\r}%
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(9,0){B}
+                            %% --- CALCULATE ---
+                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
+                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
+                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
+                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+                            \tkzInterCC(I,B)(B,c) \tkzGetPoints{Q}{Q'}
+                            \tkzInterLC[near](Q,B)(B,b) \tkzGetFirstPoint{T1p}
+                            \tkzDefLine[tangent at=T1p](B) \tkzGetPoint{h1}
+                            \tkzDefPointBy[projection=onto h1--T1p](A) \tkzGetPoint{T1}
+                            \tkzInterLL(T1,T1p)(A,B) \tkzGetPoint{Op}
+                            %% --- DRAW ---
+                            \tkzDrawCircle[blue, thick](A,a)
+                            \tkzDrawCircle[red, thick](B,b)
+                            \tkzDrawCircle[red!40, dashed](B,c)
+                            \tkzDrawCircle[orange, dashed](I,B)
+                            \tkzDrawLine[add=0.1 and 0.3](A,B)
+                            \tkzDrawSegments(A,Q B,Q)
+                            \tkzDrawLine[add=0.4 and 0.6, thick](T1,T1p)
+                            \tkzDrawSegment[blue](A,T1)
+                            \tkzDrawPoints(A,B,I,Q,T1p,T1,Op)
+                            %% --- MARK ---
+                            \tkzMarkRightAngle[size=0.4](A,Q,B)
+                            \tkzMarkRightAngle[size=0.3](B,T1p,T1)
+                            \tkzMarkRightAngle[size=0.3](T1p,T1,A)
+                            %% --- LABEL ---
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[below right](B){$B$}
+                            \tkzLabelPoint[below left](I){$I$}
+                            \tkzLabelPoint[above](Q){$Q$}
+                            \tkzLabelPoint[below right](T1p){$T_1'$}
+                            \tkzLabelPoint[above left](T1){$T_1$}
+                            \tkzLabelPoint[below](Op){$O'$}
+                            \tkzLabelSegment[above left, pos=0.5](Q,T1p){$r$}
+                            \tkzLabelSegment[above right, pos=0.5](T1p,B){$R$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Explain why <m>\angle AQB = 90^\circ</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Write down the length <m>BQ</m>, and hence show that <m>QT_1' = r</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The tangent line is perpendicular to the radius <m>BT_1'</m>. Explain why this tangent line is <em>parallel</em> to <m>AQ</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Using parts (b) and (c), show that the perpendicular distance from <m>A</m> to the tangent line is exactly <m>r</m>. Why does this prove that the line is tangent to circle <m>A</m>?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Explain why <m>A</m> and <m>B</m> lie on <em>opposite</em> sides of the tangent line, so that it is a <em>transverse</em> (and not a direct) common tangent.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The second meeting point <m>Q'</m> of the connecting and auxiliary circles gives the second transverse tangent in exactly the same way. Explain briefly why the two tangents are reflections of each other in the line <m>AB</m>, and hence why they meet at a single point <m>O'</m> on <m>AB</m>.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <m>Q</m> lies on the connecting circle, which has <m>AB</m> as a diameter. An angle subtended by a diameter at a point on the circle is a right angle (the angle in a semicircle), so <m>\angle AQB = 90^\circ</m>. In particular, <m>AQ \perp QB</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>Q</m> lies on the auxiliary circle, centred at <m>B</m> with radius <m>R + r</m>, so <m>BQ = R + r</m>. The point <m>T_1'</m> lies on circle <m>B</m>, so <m>BT_1' = R</m>, and it lies on segment <m>BQ</m>. Therefore
+                            <me>QT_1' = BQ - BT_1' = (R + r) - R = r.</me>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The tangent line is perpendicular to <m>BT_1'</m>. Since <m>T_1'</m> lies on line <m>QB</m>, the radius <m>BT_1'</m> lies along <m>QB</m>, so the tangent line is perpendicular to <m>QB</m>. From part (a), <m>AQ</m> is also perpendicular to <m>QB</m>. Two lines that are perpendicular to the same line are parallel, so the tangent line is parallel to <m>AQ</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The tangent line and <m>AQ</m> are parallel, and both are perpendicular to <m>QB</m>. The perpendicular distance between them is therefore the distance measured along <m>QB</m> from <m>Q</m> to <m>T_1'</m>, which is <m>QT_1' = r</m> by part (b). As <m>A</m> lies on the line <m>AQ</m>, the perpendicular distance from <m>A</m> to the tangent line is exactly <m>r</m>. A straight line whose distance from the centre of a circle equals that circle's radius touches the circle at exactly one point, so the line is tangent to circle <m>A</m> (radius <m>r</m>). It is of course tangent to circle <m>B</m> by construction, so it is a common tangent.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The point <m>T_1'</m> lies <em>between</em> <m>Q</m> and <m>B</m> on segment <m>QB</m>. Because <m>AQ \perp QB</m> at <m>Q</m>, the centre <m>A</m> is level with <m>Q</m> and so lies on the same side of the tangent as <m>Q</m>; the centre <m>B</m> lies beyond <m>T_1'</m>, on the other side. The two circles are therefore on opposite sides of the line, which is exactly what makes it a <em>transverse</em> common tangent rather than a direct one.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The whole construction is symmetric about the line <m>AB</m>: the points <m>Q</m> and <m>Q'</m> are the two intersections of the connecting and auxiliary circles, and these are mirror images of each other in <m>AB</m>. Reflecting the first tangent in <m>AB</m> therefore produces the second tangent, and two lines that are mirror images in <m>AB</m> must meet on the mirror line itself — so both tangents pass through a single point <m>O'</m> on <m>AB</m>. (Comparing the similar right triangles <m>AT_1O'</m> and <m>BT_1'O'</m> shows further that <m>O'</m> divides <m>AB</m> in the ratio <m>AO' : O'B = r : R</m>, agreeing with the Key Ideas box.)
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
         <exercise xml:id="ex-transverse-tangent-length-proof">
             <statement>
                 <p>

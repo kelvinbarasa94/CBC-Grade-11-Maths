@@ -815,7 +815,43 @@
                 <p>
                     In a basketball game, the three-point arc is modelled as a circle. The touchline (by-line) runs tangent to the arc at the corner, where Wanjiku is standing. She can pass directly to Amina, who is standing on the arc, or relay to Baraka (also on the arc), who then passes to Amina. Wanjiku's direct pass to Amina makes an angle of <m>35°</m> with the touchline.
                 </p>
-                <!-- TODO: tkz-euclide diagram — semicircle (3-point arc), horizontal tangent at corner (Wanjiku), chord from corner to Amina at 35° to tangent, Baraka at another point on the arc -->
+                <figure xml:id="fig-basketball">
+                    <caption>The three-point arc with the touchline tangent at the corner <m>W</m> (Wanjiku). The pass <m>W \to A</m> (Amina) makes <m>35^\circ</m> with the touchline; Baraka stands at <m>B</m> on the arc.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.5]
+                                %% --- SET ---
+                                \pgfmathsetmacro{\R}{5}
+                                \tkzDefPoint(0,0){W}
+                                \tkzDefPoint(0,\R){O}
+                                \tkzDefPoint(-\R,0){Lt}
+                                \tkzDefPoint(\R,0){Rt}
+                                \tkzDefPoint(8,0){Xref}
+                                %% --- CALCULATE ---
+                                \tkzDefPointBy[rotation=center W angle 35](Xref)\tkzGetPoint{Pdir}
+                                \tkzInterLC[near](W,Pdir)(O,W)\tkzGetSecondPoint{A}
+                                \tkzDefPointBy[rotation=center O angle -130](W)\tkzGetPoint{B}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O,W)
+                                \tkzDrawLine[add=0.3 and 0.3, thick, orange!70!black](Lt,Rt)
+                                \tkzDrawSegment[thick, purple!60!black](W,A)
+                                \tkzDrawSegments(B,W B,A)
+                                \tkzDrawPoints[size=3pt](W,A,B,O)
+                                %% --- MARK ---
+                                \tkzMarkAngle[size=1.1](Rt,W,A)
+                                \tkzFillAngle[opacity=0.4, color=teal!50, size=1.1](Rt,W,A)
+                                \tkzFillAngle[opacity=0.4, color=orange!60, size=0.8](W,B,A)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below right](W){$W$}
+                                \tkzLabelPoint[right](A){$A$}
+                                \tkzLabelPoint[above left](B){$B$}
+                                \tkzLabelPoint[above right](O){$O$}
+                                \tkzLabelAngle[pos=1.6](Rt,W,A){$35^\circ$}
+                                \tkzLabelSegment[below, pos=0.15](Lt,Rt){touchline}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -861,7 +897,42 @@
                 <p>
                     A town at point <m>P</m> must be connected by road to a town at <m>T</m>, which is 56 km away in a straight line. A circular lake of radius 9 km lies in the way: its centre <m>O</m> lies on the direct road, 41 km from <m>P</m> and 15 km from <m>T</m>. The shortest road must be tangent to the lake and follow the lake shore between the two tangent points.
                 </p>
-                <!-- TODO: tkz-euclide diagram — external points P (left) and T (right), circle (r = 9) between them centred on the line PT, tangent lines from P and T touching the circle, arc between the two tangent points highlighted -->
+                <figure xml:id="fig-lake-road">
+                    <caption>The shortest road from <m>P</m> to <m>T</m> runs along the tangents to the lake and the arc between the two tangent points (highlighted). Each tangent meets the radius at a right angle.</caption>
+                    <image width="80%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.13]
+                                %% --- SET ---
+                                \pgfmathsetmacro{\rr}{9}
+                                \tkzDefPoint(0,0){O}
+                                \tkzDefPoint(-41,0){P}
+                                \tkzDefPoint(15,0){T}
+                                \pgfmathsetmacro{\angP}{acos(\rr/41)}
+                                \pgfmathsetmacro{\angT}{acos(\rr/15)}
+                                \tkzDefShiftPoint[O](-\rr,0){CtoP}
+                                \tkzDefShiftPoint[O](\rr,0){CtoT}
+                                %% --- CALCULATE (tangent points by rotation: upper side) ---
+                                \tkzDefPointBy[rotation=center O angle -\angP](CtoP)\tkzGetPoint{HP}
+                                \tkzDefPointBy[rotation=center O angle \angT](CtoT)\tkzGetPoint{HT}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O,CtoT)
+                                \tkzDrawSegments[thick](P,HP T,HT)
+                                \tkzDrawSegments[densely dashed, gray](O,HP O,HT)
+                                \tkzDrawSegment[gray](P,T)
+                                \tkzDrawArc[thick, red](O,HT)(HP)
+                                \tkzDrawPoints[size=2pt](O,P,T,HP,HT)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=2](O,HP,P)
+                                \tkzMarkRightAngle[size=2](O,HT,T)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below](P){$P$}
+                                \tkzLabelPoint[below](O){$O$}
+                                \tkzLabelPoint[below right](T){$T$}
+                                \tkzLabelSegment[left, pos=0.5](O,HP){$9$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -930,7 +1001,38 @@
                 <p>
                     Model the Earth as a sphere (in cross-section, a circle) with radius <m>R = 6\,400</m> km. Your line of sight to the horizon is a tangent to the Earth at the horizon point. Suppose you are standing on the summit of Mount Kenya, at height <m>h = 5.2</m> km above the Earth's surface.
                 </p>
-                <!-- TODO: tkz-euclide diagram — large circle (Earth), observer P above surface at height h, tangent from P touching circle at horizon H, triangle OPH labelled -->
+                <figure xml:id="fig-mount-kenya">
+                    <caption>The observer at <m>P</m> stands a height <m>h</m> above the surface point <m>S</m>. The line of sight to the horizon <m>H</m> is tangent to the Earth, so <m>\angle OHP = 90^\circ</m>. (Not to scale: <m>h</m> is exaggerated.)</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.6]
+                                %% --- SET ---
+                                \pgfmathsetmacro{\Rd}{6}
+                                \pgfmathsetmacro{\hd}{2.2}
+                                \tkzDefPoint(0,0){O}
+                                \tkzDefPoint(0,\Rd){S}
+                                \tkzDefPoint(0,\Rd+\hd){P}
+                                \pgfmathsetmacro{\angH}{acos(\Rd/(\Rd+\hd))}
+                                %% --- CALCULATE (horizon point by rotation) ---
+                                \tkzDefPointBy[rotation=center O angle -\angH](S)\tkzGetPoint{H}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O,S)
+                                \tkzDrawSegments(O,P P,H O,H)
+                                \tkzDrawPoints[size=2.5pt](O,P,H,S)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=0.5](O,H,P)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](O){$O$}
+                                \tkzLabelPoint[above](P){$P$}
+                                \tkzLabelPoint[above right](H){$H$}
+                                \tkzLabelPoint[left](S){$S$}
+                                \tkzLabelSegment[pos=0.5, left](O,H){$R$}
+                                \tkzLabelSegment[pos=0.5, right](S,P){$h$}
+                                \tkzLabelSegment[pos=0.55, above right](P,H){line of sight}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -977,7 +1079,53 @@
                 <p>
                     On a boda boda motorcycle, the engine sprocket has radius <m>r = 3</m> cm and the rear-wheel sprocket has radius <m>R = 9</m> cm; their centres are <m>d = 48</m> cm apart. The chain follows the direct common tangents between the two sprockets.
                 </p>
-                <!-- TODO: tkz-euclide diagram — two circles (r = 3, R = 9) with chain lines tangent above and below; centres 48 cm apart; mark r, R, d, φ, and one straight run L -->
+                <figure xml:id="fig-boda-boda-chain">
+                    <caption>The chain follows the two direct common tangents between the sprockets. The right triangle <m>O_1 F O_2</m> (right-angled at <m>F</m>) has hypotenuse <m>d</m> and legs <m>R - r</m> and <m>L</m>.</caption>
+                    <image width="90%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.22]
+                                %% --- SET ---
+                                \pgfmathsetmacro{\Rr}{9}
+                                \pgfmathsetmacro{\rr}{3}
+                                \pgfmathsetmacro{\dd}{48}
+                                \pgfmathsetmacro{\ang}{acos((\Rr-\rr)/\dd)}
+                                \tkzDefPoint(0,0){O1}
+                                \tkzDefPoint(\dd,0){O2}
+                                \tkzDefPoint(\Rr,0){B0}
+                                \tkzDefShiftPoint[O2](\rr,0){S0}
+                                %% --- CALCULATE ---
+                                \tkzDefPointBy[rotation=center O1 angle \ang](B0)\tkzGetPoint{P1u}
+                                \tkzDefPointBy[rotation=center O1 angle -\ang](B0)\tkzGetPoint{P1l}
+                                \tkzDefPointBy[rotation=center O2 angle \ang](S0)\tkzGetPoint{P2u}
+                                \tkzDefPointBy[rotation=center O2 angle -\ang](S0)\tkzGetPoint{P2l}
+                                \tkzDefPointBy[projection=onto O1--P1u](O2)\tkzGetPoint{F}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O1,B0)
+                                \tkzDrawCircle[thick](O2,S0)
+                                \tkzDrawSegment[thick, blue](P1u,P2u)
+                                \tkzDrawSegment[thick, blue](P1l,P2l)
+                                \tkzDrawSegment[gray](O1,O2)
+                                \tkzDrawSegment[densely dashed, gray](O1,P1u)
+                                \tkzDrawSegment[densely dashed, gray](O2,P2u)
+                                \tkzDrawSegment[densely dashed, gray](O2,F)
+                                \tkzDrawPoints[size=2pt](O1,O2,P1u,P2u,P1l,P2l,F)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=1.6](O1,P1u,P2u)
+                                \tkzMarkRightAngle[size=1.6](O1,F,O2)
+                                \tkzFillAngle[opacity=0.5, color=red!40, size=7](F,O2,O1)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](O1){$O_1$}
+                                \tkzLabelPoint[below right](O2){$O_2$}
+                                \tkzLabelPoint[above left](F){$F$}
+                                \tkzLabelSegment[below, pos=0.5](O1,O2){$d$}
+                                \tkzLabelSegment[left, pos=0.3](O1,P1u){$R$}
+                                \tkzLabelSegment[right, pos=0.5](O2,P2u){$r$}
+                                \tkzLabelSegment[above, sloped, pos=0.5](P1u,P2u){$L$}
+                                \tkzLabelAngle[pos=9](F,O2,O1){$\varphi$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1023,7 +1171,53 @@
                 <p>
                     In a jua kali workshop in Gikomba, an old lathe is driven by a <em>crossed</em> belt so that the two shafts rotate in opposite directions. The pulleys have radii <m>r = 5</m> cm and <m>R = 10</m> cm, and their centres are <m>d = 30</m> cm apart. The crossed belt follows the transverse common tangents.
                 </p>
-                <!-- TODO: tkz-euclide diagram — two circles (r = 5, R = 10) with two crossed (X-shaped) belt lines between them; mark r, R, d, φ, and one straight section L -->
+                <figure xml:id="fig-jua-kali-belt">
+                    <caption>The crossed belt follows the two transverse common tangents, which cross at <m>E</m> between the pulleys (making the shafts turn in opposite directions). Here <m>\varphi = \arcsin\dfrac{R+r}{d}</m>.</caption>
+                    <image width="90%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.3]
+                                %% --- SET ---
+                                \pgfmathsetmacro{\Rr}{10}
+                                \pgfmathsetmacro{\rr}{5}
+                                \pgfmathsetmacro{\dd}{30}
+                                \pgfmathsetmacro{\ang}{acos((\Rr+\rr)/\dd)}
+                                \pgfmathsetmacro{\angu}{180+\ang}
+                                \pgfmathsetmacro{\angd}{180-\ang}
+                                \tkzDefPoint(0,0){O1}
+                                \tkzDefPoint(\dd,0){O2}
+                                \tkzDefPoint(\Rr,0){B0}
+                                \tkzDefShiftPoint[O2](\rr,0){S0}
+                                %% --- CALCULATE ---
+                                \tkzDefPointBy[rotation=center O1 angle \ang](B0)\tkzGetPoint{P1u}
+                                \tkzDefPointBy[rotation=center O1 angle -\ang](B0)\tkzGetPoint{P1l}
+                                \tkzDefPointBy[rotation=center O2 angle \angu](S0)\tkzGetPoint{P2u}
+                                \tkzDefPointBy[rotation=center O2 angle \angd](S0)\tkzGetPoint{P2l}
+                                \tkzInterLL(P1u,P2u)(P1l,P2l)\tkzGetPoint{E}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick](O1,B0)
+                                \tkzDrawCircle[thick](O2,S0)
+                                \tkzDrawSegment[thick, blue](P1u,P2u)
+                                \tkzDrawSegment[thick, blue](P1l,P2l)
+                                \tkzDrawSegment[gray](O1,O2)
+                                \tkzDrawSegment[densely dashed, gray](O1,P1u)
+                                \tkzDrawSegment[densely dashed, gray](O2,P2u)
+                                \tkzDrawPoints[size=2pt](O1,O2,P1u,P2u,P1l,P2l,E)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=1.2](O1,P1u,P2u)
+                                \tkzFillAngle[opacity=0.5, color=red!40, size=4](P1u,E,O1)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](O1){$O_1$}
+                                \tkzLabelPoint[below right](O2){$O_2$}
+                                \tkzLabelPoint[below right](E){$E$}
+                                \tkzLabelSegment[below, pos=0.4](O1,O2){$d$}
+                                \tkzLabelSegment[above left, pos=0.45](O1,P1u){$R$}
+                                \tkzLabelSegment[below right, pos=0.45](O2,P2u){$r$}
+                                \tkzLabelSegment[above left, pos=0.22](P1u,P2u){$L$}
+                                \tkzLabelAngle[pos=5](P1u,E,O1){$\varphi$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1075,7 +1269,44 @@
                 <p>
                     A fundi in Kibuye market, Kisumu, has a triangular offcut of mvule timber with sides 1.3 m, 1.4 m, and 1.5 m. He wants to cut the largest possible circular table top from it.
                 </p>
-                <!-- TODO: tkz-euclide diagram — 1.3–1.4–1.5 triangle with incircle drawn, incentre I marked, angle bisectors from each vertex shown -->
+                <figure xml:id="fig-round-table">
+                    <caption>The largest table top is the <em>incircle</em>, tangent to all three sides. Its centre <m>I</m> (the incentre) is where the three angle bisectors meet; <m>r</m> is the inradius.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=4]
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){A}
+                                \tkzDefPoint(1.4,0){B}
+                                \tkzDefPoint(1.5,0){cA}
+                                \tkzDefShiftPoint[B](1.3,0){cB}
+                                \tkzInterCC(A,cA)(B,cB)\tkzGetPoints{C}{Cx}
+                                %% --- CALCULATE ---
+                                \tkzDefTriangleCenter[in](A,B,C)\tkzGetPoint{I}
+                                \tkzDefPointBy[projection=onto A--B](I)\tkzGetPoint{Hc}
+                                \tkzInterLL(A,I)(B,C)\tkzGetPoint{Da}
+                                \tkzInterLL(B,I)(A,C)\tkzGetPoint{Db}
+                                \tkzInterLL(C,I)(A,B)\tkzGetPoint{Dc}
+                                %% --- DRAW ---
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawCircle[thick, teal](I,Hc)
+                                \tkzDrawSegments[densely dashed, gray](A,Da B,Db C,Dc)
+                                \tkzDrawSegment[teal](I,Hc)
+                                \tkzDrawPoints[size=1.5pt](A,B,C,I)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=0.12](I,Hc,A)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](A){$A$}
+                                \tkzLabelPoint[below right](B){$B$}
+                                \tkzLabelPoint[above](C){$C$}
+                                \tkzLabelPoint[above right](I){$I$}
+                                \tkzLabelSegment[below](A,B){$1.4$}
+                                \tkzLabelSegment[above right](B,C){$1.3$}
+                                \tkzLabelSegment[above left](A,C){$1.5$}
+                                \tkzLabelSegment[right, pos=0.5](I,Hc){$r$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1117,7 +1348,45 @@
                 <p>
                     A telecommunications company wants to place a single signal mast so that it is exactly the same distance from three market centres. The three markets form a triangle with sides 13 km, 14 km, and 15 km.
                 </p>
-                <!-- TODO: tkz-euclide diagram — 13–14–15 triangle with circumcircle drawn, circumcentre O marked, perpendicular bisectors of each side shown -->
+                <figure xml:id="fig-signal-mast">
+                    <caption>The mast sits at the <em>circumcentre</em> <m>O</m>, where the three perpendicular bisectors of the sides meet. Every vertex is the circumradius <m>R</m> away from <m>O</m>.</caption>
+                    <image width="60%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.4]
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){A}
+                                \tkzDefPoint(14,0){B}
+                                \tkzDefPoint(15,0){cA}
+                                \tkzDefShiftPoint[B](13,0){cB}
+                                \tkzInterCC(A,cA)(B,cB)\tkzGetPoints{C}{Cx}
+                                %% --- CALCULATE ---
+                                \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                \tkzDefMidPoint(A,B)\tkzGetPoint{MAB}
+                                \tkzDefMidPoint(B,C)\tkzGetPoint{MBC}
+                                \tkzDefMidPoint(C,A)\tkzGetPoint{MCA}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick, blue](O,A)
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawSegments[densely dashed, gray](O,MAB O,MBC O,MCA)
+                                \tkzDrawSegment[blue](O,A)
+                                \tkzDrawPoints[size=1.5pt](A,B,C,O,MAB,MBC,MCA)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=0.5](O,MAB,A)
+                                \tkzMarkRightAngle[size=0.5](O,MBC,B)
+                                \tkzMarkRightAngle[size=0.5](O,MCA,C)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](A){$A$}
+                                \tkzLabelPoint[below right](B){$B$}
+                                \tkzLabelPoint[above](C){$C$}
+                                \tkzLabelPoint[below right](O){$O$}
+                                \tkzLabelSegment[below](A,B){$14$}
+                                \tkzLabelSegment[above right](B,C){$13$}
+                                \tkzLabelSegment[above left](A,C){$15$}
+                                \tkzLabelSegment[pos=0.5, below right](O,A){$R$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1169,7 +1438,39 @@
                     </md>
                     where <m>R</m> is the circumradius and <m>r</m> is the inradius.
                 </p>
-                <!-- TODO: tkz-euclide diagram — 13–14–15 triangle with both incircle and circumcircle drawn on the same diagram, incentre I and circumcentre O both labelled, distance d between them indicated -->
+                <figure xml:id="fig-euler-bridge">
+                    <caption>The incircle (centre <m>I</m>) and circumcircle (centre <m>O</m>) of the 13–14–15 triangle. The two centres are surprisingly close: <m>d = IO</m> is given by Euler's formula.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.4]
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){A}
+                                \tkzDefPoint(14,0){B}
+                                \tkzDefPoint(15,0){cA}
+                                \tkzDefShiftPoint[B](13,0){cB}
+                                \tkzInterCC(A,cA)(B,cB)\tkzGetPoints{C}{Cx}
+                                %% --- CALCULATE ---
+                                \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                \tkzDefTriangleCenter[in](A,B,C)\tkzGetPoint{I}
+                                \tkzDefPointBy[projection=onto A--B](I)\tkzGetPoint{Hc}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[thick, blue](O,A)
+                                \tkzDrawCircle[thick, teal](I,Hc)
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawSegment[very thick, red](I,O)
+                                \tkzDrawPoints[size=2.5pt](A,B,C)
+                                \tkzDrawPoints[size=2.5pt, red](O,I)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](A){$A$}
+                                \tkzLabelPoint[below right](B){$B$}
+                                \tkzLabelPoint[above](C){$C$}
+                                \tkzLabelPoint[above right, xshift=3pt](O){$O$}
+                                \tkzLabelPoint[below left, xshift=-3pt](I){$I$}
+                                \tkzLabelSegment[pos=0.5, above left](I,O){$d$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1303,9 +1604,26 @@
                             </figure>
                     </li>
                     <li>
-                        <!-- TODO: write proof that the direct tangents between circles i and i+1 pass through all higher circles in the tree -->
                         <p>
-                            Proof to be added.
+                            As noticed in part (a), the direct common tangents of two neighbouring circles seem to touch every circle further up the tree. To prove it, set up coordinates with the centres of all the circles on one vertical axis, and number the circles from the bottom so that circle <m>i</m> has radius <m>r_i = \dfrac{1}{2^{i}}</m> (circle <m>1</m> is the bottom circle, of diameter <m>1</m>). Since each circle touches the one above it, the distance between the centres of circles <m>i</m> and <m>i+1</m> is
+                            <me>r_i + r_{i+1} = \frac{1}{2^{i}} + \frac{1}{2^{i+1}} = \frac{3}{2^{i+1}}.</me>
+                        </p>
+                        <p>
+                            Placing the centre of circle <m>1</m> at height <m>y_1 = r_1 = \tfrac12</m> and adding these gaps gives
+                            <me>y_i = \frac12 + \sum_{k=1}^{i-1}\frac{3}{2^{k+1}} = 2 - \frac{3}{2^{i}}.</me>
+                            Consider the single point <m>V</m> at height <m>2</m> on the axis. The distance from <m>V</m> down to the centre <m>O_i</m> of circle <m>i</m> is
+                            <me>VO_i = 2 - y_i = \frac{3}{2^{i}} = 3\,r_i,</me>
+                            so for <em>every</em> circle in the tree the distance from <m>V</m> to its centre is exactly three times its radius.
+                        </p>
+                        <p>
+                            Draw the two lines through <m>V</m> that are tangent to circle <m>1</m>, and let <m>\alpha</m> be the angle each makes with the axis. From the right triangle formed by <m>V</m>, the centre <m>O_1</m> and the point of contact,
+                            <me>\sin\alpha = \frac{r_1}{VO_1} = \frac{1}{3}.</me>
+                            For any other circle <m>i</m>, the perpendicular distance from its centre to each of these lines is
+                            <me>VO_i\,\sin\alpha = 3r_i \cdot \frac13 = r_i,</me>
+                            which is exactly its radius. A line whose distance from the centre of a circle equals that circle's radius is tangent to the circle, so <em>both lines are tangent to every circle in the tree.</em>
+                        </p>
+                        <p>
+                            Finally, the two direct common tangents of circles <m>i</m> and <m>i+1</m> meet at the centre of the enlargement that maps one circle to the other. The enlargement centred at <m>V</m> with scale factor <m>\tfrac12</m> carries each circle exactly onto the next, so that centre is <m>V</m>. The two lines through <m>V</m> touching circles <m>i</m> and <m>i+1</m> are therefore precisely their direct common tangents — and we have just shown that these same two lines touch every other circle as well. Hence the direct common tangents between any two neighbouring circles are tangent to all the circles above them.
                         </p>
                     </li>
                     <li>
@@ -1363,7 +1681,66 @@
                         </p>
                     </li>
                 </ol>
-                <!-- TODO: tkz-euclide diagram — three equal circles (r = 4) arranged tangentially with small gap circle; and separately, three circles of radii 3, 4, 5 with their gap circle -->
+                <sidebyside widths="44% 44%" margins="auto">
+                    <figure xml:id="fig-sodas-equal">
+                        <caption>(a) Three equal circles (radius 4) each touching the other two; the small gap circle (teal) is tangent to all three.</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.45]
+                                    %% --- SET ---
+                                    \tkzDefPoint(0,0){A}
+                                    \tkzDefPoint(8,0){B}
+                                    \tkzDefPointBy[rotation=center A angle 60](B)\tkzGetPoint{C}
+                                    %% --- CALCULATE ---
+                                    \tkzDefMidPoint(A,B)\tkzGetPoint{MAB}
+                                    \tkzDefMidPoint(B,C)\tkzGetPoint{MBC}
+                                    \tkzDefMidPoint(C,A)\tkzGetPoint{MCA}
+                                    \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                    \pgfmathsetmacro{\kk}{sqrt(3)/2}
+                                    \tkzDefPointBy[homothety=center A ratio \kk](O)\tkzGetPoint{D}
+                                    %% --- DRAW ---
+                                    \tkzDrawCircles[thick](A,MAB B,MBC C,MCA)
+                                    \tkzDrawCircle[thick, teal](O,D)
+                                    \tkzDrawPoints[size=2pt](A,B,C,O)
+                                    %% --- LABEL ---
+                                    \tkzLabelPoint[left](A){$4$}
+                                    \tkzLabelPoint[right](B){$4$}
+                                    \tkzLabelPoint[above](C){$4$}
+                                    \tkzLabelPoint[below right](O){gap}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    <figure xml:id="fig-sodas-unequal">
+                        <caption>(b) Three mutually tangent circles of radii 3, 4, and 5. The gap circle sits in the central white region; its radius is found by Descartes' theorem.</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.5]
+                                    %% --- SET ---
+                                    \tkzDefPoint(0,0){A}
+                                    \tkzDefPoint(7,0){B}
+                                    \tkzDefPoint(8,0){cA}
+                                    \tkzDefShiftPoint[B](9,0){cB}
+                                    \tkzInterCC(A,cA)(B,cB)\tkzGetPoints{C}{Cx}
+                                    %% --- CALCULATE (radius points) ---
+                                    \tkzDefShiftPoint[A](3,0){rA}
+                                    \tkzDefShiftPoint[B](4,0){rB}
+                                    \tkzDefShiftPoint[C](5,0){rC}
+                                    %% --- DRAW ---
+                                    \tkzDrawCircle[thick](A,rA)
+                                    \tkzDrawCircle[thick](B,rB)
+                                    \tkzDrawCircle[thick](C,rC)
+                                    \tkzDrawPolygon[densely dashed, gray](A,B,C)
+                                    \tkzDrawPoints[size=2pt](A,B,C)
+                                    %% --- LABEL ---
+                                    \tkzLabelPoint[below](A){$r_1=3$}
+                                    \tkzLabelPoint[below right](B){$r_2=4$}
+                                    \tkzLabelPoint[above right](C){$r_3=5$}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </sidebyside>
             </statement>
             <solution>
                 <ol marker="(a)">
@@ -1408,7 +1785,47 @@
                 <p>
                     Draw a semicircle of radius 12 cm on a diameter <m>AC</m>. Mark <m>B</m> as the midpoint of <m>AC</m>, and draw a second semicircle of radius 6 cm on <m>AB</m>, inside the first semicircle. The crescent-shaped region between the two semicircles is called an <em>arbelos</em> (Greek for shoemaker's knife). Now inscribe a chain of circles in the crescent, each one tangent to both semicircles and to the previous circle in the chain — this is the <em>Pappus chain</em>, studied by Pappus of Alexandria in the 4th century CE.
                 </p>
-                <!-- TODO: tkz-euclide diagram — large semicircle (r = 12) on diameter AC, inner semicircle (r = 6) on AB (left half of AC), first 2–3 Pappus chain circles inscribed in the crescent; dashed vertical lines from each circle centre to AC indicating the height; circles numbered 1, 2, 3 -->
+                <figure xml:id="fig-pappus-chain">
+                    <caption>The arbelos — the crescent between the outer semicircle on <m>AC</m> and the inner semicircle on <m>AB</m> — with the first three circles of the Pappus chain. Each is tangent to both semicircles and to its neighbours; the dashed lines show each centre's height above <m>AC</m>. (Chain centres computed by circle inversion.)</caption>
+                    <image width="75%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.28]
+                                %% --- SET: arbelos ---
+                                \tkzDefPoint(0,0){A}
+                                \tkzDefPoint(24,0){C}
+                                \tkzDefPoint(12,0){B}
+                                \tkzDefPoint(6,0){Oin}
+                                %% --- chain circles (centres/radii computed by circle inversion) ---
+                                \tkzDefPoint(12,8){K1}
+                                \tkzDefPoint(6,8){K2}
+                                \tkzDefPoint(3.2727,6.5455){K3}
+                                \tkzDefShiftPoint[K1](4,0){k1r}
+                                \tkzDefShiftPoint[K2](2,0){k2r}
+                                \tkzDefShiftPoint[K3](1.0909,0){k3r}
+                                %% feet on AC for the height lines
+                                \tkzDefPointBy[projection=onto A--C](K1)\tkzGetPoint{F1}
+                                \tkzDefPointBy[projection=onto A--C](K2)\tkzGetPoint{F2}
+                                \tkzDefPointBy[projection=onto A--C](K3)\tkzGetPoint{F3}
+                                %% --- DRAW ---
+                                \tkzDrawArc[thick](B,C)(A)
+                                \tkzDrawArc[thick](Oin,B)(A)
+                                \tkzDrawSegment[thick](A,C)
+                                \tkzDrawCircle[thick, teal](K1,k1r)
+                                \tkzDrawCircle[thick, orange!80!black](K2,k2r)
+                                \tkzDrawCircle[thick, violet](K3,k3r)
+                                \tkzDrawSegments[densely dashed, gray](K1,F1 K2,F2 K3,F3)
+                                \tkzDrawPoints[size=1.5pt](A,B,C,K1,K2,K3)
+                                %% --- LABEL ---
+                                \tkzLabelPoint[below left](A){$A$}
+                                \tkzLabelPoint[below](B){$B$}
+                                \tkzLabelPoint[below right](C){$C$}
+                                \tkzLabelPoint[right](K1){$1$}
+                                \tkzLabelPoint[above right](K2){$2$}
+                                \tkzLabelPoint[above left](K3){$3$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
