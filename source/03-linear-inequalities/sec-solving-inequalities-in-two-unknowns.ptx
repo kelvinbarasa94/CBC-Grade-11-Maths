@@ -175,6 +175,18 @@
                     <p>
                         The vertices (corner points) of the feasible region are particularly important. They occur where boundary lines intersect and can often be found by solving pairs of boundary line equations simultaneously.
                     </p>
+                    <ul>
+                        <li>
+                            <p>
+                                Use an <term>open circle</term> if the vertex is not included in the solution (e.g. if at least one of the boundary lines leading to it is dashed).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Use a <term>closed circle</term> if the vertex is included in the solution (e.g. if all boundary lines leading to it are solid).
+                            </p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <p>
@@ -240,7 +252,7 @@
                     <latex-image>
                         \begin{tikzpicture}
                             % 1. Draw a clean, light grid
-                            \draw[gray!20, thin] (-1,-1) grid (6,6);
+                            \draw[gray!20, thin] (-1,-1) grid (7,7);
                             
                             % 2. Shade the feasible region first (Layering practice: shade beneath lines)
                             \fill[fill=blue!20, opacity=0.6] (0,0) -- (5,0) -- (0,5) -- cycle;
@@ -253,10 +265,10 @@
                             \draw[solid, thick, black] (-0.5, 5.5) -- (5.5, -0.5); 
                             
                             % 5. Draw tick marks and numerical labels cleanly
-                            \foreach \x in {1, 2, 3, 4, 5} {
+                            \foreach \x in {1, 2, 3, 4, 5,6} {
                                 \draw (\x, 0.1) -- (\x, -0.1) node[below=3pt, font=\small] {$\x$};
                             }
-                            \foreach \y in {1, 2, 3, 4, 5} {
+                            \foreach \y in {1, 2, 3, 4, 5,6} {
                                 \draw (0.1, \y) -- (-0.1, \y) node[left=3pt, font=\small] {$\y$};
                             }
                             
@@ -365,7 +377,7 @@
                             \node at (-0.4,-0.4) [font=\small] {0};
                             
                             % 6. Intersection Dot
-                            \fill[black] (2,0) circle (2.5pt);
+                            \draw[fill=white] (2,0) circle (2.5pt);
                             
                             % FIXED INTERSECTION LABEL: Shifted upward-right with a clear background 
                             % to erase any overlapping grid lines or axis lines automatically.
@@ -412,7 +424,7 @@
                     </li>
                     <li>
                         <p>
-                            If the bakery makes a profit of KSh <m>500</m> per batch of chapati and KSh <m>400</m> per batch of mandazi, what production combination maximizes profit?
+                            If the bakery makes a profit of KSh <m>500</m> per batch of chapati and KSh <m>400</m> per batch of mandazi, which vertex of the feasible region will give the maximum profit? What is the maximum profit?
                         </p>
                     </li>
                 </ol>
@@ -627,10 +639,10 @@
                 <p>
                     To find the exact vertex where the boundary lines meet, we solve the equations simultaneously:
                     <md>
-                        <mrow>x + 2y &amp; = 4 \quad \text{--- (Equation 1)}</mrow>
-                        <mrow>2x - y &amp; = 4 \quad \text{--- (Equation 2)}</mrow>
+                        <mrow number="yes" xml:id="boundary1"> x + 2y &amp; = 4</mrow>
+                        <mrow number="yes" xml:id="boundary2"> 2x - y &amp; = 4 </mrow>
                     </md>
-                    From Equation 2, we isolate <m>y</m>: <m>y = 2x - 4</m>. Substituting this into Equation 1 gives:
+                    From <xref ref="boundary2"/>, we isolate <m>y</m>: <m>y = 2x - 4</m>. Substituting this into <xref ref="boundary1"/> gives:
                     <md>
                         <mrow>x + 2(2x - 4) &amp; = 4</mrow>
                         <mrow>x + 4x - 8 &amp; = 4</mrow>
@@ -660,7 +672,7 @@
                                 \draw[solid, thick, black] (-0.5,-5) -- (5,6);    % 2x - y = 4
                                 
                                 % 5. Intersection vertex point marker
-                                \fill[black] (2.4,0.8) circle (2.5pt);
+                                \fill[white] (2.4,0.8) circle (2.5pt);
                                 \node at (2.4,0.8) [above right=6pt, font=\small, fill=white, inner sep=1.2pt] {$(2.4, 0.8)$};
                                 
                                 % 6. Clean tick loops spanning the full grid area
@@ -715,7 +727,7 @@
                         </li>
                         <li>
                             <p>
-                                If the workshop secures a clear profit of KSh <m>1,200</m> per bolt of kitenge and KSh <m>1,500</m> per bolt of kikoi, determine the optimal production combination to maximize weekly profit.
+                                If the workshop secures a clear profit of KSh <m>1,200</m> per bolt of kitenge and KSh <m>1,500</m> per bolt of kikoi, determine the vertex which maximizes weekly profit. What is the maximum profit?
                             </p>
                         </li>
                     </ol>
