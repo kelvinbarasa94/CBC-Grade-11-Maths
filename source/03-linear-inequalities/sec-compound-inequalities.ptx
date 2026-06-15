@@ -289,72 +289,79 @@
     </example>
 
     <example>
-        <statement>
+        <introduction>
             <p>
-                A matatu travelling from Nairobi to Nakuru takes <m>t</m> hours. Traffic regulations state that the trip must take a minimum of <m>2</m> hours (to prevent over-speeding) but strictly less than <m>4</m> hours. If the time taken is represented by the expression <m>t = \frac{x + 10}{30}</m>, write a compound inequality to represent this situation and solve for <m>x</m>.
+                A Matatu is travelling between Nairobi and Nakuru, which are <m>160</m> km apart. Traffic regulations state that the driver's speed must not exceed <m>80 \text{km/h}</m>. Additionally, passengers demand that a return trip takes less than 7 hours. You can assume the Nairobi to Nakuru trip takes the same time as the Nakuru to Nairobi trip.
             </p>
-        </statement>
-        <solution>
-            <p>
-                First we set up the continuous inequality using the given limits:
-            </p>
-            <p>
-                <md>
-                    <mrow>2 \lt t \lt 4</mrow>
-                </md>
-            </p>
-            <p>
-                Substituting the expression for <m>t</m>:
-            </p>
-            <p>
-                <md>
-                    <mrow>2 \lt \frac{x + 10}{30} \lt 4</mrow>
-                </md>
-            </p>
-            <p>
-                Then, we multiply all three parts by <m>30</m> to eliminate the denominator:
-            </p>
-            <p>
-                <md>
-                    <mrow>2 \times 30 \amp \lt x + 10 \lt 4 \times 30</mrow>
-                    <mrow>60 \amp \lt x + 10 \lt 120</mrow>
-                </md>
-            </p>
-            <p>
-                Now, we can have <m>2</m> separate inequalities:
-            </p>
-            <p>
-                <md>
-                    <mrow>60 \lt x + 10 \text{ and } x + 10 \lt 120</mrow>
-                </md>
-            </p>
-            <p>
-                So we solve the first inequality:
-            </p>
-            <p>
-                <md>
-                    <mrow>60 &amp;\lt x + 10</mrow>
-                    <mrow>50 &amp;\lt x</mrow>
-                </md>
-            </p>
-            <p>
-                then we solve the second inequality:
-            </p>
-            <p>
-                <md>
-                    <mrow>x + 10 &amp;\lt 120</mrow>
-                    <mrow>x &amp;\lt 110</mrow>
-                </md>
-            </p>
-             <p>
-                Then when we combine the two inequalities we get:
-            </p>
-            <p>
-                <md>
-                    <mrow>50 \lt x \lt 110</mrow>
-                </md>
-            </p>
-        </solution>
+        </introduction>
+        <task>
+            <statement>
+                <p>
+                    If <m>t</m> represents the duration of this Matatu's one-way trip, form a simplified compound inequality for <m>t</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The first condition states that the driver's speed must not exceed <m>80 \text{km/h}</m>. Using the formula <m>t = \frac{d}{s}</m>, we can write:
+                    <md>
+                        <mrow>t \amp \ge \frac{160}{80} </mrow>
+                        <mrow>t \amp \ge 2 </mrow>
+                    </md>
+                    Note that we use the symbol <m>\ge</m> because the speed must not exceed <m>80 \text{km/h}</m>, but could be equal to it.
+                </p>
+                <p>
+                    The second condition states that a return trip must take less than <m>7</m> hours. Since the return trip is twice the one-way trip, we can write:
+                    <md>
+                        <mrow>2t \amp \lt 7 </mrow>
+                        <mrow>t \amp \lt \frac{7}{2} </mrow>
+                    </md>
+                    Note that we use the symbol <m>\lt</m> because the return trip must take strictly less than <m>7</m> hours.
+                </p>
+                <p>
+                    Combing the two conditions, we have:
+                    <md>
+                        <mrow number="yes" xml:id="matatu-time"> 2 \le t \lt \frac{7}{2} </mrow>
+                    </md>
+                    In words, the Matatu's one-way trip must take at least <m>2</m> hours but strictly less than <m>3.5</m> hours.
+                </p>
+            </solution>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    Form a compound inequality for the driver's average speed, <m>s</m>, and solve it.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Using the formula <m>t = \frac{d}{s}</m>, we can write:
+                    <md>
+                        <mrow>t \amp = \frac{160}{s} </mrow>
+                    </md>
+                    Substituting this into <xref ref="matatu-time"/>, we have:
+                    <md>
+                        <mrow> 2 \le \frac{160}{s} \lt \frac{7}{2}</mrow>
+                    </md>
+                    Solving the left inequality:
+                    <md>
+                        <mrow> 2 \amp \le \frac{160}{s} </mrow>
+                        <mrow> s \amp \le \frac{160}{2} </mrow>
+                        <mrow> s \amp \le 80 </mrow>
+                    </md>
+                    Solving the right inequality:
+                    <md>
+                        <mrow> \frac{160}{s} \amp \lt \frac{7}{2} </mrow>
+                        <mrow> \frac{320}{7} \amp \lt s </mrow>
+                        <mrow> s \amp \gt \frac{320}{7} </mrow>
+                    </md>
+                    Combing both, we have:
+                    <md>
+                        <mrow> \frac{320}{7} \amp \lt s \amp \le 80 </mrow>
+                    </md>
+                    Therefore, the driver's average speed must be strictly greater than <m>\frac{320}{7}\,\text{km/h}\,(\approx 45.71\,\text{km/h})</m> but less than or equal to <m>80\,\text{km/h}</m>.
+                </p>
+            </solution>
+        </task>
     </example>
 
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
@@ -379,6 +386,32 @@
                     <m>x \le 4 \text{ OR } x \gt 11</m>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    Solve each inequality separately.
+                </p>
+                <p>
+                    For the first inequality:
+                    <md>
+                        <mrow>3x - 2 &amp;\le 10</mrow>
+                        <mrow>3x &amp;\le 12</mrow>
+                        <mrow>x &amp;\le 4</mrow>
+                    </md>
+                </p>
+                <p>
+                    For the second inequality:
+                    <md>
+                        <mrow>x + 4 &amp;\gt 15</mrow>
+                        <mrow>x &amp;\gt 11</mrow>
+                    </md>
+                </p>
+                <p>
+                    Since this is an OR compound inequality, the solution is any value satisfying <em>either</em> condition:
+                    <md>
+                        <mrow>x \le 4 \quad \text{OR} \quad x \gt 11</mrow>
+                    </md>
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -391,6 +424,20 @@
                     <m>50 \le S \le 80</m>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    The phrase <q>minimum of <m>50</m> km/h</q> means the speed must be at least <m>50</m>, so <m>S \ge 50</m>.
+                </p>
+                <p>
+                    The phrase <q>maximum of <m>80</m> km/h</q> means the speed must not exceed <m>80</m>, so <m>S \le 80</m>.
+                </p>
+                <p>
+                    Both conditions must hold simultaneously (AND), so we combine them into a single statement:
+                    <md>
+                        <mrow>50 \le S \le 80</mrow>
+                    </md>
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -400,9 +447,382 @@
             </statement>
             <answer>
                 <p>
-                    <m>-6 \lt x \le 8</m>
+                    <m>-6 \lt x \le 6</m>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    Split into two separate simple inequalities:
+                    <md>
+                        <mrow number="yes" xml:id="ex3-ineq1">2x - 5 &amp;\lt 3x + 1</mrow>
+                        <mrow number="yes" xml:id="ex3-ineq2">3x + 1 &amp;\le 2x + 7</mrow>
+                    </md>
+                    Solve inequality <xref ref="ex3-ineq1"/>:
+                    <md>
+                        <mrow>2x - 5 &amp;\lt 3x + 1</mrow>
+                        <mrow>-5 - 1 &amp;\lt 3x - 2x</mrow>
+                        <mrow>-6 &amp;\lt x</mrow>
+                    </md>
+                    That is, <m>x \gt -6</m>.
+                </p>
+                <p>
+                    Solve inequality <xref ref="ex3-ineq2"/>:
+                    <md>
+                        <mrow>3x + 1 &amp;\le 2x + 7</mrow>
+                        <mrow>3x - 2x &amp;\le 7 - 1</mrow>
+                        <mrow>x &amp;\le 6</mrow>
+                    </md>
+                </p>
+                <p>
+                    Since both must hold simultaneously (AND), we combine the results:
+                    <md>
+                        <mrow>-6 \lt x \le 6</mrow>
+                    </md>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <introduction>
+                <p>
+                    Solve each compound inequality.
+                </p>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                        <m>x + 3 \gt 1 \quad \text{AND} \quad x - 2 \lt 5</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>-2 \lt x \lt 7</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>x + 3 &amp;\gt 1 &amp; \quad x - 2 &amp;\lt 5</mrow>
+                            <mrow>x &amp;\gt -2 &amp; \quad x &amp;\lt 7</mrow>
+                        </md>
+                        Both must hold simultaneously:
+                        <md>
+                            <mrow>-2 \lt x \lt 7</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>3x - 2 \ge 4 \quad \text{OR} \quad 2x + 1 \le -3</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>x \ge 2 \quad \text{OR} \quad x \le -2</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>3x - 2 &amp;\ge 4</mrow>
+                            <mrow>3x &amp;\ge 6</mrow>
+                            <mrow>x &amp;\ge 2</mrow>
+                        </md>
+                        <md>
+                            <mrow>2x + 1 &amp;\le -3</mrow>
+                            <mrow>2x &amp;\le -4</mrow>
+                            <mrow>x &amp;\le -2</mrow>
+                        </md>
+                        Since this is an OR inequality, either condition gives a valid solution:
+                        <md>
+                            <mrow>x \ge 2 \quad \text{OR} \quad x \le -2</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>2x + 1 \ge 5 \quad \text{AND} \quad 4 - x \gt 0</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>2 \le x \lt 4</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>2x + 1 &amp;\ge 5</mrow>
+                            <mrow>2x &amp;\ge 4</mrow>
+                            <mrow>x &amp;\ge 2</mrow>
+                        </md>
+                        <md>
+                            <mrow>4 - x &amp;\gt 0</mrow>
+                            <mrow>4 &amp;\gt x</mrow>
+                            <mrow>x &amp;\lt 4</mrow>
+                        </md>
+                        Both must hold simultaneously:
+                        <md>
+                            <mrow>2 \le x \lt 4</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>x + 7 \lt 3 \quad \text{OR} \quad 2x - 1 \ge 7</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>x \lt -4 \quad \text{OR} \quad x \ge 4</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>x + 7 &amp;\lt 3</mrow>
+                            <mrow>x &amp;\lt -4</mrow>
+                        </md>
+                        <md>
+                            <mrow>2x - 1 &amp;\ge 7</mrow>
+                            <mrow>2x &amp;\ge 8</mrow>
+                            <mrow>x &amp;\ge 4</mrow>
+                        </md>
+                        Since this is an OR inequality:
+                        <md>
+                            <mrow>x \lt -4 \quad \text{OR} \quad x \ge 4</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>-3 \le 2x - 1 \lt 9</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>-1 \le x \lt 5</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Add <m>1</m> to all three parts:
+                        <md>
+                            <mrow>-3 + 1 &amp;\le 2x - 1 + 1 \lt 9 + 1</mrow>
+                            <mrow>-2 &amp;\le 2x \lt 10</mrow>
+                        </md>
+                        Divide all three parts by <m>2</m>:
+                        <md>
+                            <mrow>-1 \le x \lt 5</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>4x + 3 \gt 11 \quad \text{OR} \quad x - 5 \le -8</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>x \gt 2 \quad \text{OR} \quad x \le -3</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>4x + 3 &amp;\gt 11</mrow>
+                            <mrow>4x &amp;\gt 8</mrow>
+                            <mrow>x &amp;\gt 2</mrow>
+                        </md>
+                        <md>
+                            <mrow>x - 5 &amp;\le -8</mrow>
+                            <mrow>x &amp;\le -3</mrow>
+                        </md>
+                        Since this is an OR inequality:
+                        <md>
+                            <mrow>x \gt 2 \quad \text{OR} \quad x \le -3</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+        </exercise>
+        <exercise>
+            <introduction>
+                <p>
+                    Solve each compound inequality.
+                </p>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                        <m>5 - x \gt 1 \quad \text{AND} \quad 3x - 2 \gt -8</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>-2 \lt x \lt 4</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>5 - x &amp;\gt 1</mrow>
+                            <mrow>-x &amp;\gt -4</mrow>
+                            <mrow>x &amp;\lt 4</mrow>
+                        </md>
+                        (Remember: dividing by a negative number reverses the inequality sign.)
+                        <md>
+                            <mrow>3x - 2 &amp;\gt -8</mrow>
+                            <mrow>3x &amp;\gt -6</mrow>
+                            <mrow>x &amp;\gt -2</mrow>
+                        </md>
+                        Both must hold simultaneously:
+                        <md>
+                            <mrow>-2 \lt x \lt 4</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>4x - 3 \le 5 \quad \text{OR} \quad 2x + 7 \gt 13</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>x \le 2 \quad \text{OR} \quad x \gt 3</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>4x - 3 &amp;\le 5</mrow>
+                            <mrow>4x &amp;\le 8</mrow>
+                            <mrow>x &amp;\le 2</mrow>
+                        </md>
+                        <md>
+                            <mrow>2x + 7 &amp;\gt 13</mrow>
+                            <mrow>2x &amp;\gt 6</mrow>
+                            <mrow>x &amp;\gt 3</mrow>
+                        </md>
+                        Since this is an OR inequality:
+                        <md>
+                            <mrow>x \le 2 \quad \text{OR} \quad x \gt 3</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>2x + 5 \gt 1 \quad \text{AND} \quad x - 8 \le -4</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>-2 \lt x \le 4</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>2x + 5 &amp;\gt 1</mrow>
+                            <mrow>2x &amp;\gt -4</mrow>
+                            <mrow>x &amp;\gt -2</mrow>
+                        </md>
+                        <md>
+                            <mrow>x - 8 &amp;\le -4</mrow>
+                            <mrow>x &amp;\le 4</mrow>
+                        </md>
+                        Both must hold simultaneously:
+                        <md>
+                            <mrow>-2 \lt x \le 4</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>3x - 1 \lt 2 \quad \text{OR} \quad 5x + 2 \ge 22</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>x \lt 1 \quad \text{OR} \quad x \ge 4</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>3x - 1 &amp;\lt 2</mrow>
+                            <mrow>3x &amp;\lt 3</mrow>
+                            <mrow>x &amp;\lt 1</mrow>
+                        </md>
+                        <md>
+                            <mrow>5x + 2 &amp;\ge 22</mrow>
+                            <mrow>5x &amp;\ge 20</mrow>
+                            <mrow>x &amp;\ge 4</mrow>
+                        </md>
+                        Since this is an OR inequality:
+                        <md>
+                            <mrow>x \lt 1 \quad \text{OR} \quad x \ge 4</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>1 \le 4x + 3 \le 15</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>-\frac{1}{2} \le x \le 3</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Subtract <m>3</m> from all three parts:
+                        <md>
+                            <mrow>1 - 3 &amp;\le 4x + 3 - 3 \le 15 - 3</mrow>
+                            <mrow>-2 &amp;\le 4x \le 12</mrow>
+                        </md>
+                        Divide all three parts by <m>4</m>:
+                        <md>
+                            <mrow>-\frac{1}{2} \le x \le 3</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>6 - 2x \le 0 \quad \text{AND} \quad 3x - 4 \lt 11</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p><m>3 \le x \lt 5</m></p>
+                </answer>
+                <solution>
+                    <p>
+                        Solve each part separately.
+                        <md>
+                            <mrow>6 - 2x &amp;\le 0</mrow>
+                            <mrow>6 &amp;\le 2x</mrow>
+                            <mrow>3 &amp;\le x</mrow>
+                            <mrow>x &amp;\ge 3</mrow>
+                        </md>
+                        <md>
+                            <mrow>3x - 4 &amp;\lt 11</mrow>
+                            <mrow>3x &amp;\lt 15</mrow>
+                            <mrow>x &amp;\lt 5</mrow>
+                        </md>
+                        Both must hold simultaneously:
+                        <md>
+                            <mrow>3 \le x \lt 5</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
         </exercise>
         <exercise>
             <statement>
@@ -415,6 +835,29 @@
                     <m>40 \le N \lt 90</m>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    There are two conditions on Nanjala's score.
+                </p>
+                <p>
+                    First, she passed the exam, so her score must be at least <m>40\%</m>:
+                    <md>
+                        <mrow>N \ge 40</mrow>
+                    </md>
+                </p>
+                <p>
+                    Second, she did <em>not</em> achieve a grade 'A', so her score must be strictly below <m>90\%</m>:
+                    <md>
+                        <mrow>N \lt 90</mrow>
+                    </md>
+                </p>
+                <p>
+                    Both conditions must hold at the same time (AND), giving the compound inequality:
+                    <md>
+                        <mrow>40 \le N \lt 90</mrow>
+                    </md>
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -452,6 +895,34 @@
                     </ol>
                 </p>
             </answer>
+            <solution>
+                <p>
+                    <ol marker="a)">
+                        <li>
+                            <p>
+                                <q>Higher than <m>15^\circ\text{C}</m></q> means <m>T \gt 15</m>, and <q>strictly lower than <m>28^\circ\text{C}</m></q> means <m>T \lt 28</m>. Combining:
+                                <md>
+                                    <mrow>15 \lt T \lt 28</mrow>
+                                </md>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Since the heater adds exactly <m>10^\circ\text{C}</m>, we have <m>T = t + 10</m>. Substituting into the compound inequality from part (a):
+                                <md>
+                                    <mrow>15 \amp\lt t + 10 \lt 28</mrow>
+                                </md>
+                                Subtracting <m>10</m> from all three parts:
+                                <md>
+                                    <mrow>15 - 10 \amp\lt t \lt 28 - 10</mrow>
+                                    <mrow>5 \amp\lt t \lt 18</mrow>
+                                </md>
+                                So the outdoor temperature must be between <m>5^\circ\text{C}</m> and <m>18^\circ\text{C}</m> (exclusive).
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement marker="(a)">
