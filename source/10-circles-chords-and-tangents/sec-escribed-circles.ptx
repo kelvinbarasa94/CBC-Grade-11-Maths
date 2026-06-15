@@ -729,6 +729,216 @@
         <exercise>
             <statement>
                 <p>
+                    For each triangle below, use a pair of compasses and a straightedge to construct the <term>excircle opposite <m>A</m></term> — the circle tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m> (already drawn dashed). In your solution, show your construction: build the external bisectors at <m>B</m> and <m>C</m> to locate the excentre <m>I_a</m>, drop a perpendicular from <m>I_a</m> to <m>BC</m> for the radius, then draw the circle.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Acute scalene triangle.</p>
+                        <figure xml:id="fig-build-exc-a">
+                            <caption>Acute scalene triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[above left](B)
+                                        \tkzLabelPoints[above right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Right triangle (right angle at <m>B</m>).</p>
+                        <figure xml:id="fig-build-exc-b">
+                            <caption>Right triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzMarkRightAngle[size=0.2](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above left](A)
+                                        \tkzLabelPoints[above right](B)
+                                        \tkzLabelPoints[above right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Obtuse triangle.</p>
+                        <figure xml:id="fig-build-exc-c">
+                            <caption>Obtuse triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[above left](B)
+                                        \tkzLabelPoints[above right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Equilateral triangle.</p>
+                        <figure xml:id="fig-build-exc-d">
+                            <caption>Equilateral triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[above left](B)
+                                        \tkzLabelPoints[above right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <p>
+                    In each case the external bisectors at <m>B</m> and <m>C</m> (dashed) meet at the excentre <m>I_a</m>; the internal bisector from <m>A</m> passes through the same point. The perpendicular from <m>I_a</m> to side <m>BC</m> is the radius <m>r_a</m>, and the excircle touches <m>BC</m> and both extensions. The excentre always lies <em>outside</em> the triangle, beyond side <m>BC</m>.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <figure xml:id="fig-build-exc-a-sol">
+                            <caption>Excircle opposite <m>A</m> of the acute scalene triangle.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
+                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                        \tkzDrawSegment[orange!80!black](Ia,X)
+                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                        \tkzDrawPoints(A,B,C,Ia,X)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoint[above left](B){$B$}
+                                        \tkzLabelPoint[above right](C){$C$}
+                                        \tkzLabelPoint[below](Ia){$I_a$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure xml:id="fig-build-exc-b-sol">
+                            <caption>Excircle opposite <m>A</m> of the right triangle.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
+                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                        \tkzDrawSegment[orange!80!black](Ia,X)
+                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                        \tkzDrawPoints(A,B,C,Ia,X)
+                                        \tkzLabelPoints[above left](A)
+                                        \tkzLabelPoint[above left](B){$B$}
+                                        \tkzLabelPoint[above right](C){$C$}
+                                        \tkzLabelPoint[below](Ia){$I_a$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure xml:id="fig-build-exc-c-sol">
+                            <caption>Excircle opposite <m>A</m> of the obtuse triangle.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
+                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                        \tkzDrawSegment[orange!80!black](Ia,X)
+                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                        \tkzDrawPoints(A,B,C,Ia,X)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoint[above left](B){$B$}
+                                        \tkzLabelPoint[above right](C){$C$}
+                                        \tkzLabelPoint[below](Ia){$I_a$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure xml:id="fig-build-exc-d-sol">
+                            <caption>Excircle opposite <m>A</m> of the equilateral triangle.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.6]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
+                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                        \tkzDrawSegment[orange!80!black](Ia,X)
+                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                        \tkzDrawPoints(A,B,C,Ia,X)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoint[above left](B){$B$}
+                                        \tkzLabelPoint[above right](C){$C$}
+                                        \tkzLabelPoint[below](Ia){$I_a$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
                     Triangle <m>ABC</m> has <m>AB = 6</m> cm, <m>BC = 8</m> cm, and <m>CA = 7</m> cm.
                     <ol marker="(a)">
                         <li>Draw the triangle accurately. Extend side <m>AB</m> beyond <m>B</m> and side <m>AC</m> beyond <m>C</m> as dashed rays.</li>

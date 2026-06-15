@@ -581,6 +581,202 @@
         <exercise>
             <statement>
                 <p>
+                    For each triangle below, use a pair of compasses and a straightedge to construct the <term>circumscribed circle</term> (circumcircle). In your solution, show your construction: build the perpendicular bisectors of two sides to locate the circumcentre <m>O</m>, then draw the circle through the three vertices.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>Acute scalene triangle.</p>
+                        <figure xml:id="fig-build-cir-a">
+                            <caption>Acute scalene triangle <m>ABC</m>.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Right triangle (right angle at <m>B</m>).</p>
+                        <figure xml:id="fig-build-cir-b">
+                            <caption>Right triangle <m>ABC</m>.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzMarkRightAngle[size=0.2](A,B,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above left](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Obtuse triangle.</p>
+                        <figure xml:id="fig-build-cir-c">
+                            <caption>Obtuse triangle <m>ABC</m>.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[left](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Equilateral triangle.</p>
+                        <figure xml:id="fig-build-cir-d">
+                            <caption>Equilateral triangle <m>ABC</m>.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <p>
+                    The perpendicular bisectors of the sides (dashed, each meeting its side at a right angle) all pass through the circumcentre <m>O</m>, which is equidistant from the three vertices. Notice how <m>O</m> moves: inside the triangle when it is acute, exactly on the hypotenuse (its midpoint) when it is right-angled, and outside the triangle when it is obtuse.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <figure xml:id="fig-build-cir-a-sol">
+                            <caption>Circumcircle of the acute scalene triangle; <m>O</m> lies inside.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
+                                        \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                        \tkzDefMidPoint(B,C)\tkzGetPoint{Ma}
+                                        \tkzDefMidPoint(C,A)\tkzGetPoint{Mb}
+                                        \tkzDefMidPoint(A,B)\tkzGetPoint{Mc}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawCircle[blue,thick](O,A)
+                                        \tkzDrawSegments[dashed,gray](Ma,O Mb,O Mc,O)
+                                        \tkzMarkRightAngle[size=0.18](C,Ma,O)
+                                        \tkzMarkRightAngle[size=0.18](A,Mb,O)
+                                        \tkzMarkRightAngle[size=0.18](B,Mc,O)
+                                        \tkzDrawPoints(A,B,C,O,Ma,Mb,Mc)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                        \tkzLabelPoint[above right](O){$O$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure xml:id="fig-build-cir-b-sol">
+                            <caption>Circumcircle of the right triangle; <m>O</m> is the midpoint of the hypotenuse.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
+                                        \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                        \tkzDefMidPoint(B,C)\tkzGetPoint{Ma}
+                                        \tkzDefMidPoint(A,B)\tkzGetPoint{Mc}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawCircle[blue,thick](O,A)
+                                        \tkzDrawSegments[dashed,gray](Ma,O Mc,O)
+                                        \tkzMarkRightAngle[size=0.18](C,Ma,O)
+                                        \tkzMarkRightAngle[size=0.18](B,Mc,O)
+                                        \tkzDrawPoints(A,B,C,O,Ma,Mc)
+                                        \tkzLabelPoints[above left](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                        \tkzLabelPoint[above right](O){$O$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure xml:id="fig-build-cir-c-sol">
+                            <caption>Circumcircle of the obtuse triangle; <m>O</m> lies outside.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
+                                        \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                        \tkzDefMidPoint(B,C)\tkzGetPoint{Ma}
+                                        \tkzDefMidPoint(C,A)\tkzGetPoint{Mb}
+                                        \tkzDefMidPoint(A,B)\tkzGetPoint{Mc}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawCircle[blue,thick](O,A)
+                                        \tkzDrawSegments[dashed,gray](Ma,O Mb,O Mc,O)
+                                        \tkzMarkRightAngle[size=0.18](C,Ma,O)
+                                        \tkzMarkRightAngle[size=0.18](A,Mb,O)
+                                        \tkzMarkRightAngle[size=0.18](B,Mc,O)
+                                        \tkzDrawPoints(A,B,C,O,Ma,Mb,Mc)
+                                        \tkzLabelPoints[left](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                        \tkzLabelPoint[above](O){$O$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure xml:id="fig-build-cir-d-sol">
+                            <caption>Circumcircle of the equilateral triangle; <m>O</m> is the centre.</caption>
+                            <image width="48%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.7]
+                                        \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
+                                        \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                                        \tkzDefMidPoint(B,C)\tkzGetPoint{Ma}
+                                        \tkzDefMidPoint(C,A)\tkzGetPoint{Mb}
+                                        \tkzDefMidPoint(A,B)\tkzGetPoint{Mc}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawCircle[blue,thick](O,A)
+                                        \tkzDrawSegments[dashed,gray](Ma,O Mb,O Mc,O)
+                                        \tkzMarkRightAngle[size=0.18](C,Ma,O)
+                                        \tkzMarkRightAngle[size=0.18](A,Mb,O)
+                                        \tkzMarkRightAngle[size=0.18](B,Mc,O)
+                                        \tkzDrawPoints(A,B,C,O,Ma,Mb,Mc)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                        \tkzLabelPoint[above right](O){$O$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
                     Triangle <m>ABC</m> has <m>AB = 7</m> cm, <m>BC = 8</m> cm, and <m>CA = 6</m> cm.
                     <ol marker="(a)">
                         <li>Draw the triangle accurately using ruler and compasses.</li>
@@ -862,154 +1058,6 @@
         </exercise>
 
         <exercise>
-            <introduction>
-                <p>
-                    An arbitrary triangle <m>ABC</m> is drawn below. We have created three new triangles <m>\Delta APB</m>, <m>\Delta BQC</m>, <m>\Delta CRA</m>, which are all similar to each other.
-                </p>
-                <figure xml:id="triangle-with-triangles">
-                    <image>
-                        <latex-image>
-                            \begin{tikzpicture}[scale=0.8]
-                                \tkzDefPoints{0/0/A, 4/2/B, 5.5/-3/C}
-                                \tkzFindSlopeAngle(A,B)\tkzGetAngle{AngAB}
-                                \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
-                                \begin{scope}[rotate=\AngAB]
-                                    \tkzDefShiftPoint[A](30:3.8){P}
-                                \end{scope}
-                                \tkzDefPointBy[rotation with nodes=center O from B to C](P) \tkzGetPoint{Q}
-                                \tkzDefPointBy[rotation with nodes=center O from B to A](P) \tkzGetPoint{R}
-
-                                \tkzDefTriangleCenter[circum](P,Q,R) \tkzGetPoint{O'} % This is the same as O
-
-
-                                \tkzDrawSegments(A,P P,B B,Q Q,C C,R R,A)
-                                \tkzFillAngles[size=0.6, color=red!20, opacity=0.5](B,A,P C,B,Q A,C,R)
-                                \tkzMarkAngles[size=0.6, mark=|](B,A,P C,B,Q A,C,R)
-
-                                \tkzFillAngles[size=0.6, color=blue!20, opacity=0.5](P,B,A Q,C,B R,A,C)
-                                \tkzMarkAngles[size=0.6, mark=||](P,B,A Q,C,B R,A,C)
-
-                                \tkzDrawPolygon[thick](A,B,C)
-                                \tkzDrawPoints(A,B,C,P,Q,R)
-                                \tkzLabelPoints[above](P)
-                                \tkzLabelPoints[above right](B)
-                                \tkzLabelPoints[right](Q)
-                                \tkzLabelPoints[below right](C)
-                                \tkzLabelPoints[below left](R)
-                                \tkzLabelPoints[left](A)
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
-            </introduction>
-            <task>
-                <statement>
-                    <p>
-                        Find the circumcenter of <m>\Delta ABC</m>, and mark it as <m>O</m>.
-                    </p>
-                </statement>
-                <solution>
-                    <p>
-                        <figure xml:id="triangle-with-triangles-soln1">
-                    <image>
-                        <latex-image>
-                            \begin{tikzpicture}[scale=0.8]
-                                \tkzDefPoints{0/0/A, 4/2/B, 5.5/-3/C}
-                                \tkzFindSlopeAngle(A,B)\tkzGetAngle{AngAB}
-                                \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
-                                \begin{scope}[rotate=\AngAB]
-                                    \tkzDefShiftPoint[A](30:3.8){P}
-                                \end{scope}
-                                \tkzDefPointBy[rotation with nodes=center O from B to C](P) \tkzGetPoint{Q}
-                                \tkzDefPointBy[rotation with nodes=center O from B to A](P) \tkzGetPoint{R}
-
-                                \tkzDefTriangleCenter[circum](P,Q,R) \tkzGetPoint{O'} % This is the same as O
-
-
-                                \tkzDrawSegments(A,P P,B B,Q Q,C C,R R,A)
-                                \tkzFillAngles[size=0.6, color=red!20, opacity=0.5](B,A,P C,B,Q A,C,R)
-                                \tkzMarkAngles[size=0.6, mark=|](B,A,P C,B,Q A,C,R)
-
-                                \tkzFillAngles[size=0.6, color=blue!20, opacity=0.5](P,B,A Q,C,B R,A,C)
-                                \tkzMarkAngles[size=0.6, mark=||](P,B,A Q,C,B R,A,C)
-
-                                \tkzDrawCircle(O,A)
-
-                                \tkzDrawPolygon[thick](A,B,C)
-                                \tkzDrawPoints(A,B,C,P,Q,R,O)
-                                \tkzLabelPoints[above](P)
-                                \tkzLabelPoints[above right](B)
-                                \tkzLabelPoints[right](Q)
-                                \tkzLabelPoints[below right](C, O)
-                                \tkzLabelPoints[below left](R)
-                                \tkzLabelPoints[left](A)
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
-                    </p>
-                </solution>
-            </task>
-            <task>
-                <statement>
-                    <p>
-                        Find the circumcenter of <m>\Delta PQR</m>. What do you notice?
-                    </p>
-                </statement>
-                <solution>
-                    <p>
-                        The circumcenter of <m>\Delta PQR</m> is the same point <m>O</m> as the circumcenter of <m>\Delta ABC</m>.
-                        <figure xml:id="triangle-with-triangles-soln2">
-                            <image>
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.8]
-                                        \tkzDefPoints{0/0/A, 4/2/B, 5.5/-3/C}
-                                        \tkzFindSlopeAngle(A,B)\tkzGetAngle{AngAB}
-                                        \tkzDefTriangleCenter[circum](A,B,C) \tkzGetPoint{O}
-                                        \begin{scope}[rotate=\AngAB]
-                                            \tkzDefShiftPoint[A](30:3.8){P}
-                                        \end{scope}
-                                        \tkzDefPointBy[rotation with nodes=center O from B to C](P) \tkzGetPoint{Q}
-                                        \tkzDefPointBy[rotation with nodes=center O from B to A](P) \tkzGetPoint{R}
-
-                                        \tkzDefTriangleCenter[circum](P,Q,R) \tkzGetPoint{O'} % This is the same as O
-
-
-                                        \tkzDrawSegments(A,P P,B B,Q Q,C C,R R,A)
-                                        \tkzFillAngles[size=0.6, color=red!20, opacity=0.5](B,A,P C,B,Q A,C,R)
-                                        \tkzMarkAngles[size=0.6, mark=|](B,A,P C,B,Q A,C,R)
-
-                                        \tkzFillAngles[size=0.6, color=blue!20, opacity=0.5](P,B,A Q,C,B R,A,C)
-                                        \tkzMarkAngles[size=0.6, mark=||](P,B,A Q,C,B R,A,C)
-
-                                        \tkzDrawCircle(O,A)
-                                        \tkzDrawCircle(O',P)
-
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawPoints(A,B,C,P,Q,R,O)
-                                        \tkzLabelPoints[above](P)
-                                        \tkzLabelPoints[above right](B)
-                                        \tkzLabelPoints[right](Q)
-                                        \tkzLabelPoints[below right](C)
-                                        \tkzLabelPoints[below left](R)
-                                        \tkzLabelPoints[left](A)
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
-                    </p>
-                </solution>
-            </task>
-            <task>
-                <statement>
-                    <p>
-                        Explain why this happens.
-                    </p>
-                </statement>
-            </task>
-        </exercise>
-
-        <exercise>
             <statement>
                 <p>
                     An equilateral triangle has side length <m>12</m> cm.
@@ -1069,6 +1117,83 @@
                 </p>
             </solution>
         </exercise>
+
+        <exercise xml:id="ex-euler-line">
+    <statement>
+        <p>
+            A triangle has vertices <m>A(1,5)</m>, <m>B(0,0)</m>, and <m>C(7,0)</m>. You will locate three of its centres and discover a famous relationship between them. (Find <m>O</m> simply as the point equidistant from the three vertices.)
+        </p>
+        <ol marker="(a)">
+            <li><p>Find the coordinates of the <term>centroid</term> <m>G</m> (the average of the three vertices).</p></li>
+            <li><p>Find the <term>orthocentre</term> <m>H</m>, where the three altitudes meet. (The altitude from <m>A</m> is vertical; the altitude from <m>B</m> is perpendicular to <m>AC</m>.)</p></li>
+            <li><p>Find the <term>circumcentre</term> <m>O</m>, the point equidistant from <m>A</m>, <m>B</m>, and <m>C</m>.</p></li>
+            <li><p>Plot <m>G</m>, <m>H</m>, and <m>O</m>. What do you notice? Show that <m>HG = 2\,GO</m>.</p></li>
+        </ol>
+    </statement>
+    <solution>
+        <p>
+            <ol marker="(a)">
+                <li><p><m>G = \left(\dfrac{1+0+7}{3},\ \dfrac{5+0+0}{3}\right) = \left(\dfrac{8}{3},\ \dfrac{5}{3}\right)</m>.</p></li>
+                <li>
+                    <p>
+                        The altitude from <m>A</m> is the vertical line <m>x = 1</m>. Side <m>AC</m> has gradient <m>\dfrac{0-5}{7-1} = -\dfrac{5}{6}</m>, so the altitude from <m>B</m> (perpendicular to <m>AC</m>, through the origin) is <m>y = \dfrac{6}{5}x</m>. At <m>x = 1</m>, <m>y = \dfrac{6}{5}</m>, so <m>H = \left(1,\ \dfrac{6}{5}\right)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The perpendicular bisector of <m>BC</m> is <m>x = 3.5</m>; the perpendicular bisector of <m>AB</m> passes through <m>(0.5,\,2.5)</m> with gradient <m>-\dfrac{1}{5}</m>, giving <m>y = 2.5 - \dfrac{1}{5}(3) = 1.9</m> at <m>x = 3.5</m>. So <m>O = (3.5,\ 1.9)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The three points lie on a single straight line — the <term>Euler line</term>:
+                        <md>
+                            <mrow>\vec{HG} \amp = G - H = \left(\tfrac{8}{3}-1,\ \tfrac{5}{3}-\tfrac{6}{5}\right) = \left(\tfrac{5}{3},\ \tfrac{7}{15}\right),</mrow>
+                            <mrow>\vec{GO} \amp = O - G = \left(\tfrac{7}{2}-\tfrac{8}{3},\ \tfrac{19}{10}-\tfrac{5}{3}\right) = \left(\tfrac{5}{6},\ \tfrac{7}{30}\right).</mrow>
+                        </md>
+                        Since <m>\vec{HG} = 2\,\vec{GO}</m>, the points are collinear and <m>HG = 2\,GO</m>: the centroid divides the segment from the orthocentre to the circumcentre in the ratio <m>2:1</m>.
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <figure xml:id="fig-euler-line-soln">
+            <caption>The orthocentre <m>H</m>, centroid <m>G</m>, and circumcentre <m>O</m> lie on the Euler line, with <m>HG = 2\,GO</m> (three equal steps).</caption>
+            <image width="62%">
+                <latex-image>
+                    \begin{tikzpicture}[scale=0.75]
+                        %% --- SET ---
+                        \tkzDefPoints{0/0/B, 7/0/C, 1/5/A}
+                        %% --- CALCULATE: centres ---
+                        \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
+                        \tkzDefMidPoint(B,C)\tkzGetPoint{Ma}
+                        \tkzDefMidPoint(C,A)\tkzGetPoint{Mb}
+                        \tkzDefPointBy[projection=onto B--C](A)\tkzGetPoint{Ha}
+                        \tkzDefPointBy[projection=onto C--A](B)\tkzGetPoint{Hb}
+                        \tkzInterLL(A,Ma)(B,Mb)\tkzGetPoint{G}
+                        \tkzInterLL(A,Ha)(B,Hb)\tkzGetPoint{H}
+                        \tkzDefMidPoint(G,H)\tkzGetPoint{Mid}
+                        %% --- DRAW ---
+                        \tkzDrawPolygon[thick](A,B,C)
+                        \tkzDrawLine[add=0.5 and 0.5, violet, thick, densely dashed](H,O)
+                        \tkzDrawPoints[size=2pt](A,B,C)
+                        \tkzDrawPoint[red,size=4pt](H)
+                        \tkzDrawPoint[blue,size=4pt](G)
+                        \tkzDrawPoint[teal!60!black,size=4pt](O)
+                        %% --- MARK ---
+                        \tkzMarkSegments[mark=|, violet](H,Mid Mid,G G,O)
+                        %% --- LABEL ---
+                        \tkzLabelPoints[above](A)
+                        \tkzLabelPoints[below left](B)
+                        \tkzLabelPoints[below right](C)
+                        \tkzLabelPoint[above left, red](H){$H$}
+                        \tkzLabelPoint[below, blue](G){$G$}
+                        \tkzLabelPoint[above right, teal!60!black](O){$O$}
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </solution>
+</exercise>
     </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />
