@@ -237,6 +237,56 @@
      <example>
         <statement>
             <p>A civil engineer designs a circular park plaza. A main fountain is placed at the exact center <m>O</m> of the plaza, and two decorative entrance gates are positioned at points <m>A</m> and <m>B</m> along the outer circular walkway. A park bench is installed at point <m>P</m> on the far side of the outer walkway. If the angle measured from the bench to the gates is <m>\angle APB = 42^\circ</m>, calculate the angle <m>\angle AOB</m> formed from the center fountain to the two gates.</p>
+            <figure xml:id="central-angle-park-plaza">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Central Fountain and Circumference Points ---
+                \coordinate (O) at (0,0);
+                
+                % Points positioned to mimic a standard inscribed/central angle problem
+                \coordinate (A) at (220:2.5);
+                \coordinate (B) at (340:2.5);
+                \coordinate (P) at (100:2.5);
+
+                % --- Step 2: Draw the Circular Walkway ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Angles (Fills & Arcs) ---
+                % Inscribed angle at Bench P (42 degrees)
+                \begin{scope}
+                    \clip (P) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (P) circle (0.5);
+                    \draw[blue, thick] (P) circle (0.5);
+                \end{scope}
+                \node[blue, below] at ($(P)+(270:0.6)$) {$42^{\circ}$};
+
+                % Central angle at Fountain O (Angle AOB)
+                \begin{scope}
+                    \clip (O) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (O) circle (0.4);
+                    \draw[red, thick] (O) circle (0.4);
+                \end{scope}
+                \node[red, below] at ($(O)+(280:0.6)$) {$\angle AOB$};
+
+                % --- Step 4: Draw Walkway Paths (Segments) ---
+                \draw[thick] (O) -- (A);
+                \draw[thick] (O) -- (B);
+                \draw[thick] (P) -- (A);
+                \draw[thick] (P) -- (B);
+
+                % --- Step 5: Plot and Label Features ---
+                \foreach \pt/\pos in {O/above, A/left, B/right, P/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
         </statement>
         <solution>
             <p>Identify the applicable property: The angle subtended by an arc at the center of a circle is twice the angle subtended by the same arc at any point on the circumference.</p>
@@ -251,6 +301,49 @@
     <example>
         <statement>
             <p>An architect plans a circular window frame with a straight steel structural support beam spanning across the center diameter from point <m>A</m> to point <m>B</m>. Two decorative framing bars connect points <m>A</m> and <m>B</m> to a point <m>C</m> on the upper curved rim of the window. Determine the size of the structural joint angle <m>\angle ACB</m>.</p>
+            <figure xml:id="angle-in-semicircle-window">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Points via Pure Angles ---
+                \coordinate (O) at (0,0);
+                
+                % Diameter endpoints spanning across the center
+                \coordinate (A) at (180:2.5);
+                \coordinate (B) at (0:2.5);
+                
+                % Point C on the upper curved rim
+                \coordinate (C) at (65:2.5);
+
+                % --- Step 2: Draw the Circular Window Frame ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angle (Thales's Theorem) ---
+                % Angle ACB is an angle inscribed in a semicircle (90 degrees)
+                \begin{scope}
+                    \clip (C) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (C) circle (0.4);
+                    \draw[red, thick] (C) circle (0.4);
+                \end{scope}
+                \node[red, below] at ($(C)+(245:0.6)$) {$\angle ACB$};
+
+                % --- Step 4: Draw Support Beams and Bars ---
+                \draw[thick] (A) -- (B); % Center diameter support beam
+                \draw[thick] (A) -- (C); % Decorative framing bar
+                \draw[thick] (B) -- (C); % Decorative framing bar
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {O/below, A/left, B/right, C/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
         </statement>
         <solution>
             <p>Identify the applicable property: The angle subtended by a diameter at the circumference (an angle in a semicircle) is always a right angle.</p>
@@ -264,6 +357,57 @@
     <example>
         <statement>
             <p>A maritime radar station tracks ships using a circular display coordinate screen centered at point <m>O</m>. Two navigation buoys are fixed at perimeter coordinates <m>X</m> and <m>Y</m>. A rescue vessel cruising along the outer boundary at point <m>W</m> measures its angle between the buoys as <m>\angle XWY = 53^\circ</m>. If a second patrol boat is stationed further down the outer boundary line at point <m>Z</m>, what is the measure of the angle <m>\angle XZY</m> between the same two buoys?</p>
+            <figure xml:id="angles-in-same-segment-radar">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Perimeter Coordinates ---
+                \coordinate (O) at (0,0);
+                
+                % Base buoys fixed on the perimeter
+                \coordinate (X) at (210:2.5);
+                \coordinate (Y) at (330:2.5);
+                
+                % Ships stationed on the same major arc segment
+                \coordinate (W) at (110:2.5);
+                \coordinate (Z) at (50:2.5);
+
+                % --- Step 2: Draw the Circular Screen Boundary ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles (Angles in Same Segment) ---
+                % Angle XWY at rescue vessel W (53 degrees)
+                \begin{scope}
+                    \clip (W) -- (X) -- (Y) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (W) circle (0.5);
+                    \draw[blue, thick] (W) circle (0.5);
+                \end{scope}
+                \node[blue, below] at ($(W)+(285:0.6)$) {$53^{\circ}$};
+
+                % Angle XZY at patrol boat Z
+                \begin{scope}
+                    \clip (Z) -- (X) -- (Y) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (Z) circle (0.5);
+                    \draw[red, thick] (Z) circle (0.5);
+                \end{scope}
+                \node[red, below left] at ($(Z)+(245:0.6)$) {$\angle XZY$};
+
+                % --- Step 4: Draw Visual Radar Tracking Lines ---
+                \draw[thick] (X) -- (W) -- (Y);
+                \draw[thick] (X) -- (Z) -- (Y);
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {O/below, X/left, Y/right, W/above, Z/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
         </statement>
         <solution>
             <p>Identify the applicable property: Angles subtended by the same arc in the same segment of a circle are equal to one another.</p>
@@ -278,6 +422,54 @@
     <example>
         <statement>
             <p>A circular city traffic turntable routes cars through four intersection points labeled <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m> sequentially, forming an embedded quadrilateral layout. An urban planner notices that the approach angle at intersection <m>P</m> measures <m>\angle QPS = 108^\circ</m>. Find the required clearance angle at the opposite intersection point <m>R</m>, denoted as <m>\angle QRS</m>.</p>
+            <figure xml:id="cyclic-quad-traffic-turntable">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Points via Pure Angles ---
+                \coordinate (O) at (0,0);
+                
+                % Four intersection points forming a cyclic quadrilateral
+                \coordinate (P) at (150:2.5);
+                \coordinate (Q) at (60:2.5);
+                \coordinate (R) at (320:2.5);
+                \coordinate (S) at (230:2.5);
+
+                % --- Step 2: Draw the Circular Traffic Turntable ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Approach angle at intersection P (108 degrees)
+                \begin{scope}
+                    \clip (P) -- (Q) -- (S) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (P) circle (0.5);
+                    \draw[blue, thick] (P) circle (0.5);
+                \end{scope}
+                \node[blue, right] at ($(P)+(0:0.6)$) {$108^{\circ}$};
+
+                % Clearance angle at opposite intersection R
+                \begin{scope}
+                    \clip (R) -- (Q) -- (S) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (R) circle (0.5);
+                    \draw[red, thick] (R) circle (0.5);
+                \end{scope}
+                \node[red, left] at ($(R)+(160:0.6)$) {$\angle QRS$};
+
+                % --- Step 4: Draw Road Layout Segments ---
+                \draw[thick] (P) -- (Q) -- (R) -- (S) -- cycle;
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {P/left, Q/above, R/right, S/below left} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
         </statement>
         <solution>
             <p>Identify the applicable property: The opposite interior angles of a cyclic quadrilateral are supplementary, meaning they add up to <m>180^\circ</m>.</p>
@@ -295,6 +487,56 @@
     <example>
         <statement>
             <p>A circular metal saw blade is divided into sectors for cooling ventilation slots. Three alignment rivets are stamped on the rim at positions <m>A</m>, <m>B</m>, and <m>C</m>, with the central spindle hole located at point <m>O</m>. An engineer monitors the stamping process and notes that the central configuration angle is represented by <m>\angle AOB = 4x + 10^\circ</m>, while the outer rim angle is represented by <m>\angle ACB = 1x + 35^\circ</m>. Solve for the structural calibration variable <m>x</m>.</p>
+            <figure xml:id="central-angle-saw-blade">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Rim Coordinates ---
+                \coordinate (O) at (0,0);
+                
+                % Alignment rivets on the outer rim
+                \coordinate (A) at (210:2.5);
+                \coordinate (B) at (330:2.5);
+                \coordinate (C) at (90:2.5);
+
+                % --- Step 2: Draw the Circular Saw Blade Rim ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Central spindle angle AOB
+                \begin{scope}
+                    \clip (O) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (O) circle (0.4);
+                    \draw[red, thick] (O) circle (0.4);
+                \end{scope}
+                \node[red, below] at ($(O)+(270:0.5)$) {$4x + 10^{\circ}$};
+
+                % Outer rim angle ACB
+                \begin{scope}
+                    \clip (C) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (C) circle (0.5);
+                    \draw[blue, thick] (C) circle (0.5);
+                \end{scope}
+                \node[blue, below] at ($(C)+(270:0.6)$) {$1x + 35^{\circ}$};
+
+                % --- Step 4: Draw Connecting Structural Lines ---
+                \draw[thick] (O) -- (A);
+                \draw[thick] (O) -- (B);
+                \draw[thick] (C) -- (A);
+                \draw[thick] (C) -- (B);
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {O/above right, A/left, B/right, C/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
         </statement>
         <solution>
             <p>Identify the applicable property: The central angle is twice the magnitude of the angle at the circumference sharing the same arc base.</p>
@@ -349,6 +591,58 @@
         <exercise>
             <statement>
                 <p>A  crop-circle watering boom pivots around a center pump station <m>O</m>. Two sensor flags are placed at positions <m>A</m> and <m>B</m> on the outer perimeter rim. A drone hovering directly above an outer fence gate at point <m>P</m> measures an angle of <m>\angle APB = 37^\circ</m> between the flags. Calculate the layout angle <m>\angle AOB</m> radiating from the center pump station.</p>
+                <figure xml:id="angle-at-center-watering-boom">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Perimeter Coordinates ---
+                \coordinate (O) at (0,0);
+                
+                % Sensor flags placed on the outer perimeter rim
+                \coordinate (A) at (215:2.5);
+                \coordinate (B) at (335:2.5);
+                
+                % Drone hovering directly above fence gate P
+                \coordinate (P) at (105:2.5);
+
+                % --- Step 2: Draw the Circular Perimeter Rim ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Inscribed angle at fence gate P (37 degrees)
+                \begin{scope}
+                    \clip (P) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (P) circle (0.5);
+                    \draw[blue, thick] (P) circle (0.5);
+                \end{scope}
+                \node[blue, below] at ($(P)+(270:0.6)$) {$37^{\circ}$};
+
+                % Layout angle radiating from the center pump station O
+                \begin{scope}
+                    \clip (O) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (O) circle (0.4);
+                    \draw[red, thick] (O) circle (0.4);
+                \end{scope}
+                \node[red, below] at ($(O)+(275:0.6)$) {$\angle AOB$};
+
+                % --- Step 4: Draw Framework Lines ---
+                \draw[thick] (O) -- (A);
+                \draw[thick] (O) -- (B);
+                \draw[thick] (P) -- (A);
+                \draw[thick] (P) -- (B);
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {O/above, A/left, B/right, P/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>Using the angle-at-center theorem, the central angle is twice the circumference angle:</p>
@@ -363,6 +657,53 @@
         <exercise>
             <statement>
                 <p>A semicircular skateboard half-pipe is constructed with a flat coping deck edge extending as a diameter line from point <m>X</m> to point <m>Y</m>. A safety camera is anchored at point <m>Z</m> anywhere along the curved concrete bowl edge. What structural angle <m>\angle XZY</m> is formed by the sightlines from the camera to the two ends of the coping deck?</p>
+                <figure xml:id="angle-in-semicircle-skateboard">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Points via Pure Angles ---
+                \coordinate (O) at (0,0);
+                
+                % Diameter lines for the flat coping deck edge
+                \coordinate (X) at (180:2.5);
+                \coordinate (Y) at (0:2.5);
+                
+                % Safety camera anchored along the curved concrete bowl edge
+                \coordinate (Z) at (115:2.5);
+
+                % --- Step 2: Draw the Semicircular Half-Pipe Rim ---
+                % Draws the lower semicircle path representing the bowl/half-pipe
+                \draw[thick] (X) arc (180:360:2.5);
+                % Draws the upper semicircle as a light or dashed line for completeness if needed, 
+                % but since it is a half-pipe, we draw the solid upper arc where the camera sits.
+                \draw[thick] (0:2.5) arc (0:180:2.5);
+                
+                % --- Step 3: Draw Highlighted Angle (Thales's Theorem) ---
+                % Angle XZY is an angle inscribed in a semicircle (90 degrees)
+                \begin{scope}
+                    \clip (Z) -- (X) -- (Y) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (Z) circle (0.4);
+                    \draw[red, thick] (Z) circle (0.4);
+                \end{scope}
+                \node[red, below right] at ($(Z)+(295:0.5)$) {$\angle XZY$};
+
+                % --- Step 4: Draw Sightlines and Coping Deck ---
+                \draw[thick] (X) -- (Y); % Flat coping deck edge (Diameter line)
+                \draw[thick] (X) -- (Z); % Sightline from camera to end X
+                \draw[thick] (Y) -- (Z); % Sightline from camera to end Y
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {X/left, Y/right, Z/above left} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>Since the coping deck line forms a true circle diameter, any angle drawn from its endpoints to the curved perimeter boundary forms an angle in a semicircle:</p>
@@ -376,6 +717,57 @@
         <exercise>
             <statement>
                 <p>A circle theater balcony stage setup has two primary sound speakers mounted at perimeter points <m>A</m> and <m>B</m>. A sound check technician at seat location <m>M</m> along the back wall measures an audio spread angle of <m>\angle AMB = 48^\circ</m>. If the technician moves to seat location <m>N</m> further along the same continuous wall arc segment, what sound spread angle <m>\angle ANB</m> will they experience?</p>
+                <figure xml:id="angles-same-segment-theater">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Perimeter Coordinates ---
+                \coordinate (O) at (0,0);
+                
+                % Primary sound speakers mounted at perimeter points
+                \coordinate (A) at (210:2.5);
+                \coordinate (B) at (330:2.5);
+                
+                % Seat locations along the continuous back wall arc segment
+                \coordinate (M) at (115:2.5);
+                \coordinate (N) at (55:2.5);
+
+                % --- Step 2: Draw the Semicircular/Circular Balcony Rim ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Audio spread angle at seat location M (48 degrees)
+                \begin{scope}
+                    \clip (M) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (M) circle (0.5);
+                    \draw[blue, thick] (M) circle (0.5);
+                \end{scope}
+                \node[blue, below] at ($(M)+(280:0.6)$) {$48^{\circ}$};
+
+                % Audio spread angle at seat location N
+                \begin{scope}
+                    \clip (N) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (N) circle (0.5);
+                    \draw[red, thick] (N) circle (0.5);
+                \end{scope}
+                \node[red, below left] at ($(N)+(245:0.6)$) {$\angle ANB$};
+
+                % --- Step 4: Draw Sound Trajectory Sightlines ---
+                \draw[thick] (A) -- (M) -- (B);
+                \draw[thick] (A) -- (N) -- (B);
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {A/left, B/right, M/above, N/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>Angles subtended by the same arc in the same circular segment are uniform:</p>
@@ -389,6 +781,54 @@
         <exercise>
             <statement>
                 <p>A circular wall clock has four electrical terminals installed on its rim casing at points <m>K</m>, <m>L</m>, <m>M</m>, and <m>N</m> sequentially to manage wiring paths. If the internal component angle at terminal <m>L</m> measures <m>\angle KNM = 115^\circ</m>, calculate the required structural angle at the opposite terminal <m>L</m>, denoted as <m>\angle KLM</m>.</p>
+                <figure xml:id="cyclic-quad-wall-clock">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Points via Pure Angles ---
+                \coordinate (O) at (0,0);
+                
+                % Four electrical terminals forming a cyclic quadrilateral sequentially
+                \coordinate (K) at (120:2.5);
+                \coordinate (L) at (40:2.5);
+                \coordinate (M) at (300:2.5);
+                \coordinate (N) at (210:2.5);
+
+                % --- Step 2: Draw the Circular Wall Clock Casing ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Internal component angle at terminal N (115 degrees)
+                \begin{scope}
+                    \clip (N) -- (K) -- (M) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (N) circle (0.5);
+                    \draw[blue, thick] (N) circle (0.5);
+                \end{scope}
+                \node[blue, right] at ($(N)+(15:0.6)$) {$115^{\circ}$};
+
+                % Structural angle at the opposite terminal L
+                \begin{scope}
+                    \clip (L) -- (K) -- (M) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (L) circle (0.5);
+                    \draw[red, thick] (L) circle (0.5);
+                \end{scope}
+                \node[red, left] at ($(L)+(190:0.6)$) {$\angle KLM$};
+
+                % --- Step 4: Draw Wiring Path Segments ---
+                \draw[thick] (K) -- (L) -- (M) -- (N) -- cycle;
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {K/above left, L/above right, M/below right, N/left} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>The four casing terminals form an embedded cyclic quadrilateral. Opposite interior angles must sum to <m>180^\circ</m>:</p>
@@ -404,6 +844,58 @@
         <exercise>
             <statement>
                 <p>A  wheel with a center axle axis point <m>O</m> has structural support pins at positions <m>P</m> and <m>Q</m> on its outer track. A passenger boarding car is located at point <m>R</m> on the top rim. An engineer notices the system alignment equations state that central axle angle <m>\angle POQ = 6x + 20^\circ</m> and the top car angle <m>\angle PRQ = 2x + 25^\circ</m>. Find the alignment variable value for <m>x</m>.</p>
+                <figure xml:id="central-angle-wheel-alignment">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Track Coordinates ---
+                \coordinate (O) at (0,0);
+                
+                % Structural support pins on the outer track
+                \coordinate (P) at (220:2.5);
+                \coordinate (Q) at (320:2.5);
+                
+                % Passenger boarding car located on the top rim
+                \coordinate (R) at (85:2.5);
+
+                % --- Step 2: Draw the Circular Wheel Track ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Central axle angle POQ
+                \begin{scope}
+                    \clip (O) -- (P) -- (Q) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (O) circle (0.4);
+                    \draw[red, thick] (O) circle (0.4);
+                \end{scope}
+                \node[red, below] at ($(O)+(270:0.5)$) {$6x + 20^{\circ}$};
+
+                % Top car angle PRQ
+                \begin{scope}
+                    \clip (R) -- (P) -- (Q) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (R) circle (0.5);
+                    \draw[blue, thick] (R) circle (0.5);
+                \end{scope}
+                \node[blue, below] at ($(R)+(270:0.6)$) {$2x + 25^{\circ}$};
+
+                % --- Step 4: Draw Structural Connections ---
+                \draw[thick] (O) -- (P);
+                \draw[thick] (O) -- (Q);
+                \draw[thick] (R) -- (P);
+                \draw[thick] (R) -- (Q);
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {O/above right, P/left, Q/right, R/above} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>Set up the relationship where the central axle angle equals twice the upper rim boundary angle:</p>
@@ -422,6 +914,58 @@
         <exercise>
             <statement>
                 <p>A corporate logo layout circular in shape connects four brand icon hubs along its outer rim boundary at positions <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> sequentially. The graphic designer extends the straight base boundary line segment <m>AB</m> past hub <m>B</m> to an external alignment point <m>E</m> to guide an accent banner. If the interior opposite icon hub angle measures <m>\angle ADC = 82^\circ</m>, evaluate the measure of the exterior layout angle <m>\angle CBE</m>.</p>
+                <figure xml:id="cyclic-quad-corporate-logo">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Center and Points via Pure Angles ---
+                \coordinate (O) at (0,0);
+                
+                % Four brand icon hubs along the rim boundary sequentially
+                \coordinate (A) at (200:2.5);
+                \coordinate (B) at (320:2.5);
+                \coordinate (C) at (50:2.5);
+                \coordinate (D) at (120:2.5);
+                
+                % Extension point E along the line AB past hub B
+                \coordinate (E) at ($(B) + (20:1.2)$);
+
+                % --- Step 2: Draw the Circular Logo Layout ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Highlighted Angles ---
+                % Interior opposite icon hub angle at D (82 degrees)
+                \begin{scope}
+                    \clip (D) -- (A) -- (C) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.6] (D) circle (0.5);
+                    \draw[blue, thick] (D) circle (0.5);
+                \end{scope}
+                \node[blue, above] at ($(D)+(280:0.6)$) {$82^{\circ}$};
+
+                % Exterior layout angle at B (Angle CBE)
+                \begin{scope}
+                    \clip (B) -- (C) -- (E) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (B) circle (0.5);
+                    \draw[red, thick] (B) circle (0.5);
+                \end{scope}
+                \node[red, right] at ($(B)+(40:0.6)$) {$\angle CBE$};
+
+                % --- Step 4: Draw Framework and Extension Lines ---
+                \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+                \draw[thick, dashed] (B) -- (E); 
+
+                % --- Step 5: Points and Labels ---
+                \foreach \pt/\pos in {A/left, B/below, C/right, D/above, E/right} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {$\pt$};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>By applying the exterior angle theorem of a cyclic quadrilateral, the exterior angle created by extending a side is equal to the interior opposite angle across the layout:</p>
