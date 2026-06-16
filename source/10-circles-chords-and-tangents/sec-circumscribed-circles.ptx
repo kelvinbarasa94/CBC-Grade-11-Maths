@@ -77,7 +77,7 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Draw a triangle <m>ABC</m> of your choice using a ruler. Using a compass, try to draw a circle that passes exactly through all three vertices. Mark the centre you used. (You may need several attempts!)
+                                Draw a triangle <m>ABC</m> of your choice using a ruler. Using a compass, try to draw a circle that passes exactly through all three vertices. Mark the centre <m>O</m> you used. (You may need several attempts!)
                             </p>
                         </li>
                         <li>
@@ -95,46 +95,8 @@
                                 </p>
                             </solution>
                         </li>
-                        <li>
-                            <p>
-                                Construct the perpendicular bisector of <m>AB</m> using compasses and a ruler. Then construct the perpendicular bisector of <m>BC</m>. Label their intersection <m>O</m>.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Measure <m>OA</m>, <m>OB</m>, and <m>OC</m>. Record them in the table below. Draw a circle with centre <m>O</m> and radius <m>OA</m>. Does it pass through all three vertices?
-                            </p>
-                            <solution component="lesson-plan">
-                                <p>
-                                    The three distances should be equal up to measurement error. The circle passes through all three vertices — this confirms that <m>O</m> is equidistant from all three vertices.
-                                </p>
-                            </solution>
-                        </li>
                     </ol>
                 </p>
-                <table>
-                    <title>Distances from circumcenter to vertices</title>
-                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
-                        <row header="yes" bottom="medium">
-                            <cell>Triangle</cell>
-                            <cell><m>OA</m> (mm)</cell>
-                            <cell><m>OB</m> (mm)</cell>
-                            <cell><m>OC</m> (mm)</cell>
-                        </row>
-                        <row>
-                            <cell>1</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>2</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>3</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                    </tabular>
-                </table>
             </paragraphs>
         </statement>
     </activity>
@@ -162,35 +124,180 @@
             <ul>
                 <li>
                     <p>
-                        <alert>Connecting to Learner Work:</alert> Ask learners to share their distances. Confirm they are (approximately) equal. Tell learners: <q>This point <m>O</m> is called the <term>circumcenter</term>. The circle centred at <m>O</m> that passes through all three vertices is the <term>circumscribed circle</term>, or <term>circumcircle</term>, and its radius <m>R</m> is the <term>circumradius</term>.</q>
+                        Ask: <q>Was <m>O</m> inside or outside your triangle? Did everyone's triangle give the same answer?</q>
                     </p>
                 </li>
                 <li>
                     <p>
-                        Ask: <q>Was <m>O</m> inside or outside your triangle? Did everyone's triangle give the same answer?</q> Draw attention to the fact that the position of <m>O</m> depends on whether the triangle is acute, right, or obtuse.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        For a right triangle, <m>O</m> always falls at the midpoint of the hypotenuse — learners can verify this with their own diagram.
+                        Emphasise how a repeatable procedure is needed to construct the circumcenter and circumcircle for any triangle.
                     </p>
                 </li>
             </ul>
         </paragraphs>
     </axiom>
 
+    <paragraphs>
+        <title>Constructing the Circumscribed Circle</title>
+        <p>
+            To construct the circumscribed circle of a triangle using only a pair of compasses and a straightedge, follow these steps. The idea is that the centre must be equidistant from all three vertices, so it lies on the perpendicular bisector of every side.
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Draw the triangle <m>ABC</m> accurately with a ruler.
+                </p>
+                <figure xml:id="fig-circumcircle-con-step1">
+                    <caption>Step 1: the triangle <m>ABC</m>.</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                \tkzDefPoints{0/0/B, 5/0/C, 1.5/4/A}
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawPoints(A,B,C)
+                                \tkzLabelPoints[above](A)
+                                \tkzLabelPoints[below left](B)
+                                \tkzLabelPoints[below right](C)
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Construct the perpendicular bisector of side <m>AB</m>. Open your compasses to more than half of <m>AB</m>. With the point at <m>A</m>, draw a short arc above and below <m>AB</m>; without changing the width, draw two matching arcs from <m>B</m>. The arcs cross at two points, and the straight line through these points is the perpendicular bisector of <m>AB</m> — every point on it is equidistant from <m>A</m> and <m>B</m>.
+                </p>
+                <figure xml:id="fig-circumcircle-con-step2">
+                    <caption>Step 2: equal arcs from <m>A</m> and <m>B</m> give the perpendicular bisector of <m>AB</m> (red).</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                \tkzDefPoints{0/0/B, 5/0/C, 1.5/4/A}
+                                \tkzDefPointBy[homothety=center A ratio 0.7](B)\tkzGetPoint{cAB}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](A)\tkzGetPoint{cBA}
+                                \tkzInterCC(A,cAB)(B,cBA)\tkzGetPoints{P1}{P2}
+                                \tkzDefMidPoint(A,B)\tkzGetPoint{Mab}
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzCompass[red](A,P1)\tkzCompass[red](A,P2)
+                                \tkzCompass[red](B,P1)\tkzCompass[red](B,P2)
+                                \tkzDrawLine[add=0.25 and 0.25, red, thick](P1,P2)
+                                \tkzMarkRightAngle[size=0.18](A,Mab,P1)
+                                \tkzDrawPoints(A,B,C)
+                                \tkzLabelPoints[above](A)
+                                \tkzLabelPoints[below left](B)
+                                \tkzLabelPoints[below right](C)
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    In exactly the same way, construct the perpendicular bisector of a second side, <m>BC</m>.
+                </p>
+                <figure xml:id="fig-circumcircle-con-step3">
+                    <caption>Step 3: the perpendicular bisector of <m>BC</m> (blue), built the same way.</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                \tkzDefPoints{0/0/B, 5/0/C, 1.5/4/A}
+                                \tkzDefPointBy[homothety=center A ratio 0.7](B)\tkzGetPoint{cAB}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](A)\tkzGetPoint{cBA}
+                                \tkzInterCC(A,cAB)(B,cBA)\tkzGetPoints{P1}{P2}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](C)\tkzGetPoint{cBC}
+                                \tkzDefPointBy[homothety=center C ratio 0.7](B)\tkzGetPoint{cCB}
+                                \tkzInterCC(B,cBC)(C,cCB)\tkzGetPoints{Q1}{Q2}
+                                \tkzDefMidPoint(B,C)\tkzGetPoint{Mbc}
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawLine[add=0.25 and 0.25, red!45, thin](P1,P2)
+                                \tkzCompass[blue](B,Q1)\tkzCompass[blue](B,Q2)
+                                \tkzCompass[blue](C,Q1)\tkzCompass[blue](C,Q2)
+                                \tkzDrawLine[add=0.25 and 0.25, blue, thick](Q1,Q2)
+                                \tkzMarkRightAngle[size=0.18](C,Mbc,Q1)
+                                \tkzDrawPoints(A,B,C)
+                                \tkzLabelPoints[above](A)
+                                \tkzLabelPoints[below left](B)
+                                \tkzLabelPoints[below right](C)
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    The two perpendicular bisectors meet at a single point <m>O</m>, the <term>circumcenter</term>. Because <m>O</m> lies on the bisector of <m>AB</m> it is equidistant from <m>A</m> and <m>B</m>; because it lies on the bisector of <m>BC</m> it is equidistant from <m>B</m> and <m>C</m>. Therefore <m>OA = OB = OC</m> (shown dotted).
+                </p>
+                <figure xml:id="fig-circumcircle-con-step4">
+                    <caption>Step 4: the perpendicular bisectors meet at the circumcenter <m>O</m>, with <m>OA = OB = OC</m>.</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                \tkzDefPoints{0/0/B, 5/0/C, 1.5/4/A}
+                                \tkzDefPointBy[homothety=center A ratio 0.7](B)\tkzGetPoint{cAB}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](A)\tkzGetPoint{cBA}
+                                \tkzInterCC(A,cAB)(B,cBA)\tkzGetPoints{P1}{P2}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](C)\tkzGetPoint{cBC}
+                                \tkzDefPointBy[homothety=center C ratio 0.7](B)\tkzGetPoint{cCB}
+                                \tkzInterCC(B,cBC)(C,cCB)\tkzGetPoints{Q1}{Q2}
+                                \tkzInterLL(P1,P2)(Q1,Q2)\tkzGetPoint{O}
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawLine[add=0.25 and 0.25, red!55, thin](P1,P2)
+                                \tkzDrawLine[add=0.25 and 0.25, blue!55, thin](Q1,Q2)
+                                \tkzDrawSegments[densely dotted, gray](O,A O,B O,C)
+                                \tkzDrawPoints(A,B,C)
+                                \tkzDrawPoint[size=3.5pt](O)
+                                \tkzLabelPoints[above](A)
+                                \tkzLabelPoints[below left](B)
+                                \tkzLabelPoints[below right](C)
+                                \tkzLabelPoint[above right](O){$O$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </li>
+            <li>
+                <p>
+                    Set your compasses to the distance <m>OA</m> and, with the point at <m>O</m>, draw the circle. This <term>circumscribed circle</term> passes through all three vertices; its radius is the circumradius <m>R</m>. As a check, the perpendicular bisector of the third side, <m>CA</m>, passes through <m>O</m> too.
+                </p>
+                <figure xml:id="fig-circumcircle-con-step5">
+                    <caption>Step 5: the circle with centre <m>O</m> and radius <m>R = OA</m> is the circumscribed circle.</caption>
+                    <image width="50%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                \tkzDefPoints{0/0/B, 5/0/C, 1.5/4/A}
+                                \tkzDefPointBy[homothety=center A ratio 0.7](B)\tkzGetPoint{cAB}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](A)\tkzGetPoint{cBA}
+                                \tkzInterCC(A,cAB)(B,cBA)\tkzGetPoints{P1}{P2}
+                                \tkzDefPointBy[homothety=center B ratio 0.7](C)\tkzGetPoint{cBC}
+                                \tkzDefPointBy[homothety=center C ratio 0.7](B)\tkzGetPoint{cCB}
+                                \tkzInterCC(B,cBC)(C,cCB)\tkzGetPoints{Q1}{Q2}
+                                \tkzInterLL(P1,P2)(Q1,Q2)\tkzGetPoint{O}
+                                \tkzDrawPolygon[thick](A,B,C)
+                                \tkzDrawLine[add=0.1 and 0.1, red!35, thin](P1,P2)
+                                \tkzDrawLine[add=0.1 and 0.1, blue!35, thin](Q1,Q2)
+                                \tkzDrawCircle[teal, thick](O,A)
+                                \tkzDrawSegment[densely dotted, gray](O,A)
+                                \tkzLabelSegment[above, sloped](O,A){$R$}
+                                \tkzDrawPoints(A,B,C)
+                                \tkzDrawPoint[size=3.5pt](O)
+                                \tkzLabelPoints[above](A)
+                                \tkzLabelPoints[below left](B)
+                                \tkzLabelPoints[below right](C)
+                                \tkzLabelPoint[below right](O){$O$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </li>
+        </ol>
+    </paragraphs>
+
     <theorem xml:id="thm-circumscribed-circle">
         <title>The Circumcircle and Circumradius</title>
         <statement>
             <p>
-                The three perpendicular bisectors of the sides of any triangle meet at a single point <m>O</m>, called the <term>circumcenter</term>. The circle centred at <m>O</m> passing through all three vertices is the <term>circumscribed circle</term> (or <term>circumcircle</term>). Its radius, the <term>circumradius</term> <m>R</m>, satisfies
-                <md>
-                    R = \frac{abc}{4 \cdot \text{Area}},
-                </md>
-                where <m>a</m>, <m>b</m>, <m>c</m> are the side lengths of the triangle.
-            </p>
-            <figure xml:id="fig-circumcircle-thm">
-                <caption>The circumcircle of triangle <m>ABC</m>. The three perpendicular bisectors (grey) meet at circumcenter <m>O</m>, which is equidistant from all three vertices: <m>OA = OB = OC = R</m>.</caption>
+                Suppose <m>\triangle ABC</m> has side lengths <m>a = BC</m>, <m>b = AC</m>, and <m>c = AB</m>.
+                <figure xml:id="fig-circumcircle-thm">
+                <caption>The circumcircle of triangle <m>ABC</m>.</caption>
                 <image width="65%">
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
@@ -207,83 +314,113 @@
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[blue!70!black, thick](O,A)
-                          \tkzDrawLines[gray!55, thin, add=0.8 and 0.8](MAB,O)(MBC,O)(MAC,O)
-                          \tkzDrawSegments[dashed, red!60!black](O,A)(O,B)(O,C)
+                          \tkzDrawSegments[gray!55](MAB,O MBC,O MAC,O)
+                          \tkzDrawSegments[red!60!black](O,A O,B O,C)
                           \tkzDrawPoints[size=3pt](A,B,C,O)
 
                           %% --- MARK ---
-                          \tkzMarkRightAngle[size=0.25](A,MAB,O)
-                          \tkzMarkRightAngle[size=0.25](B,MBC,O)
-                          \tkzMarkRightAngle[size=0.25](A,MAC,O)
-                          \tkzMarkSegments[mark=|](O,A)(O,B)(O,C)
+                          \tkzMarkRightAngle[size=0.15](A,MAB,O)
+                          \tkzMarkRightAngle[size=0.15](B,MBC,O)
+                          \tkzMarkRightAngle[size=0.15](A,MAC,O)
+                          \tkzMarkSegments[mark=|](O,A O,B O,C)
 
                           %% --- LABEL ---
                           \tkzLabelPoints[below left](A)
                           \tkzLabelPoints[below right](B)
                           \tkzLabelPoints[above](C)
                           \tkzLabelPoint[above right](O){$O$}
-                          \tkzLabelSegment[pos=0.55, left](O,C){$R$}
+                          \tkzLabelSegment[sloped, above](O,A){$R$}
+                          \tkzLabelSegment[above left](A,C){$b$}
+                          \tkzLabelSegment[above right](B,C){$a$}
+                          \tkzLabelSegment[below](A,B){$c$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+                </figure>
+                The <term>circumradius</term> <m>R</m>, satisfies
+                <md>
+                    R = \frac{abc}{4 \cdot \text{Area}(\triangle ABC)}.
+                </md>
+            </p>
+        </statement>
+        <proof>
+            <p>
+                Let <m>\angle ACB = \theta</m>, and label the midpoint of <m>AB</m> as <m>M</m>, so <m>\triangle AMO</m> is a right-angled triangle.
+            </p>
+            <figure xml:id="fig-circumcircle-thm-proof">
+                <caption>The circumcircle of triangle <m>ABC</m>.</caption>
+                <image width="85%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.0]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 6/0/B, 2.5/4/C}
+
+                          %% --- CALCULATE ---
+                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+                          \tkzDefMidPoint(A,B)  \tkzGetPoint{MAB}
+                          \tkzDefMidPoint(B,C)  \tkzGetPoint{MBC}
+                          \tkzDefMidPoint(A,C)  \tkzGetPoint{MAC}
+
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircle[blue!70!black, thick](O,A)
+                          \tkzDrawSegments[gray!55, thin](MAB,O MBC,O MAC,O)
+                          \tkzDrawSegments[red!60!black](O,A O,B O,C)
+                          \tkzDrawPoints[size=3pt](A,B,C,O,MAB)
+
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.15](A,MAB,O)
+                          \tkzMarkRightAngle[size=0.15](B,MBC,O)
+                          \tkzMarkRightAngle[size=0.15](A,MAC,O)
+                          \tkzMarkAngle[size=0.4](A,O,MAB)
+                          \tkzMarkAngle[size=0.4](A,C,B)
+                          \tkzLabelAngle[pos=0.6](A,C,B){$\theta$}
+                          \tkzLabelAngle[pos=0.6](A,O,MAB){$\theta$}
+                          \tkzFillAngle[blue!30, opacity=0.5, size=0.4](A,C,B)
+                          \tkzFillAngle[blue!30, opacity=0.5, size=0.4](A,O,MAB)
+                          \tkzMarkSegments[mark=|](O,A O,B O,C)
+                          \tkzMarkSegments[mark=||](MAB,A MAB,B)
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoint[below](MAB){$M$}
+                          \tkzLabelPoints[above](C)
+                          \tkzLabelPoint[above right](O){$O$}
+                          \tkzLabelSegment[above, sloped](O,A){$R$}
+                          \tkzLabelSegment[above left](A,C){$b$}
+                          \tkzLabelSegment[above right](B,C){$a$}
+                          \tkzLabelSegment[below, yshift=-20pt](A,B){$c$}
+                          \tkzLabelSegment[below](MAB,A){$c/2$}
 
                         \end{tikzpicture}
                     </latex-image>
                 </image>
             </figure>
-        </statement>
-        <proof>
             <p>
-                Let <m>O</m> be the intersection of the perpendicular bisector of <m>AB</m> and the perpendicular bisector of <m>BC</m>. Since <m>O</m> lies on the perpendicular bisector of <m>AB</m>, it is equidistant from <m>A</m> and <m>B</m>: <m>OA = OB</m>. Since <m>O</m> lies on the perpendicular bisector of <m>BC</m>, we have <m>OB = OC</m>. Therefore <m>OA = OB = OC</m>, so the circle with centre <m>O</m> and radius <m>R = OA</m> passes through all three vertices.
+                We have <m>\angle AOB = 2\theta</m> (central angle is twice the inscribed angle), and <m>\angle AOM = \frac{\angle AOB}{2} = \theta</m>, as <m>\triangle AOM</m> and <m>\triangle BOC</m> are congruent (with three equal sides).
             </p>
             <p>
-                The formula <m>R = abc/(4 \cdot \text{Area})</m> follows from the extended law of sines: <m>a/\sin A = 2R</m>, combined with the formula Area <m>= \tfrac{1}{2}bc\sin A</m>, which gives <m>\sin A = 2\,\text{Area}/(bc)</m> and hence <m>R = a/(2\sin A) = abc/(4\,\text{Area})</m>.
+                Moreover, <m>AM = \frac{AB}{2} = \frac{c}{2}</m> since <m>M</m> is a midpoint, and <m>AO = R</m> by definition of the circumradius. Using right-angled trigonometry in <m>\triangle AMO</m> gives:
+                <md number="yes" xml:id="eq-circumradius-sine">
+                    \sin \theta = \frac{\frac{c}{2}}{R} = \frac{c}{2R}
+                </md>
+            </p>
+            <p>
+                By the formula for the area of <m>\triangle ABC</m> in terms of two sides and the included angle, we have:
+                <md>
+                    \text{Area}(\triangle ABC) = \frac{1}{2}ab \sin \theta
+                </md>
+                Applying <xref ref="eq-circumradius-sine" /> gives:
+                <md>
+                    <mrow> \text{Area}(\triangle ABC) = \frac{1}{2}ab \cdot \frac{c}{2R} = \frac{abc}{4R} </mrow>
+                    <mrow> R = \frac{abc}{4 \cdot \text{Area}(\triangle ABC)}. </mrow>
+                </md>  
             </p>
         </proof>
     </theorem>
-
-    <insight>
-        <p>
-            <ul>
-                <li>
-                    <p>
-                        <term>The circumcenter</term> is the intersection of the three perpendicular bisectors of the sides. It is equidistant from all three vertices: <m>OA = OB = OC = R</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Circumradius formula:</term>
-                        <md>
-                            R = \frac{abc}{4 \cdot \text{Area}}.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Extended law of sines:</term>
-                        <md>
-                            \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Right-triangle shortcut:</term> for a right triangle with hypotenuse <m>c</m>,
-                        <md>
-                            R = \frac{c}{2}.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Position of the circumcenter:</term>
-                        <ul>
-                            <li><p>Acute triangle: <m>O</m> is <em>inside</em> the triangle.</p></li>
-                            <li><p>Right triangle: <m>O</m> is at the <em>midpoint of the hypotenuse</em>.</p></li>
-                            <li><p>Obtuse triangle: <m>O</m> is <em>outside</em> the triangle.</p></li>
-                        </ul>
-                    </p>
-                </li>
-            </ul>
-        </p>
-    </insight>
 
     <paragraphs>
         <title>Comparing the Circumcircle and the Incircle</title>
@@ -301,16 +438,16 @@
                     </p>
                 </li>
             </ul>
-            For an equilateral triangle, both circles share the same centre and <m>R = 2r</m> — the circumradius is exactly twice the inradius.
+            For an equilateral triangle, both circles share the same centre and <m>R = 2r</m>; the circumradius is exactly twice the inradius.
         </p>
-    </paragraphs>
+    </paragraphs>   
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <example>
         <statement>
             <p>
-                Draw a triangle <m>ABC</m> with <m>AB = 7</m> cm, <m>BC = 5</m> cm, and <m>CA = 6</m> cm. Construct the circumcircle and state the circumradius.
+                Draw a triangle <m>ABC</m> with <m>AB = 7</m> cm, <m>BC = 5</m> cm, and <m>CA = 6</m> cm. Construct the circumcircle and measure the circumradius. Confirm this by calculation.
             </p>
         </statement>
         <solution>
@@ -331,7 +468,7 @@
                 </ol>
             </p>
             <p>
-                Measuring <m>OA</m> from an accurate drawing gives <m>R \approx 3.4</m> cm. We can verify using the formula: with <m>a = 5</m>, <m>b = 6</m>, <m>c = 7</m>, semi-perimeter <m>s = 9</m>, Heron's formula gives
+                Measuring <m>OA</m> from an accurate drawing gives <m>R \approx 3.6</m> cm. We can verify using the formula: with <m>a = 5</m>, <m>b = 6</m>, <m>c = 7</m>, semi-perimeter <m>s = 9</m>, Heron's formula gives
                 <md>
                     <mrow>\text{Area} \amp= \sqrt{9 \times 4 \times 3 \times 2} = \sqrt{216} = 6\sqrt{6} \text{ cm}^2</mrow>
                     <mrow>R \amp= \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{210}{24\sqrt{6}} = \frac{35}{4\sqrt{6}} = \frac{35\sqrt{6}}{24} \approx 3.57 \text{ cm.}</mrow>
@@ -359,7 +496,7 @@
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[blue!70!black, thick](O,A)
-                          \tkzDrawLines[gray!55, thin, add=0.6 and 0.6](MAB,O)(MBC,O)
+                          \tkzDrawLines[gray!55, thin, add=0.6 and 0.6](MAB,O MBC,O)
                           \tkzDrawPoints[size=3pt](A,B,C,O)
 
                           %% --- MARK ---
@@ -370,7 +507,7 @@
                           \tkzLabelPoints[below left](A)
                           \tkzLabelPoints[below right](B)
                           \tkzLabelPoints[above](C)
-                          \tkzLabelPoint[above right](O){$O$}
+                          \tkzLabelPoint[above left](O){$O$}
                           \tkzLabelSegment[below](A,B){$7$}
                           \tkzLabelSegment[above right](B,C){$5$}
                           \tkzLabelSegment[left](A,C){$6$}
@@ -392,6 +529,40 @@
                 </ol>
             </p>
             <figure xml:id="fig-circum-6-8-10">
+                <caption>Right triangle with legs <m>6</m> cm and <m>8</m> cm, hypotenuse <m>10</m> cm.</caption>
+                <image width="60%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.7]
+
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/A, 6/0/B, 0/8/C}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawPoints[size=3pt](A,B,C)
+
+                          %% --- MARK ---
+                          \tkzMarkRightAngle[size=0.3](B,A,C)
+
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](A)
+                          \tkzLabelPoints[below right](B)
+                          \tkzLabelPoints[above left](C)
+                          \tkzLabelSegment[below](A,B){$6$}
+                          \tkzLabelSegment[left](A,C){$8$}
+                          \tkzLabelSegment[above right](B,C){$10$}
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+        </statement>
+        <solution>
+            <ol>
+                <li>
+                    <p>
+                        Draw the right triangle with the right angle at one vertex. Construct the perpendicular bisectors of two sides, they meet at <m>O</m>.
+                    </p>
+                    <figure xml:id="fig-circum-6-8-10-soln">
                 <caption>Right triangle with legs <m>6</m> cm and <m>8</m> cm, hypotenuse <m>10</m> cm. The circumcenter <m>O</m> lies at the midpoint of the hypotenuse.</caption>
                 <image width="60%">
                     <latex-image>
@@ -407,16 +578,17 @@
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[blue!70!black, thick](O,A)
                           \tkzDrawPoints[size=3pt](A,B,C,O)
+                          \tkzDrawSegment(A,O)
 
                           %% --- MARK ---
                           \tkzMarkRightAngle[size=0.3](B,A,C)
-                          \tkzMarkSegments[mark=|](O,B)(O,C)
+                          \tkzMarkSegments[mark=|](O,B O,C O,A)
 
                           %% --- LABEL ---
                           \tkzLabelPoints[below left](A)
                           \tkzLabelPoints[below right](B)
                           \tkzLabelPoints[above left](C)
-                          \tkzLabelPoint[right](O){$O$}
+                          \tkzLabelPoint[below left](O){$O$}
                           \tkzLabelSegment[below](A,B){$6$}
                           \tkzLabelSegment[left](A,C){$8$}
                           \tkzLabelSegment[above right](B,C){$10$}
@@ -425,67 +597,54 @@
                     </latex-image>
                 </image>
             </figure>
-        </statement>
-        <solution>
-            <p>
-                (a) Draw the right triangle with the right angle at one vertex. Construct the perpendicular bisectors of two sides — they meet at <m>O</m>. You should find that <m>O</m> falls exactly at the midpoint of the hypotenuse (<m>10</m> cm side). This confirms the insight: for a right triangle, the circumcenter is always the midpoint of the hypotenuse.
-            </p>
-            <p>
-                (b) Check: <m>6^2 + 8^2 = 36 + 64 = 100 = 10^2</m>, so the hypotenuse is <m>c = 10</m> cm. Using the right-triangle shortcut:
-                <md>
-                    R = \frac{c}{2} = \frac{10}{2} = 5 \text{ cm.}
-                </md>
-                Verify with the general formula: Area <m>= \tfrac{1}{2} \times 6 \times 8 = 24</m> cm<m>^2</m>, so
-                <md>
-                    R = \frac{6 \times 8 \times 10}{4 \times 24} = \frac{480}{96} = 5 \text{ cm.} \checkmark
-                </md>
-                This should agree with the measured radius from part (a).
-            </p>
+                <p>
+                    The circumcenter <m>O</m> lies at the midpoint of the hypotenuse. This is because angles subtended by the diameter of a circle are always right angles (recall <xref ref="sec-angles-subtended-by-the-diameter"/>), so <m>CB</m> is a diameter.
+                </p>
+                </li>
+                <li>
+                    <p>
+                        The area of the triangle is <m>\frac{1}{2} \times 6 \times 8 = 24</m> cm<m>^2</m>. Using the general formula for the circumradius:
+                        <md>
+                            R = \frac{abc}{4 \cdot \text{Area}(\triangle ABC)} = \frac{6\times 8 \times 10}{4 \times 24} = 5 \text{ cm}
+                        </md>
+                        This agrees with the measured radius from part (a), and is also half of the hypotenuse, as expected.
+                    </p>
+                </li>
+            </ol>
         </solution>
     </example>
 
     <example>
         <statement>
             <p>
-                A triangle has sides <m>13</m> cm, <m>14</m> cm, and <m>15</m> cm.
-                <ol marker="(a)">
-                    <li>Draw the triangle to scale and construct the circumcircle. Measure the circumradius <m>R</m> from your diagram.</li>
-                    <li>Calculate <m>R</m> using the formula and compare with your measured value.</li>
-                </ol>
+                In a triangle, side <m>BC = 3\sqrt{3}</m> cm and the circumradius is <m>R = 3</m> cm. Find angle <m>BAC</m>.
             </p>
-            <figure xml:id="fig-circum-13-14-15">
-                <caption>Triangle with sides <m>13</m> cm, <m>14</m> cm, and <m>15</m> cm and its circumcircle with circumcenter <m>O</m>.</caption>
-                <image width="65%">
+            <figure xml:id="fig-circum-to-angle">
+                <caption>.</caption>
+                <image width="80%">
                     <latex-image>
-                        \begin{tikzpicture}[scale=0.5]
-
-                          %% --- SET ---
-                          \tkzDefPoints{0/0/A, 14/0/B}
-                          \pgfmathsetmacro{\rAC}{13}
-                          \pgfmathsetmacro{\rBC}{15}
-                          \tkzDefCircle[R](A,\rAC)  \tkzGetPoint{cAC}
-                          \tkzDefCircle[R](B,\rBC)  \tkzGetPoint{cBC}
-                          \tkzInterCC(A,cAC)(B,cBC)  \tkzGetPoints{C}{Cp}
-
-                          %% --- CALCULATE ---
-                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
-
-                          %% --- DRAW ---
-                          \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawCircle[blue!70!black, thick](O,A)
-                          \tkzDrawPoints[size=3pt](A,B,C,O)
-
-                          %% --- MARK ---
-
-                          %% --- LABEL ---
-                          \tkzLabelPoints[below left](A)
-                          \tkzLabelPoints[below right](B)
-                          \tkzLabelPoints[above](C)
-                          \tkzLabelPoint[right](O){$O$}
-                          \tkzLabelSegment[below](A,B){$14$}
-                          \tkzLabelSegment[above right](B,C){$15$}
-                          \tkzLabelSegment[left](A,C){$13$}
-
+                        \begin{tikzpicture}[scale=0.8]
+                            %% --- SET ---
+                            \tkzDefPoint(0,0){O}
+                            \tkzDefPointOnCircle[R = center O angle 190 radius 3] \tkzGetPoint{B}
+                            \tkzDefPointOnCircle[R = center O angle 60 radius 3] \tkzGetPoint{A}
+                            \tkzInterCC[R](B,5.19)(O,3) \tkzGetSecondPoint{C}
+                            
+                            %% --- DRAW ---
+                            \tkzDrawCircle[blue!70!black, thick](O,A)
+                            \tkzDrawPolygon[thick](A,B,C)
+                            \tkzDrawSegments[gray](O,B O,C)
+                            \tkzDrawPoints[size=2.5pt](A,B,C,O)
+                            %% --- MARK ---
+                            \tkzMarkAngle[size=0.9, fill=orange!25](B,A,C)
+                            \tkzLabelAngle[pos=1.3](B,A,C){$\theta$}
+                            %% --- LABEL ---
+                            \tkzLabelPoints[above](A)
+                            \tkzLabelPoints[left](B)
+                            \tkzLabelPoints[right](C)
+                            \tkzLabelPoint[above right](O){$O$}
+                            \tkzLabelSegment[above right, sloped](O,B){$3$}
+                            \tkzLabelSegment[below, left](B,C){$3\sqrt{3}$}
                         \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -493,84 +652,11 @@
         </statement>
         <solution>
             <p>
-                (a) Draw the triangle. Construct the perpendicular bisector of the side of length 14 cm and the perpendicular bisector of the side of length 15 cm. Their intersection is <m>O</m>. Draw the circle centred at <m>O</m> through any vertex — it should pass through all three. Measuring <m>R \approx 8.1</m> cm.
-            </p>
-            <p>
-                (b)
+                Using the same reasoning as in the proof of <xref ref="thm-circumscribed-circle"/>, we have:
                 <md>
-                    <mrow>s \amp= \frac{13+14+15}{2} = 21 \text{ cm}</mrow>
-                    <mrow>\text{Area} \amp= \sqrt{21 \times 8 \times 7 \times 6} = \sqrt{7056} = 84 \text{ cm}^2</mrow>
-                    <mrow>R \amp= \frac{13 \times 14 \times 15}{4 \times 84} = \frac{2730}{336} = \frac{65}{8} = 8.125 \text{ cm.}</mrow>
+                    \sin \theta = \frac{BC}{2R} = \frac{3\sqrt{3}}{2 \cdot 3} = \frac{\sqrt{3}}{2}
                 </md>
-                This agrees with the measured value from part (a).
-            </p>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-            <p>
-                A triangular market plot in Mombasa has boundary lengths <m>5</m> m, <m>12</m> m, and <m>13</m> m. The market committee wants to install a circular fence that runs exactly through all three corners of the plot. Find the radius of the fence.
-            </p>
-            <figure xml:id="fig-circum-5-12-13">
-                <caption>Right triangle with legs <m>5</m> m and <m>12</m> m, hypotenuse <m>13</m> m. The circumcenter <m>O</m> lies at the midpoint of the hypotenuse.</caption>
-                <image width="55%">
-                    <latex-image>
-                        \begin{tikzpicture}[scale=0.6]
-
-                          %% --- SET ---
-                          \tkzDefPoints{0/0/A, 5/0/B, 0/12/C}
-
-                          %% --- CALCULATE ---
-                          \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
-
-                          %% --- DRAW ---
-                          \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawCircle[blue!70!black, thick](O,A)
-                          \tkzDrawPoints[size=3pt](A,B,C,O)
-
-                          %% --- MARK ---
-                          \tkzMarkRightAngle[size=0.3](B,A,C)
-                          \tkzMarkSegments[mark=|](O,B)(O,C)
-
-                          %% --- LABEL ---
-                          \tkzLabelPoints[below left](A)
-                          \tkzLabelPoints[below right](B)
-                          \tkzLabelPoints[above left](C)
-                          \tkzLabelPoint[right](O){$O$}
-                          \tkzLabelSegment[below](A,B){$5$}
-                          \tkzLabelSegment[left](A,C){$12$}
-                          \tkzLabelSegment[above right](B,C){$13$}
-
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
-            </figure>
-        </statement>
-        <solution>
-            <p>
-                Check: <m>5^2 + 12^2 = 25 + 144 = 169 = 13^2</m>, so the plot is a right triangle with hypotenuse <m>13</m> m.
-                <md>
-                    R = \frac{13}{2} = 6.5 \text{ m.}
-                </md>
-                The circular fence has a radius of <m>6.5</m> m.
-            </p>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-            <p>
-                In a triangle, side <m>BC = 10</m> cm and the circumradius is <m>R = 8</m> cm. Find angle <m>BAC</m>.
-            </p>
-        </statement>
-        <solution>
-            <p>
-                By the extended law of sines, <m>a = 2R\sin A</m>, so
-                <md>
-                    \sin A = \frac{a}{2R} = \frac{10}{16} = \frac{5}{8}.
-                </md>
-                Therefore <m>A = \arcsin\!\left(\tfrac{5}{8}\right) \approx 38.7°</m>.
+                Thus using exact values, <m>\theta = 60^\circ</m>.
             </p>
         </solution>
     </example>
@@ -890,42 +976,37 @@
         <exercise>
             <statement>
                 <p>
-                    A triangle has sides <m>5</m> cm, <m>12</m> cm, and <m>13</m> cm.
+                    The points <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m> all lie on one circle, forming a <term>cyclic quadrilateral</term> <m>ABCD</m>. In it, <m>\angle ABC = 95^\circ</m> and <m>\angle BCD = 70^\circ</m>.
                     <ol marker="(a)">
-                        <li>Draw the triangle and construct its circumcircle. Mark the circumcenter <m>O</m> and measure <m>R</m>.</li>
-                        <li>Calculate <m>R</m> using the right-triangle shortcut, then verify using <m>R = abc/(4\,\text{Area})</m>.</li>
+                        <li>Find <m>\angle ADC</m>.</li>
+                        <li>Find <m>\angle DAB</m>.</li>
+                        <li>Add up all four angles of the quadrilateral. Why is this total the same for <em>any</em> quadrilateral?</li>
                     </ol>
                 </p>
-                <figure xml:id="fig-circum-exer-5-12-13">
-                    <caption>Right triangle with legs <m>5</m> cm and <m>12</m> cm, hypotenuse <m>13</m> cm, and its circumcircle.</caption>
-                    <image width="55%">
+                <figure xml:id="fig-circum-cyclic-quad">
+                    <caption>A cyclic quadrilateral <m>ABCD</m>. Opposite angles (<m>\angle B</m> and <m>\angle D</m>, shaded) are supplementary, and so are <m>\angle A</m> and <m>\angle C</m>.</caption>
+                    <image width="50%">
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.6]
-
-                              %% --- SET ---
-                              \tkzDefPoints{0/0/A, 5/0/B, 0/12/C}
-
-                              %% --- CALCULATE ---
-                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
-
-                              %% --- DRAW ---
-                              \tkzDrawPolygon[thick](A,B,C)
-                              \tkzDrawCircle[blue!70!black, thick](O,A)
-                              \tkzDrawPoints[size=3pt](A,B,C,O)
-
-                              %% --- MARK ---
-                              \tkzMarkRightAngle[size=0.3](B,A,C)
-                              \tkzMarkSegments[mark=|](O,B)(O,C)
-
-                              %% --- LABEL ---
-                              \tkzLabelPoints[below left](A)
-                              \tkzLabelPoints[below right](B)
-                              \tkzLabelPoints[above left](C)
-                              \tkzLabelPoint[right](O){$O$}
-                              \tkzLabelSegment[below](A,B){$5$}
-                              \tkzLabelSegment[left](A,C){$12$}
-                              \tkzLabelSegment[above right](B,C){$13$}
-
+                            \begin{tikzpicture}[scale=0.8]
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){O}
+                                \tkzDefShiftPoint[O](3,0){r0}
+                                \tkzDefPointBy[rotation=center O angle 120](r0)\tkzGetPoint{A}
+                                \tkzDefPointBy[rotation=center O angle 210](r0)\tkzGetPoint{B}
+                                \tkzDefPointBy[rotation=center O angle 300](r0)\tkzGetPoint{C}
+                                \tkzDefPointBy[rotation=center O angle 30](r0)\tkzGetPoint{D}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[blue!70!black, thick](O,A)
+                                \tkzDrawPolygon[thick](A,B,C,D)
+                                \tkzDrawPoints[size=2.5pt](A,B,C,D)
+                                %% --- MARK ---
+                                \tkzMarkAngle[size=0.7, fill=orange!25](A,B,C)
+                                \tkzMarkAngle[size=0.7, fill=teal!25](C,D,A)
+                                %% --- LABEL ---
+                                \tkzLabelPoints[above left](A)
+                                \tkzLabelPoints[below left](B)
+                                \tkzLabelPoints[below right](C)
+                                \tkzLabelPoints[right](D)
                             \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -933,10 +1014,11 @@
             </statement>
             <solution>
                 <p>
-                    (a) The triangle is right-angled (<m>5^2+12^2 = 13^2</m>), so <m>O</m> falls at the midpoint of the hypotenuse. Measured <m>R \approx 6.5</m> cm.
-                </p>
-                <p>
-                    (b) Shortcut: <m>R = 13/2 = 6.5</m> cm. Verify: Area <m>= 30</m> cm<m>^2</m>, <m>R = 5\times12\times13/(4\times30) = 780/120 = 6.5</m> cm. <m>\checkmark</m>
+                    <ol marker="(a)">
+                        <li><p>Opposite angles of a cyclic quadrilateral are supplementary, so <m>\angle ADC = 180^\circ - \angle ABC = 180^\circ - 95^\circ = 85^\circ</m>.</p></li>
+                        <li><p>Likewise <m>\angle DAB = 180^\circ - \angle BCD = 180^\circ - 70^\circ = 110^\circ</m>.</p></li>
+                        <li><p><m>95^\circ + 70^\circ + 85^\circ + 110^\circ = 360^\circ</m>. The angles of any quadrilateral sum to <m>360^\circ</m>, since a diagonal splits it into two triangles, each contributing <m>180^\circ</m>.</p></li>
+                    </ol>
                 </p>
             </solution>
         </exercise>
@@ -944,61 +1026,92 @@
         <exercise>
             <statement>
                 <p>
-                    A triangle has sides <m>7</m> cm, <m>8</m> cm, and <m>9</m> cm.
-                    <ol marker="(a)">
-                        <li>Draw the triangle accurately and construct its circumcircle. Is the circumcenter inside or outside the triangle?</li>
-                        <li>Calculate the circumradius, leaving your answer in surd form.</li>
-                    </ol>
+                    A fragment of a broken circular grinding wheel survives as a single curved arc, shown below — its centre is missing. A fundi wants to recover the original circle so that he can cut a replacement.
                 </p>
-                <figure xml:id="fig-circum-exer-7-8-9">
-                    <caption>Triangle with sides <m>7</m> cm, <m>8</m> cm, and <m>9</m> cm and its circumcircle. The circumcenter <m>O</m> lies inside the triangle.</caption>
-                    <image width="65%">
+                <figure xml:id="fig-circum-recover-arc">
+                    <caption>The surviving arc of the wheel, with three chosen points <m>P</m>, <m>Q</m>, <m>S</m>.</caption>
+                    <image width="55%">
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.75]
-
-                              %% --- SET ---
-                              \tkzDefPoints{0/0/A, 9/0/B}
-                              \pgfmathsetmacro{\rAC}{7}
-                              \pgfmathsetmacro{\rBC}{8}
-                              \tkzDefCircle[R](A,\rAC)  \tkzGetPoint{cAC}
-                              \tkzDefCircle[R](B,\rBC)  \tkzGetPoint{cBC}
-                              \tkzInterCC(A,cAC)(B,cBC)  \tkzGetPoints{C}{Cp}
-
-                              %% --- CALCULATE ---
-                              \tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
-
-                              %% --- DRAW ---
-                              \tkzDrawPolygon[thick](A,B,C)
-                              \tkzDrawCircle[blue!70!black, thick](O,A)
-                              \tkzDrawPoints[size=3pt](A,B,C,O)
-
-                              %% --- MARK ---
-
-                              %% --- LABEL ---
-                              \tkzLabelPoints[below left](A)
-                              \tkzLabelPoints[below right](B)
-                              \tkzLabelPoints[above](C)
-                              \tkzLabelPoint[above right](O){$O$}
-                              \tkzLabelSegment[below](A,B){$9$}
-                              \tkzLabelSegment[above right](B,C){$8$}
-                              \tkzLabelSegment[left](A,C){$7$}
-
+                            \begin{tikzpicture}[scale=0.7]
+                                \tkzDefPoint(0,0){O}
+                                \tkzDefShiftPoint[O](4,0){r0}
+                                \tkzDefPointBy[rotation=center O angle 40](r0)\tkzGetPoint{Aen}
+                                \tkzDefPointBy[rotation=center O angle 140](r0)\tkzGetPoint{Ast}
+                                \tkzDefPointBy[rotation=center O angle 125](r0)\tkzGetPoint{P}
+                                \tkzDefPointBy[rotation=center O angle 90](r0)\tkzGetPoint{Q}
+                                \tkzDefPointBy[rotation=center O angle 55](r0)\tkzGetPoint{S}
+                                \tkzDrawArc[brown, line width=1.3pt](O,Aen)(Ast)
+                                \tkzDrawPoints[size=2.5pt](P,Q,S)
+                                \tkzLabelPoints[above left](P)
+                                \tkzLabelPoints[above](Q)
+                                \tkzLabelPoints[above right](S)
                             \end{tikzpicture}
                         </latex-image>
                     </image>
                 </figure>
+                <p>
+                    <ol marker="(a)">
+                        <li>Using compasses and a straightedge, construct the perpendicular bisectors of the chords <m>PQ</m> and <m>QS</m>. Explain why their intersection <m>O</m> is the centre of the original circle.</li>
+                        <li>With centre <m>O</m> and radius <m>OP</m>, draw the complete circle. It should pass through all three points.</li>
+                        <li>Why does the method give the same centre no matter which three points of the arc are chosen?</li>
+                    </ol>
+                </p>
             </statement>
             <solution>
                 <p>
-                    (a) The triangle is acute (no side satisfies <m>a^2 = b^2 + c^2</m>), so the circumcenter is inside the triangle.
+                    <ol marker="(a)">
+                        <li>
+                            <p>
+                                Every point on the perpendicular bisector of a chord is equidistant from the chord's two endpoints. So the perpendicular bisector of <m>PQ</m> consists of the points equidistant from <m>P</m> and <m>Q</m>, and the perpendicular bisector of <m>QS</m> the points equidistant from <m>Q</m> and <m>S</m>. Their intersection <m>O</m> is therefore equidistant from all three: <m>OP = OQ = OS</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Since <m>OP = OQ = OS</m>, the circle with centre <m>O</m> and radius <m>OP</m> passes through <m>P</m>, <m>Q</m>, and <m>S</m> — it is the original wheel (the circumcircle of triangle <m>PQS</m>).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Any three distinct points of the arc are three points of the same circle, and a circle is completely determined by three of its points. So the construction recovers the same centre and radius whichever three points are chosen.
+                            </p>
+                        </li>
+                    </ol>
                 </p>
-                <p>
-                    (b)
-                    <md>
-                        <mrow>s \amp= 12, \quad \text{Area} = \sqrt{12 \times 5 \times 4 \times 3} = \sqrt{720} = 12\sqrt{5} \text{ cm}^2</mrow>
-                        <mrow>R \amp= \frac{7 \times 8 \times 9}{4 \times 12\sqrt{5}} = \frac{504}{48\sqrt{5}} = \frac{21}{2\sqrt{5}} = \frac{21\sqrt{5}}{10} \text{ cm} \approx 4.70 \text{ cm.}</mrow>
-                    </md>
-                </p>
+                <figure xml:id="fig-circum-recover-soln">
+                    <caption>The perpendicular bisectors of <m>PQ</m> (red) and <m>QS</m> (blue) meet at the centre <m>O</m>; the recovered circle (dashed) passes through all three points.</caption>
+                    <image width="55%">
+                        <latex-image>
+                            \begin{tikzpicture}[scale=0.7]
+                                %% --- SET ---
+                                \tkzDefPoint(0,0){O}
+                                \tkzDefShiftPoint[O](4,0){r0}
+                                \tkzDefPointBy[rotation=center O angle 40](r0)\tkzGetPoint{Aen}
+                                \tkzDefPointBy[rotation=center O angle 140](r0)\tkzGetPoint{Ast}
+                                \tkzDefPointBy[rotation=center O angle 125](r0)\tkzGetPoint{P}
+                                \tkzDefPointBy[rotation=center O angle 90](r0)\tkzGetPoint{Q}
+                                \tkzDefPointBy[rotation=center O angle 55](r0)\tkzGetPoint{S}
+                                %% --- CALCULATE ---
+                                \tkzDefMidPoint(P,Q)\tkzGetPoint{Mpq}
+                                \tkzDefMidPoint(Q,S)\tkzGetPoint{Mqs}
+                                %% --- DRAW ---
+                                \tkzDrawCircle[densely dashed, gray](O,r0)
+                                \tkzDrawArc[brown, line width=1.3pt](O,Aen)(Ast)
+                                \tkzDrawSegments[thin](P,Q Q,S)
+                                \tkzDrawLine[add=0.3 and 1.3, red](Mpq,O)
+                                \tkzDrawLine[add=0.3 and 1.3, blue](Mqs,O)
+                                %% --- MARK ---
+                                \tkzMarkRightAngle[size=0.22](P,Mpq,O)
+                                \tkzMarkRightAngle[size=0.22](Q,Mqs,O)
+                                %% --- LABEL ---
+                                \tkzDrawPoints[size=2.5pt](P,Q,S,O)
+                                \tkzLabelPoints[above left](P)
+                                \tkzLabelPoints[above](Q)
+                                \tkzLabelPoints[above right](S)
+                                \tkzLabelPoint[below](O){$O$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </solution>
         </exercise>
 
@@ -1165,12 +1278,8 @@
                         \tkzDefPoints{0/0/B, 7/0/C, 1/5/A}
                         %% --- CALCULATE: centres ---
                         \tkzDefTriangleCenter[circum](A,B,C)\tkzGetPoint{O}
-                        \tkzDefMidPoint(B,C)\tkzGetPoint{Ma}
-                        \tkzDefMidPoint(C,A)\tkzGetPoint{Mb}
-                        \tkzDefPointBy[projection=onto B--C](A)\tkzGetPoint{Ha}
-                        \tkzDefPointBy[projection=onto C--A](B)\tkzGetPoint{Hb}
-                        \tkzInterLL(A,Ma)(B,Mb)\tkzGetPoint{G}
-                        \tkzInterLL(A,Ha)(B,Hb)\tkzGetPoint{H}
+                        \tkzDefTriangleCenter[centroid](A,B,C)\tkzGetPoint{G}
+                        \tkzDefTriangleCenter[ortho](A,B,C)\tkzGetPoint{H}
                         \tkzDefMidPoint(G,H)\tkzGetPoint{Mid}
                         %% --- DRAW ---
                         \tkzDrawPolygon[thick](A,B,C)
@@ -1194,6 +1303,144 @@
         </figure>
     </solution>
 </exercise>
+
+        <exercise xml:id="ex-reuleaux-polygons">
+            <statement>
+                <p>
+                    A shape has <term>constant width</term> if, when held between two parallel rulers, the gap between the rulers is the same whichever way you turn the shape. A circle obviously does this — but it is not the only shape that does. The British <m>50</m>p and <m>20</m>p coins are <em>not</em> circular, yet they have constant width so that slot machines can gauge them in any orientation. Their shape is a <term>Reuleaux polygon</term>: a regular polygon with an odd number of sides whose straight edges have been replaced by circular arcs.
+                </p>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            <alert>Reuleaux triangle.</alert> Start from the equilateral triangle <m>ABC</m> below. For each vertex in turn, put the compass point on that vertex, open it to the side length, and draw the arc joining the other two vertices. Draw all three arcs.
+                        </p>
+                        <figure xml:id="fig-reuleaux-tri-start">
+                            <caption>An equilateral triangle <m>ABC</m> to build on.</caption>
+                            <image width="42%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8]
+                                        \tkzDefPoint(0,0){B}\tkzDefPoint(4,0){C}
+                                        \tkzDefPointBy[rotation=center B angle 60](C)\tkzGetPoint{A}
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawPoints[size=2.5pt](A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>
+                            Explain why your Reuleaux triangle has the same width in every direction, and state that width in terms of the side length <m>s</m>. (Hint: when you trap the shape between two parallel rulers, one ruler touches a vertex and the other touches the arc opposite it.)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <alert>Reuleaux pentagon.</alert> Now start from the regular pentagon <m>V_0V_1V_2V_3V_4</m> below. Each side is replaced by an arc centred at the <em>opposite</em> vertex (the one not touching that side), with the compass opened to the long diagonal. Draw the five arcs.
+                        </p>
+                        <figure xml:id="fig-reuleaux-pent-start">
+                            <caption>A regular pentagon <m>V_0V_1V_2V_3V_4</m> to build on.</caption>
+                            <image width="42%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8]
+                                        \tkzDefPoint(0,0){Z}\tkzDefShiftPoint[Z](2.4,0){pr}
+                                        \tkzDefPointBy[rotation=center Z angle 90](pr)\tkzGetPoint{V0}
+                                        \tkzDefPointBy[rotation=center Z angle 162](pr)\tkzGetPoint{V1}
+                                        \tkzDefPointBy[rotation=center Z angle 234](pr)\tkzGetPoint{V2}
+                                        \tkzDefPointBy[rotation=center Z angle 306](pr)\tkzGetPoint{V3}
+                                        \tkzDefPointBy[rotation=center Z angle 18](pr)\tkzGetPoint{V4}
+                                        \tkzDrawPolygon[thick](V0,V1,V2,V3,V4)
+                                        \tkzDrawPoints[size=2pt](V0,V1,V2,V3,V4)
+                                        \tkzLabelPoint[above](V0){$V_0$}
+                                        \tkzLabelPoint[left](V1){$V_1$}
+                                        \tkzLabelPoint[below left](V2){$V_2$}
+                                        \tkzLabelPoint[below right](V3){$V_3$}
+                                        \tkzLabelPoint[right](V4){$V_4$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>
+                            The British <m>50</m>p coin is a Reuleaux <em>heptagon</em> — the same idea built on a regular seven-sided polygon. Give one practical reason a coin is made with constant width rather than as an ordinary seven-sided polygon.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+            <solution>
+                <ol marker="(a)">
+                    <li>
+                        <p>
+                            Each arc is centred at one vertex and has radius equal to the side length <m>s</m>, joining the other two vertices. The three arcs together form the rounded triangle below.
+                        </p>
+                        <figure xml:id="fig-reuleaux-tri-soln">
+                            <caption>The Reuleaux triangle: each side of the equilateral triangle is replaced by an arc centred at the opposite vertex.</caption>
+                            <image width="42%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8]
+                                        \tkzDefPoint(0,0){B}\tkzDefPoint(4,0){C}
+                                        \tkzDefPointBy[rotation=center B angle 60](C)\tkzGetPoint{A}
+                                        \tkzDrawPolygon[gray, thin, densely dashed](A,B,C)
+                                        \tkzDrawArc[thick, teal](A,B)(C)
+                                        \tkzDrawArc[thick, teal](B,C)(A)
+                                        \tkzDrawArc[thick, teal](C,A)(B)
+                                        \tkzDrawPoints[size=2.5pt](A,B,C)
+                                        \tkzLabelPoints[above](A)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>
+                            Hold the shape between two parallel rulers. In any direction, one ruler rests against a vertex (say <m>A</m>) and the other rests against the arc opposite <m>A</m>. That arc is centred at <m>A</m> with radius <m>s</m>, so the distance between the two rulers is exactly <m>s</m>. Since this is true for every direction, the width is constant and equal to <m>s</m> — the shape rolls just like a circle of diameter <m>s</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Each side of the pentagon is replaced by an arc centred at the opposite vertex, with radius equal to the long diagonal. The five arcs form the constant-width pentagon below.
+                        </p>
+                        <figure xml:id="fig-reuleaux-pent-soln">
+                            <caption>The Reuleaux pentagon — the shape of the British <m>50</m>p and <m>20</m>p coins is the seven-sided version of this.</caption>
+                            <image width="44%">
+                                <latex-image>
+                                    \begin{tikzpicture}[scale=0.8]
+                                        \tkzDefPoint(0,0){Z}\tkzDefShiftPoint[Z](2.4,0){pr}
+                                        \tkzDefPointBy[rotation=center Z angle 90](pr)\tkzGetPoint{V0}
+                                        \tkzDefPointBy[rotation=center Z angle 162](pr)\tkzGetPoint{V1}
+                                        \tkzDefPointBy[rotation=center Z angle 234](pr)\tkzGetPoint{V2}
+                                        \tkzDefPointBy[rotation=center Z angle 306](pr)\tkzGetPoint{V3}
+                                        \tkzDefPointBy[rotation=center Z angle 18](pr)\tkzGetPoint{V4}
+                                        \tkzDrawPolygon[gray, thin, densely dashed](V0,V1,V2,V3,V4)
+                                        \tkzDrawArc[thick, violet](V3,V0)(V1)
+                                        \tkzDrawArc[thick, violet](V4,V1)(V2)
+                                        \tkzDrawArc[thick, violet](V0,V2)(V3)
+                                        \tkzDrawArc[thick, violet](V1,V3)(V4)
+                                        \tkzDrawArc[thick, violet](V2,V4)(V0)
+                                        \tkzDrawPoints[size=2pt](V0,V1,V2,V3,V4)
+                                        \tkzLabelPoint[above](V0){$V_0$}
+                                        \tkzLabelPoint[left](V1){$V_1$}
+                                        \tkzLabelPoint[below left](V2){$V_2$}
+                                        \tkzLabelPoint[below right](V3){$V_3$}
+                                        \tkzLabelPoint[right](V4){$V_4$}
+                                    \end{tikzpicture}
+                                </latex-image>
+                            </image>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>
+                            Because the coin has constant width, a slot or vending machine measures the same width no matter which way the coin is inserted, so it can size and accept it reliably; it also rolls smoothly. At the same time the non-circular shape is easy to tell apart from round coins by touch. (A plain seven-sided polygon would not have constant width, so its measured size would change with orientation.)
+                        </p>
+                    </li>
+                </ol>
+            </solution>
+        </exercise>
     </exercises>
 
     <xi:include href="../lesson-plan-templates/assessment-methods.ptx" />

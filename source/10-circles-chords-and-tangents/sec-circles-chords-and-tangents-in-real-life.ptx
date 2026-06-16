@@ -287,6 +287,91 @@
         </p>
     </insight> -->
 
+    <paragraphs>
+        <title>Summary: The Triangle's Circles and Centres</title>
+        <p>
+            The problems in this chapter rely on a small family of special circles and centres of a triangle. The two tables below collect their definitions, how each is constructed, and the formula for its radius, for quick reference.
+        </p>
+        <table xml:id="tab-triangle-circles">
+            <title>The three circles associated with a triangle</title>
+            <tabular halign="left" top="minor" bottom="minor" left="minor" right="minor">
+                <col width="16%" halign="left"/>
+                <col width="32%" halign="left"/>
+                <col width="34%" halign="left"/>
+                <col width="18%" halign="left"/>
+                <row header="yes" bottom="medium">
+                    <cell>Circle</cell>
+                    <cell>Touches / passes through</cell>
+                    <cell>Centre — meeting point of …</cell>
+                    <cell>Radius</cell>
+                </row>
+                <row bottom="minor">
+                    <cell>Inscribed circle (<term>incircle</term>)</cell>
+                    <cell>Tangent to all three sides; lies inside the triangle.</cell>
+                    <cell>Incentre <m>I</m> — the three internal angle bisectors.</cell>
+                    <cell><m>r = \dfrac{\text{Area}}{s}</m></cell>
+                </row>
+                <row bottom="minor">
+                    <cell>Circumscribed circle (<term>circumcircle</term>)</cell>
+                    <cell>Passes through all three vertices.</cell>
+                    <cell>Circumcentre <m>O</m> — the perpendicular bisectors of the sides.</cell>
+                    <cell><m>R = \dfrac{abc}{4\,\text{Area}}</m></cell>
+                </row>
+                <row>
+                    <cell>Escribed circle (<term>excircle</term>), opposite <m>A</m></cell>
+                    <cell>Tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>; lies outside the triangle.</cell>
+                    <cell>Excentre <m>I_a</m> — the internal bisector at <m>A</m> and the external bisectors at <m>B</m> and <m>C</m>.</cell>
+                    <cell><m>r_a = \dfrac{\text{Area}}{s - a}</m></cell>
+                </row>
+            </tabular>
+        </table>
+        <p>
+            Here <m>a = BC</m>, <m>b = CA</m>, <m>c = AB</m>, and <m>s = \tfrac{1}{2}(a + b + c)</m> is the semi-perimeter. The radius is the perpendicular distance from the centre to a side (incircle and excircle) or the distance from the centre to a vertex (circumcircle). There is one excircle opposite each of the three vertices.
+        </p>
+        <table xml:id="tab-triangle-centres">
+            <title>Comparing the centres of a triangle</title>
+            <tabular halign="left" top="minor" bottom="minor" left="minor" right="minor">
+                <col width="16%" halign="left"/>
+                <col width="24%" halign="left"/>
+                <col width="30%" halign="left"/>
+                <col width="30%" halign="left"/>
+                <row header="yes" bottom="medium">
+                    <cell>Centre</cell>
+                    <cell>Meeting point of …</cell>
+                    <cell>Where it lies</cell>
+                    <cell>Key property</cell>
+                </row>
+                <row bottom="minor">
+                    <cell>Incentre <m>I</m></cell>
+                    <cell>the three internal angle bisectors</cell>
+                    <cell>always inside the triangle</cell>
+                    <cell>equidistant from the three sides; centre of the incircle</cell>
+                </row>
+                <row bottom="minor">
+                    <cell>Centroid <m>G</m></cell>
+                    <cell>the three medians</cell>
+                    <cell>always inside the triangle</cell>
+                    <cell>divides each median in the ratio <m>2:1</m> from the vertex; the triangle's balance point</cell>
+                </row>
+                <row bottom="minor">
+                    <cell>Circumcentre <m>O</m></cell>
+                    <cell>the perpendicular bisectors of the sides</cell>
+                    <cell>inside / on the hypotenuse / outside for an acute / right / obtuse triangle</cell>
+                    <cell>equidistant from the three vertices; centre of the circumcircle</cell>
+                </row>
+                <row>
+                    <cell>Orthocentre <m>H</m></cell>
+                    <cell>the three altitudes</cell>
+                    <cell>inside / at the right-angle vertex / outside for an acute / right / obtuse triangle</cell>
+                    <cell>lies on the Euler line together with <m>G</m> and <m>O</m></cell>
+                </row>
+            </tabular>
+        </table>
+        <p>
+            The centroid <m>G</m>, circumcentre <m>O</m>, and orthocentre <m>H</m> always lie on one straight line — the <term>Euler line</term> — with <m>HG = 2\,GO</m>. The incentre lies on this line only when the triangle is isosceles (or equilateral).
+        </p>
+    </paragraphs>
+
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
     <example xml:id="ex-rl-shanga-dish">
