@@ -260,21 +260,28 @@
 <example xml:id="exam-aviation-fuel">
         <statement>
             <p>
-                An aircraft refueling tank is filled with fuel measured at <m>450</m> litres to the nearest <m>10</m> litres. The fuel flow rate monitor shows that the engines burn fuel at a rate of <m>12.0</m> litres per minute, accurate to <m>1</m> decimal place. To ensure passenger flight safety, calculate the minimum guaranteed flight duration before the tank runs dry.
+                An aircraft refueling tank is filled with fuel measured at <m>450</m> litres to the nearest <m>10</m> litres. The fuel flow rate monitor shows that the engines burn fuel at a rate of <m>12.0</m> litres per minute, accurate to <m>1</m> decimal place. 
+            </p>
+            <p>
+                To ensure passenger flight safety, calculate the minimum guaranteed flight duration before the tank runs dry.
             </p>
         </statement>
         <solution>
             <p>
                 First, determine the measurement boundaries for each physical parameter based on their recorded degrees of accuracy:
+            </p>
+            <p>
                 <md>
-                    <mrow>\text{Fuel Volume Limits: } \amp 450 \pm 5 \text{ litres} \implies [445, 455] \text{ litres}</mrow>
-                    <mrow>\text{Burn Rate Limits: } \amp 12.0 \pm 0.05 \text{ litres/min} \implies [11.95, 12.05] \text{ litres/min}</mrow>
+                    <mrow> \text{Fuel Volume Limits}\; =\amp 450 \pm 5\; \text{litres}</mrow>
+                    <mrow> =\amp [445, 455] \,\text{litres}</mrow>
+                    <mrow> \text{Burn Rate Limits} \; =\amp 12.0 \pm 0.05\, \text{litres/min} </mrow>
+                    <mrow>= \amp [11.95, 12.05]\, \text{litres/min}</mrow>
                 </md>
             </p>
             <p>
                 To guarantee safety, we must find the absolute worst-case scenario: the shortest possible time the fuel could last. This requires dividing the minimum fuel volume by the maximum burn rate:
                 <md>
-                    <mrow>\text{Minimum Flight Duration} \amp = \frac{\text{Minimum Fuel Volume}}{\text{Maximum Burn Rate}}</mrow>
+                    <mrow>\text{Minimum Flight Duration} =\amp \; \frac{\text{Minimum Fuel Volume}}{\text{Maximum Burn Rate}}</mrow>
                     <mrow>\amp = \frac{445}{12.05}</mrow>
                     <mrow>\amp \approx 36.929 \text{ minutes}</mrow>
                 </md>
@@ -288,15 +295,20 @@
     <example xml:id="exam-pharmacy-dosage">
         <statement>
             <p>
-                A pharmacist mixes a clinical liquid medication. The solution contains <m>8.4</m> grams of an active pharmaceutical compound (measured to the nearest <m>0.1</m> g) dissolved in <m>2.0</m> litres of sterile solvent (measured to the nearest <m>0.1</m> l). Calculate the maximum possible concentration of the medicine in grams per litre (g/l).
+                A pharmacist mixes a clinical liquid medication. The solution contains <m>8.4</m> grams of an active pharmaceutical compound (measured to the nearest <m>0.1</m> g) dissolved in <m>2.0</m> litres of sterile solvent (measured to the nearest <m>0.1</m> l). 
+            </p>
+            <p>
+                Calculate the maximum possible concentration of the medicine in grams per litre (g/l).
             </p>
         </statement>
         <solution>
             <p>
                 Identify the lower and upper bounds of the compound's mass and solvent's volume:
                 <md>
-                    <mrow>\text{Active Compound Mass Limits: } \amp 8.4 \pm 0.05 \text{ g} \implies [8.35, 8.45] \text{ g}</mrow>
-                    <mrow>\text{Solvent Volume Limits: } \amp 2.0 \pm 0.05 \text{ l} \implies [1.95, 2.05] \text{ l}</mrow>
+                    <mrow>\text{Active Compound Mass Limits}\; = \amp 8.4 \pm 0.05 \text{ g} </mrow>
+                    <mrow> =\amp [8.35, 8.45] \text{ g}</mrow>
+                    <mrow>\text{Solvent Volume Limits}\; = \amp 2.0 \pm 0.05 \text{ l}</mrow>
+                    <mrow> = \amp [1.95, 2.05] \text{ l}</mrow>
                 </md>
             </p>
             <p>
@@ -316,15 +328,20 @@
     <example xml:id="exam-civil-structural">
         <statement>
             <p>
-                A civil engineer designs a concrete load column for a commercial building. The total weight pressing down on the column is estimated at <m>15,000</m> kg (measured to the nearest <m>100</m> kg). The column's load-bearing base plate has a surface area measured at <m>2.50</m> m<m>^2</m> (measured to <m>2</m> decimal places). Find the percentage error in the working pressure calculation, given that <m>\text{Pressure} = \frac{\text{Weight}}{\text{Area}}</m>.
+                A civil engineer designs a concrete load column for a commercial building. The total weight pressing down on the column is estimated at <m>15,000</m> kg (measured to the nearest <m>100</m> kg). 
+            </p>
+            <p>
+                The column's load-bearing base plate has a surface area measured at <m>2.50</m> m<m>^2</m> (measured to <m>2</m> decimal places). Find the percentage error in the working pressure calculation, given that <m>\text{Pressure} = \frac{\text{Weight}}{\text{Area}}</m>.
             </p>
         </statement>
         <solution>
             <p>
                 Establish the boundaries for weight and surface area:
                 <md>
-                    <mrow>\text{Weight Limits: } \amp 15,000 \pm 50 \text{ kg} \implies [14,950, 15,050] \text{ kg}</mrow>
-                    <mrow>\text{Area Limits: } \amp 2.50 \pm 0.005 \text{ m}^2 \implies [2.495, 2.505] \text{ m}^2</mrow>
+                    <mrow>\text{Weight Limits}\; = \amp 15,000 \pm 50 \text{ kg}</mrow>
+                    <mrow> = \amp [14,950, 15,050] \text{ kg}</mrow>
+                    <mrow>\text{Area Limits}\; = \amp 2.50 \pm 0.005 \text{ m}^2</mrow>
+                    <mrow> = \amp [2.495, 2.505] \text{ m}^2</mrow>
                 </md>
             </p>
             <p>
@@ -336,15 +353,19 @@
             <p>
                 Calculate the maximum potential pressure to evaluate safety margins:
                 <md>
-                    <mrow>\text{Maximum Pressure} \amp = \frac{\text{Maximum Weight}}{\text{Minimum Area}} = \frac{15,050}{2.495} \approx 6,032.06 \text{ kg/m}^2</mrow>
+                    <mrow>\text{Maximum Pressure} \amp = \frac{\text{Maximum Weight}}{\text{Minimum Area}}</mrow>
+                    <mrow> = \frac{15,050}{2.495} \approx 6,032.06 \text{ kg/m}^2</mrow>
                 </md>
             </p>
             <p>
                 Find the absolute, relative, and percentage errors:
                 <md>
-                    <mrow>\text{Absolute Error} \amp = 6,032.06 - 6,000 = 32.06 \text{ kg/m}^2</mrow>
-                    <mrow>\text{Relative Error} \amp = \frac{32.06}{6,000} \approx 0.005343</mrow>
-                    <mrow>\text{Percentage Error} \amp = 0.005343 \times 100\% \approx 0.534\%</mrow>
+                    <mrow>\text{Absolute Error} \amp = 6,032.06 - 6,000 </mrow>
+                    <mrow> = 32.06 \text{ kg/m}^2</mrow>
+                    <mrow>\text{Relative Error} \amp = \frac{32.06}{6,000} </mrow>
+                    <mrow> \approx 0.005343</mrow>
+                    <mrow>\text{Percentage Error} \amp = 0.005343 \times 100\%</mrow>
+                    <mrow>\approx 0.534\%</mrow>
                 </md>
             </p>
             <p>
@@ -367,7 +388,10 @@
         <exercise>
             <statement>
                 <p>
-                    A food packing factory fills maize flour bags labeled as <m>2.0</m> kg (accurate to the nearest <m>0.1</m> kg). A commercial baker buys these bags and uses a scale accurate to the nearest <m>10</m> grams to measure out flour portions. If the baker requires exactly <m>250</m> grams of flour per loaf of bread, calculate the absolute minimum number of loaves they can guarantee from a single bag.
+                    A food packing factory fills maize flour bags labeled as <m>2.0</m> kg (accurate to the nearest <m>0.1</m> kg). A commercial baker buys these bags and uses a scale accurate to the nearest <m>10</m> grams to measure out flour portions. 
+                </p>
+                <p>
+                    If the baker requires exactly <m>250</m> grams of flour per loaf of bread, calculate the absolute minimum number of loaves they can guarantee from a single bag.
                 </p>
             </statement>
             <answer>
@@ -381,7 +405,10 @@
         <exercise>
             <statement>
                 <p>
-                    A shipping container is packed with heavy industrial machine parts. The total cargo weight is recorded as <m>24</m> tonnes, accurate to the nearest tonne. The container is loaded onto a delivery truck with a maximum surface deck area measured at <m>16.0</m> m<m>^2</m> (accurate to the nearest <m>0.1</m> m<m>^2</m>). Calculate the maximum possible loading pressure on the truck bed surface, in tonnes per square metre (tonnes/m<m>^2</m>).
+                    A shipping container is packed with heavy industrial machine parts. The total cargo weight is recorded as <m>24</m> tonnes, accurate to the nearest tonne. 
+                </p>
+                <p>
+                    The container is loaded onto a delivery truck with a maximum surface deck area measured at <m>16.0</m> m<m>^2</m> (accurate to the nearest <m>0.1</m> m<m>^2</m>). Calculate the maximum possible loading pressure on the truck bed surface, in tonnes per square metre (tonnes/m<m>^2</m>).
                 </p>
             </statement>
             <answer>
@@ -395,7 +422,10 @@
         <exercise>
             <statement>
                 <p>
-                    An optical sensor measures the thickness of a high-precision glass sheet as <m>8.00</m> mm, accurate to <m>2</m> decimal places. A separate mechanical micrometer measures the width of the sheet as <m>40.0</m> mm, accurate to <m>1</m> decimal place. Find the percentage error in the aspect ratio calculation, defined as <m>\text{Aspect Ratio} = \frac{\text{Width}}{\text{Thickness}}</m>.
+                    An optical sensor measures the thickness of a high-precision glass sheet as <m>8.00</m> mm, accurate to <m>2</m> decimal places. A separate mechanical micrometer measures the width of the sheet as <m>40.0</m> mm, accurate to <m>1</m> decimal place. 
+                </p>
+                <p>
+                    Find the percentage error in the aspect ratio calculation, defined as <m>\text{Aspect Ratio} = \frac{\text{Width}}{\text{Thickness}}</m>.
                 </p>
             </statement>
             <answer>
