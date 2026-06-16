@@ -71,8 +71,62 @@
     <activity>
         <statement>
             <p>
-                <term>Work in Groups to:</term>
+                <term>Work in Groups</term> 
             </p>
+            <figure xml:id="fig-textbook-error-propagation">
+                <caption>Visualizing limits of accuracy and error limits in operations</caption>
+                <image xml:id="img-textbook-error-propagation">
+                    <description>
+                        A 2D vector diagram illustrating an English textbook with error margins. 
+                        Left side: The textbook showing length and width measurements with shaded outer and inner border zones representing the maximum and minimum measurement boundaries due to ruler precision. 
+                        Right side: Two visual calculation tracks. The addition track shows minimum bounds adding together and maximum bounds adding together. The subtraction track highlights the unique combination required for a maximum difference: Maximum Length minus Minimum Width.
+                    </description>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.15, every node/.style={font=\sffamily\small}]
+                           
+                            \tikzset{
+                                bookActual/.style={fill=blue!10, draw=blue!60!black, line width=1.2pt},
+                                bookMax/.style={draw=red!60!black, dashed, line width=0.8pt, fill=red!5, opacity=0.3},
+                                bookMin/.style={draw=green!60!black, dotted, line width=1pt},
+                                bracket/.style={thick, decoration={brace, mirror, raise=2pt}, decorate}
+                            }
+                            \node[anchor=south] at (15, 33) {\textbf{Limits of Accuracy on a Textbook}};
+                            
+                            
+                            \draw[bookMax] (-1.5,-1.5) rectangle (26.5, 31.5);
+                            
+                            
+                            \draw[bookActual] (0,0) rectangle (25,30);
+                            \node[blue!40!black, font=\bfseries] at (12.5, 15) {English Textbook};
+                            
+                           
+                            \draw[bookMin] (1.5,1.5) rectangle (23.5, 28.5);
+
+                           
+                            \draw[->, line width=0.8pt] (-4, 0) -- node[left] {Actual Length} (-4, 30);
+                            \draw[red, dashed] (-1.5, 31.5) -- (2, 31.5) node[right, scale=0.75] {Max Length (+0.05 cm)};
+                            \draw[green!50!black, dotted, thick] (1.5, 28.5) -- (5, 28.5) node[right, scale=0.75] {Min Length (-0.05 cm)};
+
+                           
+                            \draw[->, line width=0.8pt] (0, -4) -- node[below] {Actual Width} (25, -4);
+                            
+                            \draw[rounded corners, draw=gray!40, fill=gray!2] (38, 16) rectangle (88, 32);
+                            \node[anchor=west] at (40, 29.5) {\textbf{Addition Rule:}};
+                            \node[anchor=west, scale=0.85] at (42, 26) {$\bullet$ \textbf{Max Sum} = Max Length + Max Width};
+                            \node[anchor=west, scale=0.85] at (42, 22) {$\bullet$ \textbf{Min Sum} = Min Length + Min Width};
+                            \node[anchor=west, red!80!black, scale=0.8] at (42, 18) {$\rightarrow$ Absolute Errors add together directly.};
+
+                            
+                            \draw[rounded corners, draw=gray!40, fill=gray!2] (38, -3) rectangle (88, 13);
+                            \node[anchor=west] at (40, 10.5) {\textbf{Subtraction Rule:}};
+                            \node[anchor=west, scale=0.85] at (42, 7) {$\bullet$ \textbf{Max Difference} = Max Length $-$ \textcolor{red}{\textbf{Min}} Width};
+                            \node[anchor=west, scale=0.85] at (42, 3) {$\bullet$ \textbf{Min Difference} = Min Length $-$ \textcolor{red}{\textbf{Max}} Width};
+                            \node[anchor=west, red!80!black, scale=0.8] at (42, -1) {$\rightarrow$ Absolute Errors still add together!};
+
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
             <p>
                 Measure the length and width of an English textbook and record in the table below.
             </p>
