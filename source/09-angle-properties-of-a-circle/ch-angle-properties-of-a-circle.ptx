@@ -11,12 +11,12 @@
   </p>
   <p>
     In this strand, we will investigate the consistent geometric rules that 
-    govern how angles behave within a circular boundary, covering center-angle 
+    govern how angles behave within a circle, covering center-angle 
     relationships, cyclic quadrilaterals, and real-world applications.
   </p>
 
   <p>
-    Before we can unlock these geometric properties, we must first master the 
+    Before we can understand these geometric properties, we must first learn the 
     vocabulary of a circle's anatomy. When straight lines intersect or boundaries 
     are divided, three fundamental elements emerge:
   </p>
@@ -26,7 +26,7 @@
       <li>
         <p>
           <strong>Chords:</strong> A <em>chord</em> is a straight line segment whose 
-          endpoints both lie on the circular boundary. Think of it as a straight 
+          endpoints both lie on the circumference of the circle. Think of it as a straight 
           bridge crossing from one side of the circle to the other. The longest 
           possible chord in any circle is the one that passes directly through the 
           centre—this special chord is known as the <strong>diameter</strong>.

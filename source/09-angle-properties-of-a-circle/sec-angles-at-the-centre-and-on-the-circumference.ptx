@@ -98,10 +98,10 @@
             <p>
                 <alert>Materials Needed:</alert>
             </p>
-            <ol><li><p>drawing board</p></li>
-            <li><p>pen</p></li>
-            <li><p>paper</p></li>
-            <li><p>compass</p></li></ol>
+            <ol><li><p>Drawing board</p></li>
+            <li><p>Pen</p></li>
+            <li><p>Paper</p></li>
+            <li><p>Compass</p></li></ol>
             
             <p>
                 <strong>Inquiry Question:</strong> How does the angle of a structural support change when we anchor it at different points along a circular frame?
@@ -495,53 +495,58 @@
                 <p>
                     Points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> lie on a circle in that order. The chords <m>AC</m> and <m>BD</m> intersect at point <m>E</m>. If the inscribed angle <m>\angle ABD = 42^\circ</m> and <m>\angle BEC = 85^\circ</m>, calculate the measure of <m>\angle ACD</m>.
                 </p>
-                <figure xml:id="fig-angles-same-segment">
-            <caption>Intersecting chords AC and BD inside a circle.</caption>
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (A) at (140:2);
-                    \coordinate (B) at (50:2);
-                    \coordinate (C) at (-40:2);
-                    \coordinate (D) at (-110:2);
+                <figure xml:id="intersecting-chords-angles-problem">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            \begin{tikzpicture}
+            % --- Centre and Points on the Circle ---
+            \tkzDefPoint(0,0){O}
+            \def\radius{3}
+            
+            % Positions for points A, B, C, D in order around the circle
+            \tkzDefPointOnCircle[R = center O angle 140 radius \radius]\tkzGetPoint{A}
+            \tkzDefPointOnCircle[R = center O angle 224 radius \radius]\tkzGetPoint{B}
+            \tkzDefPointOnCircle[R = center O angle 320 radius \radius]\tkzGetPoint{C}
+            \tkzDefPointOnCircle[R = center O angle 40  radius \radius]\tkzGetPoint{D}
 
-                    % --- Find Intersection Point E of AC and BD ---
-                    \coordinate (E) at (intersection of A--C and B--D);
+            % --- Intersection Point E ---
+            % E is the intersection of chords AC and BD
+            \tkzInterLL(A,C)(B,D)\tkzGetPoint{E}
 
-                    % --- Draw Circle and Chords ---
-                    \draw[thick] (O) circle (2cm);
-                    \draw[thick] (A) -- (C);
-                    \draw[thick] (B) -- (D);
-                    
-                    % Draw optional dashed lines to fully show the inscribed angles
-                    \draw[thick, dashed, gray!70] (A) -- (B);
-                    \draw[thick, dashed, gray!70] (C) -- (D);
+            % Draw the main circle
+            \tkzDrawCircle[thick](O,A)
 
-                    % --- Annotate Angles ---
-                    % Angle ABD = 42 degrees
-                    \draw[shift={(B)}] (230:0.4) arc (230:190:0.4);
-                    \node at (0.9,1.4) {$42^{\circ}$};
+            % --- Draw Chords and Extra Boundary Segment ---
+            \tkzDrawSegments(A,C B,D)
+            % Draw AD or CD explicitly if helpful to visualize subtended arcs
+            \tkzDrawSegments[dashed, color=gray](A,B C,D)
 
-                    % Angle BEC = 85 degrees
-                    \draw[shift={(E)}] (-40:0.25) arc (-40:50:0.25);
-                    \node at ($(E)+(0.4,0.05)$) {$85^{\circ}$};
+            % --- Mark Angles ---
+            % Inscribed angle ABD = 42 degrees
+            \tkzMarkAngle[size=0.5,color=blue](D,B,A)
+            % Intersecting angle BEC = 85 degrees
+            \tkzMarkAngle[size=0.4,color=red](B,E,C)
+            % Target angle ACD = x degrees
+            \tkzMarkAngle[size=0.5,color=teal](D,C,A)
 
-                    % Angle ACD = 42 degrees (Target angle)
-                    \draw[shift={(C)}] (140:0.4) arc (140:192:0.4);
-                    \node at (1.2,-1.0) {$x^{\circ}$};
+            % --- Labels ---
+            \tkzLabelAngle[pos=0.8, color=blue](D,B,A){$42^{\circ}$}
+            \tkzLabelAngle[pos=0.7, color=red](B,E,C){$85^{\circ}$}
+            \tkzLabelAngle[pos=0.8, color=teal](D,C,A){$x$}
 
-                    % --- Label Points ---
-                    \fill (A) circle (1.5pt) node[above left] {$A$};
-                    \fill (B) circle (1.5pt) node[above right] {$B$};
-                    \fill (C) circle (1.5pt) node[below right] {$C$};
-                    \fill (D) circle (1.5pt) node[below left] {$D$};
-                    \fill (E) circle (1.5pt) node[below] {$E$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
+            % --- Points and point labels ---
+            \tkzDrawPoints(A,B,C,D,E)
+            \tkzLabelPoints[above left](A)
+            \tkzLabelPoints[below left](B)
+            \tkzLabelPoints[below right](C)
+            \tkzLabelPoints[above right](D)
+            \tkzLabelPoints[above](E)
+
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>
@@ -632,46 +637,49 @@
                 <p>
                     An arc <m>CD</m> subtends a central angle <m>\angle COD = 4x + 16^\circ</m> and an angle at the circumference <m>\angle CGD = 3x - 12^\circ</m>. Solve for <m>x</m> and calculate the actual measures of both angles.
                 </p>
-                <figure xml:id="fig-central-inscribed-algebra">
-            <caption>Central angle <m>\angle COD</m> and inscribed angle <m>\angle CGD</m> subtended by arc CD.</caption>
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates ---
-                    \coordinate (O) at (0,0);
-                    
-                    % Central angle is 96 degrees, place C and D symmetrically at the bottom
-                    \coordinate (C) at (222:2);
-                    \coordinate (D) at (318:2);
-                    
-                    % Place point G on the upper circumference
-                    \coordinate (G) at (90:2);
+               <figure xml:id="central-inscribed-algebra-problem">
+    <caption></caption>
+    <image width="65%">
+        <latex-image>
+            \begin{tikzpicture}
+            % --- Centre and points on the circle ---
+            \tkzDefPoint(0,0){O}
+            
+            % Endpoints of the arc CD, placed symmetrically near the bottom
+            \tkzDefPointOnCircle[R = center O angle 210 radius 3]\tkzGetPoint{C}
+            \tkzDefPointOnCircle[R = center O angle 330 radius 3]\tkzGetPoint{D}
+            
+            % Point G on the major arc (circumference)
+            \tkzDefPointOnCircle[R = center O angle 90 radius 3]\tkzGetPoint{G}
 
-                    % --- Draw Circle and Lines ---
-                    \draw[thick] (O) circle (2cm);
-                    \draw[thick] (O) -- (C);
-                    \draw[thick] (O) -- (D);
-                    \draw[thick] (G) -- (C);
-                    \draw[thick] (G) -- (D);
+            % Draw the main circle
+            \tkzDrawCircle[thick](O,C)
 
-                    % --- Annotate Angles ---
-                    % Central Angle COD
-                    \draw (222:0.4) arc (222:318:0.4);
-                    \node at (270:0.6) {\small $4x + 16^{\circ}$};
+            % --- Radii and Chords ---
+            \tkzDrawSegments(O,C O,D G,C G,D)
 
-                    % Inscribed Angle CGD
-                    \draw[shift={(G)}] (222:0.5) arc (222:318:0.5);
-                    \node at (0,1.2) {\small $3x - 12^{\circ}$};
+            % --- Fill and mark the angles ---
+            \tkzFillAngle[fill=red!20,opacity=.6, size=.5](C,O,D)
+            \tkzFillAngle[fill=blue!20,opacity=.6, size=.8](C,G,D)
 
-                    % --- Label Points ---
-                    \fill (O) circle (1.5pt) node[above] {$O$};
-                    \fill (C) circle (1.5pt) node[left] {$C$};
-                    \fill (D) circle (1.5pt) node[right] {$D$};
-                    \fill (G) circle (1.5pt) node[above] {$G$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
+            \tkzMarkAngle[size=.5,color=red](C,O,D)
+            \tkzMarkAngle[size=.8,color=blue](C,G,D)
+
+            % --- Angle algebraic labels ---
+            \tkzLabelAngle[pos=1.0](C,O,D){$(4x + 16)^{\circ}$}
+            \tkzLabelAngle[pos=1.3](C,G,D){$(3x - 12)^{\circ}$}
+
+            % --- Points and point labels ---
+            \tkzDrawPoints(O,C,D,G)
+            \tkzLabelPoints[above](O)
+            \tkzLabelPoints[left](C)
+            \tkzLabelPoints[right](D)
+            \tkzLabelPoints[above](G)
+
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</figure>
             </statement>
             <solution>
                 <p>
@@ -868,48 +876,48 @@
                 <p>
                     Four peg markers are placed on a circular school playing field at points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> in clockwise order. Students tie ropes between the pegs forming paths <m>AC</m>, <m>AD</m>, <m>BC</m>, and <m>BD</m>. If the angle formed at peg <m>C</m> by paths <m>AC</m> and <m>BC</m> is <m>\angle ACB = 47^\circ</m>, state the measure of <m>\angle ADB</m> and explain your reasoning.
                 </p>
-                <figure xml:id="fig-playing-field-segments">
-            <caption>Peg layout and rope paths forming inscribed angles inside a circular field.</caption>
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    
-                    % Placing points in clockwise order: A (top-left), B (top-right), C (bottom-right), D (bottom-left)
-                    \coordinate (A) at (135:2);
-                    \coordinate (B) at (45:2);
-                    \coordinate (C) at (-35:2);
-                    \coordinate (D) at (-115:2);
+               <figure xml:id="angles-in-same-segment-clockwise-fixed">
+                    <caption></caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            % --- Centre and points on the circle ---
+                            \tkzDefPoint(0,0){O}
+                            
+                            % Points positioned in strict clockwise order: A -> B -> C -> D
+                            \tkzDefPointOnCircle[R = center O angle 160 radius 3]\tkzGetPoint{A}
+                            \tkzDefPointOnCircle[R = center O angle 80 radius 3]\tkzGetPoint{B}
+                            \tkzDefPointOnCircle[R = center O angle 20 radius 3]\tkzGetPoint{C}
+                            \tkzDefPointOnCircle[R = center O angle 280 radius 3]\tkzGetPoint{D}
 
-                    % --- Draw Circle and Rope Paths ---
-                    \draw[thick] (O) circle (2cm);
-                    \draw[thick] (A) -- (C);
-                    \draw[thick] (B) -- (C);
-                    \draw[thick] (A) -- (D);
-                    \draw[thick] (B) -- (D);
-                    
-                    % Optional: Draw base arc line to make the subtended segment visually distinct
-                    \draw[thick, dashed, gray!60] (A) -- (B);
+                            % Draw the circle
+                            \tkzDrawCircle[thick](O,A)
 
-                    % --- Annotate Angles ---
-                    % Angle ACB = 47 degrees
-                    \draw[shift={(C)}] (135:0.4) arc (135:93:0.4);
-                    \node at (1.2,-0.8) {$47^{\circ}$};
+                            % --- Draw paths (ropes) ---
+                            \tkzDrawSegments(A,C A,D B,C B,D)
 
-                    % Angle ADB = 47 degrees (Target angle)
-                    \draw[shift={(D)}] (45:0.4) arc (45:87:0.4);
-                    \node at (-0.5,-1.3) {$x^{\circ}$};
+                            % --- Fill and mark interior angles (reversing order fixes the reflex angle issue) ---
+                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.8](B,C,A)
+                            \tkzFillAngle[fill=orange!20,opacity=.6, size=.8](B,D,A)
 
-                    % --- Label Points ---
-                    \fill (A) circle (1.5pt) node[above left] {$A$};
-                    \fill (B) circle (1.5pt) node[above right] {$B$};
-                    \fill (C) circle (1.5pt) node[below right] {$C$};
-                    \fill (D) circle (1.5pt) node[below left] {$D$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
+                            \tkzMarkAngle[size=.8,color=blue](B,C,A)
+                            \tkzMarkAngle[size=.8,color=orange](B,D,A)
+
+                            % --- Angle labels ---
+                            \tkzLabelAngle[pos=1.3](B,C,A){$47^{\circ}$}
+                            \tkzLabelAngle[pos=1.3](B,D,A){$x^{\circ}$}
+
+                            % --- Points and point labels ---
+                            \tkzDrawPoints(A,B,C,D)
+                            \tkzLabelPoints[above left](A)
+                            \tkzLabelPoints[above right](B)
+                            \tkzLabelPoints[right](C)
+                            \tkzLabelPoints[below](D)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -927,46 +935,48 @@
                 <p>
                     A circular structural gear has points <m>M</m> and <m>N</m> on its perimeter. The axle is at the center <m>O</m>. A sensor at point <m>K</m> on the outer shell measures the angle <m>\angle MKN = 41^\circ</m>. What central angle <m>\angle MON</m> is formed by the spokes connecting <m>M</m> and <m>N</m> to the axle <m>O</m>?
                 </p>
-                <figure xml:id="fig-structural-gear-angles">
-            <caption>Central angle and inscribed angle formed on a circular structural gear.</caption>
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates ---
-                    \coordinate (O) at (0,0);
-                    
-                    % Points M and N placed symmetrically at the lower half of the circle
-                    \coordinate (M) at (221:2);
-                    \coordinate (N) at (319:2);
-                    
-                    % Sensor point K on the upper perimeter
-                    \coordinate (K) at (90:2);
+               <figure xml:id="angle-subtended-gear">
+                    <caption></caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            % --- Centre and points on the circle ---
+                            \tkzDefPoint(0,0){O}
+                            % Endpoints of the arc (central angle MON = 82 deg),
+                            % placed symmetrically about the bottom of the circle.
+                            \tkzDefPointOnCircle[R = center O angle 229 radius 3]\tkzGetPoint{M}
+                            \tkzDefPointOnCircle[R = center O angle 311 radius 3]\tkzGetPoint{N}
+                            % Sensor point on the major arc (on the circumference).
+                            \tkzDefPointOnCircle[R = center O angle 90 radius 3]\tkzGetPoint{K}
 
-                    % --- Draw Circle and Lines ---
-                    \draw[thick] (O) circle (2cm);
-                    \draw[thick] (O) -- (M);
-                    \draw[thick] (O) -- (N);
-                    \draw[thick] (K) -- (M);
-                    \draw[thick] (K) -- (N);
+                            % Draw the circle through one of the points so radii always match.
+                            \tkzDrawCircle[thick](O,M)
 
-                    % --- Annotate Angles with Variables ---
-                    % Inscribed Angle MKN labeled as x degrees
-                    \draw[shift={(K)}] (221:0.5) arc (221:319:0.5);
-                    \node at (0,1.2) {$41^{\circ}$};
+                            % --- Radii (centre angle) and chords (circumference angle) ---
+                            \tkzDrawSegments(O,M O,N K,M K,N)
 
-                    % Central Angle MON labeled as 2x degrees
-                    \draw (221:0.4) arc (221:319:0.4);
-                    \node at (270:0.6) {$x^{\circ}$};
+                            % --- Fill and mark the two angles ---
+                            \tkzFillAngle[fill=red!20,opacity=.6, size=.6](M,O,N)
+                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.9](M,K,N)
 
-                    % --- Label Points ---
-                    \fill (O) circle (1.5pt) node[above] {$O$};
-                    \fill (M) circle (1.5pt) node[left] {$M$};
-                    \fill (N) circle (1.5pt) node[right] {$N$};
-                    \fill (K) circle (1.5pt) node[above] {$K$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
+                            \tkzMarkAngle[size=.6,color=red](M,O,N)
+                            \tkzMarkAngle[size=.9,color=blue](M,K,N)
+
+                            % --- Angle labels ---
+                            \tkzLabelAngle[pos=0.9](M,O,N){$?^{\circ}$}
+                            \tkzLabelAngle[pos=1.2](M,K,N){$41^{\circ}$}
+
+                            % --- Points and point labels ---
+                            \tkzDrawPoints(O,M,N,K)
+                            \tkzLabelPoints[above](O)
+                            \tkzLabelPoints[left](M)
+                            \tkzLabelPoints[right](N)
+                            \tkzLabelPoints[above](K)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
@@ -985,46 +995,48 @@
                 <p>
                     In a circle with center <m>O</m>, the central angle subtended by arc <m>AB</m> is <m>\angle AOB = 5y - 20^\circ</m>. If the angle subtended by the same arc at the circumference is <m>\angle APB = 2y + 5^\circ</m>, solve for <m>y</m> and calculate the size of <m>\angle APB</m>.
                 </p>
-                <figure xml:id="fig-central-circumference-algebraic">
-            <caption>Central angle <m>\angle AOB</m> and circumference angle <m>\angle APB</m> subtended by arc AB.</caption>
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates ---
-                    \coordinate (O) at (0,0);
-                    
-                    % Placing points A and B symmetrically near the bottom for a 130-degree central angle
-                    \coordinate (A) at (205:2);
-                    \coordinate (B) at (335:2);
-                    
-                    % Point P on the upper circumference
-                    \coordinate (P) at (90:2);
+               <figure xml:id="central-inscribed-algebra">
+                    <caption></caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            % --- Centre and points on the circle ---
+                            \tkzDefPoint(0,0){O}
+                            
+                            % Points A and B on the circumference
+                            \tkzDefPointOnCircle[R = center O angle 210 radius 3]\tkzGetPoint{A}
+                            \tkzDefPointOnCircle[R = center O angle 330 radius 3]\tkzGetPoint{B}
+                            % Point P on the major arc
+                            \tkzDefPointOnCircle[R = center O angle 90 radius 3]\tkzGetPoint{P}
 
-                    % --- Draw Circle and Line Segments ---
-                    \draw[thick] (O) circle (2cm);
-                    \draw[thick] (O) -- (A);
-                    \draw[thick] (O) -- (B);
-                    \draw[thick] (P) -- (A);
-                    \draw[thick] (P) -- (B);
+                            % Draw the circle
+                            \tkzDrawCircle[thick](O,A)
 
-                    % --- Annotate Angles ---
-                    % Central Angle AOB
-                    \draw (205:0.4) arc (205:335:0.4);
-                    \node at (270:0.6) {\small $5y - 20^{\circ}$};
+                            % --- Draw central and inscribed angles ---
+                            \tkzDrawSegments(O,A O,B P,A P,B)
 
-                    % Circumference Angle APB
-                    \draw[shift={(P)}] (205:0.5) arc (205:335:0.5);
-                    \node at (0,1.2) {\small $2y + 5^{\circ}$};
+                            % --- Fill and mark the angles ---
+                            \tkzFillAngle[fill=red!20,opacity=.6, size=.5](A,O,B)
+                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.9](A,P,B)
 
-                    % --- Label Points ---
-                    \fill (O) circle (1.5pt) node[above] {$O$};
-                    \fill (A) circle (1.5pt) node[left] {$A$};
-                    \fill (B) circle (1.5pt) node[right] {$B$};
-                    \fill (P) circle (1.5pt) node[above] {$P$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
+                            \tkzMarkAngle[size=.5,color=red](A,O,B)
+                            \tkzMarkAngle[size=.9,color=blue](A,P,B)
+
+                            % --- Angle labels using the algebraic expressions ---
+                            \tkzLabelAngle[pos=1.1](A,O,B){$5y - 20^{\circ}$}
+                            \tkzLabelAngle[pos=1.3](A,P,B){$2y + 5^{\circ}$}
+
+                            % --- Points and point labels ---
+                            \tkzDrawPoints(O,A,B,P)
+                            \tkzLabelPoints[above](O)
+                            \tkzLabelPoints[left](A)
+                            \tkzLabelPoints[right](B)
+                            \tkzLabelPoints[above](P)
+
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
