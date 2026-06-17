@@ -187,19 +187,21 @@
         <p>
             Follow these steps to construct the excircle opposite vertex <m>A</m>. Each step is shown in the diagrams below.
         </p>
+        <ol marker="1.">
+            <li>
         <p>
-            <alert>Step 1.</alert> Draw triangle <m>ABC</m>. Extend side <m>AB</m> beyond <m>B</m> as a dashed ray, and extend side <m>AC</m> beyond <m>C</m> as a dashed ray.
+            Draw triangle <m>ABC</m>. Extend side <m>AB</m> beyond <m>B</m> as a dashed ray, and extend side <m>AC</m> beyond <m>C</m> as a dashed ray.
         </p>
         <figure xml:id="fig-excircle-step1">
             <caption>Step 1: Triangle <m>ABC</m> with dashed extensions.</caption>
-            <image width="60%">
+            <image width="80%">
                 <latex-image>
                 \begin{tikzpicture}
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
-                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
                   \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
@@ -207,24 +209,26 @@
                   %% --- MARK ---
                   %% --- LABEL ---
                   \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoints[above left](A)
                 \end{tikzpicture}
                 </latex-image>
             </image>
         </figure>
+        </li>
+        <li>
         <p>
-            <alert>Step 2.</alert> Bisect the exterior angle at <m>B</m>: this is the angle between side <m>BC</m> and the extension of <m>AB</m> beyond <m>B</m>. Draw the bisector as a ray from <m>B</m>.
+            Bisect the angle at <m>B</m> and draw the bisector as a ray from <m>B</m>.
         </p>
         <figure xml:id="fig-excircle-step2">
-            <caption>Step 2: External angle bisector at <m>B</m>.</caption>
-            <image width="60%">
+            <caption>Step 2: Angle bisector at <m>B</m>.</caption>
+            <image width="80%">
                 <latex-image>
                 \begin{tikzpicture}
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
-                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                   \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
@@ -234,24 +238,26 @@
                   %% --- MARK ---
                   %% --- LABEL ---
                   \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoints[above left](A)
                 \end{tikzpicture}
                 </latex-image>
             </image>
         </figure>
+        </li>
+        <li>
         <p>
-            <alert>Step 3.</alert> Bisect the exterior angle at <m>C</m>: this is the angle between side <m>BC</m> and the extension of <m>AC</m> beyond <m>C</m>. Draw the bisector as a ray from <m>C</m>. Label the intersection of the two bisectors <m>I_a</m>.
+            Bisect the exterior angle at <m>C</m>: this is the angle between side <m>BC</m> and the extension of <m>AC</m> beyond <m>C</m>. Draw the bisector as a ray from <m>C</m>. Label the intersection of the two bisectors <m>I_a</m>.
         </p>
         <figure xml:id="fig-excircle-step3">
             <caption>Step 3: External bisectors at <m>B</m> and <m>C</m> meet at <m>I_a</m>.</caption>
-            <image width="60%">
+            <image width="80%">
                 <latex-image>
                 \begin{tikzpicture}
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
-                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                   \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                   %% --- DRAW ---
                   \tkzDrawPolygon[thick](A,B,C)
@@ -262,25 +268,27 @@
                   %% --- MARK ---
                   %% --- LABEL ---
                   \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoints[above left](A)
                   \tkzLabelPoint[right](Ia){$I_a$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
         </figure>
+        </li>
+        <li>
         <p>
-            <alert>Step 4.</alert> From <m>I_a</m>, drop a perpendicular to side <m>BC</m>. Label the foot of the perpendicular <m>X</m>. The distance <m>I_aX</m> is the excircle radius <m>r_a</m>.
+            From <m>I_a</m>, drop a perpendicular to side <m>BC</m>. Label the foot of the perpendicular <m>X</m>. The distance <m>I_aX</m> is the excircle radius <m>r_a</m>.
         </p>
         <figure xml:id="fig-excircle-step4">
             <caption>Step 4: Perpendicular from <m>I_a</m> to <m>BC</m> gives radius <m>r_a = I_aX</m>.</caption>
-            <image width="60%">
+            <image width="80%">
                 <latex-image>
                 \begin{tikzpicture}
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
-                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                   \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                   \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                   %% --- DRAW ---
@@ -294,26 +302,28 @@
                   \tkzMarkRightAngle[size=0.18](Ia,X,B)
                   %% --- LABEL ---
                   \tkzLabelPoints[below](B,C,X)
-                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoints[above left](A)
                   \tkzLabelPoint[right](Ia){$I_a$}
                   \tkzLabelSegment[right](Ia,X){$r_a$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
         </figure>
+        </li>
+        <li>
         <p>
-            <alert>Step 5.</alert> Draw the circle with centre <m>I_a</m> and radius <m>I_aX</m>. It should be tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>.
+            Draw the circle with centre <m>I_a</m> and radius <m>I_aX</m>. It should be tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>.
         </p>
         <figure xml:id="fig-excircle-step5">
             <caption>Step 5: The completed excircle opposite <m>A</m>.</caption>
-            <image width="60%">
+            <image width="80%">
                 <latex-image>
                 \begin{tikzpicture}
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
-                  \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                  \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                  \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                   \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                   \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                   %% --- DRAW ---
@@ -328,13 +338,15 @@
                   \tkzMarkRightAngle[size=0.18](Ia,X,B)
                   %% --- LABEL ---
                   \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above](A)
+                  \tkzLabelPoints[above left](A)
                   \tkzLabelPoint[right](Ia){$I_a$}
                   \tkzLabelPoint[below](X){$X$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
         </figure>
+    </li>
+    </ol>
     </paragraphs>
 
     <theorem xml:id="thm-escribed-circle">
@@ -349,18 +361,18 @@
             </p>
             <figure xml:id="fig-excircle-theorem">
                 <caption>The excircle opposite <m>A</m>: centre <m>I_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
-                <image width="65%">
+                <image width="85%">
                     <latex-image>
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=0.8]
                       %% --- SET ---
                       \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                       %% --- CALCULATE ---
-                      \tkzDefPointBy[homothety=center B ratio -0.6](A) \tkzGetPoint{ABext}
-                      \tkzDefPointBy[homothety=center C ratio -0.6](A) \tkzGetPoint{ACext}
+                      \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                        \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                       \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                       \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                       \tkzDefPointBy[projection=onto B--ABext](Ia) \tkzGetPoint{Y}
-                      \tkzDefPointBy[projection=onto C--ACext](Ia) \tkzGetPoint{Z}
+                      \tkzDefPointBy[projection=onto C--A](Ia) \tkzGetPoint{Z}
                       %% --- DRAW ---
                       \tkzDrawPolygon[thick](A,B,C)
                       \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
@@ -373,11 +385,11 @@
                       \tkzMarkRightAngle[size=0.15](Ia,Z,C)
                       %% --- LABEL ---
                       \tkzLabelPoints[below](B,C)
-                      \tkzLabelPoints[above](A)
+                      \tkzLabelPoints[above left](A)
                       \tkzLabelPoint[right](Ia){$I_a$}
                       \tkzLabelPoint[below](X){$X$}
-                      \tkzLabelPoint[below left](Y){$Y$}
-                      \tkzLabelPoint[below right](Z){$Z$}
+                      \tkzLabelPoint[left](Y){$Y$}
+                      \tkzLabelPoint[below left](Z){$Z$}
                     \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -400,7 +412,7 @@
                 <md>
                     \Delta = \tfrac{1}{2}r_a c + \tfrac{1}{2}r_a b - \tfrac{1}{2}r_a a = r_a(s - a),
                 </md>
-                giving <m>r_a = \Delta\,/\,(s-a)</m>. <m>\square</m>
+                giving <m>r_a = \Delta\,/\,(s-a)</m>.
             </p>
         </proof>
     </theorem>
@@ -477,30 +489,18 @@
                 <caption>Excircle opposite <m>A</m> for triangle with <m>AB=7</m>, <m>BC=5</m>, <m>CA=6</m>.</caption>
                 <image width="65%">
                     <latex-image>
-                    \begin{tikzpicture}
+                    \begin{tikzpicture}[scale=1]
                       %% --- SET: place B and C; find A by intersection of circles of radii AB=7 and CA=6 ---
                       \tkzDefPoints{0/0/B, 5/0/C}
                       \tkzDefPoint(7,0){bR}
                       \tkzDefPoint(11,0){cR}
                       %% --- CALCULATE ---
                       \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
-                      \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                      \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
-                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
-                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                       %% --- DRAW ---
                       \tkzDrawPolygon[thick](A,B,C)
-                      \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
-                      \tkzDrawSegment[red,thin](Ia,X)
-                      \tkzDrawCircle[blue,thick](Ia,X)
-                      \tkzDrawPoints(A,B,C,Ia,X)
-                      %% --- MARK ---
-                      \tkzMarkRightAngle[size=0.18](Ia,X,C)
                       %% --- LABEL ---
                       \tkzLabelPoints[below](B,C)
-                      \tkzLabelPoints[above](A)
-                      \tkzLabelPoint[right](Ia){$I_a$}
-                      \tkzLabelPoint[below](X){$X$}
+                      \tkzLabelPoints[above left](A)
                     \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -526,6 +526,38 @@
                     </li>
                 </ol>
             </p>
+            <figure xml:id="fig-excircle-ex1-soln">
+                <caption>Excircle opposite <m>A</m> for triangle with <m>AB=7</m>, <m>BC=5</m>, <m>CA=6</m>.</caption>
+                <image width="85%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.8]
+                      %% --- SET: place B and C; find A by intersection of circles of radii AB=7 and CA=6 ---
+                      \tkzDefPoints{0/0/B, 5/0/C}
+                      \tkzDefPoint(7,0){bR}
+                      \tkzDefPoint(11,0){cR}
+                      %% --- CALCULATE ---
+                      \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+                      \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                      \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
+                      \tkzDrawSegment[red,thin](Ia,X)
+                      \tkzDrawCircle[blue,thick](Ia,X)
+                      \tkzDrawPoints(A,B,C,Ia,X)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below](B,C)
+                      \tkzLabelPoints[above left](A)
+                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelPoint[below](X){$X$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
         </solution>
     </example>
 
@@ -958,8 +990,8 @@
                           \tkzDefPoint(15,0){cR}
                           %% --- CALCULATE ---
                           \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
-                          \tkzDefPointBy[homothety=center B ratio -0.5](A) \tkzGetPoint{ABext}
-                          \tkzDefPointBy[homothety=center C ratio -0.5](A) \tkzGetPoint{ACext}
+                          \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                          \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
                           \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
                           \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
                           %% --- DRAW ---
