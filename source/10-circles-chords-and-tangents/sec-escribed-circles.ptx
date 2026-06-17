@@ -50,19 +50,19 @@
             <li>
                 <title>Suggested Time</title>
                 <p>
-                    12 minutes
+                    8 minutes
                 </p>
             </li>
             <li>
                 <title>Objective</title>
                 <p>
-                    To guide learners to ask: <em>can a circle be tangent to a triangle from the outside?</em> By trying to find a centre equidistant from one side and the extensions of the other two, learners rediscover the idea of the excircle through exploration.
+                    To explore circles tangent to a triangle from outside, and to struggle productively with the construction of an excircle.
                 </p>
             </li>
             <li>
                 <title>Teacher's Role</title>
                 <p>
-                    Ask learners to extend two sides of their triangle beyond two vertices, then attempt to draw a circle tangent to the original side and the two extensions. Circulate and prompt with: <q>The circle must touch all three lines. What does that tell you about how far the centre is from each line?</q> Do not reveal the construction — that comes in the theory section. The goal here is simply for learners to struggle productively and measure distances.
+                    You don't need to provide the correct construction to learners, as this will be covered after the Learner Experience.
                 </p>
             </li>
         </dl>
@@ -71,60 +71,57 @@
     <activity>
         <statement>
             <paragraphs>
-                <title>A Circle Outside the Triangle</title>
+                <title>Circles Outside the Triangle</title>
                 <p>
-                    You have seen how a circle can fit perfectly <em>inside</em> a triangle, tangent to all three sides. In this activity you will explore whether a circle can also be tangent to a triangle from <em>outside</em>.
+                    You have seen how a circle can fit perfectly <em>inside</em> a triangle, tangent to all three sides. Now we'll focus on circles 
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Draw a triangle <m>ABC</m> of your choice. Extend side <m>AB</m> beyond <m>B</m> (draw a ray from <m>B</m> pointing away from <m>A</m>). Extend side <m>AC</m> beyond <m>C</m> (draw a ray from <m>C</m> pointing away from <m>A</m>).
+                                Draw a triangle <m>ABC</m> of your choice, and extend each side as a dashed ray beyond the triangle in both directions.
                             </p>
+                            <figure xml:id="fig-extended-triangle">
+                                <caption>Triangle <m>ABC</m> with sides extended</caption>
+                                <image width="75%">
+                                    <latex-image>
+                                    \begin{tikzpicture}[scale=0.5]
+                                        %% --- SET: a=BC=5, b=CA=6, c=AB=7 ---
+                                        \tkzDefPoints{0/0/B, 5/0/C}
+                                        \tkzDefPoint(7,0){bR}
+                                        \tkzDefPoint(11,0){cR}
+                                        %% --- CALCULATE ---
+                                        \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+
+                                        \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext1}
+                                        \tkzDefPointBy[homothety=center A ratio 2.1](B) \tkzGetPoint{ABext2}
+
+                                        \tkzDefPointBy[homothety=center C ratio 2.1](A) \tkzGetPoint{ACext1}
+                                        \tkzDefPointBy[homothety=center A ratio 2.1](C) \tkzGetPoint{ACext2}
+
+                                        \tkzDefPointBy[homothety=center C ratio 2.1](B) \tkzGetPoint{BCext1}
+                                        \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{BCext2}
+
+
+                                        %% --- DRAW ---
+                                        \tkzDrawPolygon[thick](A,B,C)
+                                        \tkzDrawPoints(A,B,C)
+                                        \tkzDrawSegments[dashed,thick](B,ABext1 B,ABext2 C,ACext1 C,ACext2 B,BCext1 C,BCext2)
+                                        %% --- MARK ---
+                                        %% --- LABEL ---
+                                        \tkzLabelPoint[below](B){$A$}
+                                        \tkzLabelPoints[below right](C)
+                                        \tkzLabelPoint[above, yshift=5pt](A){$B$}
+                                    \end{tikzpicture}
+                                    </latex-image>
+                                </image>
+                            </figure>
                         </li>
                         <li>
                             <p>
-                                Using a compass, try to draw a circle that is tangent to side <m>BC</m>, to the extension of <m>AB</m> beyond <m>B</m>, and to the extension of <m>AC</m> beyond <m>C</m>. Mark the centre you used. (You may need several attempts!)
+                                This creates 6 regions, 3 of which have one of the triangle's edges as a border. For each of those 3 regions, can you construct a circle which is tangent to the triangle edge and both dashed edges?
                             </p>
-                        </li>
-                        <li>
-                            <p>
-                                Compare with a classmate. Did you choose the same centre? What did you find most difficult about the construction?
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Measure the perpendicular distance from your chosen centre to each of the three lines (side <m>BC</m>, and the two extensions). Record your measurements in the table below. What do you notice?
-                            </p>
-                            <solution component="lesson-plan">
-                                <p>
-                                    If the centre has been chosen well, the three perpendicular distances should be approximately equal — the centre is equidistant from all three lines. In the structured instruction that follows, learners will learn <em>how</em> to find this centre exactly using angle bisectors.
-                                </p>
-                            </solution>
                         </li>
                     </ol>
                 </p>
-                <table>
-                    <title>Perpendicular distances from chosen centre to each line</title>
-                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
-                        <row header="yes" bottom="medium">
-                            <cell>Triangle</cell>
-                            <cell>Distance to <m>BC</m> (mm)</cell>
-                            <cell>Distance to extension of <m>AB</m> (mm)</cell>
-                            <cell>Distance to extension of <m>AC</m> (mm)</cell>
-                        </row>
-                        <row>
-                            <cell>1</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>2</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>3</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                    </tabular>
-                </table>
             </paragraphs>
         </statement>
     </activity>
@@ -142,32 +139,32 @@
             <li>
                 <title>Objective</title>
                 <p>
-                    To formalise the excircle construction and establish the key properties of the excenter.
+                    To introduce the concept of an excircle, and to show how to construct it using angle bisectors and perpendiculars.
                 </p>
             </li>
             </dl>
         </p>
-        <paragraphs>
-            <title>Key Takeaways &amp; Teacher Connection</title>
-            <ul>
-                <li>
-                    <p>
-                        <alert>Connecting to Learner Work:</alert> Ask learners to share their measurements. Confirm that the three distances are (approximately) equal. Tell learners: <q>This point is called an <term>excenter</term>, and the circle centred there is called an <term>excircle</term> or <term>escribed circle</term>.</q>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Every triangle has exactly <em>three</em> excircles — one opposite each vertex. The excircle opposite <m>A</m> is tangent to side <m>BC</m> and to the <em>extensions</em> of sides <m>AB</m> and <m>AC</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        The excenter <m>I_a</m> (opposite <m>A</m>) lies on the <em>internal</em> angle bisector from <m>A</m> and on the <em>external</em> angle bisectors at <m>B</m> and <m>C</m>. It is the intersection of these two external bisectors that learners will use to construct it.
-                    </p>
-                </li>
-            </ul>
-        </paragraphs>
     </axiom>
+
+    <insight>
+        <ul>
+            <li>
+                <p>
+                    A circle tangent to one side of a triangle and to the extensions of the other two sides is called an <term>excircle</term>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Every triangle has three excircles, one opposite each vertex. The excircle opposite vertex <m>A</m> is tangent to side <m>BC</m> and to the extensions of sides <m>AB</m> and <m>AC</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    We denote the centre of the excircle (the <term>excenter</term>) opposite <m>A</m> as <m>J_a</m>, and its radius (the <term>exradius</term>) as <m>r_a</m>.
+                </p>
+            </li>
+        </ul>
+    </insight>
 
     
     <!-- \begin{tikzpicture}[scale=1]
@@ -196,7 +193,7 @@
             <caption>Step 1: Triangle <m>ABC</m> with dashed extensions.</caption>
             <image width="80%">
                 <latex-image>
-                \begin{tikzpicture}
+                \begin{tikzpicture}[scale=0.8]
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
@@ -208,8 +205,9 @@
                   \tkzDrawPoints(A,B,C)
                   %% --- MARK ---
                   %% --- LABEL ---
-                  \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above left](A)
+                  \tkzLabelPoint[below](B){$A$}
+                  \tkzLabelPoint[below](C){$C$}
+                  \tkzLabelPoint[above left](A){$B$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
@@ -223,7 +221,7 @@
             <caption>Step 2: Angle bisector at <m>B</m>.</caption>
             <image width="80%">
                 <latex-image>
-                \begin{tikzpicture}
+                \begin{tikzpicture}[scale=0.8]
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
@@ -237,8 +235,9 @@
                   \tkzDrawPoints(A,B,C)
                   %% --- MARK ---
                   %% --- LABEL ---
-                  \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above left](A)
+                  \tkzLabelPoint[below](B){$A$}
+                  \tkzLabelPoint[below](C){$C$}
+                  \tkzLabelPoint[above left](A){$B$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
@@ -246,13 +245,13 @@
         </li>
         <li>
         <p>
-            Bisect the exterior angle at <m>C</m>: this is the angle between side <m>BC</m> and the extension of <m>AC</m> beyond <m>C</m>. Draw the bisector as a ray from <m>C</m>. Label the intersection of the two bisectors <m>I_a</m>.
+            Bisect the exterior angle at <m>C</m>: this is the angle between side <m>BC</m> and the extension of <m>AC</m> beyond <m>C</m>. Draw the bisector as a ray from <m>C</m>. Label the intersection of the two bisectors <m>J_a</m>.
         </p>
         <figure xml:id="fig-excircle-step3">
-            <caption>Step 3: External bisectors at <m>B</m> and <m>C</m> meet at <m>I_a</m>.</caption>
+            <caption>Step 3: External bisectors at <m>B</m> and <m>C</m> meet at <m>J_a</m>.</caption>
             <image width="80%">
                 <latex-image>
-                \begin{tikzpicture}
+                \begin{tikzpicture}[scale=0.8]
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
@@ -267,9 +266,10 @@
                   \tkzDrawPoints(A,B,C,Ia)
                   %% --- MARK ---
                   %% --- LABEL ---
-                  \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above left](A)
-                  \tkzLabelPoint[right](Ia){$I_a$}
+                  \tkzLabelPoint[below](B){$A$}
+                  \tkzLabelPoint[below](C){$C$}
+                  \tkzLabelPoint[above left](A){$B$}
+                  \tkzLabelPoint[right](Ia){$J_a$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
@@ -277,13 +277,13 @@
         </li>
         <li>
         <p>
-            From <m>I_a</m>, drop a perpendicular to side <m>BC</m>. Label the foot of the perpendicular <m>X</m>. The distance <m>I_aX</m> is the excircle radius <m>r_a</m>.
+            From <m>J_a</m>, drop a perpendicular to side <m>BC</m>. Label the foot of the perpendicular <m>X</m>. The distance <m>J_aX</m> is the excircle radius <m>r_a</m>.
         </p>
         <figure xml:id="fig-excircle-step4">
-            <caption>Step 4: Perpendicular from <m>I_a</m> to <m>BC</m> gives radius <m>r_a = I_aX</m>.</caption>
+            <caption>Step 4: Perpendicular from <m>J_a</m> to <m>BC</m> gives radius <m>r_a = J_aX</m>.</caption>
             <image width="80%">
                 <latex-image>
-                \begin{tikzpicture}
+                \begin{tikzpicture}[scale=0.8]
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
@@ -302,8 +302,8 @@
                   \tkzMarkRightAngle[size=0.18](Ia,X,B)
                   %% --- LABEL ---
                   \tkzLabelPoints[below](B,C,X)
-                  \tkzLabelPoints[above left](A)
-                  \tkzLabelPoint[right](Ia){$I_a$}
+                  \tkzLabelPoint[above left](A){$B$}
+                  \tkzLabelPoint[right](Ia){$J_a$}
                   \tkzLabelSegment[right](Ia,X){$r_a$}
                 \end{tikzpicture}
                 </latex-image>
@@ -312,13 +312,13 @@
         </li>
         <li>
         <p>
-            Draw the circle with centre <m>I_a</m> and radius <m>I_aX</m>. It should be tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>.
+            Draw the circle with centre <m>J_a</m> and radius <m>J_aX</m>. It should be tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m>.
         </p>
         <figure xml:id="fig-excircle-step5">
             <caption>Step 5: The completed excircle opposite <m>A</m>.</caption>
             <image width="80%">
                 <latex-image>
-                \begin{tikzpicture}
+                \begin{tikzpicture}[scale=0.8]
                   %% --- SET ---
                   \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                   %% --- CALCULATE ---
@@ -337,10 +337,12 @@
                   %% --- MARK ---
                   \tkzMarkRightAngle[size=0.18](Ia,X,B)
                   %% --- LABEL ---
-                  \tkzLabelPoints[below](B,C)
-                  \tkzLabelPoints[above left](A)
-                  \tkzLabelPoint[right](Ia){$I_a$}
+                  \tkzLabelPoint[below](B){$A$}
+                  \tkzLabelPoint[below](C){$C$}
+                  \tkzLabelPoint[above left](A){$B$}
+                  \tkzLabelPoint[right](Ia){$J_a$}
                   \tkzLabelPoint[below](X){$X$}
+                  \tkzLabelSegment[right](Ia,X){$r_a$}
                 \end{tikzpicture}
                 </latex-image>
             </image>
@@ -349,21 +351,21 @@
     </ol>
     </paragraphs>
 
-    <theorem xml:id="thm-escribed-circle">
+    <theorem xml:id="thm-exradius">
         <title>The Excircle and its Radius</title>
         <statement>
             <p>
-                For any triangle <m>ABC</m> with side lengths <m>a = BC</m>, <m>b = CA</m>, <m>c = AB</m>, semi-perimeter <m>s</m>, and area <m>\Delta</m>, the <term>excircle opposite <m>A</m></term> has centre <m>I_a</m> — the intersection of the internal angle bisector from <m>A</m> with the external angle bisectors from <m>B</m> and <m>C</m> — and radius
+                For any triangle <m>ABC</m> with side lengths <m>a = BC</m>, <m>b = CA</m>, <m>c = AB</m>, semi-perimeter <m>s</m>, and area <m>\Delta</m>, the <term>excircle opposite <m>A</m></term> has centre <m>J_a</m> and radius
                 <md>
-                    r_a = \frac{\Delta}{s - a}.
+                    r_a = \frac{\Delta}{s - a}
                 </md>
-                Similarly, the excircles opposite <m>B</m> and <m>C</m> have radii <m>r_b = \Delta/(s-b)</m> and <m>r_c = \Delta/(s-c)</m>.
+                Similarly, <m>r_b = \frac{\Delta}{s - b}</m> and <m>r_c = \frac{\Delta}{s - c}</m>
             </p>
             <figure xml:id="fig-excircle-theorem">
-                <caption>The excircle opposite <m>A</m>: centre <m>I_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
+                <caption>The excircle opposite <m>A</m>: centre <m>J_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
                 <image width="85%">
                     <latex-image>
-                    \begin{tikzpicture}[scale=0.8]
+                    \begin{tikzpicture}[scale=0.7]
                       %% --- SET ---
                       \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
                       %% --- CALCULATE ---
@@ -384,99 +386,24 @@
                       \tkzMarkRightAngle[size=0.15](Ia,Y,B)
                       \tkzMarkRightAngle[size=0.15](Ia,Z,C)
                       %% --- LABEL ---
-                      \tkzLabelPoints[below](B,C)
-                      \tkzLabelPoints[above left](A)
-                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelPoint[below](B){$A$}
+                      \tkzLabelPoint[below](C){$C$}
+                      \tkzLabelPoint[above left](A){$B$}
+                      \tkzLabelPoint[right](Ia){$J_a$}
                       \tkzLabelPoint[below](X){$X$}
                       \tkzLabelPoint[left](Y){$Y$}
-                      \tkzLabelPoint[below left](Z){$Z$}
+                      \tkzLabelSegment[right](X,Ia){$r_a = \frac{\Delta}{s-a}$}
+                      \tkzLabelSegment[left](A,B){$c$}
+                      \tkzLabelSegment[below](A,C){$a$}
+                      \tkzLabelSegment[below left](B,C){$b$}
                     \end{tikzpicture}
                     </latex-image>
                 </image>
             </figure>
+
+            <p> You will prove this in <xref ref="ex-exradius-proof"/>.</p>
         </statement>
-        <proof>
-            <p>
-                Let the excircle opposite <m>A</m> touch side <m>BC</m> at <m>X</m>, the extension of <m>AB</m> beyond <m>B</m> at <m>Y</m>, and the extension of <m>AC</m> beyond <m>C</m> at <m>Z</m>. By the equal tangent theorem, tangent segments from an external point to a circle are equal:
-                <ul>
-                    <li><p>From <m>B</m>: <m>BX = BY</m>.</p></li>
-                    <li><p>From <m>C</m>: <m>CX = CZ</m>.</p></li>
-                    <li><p>From <m>A</m>: <m>AY = AZ</m>.</p></li>
-                </ul>
-            </p>
-            <p>
-                Now <m>AY = AB + BY = c + BX</m> and <m>AZ = AC + CZ = b + CX</m>. Since <m>AY = AZ</m> and <m>BX + CX = a</m>, solving gives <m>BX = s - c</m> and <m>CX = s - b</m>, so <m>AY = s</m>.
-            </p>
-            <p>
-                To find <m>r_a</m>, connect <m>I_a</m> to each vertex. Since <m>I_a</m> lies outside the triangle (on the far side of <m>BC</m> from <m>A</m>), the area of triangle <m>ABC</m> equals the sum of triangles <m>I_aAB</m> and <m>I_aAC</m> minus triangle <m>I_aBC</m>:
-                <md>
-                    \Delta = \tfrac{1}{2}r_a c + \tfrac{1}{2}r_a b - \tfrac{1}{2}r_a a = r_a(s - a),
-                </md>
-                giving <m>r_a = \Delta\,/\,(s-a)</m>.
-            </p>
-        </proof>
     </theorem>
-
-    <insight>
-        <title>Key Ideas</title>
-        <p>
-            <ul>
-                <li>
-                    <p>
-                        Every triangle has exactly <term>three excircles</term>, one opposite each vertex.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Excircle radii:</term>
-                        <md>
-                            r_a = \frac{\Delta}{s-a}, \qquad r_b = \frac{\Delta}{s-b}, \qquad r_c = \frac{\Delta}{s-c},
-                        </md>
-                        where <m>\Delta</m> is the area and <m>s</m> the semi-perimeter.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Tangent lengths</term> from each vertex to the excircle opposite <m>A</m>:
-                        <md>
-                            \text{from } A = s, \qquad \text{from } B = s - c, \qquad \text{from } C = s - b.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Reciprocal identity:</term>
-                        <md>
-                            \frac{1}{r} = \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c}.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Product identity:</term>
-                        <md>
-                            r \cdot r_a \cdot r_b \cdot r_c = \Delta^2.
-                        </md>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <term>Right-triangle special case:</term> if <m>C</m> is the right angle, then <m>r_c = s</m>.
-                    </p>
-                </li>
-            </ul>
-        </p>
-    </insight>
-
-    <paragraphs>
-        <title>The Nagel Point</title>
-        <p>
-            Here is a beautiful discovery to explore by construction. Label the point where the excircle opposite <m>A</m> touches side <m>BC</m> as <m>X_a</m>; similarly, let <m>X_b</m> be where the excircle opposite <m>B</m> touches side <m>CA</m>, and <m>X_c</m> be where the excircle opposite <m>C</m> touches side <m>AB</m>.
-        </p>
-        <p>
-            Draw lines <m>AX_a</m>, <m>BX_b</m>, and <m>CX_c</m>. What do you notice? The three lines all pass through a single point — called the <term>Nagel point</term> of the triangle. Try to verify this on your own triangle as a construction exercise.
-        </p>
-    </paragraphs>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
@@ -486,7 +413,7 @@
                 Draw a triangle <m>ABC</m> with <m>AB = 7</m> cm, <m>BC = 5</m> cm, and <m>CA = 6</m> cm. Construct the excircle opposite <m>A</m>.
             </p>
             <figure xml:id="fig-excircle-ex1">
-                <caption>Excircle opposite <m>A</m> for triangle with <m>AB=7</m>, <m>BC=5</m>, <m>CA=6</m>.</caption>
+                <caption><m>\triangle ABC</m> with <m>AB=7</m>, <m>BC=5</m>, <m>CA=6</m>.</caption>
                 <image width="65%">
                     <latex-image>
                     \begin{tikzpicture}[scale=1]
@@ -499,8 +426,9 @@
                       %% --- DRAW ---
                       \tkzDrawPolygon[thick](A,B,C)
                       %% --- LABEL ---
-                      \tkzLabelPoints[below](B,C)
-                      \tkzLabelPoints[above left](A)
+                      \tkzLabelPoint[below](B){$A$}
+                      \tkzLabelPoint[below](C){$C$}
+                      \tkzLabelPoint[above left](A){$B$}
                     \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -519,10 +447,10 @@
                         <p>Bisect the exterior angle at <m>B</m> (between side <m>BC</m> and the extension of <m>AB</m> beyond <m>B</m>): open the compasses and draw equal arcs from <m>B</m> on both lines, then bisect between their intersection points. Draw the bisector as a ray from <m>B</m>.</p>
                     </li>
                     <li>
-                        <p>Bisect the exterior angle at <m>C</m> in the same way. Label the intersection of the two bisector rays <m>I_a</m>.</p>
+                        <p>Bisect the exterior angle at <m>C</m> in the same way. Label the intersection of the two bisector rays <m>J_a</m>.</p>
                     </li>
                     <li>
-                        <p>From <m>I_a</m>, drop a perpendicular to line <m>BC</m> (foot <m>X</m>). Set the compasses to <m>I_aX</m> and draw the excircle. It should touch <m>BC</m> and both extensions.</p>
+                        <p>From <m>J_a</m>, drop a perpendicular to line <m>BC</m> (foot <m>X</m>). Set the compasses to <m>J_aX</m> and draw the excircle. It should touch <m>BC</m> and both extensions.</p>
                     </li>
                 </ol>
             </p>
@@ -550,9 +478,10 @@
                       %% --- MARK ---
                       \tkzMarkRightAngle[size=0.18](Ia,X,C)
                       %% --- LABEL ---
-                      \tkzLabelPoints[below](B,C)
-                      \tkzLabelPoints[above left](A)
-                      \tkzLabelPoint[right](Ia){$I_a$}
+                      \tkzLabelPoint[below](B){$A$}
+                      \tkzLabelPoint[below](C){$C$}
+                      \tkzLabelPoint[above left](A){$B$}
+                      \tkzLabelPoint[right](Ia){$J_a$}
                       \tkzLabelPoint[below](X){$X$}
                     \end{tikzpicture}
                     </latex-image>
@@ -570,7 +499,7 @@
                 <caption>All three excircles of the 3-4-5 right triangle.</caption>
                 <image width="75%">
                     <latex-image>
-                    \begin{tikzpicture}[scale=0.65]
+                    \begin{tikzpicture}[scale=0.4]
                       %% --- SET: right angle at C; a=BC=3, b=CA=4, c=AB=5 ---
                       \tkzDefPoints{0/0/C, 3/0/B, 0/4/A}
                       %% --- CALCULATE ---
@@ -581,6 +510,9 @@
                       \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
                       \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
                       %% --- DRAW ---
+                      \tkzDrawLine[add=2 and 2, dashed](B,C)
+                      \tkzDrawLine[add=2 and 2, dashed](A,B)
+                      \tkzDrawLine[add=2 and 2, dashed](A,C)
                       \tkzDrawPolygon[thick](A,B,C)
                       \tkzDrawCircle[blue](Ia,FootA)
                       \tkzDrawCircle[blue](Ib,FootB)
@@ -589,12 +521,15 @@
                       %% --- MARK ---
                       \tkzMarkRightAngle[size=0.2](A,C,B)
                       %% --- LABEL ---
-                      \tkzLabelPoints[below](B)
-                      \tkzLabelPoints[left](C)
-                      \tkzLabelPoints[above left](A)
-                      \tkzLabelPoint[right](Ia){$I_a$}
-                      \tkzLabelPoint[left](Ib){$I_b$}
-                      \tkzLabelPoint[above right](Ic){$I_c$}
+                      \tkzLabelPoints[below right](B)
+                      \tkzLabelPoints[below left](C)
+                      \tkzLabelPoints[left](A)
+                      \tkzLabelPoint[left](Ia){$J_b$}
+                      \tkzLabelPoint[below](Ib){$J_c$}
+                      \tkzLabelPoint[below](Ic){$J_a$}
+                      \tkzLabelSegment[left](A,C){$4$}
+                      \tkzLabelSegment[below](B,C){$3$}
+                      \tkzLabelSegment[above right](A,B){$5$}
                     \end{tikzpicture}
                     </latex-image>
                 </image>
@@ -602,16 +537,12 @@
         </statement>
         <solution>
             <p>
-                Label the sides <m>a = 3</m>, <m>b = 4</m>, <m>c = 5</m>. The semi-perimeter is <m>s = 6</m> and the area is <m>\Delta = 6</m> cm<m>^2</m>. Then:
+                Label the sides <m>a = 3</m>, <m>b = 4</m>, <m>c = 5</m>. The semi-perimeter is <md>s = \frac{3+4+5}{2} = 6</md> and the area is <md>\Delta = \frac{1}{2}\times 4 \times 3 = 6</md> Then by <xref ref="thm-exradius"/>:
                 <md>
                     <mrow>r_a \amp= \frac{6}{6 - 3} = 2 \text{ cm}</mrow>
                     <mrow>r_b \amp= \frac{6}{6 - 4} = 3 \text{ cm}</mrow>
                     <mrow>r_c \amp= \frac{6}{6 - 5} = 6 \text{ cm.}</mrow>
                 </md>
-                The largest excircle (<m>r_c = 6</m> cm) is opposite the shortest side (<m>a = 3</m> cm). We can verify the reciprocal identity: the inradius is <m>r = \Delta/s = 1</m> cm, and
-                <md>
-                    \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c} = \frac{1}{2} + \frac{1}{3} + \frac{1}{6} = 1 = \frac{1}{r}. \checkmark
-                </md>
             </p>
         </solution>
     </example>
@@ -619,101 +550,7 @@
     <example>
         <statement>
             <p>
-                A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use the reciprocal identity to find <m>r_c</m>.
-            </p>
-            <figure xml:id="fig-excircle-ex3">
-                <caption>Incircle (radius <m>r</m>) and excircles opposite <m>A</m> and <m>B</m>.</caption>
-                <image width="70%">
-                    <latex-image>
-                    \begin{tikzpicture}[scale=0.75]
-                      %% --- SET ---
-                      \tkzDefPoints{0/0/B, 6/0/C, 2/4/A}
-                      %% --- CALCULATE ---
-                      \tkzDefCircle[in](A,B,C) \tkzGetPoints{I}{Xi}
-                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xia}
-                      \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xib}
-                      \tkzDefPointBy[projection=onto B--C](I)  \tkzGetPoint{FootI}
-                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
-                      \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
-                      %% --- DRAW ---
-                      \tkzDrawPolygon[thick](A,B,C)
-                      \tkzDrawCircle[green!60!black](I,FootI)
-                      \tkzDrawCircle[blue](Ia,FootA)
-                      \tkzDrawCircle[blue](Ib,FootB)
-                      \tkzDrawPoints(A,B,C,I,Ia,Ib)
-                      %% --- MARK ---
-                      %% --- LABEL ---
-                      \tkzLabelPoints[below](B,C)
-                      \tkzLabelPoints[above](A)
-                      \tkzLabelPoint[above](I){$r$}
-                      \tkzLabelPoint[right](Ia){$r_a$}
-                      \tkzLabelPoint[left](Ib){$r_b$}
-                    \end{tikzpicture}
-                    </latex-image>
-                </image>
-            </figure>
-        </statement>
-        <solution>
-            <p>
-                By the reciprocal identity <m>\dfrac{1}{r} = \dfrac{1}{r_a} + \dfrac{1}{r_b} + \dfrac{1}{r_c}</m>:
-                <md>
-                    \frac{1}{r_c} = \frac{1}{r} - \frac{1}{r_a} - \frac{1}{r_b} = \frac{1}{2} - \frac{1}{3} - \frac{1}{10} = \frac{15 - 10 - 3}{30} = \frac{2}{30} = \frac{1}{15}.
-                </md>
-                Therefore <m>r_c = 15</m> cm.
-            </p>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-            <p>
-                A triangular plot in Nairobi has boundary lengths <m>9</m> m, <m>12</m> m, and <m>15</m> m. A developer wants to install a circular water tank just outside the plot, touching the <m>15</m> m boundary and the extensions of the other two sides. Find the radius of the tank.
-            </p>
-            <figure xml:id="fig-excircle-ex4">
-                <caption>Excircle opposite <m>A</m> (the right angle) in the 9-12-15 triangle.</caption>
-                <image width="70%">
-                    <latex-image>
-                    \begin{tikzpicture}[scale=0.35]
-                      %% --- SET: right angle at A; AB=9, AC=12, BC=15 ---
-                      \tkzDefPoints{0/0/A, 9/0/B, 0/12/C}
-                      %% --- CALCULATE ---
-                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
-                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
-                      %% --- DRAW ---
-                      \tkzDrawPolygon[thick](A,B,C)
-                      \tkzDrawSegment[red,thin](Ia,X)
-                      \tkzDrawCircle[blue,thick](Ia,X)
-                      \tkzDrawPoints(A,B,C,Ia,X)
-                      %% --- MARK ---
-                      \tkzMarkRightAngle[size=0.5](B,A,C)
-                      \tkzMarkRightAngle[size=0.4](Ia,X,B)
-                      %% --- LABEL ---
-                      \tkzLabelPoints[left](A,C)
-                      \tkzLabelPoints[below](B)
-                      \tkzLabelPoint[right](Ia){$I_a$}
-                      \tkzLabelSegment[right,pos=0.5](A,B){$9$}
-                      \tkzLabelSegment[left,pos=0.5](A,C){$12$}
-                      \tkzLabelSegment[above right,pos=0.5](B,C){$15$}
-                    \end{tikzpicture}
-                    </latex-image>
-                </image>
-            </figure>
-        </statement>
-        <solution>
-            <p>
-                The excircle touching the <m>15</m> m side is opposite the vertex across from it. Label <m>a = 15</m> m, so we need <m>r_a</m>. Check: <m>9^2 + 12^2 = 225 = 15^2</m>, confirming a right triangle with area <m>\Delta = 54</m> m<m>^2</m> and semi-perimeter <m>s = 18</m> m. Therefore:
-                <md>
-                    r_a = \frac{54}{18 - 15} = \frac{54}{3} = 18 \text{ m.}
-                </md>
-                The water tank has radius <m>18</m> m.
-            </p>
-        </solution>
-    </example>
-
-    <example>
-        <statement>
-            <p>
-                A right triangle has legs <m>8</m> cm and <m>15</m> cm. Find the radius of the excircle opposite the right angle.
+                A right triangle has legs <m>8</m> cm and <m>15</m> cm. Construct the excircle tangent to the longer leg and find its radius.
             </p>
             <figure xml:id="fig-excircle-ex5">
                 <caption>Excircle opposite the right angle <m>C</m> in the 8-15-17 triangle.</caption>
@@ -727,16 +564,11 @@
                       \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
                       %% --- DRAW ---
                       \tkzDrawPolygon[thick](A,B,C)
-                      \tkzDrawSegment[red,thin](Ic,FootC)
-                      \tkzDrawCircle[blue,thick](Ic,FootC)
-                      \tkzDrawPoints(A,B,C,Ic,FootC)
                       %% --- MARK ---
                       \tkzMarkRightAngle[size=0.5](A,C,B)
-                      \tkzMarkRightAngle[size=0.4](Ic,FootC,A)
                       %% --- LABEL ---
                       \tkzLabelPoints[below](C,B)
                       \tkzLabelPoints[above left](A)
-                      \tkzLabelPoint[right](Ic){$I_c$}
                       \tkzLabelSegment[below,pos=0.5](C,B){$15$}
                       \tkzLabelSegment[left,pos=0.5](C,A){$8$}
                     \end{tikzpicture}
@@ -746,11 +578,45 @@
         </statement>
         <solution>
             <p>
-                The hypotenuse is <m>c = 17</m> cm and the semi-perimeter is <m>s = 20</m> cm. By the right-triangle special case:
+                Constructing the excircle should give:
+                <figure xml:id="fig-excircle-ex5-soln">
+                <caption>Excircle opposite the right angle <m>C</m> in the 8-15-17 triangle.</caption>
+                <image width="70%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.2]
+                      %% --- SET: right angle at C; CA=8, CB=15, AB=17 ---
+                      \tkzDefPoints{0/0/C, 15/0/B, 0/8/A}
+                      %% --- CALCULATE ---
+                      \tkzDefCircle[ex](A,C,B) \tkzGetPoints{Ic}{Xc}
+                      \tkzDefPointBy[projection=onto C--B](Ic) \tkzGetPoint{FootC}
+                      %% --- DRAW ---
+                      \tkzDrawLines[add=0 and 1, dashed, thick](C,B)
+                      \tkzDrawLines[add=2 and 0, dashed, thick](A,C)
+                      \tkzDrawPolygon(A,B,C)
+                      \tkzDrawSegment[red,thin](Ic,FootC)
+                      \tkzDrawCircle[blue,thick](Ic,FootC)
+                      \tkzDrawPoints(A,B,C,Ic,FootC)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.5](A,C,B)
+                      \tkzMarkRightAngle[size=0.4](Ic,FootC,C)
+                      %% --- LABEL ---
+                      \tkzLabelPoints[below left](C)
+                      \tkzLabelPoints[below](B)
+                      \tkzLabelPoints[above left](A)
+                      \tkzLabelPoint[right](Ic){$J_C$}
+                      \tkzLabelSegment[below,pos=0.5](C,B){$15$}
+                      \tkzLabelSegment[left,pos=0.5](C,A){$8$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            </p>
+            <p>
+                The hypotenuse is <m>c = 17</m> cm and the semi-perimeter is <md>s = \frac{8+15+17}{2} = 20</md>. The area is <m>\Delta = \frac{1}{2} \times 8 \times 15 = 60</m>, so:
                 <md>
-                    r_c = s = 20 \text{ cm.}
+                    r_B = \frac{\Delta}{s-b} = \frac{60}{20-17} = 20 \text{ cm.}
                 </md>
-                Verify: area <m>\Delta = 60</m> cm<m>^2</m>, and <m>r_c = 60\,/\,(s - c) = 60\,/\,3 = 20</m> cm. <m>\checkmark</m>
+                It is no conincidence that <m>r_B = s</m>, this is in fact true for all excircles opposite a right angle.
             </p>
         </solution>
     </example>
@@ -761,14 +627,12 @@
         <exercise>
             <statement>
                 <p>
-                    For each triangle below, use a pair of compasses and a straightedge to construct the <term>excircle opposite <m>A</m></term> — the circle tangent to side <m>BC</m> and to the extensions of <m>AB</m> and <m>AC</m> (already drawn dashed). In your solution, show your construction: build the external bisectors at <m>B</m> and <m>C</m> to locate the excentre <m>I_a</m>, drop a perpendicular from <m>I_a</m> to <m>BC</m> for the radius, then draw the circle.
+                    For each triangle below, use a pair of compasses and a straightedge to construct the exercircle opposite <m>A</m>. In your solution, show your construction.
                 </p>
-                <ol marker="(a)">
+                <ol marker="(a)" cols="2">
                     <li>
                         <p>Acute scalene triangle.</p>
-                        <figure xml:id="fig-build-exc-a">
-                            <caption>Acute scalene triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
-                            <image width="48%">
+                            <image width="90%">
                                 <latex-image>
                                     \begin{tikzpicture}[scale=0.6]
                                         \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
@@ -777,192 +641,182 @@
                                         \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
                                         \tkzDrawPoints(A,B,C)
                                         \tkzLabelPoints[above](A)
-                                        \tkzLabelPoints[above left](B)
-                                        \tkzLabelPoints[above right](C)
+                                        \tkzLabelPoints[below left](B)
+                                        \tkzLabelPoints[below right](C)
                                     \end{tikzpicture}
                                 </latex-image>
                             </image>
-                        </figure>
                     </li>
                     <li>
-                        <p>Right triangle (right angle at <m>B</m>).</p>
-                        <figure xml:id="fig-build-exc-b">
-                            <caption>Right triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzMarkRightAngle[size=0.2](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
-                                        \tkzDrawPoints(A,B,C)
-                                        \tkzLabelPoints[above left](A)
-                                        \tkzLabelPoints[above right](B)
-                                        \tkzLabelPoints[above right](C)
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <p>Right triangle</p>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzMarkRightAngle[size=0.2](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                    \tkzDrawPoints(A,B,C)
+                                    \tkzLabelPoints[above left](A)
+                                    \tkzLabelPoints[below left](B)
+                                    \tkzLabelPoints[below right](C)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p>Obtuse triangle.</p>
-                        <figure xml:id="fig-build-exc-c">
-                            <caption>Obtuse triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
-                                        \tkzDrawPoints(A,B,C)
-                                        \tkzLabelPoints[above](A)
-                                        \tkzLabelPoints[above left](B)
-                                        \tkzLabelPoints[above right](C)
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                    \tkzDrawPoints(A,B,C)
+                                    \tkzLabelPoints[above left](A)
+                                    \tkzLabelPoints[below left](B)
+                                    \tkzLabelPoints[below right](C)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
                         <p>Equilateral triangle.</p>
-                        <figure xml:id="fig-build-exc-d">
-                            <caption>Equilateral triangle <m>ABC</m> with sides <m>AB</m>, <m>AC</m> extended.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
-                                        \tkzDrawPoints(A,B,C)
-                                        \tkzLabelPoints[above](A)
-                                        \tkzLabelPoints[above left](B)
-                                        \tkzLabelPoints[above right](C)
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.7, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.7, dashed, gray](A,C)
+                                    \tkzDrawPoints(A,B,C)
+                                    \tkzLabelPoints[above](A)
+                                    \tkzLabelPoints[above left](B)
+                                    \tkzLabelPoints[above right](C)
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                 </ol>
             </statement>
             <solution>
                 <p>
-                    In each case the external bisectors at <m>B</m> and <m>C</m> (dashed) meet at the excentre <m>I_a</m>; the internal bisector from <m>A</m> passes through the same point. The perpendicular from <m>I_a</m> to side <m>BC</m> is the radius <m>r_a</m>, and the excircle touches <m>BC</m> and both extensions. The excentre always lies <em>outside</em> the triangle, beyond side <m>BC</m>.
+                    In each case the external bisectors at <m>B</m> and <m>C</m> (dashed) meet at the excentre <m>J_a</m>; the internal bisector from <m>A</m> passes through the same point. The perpendicular from <m>J_a</m> to side <m>BC</m> is the radius <m>r_a</m>, and the excircle touches <m>BC</m> and both extensions.
                 </p>
-                <ol marker="(a)">
+                <ol marker="(a)" cols="2">
                     <li>
-                        <figure xml:id="fig-build-exc-a-sol">
-                            <caption>Excircle opposite <m>A</m> of the acute scalene triangle.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
-                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
-                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
-                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
-                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
-                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
-                                        \tkzDrawSegment[orange!80!black](Ia,X)
-                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
-                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
-                                        \tkzDrawPoints(A,B,C,Ia,X)
-                                        \tkzLabelPoints[above](A)
-                                        \tkzLabelPoint[above left](B){$B$}
-                                        \tkzLabelPoint[above right](C){$C$}
-                                        \tkzLabelPoint[below](Ia){$I_a$}
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <p>
+                            Drawing the excircle:
+                        </p>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.6/A}
+                                    \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                    \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                    \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                    \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                    \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                    \tkzDrawSegment[orange!80!black](Ia,X)
+                                    \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                    \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                    \tkzDrawPoints(A,B,C,Ia,X)
+                                    \tkzLabelPoints[above](A)
+                                    \tkzLabelPoint[below left](B){$B$}
+                                    \tkzLabelPoint[below right](C){$C$}
+                                    \tkzLabelPoint[below](Ia){$J_a$}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
-                        <figure xml:id="fig-build-exc-b-sol">
-                            <caption>Excircle opposite <m>A</m> of the right triangle.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
-                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
-                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
-                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
-                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
-                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
-                                        \tkzDrawSegment[orange!80!black](Ia,X)
-                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
-                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
-                                        \tkzDrawPoints(A,B,C,Ia,X)
-                                        \tkzLabelPoints[above left](A)
-                                        \tkzLabelPoint[above left](B){$B$}
-                                        \tkzLabelPoint[above right](C){$C$}
-                                        \tkzLabelPoint[below](Ia){$I_a$}
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <p>
+                            Drawing the excircle:
+                        </p>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 4/0/C, 0/3/A}
+                                    \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                    \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                    \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                    \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                    \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                    \tkzDrawSegment[orange!80!black](Ia,X)
+                                    \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                    \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                    \tkzDrawPoints(A,B,C,Ia,X)
+                                    \tkzLabelPoints[above left](A)
+                                    \tkzLabelPoint[below left](B){$B$}
+                                    \tkzLabelPoint[below right](C){$C$}
+                                    \tkzLabelPoint[below](Ia){$J_a$}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
-                        <figure xml:id="fig-build-exc-c-sol">
-                            <caption>Excircle opposite <m>A</m> of the obtuse triangle.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
-                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
-                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
-                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
-                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
-                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
-                                        \tkzDrawSegment[orange!80!black](Ia,X)
-                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
-                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
-                                        \tkzDrawPoints(A,B,C,Ia,X)
-                                        \tkzLabelPoints[above](A)
-                                        \tkzLabelPoint[above left](B){$B$}
-                                        \tkzLabelPoint[above right](C){$C$}
-                                        \tkzLabelPoint[below](Ia){$I_a$}
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <p>
+                            Drawing the excircle:
+                        </p>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 4/0/C, -0.5/2.5/A}
+                                    \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                    \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                    \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                    \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                    \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                    \tkzDrawSegment[orange!80!black](Ia,X)
+                                    \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                    \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                    \tkzDrawPoints(A,B,C,Ia,X)
+                                    \tkzLabelPoints[above left](A)
+                                    \tkzLabelPoint[below left](B){$B$}
+                                    \tkzLabelPoint[below right](C){$C$}
+                                    \tkzLabelPoint[below](Ia){$J_a$}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                     <li>
-                        <figure xml:id="fig-build-exc-d-sol">
-                            <caption>Excircle opposite <m>A</m> of the equilateral triangle.</caption>
-                            <image width="48%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.6]
-                                        \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
-                                        \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
-                                        \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
-                                        \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
-                                        \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
-                                        \tkzDrawPolygon[thick](A,B,C)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
-                                        \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
-                                        \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
-                                        \tkzDrawSegment[orange!80!black](Ia,X)
-                                        \tkzDrawCircle[orange!80!black,thick](Ia,X)
-                                        \tkzMarkRightAngle[size=0.18](Ia,X,C)
-                                        \tkzDrawPoints(A,B,C,Ia,X)
-                                        \tkzLabelPoints[above](A)
-                                        \tkzLabelPoint[above left](B){$B$}
-                                        \tkzLabelPoint[above right](C){$C$}
-                                        \tkzLabelPoint[below](Ia){$I_a$}
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
+                        <p>
+                            Drawing the excircle:
+                        </p>
+                        <image width="90%">
+                            <latex-image>
+                                \begin{tikzpicture}[scale=0.6]
+                                    \tkzDefPoints{0/0/B, 5/0/C, 2.5/4.33/A}
+                                    \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                    \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                    \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{Ia}
+                                    \tkzDefPointBy[projection=onto B--C](Ia)\tkzGetPoint{X}
+                                    \tkzDrawPolygon[thick](A,B,C)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,B)
+                                    \tkzDrawLine[add=0 and 0.9, dashed, gray](A,C)
+                                    \tkzDrawSegments[dashed,gray](A,Ia B,Ia C,Ia)
+                                    \tkzDrawSegment[orange!80!black](Ia,X)
+                                    \tkzDrawCircle[orange!80!black,thick](Ia,X)
+                                    \tkzMarkRightAngle[size=0.18](Ia,X,C)
+                                    \tkzDrawPoints(A,B,C,Ia,X)
+                                    \tkzLabelPoints[above](A)
+                                    \tkzLabelPoint[below left](B){$B$}
+                                    \tkzLabelPoint[below right](C){$C$}
+                                    \tkzLabelPoint[below](Ia){$J_a$}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
                     </li>
                 </ol>
             </solution>
@@ -974,16 +828,20 @@
                     Triangle <m>ABC</m> has <m>AB = 6</m> cm, <m>BC = 8</m> cm, and <m>CA = 7</m> cm.
                     <ol marker="(a)">
                         <li>Draw the triangle accurately. Extend side <m>AB</m> beyond <m>B</m> and side <m>AC</m> beyond <m>C</m> as dashed rays.</li>
-                        <li>Construct the external bisector of angle <m>B</m> and the external bisector of angle <m>C</m>. Label their intersection <m>I_a</m>.</li>
+                        <li>Construct the external bisector of angle <m>B</m> and the external bisector of angle <m>C</m>. Label their intersection <m>J_a</m>.</li>
                         <li>Draw the excircle opposite <m>A</m>. Measure <m>r_a</m>.</li>
                         <li>Verify your answer by calculation using <m>r_a = \Delta\,/\,(s-a)</m>.</li>
                     </ol>
                 </p>
-                <figure xml:id="fig-excircle-exr1">
+            </statement>
+            <solution>
+                <p>
+                    The final construction is:
+                    <figure xml:id="fig-excircle-exr1">
                     <caption>Excircle opposite <m>A</m> for the 6-7-8 triangle, with external bisectors at <m>B</m> and <m>C</m>.</caption>
                     <image width="70%">
                         <latex-image>
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[scale=0.5]
                           %% --- SET: AB=6, BC=8, CA=7 ---
                           \tkzDefPoints{0/0/B, 8/0/C}
                           \tkzDefPoint(6,0){bR}
@@ -1005,18 +863,23 @@
                           %% --- MARK ---
                           \tkzMarkRightAngle[size=0.2](Ia,X,C)
                           %% --- LABEL ---
-                          \tkzLabelPoints[below](B,C)
-                          \tkzLabelPoints[above](A)
-                          \tkzLabelPoint[right](Ia){$I_a$}
+                          \tkzLabelPoint[below left](B){$A$}
+                          \tkzLabelPoint[below](C){$C$}
+                          \tkzLabelPoint[above left](A){$B$}
+                          \tkzLabelPoint[right](Ia){$J_a$}
                           \tkzLabelPoint[below](X){$X$}
                         \end{tikzpicture}
                         </latex-image>
                     </image>
                 </figure>
-            </statement>
-            <solution>
-                <p>
-                    Construction exercise. For checking: <m>s = 10.5</m> cm; by Heron's formula <m>\Delta \approx 20.3</m> cm<m>^2</m>; <m>r_a = \Delta\,/\,(s-a) \approx 20.3\,/\,2.5 \approx 8.1</m> cm.
+                To calculate <m>r_a</m>, we first find the triangle area <m>\Delta</m>. Noting that <m>s = \frac{6+8+7}{2} = 10.5</m>
+                <md>
+                    \Delta = \sqrt{10.5(10.5-6)(10.5-8)(10.5-7)} \approx 20.33
+                </md>
+                Hence
+                <md>
+                    r_a = \frac{\Delta}{s-a} = \frac{20.33}{10.5-8} \approx 8.132 \text{ cm}
+                </md>
                 </p>
             </solution>
         </exercise>
@@ -1031,11 +894,13 @@
                         <li>What relationship do you notice between the size of an excircle and the length of the side it is opposite?</li>
                     </ol>
                 </p>
+            </statement>
+            <solution>
                 <figure xml:id="fig-excircle-exr2">
                     <caption>All three excircles of a 3-4-5 triangle (<m>AB=3</m>, <m>BC=4</m>, <m>CA=5</m>).</caption>
                     <image width="75%">
                         <latex-image>
-                        \begin{tikzpicture}[scale=0.65]
+                        \begin{tikzpicture}[scale=0.5]
                           %% --- SET: AB=3, BC=4, CA=5; right angle at A ---
                           \tkzDefPoints{0/0/A, 3/0/B, 0/5/C}
                           \tkzDefPoint(4,0){bR}
@@ -1049,6 +914,9 @@
                           \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
                           \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
                           %% --- DRAW ---
+                          \tkzDrawLine[dashed, add=1.4 and 1.4](A,B)
+                          \tkzDrawLine[dashed, add=1.4 and 1.4](B,C)
+                          \tkzDrawLine[dashed, add=1.4 and 1.4](C,A)
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[blue](Ia,FootA)
                           \tkzDrawCircle[blue](Ib,FootB)
@@ -1056,28 +924,345 @@
                           \tkzDrawPoints(A,B,C,Ia,Ib,Ic)
                           %% --- MARK ---
                           %% --- LABEL ---
-                          \tkzLabelPoints[left](A)
-                          \tkzLabelPoints[below](B)
-                          \tkzLabelPoints[above](C)
-                          \tkzLabelPoint[below right](Ia){$I_a$}
-                          \tkzLabelPoint[left](Ib){$I_b$}
-                          \tkzLabelPoint[right](Ic){$I_c$}
+                          \tkzLabelPoint[below left](A){$B$}
+                          \tkzLabelPoint[below right](B){$A$}
+                          \tkzLabelPoints[left](C)
+                          \tkzLabelPoint[below right](Ia){$J_a$}
+                          \tkzLabelPoint[left](Ib){$J_c$}
+                          \tkzLabelPoint[right](Ic){$J_b$}
                         \end{tikzpicture}
                         </latex-image>
                     </image>
                 </figure>
-            </statement>
-            <solution>
                 <p>
                     <m>r_a = 2</m> cm, <m>r_b = 3</m> cm, <m>r_c = 6</m> cm. The largest excircle is opposite the shortest side; the smallest excircle is opposite the longest side.
                 </p>
             </solution>
         </exercise>
 
+        <exercise xml:id="ex-exradius-proof">            
+            <introduction>
+                <p>
+                    In <xref ref="thm-exradius"/> we stated that the radius of the excircle opposite vertex <m>A</m> is given by <m>r_a = \Delta\,/\,(s-a)</m>, where <m>\Delta</m> is the area of the triangle, <m>s = \frac{a+b+c}{2}</m> is the semi-perimeter, and <m>a</m> is the length of side <m>BC</m>. We will prove this formula.
+                </p>
+                <figure xml:id="fig-excircle-theorem-ex-v1">
+                <caption>The excircle opposite <m>A</m>: centre <m>J_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
+                <image width="85%">
+                    <latex-image>
+                    \begin{tikzpicture}[scale=0.8]
+                      %% --- SET ---
+                      \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                      %% --- CALCULATE ---
+                      \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                        \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
+                      \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                      \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                      \tkzDefPointBy[projection=onto B--ABext](Ia) \tkzGetPoint{Y}
+                      \tkzDefPointBy[projection=onto C--A](Ia) \tkzGetPoint{Z}
+                      %% --- DRAW ---
+                      \tkzDrawPolygon[thick](A,B,C)
+                      \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
+                      \tkzDrawSegments[red,thin](Ia,X Ia,Y Ia,Z)
+                      \tkzDrawCircle[blue,thick](Ia,X)
+                      \tkzDrawPoints(A,B,C,Ia,X,Y,Z)
+                      %% --- MARK ---
+                      \tkzMarkRightAngle[size=0.15](Ia,X,C)
+                      \tkzMarkRightAngle[size=0.15](Ia,Y,B)
+                      %% --- LABEL ---
+                      \tkzLabelPoint[below](B){$A$}
+                      \tkzLabelPoint[below](C){$C$}
+                      \tkzLabelPoint[above left](A){$B$}
+                      \tkzLabelPoint[right](Ia){$J_a$}
+                      \tkzLabelPoint[below](X){$X$}
+                      \tkzLabelPoint[left](Y){$Y$}
+                      \tkzLabelPoint[above](Z){$Z$}
+                      \tkzLabelSegment[right](X,Ia){$r_a$}
+                      \tkzLabelSegment[left](A,B){$c$}
+                      \tkzLabelSegment[below](A,C){$a$}
+                      \tkzLabelSegment[below left](B,C){$b$}
+                    \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                        Explain why <m>AY = AX</m>, <m>BY = BZ</m>, and <m>CX = CZ</m>.
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        Tangents to the excircle (at <m>X</m>, <m>Y</m>, and <m>Z</m>) to an external point (<m>A</m>, <m>B</m>, and <m>C</m> respectively) are equal in length, so <m>AY = AX</m>, <m>BY = BZ</m>, and <m>CX = CZ</m>.
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Given that <m>BZ + CZ = BC = a</m>, use (a) to find <m>BY</m>, <m>BZ</m>, <m>CZ</m> and <m>CX</m> in terms of <m>a</m>, <m>b</m>, <m>c</m>.
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        Starting with <m>AY = AX</m>, we can split up both lengths:
+                        <md>
+                            <mrow>AY \amp = AX</mrow>
+                            <mrow>AB + BY \amp = AC + CX </mrow>
+                            <mrow>c + BZ \amp = b + CZ</mrow>
+                            <mrow>BZ \amp = b + CZ - c</mrow>
+                        </md>
+                        Where we used the fact from (a) that <m>BY = BZ</m> and <m>CX = CZ</m>. Now since <m>BZ+CZ = a</m>, we rewrite <m>CZ = a - BZ</m>:
+                        <md>
+                            <mrow>BZ \amp = b + a - BZ - c</mrow>
+                            <mrow>BZ \amp = \frac{a+b-c}{2} </mrow>
+                        </md>
+                        Thus <m>BY = \frac{a+b-c}{2}</m> as well, and:
+                        <md>
+                            <mrow>CX = CZ = a - \frac{a+b-c}{2} = \frac{a+c-b}{2}</mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Thus find <m>AY</m> and <m>AX</m> in terms of <m>a</m>, <m>b</m>, and <m>c</m>.
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        Calculating <m>AY</m>:
+                        <md>
+                            <mrow>AY \amp = AB + BY </mrow>
+                            <mrow> \amp = c + \frac{a+b-c}{2}</mrow>
+                            <mrow> \amp = \frac{a+b+c}{2} = s </mrow>
+                        </md>
+                        And likewise for <m>AX</m>:
+                        <md>
+                            <mrow> AX \amp = AC + CX </mrow>
+                            <mrow> \amp = b + \frac{b+c-a}{2} </mrow>
+                            <mrow> \amp = \frac{a+b+c}{2} = s </mrow>
+                        </md> 
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        We will find <m>r_a</m> by calculating the area of quadrilateral <m>ABCJ_a</m> in two ways. First, draw <m>AJ_a</m> and find the area of <m>ABCJ_a</m> as the sum of the areas of triangles <m>\triangle AXJ_a</m> and <m>\triangle AYJ_a</m>.
+                    </p>
+                    <figure xml:id="fig-excircle-theorem-ex-v2">
+                        <caption>The excircle opposite <m>A</m>: centre <m>J_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
+                        <image width="80%">
+                            <latex-image>
+                            \begin{tikzpicture}[scale=0.6]
+                            %% --- SET ---
+                            \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                            %% --- CALCULATE ---
+                            \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                                \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
+                            \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                            \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                            \tkzDefPointBy[projection=onto B--ABext](Ia) \tkzGetPoint{Y}
+                            \tkzDefPointBy[projection=onto C--A](Ia) \tkzGetPoint{Z}
+                            %% --- DRAW ---
+                            \tkzDrawPolygon[thick](A,B,C)
+                            \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
+                            \tkzDrawSegments[red,thin](Ia,X Ia,Y Ia,Z)
+                            \tkzDrawCircle[blue,thick](Ia,X)
+                            \tkzDrawPoints(A,B,C,Ia,X,Y,Z)
+                            \tkzDrawSegment[thick, purple](B,Ia)
+                            \tkzFillPolygon[purple!20,opacity=0.2](B,X,Ia)
+                            %% --- MARK ---
+                            \tkzMarkRightAngle[size=0.15](Ia,X,C)
+                            \tkzMarkRightAngle[size=0.15](Ia,Y,B)
+                            %% --- LABEL ---
+                            \tkzLabelPoint[below](B){$A$}
+                            \tkzLabelPoint[below](C){$C$}
+                            \tkzLabelPoint[above left](A){$B$}
+                            \tkzLabelPoint[right](Ia){$J_a$}
+                            \tkzLabelPoint[below](X){$X$}
+                            \tkzLabelPoint[left](Y){$Y$}
+                            \tkzLabelPoint[above](Z){$Z$}
+                            \tkzLabelSegment[right](X,Ia){$r_a$}
+                            \tkzLabelSegment[left](A,B){$c$}
+                            \tkzLabelSegment[below](A,C){$a$}
+                            \tkzLabelSegment[below left](B,C){$b$}
+                            \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </statement>
+                <solution>
+                    <p>
+                        Since both <m>\triangle AXJ_a</m> and <m>\triangle AYJ_a</m> are right-angled at <m>X</m> and <m>Y</m> respectively, and have height <m>r_a</m> (the radius of the excircle), their areas are:
+                        <md>
+                            <mrow> \Delta_{AXJ_a} = \frac{1}{2} \cdot AX \cdot r_a = \frac{1}{2}sr_a </mrow>
+                            <mrow> \Delta_{AYJ_a} = \frac{1}{2} \cdot AY \cdot r_a = \frac{1}{2}sr_a</mrow>
+                        </md>
+                        Therefore, the area of quadrilateral <m>ABCJ_a</m> is:
+                        <md number="yes" xml:id="eq-exradius-proof-1">
+                            \text{Area}(ABCJ_a) = 2 \cdot \frac{1}{2}sr_a = sr_a
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        For a different approach, draw <m>BJ_a</m> and <m>CJ_a</m> and consider the area of <m>ABCJ_a</m> as the sum of the areas of triangles <m>\triangle ABC</m> and the remaining triangles.
+                    </p>
+                    <figure xml:id="fig-excircle-theorem-ex-v3">
+                        <caption>The excircle opposite <m>A</m>: centre <m>J_a</m>, tangent to <m>BC</m> at <m>X</m> and to the extensions at <m>Y</m> and <m>Z</m>.</caption>
+                        <image width="85%">
+                            <latex-image>
+                            \begin{tikzpicture}[scale=0.8]
+                            %% --- SET ---
+                            \tkzDefPoints{0/0/B, 5/0/C, 1.5/3.5/A}
+                            %% --- CALCULATE ---
+                            \tkzDefPointBy[homothety=center B ratio 2.1](A) \tkzGetPoint{ABext}
+                                \tkzDefPointBy[homothety=center B ratio 2.1](C) \tkzGetPoint{ACext}
+                            \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xa}
+                            \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                            \tkzDefPointBy[projection=onto B--ABext](Ia) \tkzGetPoint{Y}
+                            \tkzDefPointBy[projection=onto C--A](Ia) \tkzGetPoint{Z}
+                            %% --- DRAW ---
+                            \tkzDrawPolygon[thick](A,B,C)
+                            \tkzDrawSegments[dashed,thick](B,ABext C,ACext)
+                            \tkzDrawSegments[red,thin](Ia,X Ia,Y Ia,Z)
+                            \tkzDrawCircle[blue,thick](Ia,X)
+                            \tkzDrawPoints(A,B,C,Ia,X,Y,Z)
+                            \tkzDrawSegment[thick, blue](C,Ia)
+                            \tkzDrawSegment[thick, orange](A,Ia)
+                            \tkzFillPolygon[orange!20,opacity=0.2](A,Y,Ia,Z)
+                            \tkzFillPolygon[blue!20,opacity=0.2](C,X,Ia,Z)
+                            %% --- MARK ---
+                            \tkzMarkRightAngle[size=0.15](Ia,X,C)
+                            \tkzMarkRightAngle[size=0.15](Ia,Y,B)
+                            %% --- LABEL ---
+                            \tkzLabelPoint[below](B){$A$}
+                            \tkzLabelPoint[below](C){$C$}
+                            \tkzLabelPoint[above left](A){$B$}
+                            \tkzLabelPoint[right](Ia){$J_a$}
+                            \tkzLabelPoint[below](X){$X$}
+                            \tkzLabelPoint[left](Y){$Y$}
+                            \tkzLabelPoint[above](Z){$Z$}
+                            \tkzLabelSegment[right](X,Ia){$r_a = \frac{\Delta}{s-a}$}
+                            \tkzLabelSegment[left](A,B){$c$}
+                            \tkzLabelSegment[below](A,C){$a$}
+                            \tkzLabelSegment[below left](B,C){$b$}
+                            \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </statement>
+                <solution>
+                    <p>
+                        Since <m>\triangle BYJ_a</m> and <m>\triangle BZJ_a</m> share all equal sides, they have equal areas. The same applies to <m>\triangle CXJ_a</m> and <m>\triangle CZJ_a</m>. Thus the area of quadrilateral <m>ABCJ_a</m> is:
+                        <md>
+                            <mrow> \text{Area}(ABCJ_a) \amp = \Delta + 2\cdot\Delta_{BYJ_a} + 2\cdot\Delta_{CXJ_a} </mrow>
+                            <mrow> \amp = \Delta + 2\cdot\frac{1}{2}BY \cdot r_a + 2\cdot\frac{1}{2}CX \cdot r_a </mrow>
+                            <mrow> \amp = \Delta + (BY + CX)r_a </mrow>
+                            <mrow> \amp = \Delta + \left(\frac{a+b-c}{2} + \frac{a+c-b}{2}\right)r_a </mrow>
+                            <mrow number="yes" xml:id="eq-exradius-proof-2"> \text{Area}(ABCJ_a) \amp = \Delta + a r_a </mrow>
+                        </md>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        By equating the two expressions for the area of <m>ABCJ_a</m> from (d) and (e), show that <md>
+                            r_a = \frac{\Delta}{s-a}
+                        </md>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        Equating <xref ref="eq-exradius-proof-1"/> and <xref ref="eq-exradius-proof-2"/>, we get:
+                        <md>
+                            <mrow> sr_a \amp = \Delta + a r_a </mrow>
+                            <mrow>sr_a - ar_a \amp = \Delta</mrow>
+                            <mrow>r_a \amp = \frac{\Delta}{s-a} </mrow>
+                        </md>
+                        as required.
+                    </p>
+                </solution>
+            </task>
+        </exercise>
+
+        <exercise>
+            <introduction>
+                <p>
+                    Let <m>r</m> denote the <em>inradius</em> of <m>\triangle ABC</m> with sides <m>a</m>,<m>b</m>, and <m>c</m>. Denote the exradii as <m>r_a</m>, <m>r_b</m>, and <m>r_c</m>, and suppose <m>\Delta</m> is the area of <m>\triangle ABC</m>.
+                </p>
+            </introduction>
+            <task xml:id="exradius-reciprocal">
+                <statement>
+                    <p>
+                        Use <xref ref="thm-exradius"/> to prove that:
+                        <md>
+                            \frac{1}{r} = \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c}
+                        </md>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Recall <xref ref="thm-inscribed-circle"/>
+                    </p>
+                </hint>
+                <solution>
+                    <p>
+                        By <xref ref="thm-inscribed-circle"/>, <m>r = \frac{\Delta}{s}</m>. We have:
+                        <md>
+                            <mrow> \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c} \amp = \frac{s-a}{\Delta} + \frac{s-b}{\Delta} +\frac{s-c}{\Delta} </mrow>
+                            <mrow> \amp = \frac{3s - (a+b+c)}{\Delta}</mrow>
+                            <mrow> \amp = \frac{3s - 2s}{\Delta}</mrow>
+                            <mrow> \amp = \frac{s}{\Delta}</mrow>
+                            <mrow> \amp = \frac{1}{r}</mrow>
+                        </md>
+                        as required.
+                    </p>
+                </solution>
+            </task>
+            <task xml:id="exradius-product">
+                <statement>
+                    <p>
+                        Use <xref ref="thm-exradius"/> to prove that:
+                        <md>
+                            r\times r_a \times r_b \times r_c = \Delta^2
+                        </md>
+                        
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Recall Heron's formula.
+                    </p>
+                </hint>
+                <solution>
+                    <p>
+                        Calculating the product:
+                        <md>
+                            <mrow> r\times r_a \times r_b \times r_c \amp = \frac{\Delta}{s} \cdot \frac{\Delta}{s-a}\cdot \frac{\Delta}{s-b}\cdot \frac{\Delta}{s-c} </mrow>
+                            <mrow> \amp = \frac{\Delta^4}{s(s-a)(s-b)(s-c)} </mrow>
+                        </md>
+                        By Heron's formula, <m>\Delta = \sqrt{s(s-a)(s-b)(s-c)}</m>, so:
+                        <md>
+                            <mrow> r\times r_a \times r_b \times r_c \amp = \frac{\Delta^4}{\Delta^2}</mrow>
+                            <mrow> \amp = \Delta^2</mrow>
+                        </md>
+                        as required.
+                    </p>
+                </solution>
+            </task>
+        </exercise>
+
         <exercise>
             <statement>
                 <p>
-                    A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use the reciprocal identity to find <m>r_c</m>.
+                    A triangle has inradius <m>r = 2</m> cm, <m>r_a = 3</m> cm, and <m>r_b = 10</m> cm. Use <xref ref="exradius-reciprocal"/> to find <m>r_c</m>.
                 </p>
                 <figure xml:id="fig-excircle-exr3">
                     <caption>Incircle (radius <m>r</m>) and excircles with radii <m>r_a</m> and <m>r_b</m>.</caption>
@@ -1101,8 +1286,9 @@
                           \tkzDrawPoints(A,B,C,I,Ia,Ib)
                           %% --- MARK ---
                           %% --- LABEL ---
-                          \tkzLabelPoints[below](B,C)
-                          \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[below](B){$A$}
+                          \tkzLabelPoint[below](C){$C$}
+                          \tkzLabelPoint[above](A){$B$}
                           \tkzLabelPoint[above right](I){$r$}
                           \tkzLabelPoint[right](Ia){$r_a$}
                           \tkzLabelPoint[left](Ib){$r_b$}
@@ -1113,7 +1299,13 @@
             </statement>
             <solution>
                 <p>
-                    <m>r_c = 15</m> cm.
+                    We have:
+                    <md>
+                        <mrow> \frac{1}{r} \amp = \frac{1}{r_a} + \frac{1}{r_b} + \frac{1}{r_c} </mrow>
+                        <mrow> \frac{1}{2} \amp = \frac{1}{3} + \frac{1}{10} + \frac{1}{r_c} </mrow>
+                        <mrow> \frac{1}{r_c} \amp = \frac{2}{15} </mrow>
+                        <mrow>r_c \amp = \frac{15}{2} \text{ cm}</mrow>
+                    </md>
                 </p>
             </solution>
         </exercise>
@@ -1121,36 +1313,36 @@
         <exercise>
             <statement>
                 <p>
-                    A right triangle has legs <m>5</m> cm and <m>12</m> cm.
-                    <ol marker="(a)">
-                        <li>Construct the excircle opposite the right angle.</li>
-                        <li>Measure its radius, then verify using <m>r_c = \Delta\,/\,(s-c)</m>.</li>
-                    </ol>
+                    A triangular plot in Nairobi has boundary lengths <m>9</m> m, <m>12</m> m, and <m>15</m> m. A developer wants to install a circular water tank just outside the plot, touching the <m>15</m> m boundary and the extensions of the other two sides. Find the radius of the tank.
                 </p>
-                <figure xml:id="fig-excircle-exr4">
-                    <caption>Excircle opposite the right angle <m>C</m> in the 5-12-13 triangle.</caption>
+                <figure xml:id="fig-excircle-ex4">
+                    <caption>Excircle opposite <m>A</m> (the right angle) in the 9-12-15 triangle.</caption>
                     <image width="70%">
                         <latex-image>
-                        \begin{tikzpicture}[scale=0.55]
-                          %% --- SET: right angle at C; CA=5, CB=12, AB=13 ---
-                          \tkzDefPoints{0/0/C, 12/0/B, 0/5/A}
-                          %% --- CALCULATE ---
-                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xc}
-                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
-                          %% --- DRAW ---
-                          \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawSegment[red,thin](Ic,FootC)
-                          \tkzDrawCircle[blue,thick](Ic,FootC)
-                          \tkzDrawPoints(A,B,C,Ic,FootC)
-                          %% --- MARK ---
-                          \tkzMarkRightAngle[size=0.5](A,C,B)
-                          \tkzMarkRightAngle[size=0.4](Ic,FootC,A)
-                          %% --- LABEL ---
-                          \tkzLabelPoints[below](C,B)
-                          \tkzLabelPoints[above left](A)
-                          \tkzLabelPoint[right](Ic){$I_c$}
-                          \tkzLabelSegment[below](C,B){$12$}
-                          \tkzLabelSegment[left](C,A){$5$}
+                        \begin{tikzpicture}[scale=0.2]
+                        %% --- SET: right angle at A; AB=9, AC=12, BC=15 ---
+                        \tkzDefPoints{0/0/A, 9/0/B, 0/12/C}
+                        %% --- CALCULATE ---
+                        \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ia}{Xa}
+                        \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{X}
+                        %% --- DRAW ---
+                        \tkzDrawLine[add=1 and 0, dashed](C,A)
+                        \tkzDrawLine[add=1 and 0, dashed](B,A)
+                        \tkzDrawPolygon[thick](A,B,C)
+                        \tkzDrawSegment[red,thin](Ia,X)
+                        \tkzDrawCircle[blue,thick](Ia,X)
+                        \tkzDrawPoints(A,B,C,Ia,X)
+                        %% --- MARK ---
+                        \tkzMarkRightAngle[size=0.5](B,A,C)
+                        \tkzMarkRightAngle[size=0.4](Ia,X,B)
+                        %% --- LABEL ---
+                        \tkzLabelPoints[below left](A)
+                        \tkzLabelPoints[above left](C)
+                        \tkzLabelPoints[below right](B)
+                        \tkzLabelPoint[below](Ia){$J_a$}
+                        \tkzLabelSegment[below,pos=0.5](A,B){$9$}
+                        \tkzLabelSegment[left,pos=0.5](A,C){$12$}
+                        \tkzLabelSegment[below left,pos=0.5](B,C){$15$}
                         \end{tikzpicture}
                         </latex-image>
                     </image>
@@ -1158,47 +1350,388 @@
             </statement>
             <solution>
                 <p>
-                    Hypotenuse <m>c = 13</m> cm, semi-perimeter <m>s = 15</m> cm, area <m>\Delta = 30</m> cm<m>^2</m>. By the shortcut <m>r_c = s = 15</m> cm; verify: <m>r_c = 30\,/\,(15-13) = 15</m> cm. <m>\checkmark</m>
+                    The excircle touching the <m>15</m> m side is opposite the vertex across from it. Label <m>a = 15</m> m, so we need <m>r_a</m>. As <m>9^2 + 12^2 = 225 = 15^2</m> <m>\triangle ABC</m> is right-angled, with area <m>\Delta = \frac{1}{2}\times 9 \times 12 = 54</m> m<m>^2</m> and semi-perimeter <m>s = \frac{9+12+15}{2} = 18</m> m. Therefore:
+                    <md>
+                        r_a = \frac{54}{18 - 15} = \frac{54}{3} = 18 \text{ m.}
+                    </md>
+                    The water tank has radius <m>18</m> m.
                 </p>
             </solution>
+        </exercise>
+
+        <exercise xml:id="excircle-triangle">
+            <title>Connecting Excircles to the Incircle</title>
+            <introduction>
+                <p>
+                    In <xref ref="fig-incircle-excircle"/> we have constructed the three excircles for <m>\triangle ABC</m>
+                </p>
+                <figure xml:id="fig-incircle-excircle">
+                    <caption><m>\triangle ABC</m> with 3 excircles.</caption>
+                    <image>
+                        <latex-image>
+                            \definecolor{triblue}{RGB}{60,120,190}
+                            \definecolor{trifill}{RGB}{210,228,246}
+                            \definecolor{exorange}{RGB}{243,146,30}
+                            \definecolor{exfill}{RGB}{252,229,205}
+                            \definecolor{trigreen}{RGB}{90,160,70}
+                            \begin{tikzpicture}[scale=0.6]
+                            %% --- SET ---
+                            \tkzDefPoint(-2,-1){A}
+                            \tkzDefPoint(-1,2){B}
+                            \tkzDefPoint(3,0){C}
+                            %% --- CALCULATE: bisector direction points ---
+                            \tkzDefLine[bisector](B,A,C)\tkzGetPoint{iA}
+                            \tkzDefLine[bisector](A,B,C)\tkzGetPoint{iB}
+                            \tkzDefLine[bisector out](B,A,C)\tkzGetPoint{eA}
+                            \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                            \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                            %% --- centres: incentre and the three excentres ---
+                            \tkzInterLL(A,iA)(B,iB)\tkzGetPoint{I}
+                            \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{JA}
+                            \tkzInterLL(A,eA)(C,eC)\tkzGetPoint{JB}
+                            \tkzInterLL(A,eA)(B,eB)\tkzGetPoint{JC}
+                            %% --- tangent feet (give each radius) ---
+                            \tkzDefPointBy[projection=onto B--C](I)\tkzGetPoint{Ti}
+                            \tkzDefPointBy[projection=onto B--C](JA)\tkzGetPoint{Ta}
+                            \tkzDefPointBy[projection=onto C--A](JB)\tkzGetPoint{Tb}
+                            \tkzDefPointBy[projection=onto A--B](JC)\tkzGetPoint{Tc}
+                            %% --- fills ---
+                            \tkzFillCircle[exfill](JA,Ta)
+                            \tkzFillCircle[exfill](JB,Tb)
+                            \tkzFillCircle[exfill](JC,Tc)
+                            %% --- circle outlines ---
+                            \tkzDrawCircle[exorange, very thick](JA,Ta)
+                            \tkzDrawCircle[exorange, very thick](JB,Tb)
+                            \tkzDrawCircle[exorange, very thick](JC,Tc)
+                            %% --- extended sides (black) ---
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](A,B)
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](B,C)
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](C,A)
+                            %% --- points + labels ---
+                            \tkzDrawPoints[size=2.5pt](A,B,C)
+                            \tkzDrawPoints[fill=exorange, size=3.5pt](JA,JB,JC)
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[above left](B){$B$}
+                            \tkzLabelPoint[above right](C){$C$}
+                            \tkzLabelPoint[above right](JA){$J_A$}
+                            \tkzLabelPoint[below](JB){$J_B$}
+                            \tkzLabelPoint[left](JC){$J_C$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </introduction>
+            <task xml:id="excenter-connection">
+                <statement>
+                    <p>
+                        Draw lines connecting the excenters. What do you notice?
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        The lines go through the vertices of <m>\triangle ABC</m>:
+                    </p>
+                    <figure xml:id="fig-incircle-excircle-soln-1">
+                    <caption>Connecting the Excenters</caption>
+                    <image>
+                        <latex-image>
+                            \definecolor{triblue}{RGB}{60,120,190}
+                            \definecolor{trifill}{RGB}{210,228,246}
+                            \definecolor{exorange}{RGB}{243,146,30}
+                            \definecolor{exfill}{RGB}{252,229,205}
+                            \definecolor{trigreen}{RGB}{90,160,70}
+                            \begin{tikzpicture}[scale=0.6]
+                            %% --- SET ---
+                            \tkzDefPoint(-2,-1){A}
+                            \tkzDefPoint(-1,2){B}
+                            \tkzDefPoint(3,0){C}
+                            %% --- CALCULATE: bisector direction points ---
+                            \tkzDefLine[bisector](B,A,C)\tkzGetPoint{iA}
+                            \tkzDefLine[bisector](A,B,C)\tkzGetPoint{iB}
+                            \tkzDefLine[bisector out](B,A,C)\tkzGetPoint{eA}
+                            \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                            \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                            %% --- centres: incentre and the three excentres ---
+                            \tkzInterLL(A,iA)(B,iB)\tkzGetPoint{I}
+                            \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{JA}
+                            \tkzInterLL(A,eA)(C,eC)\tkzGetPoint{JB}
+                            \tkzInterLL(A,eA)(B,eB)\tkzGetPoint{JC}
+                            %% --- tangent feet (give each radius) ---
+                            \tkzDefPointBy[projection=onto B--C](I)\tkzGetPoint{Ti}
+                            \tkzDefPointBy[projection=onto B--C](JA)\tkzGetPoint{Ta}
+                            \tkzDefPointBy[projection=onto C--A](JB)\tkzGetPoint{Tb}
+                            \tkzDefPointBy[projection=onto A--B](JC)\tkzGetPoint{Tc}
+                            %% --- fills ---
+                            \tkzFillCircle[exfill](JA,Ta)
+                            \tkzFillCircle[exfill](JB,Tb)
+                            \tkzFillCircle[exfill](JC,Tc)
+                            %% --- external bisectors (green): the excentral triangle ---
+                            \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JA,JB)
+                            \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JB,JC)
+                            \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JC,JA)
+                            %% --- circle outlines ---
+                            \tkzDrawCircle[exorange, very thick](JA,Ta)
+                            \tkzDrawCircle[exorange, very thick](JB,Tb)
+                            \tkzDrawCircle[exorange, very thick](JC,Tc)
+                            %% --- extended sides (black) ---
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](A,B)
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](B,C)
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](C,A)
+                            %% --- points + labels ---
+                            \tkzDrawPoints[size=2.5pt](A,B,C)
+                            \tkzDrawPoints[fill=exorange, size=3.5pt](JA,JB,JC)
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[above left](B){$B$}
+                            \tkzLabelPoint[above right](C){$C$}
+                            \tkzLabelPoint[above right](JA){$J_A$}
+                            \tkzLabelPoint[below](JB){$J_B$}
+                            \tkzLabelPoint[left](JC){$J_C$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Draw the incircle for <m>\triangle ABC</m>
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        We have drawn the incircle below:
+                        <figure xml:id="fig-incircle-excircle-soln-2">
+                    <caption>Incircle and Excircles</caption>
+                    <image>
+                        <latex-image>
+                            \definecolor{triblue}{RGB}{60,120,190}
+                            \definecolor{trifill}{RGB}{210,228,246}
+                            \definecolor{exorange}{RGB}{243,146,30}
+                            \definecolor{exfill}{RGB}{252,229,205}
+                            \definecolor{trigreen}{RGB}{90,160,70}
+                            \begin{tikzpicture}[scale=0.6]
+                            %% --- SET ---
+                            \tkzDefPoint(-2,-1){A}
+                            \tkzDefPoint(-1,2){B}
+                            \tkzDefPoint(3,0){C}
+                            %% --- CALCULATE: bisector direction points ---
+                            \tkzDefLine[bisector](B,A,C)\tkzGetPoint{iA}
+                            \tkzDefLine[bisector](A,B,C)\tkzGetPoint{iB}
+                            \tkzDefLine[bisector out](B,A,C)\tkzGetPoint{eA}
+                            \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                            \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                            %% --- centres: incentre and the three excentres ---
+                            \tkzInterLL(A,iA)(B,iB)\tkzGetPoint{I}
+                            \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{JA}
+                            \tkzInterLL(A,eA)(C,eC)\tkzGetPoint{JB}
+                            \tkzInterLL(A,eA)(B,eB)\tkzGetPoint{JC}
+                            %% --- tangent feet (give each radius) ---
+                            \tkzDefPointBy[projection=onto B--C](I)\tkzGetPoint{Ti}
+                            \tkzDefPointBy[projection=onto B--C](JA)\tkzGetPoint{Ta}
+                            \tkzDefPointBy[projection=onto C--A](JB)\tkzGetPoint{Tb}
+                            \tkzDefPointBy[projection=onto A--B](JC)\tkzGetPoint{Tc}
+                            %% --- fills ---
+                            \tkzFillCircle[exfill](JA,Ta)
+                            \tkzFillCircle[exfill](JB,Tb)
+                            \tkzFillCircle[exfill](JC,Tc)
+                            \tkzFillCircle[trifill](I,Ti)
+                            %% --- external bisectors (green): the excentral triangle ---
+                            \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JA,JB)
+                            \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JB,JC)
+                            \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JC,JA)
+                            %% --- circle outlines ---
+                            \tkzDrawCircle[exorange, very thick](JA,Ta)
+                            \tkzDrawCircle[exorange, very thick](JB,Tb)
+                            \tkzDrawCircle[exorange, very thick](JC,Tc)
+                            \tkzDrawCircle[triblue, very thick](I,Ti)
+                            %% --- extended sides (black) ---
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](A,B)
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](B,C)
+                            \tkzDrawLine[very thick, add=1.4 and 1.4](C,A)
+                            %% --- points + labels ---
+                            \tkzDrawPoints[size=2.5pt](A,B,C)
+                            \tkzDrawPoint[fill=triblue, size=3.5pt](I)
+                            \tkzDrawPoints[fill=exorange, size=3.5pt](JA,JB,JC)
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[above left](B){$B$}
+                            \tkzLabelPoint[above right](C){$C$}
+                            \tkzLabelPoint[above right](I){$I$}
+                            \tkzLabelPoint[above right](JA){$J_A$}
+                            \tkzLabelPoint[below](JB){$J_B$}
+                            \tkzLabelPoint[left](JC){$J_C$}
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Connect the excircle centres to their opposite vertex (so <m>J_A</m> connects to <m>A</m>). What do you notice in relation to the incircle?
+                    </p>
+                </statement>
+                <solution>
+                    <p>
+                        These lines all go through the incentre <m>I</m>, as they are the angle bisectors of the triangle vertices.
+                        <figure xml:id="fig-incircle-excircle-soln-3">
+                        <caption>The Angle Bisectors and the Incircle</caption>
+                        <image>
+                            <latex-image>
+                                \definecolor{triblue}{RGB}{60,120,190}
+                                \definecolor{trifill}{RGB}{210,228,246}
+                                \definecolor{exorange}{RGB}{243,146,30}
+                                \definecolor{exfill}{RGB}{252,229,205}
+                                \definecolor{trigreen}{RGB}{90,160,70}
+                                \begin{tikzpicture}[scale=0.6]
+                                %% --- SET ---
+                                \tkzDefPoint(-2,-1){A}
+                                \tkzDefPoint(-1,2){B}
+                                \tkzDefPoint(3,0){C}
+                                %% --- CALCULATE: bisector direction points ---
+                                \tkzDefLine[bisector](B,A,C)\tkzGetPoint{iA}
+                                \tkzDefLine[bisector](A,B,C)\tkzGetPoint{iB}
+                                \tkzDefLine[bisector out](B,A,C)\tkzGetPoint{eA}
+                                \tkzDefLine[bisector out](A,B,C)\tkzGetPoint{eB}
+                                \tkzDefLine[bisector out](A,C,B)\tkzGetPoint{eC}
+                                %% --- centres: incentre and the three excentres ---
+                                \tkzInterLL(A,iA)(B,iB)\tkzGetPoint{I}
+                                \tkzInterLL(B,eB)(C,eC)\tkzGetPoint{JA}
+                                \tkzInterLL(A,eA)(C,eC)\tkzGetPoint{JB}
+                                \tkzInterLL(A,eA)(B,eB)\tkzGetPoint{JC}
+                                %% --- tangent feet (give each radius) ---
+                                \tkzDefPointBy[projection=onto B--C](I)\tkzGetPoint{Ti}
+                                \tkzDefPointBy[projection=onto B--C](JA)\tkzGetPoint{Ta}
+                                \tkzDefPointBy[projection=onto C--A](JB)\tkzGetPoint{Tb}
+                                \tkzDefPointBy[projection=onto A--B](JC)\tkzGetPoint{Tc}
+                                %% --- fills ---
+                                \tkzFillCircle[exfill](JA,Ta)
+                                \tkzFillCircle[exfill](JB,Tb)
+                                \tkzFillCircle[exfill](JC,Tc)
+                                \tkzFillCircle[trifill](I,Ti)
+                                %% --- external bisectors (green): the excentral triangle ---
+                                \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JA,JB)
+                                \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JB,JC)
+                                \tkzDrawLine[trigreen, thick, add=0.2 and 0.2](JC,JA)
+                                %% --- internal bisectors (red): each vertex to its opposite excentre, through I ---
+                                \tkzDrawLine[red, thick, add=0.12 and 0.12](A,JA)
+                                \tkzDrawLine[red, thick, add=0.12 and 0.12](B,JB)
+                                \tkzDrawLine[red, thick, add=0.12 and 0.12](C,JC)
+                                %% --- circle outlines ---
+                                \tkzDrawCircle[exorange, very thick](JA,Ta)
+                                \tkzDrawCircle[exorange, very thick](JB,Tb)
+                                \tkzDrawCircle[exorange, very thick](JC,Tc)
+                                \tkzDrawCircle[triblue, very thick](I,Ti)
+                                %% --- extended sides (black) ---
+                                \tkzDrawLine[very thick, add=1.4 and 1.4](A,B)
+                                \tkzDrawLine[very thick, add=1.4 and 1.4](B,C)
+                                \tkzDrawLine[very thick, add=1.4 and 1.4](C,A)
+                                %% --- points + labels ---
+                                \tkzDrawPoints[size=2.5pt](A,B,C)
+                                \tkzDrawPoint[fill=triblue, size=3.5pt](I)
+                                \tkzDrawPoints[fill=exorange, size=3.5pt](JA,JB,JC)
+                                \tkzLabelPoint[below left](A){$A$}
+                                \tkzLabelPoint[above left](B){$B$}
+                                \tkzLabelPoint[above right](C){$C$}
+                                \tkzLabelPoint[above right](I){$I$}
+                                \tkzLabelPoint[above right](JA){$J_A$}
+                                \tkzLabelPoint[below](JB){$J_B$}
+                                \tkzLabelPoint[left](JC){$J_C$}
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                    </p>
+                </solution>
+            </task>
+            
         </exercise>
 
         <exercise>
             <statement>
                 <p>
-                    (Construction/discovery) For triangle <m>ABC</m> with sides <m>5</m> cm, <m>6</m> cm, and <m>7</m> cm:
-                    <ol marker="(a)">
-                        <li>Construct all three excircles. Label the tangent point of the excircle opposite <m>A</m> on side <m>BC</m> as <m>X_a</m>; the tangent point of the excircle opposite <m>B</m> on side <m>CA</m> as <m>X_b</m>; and the tangent point of the excircle opposite <m>C</m> on side <m>AB</m> as <m>X_c</m>.</li>
-                        <li>Draw lines <m>AX_a</m>, <m>BX_b</m>, and <m>CX_c</m>. What do you notice?</li>
-                    </ol>
+                    We have drawn <m>\Delta ABC</m> with sides <m>5</m> cm, <m>6</m> cm, and <m>7</m> cm, and its three excircles.
                 </p>
-                <figure xml:id="fig-excircle-exr5">
-                    <caption>The Nagel point: cevians <m>AX_a</m>, <m>BX_b</m>, <m>CX_c</m> are concurrent (triangle with sides 5, 6, 7).</caption>
-                    <image width="75%">
+                <figure>
+                    <caption><m>\triangle ABC</m> with its excircles.</caption>
+                    <image width="85%">
                         <latex-image>
-                        \begin{tikzpicture}[scale=0.75]
+                        \begin{tikzpicture}[scale=0.5]
                           %% --- SET: a=BC=5, b=CA=6, c=AB=7 ---
                           \tkzDefPoints{0/0/B, 5/0/C}
                           \tkzDefPoint(7,0){bR}
                           \tkzDefPoint(11,0){cR}
                           %% --- CALCULATE ---
                           \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
-                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ia}{Xia}
-                          \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ib}{Xib}
-                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ic}{Xic}
+                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ib}{Xib}
+                          \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ic}{Xic}
+                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ia}{Xia}
                           \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{Xa}
                           \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{Xb}
                           \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{Xc}
                           \tkzInterLL(A,Xa)(B,Xb) \tkzGetPoint{Nagel}
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawCircles[blue!70](Ia,Xa Ib,Xb Ic,Xc)
-                          \tkzDrawSegments[red,thick](A,Xa B,Xb C,Xc)
-                          \tkzDrawPoints(A,B,C,Xa,Xb,Xc,Nagel)
+                          \tkzDrawCircles[blue!70, thick](Ia,Xa Ib,Xb Ic,Xc)
+                          \tkzDrawPoints(A,B,C,Xa,Xb,Xc,Ia,Ib,Ic)
                           %% --- MARK ---
                           %% --- LABEL ---
-                          \tkzLabelPoints[below](B,C)
+                          \tkzLabelPoints[below left](B)
+                          \tkzLabelPoints[below right](C)
                           \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[below](Ic){$J_c$}
+                          \tkzLabelPoint[below](Ib){$J_b$}
+                          \tkzLabelPoint[below](Ia){$J_a$}
+                          \tkzLabelPoint[below](Xa){$X_a$}
+                          \tkzLabelPoint[above right](Xb){$X_b$}
+                          \tkzLabelPoint[above left](Xc){$X_c$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <p> We have labelled the points of contact <m>X_a</m>, <m>X_b</m>, and <m>X_c</m> between the excircles and the triangle.
+                </p>
+                <p>
+                    Draw lines <m>AX_a</m>, <m>BX_b</m>, and <m>CX_c</m>. What do you notice?
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    The three lines <m>AX_a</m>, <m>BX_b</m>, <m>CX_c</m> are concurrent; they all pass through the <term>Nagel point</term> of the triangle.
+                </p>
+                <figure>
+                    <caption>The Nagel point: <m>AX_a</m>, <m>BX_b</m>, <m>CX_c</m> are concurrent.</caption>
+                    <image width="85%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                          %% --- SET: a=BC=5, b=CA=6, c=AB=7 ---
+                          \tkzDefPoints{0/0/B, 5/0/C}
+                          \tkzDefPoint(7,0){bR}
+                          \tkzDefPoint(11,0){cR}
+                          %% --- CALCULATE ---
+                          \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
+                          \tkzDefCircle[ex](A,B,C) \tkzGetPoints{Ib}{Xib}
+                          \tkzDefCircle[ex](B,C,A) \tkzGetPoints{Ic}{Xic}
+                          \tkzDefCircle[ex](C,A,B) \tkzGetPoints{Ia}{Xia}
+                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{Xa}
+                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{Xb}
+                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{Xc}
+                          \tkzInterLL(A,Xa)(B,Xb) \tkzGetPoint{Nagel}
+                          %% --- DRAW ---
+                          \tkzDrawPolygon[thick](A,B,C)
+                          \tkzDrawCircles[blue!70, thick](Ia,Xa Ib,Xb Ic,Xc)
+                          \tkzDrawSegments[red,thick](A,Xa B,Xb C,Xc)
+                          \tkzDrawPoints(A,B,C,Xa,Xb,Xc,Nagel,Ia,Ib,Ic)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoints[below left](B)
+                          \tkzLabelPoints[below right](C)
+                          \tkzLabelPoints[above](A)
+                          \tkzLabelPoint[below](Ic){$J_c$}
+                          \tkzLabelPoint[below](Ib){$J_b$}
+                          \tkzLabelPoint[below](Ia){$J_a$}
                           \tkzLabelPoint[below](Xa){$X_a$}
                           \tkzLabelPoint[above right](Xb){$X_b$}
                           \tkzLabelPoint[above left](Xc){$X_c$}
@@ -1207,87 +1740,28 @@
                         </latex-image>
                     </image>
                 </figure>
-            </statement>
-            <solution>
-                <p>
-                    The three lines <m>AX_a</m>, <m>BX_b</m>, <m>CX_c</m> are concurrent — they all pass through the <term>Nagel point</term> of the triangle.
-                </p>
             </solution>
         </exercise>
 
         <exercise>
             <statement>
                 <p>
-                    In triangle <m>PQR</m>, <m>PQ = 13</m> cm, <m>QR = 14</m> cm, and <m>PR = 15</m> cm. The excircle opposite <m>P</m> touches side <m>QR</m> at point <m>X</m>.
-                    <ol marker="(a)">
-                        <li>Find the lengths <m>QX</m> and <m>RX</m>.</li>
-                        <li>Find the tangent length from <m>P</m> to this excircle.</li>
-                    </ol>
-                </p>
-                <figure xml:id="fig-excircle-exr6">
-                    <caption>Excircle opposite <m>P</m> in triangle <m>PQR</m>; tangent point <m>X</m> on <m>QR</m>.</caption>
-                    <image width="70%">
-                        <latex-image>
-                        \begin{tikzpicture}[scale=0.6]
-                          %% --- SET: QR=14, PQ=13, PR=15 ---
-                          \tkzDefPoints{0/0/Q, 14/0/R}
-                          \tkzDefPoint(13,0){qR}
-                          \tkzDefPoint(29,0){rR}
-                          %% --- CALCULATE ---
-                          \tkzInterCC(Q,qR)(R,rR) \tkzGetPoints{P}{Pp}
-                          \tkzDefCircle[ex](P,Q,R) \tkzGetPoints{Ip}{Xp}
-                          \tkzDefPointBy[projection=onto Q--R](Ip) \tkzGetPoint{X}
-                          \tkzDefMidPoint(Q,X) \tkzGetPoint{MQX}
-                          \tkzDefMidPoint(X,R) \tkzGetPoint{MXR}
-                          %% --- DRAW ---
-                          \tkzDrawPolygon[thick](P,Q,R)
-                          \tkzDrawSegment[red,thin](Ip,X)
-                          \tkzDrawCircle[blue,thick](Ip,X)
-                          \tkzDrawPoints(P,Q,R,Ip,X)
-                          %% --- MARK ---
-                          \tkzMarkRightAngle[size=0.3](Ip,X,R)
-                          %% --- LABEL ---
-                          \tkzLabelPoints[below](Q,R)
-                          \tkzLabelPoints[above](P)
-                          \tkzLabelPoint[below](X){$X$}
-                          \tkzLabelPoint[right](Ip){$I_p$}
-                          \tkzLabelSegment[below](Q,X){$6$}
-                          \tkzLabelSegment[below](X,R){$8$}
-                        \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
-            </statement>
-            <solution>
-                <p>
-                    Semi-perimeter <m>s = 21</m> cm. Using the tangent length formulas for the excircle opposite <m>P</m> (where <m>p = QR = 14</m>):
-                    <md>
-                        <mrow>QX \amp= s - PR = 21 - 15 = 6 \text{ cm}</mrow>
-                        <mrow>RX \amp= s - PQ = 21 - 13 = 8 \text{ cm.}</mrow>
-                    </md>
-                    Check: <m>QX + RX = 14 = QR</m>. <m>\checkmark</m>
-                </p>
-                <p>
-                    The tangent length from <m>P</m> is <m>s = 21</m> cm.
-                </p>
-            </solution>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>
-                    (Enrichment — construction discovery) For a triangle of your choice:
+                    For a triangle of your choice:
                     <ol marker="(a)">
                         <li>Construct all three excircles.</li>
-                        <li>Construct the <term>nine-point circle</term> of the triangle: the circle passing through the midpoints of the three sides. (Find each midpoint, then construct the circumcircle of those three points.)</li>
-                        <li>Does the nine-point circle appear to touch each excircle at one point?</li>
+                        <li>Construct the <term>nine-point circle</term> of the triangle: the circumcircle through the midpoints of the three sides.</li>
+                        <li>How does the nine-point circle relate to the excircles?</li>
                     </ol>
                 </p>
-                <figure xml:id="fig-excircle-exr7">
+            </statement>
+            <solution>
+                <p>
+                    The nine-point circle touches each excircle at exactly one point. This is <term>Feuerbach's theorem</term>.
+                    <figure xml:id="fig-excircle-exr7">
                     <caption>Nine-point circle and all three excircles (Feuerbach's theorem: each excircle is internally tangent to the nine-point circle).</caption>
                     <image width="75%">
                         <latex-image>
-                        \begin{tikzpicture}[scale=0.75]
+                        \begin{tikzpicture}[scale=0.6]
                           %% --- SET ---
                           \tkzDefPoints{0/0/B, 6/0/C, 1.8/4/A}
                           %% --- CALCULATE ---
@@ -1304,91 +1778,32 @@
                           %% --- DRAW ---
                           \tkzDrawPolygon[thick](A,B,C)
                           \tkzDrawCircle[orange,thick](N9,N9r)
-                          \tkzDrawCircles[blue!70](Ia,FootA Ib,FootB Ic,FootC)
+                          \tkzDrawCircles[blue!70, thick](Ia,FootA Ib,FootB Ic,FootC)
                           \tkzDrawPoints(A,B,C,N9)
                           %% --- MARK ---
                           %% --- LABEL ---
-                          \tkzLabelPoints[below](B,C)
-                          \tkzLabelPoints[above](A)
-                          \tkzLabelPoint[above right](N9){\footnotesize nine-point}
+                          \tkzLabelPoint[below](B){$A$}
+                          \tkzLabelPoint[below](C){$C$}
+                          \tkzLabelPoint[above](A){$B$}
+                          \tkzLabelPoint[above](N9){\footnotesize nine-point}
                         \end{tikzpicture}
                         </latex-image>
                     </image>
                 </figure>
-            </statement>
-            <solution>
-                <p>
-                    The nine-point circle touches each excircle at exactly one point. This is <term>Feuerbach's theorem</term> — one of the most celebrated results in classical geometry. The nine-point circle also touches the incircle, making it tangent to all four circles associated with a triangle.
                 </p>
             </solution>
         </exercise>
 
         <exercise>
+            <title>Excircles and Direct and Transverse Tangets</title>
             <statement>
                 <p>
-                    (Construction) For a triangle with sides <m>5</m> cm, <m>6</m> cm, and <m>7</m> cm:
-                    <ol marker="(a)">
-                        <li>Construct the incircle.</li>
-                        <li>Construct all three excircles.</li>
-                        <li>Describe how the four circles are arranged around the triangle.</li>
-                    </ol>
-                </p>
-                <figure xml:id="fig-excircle-exr8">
-                    <caption>Incircle and all three excircles of a 5-6-7 triangle.</caption>
-                    <image width="75%">
-                        <latex-image>
-                        \begin{tikzpicture}[scale=0.75]
-                          %% --- SET: a=BC=5, b=CA=6, c=AB=7 ---
-                          \tkzDefPoints{0/0/B, 5/0/C}
-                          \tkzDefPoint(7,0){bR}
-                          \tkzDefPoint(11,0){cR}
-                          %% --- CALCULATE ---
-                          \tkzInterCC(B,bR)(C,cR) \tkzGetPoints{A}{Ap}
-                          \tkzDefCircle[in](A,B,C)  \tkzGetPoints{I}{Xi}
-                          \tkzDefCircle[ex](A,B,C)  \tkzGetPoints{Ia}{Xia}
-                          \tkzDefCircle[ex](B,C,A)  \tkzGetPoints{Ib}{Xib}
-                          \tkzDefCircle[ex](C,A,B)  \tkzGetPoints{Ic}{Xic}
-                          \tkzDefPointBy[projection=onto B--C](I)  \tkzGetPoint{FootI}
-                          \tkzDefPointBy[projection=onto B--C](Ia) \tkzGetPoint{FootA}
-                          \tkzDefPointBy[projection=onto C--A](Ib) \tkzGetPoint{FootB}
-                          \tkzDefPointBy[projection=onto A--B](Ic) \tkzGetPoint{FootC}
-                          %% --- DRAW ---
-                          \tkzDrawPolygon[thick](A,B,C)
-                          \tkzDrawCircle[green!60!black,thick](I,FootI)
-                          \tkzDrawCircles[blue](Ia,FootA Ib,FootB Ic,FootC)
-                          \tkzDrawPoints(A,B,C)
-                          %% --- MARK ---
-                          %% --- LABEL ---
-                          \tkzLabelPoints[below](B,C)
-                          \tkzLabelPoints[above](A)
-                        \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
-            </statement>
-            <solution>
-                <p>
-                    Construction exercise. The incircle sits inside the triangle touching all three sides. The three excircles sit outside, each in the region beyond one side of the triangle. Together the four circles fit snugly around the triangle without overlapping.
-                </p>
-            </solution>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>
-                    (Advanced construction) Draw two circles of radii <m>2</m> cm and <m>3</m> cm with their centres <m>7</m> cm apart.
-                    <ol marker="(a)">
-                        <li>Construct both <term>transverse common tangents</term> to the two circles (tangents that cross between the circles). Label their intersection point <m>P</m>.</li>
-                        <li>Construct one <term>direct common tangent</term> (a tangent that does not cross between the circles). This tangent, together with the two transverse tangents, forms a triangle. Label the triangle <m>PQR</m>, where <m>Q</m> and <m>R</m> are the points where the direct tangent meets the transverse tangents.</li>
-                        <li>The two original circles are excircles of triangle <m>PQR</m>. Which vertices are they opposite?</li>
-                        <li>Construct the third excircle of triangle <m>PQR</m> — the one opposite <m>P</m>.</li>
-                    </ol>
-                </p>
-                <figure xml:id="fig-excircle-exr9">
-                    <caption>Two circles (radii 2 and 3, centres 7 apart); transverse tangents meet at <m>P</m>; triangle <m>PQR</m> formed with third excircle opposite <m>P</m>.</caption>
+                    Suppose we start with two circles with centres <m>J_Q</m> and <m>J_R</m> 7 cm apart, with radii 2 and 3 cm.
+                <figure xml:id="fig-excircle-exr9-setup">
+                    <caption>Two circles (radii 2 and 3, centres 7 apart).</caption>
                     <image width="80%">
                         <latex-image>
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[scale=0.5]
                           %% --- SET ---
                           \tkzDefPoints{0/0/O1, 7/0/O2}
                           \tkzDefPoint(2,0){rO1}
@@ -1410,31 +1825,85 @@
                           \tkzInterLL(Td1a,Td2a)(P,T1a) \tkzGetPoint{Q}
                           \tkzInterLL(Td1a,Td2a)(P,T1b) \tkzGetPoint{R}
                           % Third excircle opposite P
-                          \tkzDefCircle[ex](P,Q,R) \tkzGetPoints{Ip}{Xp}
+                          \tkzDefCircle[ex](R,P,Q) \tkzGetPoints{Ip}{Xp}
                           \tkzDefPointBy[projection=onto Q--R](Ip) \tkzGetPoint{FootP}
                           %% --- DRAW ---
-                          \tkzInit[xmin=-0.5,xmax=11,ymin=-4.5,ymax=4.5]
-                          \tkzClip
                           \tkzDrawCircles[thick](O1,rO1 O2,rO2)
-                          \tkzDrawPolygon[red,thick](P,Q,R)
-                          \tkzDrawLines[dashed,gray,add=0.1 and 0.1](P,T1a P,T1b)
-                          \tkzDrawLine[blue!70,add=0.05 and 0.05](Td1a,Td2a)
-                          \tkzDrawCircle[blue!60,thick](Ip,FootP)
-                          \tkzDrawPoints(O1,O2,P,Q,R,Ip)
+                          \tkzDrawPoints(O1,O2)
                           %% --- MARK ---
                           %% --- LABEL ---
-                          \tkzLabelPoint[below](O1){$O_1$}
-                          \tkzLabelPoint[below](O2){$O_2$}
-                          \tkzLabelPoint[above](P){$P$}
-                          \tkzLabelPoint[below left](Q){$Q$}
-                          \tkzLabelPoint[below right](R){$R$}
-                          \tkzLabelPoint[right](Ip){$I_p$}
+                          \tkzLabelPoint[below](O1){$J_Q$}
+                          \tkzLabelPoint[below](O2){$J_R$}
                         \end{tikzpicture}
                         </latex-image>
                     </image>
                 </figure>
+            </p>
+            <p>
+                <ol marker="(a)">
+                    <li>Construct both <term>transverse common tangents</term> to the two circles (tangents that cross between the circles). Label their intersection point <m>P</m>.</li>
+                    <li>Construct one <term>direct common tangent</term> (a tangent that does not cross between the circles). Let <m>Q</m> and <m>R</m> be the points where the direct tangent meets the transverse tangents, and draw <m>\triangle PQR</m>.</li>
+                    <li>The two original circles are excircles of triangle <m>PQR</m>. Which vertices are they opposite?</li>
+                    <li>Construct the third excircle of triangle <m>PQR</m> — the one opposite <m>P</m>.</li>
+                    <li>
+                        <p>
+                            Using <xref ref="excircle-triangle"/>, if you were given two circles with direct and transverse tangents drawn, where could you draw a third circle center so that the three circles were excircles of one triangle?
+                        </p>
+                    </li>
+                </ol>
+            </p>
             </statement>
             <solution>
+                <figure xml:id="fig-excircle-exr9">
+                    <caption>Two circles (radii 2 and 3, centres 7 apart); transverse tangents meet at <m>P</m>; triangle <m>PQR</m> formed with third excircle opposite <m>P</m>.</caption>
+                    <image width="80%">
+                        <latex-image>
+                        \begin{tikzpicture}[scale=0.5]
+                          %% --- SET ---
+                          \tkzDefPoints{0/0/O1, 7/0/O2}
+                          \tkzDefPoint(2,0){rO1}
+                          \tkzDefPoint(10,0){rO2}
+                          %% --- CALCULATE ---
+                          % Internal centre of similitude P (divides O1O2 in ratio r1:r2 = 2:3)
+                          \pgfmathsetmacro{\pRat}{2/(2+3)}
+                          \tkzDefPointBy[homothety=center O1 ratio \pRat](O2) \tkzGetPoint{P}
+                          % External centre of similitude E (ratio r1/(r1-r2) = -2)
+                          \pgfmathsetmacro{\eRat}{2/(2-3)}
+                          \tkzDefPointBy[homothety=center O1 ratio \eRat](O2) \tkzGetPoint{E}
+                          % Transverse tangent touch-points from P
+                          \tkzDefTangent[from=P](O1,rO1) \tkzGetPoints{T1a}{T1b}
+                          \tkzDefTangent[from=P](O2,rO2) \tkzGetPoints{T2a}{T2b}
+                          % Direct tangent touch-points from E
+                          \tkzDefTangent[from=E](O1,rO1) \tkzGetPoints{Td1a}{Td1b}
+                          \tkzDefTangent[from=E](O2,rO2) \tkzGetPoints{Td2a}{Td2b}
+                          % Triangle vertices: Q,R = direct tangent meets transverse tangents
+                          \tkzInterLL(Td1a,Td2a)(P,T1a) \tkzGetPoint{Q}
+                          \tkzInterLL(Td1a,Td2a)(P,T1b) \tkzGetPoint{R}
+                          % Third excircle opposite P
+                          \tkzDefCircle[ex](R,P,Q) \tkzGetPoints{Ip}{Xp}
+                          \tkzDefPointBy[projection=onto Q--R](Ip) \tkzGetPoint{FootP}
+                          %% --- DRAW ---
+                          %\tkzInit[xmin=-0.5,xmax=11,ymin=-4.5,ymax=4.5]
+                          %\tkzClip
+                          \tkzDrawCircles[thick](O1,rO1 O2,rO2)
+                          \tkzDrawLine[thick, dashed, add=0.5 and 0.5](Q,R)
+                          \tkzDrawLine[thick, dashed, add=2 and 1](R,P)
+                          \tkzDrawLine[thick, dashed, add=1.5 and 1](Q,P)
+                          \tkzDrawPolygon[red,thick](P,Q,R)
+                          \tkzDrawCircle[blue!60,thick](Ip,FootP)
+                          \tkzDrawPoints(O1,O2,P,Q,R,Ip)
+                          %% --- MARK ---
+                          %% --- LABEL ---
+                          \tkzLabelPoint[below](O1){$J_Q$}
+                          \tkzLabelPoint[below](O2){$J_R$}
+                          \tkzLabelPoint[below](P){$P$}
+                          \tkzLabelPoint[above right, xshift=6pt, yshift=-2pt](Q){$Q$}
+                          \tkzLabelPoint[above left, xshift=-5pt, yshift=-3pt](R){$R$}
+                          \tkzLabelPoint[right](Ip){$J_P$}
+                        \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1453,7 +1922,15 @@
                     </li>
                     <li>
                         <p>
-                            Construct the external bisectors of angles <m>Q</m> and <m>R</m> in triangle <m>PQR</m>; their intersection is the excenter <m>I_p</m>. Drop a perpendicular from <m>I_p</m> to one side to find the radius, then draw the excircle.
+                            Construct the external bisectors of angles <m>Q</m> and <m>R</m> in triangle <m>PQR</m>; their intersection is the excenter <m>J_p</m>. Drop a perpendicular from <m>J_p</m> to one side to find the radius, then draw the excircle.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            By <xref ref="excircle-triangle"/>, the lines connecting the excenters go through the original triangles vertices. In our construction, the triangle vertices were the intersection of a direct tangent with both transverse tangents (<m>R</m> and <m>Q</m>), as well as the intersection of the transverse tangent (<m>P</m>). Thus we need the line connecting the third center <m>J_P</m> to <m>J_Q</m> and <m>J_R</m> to go through <m>R</m> and <m>Q</m> respectively.
+                        </p>
+                        <p>
+                            Hence <m>J_P</m> sits at the intersection of <m>J_QR</m> and <m>J_RQ</m>
                         </p>
                     </li>
                 </ol>

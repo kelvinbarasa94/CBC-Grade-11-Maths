@@ -384,7 +384,7 @@
                 </figure>
                 The <term>circumradius</term> <m>R</m>, satisfies
                 <md>
-                    R = \frac{abc}{4 \cdot \text{Area}(\triangle ABC)}.
+                    R = \frac{abc}{4 \cdot \Delta}.
                 </md>
             </p>
         </statement>
@@ -455,12 +455,12 @@
             <p>
                 By the formula for the area of <m>\triangle ABC</m> in terms of two sides and the included angle, we have:
                 <md>
-                    \text{Area}(\triangle ABC) = \frac{1}{2}ab \sin \theta
+                    \Delta = \frac{1}{2}ab \sin \theta
                 </md>
                 Applying <xref ref="eq-circumradius-sine" /> gives:
                 <md>
-                    <mrow> \text{Area}(\triangle ABC) = \frac{1}{2}ab \cdot \frac{c}{2R} = \frac{abc}{4R} </mrow>
-                    <mrow> R = \frac{abc}{4 \cdot \text{Area}(\triangle ABC)}. </mrow>
+                    <mrow> \Delta = \frac{1}{2}ab \cdot \frac{c}{2R} = \frac{abc}{4R} </mrow>
+                    <mrow> R = \frac{abc}{4 \cdot \Delta}. </mrow>
                 </md>  
             </p>
         </proof>
@@ -514,7 +514,7 @@
             <p>
                 Measuring <m>OA</m> from an accurate drawing gives <m>R \approx 3.6</m> cm. We can verify using the formula: with <m>a = 5</m>, <m>b = 6</m>, <m>c = 7</m>, semi-perimeter <m>s = 9</m>, Heron's formula gives
                 <md>
-                    <mrow>\text{Area} \amp= \sqrt{9 \times 4 \times 3 \times 2} = \sqrt{216} = 6\sqrt{6} \text{ cm}^2</mrow>
+                    <mrow>\Delta \amp= \sqrt{9 \times 4 \times 3 \times 2} = \sqrt{216} = 6\sqrt{6} \text{ cm}^2</mrow>
                     <mrow>R \amp= \frac{5 \times 6 \times 7}{4 \times 6\sqrt{6}} = \frac{210}{24\sqrt{6}} = \frac{35}{4\sqrt{6}} = \frac{35\sqrt{6}}{24} \approx 3.57 \text{ cm.}</mrow>
                 </md>
             </p>
@@ -649,7 +649,7 @@
                     <p>
                         The area of the triangle is <m>\frac{1}{2} \times 6 \times 8 = 24</m> cm<m>^2</m>. Using the general formula for the circumradius:
                         <md>
-                            R = \frac{abc}{4 \cdot \text{Area}(\triangle ABC)} = \frac{6\times 8 \times 10}{4 \times 24} = 5 \text{ cm}
+                            R = \frac{abc}{4 \cdot \Delta} = \frac{6\times 8 \times 10}{4 \times 24} = 5 \text{ cm}
                         </md>
                         This agrees with the measured radius from part (a), and is also half of the hypotenuse, as expected.
                     </p>
@@ -985,7 +985,7 @@
                 <p>
                     Finding the circumradius <m>R</m>, we have <m>s = \frac{7+8+6}{2} = 10.5</m>,
                     <md>
-                        <mrow>\text{Area} \amp= \sqrt{10.5 \times 2.5 \times 4.5 \times 3.5} = \sqrt{413.4375} \approx 20.33 \text{ cm}^2</mrow>
+                        <mrow>\Delta \amp= \sqrt{10.5 \times 2.5 \times 4.5 \times 3.5} = \sqrt{413.4375} \approx 20.33 \text{ cm}^2</mrow>
                         <mrow>R \amp= \frac{6 \times 7 \times 8}{4 \times 20.33} \approx \frac{336}{81.3} \approx 4.13 \text{ cm.}</mrow>
                     </md>
                 </p>
@@ -1443,17 +1443,17 @@
                         <p>
                             Finding the area, with semi-perimeter <m>s = \frac{12+12+12}{2} = 18</m> cm,
                             <md> 
-                                <mrow> \text{Area} \amp = \sqrt{18 \times (18-12) \times (18-12) \times (18-12)} </mrow>
+                                <mrow> \Delta \amp = \sqrt{18 \times (18-12) \times (18-12) \times (18-12)} </mrow>
                                 <mrow> \amp = \sqrt{2\times3^2 \times 6^3} </mrow>
                                 <mrow> \amp = 18\sqrt{2\times 6} =  36\sqrt{3} \text{cm}^2</mrow>
                             </md>
                         </p>
                         <p>
                             Finding the circumradius:
-                            <md> R = \frac{abc}{4 \cdot \text{Area}} = \dfrac{12^3}{4 \times 36\sqrt{3}} = \dfrac{12}{\sqrt{3}} = 4\sqrt{3}</md>
+                            <md> R = \frac{abc}{4 \cdot \Delta} = \dfrac{12^3}{4 \times 36\sqrt{3}} = \dfrac{12}{\sqrt{3}} = 4\sqrt{3}</md>
                             Finding the inradius:
                             <md>
-                                r = \frac{\text{Area}}{s} = \frac{36\sqrt{3}}{18} = 2 \sqrt{3}
+                                r = \frac{\Delta}{s} = \frac{36\sqrt{3}}{18} = 2 \sqrt{3}
                             </md>
                         </p>
                     </li>
