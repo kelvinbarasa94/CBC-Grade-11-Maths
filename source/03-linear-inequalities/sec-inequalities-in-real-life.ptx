@@ -384,9 +384,9 @@
                             <em>Classroom minimum:</em> At least <m>100</m> books for classrooms
                         </p>
                         <p>
-                            <![CDATA[<md>
+                            <md>
                                 <mrow>C \ge 100</mrow>
-                            </md>]]>
+                            </md>
                         </p>
                         <p>
                             <em>Library maximum:</em> At most <m>130</m> books for library
