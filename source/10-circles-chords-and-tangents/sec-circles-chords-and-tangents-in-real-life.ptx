@@ -1406,9 +1406,9 @@
                 </p>
                 <figure xml:id="fig-jua-kali-belt">
                     <caption>The crossed belt follows the two transverse common tangents, which cross at <m>E</m> between the pulleys (making the shafts turn in opposite directions).</caption>
-                    <image width="90%">
+                    <image width="90%" label="img-jua-kali-belt">
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.3]
+                            \begin{tikzpicture}[scale=0.25]
                                 %% --- SET ---
                                 \pgfmathsetmacro{\Rr}{10}
                                 \pgfmathsetmacro{\rr}{5}
@@ -1436,16 +1436,18 @@
                                 \tkzDrawSegment[densely dashed, gray](O2,P2u)
                                 \tkzDrawPoints[size=2pt](O1,O2,P1u,P2u,P1l,P2l,E)
                                 %% --- MARK ---
-                                \tkzMarkRightAngle[size=1.2](O1,P1u,P2u)
+                                \tkzMarkRightAngle[size=0.8](O1,P1u,P2u)
+                                \tkzMarkRightAngle[size=0.8](O2,P2u,E)
+                                \tkzMarkAngle[size=4](P1u,E,O1)
                                 \tkzFillAngle[opacity=0.5, color=red!40, size=4](P1u,E,O1)
                                 %% --- LABEL ---
                                 \tkzLabelPoint[below left](O1){$O_1$}
                                 \tkzLabelPoint[below right](O2){$O_2$}
-                                \tkzLabelPoint[below right](E){$E$}
-                                \tkzLabelSegment[below, pos=0.4](O1,O2){$d$}
+                                \tkzLabelPoint[below](E){$E$}
+                                \tkzLabelSegment[below](O1,O2){$d$}
                                 \tkzLabelSegment[above left, pos=0.45](O1,P1u){$R$}
                                 \tkzLabelSegment[below right, pos=0.45](O2,P2u){$r$}
-                                \tkzLabelSegment[above, pos=0.22](P1u,P2u){$L$}
+                                \tkzLabelSegment[above](P1u,P2u){$L$}
                                 \tkzLabelAngle[pos=5](P1u,E,O1){$\varphi$}
                             \end{tikzpicture}
                         </latex-image>
@@ -1913,52 +1915,66 @@
             <title>The Pappus Chain</title>
             <statement>
                 <p>
-                    Draw a semicircle of radius 12 cm on a diameter <m>AC</m>. Mark <m>B</m> as the midpoint of <m>AC</m>, and draw a second semicircle of radius 6 cm on <m>AB</m>, inside the first semicircle. The crescent-shaped region between the two semicircles is called an <em>arbelos</em> (Greek for shoemaker's knife). Now inscribe a chain of circles in the crescent, each one tangent to both semicircles and to the previous circle in the chain — this is the <em>Pappus chain</em>, studied by Pappus of Alexandria in the 4th century CE.
+                    Draw a semicircle of radius 12 cm on a diameter <m>AC</m>. Place <m>B</m> two-thirds of the way from <m>A</m> to <m>C</m>, and draw semicircles on <m>AB</m> and <m>BC</m>. The crescent-shaped region between the two semicircles black is called an <em>arbelos</em> (Greek for shoemaker's knife). Now inscribe a chain of circles in the crescent, each one tangent to both semicircles and to the previous circle in the chain — this is the <em>Pappus chain</em>, studied by Pappus of Alexandria in the 4th century CE.
                 </p>
-                <figure xml:id="fig-pappus-chain">
-                    <caption>The arbelos — the crescent between the outer semicircle on <m>AC</m> and the inner semicircle on <m>AB</m> — with the first three circles of the Pappus chain. Each is tangent to both semicircles and to its neighbours; the dashed lines show each centre's height above <m>AC</m>. </caption>
-                    <image width="75%">
-                        <latex-image>
-                            \begin{tikzpicture}[scale=0.3]
-                                %% --- SET: arbelos ---
-                                \tkzDefPoint(0,0){A}
-                                \tkzDefPoint(24,0){C}
-                                \tkzDefPoint(12,0){B}
-                                \tkzDefPoint(6,0){Oin}
-                                %% --- chain circles (centres/radii computed by circle inversion) ---
-                                \tkzDefPoint(12,8){K1}
-                                \tkzDefPoint(6,8){K2}
-                                \tkzDefPoint(3.2727,6.5455){K3}
-                                \tkzDefShiftPoint[K1](4,0){k1r}
-                                \tkzDefShiftPoint[K2](2,0){k2r}
-                                \tkzDefShiftPoint[K3](1.0909,0){k3r}
-                                %% feet on AC for the height lines
-                                \tkzDefPointBy[projection=onto A--C](K1)\tkzGetPoint{F1}
-                                \tkzDefPointBy[projection=onto A--C](K2)\tkzGetPoint{F2}
-                                \tkzDefPointBy[projection=onto A--C](K3)\tkzGetPoint{F3}
-                                \tkzDefMidPoint(B,C) \tkzGetPoint{MBC}
-                                %% --- DRAW ---
-                                \tkzDrawArc[thick](B,C)(A)
-                                \tkzDrawArc[thick](Oin,B)(A)
-                                \tkzDrawSegment[thick](A,C)
-                                \tkzDrawArc[thick, red](MBC,C)(B)
-                                \tkzDrawCircle[thick, teal](K1,k1r)
-                                \tkzDrawCircle[thick, orange!80!black](K2,k2r)
-                                \tkzDrawCircle[thick, violet](K3,k3r)
-                                \tkzDrawSegments[densely dashed, gray](K1,F1 K2,F2 K3,F3)
-                                \tkzDrawPoints[size=1.5pt](A,B,C,K1,K2,K3,MBC)
-                                %% --- LABEL ---
-                                \tkzLabelPoint[below left](A){$A$}
-                                \tkzLabelPoint[below](B){$B$}
-                                \tkzLabelPoint[below right](C){$C$}
-                                \tkzLabelPoint[above](MBC){$0$}
-                                \tkzLabelPoint[above](K1){$1$}
-                                \tkzLabelPoint[above](K2){$2$}
-                                \tkzLabelPoint[above](K3){$3$}
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
+                <figure xml:id="fig-pappus-chain-2">
+                <caption>The arbelos with <m>AB/AC = 2/3</m> and the first five circles of the Pappus chain.</caption>
+                <image width="75%">
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.3]
+                            %% --- arbelos: A=(0,0), C=(24,0) so AC=24; AB/AC=2/3 => AB=16 ---
+                            \tkzDefPoint(0,0){A}
+                            \tkzDefPoint(24,0){C}
+                            \tkzDefPoint(16,0){B}
+                            \tkzDefPoint(12,0){Obig}   %% centre of semicircle on AC
+                            \tkzDefPoint(8,0){Oin}     %% centre of semicircle on AB
+                            \tkzDefPoint(20,0){Obc}    %% centre of semicircle on BC (chain circle 0)
+                            %% --- inversion circle: centre A (the cusp), radius sqrt(96) ---
+                            %% chosen so the semicircles invert to the lines x=4 and x=6,
+                            %% and chain circle n inverts to the unit circle centred (5,2n).
+                            \tkzDefPoint(9.797958971,0){Q}
+                            %% --- DRAW the three semicircles + base ---
+                            \tkzDrawArc[thick](Obig,C)(A)
+                            \tkzDrawArc[thick](Oin,B)(A)
+                            \tkzDrawArc[thick, red](Obc,C)(B)
+                            \tkzDrawSegment[thick](A,C)
+                            %% --- BUILD the chain by inversion ---
+                            %% In the inverted picture, circle n is the unit circle centred (5,2n),
+                            %% tangent to the lines x=4 and x=6. Invert three of its points
+                            %% (left, right, top) back, then fit the circle through them.
+                            \foreach \n/\col in {1/teal, 2/orange!80!black, 3/violet, 4/blue, 5/purple, 6/red, 7/teal, 8/orange!80!black, 9/violet, 10/blue, 11/purple, 12/red} {
+                                \pgfmathsetmacro{\yy}{2*\n}
+                                \pgfmathsetmacro{\yt}{2*\n+1}
+                                \tkzDefPoint(4,\yy){L}     %% on line x=4 (image of AC-semicircle)
+                                \tkzDefPoint(6,\yy){R}     %% on line x=6 (image of AB-semicircle)
+                                \tkzDefPoint(5,\yt){T}     %% top of inverted circle
+                                \tkzDefPointBy[inversion = center A through Q](L)\tkzGetPoint{Lp}
+                                \tkzDefPointBy[inversion = center A through Q](R)\tkzGetPoint{Rp}
+                                \tkzDefPointBy[inversion = center A through Q](T)\tkzGetPoint{Tp}
+                                \tkzDefCircle[circum](Lp,Rp,Tp)\tkzGetPoint{K}
+                                \tkzDrawCircle[thick, \col](K,Lp)
+                                %% foot on AC + height line
+                                \tkzDefPointBy[projection = onto A--C](K)\tkzGetPoint{F}
+                                \tkzDrawPoint[size=1pt](K)
+                            }
+                            \tkzDefMidPoint(Obig,Oin)\tkzGetPoint{OE}        %% ellipse centre
+                            \tkzCalcLength(A,OE)\tkzGetLength{ea}            %% semi-major  
+                            \tkzCalcLength(OE,Obig)\tkzGetLength{ec}         %% linear ecc. 
+                            \pgfmathsetmacro{\eb}{sqrt((\ea)^2-(\ec)^2)}     %% semi-minor 
+                            % \tkzDrawEllipse[thick, dashed, purple!20](OE, \ea, \ec, 0) %% Not available in this tkz-euclide version
+                            \begin{scope}[shift={(OE)}]
+                            \draw[dashed, purple!20]
+                                plot[domain=0:180, samples=120, smooth, variable=\t]({\ea*cos(\t)}, {\eb*sin(\t)});
+                            \end{scope}
+                            %% --- LABEL ---
+                            \tkzDrawPoints[size=1.5pt](A,B,C,Obc)
+                            \tkzLabelPoint[below left](A){$A$}
+                            \tkzLabelPoint[below](B){$B$}
+                            \tkzLabelPoint[below right](C){$C$}
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
                 <ol marker="(a)">
                     <li>
                         <p>
@@ -1972,12 +1988,7 @@
                     </li>
                     <li>
                         <p>
-                            Pappus of Alexandria, who lived around 300 CE, proved that the centre of the <m>n</m>th circle in the chain is exactly <m>n</m> diameters above the line <m>AC</m>. State this as a formula relating the height <m>h_n</m>, the radius <m>r_n</m>, and <m>n</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Draw the circumcircle through the centres <m>0</m>, <m>1</m> and <m>2</m>. Does it also go through the centre of circle <m>3</m>?
+                            Pappus of Alexandria, who lived around 300 CE, proved that the centre of the <m>n</m>th circle in the chain is exactly <m>n</m> diameters above the line <m>AC</m>. State this as a formula relating the height <m>h_n</m>, the radius <m>r_n</m>, and <m>n</m>. (Note that the red semicircle on <m>BC</m> is the 0th circle in the chain, so <m>n=1</m> refers to the teal circle.)
                         </p>
                     </li>
                     <li>
@@ -2002,60 +2013,6 @@
                     <li>
                         <p>
                             The formula is <md>h_n = n \times 2r_n = 2n r_n</md> i.e. the centre of the <m>n</m>th circle is at height <m>2n r_n</m> above <m>AC</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Drawing the circumcircle through centres <m>0</m>, <m>1</m>, and <m>2</m>, shows that it also passes through the centre of circle <m>3</m>.
-                        </p>
-                        <figure xml:id="fig-pappus-chain-centers">
-                            <caption>The centres of all these circles lie on a common circle.</caption>
-                            <image width="75%">
-                                <latex-image>
-                                    \begin{tikzpicture}[scale=0.3]
-                                        %% --- SET: arbelos ---
-                                        \tkzDefPoint(0,0){A}
-                                        \tkzDefPoint(24,0){C}
-                                        \tkzDefPoint(12,0){B}
-                                        \tkzDefPoint(6,0){Oin}
-                                        %% --- chain circles (centres/radii computed by circle inversion) ---
-                                        \tkzDefPoint(12,8){K1}
-                                        \tkzDefPoint(6,8){K2}
-                                        \tkzDefPoint(3.2727,6.5455){K3}
-                                        \tkzDefShiftPoint[K1](4,0){k1r}
-                                        \tkzDefShiftPoint[K2](2,0){k2r}
-                                        \tkzDefShiftPoint[K3](1.0909,0){k3r}
-                                        %% feet on AC for the height lines
-                                        \tkzDefPointBy[projection=onto A--C](K1)\tkzGetPoint{F1}
-                                        \tkzDefPointBy[projection=onto A--C](K2)\tkzGetPoint{F2}
-                                        \tkzDefPointBy[projection=onto A--C](K3)\tkzGetPoint{F3}
-                                        \tkzDefMidPoint(B,C) \tkzGetPoint{MBC}
-                                        \tkzDefTriangleCenter[circum](MBC,K1,K2)\tkzGetPoint{X}
-                                        %% --- DRAW ---
-                                        \tkzDrawArc[thick](B,C)(A)
-                                        \tkzDrawArc[thick](Oin,B)(A)
-                                        \tkzDrawCircle[thick, dashed](X,MBC)
-                                        \tkzDrawSegment[thick](A,C)
-                                        \tkzDrawArc[thick, red](MBC,C)(B)
-                                        \tkzDrawCircle[thick, teal](K1,k1r)
-                                        \tkzDrawCircle[thick, orange!80!black](K2,k2r)
-                                        \tkzDrawCircle[thick, violet](K3,k3r)
-                                        \tkzDrawSegments[densely dashed, gray](K1,F1 K2,F2 K3,F3)
-                                        \tkzDrawPoints[size=1.5pt](A,B,C,K1,K2,K3,MBC)
-                                        %% --- LABEL ---
-                                        \tkzLabelPoint[below left](A){$A$}
-                                        \tkzLabelPoint[below](B){$B$}
-                                        \tkzLabelPoint[below right](C){$C$}
-                                        \tkzLabelPoint[above](MBC){$0$}
-                                        \tkzLabelPoint[above](K1){$1$}
-                                        \tkzLabelPoint[above](K2){$2$}
-                                        \tkzLabelPoint[above](K3){$3$}
-                                    \end{tikzpicture}
-                                </latex-image>
-                            </image>
-                        </figure>
-                        <p>
-                            Continuing this process, the centres of all the circles in the Pappus chain lie on a common circle.
                         </p>
                     </li>
                     <li>
