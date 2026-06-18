@@ -213,7 +213,7 @@
             </ul>
         </p>
         <image xml:id="img-tangent-illustration" width="65%">
-            <latex-image label="Tangent Line Illustration">
+            <latex-image label="Tangent-Line-Illustration">
                 \begin{tikzpicture}
                 \begin{axis}[
                     axis lines=center,
@@ -555,7 +555,7 @@
                     The gradient of the tangent is <m>10</m> m/s which represents the velocity.
                 </p>
                 <image xml:id="img-ex-velocity-inst" width="65%">
-                    <latex-image label="Projectile Motion with Tangent Line">
+                    <latex-image label="Projectile-Motion-with-Tangent-Line">
                         \begin{tikzpicture}
                         \begin{axis}[
                             axis x line=bottom, axis y line=left,
@@ -595,7 +595,7 @@
                     <me>\text{Gradient} = \frac{1 - 5}{2 - 0} = \frac{-4}{2} = -2</me>
                 </p>
                 <image xml:id="img-ex-quad-neg-inst" width="85%">
-                    <latex-image label="Graph estimation of gradient at x=1">
+                    <latex-image label="Graph-estimation-of-gradient-at-x=1">
                         \begin{tikzpicture}
                         \begin{axis}[
                             axis lines=center,
@@ -635,7 +635,7 @@
                     <me>\text{Rate} = \frac{40 - 16}{4 - 2} = \frac{24}{2} = 12 \text{ bacteria/hour}</me>
                 </p>
                 <image xml:id="img-ex-bacteria-inst" width="65%">
-                    <latex-image label="Bacterial Growth with Tangent Line">
+                    <latex-image label="Bacterial-Growth-with-Tangent-Line">
                         \begin{tikzpicture}
                         \begin{axis}[
                                 axis x line=bottom, axis y line=left,

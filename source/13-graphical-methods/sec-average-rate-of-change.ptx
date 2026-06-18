@@ -284,7 +284,7 @@
                 <me>\text{Gradient} = \frac{15 - 3}{3 - 1} = \frac{12}{2} = 6</me>
             </p>
             <image width="65%">
-                <latex-image label="QuadraticSecant Line">
+                <latex-image label="QuadraticSecant-Line">
                     \begin{tikzpicture}
                     \begin{axis}[
                         axis lines=left,
@@ -407,7 +407,7 @@
                 Average growth rate = <m>\frac{7.5 - 5.4}{5 - 2} = \frac{2.1}{3} = 0.7</m> thousand people per year.
             </p>
             <image xml:id="img-example-pop-avg" width="65%">
-                <latex-image label="Population Growth with Secant Line">
+                <latex-image label="Population-Growth-with-Secant-Line">
                     \begin{tikzpicture}
                     \begin{axis}[
                         axis x line=bottom,

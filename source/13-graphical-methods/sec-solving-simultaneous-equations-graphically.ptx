@@ -377,7 +377,7 @@
                 By plotting <m>y = x^2 - 2</m> (a parabola) and <m>y = x</m> (a straight line), we observe that they cross at two points.
             </p>
             <image width="65%">
-                <latex-image label="Graph of y = x^2 - 2 and y = x">
+                <latex-image label="Graph-of-y-x2-minus-2-and-y-x">
                     \begin{tikzpicture}
                     \begin{axis}[
                         axis lines=center,
