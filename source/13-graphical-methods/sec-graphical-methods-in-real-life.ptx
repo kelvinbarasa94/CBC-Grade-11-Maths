@@ -183,7 +183,7 @@
                                 Students should use a compass set to a radius of <m>5</m> units (km) to draw circles centered at their chosen tower coordinates. The resulting map should show all three zones inside or on the boundary of the circles.
                             </p>
                         </solution>
-                        <image width="40%">
+                        <image width="65%">
                             <latex-image label="Graphical-representation-of-the-telecom-problem-with-coverage-circles">
                                 \begin{tikzpicture}
                                 \begin{axis}[
