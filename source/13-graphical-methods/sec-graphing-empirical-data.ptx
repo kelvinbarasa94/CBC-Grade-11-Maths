@@ -823,7 +823,7 @@
                     </li>
                     <li><p>Reading from the graph at 1700 m, the estimated temperature is approximately 18.8 °C — consistent with Nairobi's well-known mild climate.</p>
                         <image width="65%">
-                            <latex-image label="Estimating Nairobi Temperature">
+                            <latex-image>
                                 \begin{tikzpicture}
                                 \begin{axis}[
                                     axis x line=bottom,

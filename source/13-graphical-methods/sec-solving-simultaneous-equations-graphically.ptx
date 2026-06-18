@@ -608,7 +608,7 @@
                     </ul>
                 </p>
                 <image width="65%">
-                    <latex-image label="Graph of y = x^3 - x">
+                    <latex-image label="Graph-of-y-x^3-x">
                         \begin{tikzpicture}
                         \begin{axis}[
                             axis lines=center,

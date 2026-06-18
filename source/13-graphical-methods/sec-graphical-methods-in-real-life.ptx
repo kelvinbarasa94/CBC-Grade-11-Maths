@@ -620,7 +620,7 @@
                     <li>
                         <p> The graph is as follows:
                             <image width="65%">
-                    <latex-image label="Graphical-representation-of-the-rocket's-flight">
+                    <latex-image>
                         \begin{tikzpicture}
                         \begin{axis}[
                             axis x line=bottom, axis y line=left,
