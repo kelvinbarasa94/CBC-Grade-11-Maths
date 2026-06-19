@@ -263,7 +263,7 @@
 
     <insight>
         <p>
-            <term>An absolute error:</term> is the difference between the measured value and the actual value.
+            <term>Absolute error:</term> is the positive difference between the measured value and the actual value.
         </p>
         <p>
             <md>
