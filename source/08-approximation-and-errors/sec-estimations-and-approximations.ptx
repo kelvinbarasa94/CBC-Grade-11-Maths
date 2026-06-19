@@ -156,19 +156,20 @@
                 </image>
             </figure>
             <p>
+                Measure the length of the Locker using each of the following tools and record your measurements in the table below.
+            </p>
+            <p>
                 <ol marker="(a)">
                     <li>
-                        <p>Measure the length of the desk using a <m>15</m> cm ruler.</p>
+                        <p><m>15</m> cm ruler.</p>
                     </li>
                     <li>
-                        <p>Measure the same desk using a <m>30</m> cm ruler.</p>
+                        <p><m>30</m> cm ruler.</p>
                     </li>
                     <li>
-                        <p>Measure it using a metre rule or tape measure.</p>
+                        <p>Metre rule or tape measure.</p>
                     </li>
-                    <li>
-                        <p>Record all your results clearly.</p>
-                    </li>
+                    
                 </ol>
             </p>
             <tabular left="medium" right="medium" top="medium" bottom="medium">
@@ -195,13 +196,24 @@
             <p>
                 <ol marker="(i)">
                     <li>
-                        <p>Do all groups obtain the same measurement? Explain.</p>
+                        <p>
+                            Compare the measurements obtained using the different tools. What do you notice?
+                        </p>
                     </li>
                     <li>
-                        <p>Which measuring tool gave the most consistent result? Why?</p>
+                        <p>
+                            Why might different tools produce slightly different estimates of the same length?
+                        </p>
                     </li>
                     <li>
-                        <p>Which tool do you think is most accurate? Give reasons.</p>
+                        <p>
+                            Which measurement tool do you think gives the best estimate of the Locker length? Explain your answer.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            What can you conclude about approximation when measuring lengths?
+                        </p>
                     </li>
                 </ol>
             </p>
@@ -211,13 +223,14 @@
             <p>
                 <ol marker="(i)">
                     <li>
-                        <p>Compare your results with another group's measurements.</p>
+                        <p>
+                            Compare your results with another group's measurements.
+                        </p>
                     </li>
                     <li>
-                        <p>Suggest possible reasons why the results are different.</p>
-                    </li>
-                    <li>
-                        <p>Discuss how human error may have affected the results.</p>
+                        <p>
+                            Discuss how human error may have affected the results.
+                        </p>
                     </li>
                 </ol>
             </p>
@@ -227,18 +240,24 @@
             <p>
                 <ol marker="(a)">
                     <li>
-                        <p>What happens if the ruler is not placed exactly at the edge of the desk?</p>
+                        <p>
+                            What happens if the ruler is not placed exactly at the edge of the desk?
+                        </p>
                     </li>
                     <li>
-                        <p>Does the thickness of the measuring tool affect accuracy?</p>
+                        <p>
+                            Does the thickness of the measuring tool affect accuracy?
+                        </p>
                     </li>
                     <li>
-                        <p>Can two correct measurements still be slightly different? Explain.</p>
+                        <p>
+                            Can two correct measurements still be slightly different? Explain.
+                        </p>
                     </li>
                 </ol>
             </p>
             <p>
-                What are the ways of improving accuracy when measuring long objects.
+                What are the ways of improving accuracy when measuring long objects?
             </p>
         </statement>
     </activity>
@@ -290,7 +309,7 @@
     <insight>
 
         <p>
-            Measurement is never perfectly exact. Every measurement has a small degree of uncertainty due to limitations of measuring instruments and human factors.
+            Measurement is never perfectly exact. Every measurement has a small error due to limitations of measuring instruments and human errors.
         </p>
         <p>
             Differences in results may arise due to:
@@ -336,13 +355,16 @@
     <example>
         <statement>
             <p>
-                Three students measure the same desk and obtain 120 cm, 121 cm, and 119 cm. Explain why the results are not identical.
+                Three students measure the same desk and obtain <m>120</m> cm, <m>121</m> cm, and <m>119</m> cm. Explain why the measurements are not exactly the same.
             </p>
         </statement>
 
         <solution>
             <p>
-                Differences occur due to measurement errors such as parallax error, instrument precision, and human reading differences.
+                The measurements are not exactly the same because measurement involves estimation. Different students may read the scale slightly differently, estimate between scale markings differently, or start and end the measurement at slightly different points.
+            </p>
+            <p>
+                As a result, small variations in the measurements can occur even when measuring the same object.
             </p>
         </solution>
     </example>
@@ -351,13 +373,16 @@
 
         <statement>
             <p>
-                A tape measure gives a more consistent result than a 15 cm ruler when measuring a desk. Explain why.
+                Why do you think different students are more likely to get similar measurements when using a tape measure than when using a 15 cm ruler?
             </p>
         </statement>
 
         <solution>
             <p>
-                A tape measure covers a longer distance at once, reducing repeated placements and therefore reducing cumulative error.
+                Different students are more likely to get similar measurements when using a tape measure because a tape measure can be used to measure the whole length of the desk at once. A <m>15</m> cm ruler has to be moved several times, and small errors can occur each time it is re-positioned. 
+            </p>
+            <p>
+                These small errors may add up, causing different students to obtain slightly different measurements. Therefore, measurements taken with a tape measure are usually more consistent.
             </p>
         </solution>
     </example>
