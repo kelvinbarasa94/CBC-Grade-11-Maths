@@ -423,41 +423,41 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            The absolute error in the addition of the length and width?
+                            The absolute error in the addition?
                         </p>
                     </li>
                     <li>
                         <p>
-                            The relative error in the addition of length and width?
+                            The relative error in the addition?
                         </p>
                     </li>
                     <li>
                         <p>
-                            The percentage error in the addition of length and width?
+                            The percentage error in the addition?
                         </p>
                     </li>
                     <li>
                         <p>
-                            The absolute error in the difference between length and width?
+                            The absolute error in the difference?
                         </p>
                     </li>
                     <li>
                         <p>
-                            The relative error in the difference between length and width?
+                            The relative error in the difference?
                         </p>
                     </li>
                     <li>
                         <p>
-                            The percentage error in the difference between length and width?
+                            The percentage error in the difference?
                         </p>
                     </li>
                 </ol>
             </p>
             <p>
-                <term>Discuss and share with other Groups</term>
+                <term>Discuss and share with other Groups;</term>
             </p>
             <p>
-                The pattern you notice in the addition and subtraction of errors?
+                The pattern observed in the addition and subtraction of errors. What do you notice about the maximum and minimum sums and differences?
             </p>
         </statement>
     </activity>
@@ -510,8 +510,8 @@
         </p>
         <p>
             <md>
-                <mrow> \text{Absolute error}\; = \amp \; \text{Maximum} \; - \; \text{actual} </mrow>
-                <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute}}{\text{Actual}} </mrow>
+                <mrow> \text{Absolute error}\; = \amp \; \text{Maximum value} \; - \; \text{Working value} </mrow>
+                <mrow> \text{Relative error} \; = \amp \; \frac{\text{Absolute error}}{\text{Working value}} </mrow>
                 <mrow> \text{Percentage error} \; = \amp \; \text{Relative error} \; \times 100 \% </mrow>
             </md>
             
@@ -538,10 +538,10 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{The maximum possible sum is} \; \amp \; 4.55 + 6.15 = 10.7 \;\text{cm} </mrow>
-                    <mrow> \text{The minimum possible sum is} \; \amp \; 4.45 + 6.05 = 10.5 \;\text{cm} </mrow>
-                    <mrow> \text{The working sum is} \; \amp \; 4.5 + 6.1 = 10.6 \;\text{cm} </mrow>
-                    <mrow> \text{Absolute error} \; \amp = \; \text{maximum sum} - \text{working sum} </mrow>
+                    <mrow> \text{The maximum sum} \; = \amp \; 4.55 + 6.15 = 10.7 \;\text{cm} </mrow>
+                    <mrow> \text{The minimum sum} \; =\amp \; 4.45 + 6.05 = 10.5 \;\text{cm} </mrow>
+                    <mrow> \text{The working sum} \; = \amp \; 4.5 + 6.1 = 10.6 \;\text{cm} </mrow>
+                    <mrow> \text{Absolute error} \; = \amp \; \text{maximum sum} - \text{working sum} </mrow>
                     <mrow> \amp = \; \left| 10.7 - 10.6 \right| </mrow>
                     <mrow> \amp = \; 0.1 \;\text{cm} </mrow>
                 </md>
@@ -563,12 +563,12 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{The maximum possible difference is} \; \amp \; 0.725 - 0.305 = 0.420 \;\text{g} </mrow>
-                    <mrow> \text{The minimum possible difference is} \; \amp \; 0.715 - 0.315 = 0.400 \;\text{g} </mrow>
-                    <mrow> \text{The working difference is} \; \amp \; 0.72 - 0.31 = 0.41 \;\text{g} </mrow>
-                    <mrow> \text{Absolute error} \; \amp = \; \text{maximum difference} - \text{working difference} </mrow>
-                    <mrow> \amp = \; \left| 0.42 - 0.41 \right| </mrow>
-                    <mrow> \amp = \; 0.01 \;\text{g} </mrow>
+                    <mrow> \text{The maximum difference} \; = \amp \; 0.725 - 0.305 = 0.420 \;\text{g} </mrow>
+                    <mrow> \text{The minimum difference} \; = \amp \; 0.715 - 0.315 = 0.400 \;\text{g} </mrow>
+                    <mrow> \text{The working difference} \; = \amp \; 0.72 - 0.31 = 0.41 \;\text{g} </mrow>
+                    <mrow> \text{Absolute error} \; = \amp \; \text{maximum difference} - \text{working difference} </mrow>
+                    <mrow> =\amp \; \left| 0.42 - 0.41 \right| </mrow>
+                    <mrow> =\amp \; 0.01 \;\text{g} </mrow>
                 </md>
             </p>
         </solution>
@@ -604,14 +604,14 @@
                             <md>
                                 <mrow> \text{The length lies within} \; \amp \; 5.3 \pm 0.05 \;\text{cm} </mrow>
                                 <mrow> \text{The width lies within} \; \amp \; 2.5 \pm 0.05 \;\text{cm} </mrow>
-                                <mrow> \text{The maximum perimeter is} \; \amp \; 2(5.35 + 2.55) \;\text{cm} </mrow>
-                                <mrow> \amp = \; 2(5.35 + 2.55) = 15.8 \;\text{cm} </mrow>
-                                <mrow> \text{The minimum perimeter is} \; \amp \; 2(5.25 + 2.45) \;\text{cm} </mrow>
-                                <mrow> \amp = \; 2(5.25 + 2.45) = 15.4 \;\text{cm} </mrow>
-                                <mrow> \text{The working perimeter is} \; \amp \; 2(5.3 + 2.5) \;\text{cm} </mrow>
-                                <mrow> \amp = \; 2(5.3 + 2.5) = 15.6 \;\text{cm} </mrow>
-                                <mrow> \text{Absolute error} \; \amp = \; \text{maximum perimeter} - \text{working perimeter} </mrow>
-                                <mrow> \amp = \; 0.2 \;\text{cm} </mrow>
+                                <mrow> \text{The maximum perimeter} \; =\amp \; 2(5.35 + 2.55) \;\text{cm} </mrow>
+                                <mrow> =\amp \; 2(5.35 + 2.55) = 15.8 \;\text{cm} </mrow>
+                                <mrow> \text{The minimum perimeter} \; = \amp \; 2(5.25 + 2.45) \;\text{cm} </mrow>
+                                <mrow> =\amp \; 2(5.25 + 2.45) = 15.4 \;\text{cm} </mrow>
+                                <mrow> \text{The working perimeter} \; = \amp \; 2(5.3 + 2.5) \;\text{cm} </mrow>
+                                <mrow> =\amp \; 2(5.3 + 2.5) = 15.6 \;\text{cm} </mrow>
+                                <mrow> \text{Absolute error} \; = \amp \; \text{maximum perimeter} - \text{working perimeter} </mrow>
+                                <mrow> =\amp \; 0.2 \;\text{cm} </mrow>
                             </md>
                         </p>
                     </li>
@@ -673,24 +673,24 @@
                         <li>
                             <p>
                                <md>
-                                    <mrow>\text{min} \;  =  \amp \; 11.170 \; \text{cm} </mrow>
-                                    <mrow>\text{max} \;  =  \amp \; 11.190 \; \text{cm} </mrow>
+                                    <mrow>\text{minimum sum} \;  =  \amp \; 11.170 \; \text{cm} </mrow>
+                                    <mrow>\text{maximum sum} \;  =  \amp \; 11.190 \; \text{cm} </mrow>
                                 </md>
                             </p>
                         </li>
                         <li>
                             <p>
                                 <md>
-                                    <mrow>\text{min} \;  =  \amp \; 12.140 \; \text{l}</mrow>
-                                    <mrow>\text{max} \;  =  \amp \; 12.160 \; \text{l}</mrow>
+                                    <mrow>\text{minimum sum} \;  =  \amp \; 12.140 \; \text{l}</mrow>
+                                    <mrow>\text{maximum sum} \;  =  \amp \; 12.160 \; \text{l}</mrow>
                                </md>
                             </p>
                         </li>
                         <li>
                             <p>
                                 <md>
-                                    <mrow>\text{min} \;  =  \amp \; 482.435 \; \text{m}</mrow>
-                                    <mrow>\text{max} \;  =  \amp \; 483.545 \; \text{m}</mrow>
+                                    <mrow>\text{minimum sum} \;  =  \amp \; 482.435 \; \text{m}</mrow>
+                                    <mrow>\text{maximum sum} \;  =  \amp \; 483.545 \; \text{m}</mrow>
                                </md>
                             </p>
                         </li>
@@ -707,8 +707,8 @@
             <answer>
                 <p>
                     <md>
-                        <mrow>\text{min} \;  =  \amp \; 0.10 \; \text{s}</mrow>
-                        <mrow>\text{max} \;  =  \amp \; 0.30 \; \text{s}</mrow>
+                        <mrow>\text{minimum difference} \;  =  \amp \; 0.10 \; \text{s}</mrow>
+                        <mrow>\text{maximum difference} \;  =  \amp \; 0.30 \; \text{s}</mrow>
                     </md>
                 </p>
             </answer>
@@ -722,7 +722,7 @@
             <answer>
                 <p>
                     <md>
-                        <mrow>\text{min} \;  =  \amp \; 74.75 \; \text{cm}</mrow>
+                        <mrow>\text{minimum perimeter} \;  =  \amp \; 74.75 \; \text{cm}</mrow>
                     </md>
                 </p>
             </answer>
@@ -736,7 +736,7 @@
             <answer>
                 <p>
                     <md>
-                        <mrow>\text{max error} \;  =  \amp \; 0.5 \; \text{mm}</mrow>
+                        <mrow>\text{maximum error} \;  =  \amp \; 0.5 \; \text{mm}</mrow>
                     </md>
                 </p>
             </answer>
