@@ -135,7 +135,7 @@
             <tabular top="medium" bottom="medium" left="medium" right="medium">
                 <row header="yes">
                     <cell>Side</cell>
-                    <cell>Measurent (cm)</cell>
+                    <cell>Measurement (cm)</cell>
                 </row>
                 <row>
                     <cell>Length</cell>
