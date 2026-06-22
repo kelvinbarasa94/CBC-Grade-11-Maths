@@ -290,8 +290,8 @@
         <solution>
             <p>Identify the applicable property: The angle subtended by an arc at the center of a circle is twice the angle subtended by the same arc at any point on the circumference.</p>
             <p>Set up the calculation using the given circumference angle:
-                <me>\angle AOB = 2 \times \angle APB</me>
-                <me>\angle AOB = 2 \times 42^\circ = 84^\circ</me>
+                <md>\angle AOB = 2 \times \angle APB</md>
+                <md>\angle AOB = 2 \times 42^\circ = 84^\circ</md>
             </p>
             <p>The angle formed from the center fountain to the gates measures <m>84^\circ</m>.</p>
         </solution>
@@ -347,7 +347,7 @@
         <solution>
             <p>Identify the applicable property: The angle subtended by a diameter at the circumference (an angle in a semicircle) is always a right angle.</p>
             <p>State the geometric deduction directly:
-                <me>\angle ACB = 90^\circ</me>
+                <md>\angle ACB = 90^\circ</md>
             </p>
             <p>The structural joint angle at the window rim must be exactly <m>90^\circ</m>.</p>
         </solution>
@@ -411,8 +411,8 @@
         <solution>
             <p>Identify the applicable property: Angles subtended by the same arc in the same segment of a circle are equal to one another.</p>
             <p>Equate the two circumference tracking angles directly:
-                <me>\angle XZY = \angle XWY</me>
-                <me>\angle XZY = 53^\circ</me>
+                <md>\angle XZY = \angle XWY</md>
+                <md>\angle XZY = 53^\circ</md>
             </p>
             <p>The angle monitored by the patrol boat at point <m>Z</m> is also <m>53^\circ</m>.</p>
         </solution>
@@ -473,11 +473,11 @@
         <solution>
             <p>Identify the applicable property: The opposite interior angles of a cyclic quadrilateral are supplementary, meaning they add up to <m>180^\circ</m>.</p>
             <p>Set up the algebraic equation to find the missing angle:
-                <me>\angle QPS + \angle QRS = 180^\circ</me>
-                <me>108^\circ + \angle QRS = 180^\circ</me>
+                <md>\angle QPS + \angle QRS = 180^\circ</md>
+                <md>108^\circ + \angle QRS = 180^\circ</md>
             </p>
             <p>Isolate and solve for the unknown angle:
-                <me>\angle QRS = 180^\circ - 108^\circ = 72^\circ</me>
+                <md>\angle QRS = 180^\circ - 108^\circ = 72^\circ</md>
             </p>
             <p>The clearance angle at the opposite intersection must be <m>72^\circ</m>.</p>
         </solution>
@@ -540,16 +540,16 @@
         <solution>
             <p>Identify the applicable property: The central angle is twice the magnitude of the angle at the circumference sharing the same arc base.</p>
             <p>Set up the mathematical equation:
-                <me>\angle AOB = 2 \times \angle ACB</me>
-                <me>4x + 10^\circ = 2(1x + 35^\circ)</me>
+                <md>\angle AOB = 2 \times \angle ACB</md>
+                <md>4x + 10^\circ = 2(1x + 35^\circ)</md>
             </p>
             <p>Expand the right side of the equation:
-                <me>4x + 10^\circ = 2x + 70^\circ</me>
+                <md>4x + 10^\circ = 2x + 70^\circ</md>
             </p>
             <p>Isolate the variable terms to find <m>x</m>:
-                <me>4x - 2x = 70^\circ - 10^\circ</me>
-                <me>2x = 60^\circ</me>
-                <me>x = 30^\circ</me>
+                <md>4x - 2x = 70^\circ - 10^\circ</md>
+                <md>2x = 60^\circ</md>
+                <md>x = 30^\circ</md>
             </p>
         </solution>
     </example>
@@ -646,8 +646,8 @@
             <solution>
                 <p>Using the angle-at-center theorem, the central angle is twice the circumference angle:</p>
                 <p>
-                    <me>\angle AOB = 2 \times \angle APB</me>
-                    <me>\angle AOB = 2 \times 37^\circ = 74^\circ</me>
+                    <md>\angle AOB = 2 \times \angle APB</md>
+                    <md>\angle AOB = 2 \times 37^\circ = 74^\circ</md>
                     The center layout angle is <m>74^\circ</m>.
                 </p>
             </solution>
@@ -707,7 +707,7 @@
             <solution>
                 <p>Since the coping deck line forms a true circle diameter, any angle drawn from its endpoints to the curved perimeter boundary forms an angle in a semicircle:</p>
                 <p>
-                    <me>\angle XZY = 90^\circ</me>
+                    <md>\angle XZY = 90^\circ</md>
                     The camera sightline forms a perfect <m>90^\circ</m> right angle.
                 </p>
             </solution>
@@ -771,7 +771,7 @@
             <solution>
                 <p>Angles subtended by the same arc in the same circular segment are uniform:</p>
                 <p>
-                    <me>\angle ANB = \angle AMB = 48^\circ</me>
+                    <md>\angle ANB = \angle AMB = 48^\circ</md>
                     The spread angle remains exactly <m>48^\circ</m>.
                 </p>
             </solution>
@@ -832,9 +832,9 @@
             <solution>
                 <p>The four casing terminals form an embedded cyclic quadrilateral. Opposite interior angles must sum to <m>180^\circ</m>:</p>
                 <p>
-                    <me>\angle KLM + \angle KNM = 180^\circ</me>
-                    <me>\angle KLM + 115^\circ = 180^\circ</me>
-                    <me>\angle KLM = 180^\circ - 115^\circ = 65^\circ</me>
+                    <md>\angle KLM + \angle KNM = 180^\circ</md>
+                    <md>\angle KLM + 115^\circ = 180^\circ</md>
+                    <md>\angle KLM = 180^\circ - 115^\circ = 65^\circ</md>
                     The opposite terminal angle measures <m>65^\circ</m>.
                 </p>
             </solution>
@@ -899,13 +899,13 @@
             <solution>
                 <p>Set up the relationship where the central axle angle equals twice the upper rim boundary angle:</p>
                 <p>
-                    <me>\angle POQ = 2 \times \angle PRQ</me>
-                    <me>6x + 20^\circ = 2(2x + 25^\circ)</me>
+                    <md>\angle POQ = 2 \times \angle PRQ</md>
+                    <md>6x + 20^\circ = 2(2x + 25^\circ)</md>
                 </p>
                 <p>Expand and solve the algebraic linear equation:
-                    <me>6x + 20^\circ = 4x + 50^\circ</me>
-                    <me>6x - 4x = 50^\circ - 20^\circ</me>
-                    <me>2x = 30^\circ \implies x = 15^\circ</me>
+                    <md>6x + 20^\circ = 4x + 50^\circ</md>
+                    <md>6x - 4x = 50^\circ - 20^\circ</md>
+                    <md>2x = 30^\circ \implies x = 15^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -969,8 +969,8 @@
             <solution>
                 <p>By applying the exterior angle theorem of a cyclic quadrilateral, the exterior angle created by extending a side is equal to the interior opposite angle across the layout:</p>
                 <p>
-                    <me>\angle CBE = \angle ADC</me>
-                    <me>\angle CBE = 82^\circ</me>
+                    <md>\angle CBE = \angle ADC</md>
+                    <md>\angle CBE = 82^\circ</md>
                     The exterior accent alignment angle is <m>82^\circ</m>.
                 </p>
             </solution>

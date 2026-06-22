@@ -329,14 +329,14 @@
         <solution>
             <p>Identify the opposite stations on the circular track: Station <m>A</m> faces station <m>C</m>, and station <m>B</m> faces station <m>D</m>.</p>
             <p>Apply the supplementary opposite angles property to find <m>\angle BCD</m>:
-                <me>\angle BAD + \angle BCD = 180^\circ</me>
-                <me>78^\circ + \angle BCD = 180^\circ</me>
-                <me>\angle BCD = 180^\circ - 78^\circ = 102^\circ</me>
+                <md>\angle BAD + \angle BCD = 180^\circ</md>
+                <md>78^\circ + \angle BCD = 180^\circ</md>
+                <md>\angle BCD = 180^\circ - 78^\circ = 102^\circ</md>
             </p>
             <p>Apply the property to find <m>\angle ADC</m>:
-                <me>\angle ABC + \angle ADC = 180^\circ</me>
-                <me>92^\circ + \angle ADC = 180^\circ</me>
-                <me>\angle ADC = 180^\circ - 92^\circ = 88^\circ</me>
+                <md>\angle ABC + \angle ADC = 180^\circ</md>
+                <md>92^\circ + \angle ADC = 180^\circ</md>
+                <md>\angle ADC = 180^\circ - 92^\circ = 88^\circ</md>
             </p>
         </solution>
     </example>
@@ -397,7 +397,7 @@
             <p>Apply the exterior angle property of a cyclic quadrilateral: The exterior angle formed by extending a side is equal to the interior opposite angle across the circle.</p>
             <p>Identify the correct opposite relationship: For the exterior angle at vertex <m>X</m>, the interior opposite angle is located at vertex <m>Z</m> (<m>\angle WZY</m>).</p>
             <p>State the conclusion directly:
-                <me>\angle WZY = \angle YXE = 105^\circ</me>
+                <md>\angle WZY = \angle YXE = 105^\circ</md>
                 The interior structural angle at vertex <m>Z</m> is <m>105^\circ</m>.
             </p>
         </solution>
@@ -452,19 +452,19 @@
         </statement>
         <solution>
             <p>Since the settings lie on the circle's edge, <m>PQRS</m> forms a cyclic quadrilateral, meaning opposite interior angles must sum to <m>180^\circ</m>:
-                <me>\angle QPS + \angle QRS = 180^\circ</me>
+                <md>\angle QPS + \angle QRS = 180^\circ</md>
             </p>
             <p>Substitute the algebraic expressions:
-                <me>(3x + 20^\circ) + (2x + 10^\circ) = 180^\circ</me>
-                <me>5x + 30^\circ = 180^\circ</me>
+                <md>(3x + 20^\circ) + (2x + 10^\circ) = 180^\circ</md>
+                <md>5x + 30^\circ = 180^\circ</md>
             </p>
             <p>Isolate and solve for <m>x</m>:
-                <me>5x = 180^\circ - 30^\circ</me>
-                <me>5x = 150^\circ</me>
-                <me>x = 30^\circ</me>
+                <md>5x = 180^\circ - 30^\circ</md>
+                <md>5x = 150^\circ</md>
+                <md>x = 30^\circ</md>
             </p>
             <p>Calculate the measure of <m>\angle QPS</m>:
-                <me>\angle QPS = 3(30^\circ) + 20^\circ = 90^\circ + 20^\circ = 110^\circ</me>
+                <md>\angle QPS = 3(30^\circ) + 20^\circ = 90^\circ + 20^\circ = 110^\circ</md>
             </p>
         </solution>
     </example>
@@ -524,8 +524,8 @@
         <solution>
             <p>Recognize the geometric framework: The joints form an inscribed cyclic quadrilateral <m>KLMN</m>, and extending side <m>MN</m> creates the exterior angle <m>\angle KNG</m> at vertex <m>N</m>.</p>
             <p>Apply the exterior angle theorem: The exterior angle is identical in measure to the interior opposite angle directly across the shape.
-                <me>\angle KNG = \angle KLM</me>
-                <me>\angle KNG = 85^\circ</me>
+                <md>\angle KNG = \angle KLM</md>
+                <md>\angle KNG = 85^\circ</md>
                 The exterior joint angle measures <m>85^\circ</m>.
             </p>
         </solution>
@@ -581,14 +581,14 @@
         <solution>
             <p>Define the relationship using a variable: Let the smaller opposite angle <m>\angle ADC = x</m>. This means <m>\angle ABC = 2x</m>.</p>
             <p>Since opposite angles in a cyclic quadrilateral are supplementary:
-                <me>\angle ABC + \angle ADC = 180^\circ</me>
-                <me>2x + x = 180^\circ</me>
-                <me>3x = 180^\circ</me>
-                <me>x = 60^\circ</me>
+                <md>\angle ABC + \angle ADC = 180^\circ</md>
+                <md>2x + x = 180^\circ</md>
+                <md>3x = 180^\circ</md>
+                <md>x = 60^\circ</md>
             </p>
             <p>State the measure of each plaza walkway angle:
-                <me>\angle ADC = 60^\circ</me>
-                <me>\angle ABC = 2(60^\circ) = 120^\circ</me>
+                <md>\angle ADC = 60^\circ</md>
+                <md>\angle ABC = 2(60^\circ) = 120^\circ</md>
             </p>
         </solution>
     </example>
@@ -675,9 +675,9 @@
             </statement>
             <solution>
                 <p>Because all four points lie on the circular boundary, <m>ABCD</m> is a cyclic quadrilateral. Opposite angles sum to <m>180^\circ</m>:
-                    <me>\angle ABC + \angle ADC = 180^\circ</me>
-                    <me>104^\circ + \angle ADC = 180^\circ</me>
-                    <me>\angle ADC = 180^\circ - 104^\circ = 76^\circ</me>
+                    <md>\angle ABC + \angle ADC = 180^\circ</md>
+                    <md>104^\circ + \angle ADC = 180^\circ</md>
+                    <md>\angle ADC = 180^\circ - 104^\circ = 76^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -736,8 +736,8 @@
             </statement>
             <solution>
                 <p>By the exterior angle theorem of a cyclic quadrilateral, the exterior angle formed by an extended edge matches the interior opposite angle:
-                    <me>\angle RQE = \angle PSR</me>
-                    <me>\angle RQE = 98^\circ</me>
+                    <md>\angle RQE = \angle PSR</md>
+                    <md>\angle RQE = 98^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -791,12 +791,12 @@
             </statement>
             <solution>
                 <p>Set up the equation using the supplementary property of opposite angles:
-                    <me>(4x + 12^\circ) + (2x + 18^\circ) = 180^\circ</me>
-                    <me>6x + 30^\circ = 180^\circ</me>
+                    <md>(4x + 12^\circ) + (2x + 18^\circ) = 180^\circ</md>
+                    <md>6x + 30^\circ = 180^\circ</md>
                 </p>
                 <p>Isolate the variable <m>x</m>:
-                    <me>6x = 150^\circ</me>
-                    <me>x = 25^\circ</me>
+                    <md>6x = 150^\circ</md>
+                    <md>x = 25^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -859,7 +859,7 @@
             </statement>
             <solution>
                 <p>Since the studs form an inscribed cyclic quadrilateral, the exterior angle at vertex <m>M</m> equals the opposite interior angle at vertex <m>N</m>:
-                    <me>\angle LMF = \angle KNL = 71^\circ</me>
+                    <md>\angle LMF = \angle KNL = 71^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -914,12 +914,12 @@
             <solution>
                 <p>Let the smaller interior angle <m>\angle BCD = w</m>. Therefore, opposite angle <m>\angle BAD = 4w</m>.</p>
                 <p>Sum the opposite angles to <m>180^\circ</m>:
-                    <me>4w + w = 180^\circ</me>
-                    <me>5w = 180^\circ \implies w = 36^\circ</me>
+                    <md>4w + w = 180^\circ</md>
+                    <md>5w = 180^\circ \implies w = 36^\circ</md>
                 </p>
                 <p>State both structural angle values:
-                    <me>\angle BCD = 36^\circ</me>
-                    <me>\angle BAD = 4(36^\circ) = 144^\circ</me>
+                    <md>\angle BCD = 36^\circ</md>
+                    <md>\angle BAD = 4(36^\circ) = 144^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -978,8 +978,8 @@
             </statement>
             <solution>
                 <p>Applying the exterior angle property of an inscribed cyclic quadrilateral:
-                    <me>\angle QPS = \angle QRT</me>
-                    <me>\angle QPS = 93^\circ</me>
+                    <md>\angle QPS = \angle QRT</md>
+                    <md>\angle QPS = 93^\circ</md>
                     The interior structural frame angle measures <m>93^\circ</m>.
                 </p>
             </solution>

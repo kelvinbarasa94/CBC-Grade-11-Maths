@@ -197,7 +197,7 @@
             <li>
                 <p>
                      Connect this back to the core circle theorem: <em>The angle subtended by an arc at the center is twice the angle subtended at the circumference</em>. Since a straight-line diameter forms a <m>180^\circ</m> angle at the center <m>O</m>, the angle at the circumference must be:
-                    <me>\frac{180^\circ}{2} = 90^\circ</me>
+                    <md>\frac{180^\circ}{2} = 90^\circ</md>
                 </p>
             </li>
         </ol>
@@ -285,12 +285,12 @@
         </p>
         <p>
             2. Use the sum of angles in <m>\triangle PQR</m>:
-            <me>\angle RPQ + \angle PRQ + \angle PQR = 180^\circ</me>
-            <me>34^\circ + 90^\circ + \angle PQR = 180^\circ</me>
+            <md>\angle RPQ + \angle PRQ + \angle PQR = 180^\circ</md>
+            <md>34^\circ + 90^\circ + \angle PQR = 180^\circ</md>
         </p>
         <p>
             3. Solve for <m>\angle PQR</m>:
-            <me>\angle PQR = 180^\circ - 124^\circ = 56^\circ</me>
+            <md>\angle PQR = 180^\circ - 124^\circ = 56^\circ</md>
         </p>
     </solution>
 </example>
@@ -356,13 +356,13 @@
         </p>
         <p>
             2. Set up the interior angles equation for <m>\triangle ABC</m>:
-            <me>2x + (3x - 5^\circ) + 90^\circ = 180^\circ</me>
-            <me>5x + 85^\circ = 180^\circ</me>
+            <md>2x + (3x - 5^\circ) + 90^\circ = 180^\circ</md>
+            <md>5x + 85^\circ = 180^\circ</md>
         </p>
         <p>
             3. Isolate <m>x</m>:
-            <me>5x = 95^\circ</me>
-            <me>x = 19^\circ</me>
+            <md>5x = 95^\circ</md>
+            <md>x = 19^\circ</md>
         </p>
     </solution>
 </example>
@@ -421,13 +421,13 @@
         </p>
         <p>
             2. Apply the Pythagorean theorem to find the hypotenuse <m>XY</m>:
-            <me>XY^2 = XZ^2 + YZ^2</me>
-            <me>XY^2 = 6^2 + 8^2 = 36 + 64 = 100</me>
-            <me>XY = \sqrt{100} = 10\text{ cm}</me>
+            <md>XY^2 = XZ^2 + YZ^2</md>
+            <md>XY^2 = 6^2 + 8^2 = 36 + 64 = 100</md>
+            <md>XY = \sqrt{100} = 10\text{ cm}</md>
         </p>
         <p>
             3. The diameter is <m>10\text{ cm}</m>, so the radius (<m>r</m>) is:
-            <me>r = \frac{XY}{2} = \frac{10}{2} = 5\text{ cm}</me>
+            <md>r = \frac{XY}{2} = \frac{10}{2} = 5\text{ cm}</md>
         </p>
     </solution>
 </example>
@@ -492,12 +492,12 @@
         </p>
         <p>
             2. Apply the interior angle sum theorem for <m>\triangle ABC</m>:
-            <me>\angle CAB + \angle ACB + \angle CBA = 180^\circ</me>
-            <me>42^\circ + 90^\circ + \angle CBA = 180^\circ</me>
+            <md>\angle CAB + \angle ACB + \angle CBA = 180^\circ</md>
+            <md>42^\circ + 90^\circ + \angle CBA = 180^\circ</md>
         </p>
         <p>
             3. Solve for the remaining angle <m>\angle CBA</m>:
-            <me>\angle CBA = 180^\circ - 132^\circ = 48^\circ</me>
+            <md>\angle CBA = 180^\circ - 132^\circ = 48^\circ</md>
         </p>
     </solution>
 </example>
@@ -560,17 +560,17 @@
     <solution>
         <p>
             1. Apply Thales's Theorem to the wheel setup: Since <m>XY</m> is the diameter of the circular rim, the angle subtended at the outer valve point <m>Z</m> on the circumference must equal <m>90^\circ</m>.
-            <me>\angle XZY = 90^\circ</me>
+            <md>\angle XZY = 90^\circ</md>
         </p>
         <p>
             2. Equate the expression to find the scalar variable <m>a</m>:
-            <me>5a - 10^\circ = 90^\circ</me>
-            <me>5a = 100^\circ</me>
-            <me>a = 20^\circ</me>
+            <md>5a - 10^\circ = 90^\circ</md>
+            <md>5a = 100^\circ</md>
+            <md>a = 20^\circ</md>
         </p>
         <p>
             3. Check consistency using the remaining angle <m>\angle ZXY</m>:
-            <me>\angle ZXY = 2(20^\circ) = 40^\circ</me>
+            <md>\angle ZXY = 2(20^\circ) = 40^\circ</md>
             The setup remains a valid right-angled triangle since the acute angles sum up to <m>90^\circ</m> (<m>40^\circ + 50^\circ = 90^\circ</m>).
         </p>
     </solution>
@@ -630,14 +630,14 @@
         </p>
         <p>
             2. Use the Pythagorean theorem to calculate side wall <m>NP</m>, where diameter <m>MN</m> acts as the hypotenuse:
-            <me>MN^2 = MP^2 + NP^2</me>
-            <me>13^2 = 5^2 + NP^2</me>
-            <me>169 = 25 + NP^2</me>
+            <md>MN^2 = MP^2 + NP^2</md>
+            <md>13^2 = 5^2 + NP^2</md>
+            <md>169 = 25 + NP^2</md>
         </p>
         <p>
             3. Isolate and solve for <m>NP</m>:
-            <me>NP^2 = 169 - 25 = 144</me>
-            <me>NP = \sqrt{144} = 12\text{ cm}</me>
+            <md>NP^2 = 169 - 25 = 144</md>
+            <md>NP = \sqrt{144} = 12\text{ cm}</md>
             The length of the remaining cardboard side wall is <m>12\text{ cm}</m>.
         </p>
     </solution>
@@ -737,8 +737,8 @@
             </p>
             <p>
                 3. Let <m>\angle CAB = y</m>. Then:
-                <me>y + y + 90^\circ = 180^\circ</me>
-                <me>2y = 90^\circ \implies y = 45^\circ</me>
+                <md>y + y + 90^\circ = 180^\circ</md>
+                <md>2y = 90^\circ \implies y = 45^\circ</md>
                 Therefore, <m>\angle CAB = 45^\circ</m>.
             </p>
         </solution>
@@ -798,14 +798,14 @@
             </p>
             <p>
                 2. Apply the Pythagorean theorem:
-                <me>MN^2 = MK^2 + NK^2</me>
-                <me>26^2 = 10^2 + NK^2</me>
-                <me>676 = 100 + NK^2</me>
+                <md>MN^2 = MK^2 + NK^2</md>
+                <md>26^2 = 10^2 + NK^2</md>
+                <md>676 = 100 + NK^2</md>
             </p>
             <p>
                 3. Isolate <m>NK^2</m>:
-                <me>NK^2 = 576</me>
-                <me>NK = \sqrt{576} = 24\text{ mm}</me>
+                <md>NK^2 = 576</md>
+                <md>NK = \sqrt{576} = 24\text{ mm}</md>
             </p>
         </solution>
     </exercise>
@@ -870,12 +870,12 @@
                 </p>
                 <p>
                     Set up the interior angle sum equation for the triangle <m>\triangle ABP</m>:
-                    <me>\angle PAB + \angle APB + \angle PBA = 180^\circ</me>
-                    <me>28^\circ + 90^\circ + \angle PBA = 180^\circ</me>
+                    <md>\angle PAB + \angle APB + \angle PBA = 180^\circ</md>
+                    <md>28^\circ + 90^\circ + \angle PBA = 180^\circ</md>
                 </p>
                 <p>
                     Solve for the remaining angle <m>\angle PBA</m>:
-                    <me>\angle PBA = 180^\circ - 118^\circ = 62^\circ</me>
+                    <md>\angle PBA = 180^\circ - 118^\circ = 62^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -933,13 +933,13 @@
             <solution>
                 <p>
                     Because pathway <m>XY</m> is the diameter of the circular courtyard, the angle subtended at the outer wall fountain <m>Z</m> must equal exactly <m>90^\circ</m>.
-                    <me>\angle XZY = 90^\circ</me>
+                    <md>\angle XZY = 90^\circ</md>
                 </p>
                 <p>
                     Set up the algebraic equation using the given angle expression:
-                    <me>4x + 10^\circ = 90^\circ</me>
-                    <me>4x = 80^\circ</me>
-                    <me>x = 20^\circ</me>
+                    <md>4x + 10^\circ = 90^\circ</md>
+                    <md>4x = 80^\circ</md>
+                    <md>x = 20^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -999,14 +999,14 @@
                 </p>
                 <p>
                     Apply the Pythagorean theorem to find the missing side length <m>NK</m>:
-                    <me>MN^2 = MK^2 + NK^2</me>
-                    <me>20^2 = 12^2 + NK^2</me>
-                    <me>400 = 144 + NK^2</me>
+                    <md>MN^2 = MK^2 + NK^2</md>
+                    <md>20^2 = 12^2 + NK^2</md>
+                    <md>400 = 144 + NK^2</md>
                 </p>
                 <p>
                     Isolate and solve for <m>NK</m>:
-                    <me>NK^2 = 400 - 144 = 256</me>
-                    <me>NK = \sqrt{256} = 16\text{ dm}</me>
+                    <md>NK^2 = 400 - 144 = 256</md>
+                    <md>NK = \sqrt{256} = 16\text{ dm}</md>
                 </p>
             </solution>
         </exercise>
@@ -1023,12 +1023,12 @@
                 </p>
                 <p>
                     Set up the interior angle sum equation for the triangle <m>\triangle ABP</m>:
-                    <me>\angle PAB + \angle APB + \angle PBA = 180^\circ</me>
-                    <me>28^\circ + 90^\circ + \angle PBA = 180^\circ</me>
+                    <md>\angle PAB + \angle APB + \angle PBA = 180^\circ</md>
+                    <md>28^\circ + 90^\circ + \angle PBA = 180^\circ</md>
                 </p>
                 <p>
                     Solve for the remaining angle <m>\angle PBA</m>:
-                    <me>\angle PBA = 180^\circ - 118^\circ = 62^\circ</me>
+                    <md>\angle PBA = 180^\circ - 118^\circ = 62^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -1042,13 +1042,13 @@
             <solution>
                 <p>
                     Because pathway <m>XY</m> is the diameter of the circular courtyard, the angle subtended at the outer wall fountain <m>Z</m> must equal exactly <m>90^\circ</m>.
-                    <me>\angle XZY = 90^\circ</me>
+                    <md>\angle XZY = 90^\circ</md>
                 </p>
                 <p>
                     Set up the algebraic equation using the given angle expression:
-                    <me>4x + 10^\circ = 90^\circ</me>
-                    <me>4x = 80^\circ</me>
-                    <me>x = 20^\circ</me>
+                    <md>4x + 10^\circ = 90^\circ</md>
+                    <md>4x = 80^\circ</md>
+                    <md>x = 20^\circ</md>
                 </p>
             </solution>
         </exercise>
@@ -1065,14 +1065,14 @@
                 </p>
                 <p>
                     Apply the Pythagorean theorem to find the missing side length <m>NK</m>:
-                    <me>MN^2 = MK^2 + NK^2</me>
-                    <me>20^2 = 12^2 + NK^2</me>
-                    <me>400 = 144 + NK^2</me>
+                    <md>MN^2 = MK^2 + NK^2</md>
+                    <md>20^2 = 12^2 + NK^2</md>
+                    <md>400 = 144 + NK^2</md>
                 </p>
                 <p>
                     Isolate and solve for <m>NK</m>:
-                    <me>NK^2 = 400 - 144 = 256</me>
-                    <me>NK = \sqrt{256} = 16\text{ dm}</me>
+                    <md>NK^2 = 400 - 144 = 256</md>
+                    <md>NK = \sqrt{256} = 16\text{ dm}</md>
                 </p>
             </solution>
         </exercise> -->
