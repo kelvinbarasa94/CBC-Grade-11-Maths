@@ -76,11 +76,8 @@
                     A nested geometric area diagram showing three distinct rectangular regions. The innermost region is outlined with a green dotted line representing the Minimum Area. The middle region is solid light blue representing the Working Area. The outermost region is outlined with a red dashed line representing the Maximum Area.
                 </p>
 
-                <figure xml:id="fig-textbook-area-multiplication-error">
-                    <caption>Visualizing compounding limits of accuracy in area multiplication</caption>
-                    <image xml:id="img-textbook-area-multiplication-error">
-                        
-                        <latex-image>
+                    <image width="65%">
+                        <latex-image label="textbook-area-multiplication-error">
                             \begin{tikzpicture}[scale=0.15, every node/.style={font=\sffamily\small}]
                                 
                                 \tikzset{
@@ -115,7 +112,6 @@
                             \end{tikzpicture}
                         </latex-image>
                     </image>
-                </figure>
 
                 <p>
                     <term>Work in Groups to:</term>
@@ -139,7 +135,7 @@
                     </row>
                 </tabular>
                 <p>
-                    Find?
+                    Find:
                 </p>
                 <p>
                     <ol>
@@ -150,14 +146,10 @@
                         </li>
                         <li>
                             <p>
-                                The maximum, minimum, and actual area of the textbook.
+                                The maximum, minimum, and working area of the textbook. How did you find these areas?
                             </p>
                         </li>
-                        <li>
-                            <p>
-                                The limits within which the area of the textbook lie.
-                            </p>
-                        </li>
+
                         <li>
                             <p>
                                 The absolute error, relative error, and percentage error in the area of the textbook.
@@ -165,20 +157,7 @@
                         </li>
                     </ol>
                 </p>
-                <p>
-                    <ol marker="(i)">
-                        <li>
-                            <p>
-                                How did you find the limits within which the area of the textbook lie?
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                How did you find the absolute error, relative error, and percentage error in the area of the textbook?
-                            </p>
-                        </li>
-                    </ol>
-                </p>
+               
                 
             </statement>
         </activity>
