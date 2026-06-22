@@ -504,6 +504,21 @@
         </ol>
     </paragraphs>
 
+    <exploration>
+        <title>Interactive Construction of Direct Tangents</title>
+        <interactive xml:id="interactive-direct-tangents" platform="jsxgraph" aspect="4:3" source="jsxgraph/direct-common-tangent-construction.js" width="65%">
+            <slate xml:id="jsx-direct-common-tangent-construction" surface="jsxboard" aspect="4:3"/>
+            <instructions>
+                <p>
+                    Use the <c>Back</c> and <c>Next</c> buttons to step through the tangent construction process. At each step, try to replicate the construction on your own paper with a compass and straightedge.
+                </p>
+                <p>
+                    Feel free to drag around the circles and change their radii.
+                </p>
+            </instructions>
+        </interactive>
+    </exploration>
+
     <insight>
         <p>
             <ul>

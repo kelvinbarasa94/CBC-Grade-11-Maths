@@ -163,7 +163,7 @@
                                     \tkzDrawCircle[thick, teal](O,A)
                                     \tkzDrawPoints(O, A)
                                     \tkzLabelPoints[above right](O)
-                                    \tkzLabelPoints[above](A){$P$}
+                                    \tkzLabelPoints[above left](A)
                                     \tkzDefLine[tangent at=A](O) \tkzGetPoint{h}
                                     \tkzDrawLine[add = 3 and 2, thick](A,h)
                                     \tkzDrawSegment(O,A)
@@ -329,6 +329,21 @@
             <em>Why does this work?</em> Since <m>P</m> is the midpoint of <m>OQ</m>, the perpendicular bisector of <m>OQ</m> passes through <m>P</m> and is perpendicular to <m>OQ</m>. Since <m>OP</m> is a radius and the constructed line is perpendicular to <m>OP</m> at <m>P</m>, it is exactly the tangent to the circle at <m>P</m>.
         </p>
     </paragraphs>
+
+    <exploration>
+        <title>Interactive Tangent Construction</title>
+        <interactive xml:id="interactive-tangent-construction" platform="jsxgraph" aspect="4:3" source="jsxgraph/tangent-construction.js" width="50%" height="50%">
+            <slate xml:id="jsxgraph-tangent-construction" surface="jsxboard"/>
+            <instructions>
+                <p>
+                    Use the <c>Back</c> and <c>Next</c> buttons to step through the tangent construction process. At each step, try to replicate the construction on your own paper with a compass and straightedge.
+                </p>
+                <p>
+                    Feel free to drag around the point <m>P</m> to see how the steps change.
+                </p>
+            </instructions>
+        </interactive>
+    </exploration>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 
