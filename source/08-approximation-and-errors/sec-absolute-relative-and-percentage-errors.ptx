@@ -248,11 +248,7 @@
 
     <insight>
         <p>
-<<<<<<< HEAD
-            <term>An absolute error:</term> is the magnitude of the difference between the measured value and the working value.
-=======
-            <term>Absolute error:</term> is the positive difference between the measured value and the actual value.
->>>>>>> 4e2a609a1672a6457071f8bca65cd65c93107fdb
+            <term>Absolute error:</term> is the magnitude of the difference between the measured value and the working value.
         </p>
         <p>
             <md>
