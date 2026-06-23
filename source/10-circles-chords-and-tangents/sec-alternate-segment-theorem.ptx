@@ -94,7 +94,7 @@
                                 </caption>
                                 <image width="55%">
                                     <shortdescription>
-                                        A circle with centre O. T is at the bottom of the circle. A horizontal tangent passes through T with a point P to its left. A chord TQ goes to the upper right. S is a point in the upper arc. The angles PTQ and TSQ are both labelled alpha and are equal.
+                                        A circle with centre O. T is at the bottom of the circle. A horizontal tangent passes through T with a point P to its left. A chord TQ goes to the upper right. S is a point in the upper arc. The angles PTQ and TSQ are both marked as alpha and are equal.
                                     </shortdescription>
                                     <latex-image>
                                         \begin{tikzpicture}[scale=1.0]
