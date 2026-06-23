@@ -394,7 +394,7 @@
     <example>
         <statement>
             <p>
-                Mr. Ondiala is employed in the United States and earns an annual basic salary equivalent to <m>KSh 15,000,000</m>. He is provided with housing by his employer, and the value of the housing benefit is assessed at <m>15\%</m> of his basic salary. In addition, he receives a housing allowance of <m>\text{Ksh} 100,000</m> per month and a transport allowance of <m>\text{Ksh} 30,000</m> per month. He contributes <m>\text{Ksh} 25,000</m> per month to a retirement scheme and pays <m>\text{Ksh} 5,000</m> per month for medical insurance.
+                Mr. Ondiala is employed in the United States and earns an annual basic salary equivalent to <m>\text{Ksh}\; 15,000,000</m>. He is provided with housing by his employer, and the value of the housing benefit is assessed at <m>15\%</m> of his basic salary. In addition, he receives a housing allowance of <m>\text{Ksh}\; 100,000</m> per month and a transport allowance of <m>\text{Ksh}\; 30,000</m> per month. He contributes <m>\text{Ksh}\; 25,000</m> per month to a retirement scheme and pays <m>\text{Ksh}\; 5,000</m> per month for medical insurance.
             </p>
             <p>
                 Use the progressive tax brackets <xref ref="table-monthly-tax-rates" /> to calculate his net monthly income.
@@ -406,8 +406,32 @@
             </p>
             <p>
                 <md>
-                    <mrow>\text{Taxable income} \; = \amp \; \text{Basic salary}\; + 15\% \times \;\text{Basic salary}\; + \text{Total allowences}\; - \; \text{Total deductions}  </mrow>
-                    <mrow> = \amp\; 15,000,000 + 15\% \times 15,000,000 + 12 \times 100,000 + 12 \times 30,000 - 12 \times 25,000 - 12 \times 5,000 </mrow>
+                    <mrow>\text{Gross annual salary} \amp\; = \;\text{Basic salary}\; + 15 \% \times \;\text{Basic salary}  </mrow>
+                    <mrow> = \amp\; 15,000,000 + 15 \% \times 15,000,000 </mrow>
+                    <mrow> = \amp\; \text{Ksh}\; 17,250,000 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Total annual allowances} \; = \amp\; \text{House allowance}\; + \;\text{Transport allowance} </mrow>
+                    <mrow> = \amp \; 12 \times 100,000 + 12 \times 30,000 </mrow>
+                    <mrow> = \amp\; \text{Ksh}\; 1,560,000 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Total annual deductions} \; = \amp\; \text{Retirement scheme}\; + \;\text{Medical insurance} </mrow>
+                    <mrow> = \amp \; 12 \times 25,000 + 12 \times 5,000 </mrow>
+                    <mrow> = \amp\; \text{Ksh}\; 360,000 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Taxable income} \; \amp = \text{Gross salary}\; + \text{Total allowances}\; - \; \text{Total deductions}  </mrow>
+                    <mrow> = \amp\; 17,250,000 + 1,560,000 - 360,000 </mrow>
                     <mrow> = \amp \;\text{Ksh}\; 18,450,000 \;\text{per annum} </mrow>
                 </md>
             </p>
@@ -416,11 +440,11 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{First slab}\; \amp = \;\text{Ksh.} 288,000 \;  \times \frac{10}{100} = \text{sh.}\; 28,800 </mrow>
-                    <mrow>\text{Second slab}\; \amp = \;\text{Ksh.} \; 100,000 \times \frac{25}{100} = \text{sh.}\; 25,000 </mrow>
-                    <mrow>\text{Third slab}\; \amp = \;\text{Ksh.} \; 5,612,000 \times \frac{30}{100} = \text{sh.}\; 1,683,600 </mrow>
-                    <mrow>\text{Forth slab}\; \amp = \;\text{ksh.} \; 3,600,000 \times \frac{30.25}{100} = \text{sh.}\; 1,089,000 </mrow>
-                    <mrow>\text{Fifth slab}\; \amp = \;\text{Ksh.} \; 8,850,000 \times \frac{35}{100} = \text{sh.}\; 3,097,500 </mrow>
+                    <mrow> \text{First slab}\; \amp = \;\text{Ksh.} 288,000 \;  \times \frac{10}{100} = \text{Ksh.}\; 28,800 </mrow>
+                    <mrow>\text{Second slab}\; \amp = \;\text{Ksh.} \; 100,000 \times \frac{25}{100} = \text{Ksh.}\; 25,000 </mrow>
+                    <mrow>\text{Third slab}\; \amp = \;\text{Ksh.} \; 5,612,000 \times \frac{30}{100} = \text{Ksh.}\; 1,683,600 </mrow>
+                    <mrow>\text{Forth slab}\; \amp = \;\text{ksh.} \; 3,600,000 \times \frac{30.25}{100} = \text{Ksh.}\; 1,089,000 </mrow>
+                    <mrow>\text{Fifth slab}\; \amp = \;\text{Ksh.} \; 8,850,000 \times \frac{35}{100} = \text{Ksh.}\; 3,097,500 </mrow>
                     <mrow> \text{Total Gross tax} \; \amp =\; \text{Ksh.} \;5,923,900</mrow>
                 </md>
                 
@@ -458,7 +482,7 @@
             </p>
             <p>
                 <md>
-                    <mrow>\text{Net monthly income}\; = \amp \; \frac{\text{Net annual income}}{12}} </mrow>
+                    <mrow>\text{Net monthly income}\; = \amp \; \frac{\text{Net annual income}}{12} </mrow>
                     <mrow> = \amp\; \frac{12,554,900}{12} </mrow>
                     <mrow> = \amp\; \text{Ksh}\; 1,046,241.667 \text{per month} </mrow>
                 </md>
@@ -483,263 +507,45 @@
     <exercises>
         <exercise>
             <statement>
-            <p>
-                The income tax rates of a certain year were shown in the table below:
-            </p>
-            <tabular left="medium" right="medium" top="medium" bottom="medium">
-                            <row header="yes">
-                                <cell>Monthly taxable</cell>
-                                <cell>Tax rate <m>(\%)</m> </cell>
-                            </row>
-                            <row>
-                                <cell><m>0 \;\text{to} \; 9,680 </m></cell>
-                                <cell><m>10</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>9,681 \;\text{to} \; 18,800</m></cell>
-                                <cell><m>15</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>18,801 \;\text{to} \; 27,920</m></cell>
-                                <cell><m>20</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>27,921 \;\text{to} \; 37,040</m></cell>
-                                <cell><m>25</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>37,041 \;\text{and above} </m></cell>
-                                <cell><m>30</m></cell>
-                            </row>
-            </tabular>
-            <p>
-                In that year, Jacob's monthly earnings were as follows:
-            </p>
-            <p>
-                <md>
-                    <mrow> \text{Basic salary} \; \amp = \; \text{Ksh}\; 28,600 </mrow>
-                    <mrow> \text{House allowance} \; \amp = \; \text{Ksh}\; 15,000 </mrow>
-                    <mrow> \text{Medical allowance} \; \amp = \; \text{Ksh}\; 3,200 </mrow>
-                    <mrow> \text{Transport allowance} \; \amp = \; \text{Ksh}\; 540 </mrow>
-                </md>
-            </p>
-            <p>
-                He's entitled to a monthly tax relief of Ksh <m> 1,056</m>
-            </p>
-            <p>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            Calculate the tax charge on Jacob's monthly earnings.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Apart from income tax, the following monthly deductions were made; a health insurance fund of Ksh <m>500</m>, Education insurance of Ksh <m> 1,200</m>, and <m> 2 \%</m> of his basic salary for widows and children pension scheme. Calculate Jacob's monthly net income from his employment.
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </statement>
-        <answer>
-            <p>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            <m> \text{Ksh} \; 8, 474 </m>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <m> \text{Ksh} \; 36,594 </m>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </answer>      
-        </exercise>    
-        <exercise>
-            <statement>
                 <p>
-                    The table below shows the income tax rates of a certain year.
-                </p>
-                <tabular left="medium" right="medium" top="medium" bottom="medium">
-                            <row header="yes">
-                                <cell>Monthly income in Kenyan shillings (Ksh)</cell>
-                                <cell>Tax rate in each shilling </cell>
-                            </row>
-                            <row>
-                                <cell><m>0 - 10,164 </m></cell>
-                                <cell><m>10 \%</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>10,165 - 19,740</m></cell>
-                                <cell><m>15 \%</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>19,741 - 29,316</m></cell>
-                                <cell><m>20 \%</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>29,317 - 38,892</m></cell>
-                                <cell><m>25 \%</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>\text{Over} \; 38,892 </m></cell>
-                                <cell><m>30 \%</m></cell>
-                            </row>
-                </tabular>
-                <p>
-                    A tax relief of Ksh <m>1,162</m> per month was allowed. In a certain month, of that year, Obiero's taxable income in the fifth band was Ksh <m> 2,108</m>.
+                    Jacob is employed by the county government, he earns a monthly basic salary of <m>\text{Ksh}\; 120,000</m>. He is housed by her employer, and the value of the housing benefit is assessed at <m>15\%</m> of her basic salary. He also receives a transport allowance of <m>\text{Ksh}\; 10,000</m> per month.
                 </p>
                 <p>
-                    <ol marker="(a)">
-                        <li>
-                            <p>
-                                Calculate:
-                            </p>
-                            <p>
-                                <ol marker="(i)">
-                                    <li>
-                                        <p>
-                                            Obiero's taxable income in that month.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            The tax payable by Obiero in than month.
-                                        </p>
-                                    </li>
-                                </ol>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Obiero's income include a house allowance of Ksh <m> 15,000</m> per month. He contributed <m> 5\%</m> of the basic salary to a co-operative society. Calculate the employees net pay for that month.
-                            </p>
-                        </li>
-                    </ol>
+                    Every month, <m>\text{Ksh}\; 5,000</m> is deducted for pension contributions and <m>\text{Ksh}\; 2,000</m> for medical insurance. Calculate her monthly net income.
                 </p>
             </statement>
             <answer>
                 <p>
-                    <ol marker="(a)">
-                        <li>
-                            <p>
-                                <ol marker="(i)">
-                                    <li>
-                                        <p>
-                                            Ksh <m> 41,000</m>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Ksh <m> 6,232.40</m>
-                                        </p>
-                                    </li>
-                                </ol>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Ksh <m> 33,467.60</m>
-                            </p>
-                        </li>
-                    </ol>
+                    <m>\approx \text{Ksh}\; 106,317</m>
                 </p>
             </answer>
-        </exercise>  
+        </exercise>
         <exercise>
             <statement>
                 <p>
-                    In June of ertain year, Nicholus basic salary was Ksh <m>17,000</m>. He's also paid a house allowance of Ksh <m>6,000</m>, a commuter allowance of Ksh <m>2,500</m>, and a medical allowance of Ksh <m>1,800</m>. In JUly of that year, Nicholas's basic salary was raised by <m>2 \%</m>. 
-                </p>
-                <p>
-                    <ol marker="(a)">
-                        <li>
-                            <p>
-                               Calculate: 
-                            </p>
-                            <p>
-                                <ol marker="(i)">
-                                    <li>
-                                        <p>
-                                           His basic salary in July. 
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Total taxable income in July of that year. 
-                                        </p>
-                                    </li>
-                                </ol>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                During that year, taxable income was taxed according to the rates shown in the table below.
-                            </p>
-                            <tabular left="medium" right="medium" top="medium" bottom="medium">
-                                <row header="yes">
-                                    <cell>Monthly taxable income (Ksh) </cell>
-                                    <cell>Rates</cell>
-                                </row>
-                                <row>
-                                    <cell>On the first <m>\text{Ksh}\;24,000</m></cell>
-                                    <cell><m>10 \</m></cell>
-                                </row>
-                                <row>
-                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;8,333</m></cell>
-                                    <cell><m>25\%</m></cell>
-                                </row>
-                                 <row>
-                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;467,667</m></cell>
-                                    <cell><m>30\%</m></cell>
-                                </row>
-                                <row>
-                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;300,000</m></cell>
-                                    <cell><m>30.25\%</m></cell>
-                                </row>
-                                <row>
-                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;32,333</m></cell>
-                                    <cell><m>35\%</m></cell>
-                                </row>
-                            </tabular>
-
-                            <p>
-                                Personal Relief of Kshs <m>2,400</m> per month.
-                            </p>
-                        </li>
-                    </ol>
+                    Mr. Kamau's net monthly income is <m>\text{Ksh}\; 75,350</m>. He contributes <m>\text{Ksh}\; 4,000</m> per month to a retirement scheme and pays <m>\text{Ksh}\; 1,000</m> per month for medical insurance. Determine Mr. Kamau's monthly taxable income.
                 </p>
             </statement>
             <answer>
                 <p>
-                    <ol marker="(a)">
-                        <li>
-                            <p>
-                                <ol marker="(i)">
-                                    <li>
-                                        <p>
-                                            Ksh <m>17,340</m>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Ksh <m>27,640</m>
-                                        </p>
-                                    </li>
-                                </ol>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Ksh <m>3,048</m>
-                            </p>
-                        </li>
-                    </ol>
+                    <m>\text{Ksh}\; 96,762</m>
                 </p>
             </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                After all deductions, taxes, and personal relief have been applied, Mr. Ben's net annual income is <m>\text{Ksh}\; 3,000,000</m>. He is provided with housing by his employer, and the value of the housing benefit is assessed at <m>15\%</m> of his basic salary. He contributes <m>\text{Ksh}\; 120,000</m> per year to a retirement scheme and pays <m>\text{Ksh}\; 24,000</m> per year for medical insurance.
+            </p>
+            <p>
+                Determine Mr. Ben's annual basic salary.
+            </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>\text{Ksh} \; 3,738,385.09</m>
+                </p>
+            </answer>      
         </exercise>  
     </exercises>
 
