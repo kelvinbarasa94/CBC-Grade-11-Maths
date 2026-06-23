@@ -519,8 +519,8 @@
         <exercise>
             <statement>
                 <p>What should be added to make each expression a perfect square?</p>
-                <ol marker="a">
                 <p>
+                <ol marker="a">
                   <li><m>x^2+6x+\square</m></li>
                   <li><m>x^2-10x+\square</m></li>
                   <li><m>a^2+12a+\square</m></li>
