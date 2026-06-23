@@ -506,17 +506,42 @@
 
     <exploration>
         <title>Interactive Construction of Direct Tangents</title>
-        <interactive xml:id="interactive-direct-tangents" platform="jsxgraph" aspect="4:3" source="jsxgraph/direct-common-tangent-construction.js" width="65%">
-            <slate xml:id="jsx-direct-common-tangent-construction" surface="jsxboard" aspect="4:3"/>
-            <instructions>
-                <p>
-                    Use the <c>Back</c> and <c>Next</c> buttons to step through the tangent construction process. At each step, try to replicate the construction on your own paper with a compass and straightedge.
-                </p>
-                <p>
-                    Feel free to drag around the circles and change their radii.
-                </p>
-            </instructions>
-        </interactive>
+        <p>
+            Use the interactive below to step through the construction of the direct common tangents of two circles. Use the <em>Next</em> and <em>Back</em> buttons to move through the steps, and drag the centres <m>A</m> and <m>B</m> to see how the construction adapts.
+        </p>
+        <figure xml:id="figure-direct-tangents-construction">
+        <caption>Constructing the direct common tangents of two circles</caption>
+            <interactive xml:id="interactive-direct-tangents" platform="jsxgraph"
+                        aspect="8:6.5" source="jsxgraph/direct-common-tangent-construction.js" width="90%">
+                <sbsgroup>
+                    <sidebyside width="85%" margins="1%">
+                        <slate xml:id="box_direct" surface="jsxboard" aspect="5:3"/>
+                    </sidebyside>
+                    <sidebyside width="85%" margins="1%">
+                        <slate surface="html">
+                            <div id="caption_direct"
+                                style="font:15px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:#222;text-align:center;min-height:44px;"
+                                xmlns="http://www.w3.org/1999/xhtml"></div>
+                        </slate>
+                    </sidebyside>
+                    <sidebyside widths="30% 30%" margins="20%">
+                        <slate surface="html">
+                            <input id="back_direct" type="button" value="◀ Back"
+                                onkeypress="directBack();" onclick="directBack();"
+                                style="font-size:16px; width:100%" xmlns="http://www.w3.org/1999/xhtml"/>
+                        </slate>
+                        <slate surface="html">
+                            <input id="next_direct" type="button" value="Next ▶"
+                                onkeypress="directNext();" onclick="directNext();"
+                                style="font-size:16px; width:100%; height:30px;" xmlns="http://www.w3.org/1999/xhtml"/>
+                        </slate>
+                    </sidebyside>
+                </sbsgroup>
+                <instructions>
+                    <p>Use <em>Next</em> and <em>Back</em> to step through the construction. Drag the centres A and B at any time — the whole construction stays correct.</p>
+                </instructions>
+            </interactive>
+        </figure>
     </exploration>
 
     <insight>

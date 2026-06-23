@@ -6,9 +6,14 @@
  * else (Q, the perpendicular-bisector arcs, X, Y, the tangent) is DERIVED, so
  * the whole construction stays correct while you drag.
  *
- * Expects a container div with id="jxgbox". The script injects its own caption
- * bar and Back/Next controls around that div, so the .js is the only file you
- * need.
+ * PreTeXt wiring (no DOM injection — avoids the scroll bars that appear when
+ * extra nodes are squeezed into a slate's reserved aspect box):
+ *   - The board renders into a  surface="jsxboard"  slate with id  box_tangent.
+ *   - The step caption renders into a  surface="html"  slate that contains an
+ *     element with id  caption_tangent.
+ *   - The Back / Next buttons live in their own  surface="html"  slates and
+ *     call the globals  tangentBack()  /  tangentNext()  via onclick.
+ * See the matching <figure> in the .ptx source for the exact slate layout.
  *
  * Five steps (matching the PreTeXt figure):
  *   1. Circle, centre O, with point P on it.
@@ -19,7 +24,11 @@
  * ==========================================================================*/
 
 
-const BOX_ID = 'jsxgraph-tangent-construction';
+const BOX_ID = 'box_tangent';          // surface="jsxboard" slate id
+const CAPTION_ID = 'caption_tangent';  // element inside the html caption slate
+const BACK_ID = 'back_tangent';        // Back button id   (in its own html slate)
+const NEXT_ID = 'next_tangent';        // Next button id   (in its own html slate)
+
 const TOTAL_STEPS = 5;
 const TEAL = '#0d8e8e';
 const ACCENT = '#1565c0';
@@ -148,61 +157,23 @@ let step = 1;
 function render() {
 staged.forEach(({ o, from }) => o.setAttribute({ visible: step >= from }));
 board.update();
-captionEl.textContent = CAPTIONS[step - 1];
-indicatorEl.textContent = step + ' / ' + TOTAL_STEPS;
-backBtn.disabled = step === 1;
-nextBtn.disabled = step === TOTAL_STEPS;
+
+const captionEl = document.getElementById(CAPTION_ID);
+if (captionEl) captionEl.textContent = CAPTIONS[step - 1];
+
+const backBtn = document.getElementById(BACK_ID);
+if (backBtn) backBtn.disabled = step === 1;
+
+const nextBtn = document.getElementById(NEXT_ID);
+if (nextBtn) nextBtn.disabled = step === TOTAL_STEPS;
 }
 
-// ---- CONTROLS (injected around the board div) ---------------------------
-const boxEl = document.getElementById(BOX_ID);
-
-const captionEl = document.createElement('div');
-captionEl.style.cssText =
-'font:15px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:#222;' +
-'max-width:640px;margin:0 auto 8px;text-align:center;min-height:44px;';
-
-const controls = document.createElement('div');
-controls.style.cssText =
-'display:flex;align-items:center;justify-content:center;gap:14px;' +
-'margin-top:10px;font:14px system-ui,Segoe UI,Arial,sans-serif;';
-
-const btnCss =
-'padding:7px 16px;border:1px solid #1565c0;background:#1565c0;color:#fff;' +
-'border-radius:6px;cursor:pointer;font:inherit;';
-
-const backBtn = document.createElement('button');
-backBtn.textContent = '◀ Back';
-backBtn.style.cssText = btnCss;
-
-const nextBtn = document.createElement('button');
-nextBtn.textContent = 'Next ▶';
-nextBtn.style.cssText = btnCss;
-
-const indicatorEl = document.createElement('span');
-indicatorEl.style.cssText = 'min-width:42px;text-align:center;color:#555;font-variant-numeric:tabular-nums;';
-
-function disabledStyle(btn) {
-btn.addEventListener('mouseenter', () => {});
-}
-[backBtn, nextBtn].forEach(b => {
-b.addEventListener('mousedown', e => e.preventDefault());
-});
-// grey out when disabled
-const styleEl = document.createElement('style');
-styleEl.textContent = 'button:disabled{opacity:.4;cursor:default;}';
-document.head && document.head.appendChild(styleEl);
-
-backBtn.addEventListener('click', () => { if (step > 1) { step--; render(); } });
-nextBtn.addEventListener('click', () => { if (step < TOTAL_STEPS) { step++; render(); } });
-
-controls.appendChild(backBtn);
-controls.appendChild(indicatorEl);
-controls.appendChild(nextBtn);
-
-if (boxEl && boxEl.parentNode) {
-boxEl.parentNode.insertBefore(captionEl, boxEl);
-boxEl.parentNode.insertBefore(controls, boxEl.nextSibling);
-}
+// ---- CONTROLS (called from the PreTeXt html-surface button slates) -------
+// Exposed as globals so the <input type="button" onclick="..."> handlers in
+// the .ptx source can reach them.
+function tangentBack() { if (step > 1) { step--; render(); } }
+function tangentNext() { if (step < TOTAL_STEPS) { step++; render(); } }
+window.tangentBack = tangentBack;
+window.tangentNext = tangentNext;
 
 render();

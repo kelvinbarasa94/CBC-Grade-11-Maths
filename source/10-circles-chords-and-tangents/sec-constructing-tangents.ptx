@@ -331,19 +331,57 @@
     </paragraphs>
 
     <exploration>
-        <title>Interactive Tangent Construction</title>
-        <interactive xml:id="interactive-tangent-construction" platform="jsxgraph" aspect="4:3" source="jsxgraph/tangent-construction.js" width="50%" height="50%">
-            <slate xml:id="jsxgraph-tangent-construction" surface="jsxboard"/>
-            <instructions>
-                <p>
-                    Use the <c>Back</c> and <c>Next</c> buttons to step through the tangent construction process. At each step, try to replicate the construction on your own paper with a compass and straightedge.
-                </p>
-                <p>
-                    Feel free to drag around the point <m>P</m> to see how the steps change.
-                </p>
-            </instructions>
-        </interactive>
+        <p>
+            Use the interactive below to explore the construction of a tangent at a point on a circle. You can step through the construction using the <em>Next</em> and <em>Back</em> buttons, and you can drag the points <m>O</m> and <m>P</m> to see how the construction adapts.
+        </p>
+        <figure xml:id="figure-tangent-construction">
+        <caption>Constructing the tangent at a point on a circle</caption>
+            <interactive xml:id="interactive-tangent-construction" platform="jsxgraph"
+                        aspect="8:6.5" source="jsxgraph/tangent-construction.js" width="90%">
+                <sbsgroup>
+                    <sidebyside width="85%" margins="1%">
+                        <slate xml:id="box_tangent" surface="jsxboard" aspect="5:3"/>
+                    </sidebyside>
+                    <sidebyside width="85%" margins="1%">
+                        <slate surface="html">
+                            <div id="caption_tangent"
+                                style="font:15px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:#222;text-align:center;min-height:44px;"
+                                xmlns="http://www.w3.org/1999/xhtml"></div>
+                        </slate>
+                    </sidebyside>
+                    <sidebyside widths="30% 30%" margins="20%">
+                        <slate surface="html">
+                            <input type="button" value="◀ Back"
+                                onkeypress="tangentBack();" onclick="tangentBack();"
+                                style="font-size:16px; width:100%" xmlns="http://www.w3.org/1999/xhtml"/>
+                        </slate>
+                        <slate surface="html">
+                            <input type="button" value="Next ▶"
+                                onkeypress="tangentNext();" onclick="tangentNext();"
+                                style="font-size:16px; width:100%; height:30px;" xmlns="http://www.w3.org/1999/xhtml"/>
+                        </slate>
+                    </sidebyside>
+                </sbsgroup>
+                <instructions>
+                    <p>Use <em>Next</em> and <em>Back</em> to step through the construction. Drag the points O and P at any time — the whole construction stays correct.</p>
+                </instructions>
+            </interactive>
+        </figure>
     </exploration>
+
+    
+
+    <!-- <interactive xml:id="interactive-tangent-construction" platform="jsxgraph" width="85%" source="jsxgraph/tangent-construction.js">
+        <slate xml:id="jsxgraph-tangent-construction" surface="jsxboard"/>
+        <instructions>
+            <p>
+                Use the <c>Back</c> and <c>Next</c> buttons to step through the tangent construction process. At each step, try to replicate the construction on your own paper with a compass and straightedge.
+            </p>
+            <p>
+                Feel free to drag around the point <m>P</m> to see how the steps change.
+            </p>
+        </instructions>
+    </interactive> -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
 

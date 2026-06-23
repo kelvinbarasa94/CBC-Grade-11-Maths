@@ -1,22 +1,25 @@
 /* ============================================================================
- * Constructing the Direct Common Tangents of Two Circles — stepped animation
+ * Constructing the Transverse Common Tangents of Two Circles — stepped animation
  * ----------------------------------------------------------------------------
  * Eight steps revealed one at a time with "Back" / "Next" buttons.
  *
  * Interactivity: A and B (the two centres) are free, draggable base points.
- * The radii are FIXED (r = 1 for circle A, R = 3 for circle B). Everything
- * else — the auxiliary circle (R - r), the midpoint I, the connecting circle,
- * the intersection points Q / Q', the contact points and both common tangents —
- * is DERIVED and recomputes as you drag.
+ * The radii are FIXED (r = 1 for circle A, R = 2 for circle B). Everything
+ * else recomputes as you drag.
  *
- * Method (external centre of similitude): the connecting circle (Thales circle
- * on AB) meets the auxiliary circle (centre B, radius R - r) at Q and Q'.
- * The ray B->Q hits circle B at the contact point T'; the tangent there meets
- * line AB at O and touches circle A at T. T T' is a direct common tangent.
+ * This is the SAME procedure as the direct-common-tangent construction with one
+ * change: the auxiliary circle (centre B) has radius R + r instead of R - r.
+ * That makes O the INTERNAL centre of similitude, so the two tangents cross
+ * between the circles (transverse) rather than running alongside them (direct).
  *
- * Expects a surface="jsxboard" slate with id="box_direct", a caption element
- * with id="caption_direct", and native PreTeXt Back/Next button slates wired to
- * the globals directBack() / directNext().
+ * Method: the connecting circle (Thales circle on AB) meets the auxiliary
+ * circle (centre B, radius R + r) at Q and Q'. The line Q-B hits circle B at the
+ * contact point T'; the tangent there meets line AB at O and touches circle A
+ * at T. T T' is a transverse common tangent.
+ *
+ * Expects a surface="jsxboard" slate with id="box_transverse", a caption element
+ * with id="caption_transverse", and native PreTeXt Back/Next button slates wired
+ * to the globals transverseBack() / transverseNext().
  * ==========================================================================*/
 
 (function () {
@@ -24,15 +27,15 @@
 
   JXG.Options.text.useMathJax = true;
 
-  const BOX_ID = 'box_direct';
+  const BOX_ID = 'box_transverse';
   const TOTAL_STEPS = 8;
 
-  const r = 1, R = 3, rt = R - r;     // small radius, large radius, R - r
+  const r = 1, R = 2, rt = R + r;     // small radius, large radius, R + r
   const BLUE = '#1565c0', RED = '#d32f2f', ORANGE = '#e69500';
   const FREE = '#1565c0', TAN = '#1f4ed8', SCAFF = '#9e9e9e';
 
   const board = JXG.JSXGraph.initBoard(BOX_ID, {
-    boundingbox: [-3.2, 5.7, 8.2, -3.2],
+    boundingbox: [-2.4, 4.9, 9.2, -3.4],
     keepaspectratio: true,
     axis: false,
     showCopyright: false,
@@ -48,7 +51,7 @@
     name: 'A', size: 4, strokeColor: FREE, fillColor: FREE,
     label: { offset: [-12, -10], anchorX: 'right', anchorY: 'top' }
   });
-  const B = board.create('point', [4, 2], {
+  const B = board.create('point', [5, 1], {
     name: 'B', size: 4, strokeColor: FREE, fillColor: FREE,
     label: { offset: [12, -8], anchorX: 'left', anchorY: 'top' }
   });
@@ -58,7 +61,7 @@
   // --- Line through the centres, extended ----------------------------------
   const centralLine = board.create('line', [A, B], { strokeColor: '#555', strokeWidth: 1.3, highlight: false });
 
-  // --- Auxiliary circle: centre B, radius R - r ----------------------------
+  // --- Auxiliary circle: centre B, radius R + r ----------------------------
   const auxC = board.create('circle', [B, rt], { strokeColor: RED, strokeWidth: 1.2, fillColor: 'none', highlight: false });
 
   // radius marker for the auxiliary circle (shown only on its step)
@@ -72,7 +75,7 @@
     { visible: false, name: '' });
   const auxRadSeg = board.create('segment', [B, auxRadEnd], { strokeColor: RED, strokeWidth: 1.4, highlight: false });
   const auxLabel = board.create('text', [
-    () => (B.X() + auxRadEnd.X()) / 2 + 0.15, () => (B.Y() + auxRadEnd.Y()) / 2, '\\(R-r\\)'
+    () => (B.X() + auxRadEnd.X()) / 2 + 0.15, () => (B.Y() + auxRadEnd.Y()) / 2, '\\(R+r\\)'
   ], { fontSize: 14, strokeColor: RED, anchorX: 'left', anchorY: 'middle', highlight: false });
 
   // --- Midpoint I of AB, with perpendicular-bisector scaffolding ------------
@@ -80,8 +83,6 @@
     name: 'I', size: 3, strokeColor: '#333', fillColor: '#333',
     label: { offset: [-6, -12], anchorX: 'right', anchorY: 'top' }
   });
-  // construction arcs: circles centred A and B with radius |AB| meet on the
-  // perpendicular bisector of AB.
   const bisCA = board.create('circle', [A, () => A.Dist(B)], { visible: false });
   const bisCB = board.create('circle', [B, () => A.Dist(B)], { visible: false });
   const iPt = board.create('intersection', [bisCA, bisCB, 0], { name: '', size: 1, strokeColor: SCAFF, fillColor: SCAFF });
@@ -97,11 +98,11 @@
   // (indices verified headlessly: index 0 = the "upper" point Q.)
   const Q = board.create('intersection', [connecting, auxC, 1], {
     name: 'Q', size: 3, strokeColor: '#7b1fa2', fillColor: '#7b1fa2',
-    label: { offset: [8, 8], anchorX: 'left', anchorY: 'bottom' }
+    label: { offset: [0, 12], anchorX: 'middle', anchorY: 'bottom' }
   });
   const Qp = board.create('intersection', [connecting, auxC, 0], {
     name: "Q'", size: 3, strokeColor: '#7b1fa2', fillColor: '#7b1fa2',
-    label: { offset: [10, -8], anchorX: 'left', anchorY: 'top' }
+    label: { offset: [0, -12], anchorX: 'middle', anchorY: 'top' }
   });
 
   // --- Contact points on circle B: T' = B + R * unit(B->Q) -----------------
@@ -120,37 +121,32 @@
   const tan1 = board.create('perpendicular', [radB1, T1p], { strokeColor: TAN, strokeWidth: 2.4, highlight: false });
   const tan2 = board.create('perpendicular', [radB2, T2p], { strokeColor: TAN, strokeWidth: 2.4, highlight: false });
 
-  // --- O = where the (first) tangent meets line AB -------------------------
+  // --- O = where the (first) tangent meets line AB (internal centre) --------
   const O = board.create('intersection', [tan1, centralLine], {
     name: 'O', size: 3, strokeColor: '#000', fillColor: '#000',
-    label: { offset: [-6, -12], anchorX: 'right', anchorY: 'top' }
+    label: { offset: [2, -12], anchorX: 'left', anchorY: 'top' }
   });
 
   // --- Contact points on circle A (feet of perpendicular from A) -----------
-  const T1 = board.create('orthogonalprojection', [A, tan1], {
-    name: '', size: 3, strokeColor: TAN, fillColor: '#fff'
-  });
-  const T2 = board.create('orthogonalprojection', [A, tan2], {
-    name: '', size: 3, strokeColor: TAN, fillColor: '#fff'
-  });
+  const T1 = board.create('orthogonalprojection', [A, tan1], { name: '', size: 3, strokeColor: TAN, fillColor: '#fff' });
+  const T2 = board.create('orthogonalprojection', [A, tan2], { name: '', size: 3, strokeColor: TAN, fillColor: '#fff' });
 
-  // visible contact-point markers + labels (own dynamic-text labels so the
-  // primes/subscripts render cleanly via MathJax)
+  // visible contact markers + dynamic MathJax labels
   const T1pDot = board.create('point', [() => T1p.X(), () => T1p.Y()], { name: '', size: 3, strokeColor: TAN, fillColor: '#fff' });
   const T2pDot = board.create('point', [() => T2p.X(), () => T2p.Y()], { name: '', size: 3, strokeColor: TAN, fillColor: '#fff' });
-  const lblT1p = board.create('text', [() => T1p.X() - 0.15, () => T1p.Y() + 0.1, "\\(T'_1\\)"], { fontSize: 15, anchorX: 'right', highlight: false });
+  const lblT1p = board.create('text', [() => T1p.X() + 0.15, () => T1p.Y() + 0.1, "\\(T'_1\\)"], { fontSize: 15, anchorX: 'left', highlight: false });
   const lblT2p = board.create('text', [() => T2p.X() + 0.15, () => T2p.Y() - 0.1, "\\(T'_2\\)"], { fontSize: 15, anchorX: 'left', anchorY: 'top', highlight: false });
-  const lblT1 = board.create('text', [() => T1.X() - 0.15, () => T1.Y() + 0.05, '\\(T_1\\)'], { fontSize: 15, anchorX: 'right', highlight: false });
-  const lblT2 = board.create('text', [() => T2.X() - 0.1, () => T2.Y() - 0.15, '\\(T_2\\)'], { fontSize: 15, anchorX: 'right', anchorY: 'top', highlight: false });
+  const lblT1 = board.create('text', [() => T1.X() - 0.1, () => T1.Y() - 0.12, '\\(T_1\\)'], { fontSize: 15, anchorX: 'right', anchorY: 'top', highlight: false });
+  const lblT2 = board.create('text', [() => T2.X() - 0.1, () => T2.Y() + 0.12, '\\(T_2\\)'], { fontSize: 15, anchorX: 'right', anchorY: 'bottom', highlight: false });
 
-  // --- Rays B->T' and radii A->T (drawn segments) --------------------------
-  const rayBT1 = board.create('segment', [B, T1p], { strokeColor: '#777', strokeWidth: 1.3, highlight: false });
-  const rayBT2 = board.create('segment', [B, T2p], { strokeColor: '#777', strokeWidth: 1.3, highlight: false });
+  // --- Rays Q->B and radii A->T (drawn segments) ---------------------------
+  // For transverse, T' lies between Q and B, so the segment Q-B passes through T'.
+  const rayBT1 = board.create('segment', [Q, B], { strokeColor: '#777', strokeWidth: 1.3, highlight: false });
+  const rayBT2 = board.create('segment', [Qp, B], { strokeColor: '#777', strokeWidth: 1.3, highlight: false });
   const radAT1 = board.create('segment', [A, T1], { strokeColor: '#777', strokeWidth: 1.3, dash: 2, highlight: false });
   const radAT2 = board.create('segment', [A, T2], { strokeColor: '#777', strokeWidth: 1.3, dash: 2, highlight: false });
 
   // ===== STEP VISIBILITY ====================================================
-  // show(step) returns whether the element is visible at that step.
   const from = n => (s => s >= n);
   const only = n => (s => s === n);
 
@@ -171,25 +167,25 @@
 
   const CAPTIONS = [
     'Step 1 of 8 — Draw the two circles: centre A (radius r) and centre B (radius R). Draw the line through the centres, extended.',
-    'Step 2 of 8 — Draw the auxiliary circle: centre B, radius R − r.',
+    'Step 2 of 8 — Draw the auxiliary circle: centre B, radius R + r. (For transverse tangents the auxiliary radius is R + r, not R − r.)',
     'Step 3 of 8 — Construct the midpoint I of AB.',
     'Step 4 of 8 — Draw the connecting circle: centre I, radius IA (dashed).',
     'Step 5 of 8 — Mark Q, an intersection of the connecting circle and the auxiliary circle.',
-    'Step 6 of 8 — Draw the ray from B through Q; it meets circle B at T′₁.',
-    'Step 7 of 8 — The tangent at T′₁ meets line AB at O and touches circle A at T₁. The line T₁T′₁ is the first direct common tangent.',
-    'Step 8 of 8 — Repeat with the other intersection Q′ to obtain the second direct common tangent T₂T′₂.'
+    'Step 6 of 8 — Draw the ray from Q through B; it meets circle B at T′₁.',
+    'Step 7 of 8 — The tangent at T′₁ is tangent to circle A at T₁. T₁T′₁ is the first transverse common tangent.',
+    'Step 8 of 8 — Repeat with the other intersection Q′ to obtain the second transverse common tangent T₂T′₂.'
   ];
 
   // ===== STEP STATE + CAPTION ==============================================
   // PreTeXt wiring (no DOM injection — mirrors tangent-construction.js so the
   // slate's reserved aspect box never gains extra nodes / scroll bars):
-  //   - board renders into the surface="jsxboard" slate  box_direct
-  //   - the caption renders into an element with id  caption_direct
+  //   - board renders into the surface="jsxboard" slate  box_transverse
+  //   - the caption renders into an element with id  caption_transverse
   //   - the Back / Next buttons are native PreTeXt  <input type="button">
-  //     slates that call the globals  directBack() / directNext().
-  const CAPTION_ID = 'caption_direct';
-  const BACK_ID = 'back_direct';
-  const NEXT_ID = 'next_direct';
+  //     slates that call the globals  transverseBack() / transverseNext().
+  const CAPTION_ID = 'caption_transverse';
+  const BACK_ID = 'back_transverse';
+  const NEXT_ID = 'next_transverse';
 
   let step = 1;
   function render() {
@@ -204,10 +200,10 @@
   }
 
   // ===== CONTROLS (called from the PreTeXt html-surface button slates) ======
-  function directBack() { if (step > 1) { step--; render(); } }
-  function directNext() { if (step < TOTAL_STEPS) { step++; render(); } }
-  window.directBack = directBack;
-  window.directNext = directNext;
+  function transverseBack() { if (step > 1) { step--; render(); } }
+  function transverseNext() { if (step < TOTAL_STEPS) { step++; render(); } }
+  window.transverseBack = transverseBack;
+  window.transverseNext = transverseNext;
 
   render();
 })();
