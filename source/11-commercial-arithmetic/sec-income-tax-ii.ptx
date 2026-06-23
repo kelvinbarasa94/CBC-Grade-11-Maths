@@ -505,6 +505,11 @@
     <!-- Add static exercises -->
 
     <exercises>
+        <introduction>
+            <p>
+                For Each of the exercises below, use the progressive tax brackets <xref ref="table-monthly-tax-rates" />.
+            </p>
+        </introduction>
         <exercise>
             <statement>
                 <p>
