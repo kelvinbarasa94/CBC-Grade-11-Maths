@@ -312,7 +312,13 @@
                 Therefore, <m>x = 3</m> or <m>x = -2</m>.
             </p>
             <p>
-                Substituting <m>x = 3</m> into the linear equation gives <m>y = 5</m>, and substituting <m>x = -2</m> gives <m>y = 0</m>.
+                We can subtitute the values of <m>x</m> into the quadratic equation to check our answers:
+            </p>
+            <p>
+                For <m>x = 3</m>: <m>y = 3^2 - 4 = 9 - 4 = 5</m> and substituting into the linear equation gives <m>y = 3 + 2 = 5</m>.
+            </p>
+            <p>
+                For <m>x = -2</m>: <m>y = (-2)^2 - 4 = 4 - 4 = 0</m> and substituting into the linear equation gives <m>y = -2 + 2 = 0</m>.
             </p>
         </solution>
     </example>

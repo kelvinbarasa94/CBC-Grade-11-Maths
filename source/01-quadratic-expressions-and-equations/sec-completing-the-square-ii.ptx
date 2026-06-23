@@ -161,6 +161,9 @@
             When the <m>x^2</m> term has a coefficient other than 1, we call it a non-monic quadratic.
         </p>
         <p>
+            Dividing the entire equation by the leading coefficient <m>a</m> is a necessary step to convert it into a monic quadratic, which allows us to apply the completing square method effectively.
+        </p>
+        <p>
             <term>How to solve the equation <m>ax^2 + bx + c = 0</m> by completing square method</term>
         </p>
         <p>
