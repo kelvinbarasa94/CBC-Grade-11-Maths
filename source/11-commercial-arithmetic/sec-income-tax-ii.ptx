@@ -338,7 +338,7 @@
     <example>
         <statement>
             <p>
-                Mr. Mwangi is a resident employee in Nairobi earning a Gross Monthly Salary of KSh <m>120,000</m>. His employer deducts a NSSF contribution of KSh <m>2,160</m>. Use the tax bracket from <xref ref="table-monthly-tax-rates" /> to calculate Mr. Mwangi's Net Tax (PAYE) payable for the month.
+                Mr. Mwangi is a resident employee in Nairobi earning a Gross Monthly Salary of KSh <m>120,000</m>. His employer deducts a NSSF contribution of KSh <m>2,160</m>. Use the tax bracket from <xref ref="table-monthly-tax-rates" /> to calculate Mr. Mwangi's Net income payable for the month.
             </p>
         </statement>
         <solution>
@@ -370,8 +370,102 @@
             <p>
                 <md>
                     <mrow>\text{Net monthly income}\; = \amp \; \text{Gross mothly income}\; - \; \text{Relief} </mrow>
+                    <mrow> = \amp\; 30,135.35 - 2,400 </mrow>
+                    <mrow> = \amp \;\text{Ksh}\; 27,735.35 </mrow>
                 </md>
                 
+            </p>
+            <p>
+                Net monthly income
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Net monthly income} \; = \amp \; \text{Taxable income} \; - \; \text{Net tax} </mrow>
+                    <mrow> = \amp \; 117,840 - 27,735.35 </mrow>
+                    <mrow> = \amp \; \text{Ksh}\; 90,104.65 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                The Net monthly income for Mr. Mwangi is <m>\text{Ksh}\; 90,104.65</m>.
+            </p>
+        </solution>
+    </example>
+    <example>
+        <statement>
+            <p>
+                Mr. Ondiala is employed in the United States and earns an annual basic salary equivalent to <m>KSh 15,000,000</m>. He is provided with housing by his employer, and the value of the housing benefit is assessed at <m>15\%</m> of his basic salary. In addition, he receives a housing allowance of <m>\text{Ksh} 100,000</m> per month and a transport allowance of <m>\text{Ksh} 30,000</m> per month. He contributes <m>\text{Ksh} 25,000</m> per month to a retirement scheme and pays <m>\text{Ksh} 5,000</m> per month for medical insurance.
+            </p>
+            <p>
+                Use the progressive tax brackets <xref ref="table-monthly-tax-rates" /> to calculate his net monthly income.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Mr. Ondiala's annual taxable income;
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Taxable income} \; = \amp \; \text{Basic salary}\; + 15\% \times \;\text{Basic salary}\; + \text{Total allowences}\; - \; \text{Total deductions}  </mrow>
+                    <mrow> = \amp\; 15,000,000 + 15\% \times 15,000,000 + 12 \times 100,000 + 12 \times 30,000 - 12 \times 25,000 - 12 \times 5,000 </mrow>
+                    <mrow> = \amp \;\text{Ksh}\; 18,450,000 \;\text{per annum} </mrow>
+                </md>
+            </p>
+            <p>
+                His Gross annual tax
+            </p>
+            <p>
+                <md>
+                    <mrow> \text{First slab}\; \amp = \;\text{Ksh.} 288,000 \;  \times \frac{10}{100} = \text{sh.}\; 28,800 </mrow>
+                    <mrow>\text{Second slab}\; \amp = \;\text{Ksh.} \; 100,000 \times \frac{25}{100} = \text{sh.}\; 25,000 </mrow>
+                    <mrow>\text{Third slab}\; \amp = \;\text{Ksh.} \; 5,612,000 \times \frac{30}{100} = \text{sh.}\; 1,683,600 </mrow>
+                    <mrow>\text{Forth slab}\; \amp = \;\text{ksh.} \; 3,600,000 \times \frac{30.25}{100} = \text{sh.}\; 1,089,000 </mrow>
+                    <mrow>\text{Fifth slab}\; \amp = \;\text{Ksh.} \; 8,850,000 \times \frac{35}{100} = \text{sh.}\; 3,097,500 </mrow>
+                    <mrow> \text{Total Gross tax} \; \amp =\; \text{Ksh.} \;5,923,900</mrow>
+                </md>
+                
+            </p>
+            <p>
+                His total Gross tax is <m>\text{Ksh.} \;5,923,900</m> annually.
+            </p>
+            <p>
+                His Net tax;
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Net tax}\; = \amp \; \text{Gross tax} \; - \; \text{Relief} </mrow>
+                    <mrow> = \amp \; 5,923,900 - 28,800 </mrow>
+                    <mrow> = \amp\; \text{Ksh.} \;5,895,100 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                His Net tax is <m>\text{Ksh.} \;5,895,100</m> annually.
+            </p>
+            <p>
+                His Net monthly income;
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Net annual income}\; = \amp\; \text{Taxable income}\; - \; \text{Net tax} </mrow>
+                    <mrow> = \amp \; 18,450,000 - 5,895,100 </mrow>
+                    <mrow> = \amp \; \text{Ksh}\; 12,554,900 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                His Net monthly income is given by;
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Net monthly income}\; = \amp \; \frac{\text{Net annual income}}{12}} </mrow>
+                    <mrow> = \amp\; \frac{12,554,900}{12} </mrow>
+                    <mrow> = \amp\; \text{Ksh}\; 1,046,241.667 \text{per month} </mrow>
+                </md>
+                
+            </p>
+            <p>
+                The Net monthly income is <m>\text{Ksh}\; 1,046,241.667</m>
             </p>
         </solution>
     </example>
