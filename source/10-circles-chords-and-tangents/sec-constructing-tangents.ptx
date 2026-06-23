@@ -326,7 +326,7 @@
             </ol>
         </p>
         <p>
-            <em>Why does this work?</em> Since <m>P</m> is the midpoint of <m>OQ</m>, the perpendicular bisector of <m>OQ</m> passes through <m>P</m> and is perpendicular to <m>OQ</m>. Since <m>OP</m> is a radius and the constructed line is perpendicular to <m>OP</m> at <m>P</m>, it is exactly the tangent to the circle at <m>P</m>.
+            <em>Why does this work?</em> Steps 1 and 2 establish a point <m>Q</m> twice as far from <m>O</m> as <m>P</m>. Thus, when Steps 3 and 4 construct the perpendicular bisector of <m>OQ</m>, it must pass through <m>P</m> and be perpendicular to <m>OQ</m>. Since <m>OP</m> is a radius and the constructed line is perpendicular to <m>OP</m> at <m>P</m>, it is exactly the tangent to the circle at <m>P</m>.
         </p>
     </paragraphs>
 
