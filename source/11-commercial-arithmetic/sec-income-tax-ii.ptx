@@ -75,91 +75,69 @@
             <statement>
 
                 <p>
-                    <term>Work in Groups to:</term>
+                    <term>Work in Groups</term> of <m>3 - 4</m>
                 </p>
 
                 <p>
                     In real taxation systems, income is not taxed at a single rate. Instead, different portions of income are taxed at different rates. This system is called a <term>progressive tax system</term>.
                 </p>
-
                 <p>
-                    In this activity, learners investigate how tax increases as income increases, and how personal relief affects final PAYE.
+                    Use the Kenyan progressive Tax table <xref ref="table-monthly-tax-rates" /> below for the activity.
                 </p>
 
                 <p>
-                    Identify how workers with different salaries contribute differently to taxation and discuss fairness in the tax system.
+                    A school clerk earns a monthly taxable income of Ksh <m>24,000</m>.
                 </p>
-
-                <tabular top="medium" bottom="medium" right="medium" left="medium">
-                    <row header="yes">
-                        <cell>Income Level</cell>
-                        <cell>Possible Tax Effect</cell>
-                    </row>
-                    <row>
-                        <cell>Low income worker</cell>
-                        <cell>?</cell>
-                    </row>
-                    <row>
-                        <cell>Middle income worker</cell>
-                        <cell>?</cell>
-                    </row>
-                    <row>
-                        <cell>High income worker</cell>
-                        <cell>?</cell>
-                    </row>
-                </tabular>
-
                 <p>
-                    <alert>Case Study 1:</alert>
+                    Calculate:
                 </p>
-
-                <p>
-                    A worker earns a taxable income of Ksh <m>10,000</m>. The income falls within the tax band Ksh <m>1 - 12,298</m> which is taxed at <m>10\%</m>.
-                </p>
-
-                <p>
-                    <term>In groups</term>
-                </p>
-
                 <p>
                     <ol marker="(a)">
                         <li>
-                            <p>Calculate the gross tax payable.</p>
+                            <p>
+                                His gross monthly tax, (Use the formula; <m>\text{Gross monthly tax} \; =\; \text{Tax Band} \; \times \; \text{Rate} </m>)?
+                            </p>
                         </li>
                         <li>
-                            <p>Interpret what the tax percentage means in real life.</p>
+                            <p>
+                                His Net monthly tax, (Use the formula; <m>\text{Net monthly tax} \; =\; \text{Gross monthly tax} \; - \; \text{Monthly Relief} </m>)?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                His Net monthly pay, (Use the formula; <m>\text{Net monthly pay} \; =\; \text{Taxable income} \; - \; \text{Net monthly tax} </m>)
+                            </p>
                         </li>
                     </ol>
                 </p>
 
                 <p>
-                    <alert>Case Study 2:</alert>
-                </p>
-
-                <p>
-                    After computing tax, a worker finds that his gross tax is Ksh <m>4,500</m>. He is entitled to a personal relief of Ksh <m>2,400</m>.
-                </p>
-
-                <p>
-                    Determine his net tax (PAYE).
-                </p>
-
-                <p>
-                    <alert>Discuss in your Groups:</alert>
+                    <alert>Discuss in Groups:</alert>
                 </p>
 
                 <p>
                     <ol marker="(a)">
-                        <li>Why does the government apply relief after tax is calculated and not before?</li>
-                        <li>What happens to take-home pay when relief increases?</li>
-                        <li>Why do higher income earners contribute more tax?</li>
+                        <li>
+                            <p>
+                                Why the government apply relief after tax is calculated and not before?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                What happens to take-home pay when relief increases?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Why do higher income earners contribute more tax?
+                            </p>
+                        </li>
                     </ol>
                 </p>
 
                 <p>
                     Suppose a worker earns a higher salary that falls into multiple tax bands. Discuss how tax is applied on different portions of income rather than the whole income at once.
                 </p>
-
             </statement>
         </activity>
 
@@ -217,6 +195,55 @@
         <p>
             Income tax is calculated using a progressive system where income is divided into different portions, and each portion is taxed at its own rate according to predefined tax brackets. This means that lower portions of income are taxed at lower rates, while only the income that falls within higher brackets is taxed at higher rates. The total tax payable is obtained by summing the tax from each bracket, after which any applicable reliefs are deducted to obtain the final amount of tax due.
         </p>
+        <p>
+                    The table below shows the Kenyan progressive tax rates for different income levels. We will be using it to calculate tax for workers in the next sections.
+                </p>
+                
+        <table xml:id="table-monthly-tax-rates">
+            <title>Kenyan Progressive Tax System</title>
+            <tabular left="medium" right="medium" top="medium" bottom="medium">
+                <row header="yes">
+                    <cell>Tax Bands</cell>
+                    <cell>Annual</cell>
+                    <cell>Monthly</cell>
+                    <cell>Rates</cell>
+                </row>
+                <row>
+                    <cell>On the first </cell>
+                    <cell><m>\text{Ksh}\;288,000</m></cell>
+                    <cell><m>\text{Ksh}\;24,000</m></cell>
+                    <cell><m>10 \%</m></cell>
+                </row>
+                <row>
+                    <cell>On the next</cell>
+                    <cell> <m> \text{Ksh}\;100,000</m></cell>
+                    <cell> <m> \text{Ksh}\;8,333</m></cell>
+                    <cell><m>25\%</m></cell>
+                </row>
+                <row>
+                    <cell>On the next</cell>
+                    <cell> <m> \text{Ksh}\;5,612,000</m></cell>
+                    <cell> <m> \text{Ksh}\;467,667</m></cell>
+                    <cell><m>30\%</m></cell>
+                </row>
+                <row>
+                    <cell>On the next </cell>
+                    <cell><m> \text{Ksh}\;3,600,000</m></cell>
+                    <cell><m> \text{Ksh}\;300,000</m></cell>
+                    <cell><m>30.25\%</m></cell>
+                </row>
+                <row>
+                    <cell>On all income in excess of </cell>
+                    <cell><m> \text{Ksh}\;9,600,000</m></cell>
+                    <cell><m> \text{Ksh}\;32,333</m></cell>
+                    <cell><m>35\%</m></cell>
+                </row>
+            </tabular>
+        </table>
+
+        <p>
+            Personal Relief of Kshs. <m>28,800</m> per annum (Kshs. <m>2,400</m> per month) is allowed.
+        </p>
 
         <p>
             The taxation process involves:
@@ -224,8 +251,8 @@
 
         <p>
             <md>
-                <mrow> \text{Gross Tax} = \amp \; \text{Taxable Income} \times \text{Applicable Rate(s)} </mrow>
-                <mrow> \text{Net Tax (PAYE)} = \amp \; \text{Gross Tax} - \text{Personal Relief} </mrow>
+                <mrow> \text{Gross Tax} = \amp \; \text{Taxable Income} \times \text{Rate(s)} </mrow>
+                <mrow> \text{Net Tax (PAYE)} = \amp \; \text{Gross Tax} - \text{Reliefs} </mrow>
             </md>
         </p>
         <p>
@@ -278,44 +305,14 @@
     <example>
         <statement>
             <p>
-                Mr.Masimba earns a basic salary of sh. <m>15,000</m> per month. In addition, he gets a medical allowance of sh. <m>2,400</m>, and a house allowance of sh. <m>12,000</m>. Calculate the tax he pays in a year if a personal relief of sh. <m>1,056</m> per month is allowed to all employees..
+                Mr.Masimba earns a basic salary of sh. <m>150,000</m> per month. In addition, he gets a medical allowance of sh. <m>20,000</m>, and a house allowance of sh. <m>30,000</m>. Use the tax bracket from <xref ref="table-monthly-tax-rates" /> to calculate his Net annual tax?
             </p>
-            <tabular left="medium" right="medium" bottom="medium" top="medium">
-                <row header="yes">
-                    <cell>Income (sh.)</cell>
-                    <cell>Rate </cell>
-                </row>
-                <row>
-                    <cell><m>1 - 5,808</m></cell>
-                    <cell><m>2</m></cell>
-                </row>
-                <row>
-                    <cell><m>5,809 - 11,280</m></cell>
-                    <cell><m>3</m></cell>
-                </row>
-                <row>
-                    <cell><m>11,281 - 16,752</m></cell>
-                    <cell><m>4</m></cell>
-                </row>
-                <row>
-                    <cell><m>16,753 - 22,224</m></cell>
-                    <cell><m>5</m></cell>
-                </row>
-                <row>
-                    <cell> Excess over <m>22,224</m></cell>
-                    <cell><m>6</m></cell>
-                </row>
-            </tabular>
-            <p>
-                <alert>Relief</alert>
-            </p>
-            
         </statement>
         <solution>
             <p>
                 <md>
-                    <mrow> \text{Taxable income per month}\; =\amp \; \text{sh.}\;(15,000 + 2,400 + 12,000) </mrow>
-                    <mrow> \amp =\; \text{sh.}\; 29,400</mrow>
+                    <mrow> \text{Taxable income per month}\; =\amp \; \text{sh.}\;(150,000 + 20,000 + 30,000) </mrow>
+                    <mrow> \amp =\; \text{sh.}\; 200,000</mrow>
                 </md>
             </p>
             <p>
@@ -323,151 +320,62 @@
             </p>
             <p>
                 <md>
-                    <mrow> \text{First slab}\; \amp = \;\text{sh.} \; 5,808 \times 2 = \text{sh.}\; 11,616 </mrow>
-                    <mrow>\text{Second slab}\; \amp = \;\text{sh.} \; 5,472 \times 3 = \text{sh.}\; 16,416 </mrow>
-                    <mrow>\text{Third slab}\; \amp = \;\text{sh.} \; 5,472 \times 4 = \text{sh.}\; 21,888 </mrow>
-                    <mrow>\text{Foorth slab}\; \amp = \;\text{sh.} \; 888 \times 5 = \text{sh.}\; 4,440 </mrow>
-                    <mrow> \text{Total tax due} \; \amp =\; \text{sh.} \;54,360</mrow>
-                    <mrow> \text{Less personal relief} \; \amp = \;\text{sh.}\; 12,672 </mrow>
-                    <mrow> \text{Therefore, tax payable p.a.}\; \amp = \;\text{sh.}\; 41,688 </mrow>
+                    <mrow> \text{First slab}\; \amp = \;\text{sh.} 24,000 \;  \times \frac{10}{100} = \text{sh.}\; 2,400 </mrow>
+                    <mrow>\text{Second slab}\; \amp = \;\text{sh.} \; 8,333 \times \frac{25}{100} = \text{sh.}\; 2083.25 </mrow>
+                    <mrow>\text{Third slab}\; \amp = \;\text{sh.} \; 167,667 \times \frac{30}{100} = \text{sh.}\; 50,300.1 </mrow>
+                    <mrow> \text{Gross tax} \; \amp =\; \text{sh.} \;54,783.35</mrow>
+                    <mrow> \text{Less personal relief} \; \amp = \;\text{sh.}\; 2,400 </mrow>
+                    <mrow> \text{Net monthly tax}\; \amp = \;\text{sh.}\; 52,383.35 </mrow>
+                    <mrow> \text{Net annual tax}\; \amp = \;\text{sh.}\; 52,383.35 \times 12 </mrow>
+                    <mrow> = \amp \; \text{Ksh} \;628,600.2 </mrow>
                 </md>
+            </p>
+            <p>
+                The Net annual tax for Mr. Masimba is Ksh <m>52,383.35</m>.
             </p>
         </solution>
     </example>
     <example>
         <statement>
             <p>
-                Mr Odhiambo is a senior teacher on a basic salary of Ksh. <m>16,000</m>. On top of his salary, he gets a house allowance of Ksh. <m>12,000</m>, a medical allowence of Ksh. <m>3,060</m>, and a hardship allowance of Ksh. <m>4,635</m>. He has a life insurance polivcy for which he pays Ksh. <m>800</m> per month and claims an insurance relief.
-            </p>
-            <p>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            Use the tax table below to calculate his PAYE.
-                        </p>
-                        <tabular left="medium" right="medium" top="medium" bottom="medium">
-                            <row header="yes">
-                                <cell>Income in £ per month</cell>
-                                <cell>Rate <m>(\%)</m> </cell>
-                            </row>
-                            <row>
-                                <cell><m>1 - 484</m></cell>
-                                <cell><m>10</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>485 - 940</m></cell>
-                                <cell><m>15</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>941 - 1,396</m></cell>
-                                <cell><m>20</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>1,397 - 1,852</m></cell>
-                                <cell><m>25</m></cell>
-                            </row>
-                            <row>
-                                <cell><m>\text{Excess over}\; 1,852 </m></cell>
-                                <cell><m>30</m></cell>
-                            </row>
-                        </tabular>
-                    </li>
-                    <li>
-                        <p>
-                            In addition to the PAYE, the following deductions are made on his pay everymonth:
-                        </p>
-                        <p>
-                            <ol marker="(i)">
-                                <li>
-                                    <p>
-                                       WCPS at <m>2 \%</m> of his basic salary.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        SHA Ksh. <m>400</m>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        Co-operative shares on loan recovery Ksh. <m>4,800.</m>
-                                    </p>
-                                </li>
-                            </ol>
-                        </p>
-                        <p>
-                            Calculate his net pay.
-                        </p>
-                    </li>
-                </ol>
+                Mr. Mwangi is a resident employee in Nairobi earning a Gross Monthly Salary of KSh <m>120,000</m>. His employer deducts a NSSF contribution of KSh <m>2,160</m>. Use the tax bracket from <xref ref="table-monthly-tax-rates" /> to calculate Mr. Mwangi's Net Tax (PAYE) payable for the month.
             </p>
         </statement>
         <solution>
             <p>
-                <ol marker="(a)">
-                    <li>
-                        <p>
-                            PAYE
-                        </p>
-                        <p>
-                            <md>
-                                <mrow> \text{Taxable income}\; \amp = \; \text{Ksh.}\; (16,000 + 12,000 + 3,060 + 4,635) </mrow>
-                                <mrow> \amp = \; \text{Ksh.} \; 35,695 </mrow>
-                                <mrow> \text{Converting to K£} =\amp \; \text{K£}\; \frac{35,695}{20} </mrow>
-                                <mrow> \amp = \; \text{K£}\; 1,784.75 </mrow>
-                            </md>
-                            
-                        </p>
-                        <p>
-                            Gross tax
-                        </p>
-                        <p>
-                            <md>
-                                <mrow>\text{First slab} : \amp \;\text{K£}\; 484 \times \frac{10}{100} = \; \text{K£} \; 48.40 </mrow>
-                                <mrow>\text{Second slab} : \amp \;\text{K£}\; 456 \times \frac{15}{100} = \; \text{K£} \; 68.40 </mrow>
-                                <mrow>\text{Third slab} : \amp \;\text{K£}\; 456 \times \frac{20}{100} = \; \text{K£} \; 91.20 </mrow>
-                                <mrow>\text{Forth slab} : \amp \;\text{K£}\; 388 \times \frac{25}{100} = \; \text{K£} \; 97.00 </mrow>
-                                <mrow> \text{Gross tax} \; \amp = \; \text{K£}\; 305.00 </mrow>
-                                <mrow> \amp =\; \text{Ksh.}\; 6,100 </mrow>
-                            </md>
-                        </p>
-                        <p>
-                            <md>
-                                
-                                <mrow> \text{Insurance relief} \; \amp = \; \text{Ksh.} \; \frac{800}{20} \times 3 = \text{Ksh.}\; 120 </mrow>
-                                <mrow>\text{Personal relief} \; \amp = \; \text{Ksh.}\; 1,056 </mrow>
-                                <mrow> \text{Total relief} \; \amp = \; \text{Ksh.}\; 1,176 </mrow>
-                                <mrow>\text{Tax payable per month} \; \amp = \; \text{Gross tax} \;- \text{Total relief} </mrow>
-                                <mrow> \amp = \; \text{Ksh.} \; (6,100 - 1,176) = \;\text{Ksh.}\; 4,924 </mrow>
-                            </md>
-                        </p>
-                        <p>
-                            Therefore PAYE is Ksh. <m>4,924</m>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Net pay
-                        </p>
-                        <p>
-                            <md>
-                                <mrow> \text{Net pay} \; \amp = \; \text{Taxable income}\; - \; \text{Total deductions} </mrow>
-                                <mrow> \text{Total deductions}\; \amp = \; \text{PAYE} \; + \; \text{Other deductions} </mrow>
-                                <mrow> \amp = \; \text{Ksh.} \; (4,924 + \frac{2}{100} \times 16,000 + 400 + 4,800 + 800) </mrow>
-                                <mrow> \amp = \; \text{Ksh.} \; 11,244 </mrow>
-                                <mrow>\text{Net pay}\; =  \amp \; \text{Ksh.}\; (35,695 - 11,244) </mrow>
-                                <mrow> \amp = \; \text{Ksh.} \; 24,451 </mrow>
-                            </md>
-                        </p>
-                    </li>
-                </ol>
+                Monthly Taxable Income
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Taxable Income} \; = \amp\; \text{Gross monthly salary}\; - \;\text{Deductions} </mrow>
+                    <mrow> = \amp\; 120,000 - 2,160 </mrow>
+                    <mrow>= \amp \; \text{Ksh}\; 117,840 </mrow>
+                </md>
+                
+            </p>
+            <p>
+                Gross monthly tax
+            </p>
+            <p>
+                <md>
+                    <mrow> \text{First slab}\; \amp = \;\text{sh.} 24,000 \;  \times \frac{10}{100} = \text{sh.}\; 2,400 </mrow>
+                    <mrow>\text{Second slab}\; \amp = \;\text{sh.} \; 8,333 \times \frac{25}{100} = \text{sh.}\; 2083.25 </mrow>
+                    <mrow>\text{Third slab}\; \amp = \;\text{sh.} \; 85,507 \times \frac{30}{100} = \text{sh.}\; 25,652.1 </mrow>
+                    <mrow> \text{Gross tax} \; \amp =\; \text{sh.} \;30,135.35</mrow>
+                </md>
+            </p>
+            <p>
+                Net monthly tax
+            </p>
+            <p>
+                <md>
+                    <mrow>\text{Net monthly income}\; = \amp \; \text{Gross mothly income}\; - \; \text{Relief} </mrow>
+                </md>
+                
             </p>
         </solution>
     </example>
-            
-
-
-
+    
     <xi:include href="../lesson-plan-templates/assessment-intro.ptx" />
 
     <!-- If STACK questions are included, uncomment this: -->
@@ -680,31 +588,32 @@
                             <tabular left="medium" right="medium" top="medium" bottom="medium">
                                 <row header="yes">
                                     <cell>Monthly taxable income (Ksh) </cell>
-                                    <cell>Percentage rate of tax per shilling</cell>
+                                    <cell>Rates</cell>
                                 </row>
                                 <row>
-                                    <cell>Up to <m>9,680</m></cell>
-                                    <cell><m>10</m></cell>
+                                    <cell>On the first <m>\text{Ksh}\;24,000</m></cell>
+                                    <cell><m>10 \</m></cell>
                                 </row>
                                 <row>
-                                    <cell>From <m>9,681</m> to <m>18,800</m></cell>
-                                    <cell><m>15</m></cell>
+                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;8,333</m></cell>
+                                    <cell><m>25\%</m></cell>
+                                </row>
+                                 <row>
+                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;467,667</m></cell>
+                                    <cell><m>30\%</m></cell>
                                 </row>
                                 <row>
-                                    <cell>From <m>18,801</m> to <m>27,920</m></cell>
-                                    <cell><m>20</m></cell>
+                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;300,000</m></cell>
+                                    <cell><m>30.25\%</m></cell>
                                 </row>
                                 <row>
-                                    <cell>From <m>27,921</m> to <m>37,040</m></cell>
-                                    <cell><m>25</m></cell>
-                                </row>
-                                <row>
-                                    <cell>From <m>37,041</m> and above</cell>
-                                    <cell><m>30</m></cell>
+                                    <cell>From <m>On the next</m> to <m> \text{Ksh}\;32,333</m></cell>
+                                    <cell><m>35\%</m></cell>
                                 </row>
                             </tabular>
+
                             <p>
-                                Calculate the net tax paid by the employee if he was given a monthly personal relief of Ksh 1,056.
+                                Personal Relief of Kshs <m>2,400</m> per month.
                             </p>
                         </li>
                     </ol>
