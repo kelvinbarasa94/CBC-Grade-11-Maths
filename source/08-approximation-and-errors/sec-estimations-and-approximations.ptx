@@ -73,88 +73,9 @@
     <activity>
         <statement>
             <p>
-                Work in <term>Groups</term> to do the following measurement activity as demonstrated below.
+                Work in <term>Groups</term> to do the following measurement activity.
             </p>
-            <figure xml:id="fig-desk-measurement-comparison">
-                <caption>Comparing desk measurements using different tools</caption>
-                <image xml:id="img-desk-measurement-comparison">
-                    <description>
-                        A clean 2D vector diagram showing a wooden classroom desk from a top-down front perspective. 
-                        The desk demonstrates three measurement methods aligned vertically:
-                        Top: A yellow 15 cm ruler with 'repeat' arrows indicating multiple consecutive placements.
-                        Middle: A cyan 30 cm ruler with a single 'repeat' arrow indicating fewer placements.
-                        Bottom: A long green 100 cm metre rule spanning the width of the desk in a single direct measurement.
-                    </description>
-                    <latex-image>
-                        \begin{tikzpicture}[scale=0.12, every node/.style={font=\sffamily\small}]
-                            % --- DESIGN STYLES ---
-                            \tikzset{
-                                desk/.style={fill=brown!15, draw=brown!70!black, line width=1.5pt, rounded corners=2pt},
-                                leg/.style={fill=brown!40, draw=brown!70!black, line width=1.2pt},
-                                ruler15/.style={fill=yellow!30, draw=yellow!60!black, thin},
-                                ruler30/.style={fill=cyan!20, draw=cyan!60!black, thin},
-                                ruler100/.style={fill=green!20, draw=green!60!black, thin}
-                            }
-
-                            
-                            % Desk Legs
-                            \draw[leg] (5,-5) rectangle (8,32);
-                            \draw[leg] (12,-2) rectangle (15,30);
-                            \draw[leg] (75,-2) rectangle (78,30);
-                            \draw[leg] (82,-5) rectangle (85,32);
-                            % Desk Main Top
-                            \draw[desk] (0,0) rectangle (90,32);
-
-                            
-                            \node[anchor=west, text=brown!50!black] at (3, 28) {\textbf{Method A (15 cm): Multiple Placements}};
-                            
-                            % First placement
-                            \draw[ruler15] (5,23) rectangle (20,25.5);
-                            \node[scale=0.7] at (12.5, 24.25) {15 cm};
-                            
-                            % Repeat indicators
-                            \draw[thick,->,bend left=60] (18,26.5) to node[above,scale=0.7] {repeat} (24,26.5);
-                            \draw[ruler15, dashed, opacity=0.6] (20,23) rectangle (35,25.5);
-                            
-                            \draw[thick,->,bend left=60] (33,26.5) to node[above,scale=0.7] {repeat} (39,26.5);
-                            \draw[ruler15, dashed, opacity=0.4] (35,23) rectangle (50,25.5);
-                            
-                            % Dimension indicator
-                            \draw[red,->,line width=0.8pt] (5,21.5) -- (50,21.5);
-                            \node[red,scale=0.7,below] at (27.5,21.5) {Multiple steps required};
-
-                            
-                            \node[anchor=west, text=brown!50!black] at (3, 17) {\textbf{Method B (30 cm): Fewer Placements}};
-                            
-                            % Placements
-                            \draw[ruler30] (5,12) rectangle (35,14.5);
-                            \node[scale=0.75] at (20, 13.25) {30 cm Ruler};
-                            
-                            \draw[thick,->,bend left=45] (32,15.5) to node[above,scale=0.7] {repeat} (40,15.5);
-                            \draw[ruler30, dashed, opacity=0.5] (35,12) rectangle (65,14.5);
-
-                            % Dimension indicator
-                            \draw[blue,->,line width=0.8pt] (5,10.5) -- (65,10.5);
-
-                            
-                            \node[anchor=west, text=brown!50!black] at (3, 7) {\textbf{Method C (Metre Rule): Direct Measurement}};
-                            
-                            % Spans almost the whole desk comfortably
-                            \draw[ruler100] (5,2) rectangle (85,4.5);
-                            \node[scale=0.8] at (45, 3.25) {1 Metre Rule (100 cm)};
-                            
-                            % Ticks along the bottom edge
-                            \foreach \t in {5,15,25,35,45,55,65,75,85} {
-                                \draw (\t,2) -- (\t,2.7);
-                            }
-
-                            % Dimension indicator
-                            \draw[green!40!black,->,line width=1pt] (5,1) -- (85,1);
-
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
-            </figure>
+           
             <p>
                 Measure the length of the Locker using each of the following tools and record your measurements in the table below.
             </p>
@@ -167,7 +88,7 @@
                         <p><m>30</m> cm ruler.</p>
                     </li>
                     <li>
-                        <p>Metre rule or tape measure.</p>
+                        <p>Metre rule.</p>
                     </li>
                     
                 </ol>
