@@ -84,7 +84,7 @@
                 <tabular left="medium" right="medium" top="medium" bottom="medium">
                     <row header="yes">
                         <cell>Quantity</cell>
-                        <cell>Measurement (cm)</cell>
+                        <cell>Working measurement</cell>
                         <cell>Minimum Value</cell>
                         <cell>Maximum Value</cell>
                     </row>
@@ -112,27 +112,64 @@
                                 Determine the minimum and maximum possible values for the length and width.
                             </p>
                         </li>
-
                         <li>
                             <p>
-                                Calculate the ratio
-                                <m>\frac{\text{Length}}{\text{Width}}</m>
-                                using the measured values.
+                                Calculate the following ratios using the formula, Ratio <m> = \frac{\text{Length}}{\text{Width}}</m> and record the values in the table below:
                             </p>
-                        </li>
+                           <tabular left="medium" right="medium" top="medium" bottom="medium">
+                                <row>
+                                    <cell></cell>
+                                    <cell>Working width</cell>
+                                    <cell>Minimum width</cell>
+                                    <cell>Maximum width</cell>
+                                </row>
 
+                                <row>
+                                    <cell>Working length</cell>
+                                    <cell><m></m></cell>
+                                    <cell><m></m></cell>
+                                    <cell><m></m></cell>
+                                </row>
+
+                                <row>
+                                    <cell>Minimum length</cell>
+                                    <cell><m></m></cell>
+                                    <cell><m></m></cell>
+                                    <cell><m></m></cell>
+                                </row>
+
+                                <row>
+                                    <cell>Maximum length</cell>
+                                    <cell><m></m></cell>
+                                    <cell><m></m></cell>
+                                    <cell><m></m></cell>
+                                </row>
+                            </tabular>
+                        </li>
                         <li>
                             <p>
-                                Calculate the maximum possible value of the ratio.
+                                Find from the table above:
                             </p>
-                        </li>
-
-                        <li>
                             <p>
-                                Calculate the minimum possible value of the ratio.
+                                <ol marker="(i)">
+                                    <li>
+                                        <p>
+                                            The working ratio (here we use the working length and working width).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            The maximum possible value of the ratio.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            The minimum possible value of the ratio.
+                                        </p>
+                                    </li>
+                                </ol>
                             </p>
                         </li>
-
                         <li>
                             <p>
                                 Compare your answers with those of other groups.
@@ -140,13 +177,6 @@
                         </li>
                     </ol>
                 </p>
-
-                
-
-                <p>
-                    <term>Class Discussion</term>
-                </p>
-
                 <p>
                     Which combination of measurements produces the largest ratio? Which combination produces the smallest ratio?
                 </p>

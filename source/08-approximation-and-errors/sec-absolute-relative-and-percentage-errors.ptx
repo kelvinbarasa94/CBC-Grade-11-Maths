@@ -79,60 +79,24 @@
             Clear the surface of three lockers. Use a <m>15</m> cm ruler to measure the total length of each locker and record the observation in the table below.
         </p>
 
-        <figure xml:id="fig-locker-error-analysis">
-            <caption>Visualizing measurement variations and errors on a school locker surface</caption>
-            <image xml:id="img-locker-error-analysis">
-                <description>
-                    A technical 2D diagram illustrating a locker surface being measured in two different ways. 
-                    The top section shows three separate student attempts with a 15 cm ruler: Attempt 1 is slightly longer than the surface, Attempt 2 perfectly aligns with the edge, and Attempt 3 is slightly short. 
-                    The bottom section shows Mr. Mbasu's 90 cm rule spanning the exact surface length as the true value benchmark.
-                </description>
+        <figure xml:id="fig-three-lockers">
+            <caption>Lockers to be measured.</caption>
+
+            <image>
                 <latex-image>
-                    \begin{tikzpicture}[scale=0.12, every node/.style={font=\sffamily\small}]
-                        
-                        \tikzset{
-                            locker/.style={fill=gray!10, draw=gray!60!black, line width=1.5pt, rounded corners=1pt},
-                            ruler15/.style={fill=yellow!40, draw=yellow!70!black, thin},
-                            ruler90/.style={fill=orange!30, draw=orange!70!black, thin},
-                            errorLine/.style={thick, dashed, red}
-                        }
+                    \begin{tikzpicture}[scale=0.08]
+                    \draw[thick, fill=yellow!30]
+                        (0,60) rectangle (90,67);
 
-                        
-                        
-                        \draw[gray!40, dashed] (0, 35) -- (0, -15);
-                        \draw[gray!60, line width=1pt, dashed] (90, 35) -- (90, -15);
-                        \node[gray!80!black, scale=0.8, anchor=south] at (90, 35) {True Edge (90 cm)};
+                    \node at (45,63.5) {15 cm ruler};
+                    \draw[thick] (0,0) rectangle (90,50);
+                    \draw[thick] (0,50) -- (10,60) -- (100,60) -- (90,50);
+                    \draw[thick] (90,0) -- (100,10) -- (100,60);
 
-                        
-                        
-                        \node[anchor=west] at (-35, 30) {\textbf{Locker 1:}};
-                        \draw[locker] (0,28) rectangle (90,31);
-                        \foreach \x in {0,15,30,45,60,75} {
-                            \draw[ruler15] (\x,28.5) rectangle (\x+15,30.5);
-                        }
-                        \draw[ruler15] (75,28.5) rectangle (92,30.5); % Last one slips out to 92
-                        \node[scale=0.75] at (45, 29.5) {15 cm (Repeated)};
-                        \draw[errorLine, ->] (90,32) -- (92,32) node[right, red, scale=0.75] {+2 cm Error};
+                    \node at (45,25) {Locker};
+                    \draw[->] (0,-10) -- (90,-10);
+                    \node at (45,-18) {Length};
 
-                       
-                        \node[anchor=west] at (-35, 17) {\textbf{Locker 2:}};
-                        \draw[locker] (0,15) rectangle (90,18);
-                        \foreach \x in {0,15,30,45,60,75} {
-                            \draw[ruler15] (\x,15.5) rectangle (\x+15,17.5);
-                        }
-                        \node[scale=0.75, text=green!50!black] at (45, 13.5) {Perfect alignment = True Value};
-
-                        
-                        \node[anchor=west] at (-35, 4) {\textbf{Locker 3:}};
-                        \draw[locker] (0,2) rectangle (90,5);
-                        \foreach \x in {0,14.5,29,43.5,58,72.5} { % Cumulative overlap drift
-                            \draw[ruler15] (\x,2.5) rectangle (\x+14.5,4.5);
-                        }
-                        \draw[errorLine, ->] (87,6) -- (90,6);
-                        \node[left, red, scale=0.75] at (86, 6) {-3 cm Error};
-                        
-                        \node[anchor=west, text=orange!80!black] at (-35, -10) {\textbf{Mr. Mbasu's Tool:}};
-                        \draw[locker] (0,-12) rectangle (90,-9);
                     \end{tikzpicture}
                 </latex-image>
             </image>
