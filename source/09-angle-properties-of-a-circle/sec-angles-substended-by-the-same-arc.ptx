@@ -274,13 +274,13 @@
     </insight> -->
 <insight xml:id="insight-angles-same-arc">
     <p>
-        <strong>Core Circle Theorem: Angles Subtended by the Same Arc</strong>
+        <strong>Angles Subtended by the Same Arc</strong>
     </p>
     <p>
         Angles formed at the circumference by drawing lines from the same standing arc are exactly equal in measure. This is often referred to visually as the <strong>"Bow-Tie"</strong> or <strong>"Butterfly"</strong> theorem.
     </p>
     
-    <p><strong>Key Takeaways and Common Misconceptions:</strong></p>
+    <!-- <p><strong>Key Takeaways and Common Misconceptions:</strong></p>
     <ul>
         <li>
             <p>
@@ -297,7 +297,7 @@
                 In complex diagrams, the "bow-tie" shape can be rotated or obscured. Track the arms of an angle down to its endpoints on the circumference. If different angles share the exact same landing points, they are subtended by the same arc and are equal.
             </p>
         </li>
-    </ul>
+    </ul> -->
 </insight>
     <!-- <insight>
      
@@ -385,49 +385,43 @@
             <p>
                 Four points <m>P</m>, <m>Q</m>, <m>R</m>, and <m>S</m> are positioned on a circle. Chords <m>PR</m> and <m>QS</m> cross each other. The angle subtended by arc <m>SR</m> at point <m>P</m> is <m>\angle SPR = 3x + 10^\circ</m> and at point <m>Q</m> is <m>\angle SQR = 5x - 12^\circ</m>. Solve for <m>x</m> and determine the physical size of these angles.
             </p>
-            <figure xml:id="fig-chords-algebraic-same-segment">
-            <caption>Intersecting chords PR and QS inside a circle.</caption>
+           <figure xml:id="figure-angles-same-segment">
+            <caption>Angles subtended on the circumference by the same arc <m>SR</m></caption>
             <image width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (P) at (135:2);
-                    \coordinate (Q) at (45:2);
-                    \coordinate (R) at (-45:2);
-                    \coordinate (S) at (-135:2);
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
+                    % Positions chosen to accurately form a 43-degree inscribed angle
+                    \tkzDefPointOnCircle[R = center O angle 130 radius 3]\tkzGetPoint{P}
+                    \tkzDefPointOnCircle[R = center O angle 50 radius 3]\tkzGetPoint{Q}
+                    \tkzDefPointOnCircle[R = center O angle 306 radius 3]\tkzGetPoint{R}
+                    \tkzDefPointOnCircle[R = center O angle 220 radius 3]\tkzGetPoint{S}
 
-                    % --- Colored Background Shading ---
-                    \fill[cyan!20] (S) -- (P) -- (R) -- cycle;
-                    \fill[orange!20] (S) -- (Q) -- (R) -- cycle;
+                    % Draw the circle boundary
+                    \tkzDrawCircle[thick](O,P)
 
-                    % --- Draw Base Circle ---
-                    \draw[thick, gray] (O) circle (2cm);
+                    % --- Draw intersecting chords and segment lines ---
+                    \tkzDrawSegments(P,R Q,S P,S Q,R)
 
-                    % --- Draw Chords ---
-                    \draw[thick, blue] (P) -- (R);
-                    \draw[thick, blue] (P) -- (S);
-                    \draw[thick, orange] (Q) -- (R);
-                    \draw[thick, orange] (Q) -- (S);
-                    
-                    % --- Highlight Common Arc SR ---
-                    \draw[line width=2pt, red] (-135:2) arc (-135:-45:2);
-                    \node[red, below] at (-90:2.1) {Arc $SR$};
+                    % --- Fill and mark the angles ---
+                    \tkzFillAngle[fill=red!20,opacity=.6, size=.6](S,P,R)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=.6](S,Q,R)
 
-                    % --- Clean Angle Markers (No Clips) ---
-                    % Angle SPR Marker
-                    \draw[thick, blue] ($(P)+(225:0.4)$) arc (250:315:0.4);
-                    \node[blue] at ($(P)+(270:0.65)$) {\small $3x + 10^{\circ}$};
+                    \tkzMarkAngle[size=.6,color=red](S,P,R)
+                    \tkzMarkAngle[size=.6,color=blue](S,Q,R)
 
-                    % Angle SQR Marker
-                    \draw[thick, orange] ($(Q)+(225:0.4)$) arc (250:315:0.4);
-                    \node[orange] at ($(Q)+(270:0.65)$) {\small $5x - 12^{\circ}$};
+                    % --- Angle algebraic labels ---
+                    \tkzLabelAngle[pos=1.4](S,P,R){$3x + 10^{\circ}$}
+                    \tkzLabelAngle[pos=1.4](S,Q,R){$5x - 12^{\circ}$}
 
-                    % --- Label Points ---
-                    \fill (P) circle (1.5pt) node[above left] {$P$};
-                    \fill (Q) circle (1.5pt) node[above right] {$Q$};
-                    \fill (R) circle (1.5pt) node[below right] {$R$};
-                    \fill (S) circle (1.5pt) node[below left] {$S$};
+                    % --- Points and point labels ---
+                    \tkzDrawPoints(P,Q,R,S)
+                    \tkzLabelPoints[above left](P)
+                    \tkzLabelPoints[above right](Q)
+                    \tkzLabelPoints[below right](R)
+                    \tkzLabelPoints[below left](S)
+
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -465,56 +459,51 @@
             <p>
                 In a circle, points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> are arranged such that chords <m>AC</m> and <m>BD</m> intersect at <m>E</m>. If <m>\angle BAC = 45^\circ</m> and <m>\angle AEB = 80^\circ</m>, find the measure of <m>\angle BDC</m>.
             </p>
-            <figure xml:id="fig-chords-intersection-segment-angles">
-            <caption>Intersecting chords AC and BD meeting at point E inside a circle.</caption>
+          <figure xml:id="figure-intersecting-chords">
+            <caption>Intersecting chords <m>AC</m> and <m>BD</m> inside a circle</caption>
             <image width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (A) at (140:2);
-                    \coordinate (B) at (50:2);
-                    \coordinate (C) at (-30:2);
-                    \coordinate (D) at (-120:2);
-
-                    % --- Find Intersection Point E ---
-                    \coordinate (E) at (intersection of A--C and B--D);
-
-                    % --- Colored Background Shading to Engage Learners ---
-                    \fill[cyan!15] (A) -- (B) -- (E) -- cycle;
-
-                    % --- Draw Base Circle ---
-                    \draw[thick, gray] (O) circle (2cm);
-
-                    % --- Draw Chords and Inner Lines ---
-                    \draw[thick, blue] (A) -- (C);
-                    \draw[thick, blue] (B) -- (D);
-                    \draw[thick, orange] (A) -- (B);
-                    \draw[thick, orange] (C) -- (D);
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
                     
-                    % --- Highlight Common Shared Arc BC ---
-                    \draw[line width=2.5pt, red] (50:2) arc (50:-30:2);
-                    \node[red, right] at (10:2.1) {Arc $BC$};
+                    % Mathematically consistent arc distribution to produce exactly 45 and 80 deg angles
+                    \tkzDefPointOnCircle[R = center O angle 330 radius 3]\tkzGetPoint{A}
+                    \tkzDefPointOnCircle[R = center O angle 40  radius 3]\tkzGetPoint{B}
+                    \tkzDefPointOnCircle[R = center O angle 130 radius 3]\tkzGetPoint{C}
+                    \tkzDefPointOnCircle[R = center O angle 220 radius 3]\tkzGetPoint{D}
+                    
+                    % Intersection point E
+                    \tkzInterLL(A,C)(B,D)\tkzGetPoint{E}
 
-                    % --- Clean Interior Angle Markers ---
-                    % Angle BAC at vertex A
-                    \draw[thick, blue] (A) ++(-40:0.4) arc (-40:-77:0.4);
-                    \node[blue, below right] at ($(A)+( -55:0.55)$) {\small $45^{\circ}$};
+                    % Draw the circle boundary
+                    \tkzDrawCircle[thick](O,A)
 
-                    % Angle AEB at vertex E
-                    \draw[thick, gray!80!black] (E) ++(50:0.3) arc (50:140:0.3);
-                    \node[gray!80!black, above] at ($(E)+(90:0.35)$) {\small $80^{\circ}$};
+                    % --- Draw intersecting chords and outer boundary lines ---
+                    \tkzDrawSegments(A,C B,D A,B C,D)
 
-                    % Target Angle BDC at vertex D
-                    \draw[thick, orange] (D) ++(60:0.4) arc (60:97:0.4);
-                    \node[orange, above left] at ($(D)+(78:0.55)$) {\small ?};
+                    % --- Fill and mark the given and target angles ---
+                    \tkzFillAngle[fill=red!20,opacity=.6, size=.6](B,A,C)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=.5](A,E,B)
+                    \tkzFillAngle[fill=green!15,opacity=.6, size=.6](B,D,C)
 
-                    % --- Label Points ---
-                    \fill (A) circle (1.5pt) node[above left] {$A$};
-                    \fill (B) circle (1.5pt) node[above right] {$B$};
-                    \fill (C) circle (1.5pt) node[below right] {$C$};
-                    \fill (D) circle (1.5pt) node[below left] {$D$};
-                    \fill (E) circle (1.5pt) node[below] {$E$};
+                    \tkzMarkAngle[size=.6,color=red](B,A,C)
+                    \tkzMarkAngle[size=.5,color=blue](A,E,B)
+                    \tkzMarkAngle[size=.6,color=green!60!black](B,D,C)
+
+                    % --- Angle labels ---
+                    \tkzLabelAngle[pos=1.1](B,A,C){$45^{\circ}$}
+                    \tkzLabelAngle[pos=0.8](A,E,B){$80^{\circ}$}
+                    \tkzLabelAngle[pos=1.1](B,D,C){$?$}
+
+                    % --- Points and point labels ---
+                    \tkzDrawPoints(A,B,C,D,E)
+                    \tkzLabelPoints[below right](A)
+                    \tkzLabelPoints[above right](B)
+                    \tkzLabelPoints[above left](C)
+                    \tkzLabelPoints[below left](D)
+                    \tkzLabelPoints[below](E)
+
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -562,49 +551,44 @@
                 <p>
                     Two distinct angles on a circumference, <m>\angle PQS</m> and <m>\angle PRS</m>, stand on the same arc <m>PS</m>. If <m>\angle PQS = 3a + 2b</m> and <m>\angle PRS = a + 4b</m> where the physical measure of <m>\angle PQS = 54^\circ</m>, find the values of constants <m>a</m> and <m>b</m>.
                 </p>
-                <figure xml:id="fig-angles-same-segment-algebraic">
-            <caption>Two distinct inscribed angles sharing the common base arc PS.</caption>
+                <figure xml:id="figure-angles-same-arc">
+            <caption>Angles <m>\angle PQS</m> and <m>\angle PRS</m> standing on the shared arc <m>PS</m></caption>
             <image width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (P) at (-135:2);
-                    \coordinate (S) at (-45:2);
-                    \coordinate (Q) at (135:2);
-                    \coordinate (R) at (45:2);
-
-                    % --- Colored Background Shading for Visual Engagement ---
-                    \fill[cyan!15] (P) -- (Q) -- (S) -- cycle;
-                    \fill[orange!15] (P) -- (R) -- (S) -- cycle;
-
-                    % --- Draw Base Circle ---
-                    \draw[thick, gray] (O) circle (2cm);
-
-                    % --- Draw Chords ---
-                    \draw[thick, blue] (Q) -- (P);
-                    \draw[thick, blue] (Q) -- (S);
-                    \draw[thick, orange] (R) -- (P);
-                    \draw[thick, orange] (R) -- (S);
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
                     
-                    % --- Highlight Common Shared Arc PS ---
-                    \draw[line width=2.5pt, red] (-135:2) arc (-135:-45:2);
-                    \node[red, below] at (-90:2.1) {Arc $PS$};
+                    % Position points to ensure the subtended inscribed angles are exactly 54 degrees
+                    \tkzDefPointOnCircle[R = center O angle 110 radius 3]\tkzGetPoint{Q}
+                    \tkzDefPointOnCircle[R = center O angle 40  radius 3]\tkzGetPoint{R}
+                    \tkzDefPointOnCircle[R = center O angle 210 radius 3]\tkzGetPoint{P}
+                    \tkzDefPointOnCircle[R = center O angle 318 radius 3]\tkzGetPoint{S}
 
-                    % --- Clean Interior Angle Markers ---
-                    % Angle PQS Marker (Vertex Q)
-                    \draw[thick, blue] (Q) ++(287:0.4) arc (287:323:0.4);
-                    \node[blue] at ($(Q)+(270:0.65)$) {\small $3a + 2b$};
+                    % Draw the circle boundary
+                    \tkzDrawCircle[thick](O,P)
 
-                    % Angle PRS Marker (Vertex R)
-                    \draw[thick, orange] (R) ++(217:0.4) arc (217:253:0.4);
-                    \node[orange] at ($(R)+(270:0.65)$) {\small $a + 4b$};
+                    % --- Draw chords forming the angles ---
+                    \tkzDrawSegments(Q,P Q,S R,P R,S)
 
-                    % --- Label Points ---
-                    \fill (P) circle (1.5pt) node[below left] {$P$};
-                    \fill (S) circle (1.5pt) node[below right] {$S$};
-                    \fill (Q) circle (1.5pt) node[above left] {$Q$};
-                    \fill (R) circle (1.5pt) node[above right] {$R$};
+                    % --- Fill and mark the equal angles ---
+                    \tkzFillAngle[fill=red!20,opacity=.6, size=.6](P,Q,S)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=.6](P,R,S)
+
+                    \tkzMarkAngle[size=.6,color=red](P,Q,S)
+                    \tkzMarkAngle[size=.6,color=blue](P,R,S)
+
+                    % --- Angle algebraic labels ---
+                    \tkzLabelAngle[pos=1.4](P,Q,S){$3a + 2b$}
+                    \tkzLabelAngle[pos=1.4](P,R,S){$a + 4b$}
+
+                    % --- Points and point labels ---
+                    \tkzDrawPoints(P,Q,R,S)
+                    \tkzLabelPoints[above left](Q)
+                    \tkzLabelPoints[above right](R)
+                    \tkzLabelPoints[below left](P)
+                    \tkzLabelPoints[below right](S)
+
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -680,53 +664,44 @@
                 <p>
                     On a circular radar display, two sensor beams originate from the same boundary points <m>A</m> and <m>B</m>. One beam meets the outer ring at target point <m>P</m> and the other meets at target point <m>Q</m>. If the angle measured at target <m>P</m> is <m>\angle APB = 44^\circ</m>, calculate the angle <m>\angle AQB</m> measured at target <m>Q</m>.
                 </p>
-               <figure xml:id="fig-radar-angles-same-segment">
-            <caption>Radar display showing sensor beams hitting target points P and Q along the circumference.</caption>
+               <figure xml:id="figure-radar-display">
+            <caption>Sensor beams on a circular radar display creating angles in the same segment</caption>
             <image width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (A) at (-140:2);
-                    \coordinate (B) at (-40:2);
-                    \coordinate (P) at (130:2);
-                    \coordinate (Q) at (40:2);
-
-                    % --- Radar Concentric Target Rings Background ---
-                    \draw[gray!30, thin] (O) circle (0.7cm);
-                    \draw[gray!30, thin] (O) circle (1.4cm);
-
-                    % --- Colored Background Shading for Radar Beams ---
-                    \fill[green!12, opacity=0.8] (A) -- (P) -- (B) -- cycle;
-                    \fill[cyan!12, opacity=0.7] (A) -- (Q) -- (B) -- cycle;
-
-                    % --- Draw Outer Ring ---
-                    \draw[line width=1.2pt, gray!80!black] (O) circle (2cm);
-
-                    % --- Draw Sensor Beams (Chords) ---
-                    \draw[thick, green!60!black] (P) -- (A);
-                    \draw[thick, green!60!black] (P) -- (B);
-                    \draw[thick, blue] (Q) -- (A);
-                    \draw[thick, blue] (Q) -- (B);
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
                     
-                    % --- Highlight Shared Origin Arc AB ---
-                    \draw[line width=2.5pt, orange] (-140:2) arc (-140:-40:2);
-                    \node[orange, below] at (-90:2.15) {\small Shared Arc $AB$};
+                    % Angle AOB is 88 degrees to ensure inscribed angles are exactly 44 degrees
+                    \tkzDefPointOnCircle[R = center O angle 210 radius 3]\tkzGetPoint{A}
+                    \tkzDefPointOnCircle[R = center O angle 298 radius 3]\tkzGetPoint{B}
+                    \tkzDefPointOnCircle[R = center O angle 100 radius 3]\tkzGetPoint{P}
+                    \tkzDefPointOnCircle[R = center O angle 40  radius 3]\tkzGetPoint{Q}
 
-                    % --- Clean Internal Angle Markers ---
-                    % Angle APB at vertex P
-                    \draw[thick, green!60!black] (P) ++(-15:0.4) arc (-15:-80:0.4);
-                    \node[green!60!black] at ($(P)+(-48:0.65)$) {\small $44^{\circ}$};
+                    % Draw the radar boundary ring
+                    \tkzDrawCircle[thick](O,A)
 
-                    % Angle AQB at vertex Q
-                    \draw[thick, blue] (Q) ++(-100:0.4) arc (-100:-165:0.4);
-                    \node[blue] at ($(Q)+(-132:0.65)$) {\small ?};
+                    % --- Draw sensor beams ---
+                    \tkzDrawSegments(P,A P,B Q,A Q,B)
 
-                    % --- Label Points ---
-                    \fill (A) circle (1.5pt) node[below left] {$A$};
-                    \fill (B) circle (1.5pt) node[below right] {$B$};
-                    \fill (P) circle (1.5pt) node[above left] {$P$};
-                    \fill (Q) circle (1.5pt) node[above right] {$Q$};
+                    % --- Fill and mark the target angles ---
+                    \tkzFillAngle[fill=red!20,opacity=.6, size=.6](A,P,B)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=.6](A,Q,B)
+
+                    \tkzMarkAngle[size=.6,color=red](A,P,B)
+                    \tkzMarkAngle[size=.6,color=blue](A,Q,B)
+
+                    % --- Angle labels ---
+                    \tkzLabelAngle[pos=1.1](A,P,B){$44^{\circ}$}
+                    \tkzLabelAngle[pos=1.1](A,Q,B){$?$}
+
+                    % --- Points and point labels ---
+                    \tkzDrawPoints(A,B,P,Q)
+                    \tkzLabelPoints[below left](A)
+                    \tkzLabelPoints[below right](B)
+                    \tkzLabelPoints[above left](P)
+                    \tkzLabelPoints[above right](Q)
+
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -747,127 +722,107 @@
         </exercise>
 
         <exercise>
-            <statement>
+             <statement>
                 <p>
-                    Four points <m>W</m>, <m>X</m>, <m>Y</m>, and <m>Z</m> are spaced sequentially on a circle. Chords <m>WY</m> and <m>XZ</m> cross at an intersection point <m>E</m>. If <m>\angle XWZ = 27^\circ</m>, identify which other angle in the circle must be exactly <m>27^\circ</m> and write down your geometric reasoning.
+                    Four peg markers are placed on a circular school playing field at points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> in clockwise order. Students tie ropes between the pegs forming paths <m>AC</m>, <m>AD</m>, <m>BC</m>, and <m>BD</m>. If the angle formed at peg <m>C</m> by paths <m>AC</m> and <m>BC</m> is <m>\angle ACB = 47^\circ</m>, state the measure of <m>\angle ADB</m> and explain your reasoning.
                 </p>
-                <figure xml:id="fig-chords-intersection-sequential-points">
-            <caption>Intersecting chords WY and XZ inside a circle with a shared subtended arc base.</caption>
-            <image width="65%">
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (W) at (140:2);
-                    \coordinate (X) at (60:2);
-                    \coordinate (Y) at (-30:2);
-                    \coordinate (Z) at (-110:2);
+               <figure xml:id="angles-in-same-segment-clockwise-fixed">
+                    <caption></caption>
+                    <image width="65%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                            % --- Centre and points on the circle ---
+                            \tkzDefPoint(0,0){O}
+                            
+                            % Points positioned in strict clockwise order: A -> B -> C -> D
+                            \tkzDefPointOnCircle[R = center O angle 160 radius 3]\tkzGetPoint{A}
+                            \tkzDefPointOnCircle[R = center O angle 80 radius 3]\tkzGetPoint{B}
+                            \tkzDefPointOnCircle[R = center O angle 20 radius 3]\tkzGetPoint{C}
+                            \tkzDefPointOnCircle[R = center O angle 280 radius 3]\tkzGetPoint{D}
 
-                    % --- Find Intersection Point E ---
-                    \coordinate (E) at (intersection of W--Y and X--Z);
+                            % Draw the circle
+                            \tkzDrawCircle[thick](O,A)
 
-                    % --- Colored Background Shading for Overlapping Segments ---
-                    \fill[cyan!15] (W) -- (X) -- (Z) -- cycle;
-                    \fill[orange!15] (Y) -- (X) -- (Z) -- cycle;
+                            % --- Draw paths (ropes) ---
+                            \tkzDrawSegments(A,C A,D B,C B,D)
 
-                    % --- Draw Base Circle ---
-                    \draw[thick, gray] (O) circle (2cm);
+                            % --- Fill and mark interior angles (reversing order fixes the reflex angle issue) ---
+                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.8](B,C,A)
+                            \tkzFillAngle[fill=orange!20,opacity=.6, size=.8](B,D,A)
 
-                    % --- Draw Intersecting Chords ---
-                    \draw[thick, blue] (W) -- (Y);
-                    \draw[thick, blue] (X) -- (Z);
-                    \draw[thick, gray!70!black] (W) -- (X);
-                    \draw[thick, gray!70!black] (Y) -- (Z);
-                    
-                    % --- Highlight Common Shared Subtended Arc XZ ---
-                    \draw[line width=2.5pt, red] (60:2) arc (60:-110:2);
-                    \node[red, right] at (-25:2.15) {\small Arc $XZ$};
+                            \tkzMarkAngle[size=.8,color=blue](B,C,A)
+                            \tkzMarkAngle[size=.8,color=orange](B,D,A)
 
-                    % --- Clean Interior Angle Markers (Guaranteed Inside) ---
-                    % Given Angle XWZ at vertex W (27 degrees)
-                    \draw[thick, blue] (W) ++(-40:0.5) arc (-40:-77:0.5);
-                    \node[blue, below right] at ($(W)+(-58:0.75)$) {\small $27^{\circ}$};
+                            % --- Angle labels ---
+                            \tkzLabelAngle[pos=1.3](B,C,A){$47^{\circ}$}
+                            \tkzLabelAngle[pos=1.3](B,D,A){$x^{\circ}$}
 
-                    % Matching Angle XYZ at vertex Y (27 degrees)
-                    \draw[thick, orange] (Y) ++(115:0.5) arc (115:150:0.5);
-                    \node[orange, left] at ($(Y)+(132:0.75)$) {\small ?};
+                            % --- Points and point labels ---
+                            \tkzDrawPoints(A,B,C,D)
+                            \tkzLabelPoints[above left](A)
+                            \tkzLabelPoints[above right](B)
+                            \tkzLabelPoints[right](C)
+                            \tkzLabelPoints[below](D)
 
-                    % --- Label Geometric Points ---
-                    \fill (W) circle (1.5pt) node[above left] {$W$};
-                    \fill (X) circle (1.5pt) node[above right] {$X$};
-                    \fill (Y) circle (1.5pt) node[below right] {$Y$};
-                    \fill (Z) circle (1.5pt) node[below left] {$Z$};
-                    \fill (E) circle (1.5pt) node[below] {$E$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <p>
-                    Trace the arms of the angle <m>\angle XWZ</m> back to their endpoints on the circumference. The angle stands on the arc <m>XZ</m>.
+                    By the Angles in the Same Segment Theorem, angles subtended by the same arc at the circumference in the same segment are equal:
                 </p>
+                <md>\angle ADB = \angle ACB = 47^\circ</md>
                 <p>
-                    Now locate the other angle that has its vertex on the circumference and stands on the same arc <m>XZ</m>. This is angle <m>\angle XYZ</m>.
-                </p>
-                <p>
-                    By the theorem that angles standing on the same arc are equal:
-                </p>
-                <md>\angle XYZ = \angle XWZ = 27^\circ</md>
-                <p>
-                    The angle <m>\angle XYZ</m> (or <m>\angle XYE</m>) is <m>27^\circ</m> because both stand on arc <m>XZ</m>.
+                    Therefore, the measure of <m>\angle ADB</m> is <m>47^\circ</m> because both angles are subtended by the same boundary arc <m>AB</m>.
                 </p>
             </solution>
         </exercise>
-
+         
         <exercise>
             <statement>
                 <p>
                     Two angles on the circumference of a circle stand on the same arc <m>MN</m>. The first angle is <m>\angle MKN = 3k + 12^\circ</m> and the second is <m>\angle MLN = 5k - 8^\circ</m>. Solve for <m>k</m> and determine the actual measure of the angles.
                 </p>
-                <figure xml:id="fig-angles-same-arc-algebraic">
-            <caption>Two inscribed angles, MKN and MLN, subtended by the common shared arc segment MN.</caption>
+                <figure xml:id="figure-angles-same-arc-k">
+            <caption>Angles <m>\angle MKN</m> and <m>\angle MLN</m> subtended by arc <m>MN</m></caption>
             <image width="65%">
                 <latex-image>
-                    \begin{tikzpicture}[scale=1.5]
-                    % --- Define Coordinates on the Circle ---
-                    \coordinate (O) at (0,0);
-                    \coordinate (M) at (-135:2);
-                    \coordinate (N) at (-45:2);
-                    \coordinate (K) at (125:2);
-                    \coordinate (L) at (45:2);
-
-                    % --- Colored Shading for Visual Polish ---
-                    \fill[cyan!12] (M) -- (K) -- (N) -- cycle;
-                    \fill[orange!12] (M) -- (L) -- (N) -- cycle;
-
-                    % --- Draw Base Circle ---
-                    \draw[thick, gray] (O) circle (2cm);
-
-                    % --- Draw Complete Chord Ray Paths ---
-                    \draw[thick, blue] (K) -- (M);
-                    \draw[thick, blue] (K) -- (N);
-                    \draw[thick, orange!80!black] (L) -- (M);
-                    \draw[thick, orange!80!black] (L) -- (N);
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
                     
-                    % --- Highlight Shared Base Arc MN ---
-                    \draw[line width=2.5pt, red] (-135:2) arc (-135:-45:2);
-                    \node[red, below] at (-90:2.15) {\small Shared Arc $MN$};
+                    % Central angle of 84 degrees ensures inscribed angles are exactly 42 degrees
+                    \tkzDefPointOnCircle[R = center O angle 110 radius 3]\tkzGetPoint{K}
+                    \tkzDefPointOnCircle[R = center O angle 40  radius 3]\tkzGetPoint{L}
+                    \tkzDefPointOnCircle[R = center O angle 220 radius 3]\tkzGetPoint{M}
+                    \tkzDefPointOnCircle[R = center O angle 304 radius 3]\tkzGetPoint{N}
 
-                    % --- Clean Internal Angle Labeling (Guaranteed Inside) ---
-                    % Angle MKN at vertex K
-                    \draw[thick, blue] (K) ++(-20:0.4) arc (-20:-82:0.4);
-                    \node[blue] at ($(K)+(-51:0.7)$) {\small $3k + 12^{\circ}$};
+                    % Draw the circle boundary
+                    \tkzDrawCircle[thick](O,K)
 
-                    % Angle MLN at vertex L
-                    \draw[thick, orange!80!black] (L) ++(-98:0.4) arc (-98:-160:0.4);
-                    \node[orange!80!black] at ($(L)+(-129:0.7)$) {\small $5k - 8^{\circ}$};
+                    % --- Draw chords forming the angles ---
+                    \tkzDrawSegments(K,M K,N L,M L,N)
 
-                    % --- Draw and Label Boundary Points ---
-                    \fill (M) circle (1.5pt) node[below left] {$M$};
-                    \fill (N) circle (1.5pt) node[below right] {$N$};
-                    \fill (K) circle (1.5pt) node[above left] {$K$};
-                    \fill (L) circle (1.5pt) node[above right] {$L$};
+                    % --- Fill and mark the equal angles ---
+                    \tkzFillAngle[fill=red!20,opacity=.6, size=.6](M,K,N)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=.6](M,L,N)
+
+                    \tkzMarkAngle[size=.6,color=red](M,K,N)
+                    \tkzMarkAngle[size=.6,color=blue](M,L,N)
+
+                    % --- Angle algebraic labels ---
+                    \tkzLabelAngle[pos=1.4](M,K,N){$3k + 12^{\circ}$}
+                    \tkzLabelAngle[pos=1.4](M,L,N){$5k - 8^{\circ}$}
+
+                    % --- Points and point labels ---
+                    \tkzDrawPoints(M,N,K,L)
+                    \tkzLabelPoints[above left](K)
+                    \tkzLabelPoints[above right](L)
+                    \tkzLabelPoints[below left](M)
+                    \tkzLabelPoints[below right](N)
+
                     \end{tikzpicture}
                 </latex-image>
             </image>
@@ -896,125 +851,77 @@
         </exercise>
 
         <exercise>
-            <statement>
-                <p>
-                    In a circle, chords <m>PR</m> and <m>QS</m> cross at point <m>T</m> inside the circle. If the angle <m>\angle SPQ = 68^\circ</m> and the vertical angle of the intersection is <m>\angle PTQ = 82^\circ</m>, find the measure of <m>\angle PRQ</m>.
-                </p>
-                <figure xml:id="intersecting-chords-fixed">
-    <caption></caption>
-    <image width="65%">
-        <latex-image>
-            <![CDATA[
-            \begin{tikzpicture}[scale=1.2]
-                % --- Step 1: Define Center and Perimeter Points ---
-                \coordinate (O) at (0,0);
-                
-                % Adjusted positions along the perimeter circumference to fit the exact geometry
-                \coordinate (P) at (135:2.5);
-                \coordinate (Q) at (45:2.5);
-                \coordinate (R) at (315:2.5);
-                \coordinate (S) at (225:2.5);
-                
-                % Dynamically solve the intersection of lines PR and QS
-                \coordinate (T) at (intersection of P--R and Q--S);
+    <statement>
+        <p>
+            Four points <m>A, B, C</m>, and <m>D</m> are positioned sequentially on the circumference of a circle. The chords <m>AC</m> and <m>BD</m> intersect at an interior point <m>E</m>. If <m>\angle BAC = 39^{\circ}</m>, determine the measure of <m>\angle BDC</m>.
+        </p>
+        <figure xml:id="figure-sequential-chords">
+            <caption>Intersecting chords <m>AC</m> and <m>BD</m> with sequential points</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}
+                    % --- Centre and points on the circle ---
+                    \tkzDefPoint(0,0){O}
+                    
+                    % Central angle BOC = 2 * 39 = 78 degrees to ensure exact visual proportion
+                    \tkzDefPointOnCircle[R = center O angle 340 radius 3]\tkzGetPoint{A}
+                    \tkzDefPointOnCircle[R = center O angle 60  radius 3]\tkzGetPoint{B}
+                    \tkzDefPointOnCircle[R = center O angle 138 radius 3]\tkzGetPoint{C}
+                    \tkzDefPointOnCircle[R = center O angle 220 radius 3]\tkzGetPoint{D}
+                    
+                    % Intersection point E
+                    \tkzInterLL(A,C)(B,D)\tkzGetPoint{E}
 
-                % --- Step 2: Draw Main Boundary Circle ---
-                \draw[thick] (O) circle (2.5);
-                
-                % --- Step 3: Draw Angles (Fills & Arcs) ---
-                % Inscribed Angle SPQ = 68 degrees
-                \begin{scope}
-                    \clip (P) -- (S) -- (Q) -- cycle;
-                    \draw[draw=none, fill=blue!20, opacity=0.6] (P) circle (0.5);
-                    \draw[blue, thick] (P) circle (0.5);
-                \end{scope}
-                \node[blue, below right] at ($(P)+(-50:0.6)$) {$68^{\circ}$};
+                    % Draw the circle boundary
+                    \tkzDrawCircle[thick](O,A)
 
-                % Vertical intersection angle PTQ = 82 degrees
-                \begin{scope}
-                    \clip (T) -- (P) -- (Q) -- cycle;
-                    \draw[draw=none, fill=gray!30, opacity=0.6] (T) circle (0.4);
-                    \draw[black, thick] (T) circle (0.4);
-                \end{scope}
-                \node[black, above] at ($(T)+(90:0.45)$) {$82^{\circ}$};
+                    % --- Draw intersecting chords and boundary segments ---
+                    \tkzDrawSegments(A,C B,D A,B C,D)
 
-                % Target angle PRQ to solve
-                \begin{scope}
-                    \clip (R) -- (P) -- (Q) -- cycle;
-                    \draw[draw=none, fill=red!20, opacity=0.6] (R) circle (0.5);
-                    \draw[red, thick] (R) circle (0.5);
-                \end{scope}
-                \node[red, above left] at ($(R)+(130:0.6)$) {$\angle PRQ$};
+                    % --- Fill and mark the given and required angles ---
+                    \tkzFillAngle[fill=red!20,opacity=.6, size=.6](B,A,C)
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=.6](B,D,C)
 
-                % --- Step 4: Draw Intersecting Chords & Solid Side Segments ---
-                \draw[thick] (P) -- (R); % Chord PR
-                \draw[thick] (Q) -- (S); % Chord QS
-                
-                \draw[thick] (P) -- (S); % Drawn solid as requested
-                \draw[thick] (Q) -- (R); % Drawn solid as requested
-                
-                % Top and bottom segments kept dashed as reference guide paths
-                \draw[thick, dashed, opacity=0.5] (P) -- (Q);
-                \draw[thick, dashed, opacity=0.5] (S) -- (R);
+                    \tkzMarkAngle[size=.6,color=red](B,A,C)
+                    \tkzMarkAngle[size=.6,color=blue](B,D,C)
 
-                % --- Step 5: Plot and Label Features ---
-                \foreach \pt/\pos in {P/above left, Q/above right, R/below right, S/below left, T/below left} {
-                    \fill (\pt) circle (2pt);
-                    \node[\pos] at (\pt) {$\pt$};
-                }
-            \end{tikzpicture}
-            ]]>
-        </latex-image>
-    </image>
-</figure>
-            </statement>
-            <solution>
-                <p>
-                    Let us first analyze triangle <m>PTQ</m>. The angle <m>\angle PTQ = 82^\circ</m> and <m>\angle SPQ = 68^\circ</m> (which is the same as <m>\angle TPQ = 68^\circ</m>).
-                </p>
-                <p>
-                    Calculate the third angle <m>\angle TQP</m> in triangle <m>PTQ</m>:
-                </p>
-                <md>\angle TQP = 180^\circ - (82^\circ + 68^\circ)</md>
-                <md>\angle TQP = 180^\circ - 150^\circ = 30^\circ</md>
-                <p>
-                    Note that the angle <m>\angle TQP</m> is the same as <m>\angle SQP</m>. This angle stands on the boundary arc <m>SP</m>.
-                </p>
-                <p>
-                    Identify the standing arc for the target angle <m>\angle PRQ</m> (which is <m>\angle SRQ</m>):
-                </p>
-                <ul>
-                    <li><p><m>\angle PRQ</m> stands on the arc <m>PQ</m>.</p></li>
-                    <li><p>The angle <m>\angle PSQ</m> also stands on the arc <m>PQ</m>.</p></li>
-                </ul>
-                <p>
-                    Let's find the measure of <m>\angle PSQ</m> (which is <m>\angle PST</m>). In triangle <m>PTS</m>, the vertical angle <m>\angle PTS = \angle PTQ = 82^\circ</m> (vertically opposite). 
-                </p>
-                <p>
-                    However, we can look at the standing arcs directly:
-                </p>
-                <ul>
-                    <li><p><m>\angle PRQ</m> stands on arc <m>PQ</m>.</p></li>
-                    <li><p><m>\angle PSQ</m> stands on arc <m>PQ</m>.</p></li>
-                </ul>
-                <p>
-                    Also:
-                </p>
-                <ul>
-                    <li><p><m>\angle SPQ = 68^\circ</m> stands on arc <m>SQ</m>.</p></li>
-                    <li><p><m>\angle SRQ</m> must also stand on arc <m>SQ</m>, which means <m>\angle SRQ = 68^\circ</m>.</p></li>
-                </ul>
-                <p>
-                    Now let's trace the angle <m>\angle SQP = 30^\circ</m>, which stands on arc <m>SP</m>. The angle <m>\angle SRP</m> (which is <m>\angle PRQ</m>) also stands on arc <m>SP</m>.
-                </p>
-                <p>
-                    Therefore, by the theorem:
-                </p>
-                <md>\angle PRQ = \angle SQP = 30^\circ</md>
-                <p>
-                    The measure of the angle <m>\angle PRQ</m> is <m>30^\circ</m>.
-                </p>
-            </solution>
+                    % --- Angle labels ---
+                    \tkzLabelAngle[pos=1.1](B,A,C){$39^{\circ}$}
+                    \tkzLabelAngle[pos=1.1](B,D,C){$?$}
+
+                    % --- Points and point labels ---
+                    \tkzDrawPoints(A,B,C,D,E)
+                    \tkzLabelPoints[below right](A)
+                    \tkzLabelPoints[above right](B)
+                    \tkzLabelPoints[above left](C)
+                    \tkzLabelPoints[below left](D)
+                    \tkzLabelPoints[above](E)
+
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            To find the size of the unknown angle, we trace the geometric lines back to their source on the circle's boundary.
+        </p>
+        <p>
+            The given angle <m>\angle BAC = 39^{\circ}</m> has its vertex at <m>A</m>, and its arms open out to touch the endpoints of the minor arc <m>BC</m>.
+        </p>
+        <p>
+            Similarly, the target angle <m>\angle BDC</m> has its vertex at <m>D</m>, and its arms open out to touch the exact same minor arc <m>BC</m>.
+        </p>
+        <p>
+            According to the circle theorem, angles subtended by the same arc at the circumference are equal (angles in the same segment):
+            <me>\angle BDC = \angle BAC</me>
+            <me>\angle BDC = 39^{\circ}</me>
+        </p>
+        <p>
+            Thus, the measure of  <me>\angle BDC = 39^{\circ}</me>(reason: angles subtended by the same arc at the circumference are equal).
+        </p>
+    </solution>
+
         </exercise>
 
         <exercise>

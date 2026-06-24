@@ -872,62 +872,82 @@
         </exercise>
 
         <exercise>
-            <statement>
-                <p>
-                    Four peg markers are placed on a circular school playing field at points <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> in clockwise order. Students tie ropes between the pegs forming paths <m>AC</m>, <m>AD</m>, <m>BC</m>, and <m>BD</m>. If the angle formed at peg <m>C</m> by paths <m>AC</m> and <m>BC</m> is <m>\angle ACB = 47^\circ</m>, state the measure of <m>\angle ADB</m> and explain your reasoning.
-                </p>
-               <figure xml:id="angles-in-same-segment-clockwise-fixed">
-                    <caption></caption>
-                    <image width="65%">
-                        <latex-image>
-                            \begin{tikzpicture}
-                            % --- Centre and points on the circle ---
-                            \tkzDefPoint(0,0){O}
-                            
-                            % Points positioned in strict clockwise order: A -> B -> C -> D
-                            \tkzDefPointOnCircle[R = center O angle 160 radius 3]\tkzGetPoint{A}
-                            \tkzDefPointOnCircle[R = center O angle 80 radius 3]\tkzGetPoint{B}
-                            \tkzDefPointOnCircle[R = center O angle 20 radius 3]\tkzGetPoint{C}
-                            \tkzDefPointOnCircle[R = center O angle 280 radius 3]\tkzGetPoint{D}
+          <statement>
+        <p>
+            Points <m>A</m>, <m>B</m>, and <m>P</m> lie on the circumference of a circle with centre <m>O</m>. The angle subtended by the arc <m>AB</m> at the circumference is <m>\angle APB = 38^{\circ}</m>. Find the value of <m>y</m>, which represents <m>\angle OAB</m>.
+        </p>
+        <figure xml:id="figure-arc-isosceles">
+            <caption>Angle subtended by arc AB at the centre and circumference forming an interior triangle</caption>
+            <image width="65%">
+                <latex-image>
+                    \begin{tikzpicture}
+                    % --- Centre and Points ---
+                    \tkzDefPoint(0,0){O}
+                    
+                    % Central angle will be 2 * 38 = 76 degrees.
+                    % Place A and B symmetrically near the bottom.
+                    \tkzDefPointOnCircle[R = center O angle 232 radius 3]\tkzGetPoint{A}
+                    \tkzDefPointOnCircle[R = center O angle 308 radius 3]\tkzGetPoint{B}
+                    \tkzDefPointOnCircle[R = center O angle 90 radius 3]\tkzGetPoint{P}
 
-                            % Draw the circle
-                            \tkzDrawCircle[thick](O,A)
+                    % --- Draw Circle and Lines ---
+                    \tkzDrawCircle[thick](O,A)
+                    \tkzDrawSegments[thick](O,A O,B P,A P,B A,B)
 
-                            % --- Draw paths (ropes) ---
-                            \tkzDrawSegments(A,C A,D B,C B,D)
+                    % --- Mark Angles ---
+                    \tkzFillAngle[fill=blue!20,opacity=.6, size=0.8](A,P,B)
+                    \tkzFillAngle[fill=orange!20,opacity=.6, size=0.5](B,A,O)
+                    
+                    \tkzMarkAngle[size=0.8,color=blue](A,P,B)
+                    \tkzMarkAngle[size=0.5,color=orange](B,A,O)
 
-                            % --- Fill and mark interior angles (reversing order fixes the reflex angle issue) ---
-                            \tkzFillAngle[fill=blue!20,opacity=.6, size=.8](B,C,A)
-                            \tkzFillAngle[fill=orange!20,opacity=.6, size=.8](B,D,A)
+                    % --- Labels ---
+                    \tkzLabelAngle[pos=1.1](A,P,B){$38^{\circ}$}
+                    \tkzLabelAngle[pos=0.8](B,A,O){$y$}
 
-                            \tkzMarkAngle[size=.8,color=blue](B,C,A)
-                            \tkzMarkAngle[size=.8,color=orange](B,D,A)
-
-                            % --- Angle labels ---
-                            \tkzLabelAngle[pos=1.3](B,C,A){$47^{\circ}$}
-                            \tkzLabelAngle[pos=1.3](B,D,A){$x^{\circ}$}
-
-                            % --- Points and point labels ---
-                            \tkzDrawPoints(A,B,C,D)
-                            \tkzLabelPoints[above left](A)
-                            \tkzLabelPoints[above right](B)
-                            \tkzLabelPoints[right](C)
-                            \tkzLabelPoints[below](D)
-
-                            \end{tikzpicture}
-                        </latex-image>
-                    </image>
-                </figure>
-            </statement>
-            <solution>
-                <p>
-                    By the Angles in the Same Segment Theorem, angles subtended by the same arc at the circumference in the same segment are equal:
-                </p>
-                <md>\angle ADB = \angle ACB = 47^\circ</md>
-                <p>
-                    Therefore, the measure of <m>\angle ADB</m> is <m>47^\circ</m> because both angles are subtended by the same boundary arc <m>AB</m>.
-                </p>
-            </solution>
+                    \tkzDrawPoints[size=4,fill=black](O,A,B,P)
+                    \tkzLabelPoints[above](O)
+                    \tkzLabelPoints[left](A)
+                    \tkzLabelPoints[right](B)
+                    \tkzLabelPoints[above](P)
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            To find the value of <m>y</m>, we must bridge the relationship between the angle at the circumference and the triangle formed at the center of the circle.
+        </p>
+        <p>
+            <term>Step 1:</term> Find the central angle subtended by the same arc <m>AB</m>. The angle at the centre is twice the angle at the circumference:
+            <md>
+                <mrow>\angle AOB \amp = 2 \times \angle APB</mrow>
+                <mrow>\angle AOB \amp = 2 \times 38^{\circ} = 76^{\circ}</mrow>
+            </md>
+        </p>
+        <p>
+            <term>Step 2:</term> Analyze <m>\triangle OAB</m>. The segments <m>OA</m> and <m>OB</m> are both radii of the circle, meaning <m>OA = OB</m>. Therefore, <m>\triangle OAB</m> is an <term>isosceles triangle</term>.
+        </p>
+        <p>
+            Because it is isosceles, the base angles are equal:
+            <me>\angle OBA = \angle OAB = y</me>
+        </p>
+        <p>
+            <term>Step 3:</term> Use the sum of interior angles in a triangle (<m>180^{\circ}</m>) to calculate <m>y</m>:
+            <md>
+                <mrow>\angle AOB + \angle OAB + \angle OBA \amp = 180^{\circ}</mrow>
+                <mrow>76^{\circ} + y + y \amp = 180^{\circ}</mrow>
+                <mrow>76^{\circ} + 2y \amp = 180^{\circ}</mrow>
+                <mrow>2y \amp = 180^{\circ} - 76^{\circ}</mrow>
+                <mrow>2y \amp = 104^{\circ}</mrow>
+                <mrow>y \amp = 52^{\circ}</mrow>
+            </md>
+        </p>
+        <p>
+            Thus, <m>y = 52^{\circ}</m>.
+        </p>
+    </solution>
         </exercise>
 
         <exercise>
