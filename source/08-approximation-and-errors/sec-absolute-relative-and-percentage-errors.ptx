@@ -255,7 +255,7 @@
      <example>
         <statement>
             <p>
-                The capacity of a pumpkin is stated as <m>2,000</m> millilitres to the nearest <m>10</m> millilitres. Find:
+                The capacity of a water tank is stated as <m>2,000</m> millilitres to the nearest <m>10</m> millilitres. Find:
             </p>
             <p>
                 <ol marker="(a)">
@@ -319,8 +319,8 @@
                         </p>
                     </li>
                     <li>
-                        <p>
-                            What would be the percentage error if its thickness was stated as <m>0.2</m> cm?
+                         <p>
+                            Suppose the thickness had instead been stated as <m>0.2</m> cm. Determine the absolute error and hence calculate the percentage error.
                         </p>
                     </li>
                 </ol>
