@@ -217,47 +217,14 @@
                     AP \times PB = CP \times PD.
                 </md>
             </p>
-                        <figure xml:id="intersecting-chords-thm">
-                <caption>Chords <m>AB</m> and <m>CD</m> intersecting at <m>P</m>.</caption>
-                <image width="50%">
-                    <shortdescription>A circle with two intersecting chords AB (blue) and CD (red) meeting at P. The four segments AP, PB, CP, PD are labelled.</shortdescription>
-                    <latex-image>
-                        \begin{tikzpicture}[scale=1.0]
-
-                            %% --- SET ---
-                            \tkzDefPoint(0,0){O}
-                            \tkzDefPoint(3,0){cR}
-                            \tkzDefPointBy[rotation=center O angle 175](cR) \tkzGetPoint{A}
-                            \tkzDefPointBy[rotation=center O angle 18](cR)  \tkzGetPoint{B}
-                            \tkzDefPointBy[rotation=center O angle 248](cR) \tkzGetPoint{C}
-                            \tkzDefPointBy[rotation=center O angle 72](cR)  \tkzGetPoint{D}
-
-                            %% --- CALCULATE ---
-                            \tkzInterLL(A,B)(C,D) \tkzGetPoint{P}
-
-                            %% --- DRAW ---
-                            \tkzDrawCircle[thick](O,cR)
-                            \tkzDrawSegment[blue, thick](A,B)
-                            \tkzDrawSegment[red, thick](C,D)
-                            \tkzDrawPoints(A,B,C,D,P)
-
-                            %% --- MARK ---
-
-                            %% --- LABEL ---
-                            \tkzLabelPoints[left](A)
-                            \tkzLabelPoints[right](B)
-                            \tkzLabelPoints[below left](C)
-                            \tkzLabelPoints[above](D)
-                            \tkzLabelPoints[above right](P)
-                            \tkzLabelSegment[above, sloped, font=\small](A,P){$AP$}
-                            \tkzLabelSegment[above, sloped, font=\small](P,B){$PB$}
-                            \tkzLabelSegment[above, sloped, font=\small](C,P){$CP$}
-                            \tkzLabelSegment[above, sloped, font=\small](P,D){$PD$}
-
-                        \end{tikzpicture}
-                    </latex-image>
-                </image>
-            </figure>
+            <interactive xml:id="interactive-intersecting-chords" platform="jsxgraph" aspect="1:1" source="jsxgraph/intersecting-chords-interactive.js" width="90%">
+                <slate xml:id="jsx-intersecting-chords" surface="jsxboard" aspect="1:1" width="90%"/>
+                <instructions>
+                    <p>
+                        Drag any of the points <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m> around the circle. The four segment lengths update live, and the products <m>AP \times PB</m> and <m>CP \times PD</m> shown in the top right stay equal — confirming the theorem.
+                    </p>
+                </instructions>
+            </interactive>
         </statement>
         <proof>
             <p>

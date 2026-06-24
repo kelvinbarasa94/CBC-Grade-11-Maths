@@ -113,7 +113,7 @@
 
   const CAPTIONS = [
     'Step 1 of 5 — Draw the triangle ABC accurately with a ruler.',
-    'Step 2 of 5 — Equal arcs from A and from B cross above and below AB; the line through the crossings is the perpendicular bisector of AB (red). Every point on it is equidistant from A and B.',
+    'Step 2 of 5 — Draw the perpendicular bisector of AB by drawing arcs from A and B',
     'Step 3 of 5 — In the same way, construct the perpendicular bisector of BC (blue).',
     'Step 4 of 5 — The two bisectors meet at the circumcenter O. Since O lies on both bisectors, OA = OB = OC.',
     'Step 5 of 5 — Set the compasses to OA and draw the circle: the circumscribed circle through all three vertices.'
