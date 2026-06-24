@@ -41,33 +41,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        <m>20</m> minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To guide learners in visualizing how a single linear boundary splits a two-dimensional coordinate plane into two halves, and discovering how to isolate the correct solution half-plane using a test point.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Demonstrate how to sketch the boundary line (solid versus dashed), prompt learners to choose strategic test points like <m>(0,0)</m> to evaluate the inequality, and oversee the clean shading of the satisfying region.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
+        </axiom>
 
     <activity>
         <statement>
@@ -184,8 +180,6 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
     <insight>
         <p>
             Graphing an inequality in two unknowns means representing every point <m>(x, y)</m> that satisfies the inequality on a coordinate plane.
@@ -230,8 +224,6 @@
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
-    <!-- Add at least 3 examples -->
 
     <example>
         <statement>

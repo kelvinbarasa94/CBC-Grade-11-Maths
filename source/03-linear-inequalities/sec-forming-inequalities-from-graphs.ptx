@@ -41,8 +41,6 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
     <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
@@ -67,8 +65,6 @@
             </dl>
         </axiom>
 
-    <!-- Add Activity -->
-
     <activity>
         <statement>
             <p>
@@ -81,50 +77,93 @@
                 <ul>
                     <li>
                         <p>
-                            Pre-drawn graphs showing shaded inequalities (provided by the teacher or students' sketch).
+                            A notebook or a sheet of paper.
                         </p>
                     </li>
                     <li>
                         <p>
-                            A notebook and a pen or pencil.
+                            A Pen or pencil.
                         </p>
                     </li>
                 </ul>
             </p>
             <p>
                 <term>Instructions:</term>
+                Examine the pre-drawn coordinate graph below as a team, and use it to complete the tasks that follow:
+            </p>
+            <p>
+                <image>
+                    <latex-image>
+                        \begin{tikzpicture}
+                            % 1. Clean background grid
+                            \draw[gray!20, thin] (-2,-2) grid (6,5);
+                            
+                            % 2. Shaded region below the boundary line
+                            \fill[fill=blue!15, opacity=0.6] (-2,3) -- (6,-1) -- (6,-2) -- (-2,-2) -- cycle;
+                            
+                            % 3. Standard axes layout with overhang crosshairs
+                            \draw[black, thick, &lt;-&gt;] (-2,0) -- (6,0) node[right=4pt] {$x$};
+                            \draw[black, thick, &lt;-&gt;] (0,-2) -- (0,5) node[above=4pt] {$y$};
+                            
+                            % 4. Solid boundary line
+                            \draw[solid, thick, black] (-2,3) -- (6,-1);
+                            
+                            % 5. Key points highlighted for the learners
+                            \fill[black] (0,2) circle (2.5pt);
+                            \fill[black] (4,0) circle (2.5pt);
+                            
+                            % 6. White-backed coordinate labels
+                            \node at (0,2) [above right=2pt, font=\small, fill=white, inner sep=1pt] {$(0,2)$};
+                            \node at (4,0) [above right=2pt, font=\small, fill=white, inner sep=1pt] {$(4,0)$};
+                            
+                            % 7. Ticks and loop numbering
+                            \foreach \x in {-1, 1, 2, 3, 4, 5} {
+                                \draw (\x, 0.1) -- (\x, -0.1) node[below=3pt, font=\small] {$\x$};
+                            }
+                            \foreach \y in {-2, -1, 1, 2, 3, 4} {
+                                \draw (0.1, \y) -- (-0.1, \y) node[left=3pt, font=\small] {$\y$};
+                            }
+                            \node at (-0.4,-0.4) [font=\small] {0};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
             </p>
             <p>
                 In your groups:
                 <ol>
                     <li>
                         <p>
-                            Examine the first graph showing a shaded region on a coordinate plane.
+                            Identify the two distinct axis intercepts where the boundary line crosses the grid. What are their exact coordinates?
                         </p>
                     </li>
                     <li>
                         <p>
-                            Identify the <term>boundary line</term>. Find its equation by identifying its intercepts or calculating its slope and y-intercept.
+                            Use those two coordinate points to calculate the mathematical slope (<m>m</m>) of the boundary line.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Look at the boundary line structure. Is it solid (included, using <m>\le</m> or <m>\ge</m>) or dashed (excluded, using <m>\lt</m> or <m>\gt</m>)?
+                            Write out the equation of the boundary line in slope-intercept form (<m>y = mx + b</m>).
                         </p>
                     </li>
                     <li>
                         <p>
-                            Determine whether the shaded region lies <term>above</term> or <term>below</term> the boundary line.
+                            Look closely at the boundary line style. Is it a <term>solid line</term> or a <term>dashed line</term>? Discuss what this structural choice tells you about the inequality symbols you are allowed to use.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Pick a test point inside the shaded zone (such as <m>(0,0)</m> if eligible) and verify your proposed inequality.
+                            Observe the blue shading. Does it fall <term>above</term> or <term>below</term> your boundary line? Formulate a proposed inequality expression based on this direction.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Write out the final inequality in standard form and share your findings with the class.
+                            Choose the origin point <m>(0,0)</m> as a test point. Substitute its coordinates into your proposed inequality. Does it yield a true statement?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Convert your final validated inequality into standard form (<m>Ax + By \le C</m> or <m>Ax + By \ge C</m>) and present your group's step-by-step logic to the rest of the class.
                         </p>
                     </li>
                 </ol>
@@ -178,8 +217,6 @@
         </paragraphs>
     </axiom> -->
 
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
     <insight>
         <p>
             Forming inequalities from graphs is the <term>reverse process</term> of graphing inequalities. Given a shaded region on a coordinate plane, we must determine the algebraic inequality that produces that graph.
@@ -214,8 +251,6 @@
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
-    <!-- Add at least 3 examples -->
 
     <example>
         <statement>

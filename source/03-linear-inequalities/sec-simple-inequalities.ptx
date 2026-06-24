@@ -41,15 +41,13 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
     <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        5 minutes
+                        <m>10</m> minutes
                     </p>
                 </li>
                 <li>
@@ -133,8 +131,6 @@
         </solution>
     </activity>
 
-    <!-- [LP] Add guidance on structured lesson plan-->
-
     <axiom component="lesson-plan">
         <title>Structured Instruction</title>
         <p>
@@ -160,8 +156,6 @@
             </dl>
         </p>
     </axiom>
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
 
     <insight>
         <p>
@@ -207,8 +201,6 @@
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
-    <!-- Add at least 3 examples -->
 
     <example>
         <statement>

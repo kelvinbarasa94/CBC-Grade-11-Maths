@@ -41,8 +41,6 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
     <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
@@ -224,7 +222,7 @@
                 Now we combine the two inequalities to get the final answer:
             </p>
             <p>
-                <m>x</m> must be <em>less than</em> <m>8</m> AND <m>x</m> must be <term>less than or equal to</term><m> 4</m>. Since any number less than or equal to <m>4</m> is also less than <m>8</m>, the solution to the compound inequality is:
+                <m>x</m> must be <em>less than</em> <m>8</m> AND <m>x</m> must be <term>less than or equal to</term> <m>4</m>. Since any number less than or equal to <m>4</m> is also less than <m>8</m>, the solution to the compound inequality is:
             </p>
             <p>
                 <md>

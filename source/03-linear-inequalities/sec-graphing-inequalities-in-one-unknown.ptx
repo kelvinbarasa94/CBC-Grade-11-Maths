@@ -41,31 +41,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        <m>15</m> minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To help learners transition from one-dimensional number lines to a two-dimensional Cartesian plane, discovering how to represent constraints like <m>x \le k</m> or <m>y \gt k</m> as vertical or horizontal region blocks.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Guide learners to see that an inequality missing a variable still exists on a coordinate grid, reinforce the distinction between vertical and horizontal boundary orientations, and assist them in shading the infinite region paths cleanly.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
+        </axiom>
 
     <!-- [LP] Add guidance on structured lesson plan-->
 
@@ -98,13 +96,6 @@
             </ol>
         </paragraphs>
     </axiom> -->
-
-    <!-- Add insight / key takeaway directly related to activity / learner experience -->
-
-    <!-- <insight>
-    </insight> -->
-
-    <!-- [LP] Add guidance on activity -->
 
     <activity>
         <statement>
@@ -202,7 +193,22 @@
             Graphing an inequality in one unknown means representing every number that satisfies the inequality on a number line.
         </p>
         <p>
-            A strict inequality, such as <m>x \gt 3</m>, uses an open circle at <m>3</m> and shades(bolds) the number line to the right. An inclusive inequality, such as <m>x \le -2</m>, uses a closed circle at <m>-2</m> and shades to the left.
+            When graphing, the type of circle used at the boundary point is very important:
+            <ul>
+                <li>
+                    <p>
+                        An <term>open (unshaded) circle</term> is used for strict inequalities (<m>\lt</m> and <m>\gt</m>). This shows that the boundary number itself is <term>not</term> included in the solution.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A <term>closed (shaded) circle</term> is used for inclusive inequalities (<m>\le</m> and <m>\ge</m>). This shows that the boundary number <term>is</term> included in the solution.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <p>
+            For example, a strict inequality such as <m>x \gt 3</m> uses an open circle at <m>3</m> and shades (bolds) the number line to the right. An inclusive inequality such as <m>x \le -2</m> uses a closed circle at <m>-2</m> and shades to the left.
         </p>
         <p>
             To graph an inequality like <m>2x + 3 \lt 7</m>, first solve the inequality to find the boundary point (in this case, <m>x \lt 2</m>), then graph it using the appropriate circle and shading.
@@ -210,6 +216,60 @@
         <p>
             Graphing inequalities helps us visualize the set of solutions and understand the relationships between different inequalities.
         </p>
+
+        <image xml:id="img-insight-inequalities" width="80%">
+            <latex-image>
+                \begin{tikzpicture}[xscale=1, yscale=1.5]
+                    
+                    % --- First inequality ---
+                    % Label
+                    \node[left] at (-5.5, 2) {$x \gt 3$};
+                    % Main number line axis with arrows for continuity
+                    \draw[black, thick, &lt;-&gt;] (-5, 2) -- (5, 2);
+                    % Tick marks and labels
+                    \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4} {
+                        \draw (\x, 2.2) -- (\x, 1.8);
+                        \node[below=3pt] at (\x, 2) {$\x$};
+                    }
+                    % Inequality shading (thick line to the right)
+                    \draw[-&gt;, ultra thick, blue] (3, 2) -- (5, 2);
+                    % Open circle at 3
+                    \filldraw[fill=white, draw=blue, thick] (3, 2) circle (3pt);
+
+                    % --- Second inequality ---
+                    % Label
+                    \node[left] at (-5.5, 0) {$x \le -2$};
+                    % Main number line axis with arrows for continuity
+                    \draw[black, thick, &lt;-&gt;] (-5, 0) -- (5, 0);
+                    % Tick marks and labels
+                    \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4} {
+                        \draw (\x, 0.2) -- (\x, -0.2);
+                        \node[below=3pt] at (\x, 0) {$\x$};
+                    }
+                    % Inequality shading (thick line to the left)
+                    \draw[&lt;-, ultra thick, red] (-5, 0) -- (-2, 0);
+                    % Closed circle at -2
+                    \filldraw[fill=red, draw=red, thick] (-2, 0) circle (3pt);
+
+                    
+                    % --- Third inequality ---
+                    % Label
+                    \node[left] at (-5.5, -2) {$x \lt 2$};
+                    % Main number line axis with arrows for continuity
+                    \draw[black, thick, &lt;-&gt;] (-5, -2) -- (5, -2);
+                    % Tick marks and labels
+                    \foreach \x in {-4, -3, -2, -1, 0, 1, 2, 3, 4} {
+                        \draw (\x, -1.8) -- (\x, -2.2);
+                        \node[below=3pt] at (\x, -2) {$\x$};
+                    }
+                    % Inequality shading (thick line to the left)
+                    \draw[&lt;-, ultra thick, black] (-5, -2) -- (2, -2);
+                    % Open circle at 2
+                    \filldraw[fill=white, draw=black, thick] (2, -2) circle (3pt);
+
+                \end{tikzpicture}
+            </latex-image>
+        </image>
     </insight>
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
@@ -481,7 +541,11 @@
                                 Solving the inequality;
                             </p>
                             <p>
-                                <m>5000 + 2500x  \le 20000 \Rightarrow 2500x \le 15000 \Rightarrow x \le 6</m>.
+                                <md>
+                                    <mrow> 5000 + 2500x \amp \le 20000 </mrow>
+                                    <mrow> 2500x \amp \le 15000 </mrow>
+                                    <mrow> x \amp \le 6</mrow>
+                                </md>
                             </p>
                             <p>
                                 The farmer can buy at most <m>6</m> bags of seed planting fertilizer without exceeding the budget.
@@ -542,7 +606,7 @@
                         <latex-image>
                             \begin{tikzpicture}
                                 % 1. Draw the main number line axis centered around 5
-                                \draw[&lt;-&gt;, thick] (-1,0) -- (7,0) node[right] {$h$};
+                                \draw[-&gt;, thick] (0,0) -- (7,0) node[right] {$h$};
                                 
                                 % 2. Draw the tick marks and numbers
                                 \foreach \x in {0, 1, 2, 3, 4, 5, 6} {
@@ -550,7 +614,7 @@
                                 }
 
                                 % 3. Draw the thick line pointing left, starting exactly at 5
-                                \draw[-&gt;, ultra thick] (5,0) -- (-1,0);
+                                \draw[-&gt;, ultra thick] (5,0) -- (0.1,0);
 
                                 % 4. Draw the CLOSED circle at h = 5 (covers the start of the thick line)
                                 \fill[draw=black, fill=black] (5,0) circle (3pt);
@@ -610,7 +674,7 @@
                                     <latex-image>
                                         \begin{tikzpicture}
                                             % 1. Draw the main number line axis centered around 5
-                                            \draw[&lt;-&gt;, thick] (-1,0) -- (7,0) node[right] {$d$};
+                                            \draw[-&gt;, thick] (0,0) -- (7,0) node[right] {$d$};
                                             
                                             % 2. Draw the tick marks and numbers
                                             \foreach \x in {0, 1, 2, 3, 4, 5, 6} {
@@ -618,7 +682,7 @@
                                             }
 
                                             % 3. Draw the thick line pointing left, starting exactly at 5
-                                            \draw[-&gt;, ultra thick] (5,0) -- (-1,0);
+                                            \draw[-&gt;, ultra thick] (5,0) -- (0.1,0);
 
                                             % 4. Draw the CLOSED circle at d = 5 (covers the start of the thick line)
                                             \fill[draw=black, fill=black] (5,0) circle (3pt);

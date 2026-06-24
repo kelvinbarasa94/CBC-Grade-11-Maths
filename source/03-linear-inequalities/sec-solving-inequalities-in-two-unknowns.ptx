@@ -41,33 +41,29 @@
         </introduction>
     </objectives>
 
-    <!-- [LP] Add guidance on activity -->
-
-    <!-- <axiom component="lesson-plan">
+    <axiom component="lesson-plan">
             <title>Problem-Solving and Discovery</title>
             <dl>
                 <li>
                     <title>Suggested Time</title>
                     <p>
-                        XX minutes
+                        <m>20</m> minutes
                     </p>
                 </li>
                 <li>
                     <title>Objective</title>
                     <p>
-                        XXX
+                        To enable learners to systematically graph multiple linear inequalities simultaneously on a single coordinate plane and discover the overlapping region that satisfies all constraints.
                     </p>
                 </li>
                 <li>
                     <title>Teacher's Role</title>
                     <p>
-                        XXX
+                        Facilitate the step-by-step overlay of boundary lines, model how to identify the intersecting vertices, and guide learners to visually define and verify the common shared territory known as the feasible region.
                     </p>
                 </li>
             </dl>
-        </axiom> -->
-
-    <!-- Add Activity -->
+        </axiom>
 
     <activity>
         <statement>
@@ -203,8 +199,6 @@
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
 
     <xi:include href="../lesson-plan-templates/example-intro.ptx" />
-
-    <!-- Add at least 3 examples -->
 
     <example>
         <statement>
