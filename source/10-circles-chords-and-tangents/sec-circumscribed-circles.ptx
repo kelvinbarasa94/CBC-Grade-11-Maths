@@ -343,10 +343,10 @@
         <figure xml:id="figure-circumscribed-construction">
         <caption>Constructing the circumscribed circle of a triangle</caption>
             <interactive xml:id="interactive-circumscribed" platform="jsxgraph"
-                        aspect="8:6.5" source="jsxgraph/circumscribed-circle-construction.js" width="80%">
+                        aspect="8:6.5" source="jsxgraph/circumscribed-circle-construction.js" width="90%">
                 <sbsgroup>
                     <sidebyside width="85%" margins="1%">
-                        <slate xml:id="box_circum" surface="jsxboard" aspect="5:4"/>
+                        <slate xml:id="box_circum" surface="jsxboard" aspect="5:3"/>
                     </sidebyside>
                     <sidebyside width="85%" margins="1%">
                         <slate surface="html">

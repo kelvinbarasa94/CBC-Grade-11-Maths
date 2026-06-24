@@ -359,7 +359,7 @@
         <figure xml:id="figure-escribed-construction">
         <caption>Constructing the excircle opposite <m>A</m></caption>
             <interactive xml:id="interactive-escribed" platform="jsxgraph"
-                        aspect="8:9" source="jsxgraph/escribed-circle-construction.js" width="70%">
+                        aspect="8:12" source="jsxgraph/escribed-circle-construction.js" width="90%">
                 <sbsgroup>
                     <sidebyside width="85%" margins="1%">
                         <slate xml:id="box_excircle" surface="jsxboard" aspect="4:5"/>
