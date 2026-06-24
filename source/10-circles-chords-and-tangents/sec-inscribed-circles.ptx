@@ -1134,7 +1134,7 @@
                 A triangle has sides <m>5</m> cm, <m>12</m> cm, and <m>13</m> cm.
                 <ol marker="(a)">
                     <li>Find the inradius.</li>
-                    <li>The incircle touches side <m>PR</m> cm at point <m>Z</m>. Find the length <m>PZ</m>.</li>
+                    <li>The incircle touches side <m>PR</m> at point <m>Z</m>. Find the length <m>PZ</m>.</li>
                 </ol>
             </p>
             <figure xml:id="fig-incircle-5-12-13">
@@ -1170,7 +1170,7 @@
             <ol marker="(a)">
                 <li>
                     <p>
-                        Give that the triangle is right-angled:
+                        Given that the triangle is right-angled:
                         <md>
                             <mrow>s \amp= \frac{5+12+13}{2} = 15 \text{ cm}</mrow>
                             <mrow>\Delta \amp= \tfrac{1}{2}\times 5 \times 12 = 30 \text{ cm}^2</mrow>

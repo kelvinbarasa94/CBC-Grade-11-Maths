@@ -768,7 +768,7 @@
                     <ol marker="(a)">
                         <li>
                             <p>
-                                Copy the diagram belowm add the two tangents to the circle at points <m>A</m> and <m>B</m>, and label their intesection point as <m>T</m>.
+                                Copy the diagram below, add the two tangents to the circle at points <m>A</m> and <m>B</m>, and label their intersection point as <m>T</m>.
                             </p>
                             <figure xml:id="fig-equal-tangents-ex">
                                 <caption>Two tangents</caption>
@@ -848,7 +848,7 @@
                                 </ul>
                             </p>
                             <p>
-                                By the RHS congruence rule, <m>\triangle OAT \equiv \triangle OBT</m>, and therefore <m>TA = TB</m>.
+                                By the RHS congruence rule, <m>\triangle OAT \cong \triangle OBT</m>, and therefore <m>TA = TB</m>.
                             </p>
                         </li>
                     </ol>

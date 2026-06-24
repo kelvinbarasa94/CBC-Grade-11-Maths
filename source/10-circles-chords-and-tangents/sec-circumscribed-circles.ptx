@@ -484,7 +484,7 @@
                 </image>
             </figure>
             <p>
-                We have <m>\angle AOB = 2\theta</m> (central angle is twice the inscribed angle), and <m>\angle AOM = \frac{\angle AOB}{2} = \theta</m>, as <m>\triangle AOM</m> and <m>\triangle BOC</m> are congruent (with three equal sides).
+                We have <m>\angle AOB = 2\theta</m> (the central angle is twice the inscribed angle). Since <m>OA = OB</m>, triangle <m>AOB</m> is isosceles. As <m>M</m> is the midpoint of <m>AB</m>, line <m>OM</m> bisects <m>\angle AOB</m>. Therefore, <m>\angle AOM = \frac{\angle AOB}{2} = \theta.</m>
             </p>
             <p>
                 Moreover, <m>AM = \frac{AB}{2} = \frac{c}{2}</m> since <m>M</m> is a midpoint, and <m>AO = R</m> by definition of the circumradius. Using right-angled trigonometry in <m>\triangle AMO</m> gives:

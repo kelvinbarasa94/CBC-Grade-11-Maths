@@ -229,7 +229,7 @@
                 </image>
             </figure>
             <p>
-                Let <m>PT</m> be a tangent to a circle at <m>T</m>, and let <m>TQ</m> be a chord. If <m>S</m> is any point in the alternate segment (the segment on the opposite side of <m>TQ</m> from the tangent), then
+                Let <m>PT</m> be a tangent to a circle at point <m>T</m>, and let <m>TQ</m> be a chord. If <m>S</m> is any point on the arc in the alternate segment (the segment on the opposite side of <m>TQ</m> from the tangent), then
                 <md>
                     <mrow>\angle PTQ = \angle TSQ.</mrow>
                 </md>
@@ -289,7 +289,7 @@
                 <md>
                     <mrow>\angle TMQ = 180^\circ - 90^\circ - (90^\circ - \alpha) = \alpha.</mrow>
                 </md>
-                Now <m>M</m> and <m>S</m> are both in the alternate segment. Inscribed angles subtending the same arc <m>TQ</m> from the same side are equal, so:
+                Now <m>M</m> and <m>S</m> are both in the alternate segment. Angles subtended by the same arc <m>TQ</m> in the same segment are equal, so:
                 <md>
                     <mrow>\angle TSQ = \angle TMQ = \alpha = \angle PTQ</mrow>
                 </md>
@@ -649,7 +649,7 @@
                 <ol marker="(a)">
                     <li><p><m>38^\circ</m> (Alternate Segment Theorem)</p></li>
                     <li><p><m>72^\circ</m> (Alternate Segment Theorem)</p></li>
-                    <li><p>Since angles at the circumference are half the central angle, <m>\angle TSQ = 80^\circ / 2 = 40^\circ</m>. By the Alternate Segment Theorem, <m>\angle PTQ = 40^\circ</m>.</p></li>
+                    <li><p>By the angle at the centre theorem, the angle at the circumference is half the central angle, <m>\angle TSQ = 80^\circ / 2 = 40^\circ</m>. By the Alternate Segment Theorem, <m>\angle PTQ = 40^\circ</m>.</p></li>
                 </ol>
             </solution>
         </exercise>
