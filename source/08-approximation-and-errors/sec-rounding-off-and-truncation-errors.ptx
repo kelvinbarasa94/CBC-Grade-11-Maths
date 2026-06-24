@@ -264,13 +264,13 @@
     <example>
         <statement> 
             <p>
-                Amani downloads an interactive digital textbook that takes up exactly <m>2.48\;\text{GB}</m> of storage space. Her phone's storage manager truncates this number to <m>1</m> decimal place to display it on a home screen widget.
+                Amani downloads an interactive digital textbook that takes up exactly <m>2.48\;\text{GB}</m> of storage space. Her phone's storage manager truncates this number to <m>1</m> decimal place to display it on a home screen.
             </p>
             <p>
                 <ol marker="(a)">
                     <li>
                         <p>
-                            What is the storage size value displayed on the widget?
+                            What is the storage size value displayed on the screen?
                         </p>
                     </li>
                     <li>
@@ -286,7 +286,7 @@
                 <ol marker="(a)">
                     <li>
                         <p>
-                            Truncating <m>2.48</m> to <m>1</m> decimal place means chopping off the final digit completely. The widget displays <m>2.4\;\text{GB}</m>.
+                            Truncating <m>2.48</m> to <m>1</m> decimal place means chopping off the final digit completely. The screen displays <m>2.4\;\text{GB}</m>.
                         </p>
                     </li>
                     <li>
