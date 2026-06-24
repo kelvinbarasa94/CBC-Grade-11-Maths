@@ -99,7 +99,7 @@
   board.create('angle', [M, Q, T], {
     type: 'square', radius: 0.32,
     strokeColor: DERIVED, fillColor: DERIVED, fillOpacity: 0.18,
-    name: '', highlight: false
+    name: '', highlight: false, label: { visible: false }
   });
 
   // ---- The three equal angles α --------------------------------------------

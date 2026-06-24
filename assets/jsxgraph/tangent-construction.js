@@ -108,9 +108,9 @@ const tangentLabel = board.create('text', [
 
 // Right-angle mark between PO and PX, sitting at P.
 const rightAngle = board.create('angle', [O, P, X], {
-type: 'square', radius: 0.45,
+type: 'square', radius: 0.2,
 strokeColor: TANGENT_COL, fillColor: TANGENT_COL, fillOpacity: 0.25,
-name: '', highlight: false
+name: '', highlight: false, label: { visible: false }
 });
 
 // ---- Congruence tick marks (PQ = OP) ------------------------------------

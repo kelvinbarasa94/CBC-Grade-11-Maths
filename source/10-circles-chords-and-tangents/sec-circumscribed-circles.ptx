@@ -335,6 +335,46 @@
         </ol>
     </paragraphs>
 
+    <exploration xml:id="exploration-circumscribed-construction">
+        <title>Interactive Construction of the Circumscribed Circle</title>
+        <p>
+            Step through the construction with the <em>Next</em> and <em>Back</em> buttons, and drag the vertices <m>A</m>, <m>B</m> and <m>C</m> to see how the perpendicular bisectors, the circumcenter <m>O</m> and the circumscribed circle adapt.
+        </p>
+        <figure xml:id="figure-circumscribed-construction">
+        <caption>Constructing the circumscribed circle of a triangle</caption>
+            <interactive xml:id="interactive-circumscribed" platform="jsxgraph"
+                        aspect="8:6.5" source="jsxgraph/circumscribed-circle-construction.js" width="80%">
+                <sbsgroup>
+                    <sidebyside width="85%" margins="1%">
+                        <slate xml:id="box_circum" surface="jsxboard" aspect="5:4"/>
+                    </sidebyside>
+                    <sidebyside width="85%" margins="1%">
+                        <slate surface="html">
+                            <div id="caption_circum"
+                                style="font:15px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:#222;text-align:center;min-height:60px;"
+                                xmlns="http://www.w3.org/1999/xhtml"></div>
+                        </slate>
+                    </sidebyside>
+                    <sidebyside widths="30% 30%" margins="20%">
+                        <slate surface="html">
+                            <input id="back_circum" type="button" value="◀ Back"
+                                onkeypress="circumBack();" onclick="circumBack();"
+                                style="font-size:16px; width:100%" xmlns="http://www.w3.org/1999/xhtml"/>
+                        </slate>
+                        <slate surface="html">
+                            <input id="next_circum" type="button" value="Next ▶"
+                                onkeypress="circumNext();" onclick="circumNext();"
+                                style="font-size:16px; width:100%; height:30px;" xmlns="http://www.w3.org/1999/xhtml"/>
+                        </slate>
+                    </sidebyside>
+                </sbsgroup>
+                <instructions>
+                    <p>Use <em>Next</em> and <em>Back</em> to step through the construction. Drag the vertices A, B and C at any time — the whole construction stays correct.</p>
+                </instructions>
+            </interactive>
+        </figure>
+    </exploration>
+
     <theorem xml:id="thm-circumscribed-circle">
         <title>The Circumcircle and Circumradius</title>
         <statement>

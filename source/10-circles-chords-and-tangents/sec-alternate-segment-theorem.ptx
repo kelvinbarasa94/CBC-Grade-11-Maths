@@ -349,16 +349,16 @@
                 <image width="52%">
                     <shortdescription>A circle with tangent PT at T. Chord TQ is drawn. S is in the upper arc. Angle PTQ is labelled 55 degrees.</shortdescription>
                     <latex-image>
-                        \begin{tikzpicture}[scale=1.0]
+                        \begin{tikzpicture}[scale=0.8]
                             \tkzDefPoint(0,0){O}
                             \tkzDefPoint(300:2.5){T}
                             \tkzDefPoint(35:2.5){Q}
                             \tkzDefPoint(170:2.5){S}
-                            \tkzDrawCircle(O,T)
+                            \tkzDrawCircle[thick](O,T)
                             \tkzDefLine[tangent at=T](O) \tkzGetPoint{P}
                             \tkzDefPointBy[symmetry=center T](P) \tkzGetPoint{L}
-                            \tkzDrawLine[add=1 and 1](P,L)
-                            \tkzDrawSegments(T,Q T,S S,Q)
+                            \tkzDrawLine[add=1 and 1, thick](P,L)
+                            \tkzDrawSegments[thick](T,Q T,S S,Q)
                             \tkzMarkAngle[arc=l,size=0.7](P,T,Q)
                             \tkzLabelAngle[pos=1.0](P,T,Q){$55^\circ$}
                             \tkzMarkAngle[arc=l,size=0.65](S,T,L)
@@ -399,16 +399,16 @@
                 <image width="60%">
                     <shortdescription>A circle with tangent PT at T. Chord TQ is drawn. S is in the upper arc with TS equal to SQ, shown with tick marks. Angle PTQ is 48 degrees. Angle TSQ is in the alternate segment.</shortdescription>
                     <latex-image>
-                        \begin{tikzpicture}[scale=1.5]
+                        \begin{tikzpicture}[scale=0.8]
                             \tkzDefPoint(0,0){O}
                             \tkzDefPoint(60:2.5){T}
                             \tkzDefPoint(-50:2.5){Q}
                             \tkzDefPoint(185:2.5){S}
-                            \tkzDrawCircle(O,T)
+                            \tkzDrawCircle[thick](O,T)
                             \tkzDefLine[tangent at=T](O) \tkzGetPoint{P}
                             \tkzDefPointBy[symmetry=center T](P) \tkzGetPoint{L}
-                            \tkzDrawLine[add=0.5 and 0.5](P,L)
-                            \tkzDrawSegments(T,Q T,S S,Q)
+                            \tkzDrawLine[add=0.5 and 0.5, thick](P,L)
+                            \tkzDrawSegments[thick](T,Q T,S S,Q)
                             \tkzMarkSegments[mark=|](T,S S,Q)
                             \tkzMarkAngle[arc=l,size=0.7](Q,T,L)
                             \tkzLabelAngle[pos=1.0](Q,T,L){$48^\circ$}
@@ -431,16 +431,16 @@
                 <image width="52%">
                     <shortdescription>A circle with tangent PT at T. Chord TQ is drawn. S is in the upper arc with TS equal to SQ, shown with tick marks. Angle PTQ is 48 degrees. Angle TSQ is in the alternate segment.</shortdescription>
                     <latex-image>
-                        \begin{tikzpicture}[scale=1.0]
+                        \begin{tikzpicture}[scale=0.8]
                             \tkzDefPoint(0,0){O}
                             \tkzDefPoint(60:2.5){T}
                             \tkzDefPoint(-50:2.5){Q}
                             \tkzDefPoint(185:2.5){S}
-                            \tkzDrawCircle(O,T)
+                            \tkzDrawCircle[thick](O,T)
                             \tkzDefLine[tangent at=T](O) \tkzGetPoint{P}
                             \tkzDefPointBy[symmetry=center T](P) \tkzGetPoint{L}
-                            \tkzDrawLine[add=0.5 and 0.5](P,L)
-                            \tkzDrawSegments(T,Q T,S S,Q)
+                            \tkzDrawLine[add=0.5 and 0.5, thick](P,L)
+                            \tkzDrawSegments[thick](T,Q T,S S,Q)
                             \tkzMarkSegments[mark=|](T,S S,Q)
                             \tkzMarkAngle[arc=l,size=0.7](Q,T,L)
                             \tkzLabelAngle[pos=1.0](Q,T,L){$48^\circ$}
@@ -488,16 +488,16 @@
                     <image width="48%">
                         <shortdescription>Circle with tangent PT at T at the bottom, chord TQ upper-right, S in the upper-left arc. Angles PTQ and TSQ are both shaded and labelled.</shortdescription>
                         <latex-image>
-                            \begin{tikzpicture}[scale=0.9]
+                            \begin{tikzpicture}[scale=0.6]
                                 \tkzDefPoint(0,0){O}
                                 \tkzDefPoint(270:2.5){T}
                                 \tkzDefPoint(30:2.5){Q}
                                 \tkzDefPoint(150:2.5){S}
-                                \tkzDrawCircle(O,T)
+                                \tkzDrawCircle[thick](O,T)
                                 \tkzDefLine[tangent at=T](O) \tkzGetPoint{P}
                                 \tkzDefPointBy[symmetry=center T](P) \tkzGetPoint{L}
-                                \tkzDrawLine[add=1.5 and 2](P,L)
-                                \tkzDrawSegments(T,Q T,S S,Q)
+                                \tkzDrawLine[add=1.5 and 2, thick](P,L)
+                                \tkzDrawSegments[thick](T,Q T,S S,Q)
                                 \tkzMarkAngle[arc=l,size=0.75](P,T,Q)
                                 \tkzFillAngle[fill=blue!20,size=0.75,opacity=0.5](P,T,Q)
                                 \tkzLabelAngle[pos=1.15](P,T,Q){$(2x + 10)^\circ$}

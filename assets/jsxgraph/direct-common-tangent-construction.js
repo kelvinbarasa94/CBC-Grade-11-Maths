@@ -27,7 +27,6 @@
   const BOX_ID = 'box_direct';
   const TOTAL_STEPS = 8;
 
-  const r = 1, R = 3, rt = R - r;     // small radius, large radius, R - r
   const BLUE = '#1565c0', RED = '#d32f2f', ORANGE = '#e69500';
   const FREE = '#1565c0', TAN = '#1f4ed8', SCAFF = '#9e9e9e';
 
@@ -48,12 +47,27 @@
     name: 'A', size: 4, strokeColor: FREE, fillColor: FREE,
     label: { offset: [-12, -10], anchorX: 'right', anchorY: 'top' }
   });
+    
+  const A1 = board.create('point', [-1, 0], {
+    name: 'A1', size: 2, strokeColor: FREE, fillColor: FREE, label: { visible: false }
+  });
+
+
   const B = board.create('point', [4, 2], {
     name: 'B', size: 4, strokeColor: FREE, fillColor: FREE,
     label: { offset: [12, -8], anchorX: 'left', anchorY: 'top' }
   });
-  const circA = board.create('circle', [A, r], { strokeColor: BLUE, strokeWidth: 2, fillColor: 'none', highlight: false });
-  const circB = board.create('circle', [B, R], { strokeColor: RED, strokeWidth: 2, fillColor: 'none', highlight: false });
+
+    const B1 = board.create('point', [7, 2], {
+    name: 'B1', size: 2, strokeColor: FREE, fillColor: FREE, label: { visible: false }
+  });
+  const circA = board.create('circle', [A, A1], { strokeColor: BLUE, strokeWidth: 2, fillColor: 'none', highlight: false });
+  const circB = board.create('circle', [B, B1], { strokeColor: RED, strokeWidth: 2, fillColor: 'none', highlight: false });
+
+  // Calculate r, R, and rt dynamically from A, A1, B, and B1
+  const r = () => A.Dist(A1);
+  const R = () => B.Dist(B1);
+  const rt = () => R() - r(); 
 
   // --- Line through the centres, extended ----------------------------------
   const centralLine = board.create('line', [A, B], { strokeColor: '#555', strokeWidth: 1.3, highlight: false });
