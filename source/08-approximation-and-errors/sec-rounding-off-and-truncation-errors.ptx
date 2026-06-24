@@ -150,29 +150,41 @@
             <term>Rounding off</term> targets the closest available boundary level, keeping the distance to the approximation as small as possible. <term>Truncation</term> drops digits entirely, pushing numbers backward regardless of how close they were to the next unit level.
         </p>
         <p>
-        To compute errors easily, we use two simple formulas:
-        <md>
-            <mrow> \text{Absolute Error}\; =  \amp\; |\text{Working Measurement} - \text{Approximate measurement}| </mrow>
-            <mrow>\text{Percentage Error} \;= \amp \; \frac{\text{Absolute Error}}{\text{Working Measurement}} \times 100\%</mrow>
-        </md>
-    </p>
-    <p>
-        Find the absolute, relative, and percentage errors from the learners experience above.:
-    </p>
-    <p>
-        <ol marker="(a)">
-            <li>
-                <p>
-                    Truncation?
-                </p>
-            </li>
-            <li>
-                <p>
-                    Rounding off?
-                </p>
-            </li>
-        </ol>
-    </p>
+            To compute errors easily, we use two simple formulas:
+        </p>
+        <p>
+            Find the absolute, relative, and percentage errors from the learners experience above using the formulas:
+        </p>
+        <p>
+            <ol marker="(a)">
+                <li>
+                    <p>
+                        Truncation?
+                    </p>
+                    <p>
+                        <md>
+                            <mrow> \text{Absolute Error}\; =  \amp\; |\text{Working Measurement} - \text{Truncated measurement}| </mrow>
+                            <mrow>\text{Percentage Error} \;= \amp \; \frac{\text{Absolute Error}}{\text{Working Measurement}} \times 100\%</mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Rounding off?
+                    </p>
+                    <p>
+                        <md>
+                            <mrow> \text{Absolute Error}\; =  \amp\; |\text{Working Measurement} - \text{Rounded measurement}| </mrow>
+                            <mrow>\text{Percentage Error} \;= \amp \; \frac{\text{Absolute Error}}{\text{Working Measurement}} \times 100\%</mrow>
+                        </md>
+                    </p>
+                </li>
+            </ol>
+        </p>
+        
+        <p>
+            <term>Note:</term> There are cases where the absolute, relative, and percentage errors in rounding off and trancation are equal, the first example below shows such a case.
+        </p>
     </insight>
 
     <!-- Add further instruction (not in a block) to develop ideas as needed -->
