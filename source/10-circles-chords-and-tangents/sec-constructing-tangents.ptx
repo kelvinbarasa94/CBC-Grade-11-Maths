@@ -742,7 +742,7 @@
                             </figure>
                         </sidebyside>
                         <p>
-                            <em>Why it works:</em> Because <m>OT</m> is a diameter of the midpoint circle, Thales' theorem gives <m>\angle OAT = 90°</m> for every point <m>A</m> on that circle. So <m>OA \perp TA</m> — a radius meeting a line at <m>90°</m> means that line is tangent to the original circle at <m>A</m>. The same argument applies at <m>B</m>.
+                            <em>Why it works:</em> Because <m>OT</m> is a diameter of the midpoint circle, <m>\angle OAT = 90°</m> for every point <m>A</m> on that circle. So <m>OA \perp TA</m> — a radius meeting a line at <m>90°</m> means that line is tangent to the original circle at <m>A</m>. The same argument applies at <m>B</m>.
                         </p>
                     </li>
                     <li>
@@ -923,12 +923,12 @@
                         </li>
                         <li>
                             <p>
-                                Both radii <m>O_1T</m> and <m>O_2T</m> must be perpendicular to the same tangent line at <m>T</m>. Since two lines through the same point that are both perpendicular to the same line must be the same line, <m>O_1T</m> and <m>O_2T</m> are collinear. Therefore <m>O_1</m>, <m>T</m>, and <m>O_2</m> all lie on the same straight line.
+                                Both radii <m>O_1T</m> and <m>O_2T</m> must be perpendicular to the same tangent line at <m>T</m>. Since two lines through the same point that are both perpendicular to the same line at a point must be parallel, <m>O_1</m>, <m>T</m>, and <m>O_2</m> all lie on the same straight line.
                             </p>
                         </li>
                         <li>
                             <p>
-                                Since <m>O_1</m>, <m>T</m>, <m>O_2</m> are collinear and <m>T</m> lies between the two centres (the circles are externally tangent),
+                                Since <m>O_1</m>, <m>T</m>, <m>O_2</m> lie on the same line and <m>T</m> lies between the two centres (the circles are externally tangent),
                                 <md>
                                     O_1O_2 = r_1 + r_2.
                                 </md>

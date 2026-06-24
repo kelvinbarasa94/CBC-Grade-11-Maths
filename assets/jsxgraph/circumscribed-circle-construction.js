@@ -76,7 +76,7 @@
     const arcP = board.create('arc', [P, i1, i2], { strokeColor: colour, strokeWidth: 1.2, dash: 2, highlight: false });
     const arcQ = board.create('arc', [Q, i2, i1], { strokeColor: colour, strokeWidth: 1.2, dash: 2, highlight: false });
     const line = board.create('line', [i1, i2], { strokeColor: colour, strokeWidth: 2, highlight: false });
-    const rt = board.create('angle', [P, mid, i1], { type: 'square', radius: 0.32, strokeColor: colour, fillColor: colour, fillOpacity: 0.18, name: '', highlight: false });
+    const rt = board.create('angle', [P, mid, i1], { type: 'square', radius: 0.32, strokeColor: colour, fillColor: colour, fillOpacity: 0.18, name: '', highlight: false , label: { visible: false } });
     return { line, scaffold: [cP, cQ, i1, i2, arcP, arcQ, rt], arcs: [arcP, arcQ, i1, i2, rt] };
   }
 
@@ -116,7 +116,7 @@
     'Step 2 of 5 — Equal arcs from A and from B cross above and below AB; the line through the crossings is the perpendicular bisector of AB (red). Every point on it is equidistant from A and B.',
     'Step 3 of 5 — In the same way, construct the perpendicular bisector of BC (blue).',
     'Step 4 of 5 — The two bisectors meet at the circumcenter O. Since O lies on both bisectors, OA = OB = OC.',
-    'Step 5 of 5 — Set the compasses to OA and draw the circle: the circumscribed circle through all three vertices, with radius R = OA.'
+    'Step 5 of 5 — Set the compasses to OA and draw the circle: the circumscribed circle through all three vertices.'
   ];
 
   // ===== STEP STATE + CAPTION ==============================================

@@ -81,6 +81,30 @@
                             <p>
                                 Try to draw a straight line that touches circle <m>A</m> at exactly one point and circle <m>B</m> at exactly one point, with the two circles on <em>opposite sides</em> of the line. How many such lines can you draw? Record your answer in the table below.
                             </p>
+                            <table>
+                                <title>Transverse common tangent observations</title>
+                                <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+                                    <row header="yes" bottom="medium">
+                                        <cell>Pair</cell>
+                                        <cell>Radius of circle <m>A</m></cell>
+                                        <cell>Radius of circle <m>B</m></cell>
+                                        <cell>Number of transverse tangents found</cell>
+                                        <cell>Do the tangents meet between the circles?</cell>
+                                    </row>
+                                    <row>
+                                        <cell>1</cell>
+                                        <cell></cell><cell></cell><cell></cell><cell></cell>
+                                    </row>
+                                    <row>
+                                        <cell>2</cell>
+                                        <cell></cell><cell></cell><cell></cell><cell></cell>
+                                    </row>
+                                    <row>
+                                        <cell>3</cell>
+                                        <cell></cell><cell></cell><cell></cell><cell></cell>
+                                    </row>
+                                </tabular>
+                            </table>
                         </li>
                         <li>
                             <p>
@@ -94,7 +118,7 @@
                         </li>
                         <li>
                             <p>
-                                Repeat parts (a)–(c) with two more pairs of circles, choosing different sizes and distances each time.
+                                Repeat parts (a)-(c) with two more pairs of circles, choosing different sizes and distances each time.
                             </p>
                         </li>
                         <li>
@@ -109,30 +133,6 @@
                         </li>
                     </ol>
                 </p>
-                <table>
-                    <title>Transverse common tangent observations</title>
-                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
-                        <row header="yes" bottom="medium">
-                            <cell>Pair</cell>
-                            <cell>Radius of circle <m>A</m></cell>
-                            <cell>Radius of circle <m>B</m></cell>
-                            <cell>Number of transverse tangents found</cell>
-                            <cell>Do the tangents meet between the circles?</cell>
-                        </row>
-                        <row>
-                            <cell>1</cell>
-                            <cell></cell><cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>2</cell>
-                            <cell></cell><cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>3</cell>
-                            <cell></cell><cell></cell><cell></cell><cell></cell>
-                        </row>
-                    </tabular>
-                </table>
             </paragraphs>
         </statement>
     </activity>
@@ -485,53 +485,11 @@
             </li>
             <li>
                 <p>
-                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6 and 7 using <m>Q'</m> in place of <m>Q</m> to obtain the second direct common tangent, <m>T_2T'_2</m>.
-                </p>
-                <figure xml:id="fig-transverse-tangents-construction-9">
-                <caption>
-                    First transverse tangent drawn.
-                </caption>
-                <image width="90%">
-                    <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
-                    <latex-image>
-                        \begin{tikzpicture}[scale=0.8]
-                            \pgfmathsetmacro{\r}{1}%
-                            \pgfmathsetmacro{\R}{2}%
-                            \pgfmathsetmacro{\rt}{\R+\r}%
-                            \tkzDefPoints{0/0/A,5/1/B,2/3/K}
-                            \tkzDefMidPoint(A,B) \tkzGetPoint{I}
-                            \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
-                            \tkzInterCC(I,B)(B,F) \tkzGetPoints{Q}{Q'}
-                            \tkzInterLC[R](B,Q)(B,\R) \tkzGetPoints{X'}{T'}
-                            \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
-                            \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
-                            \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
-                            \tkzDefCircle[R](A,\r) \tkzGetPoint{a}
-                            \tkzDefCircle[R](B,\R) \tkzGetPoint{b}
-                            \tkzDefCircle[R](B,\rt) \tkzGetPoint{c}
-                            \tkzDrawCircles[blue, thick](A,a)
-                            \tkzDrawCircles[red, thick](B,b)
-                            \tkzDrawCircles[red](B,c)
-                            \tkzDrawCircle[orange, thick, dashed](I,B)
-                            \tkzDrawPoints(A,B,T',T,Q, I)
-                            \tkzDrawLines[add=0.3 and 0.6](A,B)
-                            \tkzDrawLines(T',T B,Q A,T)
-                            \tkzLabelPoints(A,B,I)
-                            \tkzLabelPoints[above](Q)
-                            \tkzLabelPoint[right](T){$T_1$}
-                            \tkzLabelPoint[left](T'){$T'_1$}
-                            \end{tikzpicture}
-                    </latex-image>
-                </image>
-                </figure>
-            </li>
-            <li>
-                <p>
-                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6–9 using <m>Q'</m> in place of <m>Q</m> to obtain the second transverse common tangent.
+                    Label <m>Q'</m> as the other intersection point from Step 5. Repeat Steps 6 and 7 using <m>Q'</m> in place of <m>Q</m> to obtain the second transverse common tangent.
                 </p>
                 <figure xml:id="fig-transverse-tangents-construction-10">
                 <caption>
-                    First transverse tangent drawn.
+                    Second transverse tangent drawn.
                 </caption>
                 <image width="90%">
                     <!-- Image adapted from https://altermundus.fr/files/tkz-euclide/tkz-euclide.pdf p. 232 -->
@@ -1388,7 +1346,7 @@
                     </li>
                     <li>
                         <p>
-                            The whole construction is symmetric about the line <m>AB</m>: the points <m>Q</m> and <m>Q'</m> are the two intersections of the connecting and auxiliary circles, and these are mirror images of each other in <m>AB</m>. Reflecting the first tangent in <m>AB</m> therefore produces the second tangent, and two lines that are mirror images in <m>AB</m> must meet on the mirror line itself — so both tangents pass through a single point <m>O'</m> on <m>AB</m>. (Comparing the similar right triangles <m>AT_1O'</m> and <m>BT_1'O'</m> shows further that <m>O'</m> divides <m>AB</m> in the ratio <m>AO' : O'B = r : R</m>, agreeing with the Key Ideas box.)
+                            The whole construction is symmetric about the line <m>AB</m>: the points <m>Q</m> and <m>Q'</m> are the two intersections of the connecting and auxiliary circles, and these are mirror images of each other in <m>AB</m>. Reflecting the first tangent in <m>AB</m> therefore produces the second tangent, and two lines that are mirror images in <m>AB</m> must meet on the mirror line itself — so the tangents intersect at a common point <m>O'</m> on <m>AB</m>. (Comparing the similar right triangles <m>AT_1O'</m> and <m>BT_1'O'</m> shows further that <m>O'</m> divides <m>AB</m> in the ratio <m>AO' : O'B = r : R</m>, agreeing with the Key Ideas box.)
                         </p>
                     </li>
                 </ol>

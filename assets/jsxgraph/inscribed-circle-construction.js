@@ -5,12 +5,12 @@
  * compass-and-straightedge construction in the section figures.
  *
  * Interactivity: A, B and C are FREE, draggable base points. The arc points P, Q
- * on the sides of angle A, the angle bisectors, the incenter I, the foot X of the
+ * on the sides of angle A, the angle bisectors, the incentre I, the foot X of the
  * perpendicular to BC, the inradius and the inscribed circle are all DERIVED and
  * recompute live as you drag.
  *
- * Method: the incenter is equidistant from all three sides, so it lies on every
- * angle bisector. Bisect angles A and B; they meet at the incenter I. The distance
+ * Method: the incentre is equidistant from all three sides, so it lies on every
+ * angle bisector. Bisect angles A and B; they meet at the incentre I. The distance
  * from I to any side is the inradius r, and the circle centre I radius r touches
  * all three sides.
  *
@@ -65,7 +65,7 @@
   });
   const lineBC = board.create('line', [B, C], { visible: false });
 
-  // --- Incenter (equidistant from the three sides) -------------------------
+  // --- incentre (equidistant from the three sides) -------------------------
   // I = (a·A + b·B + c·C)/(a+b+c), with a=|BC|, b=|CA|, c=|AB|.
   const sides = () => ({ a: B.Dist(C), b: C.Dist(A), c: A.Dist(B) });
   const incX = () => { const { a, b, c } = sides(); return (a * A.X() + b * B.X() + c * C.X()) / (a + b + c); };
@@ -96,7 +96,7 @@
   const M_A = board.create('intersection', [bisA, lineBC, 0], { name: '', size: 2, strokeColor: SCAFF, fillColor: SCAFF, withLabel: false, visible: false});
   const rayA = board.create('segment', [A, M_A], { strokeColor: BIS, strokeWidth: 1.6, dash: 1, highlight: false });
 
-  // --- Step 4: bisector from B; meets bisector of A at the incenter I -------
+  // --- Step 4: bisector from B; meets bisector of A at the incentre I -------
   const M_B = board.create('intersection', [board.create('line', [B, I], { visible: false }), board.create('line', [A, C], { visible: false }), 0], { visible: false, name: '' });
   const rayB = board.create('segment', [B, M_B], { strokeColor: BIS, strokeWidth: 1.6, dash: 1, highlight: false });
 
@@ -125,7 +125,7 @@
     'Step 1 of 6 — Draw the triangle ABC.',
     'Step 2 of 6 — With the compass point at A, draw an arc crossing side AB at P and side AC at Q.',
     'Step 3 of 6 — Keeping the same width, draw crossing arcs from P and Q, marking their intersection. Connect A to the intersection.',
-    'Step 4 of 6 — Repeat for angle B. The two bisectors meet at the incenter I.',
+    'Step 4 of 6 — Repeat for angle B. The two bisectors meet at the incentre I.',
     'Step 5 of 6 — Drop a perpendicular from I to side BC. The foot is X, and IX is the inradius r.',
     'Step 6 of 6 — Draw the circle centre I, radius r = IX: the inscribed circle, tangent to all three sides.'
   ];

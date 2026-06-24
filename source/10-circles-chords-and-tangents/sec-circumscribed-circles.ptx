@@ -351,7 +351,7 @@
                     <sidebyside width="85%" margins="1%">
                         <slate surface="html">
                             <div id="caption_circum"
-                                style="font:15px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:#222;text-align:center;min-height:60px;"
+                                style="font:15px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:#222;text-align:center;min-height:44px;"
                                 xmlns="http://www.w3.org/1999/xhtml"></div>
                         </slate>
                     </sidebyside>
@@ -381,7 +381,7 @@
             <p>
                 Suppose <m>\triangle ABC</m> has side lengths <m>a = BC</m>, <m>b = AC</m>, and <m>c = AB</m>.
                 <figure xml:id="fig-circumcircle-thm">
-                <caption>The circumcircle of triangle <m>ABC</m>.</caption>
+                <caption>The circumcircle of triangle <m>ABC</m> and its circumradius <m>R</m>.</caption>
                 <image width="65%">
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
@@ -433,7 +433,7 @@
                 Let <m>\angle ACB = \theta</m>, and label the midpoint of <m>AB</m> as <m>M</m>, so <m>\triangle AMO</m> is a right-angled triangle.
             </p>
             <figure xml:id="fig-circumcircle-thm-proof">
-                <caption>The circumcircle of triangle <m>ABC</m>.</caption>
+                <caption>Dividing up <m>ABC</m> to determine the circumradius.</caption>
                 <image width="85%">
                     <latex-image>
                         \begin{tikzpicture}[scale=1.0]
@@ -513,7 +513,7 @@
             <ul>
                 <li>
                     <p>
-                        The <term>incircle</term> is the largest circle that fits <em>inside</em> the triangle, tangent to all three sides. Its centre (the incenter) is always inside the triangle.
+                        The <term>incircle</term> is the largest circle that fits <em>inside</em> the triangle, tangent to all three sides. Its centre (the incentre) is always inside the triangle.
                     </p>
                 </li>
                 <li>
@@ -1442,10 +1442,10 @@
                 <ol>
                     <li>
                         <p>
-                            For an equilateral triangle, the angle bisectors and perpendicular bisectors all coincide, so the incenter and circumcenter are the same point.
+                            For an equilateral triangle, the angle bisectors and perpendicular bisectors all coincide, so the incentre and circumcenter are the same point.
                         </p>
                         <figure xml:id="fig-circum-exer-equilateral">
-                            <caption>Equilateral triangle with side <m>12</m> cm, circumcircle (blue) and incircle (orange). For an equilateral triangle the circumcenter and incenter coincide.</caption>
+                            <caption>Equilateral triangle with side <m>12</m> cm, circumcircle (blue) and incircle (orange). For an equilateral triangle the circumcenter and incentre coincide.</caption>
                             <image width="55%">
                                 <latex-image>
                                     \begin{tikzpicture}[scale=0.55]
@@ -1502,7 +1502,7 @@
                             <m>R = 4\sqrt{3} = 2 \times 2\sqrt{3} = 2r</m>. <m>\checkmark</m> In the diagram, the circumcircle's radius is visibly twice the incircle's radius:
                         </p>
                         <figure xml:id="fig-circum-exer-equilateral-2r">
-                            <caption>Equilateral triangle with side <m>12</m> cm, circumcircle (blue) and incircle (orange). For an equilateral triangle the circumcenter and incenter coincide.</caption>
+                            <caption>Equilateral triangle with side <m>12</m> cm, circumcircle (blue) and incircle (orange). For an equilateral triangle the circumcenter and incentre coincide.</caption>
                             <image width="55%">
                                 <latex-image>
                                     \begin{tikzpicture}[scale=0.55]
@@ -1576,7 +1576,7 @@
                             <mrow>\vec{HG} \amp = G - H = \left(\tfrac{8}{3}-1,\ \tfrac{5}{3}-\tfrac{6}{5}\right) = \left(\tfrac{5}{3},\ \tfrac{7}{15}\right),</mrow>
                             <mrow>\vec{GO} \amp = O - G = \left(\tfrac{7}{2}-\tfrac{8}{3},\ \tfrac{19}{10}-\tfrac{5}{3}\right) = \left(\tfrac{5}{6},\ \tfrac{7}{30}\right).</mrow>
                         </md>
-                        Since <m>\vec{HG} = 2\,\vec{GO}</m>, the points are collinear and <m>HG = 2\,GO</m>: the centroid divides the segment from the orthocentre to the circumcentre in the ratio <m>2:1</m>.
+                        Since <m>\vec{HG} = 2\,\vec{GO}</m>, the points line in a line and <m>HG = 2\,GO</m>: the centroid divides the segment from the orthocentre to the circumcentre in the ratio <m>2:1</m>.
                     </p>
                 </li>
             </ol>
