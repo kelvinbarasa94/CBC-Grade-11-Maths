@@ -5,7 +5,10 @@
 
   <introduction>
     <p>
-      Measurements are never perfectly exact because instruments can only measure to a certain degree of accuracy. This limitation creates an absolute error, which measures how far a recorded value may differ from the working value.
+      Measurements are never perfectly exact because instruments can only measure to a certain degree of accuracy. 
+    </p>
+    <p>
+      This limitation creates an error, which measures how far a recorded value may differ from the working value.
     </p>
   </introduction>
   <!--  -->
