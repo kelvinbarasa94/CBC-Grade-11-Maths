@@ -122,6 +122,35 @@
                             <p>
                                 Measure <m>AP</m>, <m>PB</m>, <m>CP</m>, and <m>PD</m> to the nearest millimetre. Record your results in the table below, and calculate the two products <m>AP \times PB</m> and <m>CP \times PD</m>.
                             </p>
+                            <table>
+                                <title>Intersecting chord measurements</title>
+                                <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+                                    <row header="yes" bottom="medium">
+                                        <cell>Circle</cell>
+                                        <cell><m>AP</m> (mm)</cell>
+                                        <cell><m>PB</m> (mm)</cell>
+                                        <cell><m>AP \times PB</m></cell>
+                                        <cell><m>CP</m> (mm)</cell>
+                                        <cell><m>PD</m> (mm)</cell>
+                                        <cell><m>CP \times PD</m></cell>
+                                    </row>
+                                    <row>
+                                        <cell>1</cell>
+                                        <cell></cell><cell></cell><cell></cell>
+                                        <cell></cell><cell></cell><cell></cell>
+                                    </row>
+                                    <row>
+                                        <cell>2</cell>
+                                        <cell></cell><cell></cell><cell></cell>
+                                        <cell></cell><cell></cell><cell></cell>
+                                    </row>
+                                    <row>
+                                        <cell>3</cell>
+                                        <cell></cell><cell></cell><cell></cell>
+                                        <cell></cell><cell></cell><cell></cell>
+                                    </row>
+                                </tabular>
+                            </table>
                         </li>
                         <li>
                             <p>
@@ -140,35 +169,6 @@
                         </li>
                     </ol>
                 </p>
-                <table>
-                    <title>Intersecting chord measurements</title>
-                    <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
-                        <row header="yes" bottom="medium">
-                            <cell>Circle</cell>
-                            <cell><m>AP</m> (mm)</cell>
-                            <cell><m>PB</m> (mm)</cell>
-                            <cell><m>AP \times PB</m></cell>
-                            <cell><m>CP</m> (mm)</cell>
-                            <cell><m>PD</m> (mm)</cell>
-                            <cell><m>CP \times PD</m></cell>
-                        </row>
-                        <row>
-                            <cell>1</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>2</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                        <row>
-                            <cell>3</cell>
-                            <cell></cell><cell></cell><cell></cell>
-                            <cell></cell><cell></cell><cell></cell>
-                        </row>
-                    </tabular>
-                </table>
             </paragraphs>
         </statement>
     </activity>
