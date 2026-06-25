@@ -695,6 +695,7 @@
                 </p>
             </answer>
         </exercise>
+
         <exercise>
             <statement>
                 <p>
@@ -704,12 +705,12 @@
                     <ol marker="a)">
                         <li>
                             <p>
-                                Write an inequality to represent the number of loaves, <m>l</m>, the bakery must produce tomorrow to fulfill this order without exceeding its maximum daily production capacity.
+                                Write a compound inequality to represent the number of loaves, <m>l</m>, the bakery must produce tomorrow to fulfill this order without exceeding its maximum daily production capacity.
                             </p>
                         </li>
                         <li>
                             <p>
-                                Graph this solution on a number line.
+                                Graph this solution interval on a single number line.
                             </p>
                         </li>
                     </ol>
@@ -717,34 +718,40 @@
             </statement>
             <answer>
                 <p>
-                    <ol>
+                    <ol marker="a)">
                         <li>
                             <p>
-                                <m>l \ge 150</m>
+                                The bakery must produce at least <m>150</m> loaves to satisfy the order, but cannot exceed <m>200</m> loaves due to capacity limits. This is modeled by the compound inequality:
+                            </p>
+                            <p>
+                                <md>
+                                    <mrow>150 \le l \le 200</mrow>
+                                </md>
                             </p>
                         </li>
                         <li>
                             <p>
-                                The graphical representation:
+                                The graphical representation displays a bounded segment between <m>150</m> and <m>200</m> with closed endpoint markers on both limits:
                             </p>
                             <p>
                                 <image>
                                     <latex-image>
                                         \begin{tikzpicture}
-                                            % 1. Draw the main number line axis using small coordinates (0 to 6)
-                                            \draw[&lt;-&gt;, thick] (-0.5,0) -- (6.5,0) node[right] {$l$};
+                                            % 1. Main number line axis framework with balanced crosshairs
+                                            \draw[&lt;-&gt;, thick] (-1,0) -- (8,0) node[right=4pt] {$l$};
                                             
-                                            % 2. Map coordinates (0,1,2...) to display the actual values (140,145,150...): evaluate the label arithmetic directly
-                                            \foreach \pos in {0, 1, 2, 3, 4, 5, 6} {
-                                                \pgfmathtruncatemacro{\labelvalue}{140 + \pos * 5}
-                                                \draw (\pos, 0.12) -- (\pos, -0.12) node[below] {$\labelvalue$};
+                                            % 2. Map coordinate spaces (0 to 7) to display values 140 to 210 in steps of 10
+                                            \foreach \pos in {0, 1, 2, 3, 4, 5, 6, 7} {
+                                                \pgfmathtruncatemacro{\labelvalue}{140 + \pos * 10}
+                                                \draw (\pos, 0.12) -- (\pos, -0.12) node[below=3pt, font=\small] {$\labelvalue$};
                                             }
 
-                                            % 3. Draw the thick line pointing right, starting at coordinate 2 (which displays 150)
-                                            \draw[-&gt;, ultra thick] (2,0) -- (6.5,0);
+                                            % 3. Draw a solid thick interval bar between 150 (pos=1) and 200 (pos=6)
+                                            \draw[solid, ultra thick, blue] (1,0) -- (6,0);
 
-                                            % 4. Draw the CLOSED circle at coordinate 2
-                                            \fill[draw=black, fill=black] (2,0) circle (3pt);
+                                            % 4. Placed perfectly at the exact integer intervals
+                                            \fill[draw=blue, fill=blue] (1,0) circle (3pt);
+                                            \fill[draw=blue, fill=blue] (6,0) circle (3pt);
                                         \end{tikzpicture}
                                     </latex-image>
                                 </image>
@@ -754,6 +761,7 @@
                 </p>
             </answer>
         </exercise>
+
         <exercise>
             <statement>
                 <p>
