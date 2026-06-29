@@ -364,7 +364,7 @@
         <exercise>
             <statement>
                 <p>
-                    <em>Wanjiku</em>, a Grade <m>11</m> student, was asked to solve the inequality <m>-3x + 4 \gt 19</m>. She showed her working as follows:
+                    <em>Wanjiku</em>, a Grade <m>11</m> student, was asked to solve the inequality <md>-3x + 4 \gt 19</md>. She showed her working as follows:
                 </p>
                 <p>
                     <md>
@@ -476,7 +476,7 @@
                 </p>
                 <figure>
                     <caption>Triangle with side lengths <m>a</m>, <m>b</m>, and <m>c</m></caption>
-                    <image>
+                    <image width="60%">
                         <shortdescription>A triangle with three sides labeled a, b, and c.</shortdescription>
                         <latex-image>
                             \begin{tikzpicture}[scale=1]

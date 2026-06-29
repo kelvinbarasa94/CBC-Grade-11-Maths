@@ -383,7 +383,7 @@
                             \node at (3.5, 3) [above left, font=\small, rotate=63.4, xshift=-2pt, fill=white, inner sep=1.5pt] {$2x - y = 4$};
                             
                             % 8. Feasible Region Identification Text
-                            \node at (1.2, 4.5) [font=\small, color=purple!80!black, font=\bfseries] {Feasible Region};
+                            \node at (1.8, 4.5) [font=\small, color=purple!80!black, font=\bfseries] {Feasible Region};
                         \end{tikzpicture}
                     </latex-image>
                 </image>

@@ -352,9 +352,9 @@
                         <mrow> \frac{320}{7} \amp \lt s </mrow>
                         <mrow> s \amp \gt \frac{320}{7} </mrow>
                     </md>
-                    Combing both, we have:
+                    Combining both, we have:
                     <md>
-                        <mrow> \frac{320}{7} \amp \lt s \amp \le 80 </mrow>
+                        <mrow> \frac{320}{7} \lt s \le 80 </mrow>
                     </md>
                     Therefore, the driver's average speed must be strictly greater than <m>\frac{320}{7}\,\text{km/h}\,(\approx 45.71\,\text{km/h})</m> but less than or equal to <m>80\,\text{km/h}</m>.
                 </p>

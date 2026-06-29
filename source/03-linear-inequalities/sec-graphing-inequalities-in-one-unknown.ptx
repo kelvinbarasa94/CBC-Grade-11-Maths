@@ -219,7 +219,7 @@
 
         <image xml:id="img-insight-inequalities" width="80%">
             <latex-image>
-                \begin{tikzpicture}[xscale=1, yscale=1.5]
+                \begin{tikzpicture}[scale=0.6]
                     
                     % --- First inequality ---
                     % Label
