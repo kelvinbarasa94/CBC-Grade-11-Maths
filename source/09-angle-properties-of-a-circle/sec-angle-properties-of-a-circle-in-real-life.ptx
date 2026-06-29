@@ -63,7 +63,7 @@
     <activity>
         <statement>
             <paragraphs>
-                <title>Learner Experience Sequence</title>
+                <!-- <title>Learner Experience Sequence</title> -->
                 <p>
                     <ul>
                         <li>
@@ -82,7 +82,7 @@
                         <li>
                             <p><alert>3. Step-by-Step Activity Instruction:</alert>
                                 <ul>
-                                    <li>Draw a large circle representing the outer boundary of a round amphitheater, marking the center stage as point <m>O</m>.</li>
+                                    <li>Draw a large circle of radius <m>10cm</m>  representing the outer boundary of a round amphitheater, marking the center stage as point <m>O</m>.</li>
                                     <li>Mark two points on the back wall arc, labeling them <m>A</m> and <m>B</m>, to represent the main spotlight rigs. Draw lines from <m>A</m> and <m>B</m> to the center stage <m>O</m> and measure <m>\angle AOB</m>.</li>
                                     <li>Pick three different locations along the audience balcony arc, labeling them <m>P</m>, <m>Q</m>, and <m>R</m>. Draw the viewing angles from each seat back to the spotlights (e.g., <m>\angle APB</m>, <m>\angle AQB</m>, <m>\angle ARB</m>).</li>
                                     <li>Measure all three viewing angles with your protractor. What do you notice about the sightlines from different seats on the same arc? How do they compare to the spotlight center angle <m>\angle AOB</m>?</li>
