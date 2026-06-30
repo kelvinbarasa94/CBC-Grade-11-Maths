@@ -29,15 +29,31 @@ jobs:
             #     tlmgr update --self
             #     tlmgr install tkz-euclide tikz-3dplot longdivision
 
-            # Reverting to previous tlmgr repository
+            # tlmgr can ONLY talk to a package repository from the SAME TeX Live
+            # release that is installed in the container, otherwise it aborts with
+            # "cross release updates are not supported". The oscarlevin/pretext:full
+            # tag is a moving target, so don't hard-code a year: detect the installed
+            # release and pick the matching repository automatically.
             - name: install tex dependencies
               run: |
-                REPO=https://texlive.info/historic/systems/texlive/2025/tlnet-final
-
+                set -x
+                TLYEAR="$(tlmgr --version | sed -n 's/.*TeX Live \([0-9]\{4\}\).*/\1/p' | head -n1)"
+                echo "Detected TeX Live release: ${TLYEAR:-unknown}"
+                FINAL="https://texlive.info/historic/systems/texlive/${TLYEAR}/tlnet-final"
+                CURRENT="https://mirror.ctan.org/systems/texlive/tlnet"
+                # Use the frozen tlnet-final for that year if it exists (older releases),
+                # otherwise fall back to the live CTAN tlnet (the current release).
+                if [ -n "$TLYEAR" ] && curl -fsI "$FINAL/" >/dev/null 2>&1; then
+                    REPO="$FINAL"
+                else
+                    REPO="$CURRENT"
+                fi
+                echo "Using tlmgr repository: $REPO"
                 tlmgr option repository "$REPO"
-                tlmgr update --self
-                tlmgr install tkz-euclide tikz-3dplot
-                  
+                # Don't hard-fail the job if there is nothing to update / already current.
+                tlmgr update --self || true
+                tlmgr install tkz-euclide tikz-3dplot || true
+
             - name: install local ptx files
               run: pretext --version
 
@@ -53,6 +69,20 @@ jobs:
                     echo "PreTeXt version is less than 2.5, using old build command"
                     pretext build
                 fi
+
+            # Surfaces the real LaTeX error if the build above fails. The saved
+            # GitHub log only showed "exit code 1"; this prints the tex logs so the
+            # underlying tkz-euclide / package error is visible in the run output.
+            - name: Show LaTeX logs on build failure
+              if: failure()
+              run: |
+                echo "=== Most recent .log files ==="
+                find . -name '*.log' -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -n 20 | cut -d' ' -f2-
+                echo "=== Tails of recent .log files ==="
+                for f in $(find . -name '*.log' -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -n 10 | cut -d' ' -f2-); do
+                    echo "----- $f -----"
+                    tail -n 80 "$f"
+                done
 
             - name: Copy custom stackapicalls.js
               run: |
