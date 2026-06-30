@@ -94,7 +94,7 @@
     <!-- Add Activity -->
      <activity>
         <statement>
-            <p><strong>Work in Groups</strong></p>
+            <p><term>Work in Groups</term></p>
             <p>
                 <alert>Materials Needed:</alert>
             </p>
@@ -104,17 +104,14 @@
             <li><p>Compass</p></li></ol>
             
             <p>
-                <strong>Inquiry Question:</strong> How does the angle of a structural support change when we anchor it at different points along a circular frame?
-            </p>
-            <p>
                 Imagine your group is designing a traditional circular pavilion for a community cultural site. To support the conical roof, you need to run straight wooden beams from a central pillar <m>O</m> to the circular perimeter, as well as spanning beams across the perimeter. 
             </p>
             
-            <p><strong>Step-by-Step Practical Investigation:</strong></p>
+            <!-- <p><term>Step-by-Step Practical Investigation:</term></p> -->
             <ol>
                 <li>
                     <p>
-                        Using a drawing board, paper, and a compass, draw a large circle with center <m>O</m>.
+                        Using a drawing board, paper, and a compass, draw a large circle  of radius <m>10 cm </m> with center <m>O</m>.
                     </p>
                 </li>
                 <li>
@@ -138,8 +135,76 @@
                     </p>
                 </li>
             </ol>
+              <figure xml:id="fig-angle-at-center-trials">
+    <caption>Geometric layout showing a central angle and multiple inscribed angles subtended by the same foundation arc.</caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.3]
+                % --- Step 1: Define Circle Center and Radius ---
+                \coordinate (O) at (0,0);
+                \def\radius{2.5}
+                
+                % --- Step 2: Define Fixed Points on the Lower Half ---
+                \coordinate (A) at (230:\radius);
+                \coordinate (B) at (310:\radius);
+                
+                % --- Step 3: Define Postions on the Upper Major Arc ---
+                \coordinate (P) at (130:\radius);
+                \coordinate (Q) at (90:\radius);
+                \coordinate (R) at (40:\radius);
 
-            <p><strong>Group Discussion and Recording:</strong></p>
+                % --- Step 4: Draw the Circle and Foundation Arc ---
+                \draw[thick] (O) circle (\radius);
+                \draw[line width=2pt, red!80!black] (A) arc (230:310:\radius);
+                \node[red!80!black, below] at (270:\radius+0.1) {Foundation Arc $AB$};
+
+                % --- Step 5: Draw Central Angle ---
+                \draw[thick, dashed, red!80!black] (A) -- (O) -- (B);
+                \begin{scope}
+                    \clip (O) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (O) circle (0.4);
+                    \draw[red!80!black, thick] (O) circle (0.4);
+                \end{scope}
+                \node[red!80!black, below, yshift=-2pt] at (O) {$\angle AOB$};
+
+                % --- Step 6: Draw Inscribed Chords and Angle Fills ---
+                % Point P
+                \draw[thick, blue!80!black] (A) -- (P) -- (B);
+                \begin{scope}
+                    \clip (P) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!15, opacity=0.6] (P) circle (0.4);
+                    \draw[blue!80!black, thin] (P) circle (0.4);
+                \end{scope}
+
+                % Point Q
+                \draw[thick, teal, dashed] (A) -- (Q) -- (B);
+                \begin{scope}
+                    \clip (Q) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=teal!15, opacity=0.4] (Q) circle (0.4);
+                    \draw[teal, thin] (Q) circle (0.4);
+                \end{scope}
+
+                % Point R
+                \draw[thick, purple, dashed] (A) -- (R) -- (B);
+                \begin{scope}
+                    \clip (R) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=purple!15, opacity=0.4] (R) circle (0.4);
+                    \draw[purple, thin] (R) circle (0.4);
+                \end{scope}
+
+                % --- Step 7: Plot Points and Labels ---
+                \foreach \pt/\pos in {O/above, A/below left, B/below right, P/left, Q/above, R/right} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {\pt};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
+            <p><term>Group Discussion and Recording:</term></p>
+            <p>
             <ul>
                 <li>
                     <p>
@@ -152,36 +217,11 @@
                     </p>
                 </li>
             </ul>
+        </p>
+             <p>
+                <term>Inquiry Question:</term>How does the angle of a structural support change when we anchor it at different points along a circular frame?
+            </p>
         </statement>
-        <figure>
-            <caption>A circle illustrating a central angle AOB and a circumference angle APB subtended by the same arc AB.</caption>
-            <image>
-                <shortdescription>Circle with center O, central angle AOB, and inscribed angle APB on the circumference.</shortdescription>
-                <latex-image>
-                    \begin{tikzpicture}[scale=1.1]
-                        \draw[thick] (0,0) circle (2.5);
-                        \coordinate (O) at (0,0);
-                        \coordinate (A) at (-2.165,-1.25);
-                        \coordinate (B) at (2.165,-1.25);
-                        \coordinate (P) at (0.434,2.462);
-                        
-                        \draw[red, thick] (O) -- (A);
-                        \draw[red, thick] (O) -- (B);
-                        \draw[blue, thick] (P) -- (A);
-                        \draw[blue, thick] (P) -- (B);
-                        
-                        \node[below left] at (A) {A};
-                        \node[below right] at (B) {B};
-                        \node[above] at (P) {P};
-                        \node[below] at (O) {O};
-                        
-                        \draw (-0.346,-0.2) arc (210:330:0.4);
-                        \node[below] at (0,-0.5) {\small $2x$};
-                        \node[below] at (0.434,2.0) {\small $x$};
-                    \end{tikzpicture}
-                </latex-image>
-            </image>
-        </figure>
     </activity>
 
     <!-- <activity>
@@ -703,8 +743,10 @@
                 <p>
                     Substitute <m>x = 20</m> back into the expressions to find the angle measurements:
                 </p>
+                <p>
                 <md>\angle CGD = 3(20) - 12 = 60 - 12 = 48^\circ</md>
                 <md>\angle COD = 4(20) + 16 = 80 + 16 = 96^\circ</md>
+                </p>
                 <p>
                     Verifying the result: <m>2 \times 48^\circ = 96^\circ</m>, which matches the theorem.
                 </p>
@@ -1093,7 +1135,20 @@
     </exercises> -->
 
     <!-- [LP] Add information on how to differentiate  -->
-
+<axiom component="lesson-plan">
+        <title>Differentiated Instruction (Differentiation)</title>
+        <paragraphs>
+            <title>Support and Extension Strategies</title>
+            <ul>
+                <li>
+                    <p><alert>Support for Struggling Learners:</alert> Provide learners with pre-drawn circles on tracing paper. Have them use color-coded highlighters to trace the shared foundation arc in one color (e.g., red) and the subtended lines in another color to visually anchor the relationship. Encourage them to physically cut out the circumference angle and place it over a second identical cutout to verify that the angle remains unchanged across the entire major segment.</p>
+                </li>
+                <li>
+                    <p><alert>Extension for Advanced Learners:</alert> Challenge learners to algebraically or geometrically prove the *Angles in the Same Segment Theorem* by using the *Angle at the Centre Theorem* as a structural link. Alternatively, ask them to investigate what happens when point <m>P</m> moves into the minor segment, discovering how the inscribed angle relates to the reflex central angle.</p>
+                </li>
+            </ul>
+        </paragraphs>
+    </axiom>
     <!-- <axiom component="lesson-plan">
         <title>Differentiation</title>
 

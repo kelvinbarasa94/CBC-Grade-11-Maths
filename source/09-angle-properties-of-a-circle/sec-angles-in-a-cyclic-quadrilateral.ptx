@@ -63,9 +63,9 @@
     <activity>
         <statement>
             <paragraphs>
-                <title>Learner Experience Sequence</title>
+                <!-- <title>Learner Experience Sequence</title> -->
                 <p>
-                    <ul>
+                    <ol>
                         <li>
                             <p><alert>Group Work Formulation:</alert> Join a small peer collaborative group of <m>3</m> to <m>4</m> members to map out, measure, and verify geometric trends collectively.</p>
                         </li>
@@ -82,17 +82,17 @@
                         </li>
                         <li>
                             <p><alert>Step-by-Step Activity Instruction:</alert>
-                                <ul>
-                                    <li>Use your compass to construct a large circle with center <m>O</m>.</li>
+                                <ol>
+                                    <li>Use your compass to construct a large circle of radius <m>10 cm</m> with center <m>O</m>.</li>
                                     <li>Mark four random, distinct points anywhere along the outer edge of the circumference. Label these points in order as <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>.</li>
                                     <li>Use your straightedge to draw segments <m>AB</m>, <m>BC</m>, <m>CD</m>, and <m>DA</m> to form an inscribed quadrilateral <m>ABCD</m>.</li>
                                     <li>Measure the internal magnitudes of all four corner vertices: <m>\angle DAB</m>, <m>\angle ABC</m>, <m>\angle BCD</m>, and <m>\angle CDA</m>.</li>
                                     <li>Calculate the sum of the pairs facing across from each other: <m>\angle DAB + \angle BCD</m> and <m>\angle ABC + \angle CDA</m>. What constant mathematical value do you compute?</li>
                                     <li>Extend line segment <m>AB</m> past vertex <m>B</m> to an external point <m>E</m>. Measure the exterior angle <m>\angle CBE</m> and compare it directly to the interior opposite angle <m>\angle ADC</m>. Record your observations.</li>
-                                </ul>
+                                </ol>
                             </p>
                         </li>
-                    </ul>
+                    </ol>
                 </p>
             </paragraphs>
         </statement>
@@ -189,19 +189,19 @@
     </axiom>
 
    <insight xml:id="insight-cyclic-quadrilateral-properties">
-        <title>Key Insight: Cyclic Quadrilateral Properties</title>
+        <!-- <title>Key Insight: Cyclic Quadrilateral Properties</title> -->
         <p>
-            A quadrilateral is strictly classified as <strong>cyclic</strong> if and only if all four of its corner vertices lie directly on the circle's circumference. 
+            A quadrilateral is cyclic if all four vertices lie on the circumference of the same circle. 
         </p>
         <ul>
             <li>
                 <p>
-                    The opposite interior angles are supplementary, meaning their measures always sum to exactly <m>180^\circ</m>. If one angle changes, its opposite facing counterpart must adjust conversely to maintain this constant sum.
+                    The opposite interior angles are supplementary, meaning their measures always sum to exactly <m>180^\circ</m>. 
                 </p>
             </li>
             <li>
                 <p>
-                    Extending any straight side of the polygon creates an exterior angle that is always identical in measure to its interior opposite angle.
+                   When a side is extended, the exterior angle is equal to the interior opposite angle.
                 </p>
             </li>
         </ul>
@@ -343,7 +343,7 @@
 
     <example>
         <statement>
-            <p>A mechanic models four mounting bolt holes on a circular car wheel rim at positions <m>W</m>, <m>X</m>, <m>Y</m>, and <m>Z</m> to form a cyclic quadrilateral <m>WXYZ</m>. The straight rim edge segment <m>WX</m> is extended past vertex <m>X</m> to create an exterior alignment angle measuring <m>\angle YXE = 105^\circ</m>. Calculate the value of interior opposite angle <m>\angle WZY</m>.</p>
+            <p>A mechanic models four mounting bolt holes on a circular car wheel rim at positions <m>W</m>, <m>X</m>, <m>Y</m>, and <m>Z</m> to form a cyclic quadrilateral <m>WXYZ</m>. The straight rim edge segment <m>WX</m> is extended past vertex <m>X</m> to create an an exterior angle measuring <m>\angle YXE = 105^\circ</m>. Calculate the value of interior opposite angle <m>\angle WZY</m>.</p>
             <figure xml:id="fig-cyclic-quad-exterior-thm">
     <caption>A circular car wheel rim modeling four mounting bolt holes that form cyclic quadrilateral <m>WXYZ</m>, where the straight edge segment <m>WX</m> is extended to <m>E</m> to form exterior angle <m>\angle YXE = 105^{\circ}</m>.</caption>
     <image width="65%">
@@ -998,7 +998,20 @@
     </exercises> -->
 
     <!-- [LP] Add information on how to differentiate  -->
-
+<axiom component="lesson-plan">
+        <title>Differentiated Instruction (Differentiation)</title>
+        <paragraphs>
+            <title>Support and Extension Strategies</title>
+            <ul>
+                <li>
+                    <p><alert>Support for Struggling Learners:</alert> Provide pre-cut transparent circular templates where students can physically fold the cyclic quadrilaterals along opposite angles to visually verify that they form a straight line (<m>180^\circ</m>).</p>
+                </li>
+                <li>
+                    <p><alert>Extension for Advanced Learners:</alert> Challenge learners to formally prove the cyclic quadrilateral theorem using the inscribed angle theorem (i.e., showing that the total subtended angle at the center equals <m>360^\circ</m>, thus the opposite inscribed angles must sum to <m>180^\circ</m>).</p>
+                </li>
+            </ul>
+        </paragraphs>
+    </axiom>
     <!-- <axiom component="lesson-plan">
         <title>Differentiation</title>
 

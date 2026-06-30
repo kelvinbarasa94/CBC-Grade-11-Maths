@@ -93,12 +93,65 @@
                 <li><p><strong>The segment defined by chord CD</strong>: Shade the region enclosed between the straight line chord <m>CD</m> and the boundary arc <m>CD</m>.</p></li>
                 <li><p><strong>The sector formed by radii OC and OD</strong>: Shade the region enclosed by the center <m>O</m> and the radii <m>OC</m> and <m>OD</m> (resembling a pizza slice).</p></li>
             </ol>
-            <p><strong>Part B: Hands-On Measurements</strong></p>
+            <image xml:id="img-circle-geometry-parts">
+    <description>A circle with center O showing chord AB, minor arc ACB, major arc ADB, segment CD, and sector OCD.</description>
+    <latex-image>
+        \begin{tikzpicture}[scale=1.5, >=stealth]
+            % Define the circle radius and center
+            \def\R{2.5}
+            \coordinate (O) at (0,0);
+            
+            % Define coordinates on the circumference using angles
+            \coordinate (A) at (140:\R);
+            \coordinate (B) at (40:\R);
+            \coordinate (C) at (90:\R);
+            \coordinate (D) at (280:\R);
+            
+            % Shading the Sector OCD (Pizza slice)
+            \fill[orange!20] (O) -- (C) arc (90:280:\R) -- cycle;
+            
+            % Shading the Segment CD (Region between chord CD and arc CD)
+            \fill[blue!20] (C) arc (90:-80:\R) -- cycle;
+
+            % Draw the main circle
+            \draw[thick] (O) circle (\R);
+            
+            % Draw radii for the sector
+            \draw[dashed, thick, orange!80!black] (O) -- (C);
+            \draw[dashed, thick, orange!80!black] (O) -- (D);
+            
+            % Draw Chord AB
+            \draw[thick, red] (A) -- (B);
+            
+            % Draw Chord CD (to bound the segment)
+            \draw[thick, blue] (C) -- (D);
+            
+            % Highlight Minor Arc ACB (Thicker red arc)
+            \draw[ultra thick, red] (40:\R) arc (40:140:\R);
+            
+            % Plot and label points
+            \fill (O) circle (1.5pt) node[below left] {$O$};
+            \fill (A) circle (1.5pt) node[above left] {$A$};
+            \fill (B) circle (1.5pt) node[above right] {$B$};
+            \fill (C) circle (1.5pt) node[above] {$C$};
+            \fill (D) circle (1.5pt) node[below] {$D$};
+            
+            % Explanatory Text labels for regions
+            \node[orange!80!black] at (185:1.2) {Sector};
+            \node[blue!80!black] at (5:1.8) {Segment};
+            \node[red] at (90:\R+0.3) {Minor Arc $ACB$};
+            \node[gray] at (210:\R+0.3) {Major Arc $ADB$};
+        \end{tikzpicture}
+    </latex-image>
+</image>
+            <p><term>Part B: Hands-On Measurements</term></p>
+            <p>
             <ul>
-                <li><p><strong>The Chord Length:</strong> Use a ruler to measure the straight line <m>AB</m> in centimeters. Note how it compares to the diameter (a chord can never be longer than the diameter).</p></li>
-                <li><p><strong>The Sector Angle (<m>\theta</m>):</strong> Use a protractor to measure the central angle <m>\angle COD</m> at the center.</p></li>
-                <li><p><strong>The Arc Fraction:</strong> Divide your measured angle by <m>360^\circ</m> to find what fraction of the circle your sector represents: <m>\text{Fraction} = \frac{\theta}{360^\circ}</m>.</p></li>
+                <li><p><alert>The Chord Length:</alert> Use a ruler to measure the straight line <m>AB</m> in centimeters. Note how it compares to the diameter (a chord can never be longer than the diameter).</p></li>
+                <li><p><alert>The Sector Angle (<m>\theta</m>):</alert> Use a protractor to measure the central angle <m>\angle COD</m> at the center.</p></li>
+                <li><p><alert>The Arc Fraction:</alert> Divide your measured angle by <m>360^\circ</m> to find what fraction of the circle your sector represents: <m>\text{Fraction} = \frac{\theta}{360^\circ}</m>.</p></li>
             </ul>
+             </p>
         </statement>
         <figure>
             <caption>Circle diagram showing chord AB, minor arc ACB, major arc ADB, segment CD, and sector COD.</caption>

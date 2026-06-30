@@ -71,9 +71,9 @@
 
     <activity xml:id="act-dynamic-circle-geoboard">
         <statement>
-            <p><strong>Learner Experience: The Elastic Circle Investigation</strong></p>
-            
-            <p><strong>Work in Groups:</strong></p>
+            <!-- <p><strong>Learner Experience: The Elastic Circle Investigation</strong></p>
+             -->
+            <p><term>Work in Groups:</term></p>
             <p>
                 This activity must be carried out in collaborative learning groups of 3 to 4 students. Allocate roles within your group: 
                 <ul>
@@ -84,7 +84,7 @@
                 </ul>
             </p>
 
-            <p><strong>Materials Needed:</strong></p>
+            <p><term>Materials Needed:</term></p>
             <p>
                 Each group will require the following local materials:
                 <ul>
@@ -96,26 +96,26 @@
                 </ul>
             </p>
 
-            <p><strong>Step-by-Step Practical Investigation:</strong></p>
+            <p><term>Step-by-Step Practical Investigation:</term></p>
             <ol>
                 <li>
                     <p>
-                        <strong>Anchor the Base:</strong> Place your board flat on the desk. Select two perimeter pins at the bottom of the board to be your anchor points, <m>A</m> and <m>B</m> (for example, the "5 o'clock" and "7 o'clock" positions). 
+                        Place your board flat on the desk. Select two perimeter pins at the bottom of the board to be your anchor points, <m>A</m> and <m>B</m> (for example, the "5 o'clock" and "7 o'clock" positions). 
                     </p>
                 </li>
                 <li>
                     <p>
-                        <strong>Create the Central Angle:</strong> Take your first rubber band (Color 1). Stretch it from pin <m>A</m>, around the center pin <m>O</m>, and back to pin <m>B</m>. This forms the central angle <m>\angle AOB</m>. Measure this angle using your protractor and record it.
+                         Take your first rubber band (Color 1). Stretch it from pin <m>A</m>, around the center pin <m>O</m>, and back to pin <m>B</m>. This forms the central angle <m>\angle AOB</m>. Measure this angle using your protractor and record it.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <strong>Create the Circumference Angle:</strong> Take your second rubber band (Color 2). Stretch it from the same anchor pin <m>A</m>, all the way to a pin <m>P</m> on the upper opposite side of the circle (e.g., the "12 o'clock" position), and back down to anchor pin <m>B</m>. Measure the angle <m>\angle APB</m> at pin <m>P</m> and record it.
+                         Take your second rubber band (Color 2). Stretch it from the same anchor pin <m>A</m>, all the way to a pin <m>P</m> on the upper opposite side of the circle (e.g., the "12 o'clock" position), and back down to anchor pin <m>B</m>. Measure the angle <m>\angle APB</m> at pin <m>P</m> and record it.
                     </p>
                 </li>
                 <li>
                     <p>
-                        <strong>Analyze the Ratio:</strong> Divide the measurement of the central angle by the circumference angle:
+                         Divide the measurement of the central angle by the circumference angle:
                     </p>
                     <md>\text{Ratio} = \frac{\angle AOB}{\angle APB}</md>
                     <p>
@@ -124,12 +124,12 @@
                 </li>
                 <li>
                     <p>
-                        <strong>The Moving Vertex:</strong> Take your third rubber band (Color 3). Stretch it from <m>A</m>, to a different upper pin <m>Q</m> (e.g., the "2 o'clock" position), and back to <m>B</m>. Measure the angle <m>\angle AQB</m>. What do you notice when you compare the value of <m>\angle AQB</m> with <m>\angle APB</m>?
+                         Take your third rubber band (Color 3). Stretch it from <m>A</m>, to a different upper pin <m>Q</m> (e.g., the "2 o'clock" position), and back to <m>B</m>. Measure the angle <m>\angle AQB</m>. What do you notice when you compare the value of <m>\angle AQB</m> with <m>\angle APB</m>?
                     </p>
                 </li>
             </ol>
 
-            <p><strong>Group Discussion and Reporting Questions:</strong></p>
+            <p><term>Group Discussion and Reporting Questions:</term></p>
             <ul>
                 <li>
                     <p>
@@ -273,13 +273,68 @@
         <md>\angle APB = \angle AQB = \angle ARB</md>
     </insight> -->
 <insight xml:id="insight-angles-same-arc">
-    <p>
-        <strong>Angles Subtended by the Same Arc</strong>
-    </p>
+    <!-- <p>
+        <term>Angles Subtended by the Same Arc</term>
+    </p> -->
     <p>
         Angles formed at the circumference by drawing lines from the same standing arc are exactly equal in measure. This is often referred to visually as the <strong>"Bow-Tie"</strong> or <strong>"Butterfly"</strong> theorem.
     </p>
-    
+    <figure xml:id="fig-angles-same-arc">
+    <caption>Visual representation of angles subtended by the same arc (the "Bow-Tie" or "Butterfly" property).</caption>
+    <image width="65%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.2]
+                % --- Step 1: Define Circle Center and Radius ---
+                \coordinate (O) at (0,0);
+                \def\radius{2.5}
+                
+                % --- Step 2: Define Base Arc Points ---
+                \coordinate (A) at (220:\radius);
+                \coordinate (B) at (320:\radius);
+                
+                % --- Step 3: Define Circumference Points for the Angles ---
+                \coordinate (C) at (110:\radius);
+                \coordinate (D) at (50:\radius);
+
+                % --- Step 4: Draw the Main Circle ---
+                \draw[thick] (O) circle (\radius);
+                
+                % --- Step 5: Highlight the Standing Arc ---
+                \draw[line width=2.5pt, red!70!black] (A) arc (220:320:\radius);
+                \node[red!70!black, below] at (270:\radius+0.1) {Same Standing Arc};
+
+                % --- Step 6: Color and Fill Equal Angles ---
+                % Angle ACB at point C
+                \begin{scope}
+                    \clip (C) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.7] (C) circle (0.5);
+                    \draw[blue, thick] (C) circle (0.5);
+                \end{scope}
+                \node[blue, below, yshift=-4pt] at (C) {$x$};
+
+                % Angle ADB at point D
+                \begin{scope}
+                    \clip (D) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!20, opacity=0.7] (D) circle (0.5);
+                    \draw[blue, thick] (D) circle (0.5);
+                \end{scope}
+                \node[blue, below, yshift=-4pt] at (D) {$x$};
+
+                % --- Step 7: Draw the Intersecting Lines (The Bow-Tie) ---
+                \draw[thick, blue!80!black] (A) -- (C) -- (B);
+                \draw[thick, blue!80!black] (A) -- (D) -- (B);
+
+                % --- Step 8: Plot Points and Add Text Labels ---
+                \foreach \pt/\pos in {A/left, B/right, C/above left, D/above right} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {\pt};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
     <!-- <p><strong>Key Takeaways and Common Misconceptions:</strong></p>
     <ul>
         <li>

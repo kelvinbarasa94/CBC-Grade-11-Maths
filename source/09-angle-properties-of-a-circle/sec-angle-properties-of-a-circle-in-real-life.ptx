@@ -63,14 +63,14 @@
     <activity>
         <statement>
             <paragraphs>
-                <title>Learner Experience Sequence</title>
+                <!-- <title>Learner Experience Sequence</title> -->
                 <p>
-                    <ul>
+                    <ol>
                         <li>
-                            <p><alert>1. Group Work Formulation:</alert> Form a design firm layout committee of <m>3</m> to <m>4</m> learners representing engineers to map out a municipal theater seating arrangement.</p>
+                            <p><alert>Group Work Formulation:</alert> Form a design firm layout committee of <m>3</m> to <m>4</m> learners representing engineers to map out a municipal theater seating arrangement.</p>
                         </li>
                         <li>
-                            <p><alert>2. Materials Needed:</alert>
+                            <p><alert>Materials Needed:</alert>
                                 <ul>
                                     <li>Architectural grid paper</li>
                                     <li>Drawing compasses</li>
@@ -80,19 +80,90 @@
                             </p>
                         </li>
                         <li>
-                            <p><alert>3. Step-by-Step Activity Instruction:</alert>
-                                <ul>
+                            <p><alert>Step-by-Step Activity Instruction:</alert>
+                                <ol>
                                     <li>Draw a large circle representing the outer boundary of a round amphitheater, marking the center stage as point <m>O</m>.</li>
                                     <li>Mark two points on the back wall arc, labeling them <m>A</m> and <m>B</m>, to represent the main spotlight rigs. Draw lines from <m>A</m> and <m>B</m> to the center stage <m>O</m> and measure <m>\angle AOB</m>.</li>
-                                    <li>Pick three different locations along the audience balcony arc, labeling them <m>P</m>, <m>Q</m>, and <m>R</m>. Draw the viewing angles from each seat back to the spotlights (e.g., <m>\angle APB</m>, <m>\angle AQB</m>, <m>\angle ARB</m>).</li>
+                                    <li>Pick three different locations along the audience balcony arc, labeling them <m>P</m>, <m>Q</m>, and <m>R</m>.  From each point, draw lines to spotlights <m>A</m>  and <m>B</m>  to outline the viewing angles <m>\angle APB, \angle AQB</m> and <m>\angle ARB.</m> </li>
                                     <li>Measure all three viewing angles with your protractor. What do you notice about the sightlines from different seats on the same arc? How do they compare to the spotlight center angle <m>\angle AOB</m>?</li>
                                     <li>Discuss as a group how a civil engineer can use this property to make sure different seats in a stadium get the exact same camera view width.</li>
-                                </ul>
+                                </ol>
                             </p>
                         </li>
-                    </ul>
+                    </ol>
                 </p>
             </paragraphs>
+            <figure xml:id="fig-amphitheater-sightlines">
+    <caption>Geometric layout of a round amphitheater showing spotlight angles and balcony viewing angles.</caption>
+    <image width="70%">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.3]
+                % --- Step 1: Define Center Stage and Circumference Points ---
+                \coordinate (O) at (0,0);
+                
+                % Spotlight rigs on the back wall arc
+                \coordinate (A) at (130:2.5);
+                \coordinate (B) at (50:2.5);
+                
+                % Audience balcony seats along the opposite major arc
+                \coordinate (P) at (210:2.5);
+                \coordinate (Q) at (250:2.5);
+                \coordinate (R) at (310:2.5);
+
+                % --- Step 2: Draw the Amphitheater Boundary ---
+                \draw[thick] (O) circle (2.5);
+                
+                % --- Step 3: Draw Center Angle (Spotlight Rig) ---
+                \begin{scope}
+                    \clip (O) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=red!20, opacity=0.6] (O) circle (0.4);
+                    \draw[red, thick] (O) circle (0.4);
+                \end{scope}
+                \node[red, above, yshift=4pt] at (O) {$\angle AOB$};
+
+                % --- Step 4: Draw Inscribed Viewing Angles ---
+                % Seat P
+                \begin{scope}
+                    \clip (P) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!15, opacity=0.6] (P) circle (0.4);
+                    \draw[blue, thick] (P) circle (0.4);
+                \end{scope}
+                
+                % Seat Q
+                \begin{scope}
+                    \clip (Q) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!15, opacity=0.6] (Q) circle (0.4);
+                    \draw[blue, thick] (Q) circle (0.4);
+                \end{scope}
+                
+                % Seat R
+                \begin{scope}
+                    \clip (R) -- (A) -- (B) -- cycle;
+                    \draw[draw=none, fill=blue!15, opacity=0.6] (R) circle (0.4);
+                    \draw[blue, thick] (R) circle (0.4);
+                \end{scope}
+
+                % --- Step 5: Draw Sightlines and Structural Rays ---
+                % Rays from spotlights to center stage
+                \draw[thick, dashed, red!80!black] (O) -- (A);
+                \draw[thick, dashed, red!80!black] (O) -- (B);
+                
+                % Sightlines from Balcony Seats to Spotlights
+                \draw[thick, blue!80!black] (A) -- (P) -- (B);
+                \draw[thick, blue!80!black] (A) -- (Q) -- (B);
+                \draw[thick, blue!80!black] (A) -- (R) -- (B);
+
+                % --- Step 6: Plot Points and Add Text Labels ---
+                \foreach \pt/\pos in {O/below, A/above left, B/above right, P/left, Q/below, R/right} {
+                    \fill (\pt) circle (2pt);
+                    \node[\pos] at (\pt) {\pt};
+                }
+            \end{tikzpicture}
+            ]]>
+        </latex-image>
+    </image>
+</figure>
         </statement>
     </activity>
 
@@ -133,6 +204,10 @@
                     <title>Objective</title>
                     <p>To formalize real-world applications of circle geometry, linking structural design parameters to proven circle properties.</p>
                 </li>
+                <li>
+                    <title>Teacher's Role</title>
+                    <p>Lead a formal consolidation of the active learning activity. Explicitly connect the learners' empirical measurements of the stadium sightlines (<m>\angle APB</m>, <m>\angle AQB</m>, <m>\angle ARB</m>) to the theoretical naming conventions of Circle Theorems. Highlight how the geometric consistency they discovered ensures structural symmetry, uniform visual experiences, and balanced force distribution in engineering projects.</p>
+                </li>
             </dl>
         </p>
         <!-- <paragraphs>
@@ -148,42 +223,29 @@
         </paragraphs> -->
     </axiom>
 
-   <insight>
-        <p>
-            Whenever you see a circular object in real life—whether it is a Ferris wheel, a structural arch bridge, a round stadium, or a mechanical wheel rim—the angles built into it are far from random. Engineers and architects rely on the fixed mathematical ratios of circle theorems to preserve physical balance, distribute weight, and guarantee uniform sightlines.
-        </p>
+  <insight>
+    <p>
+        Circular designs in real life—from Ferris wheels to structural arches—are far from random. Architects and engineers rely on specific circle theorems to balance physical forces, distribute load, and ensure predictable layouts.
+    </p>
 
-        <p>
-            Consider how these abstract geometric properties translate directly into functional real-world designs:
-            <ul>
-                <li>
-                    <p>
-                        Broadcast engineers use the <term>Angle at the Center Theorem</term> (<m>\angle \text{Center} = 2\angle \text{Circumference}</m>) to position security cameras and theater spotlights, maximizing focal coverage across a venue.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        The principle of <term>Angles in the Same Segment</term> ensures that different spectator seats along the same continuous arena balcony arc get the exact same width of camera or stage view.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Roof trusses and arched windows leverage the <term>Angle in a Semicircle Theorem</term>. Because any angle subtended by a true diameter forms a perfect, self-supporting <m>90^\circ</m> right angle, it creates an incredibly stable framing joint.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Heavy-duty storage silos, water tanks, and car wheel rims are designed around <term>Cyclic Quadrilaterals</term>. Because opposite angles sum to <m>180^\circ</m>, mechanical forces and internal pressures are distributed evenly rather than clustering at a single structural weak spot.
-                    </p>
-                </li>
-            </ul>
-        </p>
-        
-        <p>
-            Ultimately, the circle is nature's most stable shape because its angle properties preserve balance perfectly across every single degree of arc.
-        </p>
-    </insight>
-
+    <p>
+        These geometric properties translate directly into functional applications:
+        <ul>
+            <li>
+                <p><alert>Angle at the Center Theorem:</alert> Venue designers use this relation (<m>\angle \text{Center} = 2\angle \text{Circumference}</m>) to optimize the placement of central spotlights or security cameras relative to the perimeter.</p>
+            </li>
+            <li>
+                <p><alert>Angles in the Same Segment:</alert> This property ensures that any two observation points along a specific continuous arc subtend the exact same structural angle between two fixed focal points on the stage or field.</p>
+            </li>
+            <li>
+                <p><alert>Angle in a Semicircle Theorem:</alert> Roof trusses and arched frames leverage this property. Because any angle subtended by a true diameter forms a predictable <m>90^\circ</m> angle, it provides a reliable, standard template for perpendicular structural joints.</p>
+            </li>
+            <li>
+                <p><alert>Cyclic Quadrilaterals:</alert> Cylindrical storage silos, water tanks, and vehicle wheel rims use cyclic layouts to handle internal pressure. Because opposite angles sum to <m>180^\circ</m>, stress and mechanical forces are distributed systematically across the perimeter.</p>
+            </li>
+        </ul>
+    </p>
+</insight>
     <!-- <xi:include href="../lesson-plan-templates/example-intro.ptx" /> -->
 
     <!-- <activity>
@@ -589,7 +651,7 @@
      <exercises>
         <exercise>
             <statement>
-                <p>A  crop-circle watering boom pivots around a center pump station <m>O</m>. Two sensor flags are placed at positions <m>A</m> and <m>B</m> on the outer perimeter rim. A drone hovering directly above an outer fence gate at point <m>P</m> measures an angle of <m>\angle APB = 37^\circ</m> between the flags. Calculate the layout angle <m>\angle AOB</m> radiating from the center pump station.</p>
+                <p>A circular irrigation system has center O. Points A and B lie on the edge of the circle. If ∠APB = 37°, find ∠AOB.</p>
                 <figure xml:id="angle-at-center-watering-boom">
     <caption></caption>
     <image width="65%">
@@ -912,7 +974,7 @@
 
         <exercise>
             <statement>
-                <p>A corporate logo layout circular in shape connects four brand icon hubs along its outer rim boundary at positions <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m> sequentially. The graphic designer extends the straight base boundary line segment <m>AB</m> past hub <m>B</m> to an external alignment point <m>E</m> to guide an accent banner. If the interior opposite icon hub angle measures <m>\angle ADC = 82^\circ</m>, evaluate the measure of the exterior layout angle <m>\angle CBE</m>.</p>
+                <p>A circular logo has four points, <m>A</m>, <m>B</m>, <m>C</m>, and <m>D</m>, on its outer edge in order. The straight line <m>AB</m> is extended past point <m>B</m> to a point <m>E</m>. If <m>\angle ADC = 82^\circ</m>, find the measure of angle <m>\angle CBE</m>.</p>
                 <figure xml:id="cyclic-quad-corporate-logo">
     <caption></caption>
     <image width="65%">
@@ -989,7 +1051,25 @@
     </exercises> -->
 
     <!-- [LP] Add information on how to differentiate  -->
-
+<axiom component="lesson-plan">
+        <title>Differentiation Strategies</title>
+        <p>
+            <dl>
+                <li>
+                    <title>Support (Scaffolding)</title>
+                    <p>
+                        For learners struggling with abstract relationships, provide physical circle templates where segments are pre-cut or color-coded. Encourage them to physically measure angles using protractors on multiple positions of the arc to verify empirical consistency before transitioning to algebraic representations. Utilize targeted tracking questions such as: <q>Which arc is sub-tending both of these angles?</q>
+                    </p>
+                </li>
+                <li>
+                    <title>Extension (Challenge)</title>
+                    <p>
+                        Challenge advanced learners to mathematically prove the <title>Angle at the Center Theorem</title> using isosceles triangle properties derived from drawing an auxiliary radius line through the circumference point. Alternatively, ask them to investigate real-world edge cases: <q>What occurs to our structural viewing angles if a seat moves outside the continuous circle boundary line into an elliptical or straight stadium wing?</q>
+                    </p>
+                </li>
+            </dl>
+        </p>
+    </axiom>
     <!-- <axiom component="lesson-plan">
         <title>Differentiation</title>
 
