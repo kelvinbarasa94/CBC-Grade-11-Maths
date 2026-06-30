@@ -51,25 +51,24 @@ jobs:
                 # (Anubis) that blocks tlmgr/curl from CI. Utah is a stable archive.
                 FINAL="https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/${TLYEAR}/tlnet-final"
                 CURRENT="https://mirror.ctan.org/systems/texlive/tlnet"
-                # Use the frozen tlnet-final for the detected release if it is
-                # reachable (the normal case for any release that is no longer
-                # current), else fall back to the live CTAN tlnet. Probe with a GET
-                # (not HEAD/-I) and follow redirects.
-                REPO=""
-                if [ -n "$TLYEAR" ]; then
-                    curl -fsSL --retry 3 --connect-timeout 15 -o /dev/null "$FINAL/"; rc=$?
-                    echo "Probe of $FINAL -> curl exit $rc"
-                    [ "$rc" -eq 0 ] && REPO="$FINAL"
-                fi
-                [ -z "$REPO" ] && REPO="$CURRENT"
+                # Prefer the frozen tlnet-final for the detected release (matches the
+                # container exactly, so no cross-release conflict). The container has
+                # no curl, so we don't probe the network -- we just try this repo and,
+                # if the install fails (e.g. the detected release is still the current
+                # one and has no frozen mirror yet), retry against the live CTAN tlnet.
+                if [ -n "$TLYEAR" ]; then REPO="$FINAL"; else REPO="$CURRENT"; fi
                 echo "Using tlmgr repository: $REPO"
                 tlmgr option repository "$REPO"
-                # Show what tlmgr thinks it is talking to, for debugging.
                 tlmgr option repository || true
-                # Self-update can be a no-op; tolerate that. But the install MUST
-                # succeed or the tikz figures won't compile, so do not swallow it.
+                # Self-update can be a no-op; tolerate that.
                 tlmgr update --self || true
-                tlmgr install tkz-euclide tikz-3dplot
+                # The install MUST succeed or the tikz figures won't compile.
+                if ! tlmgr install tkz-euclide tikz-3dplot; then
+                    echo "Install from $REPO failed; retrying with $CURRENT"
+                    tlmgr option repository "$CURRENT"
+                    tlmgr update --self || true
+                    tlmgr install tkz-euclide tikz-3dplot
+                fi
                 # Confirm the required style files are actually findable now.
                 kpsewhich tikz-3dplot.sty tkz-euclide.sty
 
