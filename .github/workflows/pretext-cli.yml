@@ -46,17 +46,26 @@ jobs:
                     TLYEAR="$(sed -n 's/.*release\/\(20[0-9]\{2\}\).*/\1/p' "${TLROOT:-/root/.TinyTeX}/tlpkg/texlive.tlpdb" 2>/dev/null | head -n1)"
                 fi
                 echo "Detected TeX Live release: ${TLYEAR:-unknown}"
-                FINAL="https://texlive.info/historic/systems/texlive/${TLYEAR}/tlnet-final"
+                # Historic mirror for the *frozen* release. Use ftp.math.utah.edu,
+                # NOT texlive.info: texlive.info is now behind an anti-bot proxy
+                # (Anubis) that blocks tlmgr/curl from CI. Utah is a stable archive.
+                FINAL="https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/${TLYEAR}/tlnet-final"
                 CURRENT="https://mirror.ctan.org/systems/texlive/tlnet"
-                # Use the frozen tlnet-final for that year if it exists (older releases),
-                # otherwise fall back to the live CTAN tlnet (the current release).
-                if [ -n "$TLYEAR" ] && curl -fsI "$FINAL/" >/dev/null 2>&1; then
-                    REPO="$FINAL"
-                else
-                    REPO="$CURRENT"
+                # Use the frozen tlnet-final for the detected release if it is
+                # reachable (the normal case for any release that is no longer
+                # current), else fall back to the live CTAN tlnet. Probe with a GET
+                # (not HEAD/-I) and follow redirects.
+                REPO=""
+                if [ -n "$TLYEAR" ]; then
+                    curl -fsSL --retry 3 --connect-timeout 15 -o /dev/null "$FINAL/"; rc=$?
+                    echo "Probe of $FINAL -> curl exit $rc"
+                    [ "$rc" -eq 0 ] && REPO="$FINAL"
                 fi
+                [ -z "$REPO" ] && REPO="$CURRENT"
                 echo "Using tlmgr repository: $REPO"
                 tlmgr option repository "$REPO"
+                # Show what tlmgr thinks it is talking to, for debugging.
+                tlmgr option repository || true
                 # Self-update can be a no-op; tolerate that. But the install MUST
                 # succeed or the tikz figures won't compile, so do not swallow it.
                 tlmgr update --self || true
